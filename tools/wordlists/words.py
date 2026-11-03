@@ -12,9 +12,10 @@ Steps, each reading and writing files in a list folder (e.g. core/):
   enrich-verbs <list> [top] [reference]
                                     verb-draft.tsv: the same for verbs (English from Wikidata,
                                     forms from the books)
-  pending <list> nouns|verbs <dir> [batch]
-                                    the entries `select` would need decided next, as review
-                                    batch files <dir>/<list>-<kind>-NN.tsv (draft rows)
+  pending <list> nouns|verbs <dir> [batch] [extra]
+                                    the entries `select` would need decided next (plus `extra`
+                                    as a margin for drops), as review batch files
+                                    <dir>/<list>-<kind>-NN.tsv (draft rows)
   check  nouns|verbs <reviewed> <batch>
                                     checks one reviewed batch file against its batch
   merge  <list> nouns|verbs <file>...
@@ -392,9 +393,10 @@ def enrich_verbs(name, top, reference=None):
 
 # --- review ------------------------------------------------------------------
 
-def walk(name, kind):
+def walk(name, kind, extra=0):
     """Goes down the draft as select does: the decided entries the rules take,
-    the undecided ones in the way, and why others were skipped."""
+    the undecided ones in the way, and why others were skipped. With `extra`,
+    goes that many entries past the list's size."""
     files, rules = KINDS[kind], rules_for(name, kind)
     review = {r["lemma"]: r for r in read_tsv(Path(name) / files["review"])} \
         if (Path(name) / files["review"]).exists() else {}
@@ -407,7 +409,7 @@ def walk(name, kind):
 
     kept, undecided, skipped = [], [], collections.Counter()
     for row in read_tsv(Path(name) / files["draft"]):
-        if len(kept) + len(undecided) == rules["size"]:
+        if len(kept) + len(undecided) == rules["size"] + extra:
             break
         lemma = row["lemma"]
         if lemma in excluded:
@@ -423,9 +425,10 @@ def walk(name, kind):
     return rules, kept, undecided, skipped
 
 
-def pending(name, kind, outdir, batch=250):
-    """The undecided draft rows `select` stops at, in review batches."""
-    _, _, undecided, _ = walk(name, kind)
+def pending(name, kind, outdir, batch=250, extra=0):
+    """The undecided draft rows `select` stops at, in review batches; `extra`
+    more, as a margin for the ones review will drop."""
+    _, _, undecided, _ = walk(name, kind, extra)
     fields = list(read_tsv(Path(name) / KINDS[kind]["draft"])[0].keys())
     Path(outdir).mkdir(parents=True, exist_ok=True)
     files = []
@@ -632,7 +635,8 @@ if __name__ == "__main__":
         step = enrich if command == "enrich" else enrich_verbs
         step(args[0], int(args[1]) if len(args) > 1 else 250, args[2] if len(args) > 2 else None)
     elif command == "pending":
-        pending(args[0], args[1], args[2], int(args[3]) if len(args) > 3 else 250)
+        pending(args[0], args[1], args[2], int(args[3]) if len(args) > 3 else 250,
+                int(args[4]) if len(args) > 4 else 0)
     elif command == "check":
         check(args[0], args[1], args[2])
     elif command == "merge":
