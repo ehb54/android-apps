@@ -20,3 +20,6 @@ local.properties
 .idea/
 *.iml
 .DS_Store
+
+# Word-list pipeline downloads (tools/wordlists)
+/tools/wordlists/cache/

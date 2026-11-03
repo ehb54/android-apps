@@ -53,4 +53,15 @@ class QuizFilesTest {
         assertTrue(answersMatch("  Café   au lait ", "café AU LAIT"))
         assertFalse(answersMatch("cafe", "café"))
     }
+
+    @Test
+    fun germanLettersMayBeTypedWithoutAGermanKeyboard() {
+        assertTrue(answersMatch("das maedchen", "das Mädchen"))
+        assertTrue(answersMatch("die Fuesse", "die Füße"))
+        assertTrue(answersMatch("die Strasse", "die Straße"))
+        assertTrue(answersMatch("DIE STRAẞE", "die strasse"))
+        assertTrue(answersMatch("der koenig", "der König"))
+        assertTrue(answersMatch("the king’s son", "the king's son"))
+        assertFalse(answersMatch("das madchen", "das Mädchen"))
+    }
 }

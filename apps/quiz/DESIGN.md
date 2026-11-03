@@ -56,13 +56,26 @@ is dropped, as the original import did.
 ## What changed for the phone
 
 - **Answers match forgivingly:** letter case, extra spaces and Unicode
-  normalization form are ignored, and keyboard autocorrect is off. The original
-  required an exact match. Everything else still counts: an answer listing
+  normalization form are ignored, ä/ö/ü/ß may be typed as ae/oe/ue/ss, curly
+  apostrophes count as straight ones, and keyboard autocorrect is off. Other
+  accents still matter (cafe is not café). The original required an exact match. Everything else still counts: an answer listing
   several meanings ("to become, get") must be typed whole, commas included.
   This is deliberate; do not change it to accept any one meaning.
 - **No leaving a session.** There is no quit button, and Back only says how
   many cards are left. The session is saved after every answer and reopens on
   the next launch, even after Android has closed the app.
+- **Cards per session.** Since a session cannot be left, starting a long quiz
+  by accident must not mean 300 cards. Without a range, a session asks at most
+  *cards per session* due cards (default 20, set per quiz, or "all"), taking
+  the first ones in list order; learned cards drop out, so successive sessions
+  work down the list. An explicit range still asks every due card in it.
+- **Testing escape hatch.** In debug builds, long-pressing the round counter
+  offers to leave the session (answered cards keep their results; no confusion
+  penalty). Release builds never have it; `ESCAPE_HATCH` in `ui/AskingScreen.kt`.
+- **Samples are added once.** Each sample quiz remembers which sample it came
+  from and a fingerprint of its contents. Adding samples again skips those
+  already here and offers to replace any the app has a newer version of,
+  keeping the quiz's name, settings and progress on unchanged cards.
 - **Pictures instead of commands.** A side starting with `!` ran a program in
   the original (for example a molecule viewer). Here a side can be a picture
   from the phone. A picture can only be shown, never typed, so a card with a

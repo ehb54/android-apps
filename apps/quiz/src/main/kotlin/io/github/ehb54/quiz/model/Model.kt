@@ -67,7 +67,11 @@ data class Card(
         askable(direction) && (threshold == 0 || stats(direction).level < threshold)
 }
 
-/** How the next session runs; remembered per quiz. Range is 1-based and inclusive. */
+/**
+ * How the next session runs; remembered per quiz. Range is 1-based and
+ * inclusive. Without a range, a session takes at most [sessionSize] due cards
+ * (0 = all), so starting a long quiz by accident is not a 300-card session.
+ */
 @Serializable
 data class QuizSettings(
     val direction: Direction = Direction.AToB,
@@ -76,8 +80,20 @@ data class QuizSettings(
     val timerSeconds: Int = 0,
     val rangeFrom: Int? = null,
     val rangeTo: Int? = null,
-)
+    val sessionSize: Int = DEFAULT_SESSION_SIZE,
+) {
+    val hasRange: Boolean get() = rangeFrom != null || rangeTo != null
 
+    companion object {
+        const val DEFAULT_SESSION_SIZE = 20
+    }
+}
+
+/**
+ * A quiz. [source] and [sourceVersion] are set for quizzes added from the
+ * app's samples: which sample (file, and tab for workbooks) and a fingerprint
+ * of its contents, so samples are not added twice and updates can be offered.
+ */
 @Serializable
 data class Quiz(
     val id: String,
@@ -85,6 +101,8 @@ data class Quiz(
     val cards: List<Card> = emptyList(),
     val nextCardId: Long = 1,
     val settings: QuizSettings = QuizSettings(),
+    val source: String? = null,
+    val sourceVersion: String? = null,
 ) {
     fun card(id: Long) = cards.find { it.id == id }
 
@@ -109,5 +127,36 @@ data class Quiz(
 
     fun due(): List<Card> = cardsInRange().filter { it.isDue(settings.direction, settings.threshold) }
 
+    /**
+     * The cards the next session asks: with a range, every due card in it;
+     * without one, the first [QuizSettings.sessionSize] due cards in list order.
+     */
+    fun sessionCards(): List<Card> {
+        val due = due()
+        return if (settings.hasRange || settings.sessionSize <= 0) due else due.take(settings.sessionSize)
+    }
+
     fun imageFiles(): Set<String> = cards.flatMap { listOfNotNull(it.imageA, it.imageB) }.toSet()
+
+    /**
+     * This quiz with [fresh]'s cards, e.g. a newer version of a sample. Keeps
+     * the name, settings and statistics of cards whose sides did not change.
+     */
+    fun replacedBy(fresh: Quiz): Quiz {
+        val stats = cards.associate { it.contentKey() to (it.statsAToB to it.statsBToA) }
+        val replaced = fresh.cards.mapIndexed { index, card ->
+            val (aToB, bToA) = stats[card.contentKey()] ?: (Stats() to Stats())
+            card.copy(id = index + 1L, statsAToB = aToB, statsBToA = bToA)
+        }
+        return copy(
+            cards = replaced,
+            nextCardId = replaced.size + 1L,
+            source = fresh.source,
+            sourceVersion = fresh.sourceVersion,
+        )
+    }
 }
+
+/** What a card says; a stored picture (its file name is random) counts only as "a picture". */
+private fun Card.contentKey() =
+    listOf(imageA != null, a.takeIf { imageA == null }, imageB != null, b.takeIf { imageB == null })

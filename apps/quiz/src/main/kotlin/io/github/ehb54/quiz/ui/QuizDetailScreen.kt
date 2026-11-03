@@ -45,6 +45,7 @@ import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import io.github.ehb54.quiz.R
@@ -59,6 +60,9 @@ private enum class DetailDialog { None, Rename, Reset, Delete }
 
 private val thresholds = (0..10).toList()
 private val timerSteps = listOf(0, 5, 10, 15, 20, 30, 45, 60, 90, 120)
+
+/** Cards per session when no range is set; 0 means all. */
+private val sessionSizes = listOf(5, 10, 15, 20, 25, 30, 40, 50, 75, 100, 0)
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -209,6 +213,12 @@ private fun SessionSettings(quiz: Quiz, onChange: (QuizSettings) -> Unit, onStar
             Text(stringResource(R.string.shuffle), Modifier.weight(1f))
             Switch(checked = settings.shuffle, onCheckedChange = null)
         }
+        Stepper(
+            stringResource(R.string.session_size),
+            settings.sessionSize,
+            sessionSizes,
+            if (settings.sessionSize <= 0) stringResource(R.string.all_cards) else settings.sessionSize.toString(),
+        ) { onChange(settings.copy(sessionSize = it)) }
         Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             Text(stringResource(R.string.range), Modifier.weight(1f))
             NumberField(settings.rangeFrom, "1", R.string.range_from) { onChange(settings.copy(rangeFrom = it)) }
@@ -216,9 +226,18 @@ private fun SessionSettings(quiz: Quiz, onChange: (QuizSettings) -> Unit, onStar
                 onChange(settings.copy(rangeTo = it))
             }
         }
+        val asked = quiz.sessionCards().size
         val due = quiz.due().size
-        Button(onClick = onStart, enabled = due > 0, modifier = Modifier.fillMaxWidth()) {
-            Text(pluralStringResource(R.plurals.start_due, due, due))
+        Button(onClick = onStart, enabled = asked > 0, modifier = Modifier.fillMaxWidth()) {
+            Text(pluralStringResource(R.plurals.start_due, asked, asked))
+        }
+        if (asked < due) {
+            Text(
+                pluralStringResource(R.plurals.due_in_all, due, due),
+                Modifier.fillMaxWidth(),
+                style = MaterialTheme.typography.bodySmall,
+                textAlign = TextAlign.Center,
+            )
         }
     }
 }

@@ -46,6 +46,7 @@ import kotlinx.coroutines.withContext
 import java.io.File
 import java.io.IOException
 import java.io.OutputStream
+import java.security.MessageDigest
 import java.util.UUID
 import java.util.concurrent.Executors
 
@@ -61,6 +62,16 @@ enum class Feedback { Wrong, TooSlow }
 
 /** Folder in assets with the sample quiz files. */
 private const val SAMPLES = "samples"
+
+/**
+ * One quiz a sample file provides: which sample it is ([source]: file, plus
+ * tab for workbooks), a fingerprint of its contents, and how to build it.
+ * Building stores pictures, so it happens only for samples actually added.
+ */
+private class SampleQuiz(val source: String, val version: String, val build: () -> Quiz)
+
+private fun fingerprint(bytes: ByteArray): String =
+    MessageDigest.getInstance("SHA-256").digest(bytes).joinToString("") { "%02x".format(it) }
 
 /** What the Done screen shows after a session. */
 data class Summary(
@@ -80,6 +91,8 @@ data class UiState(
     val feedback: Feedback? = null,
     val revealed: Boolean = false,
     val summary: Summary? = null,
+    /** Names of sample quizzes the app has newer versions of, waiting for "replace?". */
+    val sampleUpdates: List<String> = emptyList(),
 ) {
     fun quiz(id: String?) = quizzes.find { it.id == id }
 }
@@ -253,6 +266,18 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
 
     fun hideAnswer() = _state.update { it.copy(revealed = false) }
 
+    /**
+     * Testing escape hatch (debug builds): ends the session without finishing it.
+     * Cards answered so far keep their results; no confusion penalty is applied.
+     */
+    fun abandonSession() {
+        val session = _state.value.session ?: return
+        _state.update {
+            it.copy(session = null, feedback = null, revealed = false, screen = Screen.QuizDetail(session.quizId))
+        }
+        persist { store.saveSession(null) }
+    }
+
     /** There is no leaving a session: Back only says how much is left. */
     fun backDuringQuiz() {
         val session = _state.value.session ?: return
@@ -266,19 +291,74 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
 
     // Files
 
-    /** Adds the sample quizzes shipped in assets/samples, through the same import code as files. */
+    /** Sample quizzes with newer versions in the app, by the id of the quiz they would replace. */
+    private var pendingSampleUpdates: List<Pair<String, SampleQuiz>> = emptyList()
+
+    /**
+     * Adds the sample quizzes shipped in assets/samples, through the same import
+     * code as files. Samples already here are skipped; for ones the app has a
+     * newer version of, the UI asks whether to replace them ([replaceSampleUpdates]).
+     */
     fun addSamples() {
         viewModelScope.launch {
             val assets = getApplication<Application>().assets
             val samples = withContext(Dispatchers.IO) {
                 assets.list(SAMPLES).orEmpty().sorted().flatMap { file ->
-                    runCatching { readQuizzes(file, assets.open("$SAMPLES/$file").use { readLimited(it) }) }
+                    runCatching { sampleQuizzes(file, assets.open("$SAMPLES/$file").use { readLimited(it) }) }
                         .getOrDefault(emptyList())
                 }
             }
-            samples.forEach { addQuiz(it.copy(name = uniqueName(it.name))) }
-            message(plural(R.plurals.samples_added, samples.size))
+            val here = _state.value.quizzes.filter { it.source != null }.associateBy { it.source }
+            val new = samples.filter { it.source !in here }
+            val updated = samples.mapNotNull { sample ->
+                here[sample.source]?.takeIf { it.sourceVersion != sample.version }?.let { it.id to sample }
+            }
+            val added = withContext(Dispatchers.IO) { new.map(::buildSample) }
+            added.forEach { addQuiz(it.copy(name = uniqueName(it.name))) }
+            when {
+                added.isNotEmpty() -> message(plural(R.plurals.samples_added, added.size))
+                updated.isEmpty() -> message(text(R.string.samples_all_here))
+            }
+            if (updated.isNotEmpty()) {
+                pendingSampleUpdates = updated
+                _state.update { s -> s.copy(sampleUpdates = updated.mapNotNull { (id, _) -> s.quiz(id)?.name }) }
+            }
         }
+    }
+
+    /** Replaces the quizzes [addSamples] found newer versions of, keeping progress on unchanged cards. */
+    fun replaceSampleUpdates() {
+        val updates = pendingSampleUpdates
+        dismissSampleUpdates()
+        viewModelScope.launch {
+            val built = withContext(Dispatchers.IO) { updates.map { (id, sample) -> id to buildSample(sample) } }
+            built.forEach { (id, fresh) -> changeQuiz(id) { it.replacedBy(fresh) } }
+            message(plural(R.plurals.samples_replaced, built.size))
+        }
+    }
+
+    fun dismissSampleUpdates() {
+        pendingSampleUpdates = emptyList()
+        _state.update { it.copy(sampleUpdates = emptyList()) }
+    }
+
+    private fun buildSample(sample: SampleQuiz) =
+        sample.build().copy(source = sample.source, sourceVersion = sample.version)
+
+    /** The quizzes in one sample file: one per workbook tab, otherwise one per file. */
+    private fun sampleQuizzes(file: String, bytes: ByteArray): List<SampleQuiz> {
+        if (isZip(bytes)) {
+            val entries = unzip(bytes.inputStream())
+            if (isXlsx(entries)) {
+                return readXlsx(entries).mapNotNull { sheet ->
+                    val cards = cardsFromSheet(sheet).takeIf { it.isNotEmpty() } ?: return@mapNotNull null
+                    SampleQuiz("$file#${sheet.name}", fingerprint(formatQzx(cards).toByteArray())) {
+                        newQuiz(sheet.name, cards)
+                    }
+                }
+            }
+        }
+        return listOf(SampleQuiz(file, fingerprint(bytes)) { readQuizzes(file, bytes).single() })
     }
 
     /** Imports a .qzx, a .zip with pictures, or an Excel workbook (one quiz per tab). */

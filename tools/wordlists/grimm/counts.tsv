@@ -1,0 +1,655 @@
+lemma	count	range	example
+König	273	53	Der König sprach weiter: »Willst du mit mir auf mein Schloß gehen?«
+Frau	184	56	Vor einem großen Walde lebte ein Holzhacker mit seiner Frau, der hatte nur ein einziges Kind, das war ein Mädchen von drei Jahren.
+Mann	175	61	Am andern Morgen sprach die Frau: »Die kleinen Männer haben uns reich gemacht, wir müßten uns doch dankbar dafür bezeigen.
+Vater	154	42	Das Mädchen ging nach Haus und erzählte seinem Vater, was die Frau gesagt hatte.
+Kind	153	47	Vor einem großen Walde lebte ein Holzhacker mit seiner Frau, der hatte nur ein einziges Kind, das war ein Mädchen von drei Jahren.
+Wald	129	53	Vor einem großen Walde lebte ein Holzhacker mit seiner Frau, der hatte nur ein einziges Kind, das war ein Mädchen von drei Jahren.
+Herr	121	42	Der getreue Johannes hob ihn auf, trug ihn in sein Bett und dachte voll Sorgen: »Das Unglück ist geschehen, Herr Gott, was will daraus werden!«
+Haus	120	58	Es war einmal ein armes Dienstmädchen, das war fleißig und reinlich, kehrte alle Tage das Haus und schüttete den Kehricht auf einen großen Haufen vor die Türe.
+Tag	118	67	Es war einmal ein armes Dienstmädchen, das war fleißig und reinlich, kehrte alle Tage das Haus und schüttete den Kehricht auf einen großen Haufen vor die Türe.
+Bruder	112	24	Siehst du, wie dein Bruder sich Mühe gibt, aber an dir ist Hopfen und Malz verloren.« -- »
+Hand	106	58	Es suchte den Schlüssel heraus und als es ihn in der Hand hielt, steckte es ihn auch in das Schloß, und als es ihn hineingesteckt hatte, drehte es auch um.
+Weg	99	53	Und als sie ein Stück Wegs gefahren waren, hörte der Königssohn, daß es hinter ihm krachte, als wäre etwas zerbrochen.
+Wasser	98	36	Die Nachbarin sagte, sie sollte den Wechselbalg in die Küche tragen, auf den Herd setzen, Feuer anmachen und in zwei Eierschalen Wasser kochen.
+Gold	96	41	Da ging es ihm wohl, es aß Zuckerbrot und trank süße Milch, und seine Kleider waren von Gold, und die Englein spielten mit ihm.
+Tür	96	42	Da sprang die Türe auf, und es sah da die Dreieinigkeit im Feuer und Glanz sitzen.
+Mädchen	86	31	Vor einem großen Walde lebte ein Holzhacker mit seiner Frau, der hatte nur ein einziges Kind, das war ein Mädchen von drei Jahren.
+Auge	86	52	Als es den Bund hinreichte, blickte ihm die Jungfrau in die Augen und sprach: »Hast du auch nicht die dreizehnte Tür geöffnet?« -- »
+Herz	83	44	Da schwieg es still, aber die Begierde in seinem Herzen schwieg nicht still, sondern nagte und pickte ordentlich daran und ließ ihm keine Ruhe.
+Königin	77	21	Als etwa ein Jahr verflossen war, brachte die Königin einen Sohn zur Welt.
+Baum	73	35	In der Einöde, in welche es eingeschlossen war, stand ein alter hohler Baum, das mußte seine Wohnung sein.
+Mutter	70	30	Die Mutter: »Nein, mein liebes Töchterchen, es ist zu kalt, du könntest mir erfrieren.«
+Welt	70	41	So saß es ein Jahr nach dem andern und fühlte den Jammer und das Elend der Welt.
+Gott	70	42	Der getreue Johannes hob ihn auf, trug ihn in sein Bett und dachte voll Sorgen: »Das Unglück ist geschehen, Herr Gott, was will daraus werden!«
+Teufel	70	18	Hierauf verschwand der Teufel.
+Zeit	68	42	Es blieb also und verlebte die Zeit in Lust und Freude, und die Kleinen taten ihm alles zuliebe.
+Jahr	67	28	Vor einem großen Walde lebte ein Holzhacker mit seiner Frau, der hatte nur ein einziges Kind, das war ein Mädchen von drei Jahren.
+Nacht	67	38	Der König hieß alle Goldschmiede herbeiholen, die mußten Tag und Nacht arbeiten, bis endlich die herrlichsten Dinge fertig waren.
+Tochter	66	29	Es war ein Mann, dem starb seine Frau, und eine Frau, der starb ihr Mann; und der Mann hatte eine Tochter, und die Frau hatte auch eine Tochter.
+Soldat	66	19	Es war einmal ein junger Kerl, der ließ sich als Soldat anwerben, hielt sich tapfer und war immer der vorderste, wenn es blaue Bohnen regnete.
+Pferd	65	25	Da lachte der Mann und sprach: »Wie sollte das zugehen, du bist viel zu klein, um das Pferd mit dem Zügel zu leiten.« -- »
+Junge	64	20	Der Vater war es zufrieden, weil er dachte: »Der Junge wird doch ein wenig zugestutzt.«
+Sohn	63	22	Als etwa ein Jahr verflossen war, brachte die Königin einen Sohn zur Welt.
+Morgen	62	40	Am andern Morgen sprach die Frau: »Die kleinen Männer haben uns reich gemacht, wir müßten uns doch dankbar dafür bezeigen.
+Schloss	62	28	Es suchte den Schlüssel heraus und als es ihn in der Hand hielt, steckte es ihn auch in das Schloß, und als es ihn hineingesteckt hatte, drehte es auch um.
+Bett	62	36	Der getreue Johannes hob ihn auf, trug ihn in sein Bett und dachte voll Sorgen: »Das Unglück ist geschehen, Herr Gott, was will daraus werden!«
+Kopf	60	40	Da nickte es nur ein wenig mit dem Kopf.
+Leben	59	36	Da antwortete der getreue Johannes: »Ich will ihn nicht verlassen und will ihm mit Treue dienen, wenn's auch mein Leben kostet.« --
+Feuer	58	29	Da sprang die Türe auf, und es sah da die Dreieinigkeit im Feuer und Glanz sitzen.
+Wirt	58	13	Der Wirt, der das hörte, lachte und sprach: »Wenn dich danach lüstet, dazu sollte hier wohl Gelegenheit sein.« -- »
+Geld	57	30	Da nahm der eine den andern beiseite und sprach: »Hör, der kleine Kerl könnte unser Glück machen, wenn wir ihn in einer großen Stadt für Geld sehen ließen.
+Brot	56	25	Sie waren aber so arm, daß sie nicht mehr das tägliche Brot hatten und nicht wußten, was sie ihm sollten zu essen geben.
+Erde	54	38	Da versank das Mädchen in einen tiefen Schlaf, und als es erwachte, lag es unten auf der Erde, mitten in einer Wildnis.
+Jäger	52	14	Ich bin über den Baum gesprungen, weil die Jäger da unten in das Gebüsch schießen.
+Königstochter	50	23	Das ist die Königstochter vom goldenen Dache,« antwortete der treue Johannes.
+Petrus	47	8	Do chunt der heilige Petrus mitem Schlüssel und macht uf und lot der Herr ine; das Bürle het er aber, wies schint, nid gseh und macht d' Pforte ämel wieder zue.
+Stein	45	25	Und wer's weiß und sagt's ihm, der wird zu Stein von den Fußzehen bis zum Knie.«
+Schneiderlein	45	8	Das tapfere Schneiderlein
+Leute	43	27	Da kamen fremde Leute aus dem Haus, die fragten wer es wäre und was es da zu tun hätte.
+Freude	43	33	Es blieb also und verlebte die Zeit in Lust und Freude, und die Kleinen taten ihm alles zuliebe.
+Brunnen	43	18	Als er in den Schloßhof kam, stand da beim Brunnen ein schönes Mädchen, das hatte zwei goldene Eimer in der Hand und schöpfte damit.
+Esel	43	11	fragte der Esel. -- »
+Sack	43	10	Tischchen Goldesel, Knüppel aus deck dich, und dem Sack
+Tier	42	27	Der König aber zeigte ihr drinnen das goldene Geschirr, jedes einzeln, die Schüsseln, Becher, Näpfe, die Vögel, das Gewild, und die wunderbaren Tiere.
+Haar	40	20	Sobald dann die Sonne wieder warm schien, ging es heraus und setzte sich vor den Baum, und seine langen Haare bedeckten es von allen Seiten wie ein Mantel.
+Stück	39	30	Nicht lange, so zerrissen seine Kleider und fiel ein Stück nach dem andern vom Leibe herab.
+Hund	39	12	Der Hund war's zufrieden, und sie gingen weiter.
+Himmel	37	18	Der Holzhacker gehorchte, holte sein Kind und übergab es der Jungfrau Maria, die nahm es mit sich hinauf in den Himmel.
+Vogel	37	20	Der König aber zeigte ihr drinnen das goldene Geschirr, jedes einzeln, die Schüsseln, Becher, Näpfe, die Vögel, das Gewild, und die wunderbaren Tiere.
+Wagen	37	16	Es war gehorsam, ging hin und hackte ein Loch in das Eis, und als es mitten im Hacken war, kam ein prächtiger Wagen hergefahren, worin der König saß.
+Riese	37	7	Der König sah wohl, daß ihr das Herz gewaltig klopfte und sprach: »Mein Kind, was fürchtest du dich, steht etwa ein Riese vor der Tür und will dich holen?« -- »
+Land	36	25	Darauf suchte er sich in sein Schürzchen allerlei von den Goldsachen zusammen, stieg ans Land und ging gerade nach dem königlichen Schloß.
+Tod	36	18	Der dritte sprach: »Ich schenk ihm, daß es eines unglücklichen Todes stirbt.«
+Fuß	36	22	Sie ging und öffnete die Türe, da hüpfte der Frosch herein, ihr immer auf dem Fuße nach, bis zu ihrem Stuhl.
+Wolf	36	11	Da ging der Wolf fort zu einem Krämer und kaufte sich ein großes Stück Kreide: die aß er und machte seine Stimme damit fein.
+Kleid	35	19	Da ging es ihm wohl, es aß Zuckerbrot und trank süße Milch, und seine Kleider waren von Gold, und die Englein spielten mit ihm.
+Ei	35	26	Da rief sie: »Ei, was für schönes Goldzeug!«
+Fenster	35	26	Da legte er die Pfote ins Fenster, und als sie sahen, daß sie weiß war, so glaubten sie, es wäre alles wahr, was er sagte, und machten die Türe auf.
+Bauer	35	13	Sie gingen zu dem Bauer und sprachen: »Verkauft uns den kleinen Mann, er soll's gut bei uns haben.« -- »
+Arbeit	34	19	Morgens, nachdem er sein Gebet verrichtet hatte und sich zur Arbeit niedersetzen wollte, so standen die beiden Schuhe ganz fertig auf seinem Tisch.
+Tasche	34	19	Endlich wollte es sich auf den Rückweg machen, da steckten sie ihm die Taschen erst ganz voll Gold und führten es hernach wieder zum Berge heraus.
+Stube	34	24	Sie riefen herein, und es trat in die Stube und setzte sich auf die Bank am Ofen, da wollte es sich wärmen und sein Frühstück essen.
+Königssohn	33	10	Als er aber herabfiel, war er kein Frosch, sondern ein Königssohn mit schönen freundlichen Augen.
+Rapunzel	33	4	Rapunzel
+Stimme	32	20	Sie sah sich um, woher die Stimme käme, da erblickte sie einen Frosch, der seinen dicken häßlichen Kopf aus dem Wasser streckte. »
+Hochzeit	32	20	Da stieg er selbst hinauf, und als er sah, daß es seine Richtigkeit hatte, ging er zu der Witwe und freite sie, und die Hochzeit ward gehalten.
+Mensch	32	24	Und als es getauft war, sprach er: »Was gehört einem Menschen, der den andern aus dem Bett trägt und ins Wasser wirft?« -- »
+Ecke	31	21	Als es nach Haus kam, wollte es seine Arbeit beginnen, nahm den Besen in die Hand, der noch in der Ecke stand, und fing an zu kehren.
+Ding	31	25	Der König hieß alle Goldschmiede herbeiholen, die mußten Tag und Nacht arbeiten, bis endlich die herrlichsten Dinge fertig waren.
+Hals	30	22	Der Frosch ließ sich's gutschmecken, aber ihr blieb fast jedes Bißlein im Halse.
+Leib	29	20	Nicht lange, so zerrissen seine Kleider und fiel ein Stück nach dem andern vom Leibe herab.
+Berg	29	18	Da kamen drei Wichtelmänner und führten es in einen hohlen Berg, wo die Kleinen lebten.
+Kammer	29	17	Nun war der König in großer Freude, er hielt aber die Königin in einer Kammer verborgen, bis auf den Sonntag, wo das Kind getauft werden sollte.
+Bein	29	19	Du schreist einem durch Mark und Bein,« sprach der Esel, »was hast du vor?« -- »
+Wort	28	21	Worte, die gesperrt gedruckt sind, sind so gekennzeichnet:
+Ruhe	28	24	Da schwieg es still, aber die Begierde in seinem Herzen schwieg nicht still, sondern nagte und pickte ordentlich daran und ließ ihm keine Ruhe.
+Ziege	28	4	Vorzeiten war ein Schneider, der drei Söhne hatte und nur eine einzige Ziege.
+Abend	27	22	Wie es eintrat und »guten Abend« sagte, fiel ihm gleich ein Goldstück aus dem Mund.
+Ende	27	19	Sie ließen nicht nach, bis alles zu Ende gebracht war und fertig auf dem Tische stand, dann sprangen sie schnell fort.
+Stadt	27	17	Dann fuhren sie über das Meer, und fuhren so lange, bis sie zur Stadt kamen, worin die Königstochter vom goldenen Dache wohnte.
+Schwesterche	27	9	Brüderchen und Schwesterchen
+Not	26	25	In ihrer Not ging sie zu ihrer Nachbarin und fragte sie um Rat.
+Wein	26	16	Dann stärkte er ihn mit Wein, bis er wieder zu sich selbst kam.
+Recht	26	19	Ach,« antwortete er, »laßt Gnade für Recht ergehen, ich habe mich nur aus Not dazu entschlossen.
+Gesicht	26	20	Es dauerte nicht lange, so saß da eine Katze an dem Weg und machte ein Gesicht wie drei Tage Regenwetter. »
+Katze	26	7	Es dauerte nicht lange, so saß da eine Katze an dem Weg und machte ein Gesicht wie drei Tage Regenwetter. »
+Tischchen	26	6	Tischchen Goldesel, Knüppel aus deck dich, und dem Sack
+Glück	25	21	Da nahm der eine den andern beiseite und sprach: »Hör, der kleine Kerl könnte unser Glück machen, wenn wir ihn in einer großen Stadt für Geld sehen ließen.
+Braut	25	7	Die arme Braut kleidete sich ganz schwarz, und wenn sie an ihren Bräutigam dachte, so kamen ihr die Tränen in die Augen.
+Höhe	25	22	Die Räuber fuhren bei dem entsetzlichen Geschrei in die Höhe, meinten nicht anders als ein Gespenst käme herein und flohen in größter Furcht in den Wald hinaus.
+Geselle	25	15	Sie dachte aber: »Was der einfältige Frosch schwätzt, der sitzt im Wasser bei seinesgleichen und quakt, und kann keines Menschen Geselle sein.«
+Tor	25	15	Darauf kamen die drei Landesflüchtigen an einem Hof vorbei, da saß auf dem Tor der Haushahn und schrie aus Leibeskräften. »
+Jungfrau	24	10	Der Holzhacker gehorchte, holte sein Kind und übergab es der Jungfrau Maria, die nahm es mit sich hinauf in den Himmel.
+Finger	24	20	Es blieb ein Weilchen stehen und betrachtete alles mit Erstaunen, dann rührte es ein wenig mit dem Finger an den Glanz, da ward der Finger ganz golden.
+Licht	24	16	Die Frau war's zufrieden und steckte ein Licht an; darauf verbargen sie sich in den Stubenecken, hinter den Kleidern, die da aufgehängt waren, und gaben acht.
+Frosch	24	5	Sie sah sich um, woher die Stimme käme, da erblickte sie einen Frosch, der seinen dicken häßlichen Kopf aus dem Wasser streckte. »
+Kuh	24	7	Er schlief aber so fest, daß er nichts gewahr ward, und nicht eher aufwachte, als bis er in dem Maul der Kuh war, die ihn mit dem Heu aufgerafft hatte. »
+Vagel	24	3	Kywitt, kywitt, wat vör'n schöön Vagel bün ik!«
+Lust	23	21	Es blieb also und verlebte die Zeit in Lust und Freude, und die Kleinen taten ihm alles zuliebe.
+Tisch	23	15	Morgens, nachdem er sein Gebet verrichtet hatte und sich zur Arbeit niedersetzen wollte, so standen die beiden Schuhe ganz fertig auf seinem Tisch.
+Schatz	23	15	Da begegnete ihm ein Haufen Räuber, die hatten vor, des Königs Schatz zu bestehlen.
+Axt	23	8	Er nahm sich einen Strick und eine Axt mit, ging hinaus in den Wald, und hieß abermals die, welche ihm zugeordnet waren, außen warten.
+Fru	23	9	De Mann wull noch nicht recht, wull awerst syn Fru ook nicht to weddern syn un güng hen na de See.
+Gans	23	9	As he an de See köhm, wöör dat Water ganß vigelett un dunkelblau un grau un dick, und goor nich meer so gröön un geel, doch wöör't noch still.
+Zwerg	23	7	Als es Morgen war, erwachte Sneewittchen, und wie es die sieben Zwerge sah, erschrak es.
+Prinz	23	5	Se gink tosammen, bis wo de swarte Hund an den Weg lag, den schlog se int't Gesicht, da word et 'n schönen Prinz, de geit mit ünen, bis an dat Water.
+Schüler	23	3	Wer aber des Wegs kam, war nichts als ein fahrender Schüler, ein junger Geselle, der fröhlich sein Lied singend durch den Wald auf der Straße daher ritt.
+Platz	22	15	Damit wöören se bi den Acker anlangt, de Swinegel wiesde siener Fro ehren Platz an un gung nu den Acker hinup.
+Sonne	21	19	Sobald dann die Sonne wieder warm schien, ging es heraus und setzte sich vor den Baum, und seine langen Haare bedeckten es von allen Seiten wie ein Mantel.
+Schuh	21	9	Es war ein Schuster ohne seine Schuld so arm geworden, daß ihm endlich nichts mehr übrig blieb, als Leder zu einem einzigen Paar Schuhe.
+Luft	21	15	Ja, Vater, ich bin viel in der Welt herumgekommen; gottlob, daß ich wieder frische Luft schöpfe!« -- »
+Stunde	21	13	Viele Stunden gingen herum, während sie alles besah, und in ihrer Freude merkte sie nicht, daß das Schiff dahinfuhr.
+Gast	21	12	»Was machen meine Gäste?«
+Name	21	14	Sie rief sie nacheinander bei Namen, aber niemand antwortete.
+Kerl	21	16	He is zwar ehn vörnehm Herr, aver doch man'n dummen Kerl, un betahlen sall he doch.«
+Schüssel	20	9	Der König aber zeigte ihr drinnen das goldene Geschirr, jedes einzeln, die Schüsseln, Becher, Näpfe, die Vögel, das Gewild, und die wunderbaren Tiere.
+Reich	20	13	Die Fische waren schon lange unzufrieden, daß keine Ordnung in ihrem Reich herrschte.
+Wind	20	16	Da weht ja der Wind hindurch und die Dornen reißen mir's vom Leib.« -- »
+Schwester	20	11	Ach ja, von Herzen gern,« antwortete es, denn es war froh, daß es der Mutter und Schwester aus den Augen kommen sollte.
+Geist	20	9	Da erschrak der Pfarrer selbst, meinte, es wäre ein böser Geist in die Kuh gefahren und hieß sie töten.
+Räuber	20	7	antwortete der Esel, »einen gedeckten Tisch mit schönem Essen und Trinken, und Räuber sitzen daran und lassen's sich wohl sein.« -- »
+Stall	20	12	Du bist verrückt,« antwortete der Pfarrer, ging aber doch selbst in den Stall und wollte nachsehen, was es da gäbe.
+Bart	20	7	Was brummst du beständig in den Bart hinein?« -- »
+Ranze	20	6	Er legte seinen Ranzen vor sich auf den Tisch und fing an zu erzählen, was er alles Merkwürdiges in der Welt gesehen habe. »
+Sneewittche	20	5	Sneewittchen
+Seite	19	18	Sobald dann die Sonne wieder warm schien, ging es heraus und setzte sich vor den Baum, und seine langen Haare bedeckten es von allen Seiten wie ein Mantel.
+Schulter	19	16	der König stellte sich auf die Fußspitzen und sah ihm über die Schulter.
+Zorn	19	16	Und in seinem Zorne nahm er die Elle von der Wand und jagte ihn mit Schlägen hinaus.
+Lamm	19	3	Endlich brachte die Bäuerin ein Lamm und sprach zu dem heiligen Petrus, das müßte er annehmen, aber er wollte es nicht.
+Dach	18	9	Das ist die Königstochter vom goldenen Dache,« antwortete der treue Johannes.
+Sprach	18	12	Sprach der dritte: »Er hat sie doch, sie sitzt bei ihm im Schiffe.«
+Blut	18	12	Nun nahm er ihn heraus, setzte sich ans Feuer und legte ihn auf seinen Schoß, und rieb ihm die Arme, damit das Blut wieder in Bewegung kommen sollte.
+Stiefmutter	18	11	sagte die Stiefmutter, »mach daß du fortkommst und laß dich nicht eher wieder sehen, als bis du das Körbchen voll Erdbeeren hast.« --
+Gestalt	18	14	Da ging sie in der Königin Gestalt hinauf, gab ihm zu trinken, schüttelte ihm sein Bettchen, deckte es zu und schwamm als Ente wieder durch die Gosse fort.
+Wand	18	11	Da ward sie erst bitterböse, holte ihn herauf und warf ihn aus allen Kräften wider die Wand, »nun wirst du Ruhe haben, du garstiger Frosch.«
+Knüppel	18	5	Tischchen Goldesel, Knüppel aus deck dich, und dem Sack
+Aschenputtel	18	6	Aschenputtel
+Holz	17	13	Der Wagen aber fuhr vollends in den Wald hinein und richtig zu dem Platze, wo das Holz gehauen ward.
+Angst	17	13	Alsbald empfand es eine gewaltige Angst, schlug die Türe heftig zu und lief fort.
+Mund	17	10	Es gab aber keine Antwort, denn es konnte seinen Mund nicht auftun.
+Abschied	17	11	Also faßten sie einen Entschluß, begaben sich allesamt zum König und baten um ihren Abschied. »
+Garten	17	10	Sie ging hinaus zum Bach, der durch den Garten floß, und ließ sich einen ganzen Eimer voll Gründlinge holen.
+Tuch	17	9	Wenn ich sage: >Bricklebrit<, so speit Euch das gute Tier ein ganzes Tuch voll Goldstücke.
+Apfel	17	7	Da ward gutes Essen aufgetragen, Milch und Pfannekuchen mit Zucker, Äpfel und Nüsse.
+Schnee	16	7	Du lieber Gott,« sagte das Mädchen, »im Winter wachsen ja keine Erdbeeren, die Erde ist gefroren, und der Schnee hat auch alles zugedeckt.
+Antwort	16	11	Es gab aber keine Antwort, denn es konnte seinen Mund nicht auftun.
+Arm	16	13	Ihr erster Gang war in die Scheune, wo sie einen Arm voll Heu packte, und gerade dasjenige, worin der arme Daumesdick lag und schlief.
+Brief	16	4	Der Knabe machte sich mit diesem Briefe auf den Weg, verirrte sich aber und kam abends in einen großen Wald.
+Diener	16	11	Der getreue Johannes war sein liebster Diener, und hieß so, weil er ihm sein lebelang so treu gewesen war.
+Feld	16	15	Auf dem offenen Feld kam es einem Fuchs in den Weg, der schnappte es in Gedanken auf. »
+Kreuzer	16	4	Sie teilten nun die Beute, das Schneiderlein aber verlangte nur einen Kreuzer, weil es nicht mehr tragen konnte.
+Wirtshaus	16	10	Der Junge ging mit dem Fuhrmann, und abends gelangten sie in ein Wirtshaus, wo sie übernachten wollten.
+Blume	16	7	Es verlor die Besinnung, und als es erwachte und wieder zu sich selber kam, war es auf einer schönen Wiese, wo die Sonne schien und viel tausend Blumen standen.
+Zauberin	16	4	In der Abenddämmerung stieg er also über die Mauer in den Garten der Zauberin, stach in aller Eile eine Handvoll Rapunzeln und brachte sie seiner Frau.
+Männchen	16	5	Da ging auf einmal die Türe auf und trat ein kleines Männchen herein und sprach: »Guten Abend, Jungfer Müllerin, warum weint sie so sehr?« -- »
+Unglück	15	13	Ach nein,« sagten die Englein, »das wäre Sünde: die Jungfrau Maria hat's verboten, und es könnte leicht dein Unglück werden.«
+Weilchen	15	13	Es blieb ein Weilchen stehen und betrachtete alles mit Erstaunen, dann rührte es ein wenig mit dem Finger an den Glanz, da ward der Finger ganz golden.
+Blatt	15	9	»Ich bin so satt, ich mag kein Blatt: meh!
+Schiff	15	5	Als alles auf ein Schiff geladen war, zog der getreue Johannes Kaufmannskleider an, und der König mußte ein gleiches tun, um sich ganz unkenntlich zu machen.
+Stiefel	15	6	Aber das Wasser zog das Loch zusammen, und der Stiefel ward voll bis obenhin.
+Häuschen	15	11	Als es in den Wald kam, sah es ein kleines Häuschen, daraus guckten drei kleine Haulemännerchen.
+Kraft	15	13	Da ward sie erst bitterböse, holte ihn herauf und warf ihn aus allen Kräften wider die Wand, »nun wirst du Ruhe haben, du garstiger Frosch.«
+Schneider	15	10	Da herzten sie ihre liebe Mutter, und hüpften wie ein Schneider, der Hochzeit hält.
+Acker	15	4	Sühst du, up den langen Acker dar wüll wi unsen Wettloop maken.
+Rücken	15	11	Und vor Zorn ganz außer sich, sprang er hinauf und gerbte dem armen Jungen mit der Elle den Rücken so gewaltig, daß er zum Haus hinaus sprang.
+Lebtag	15	15	Also war und blieb das Schneiderlein sein Lebtag ein König.
+Taler	15	3	Die Wachen liefen dahin, wie sie aber ankamen, war es schon in eine andere Ecke unter einen Taler gehüpft und rief: »He, hier bin ich.«
+Grusel	15	5	Der Vater seufzte und antwortete ihm: »Das Gruseln, das sollst du schon lernen, aber dein Brot wirst du damit nicht verdienen.«
+Teil	15	10	Ein Teil sprang weg, die andern schlug er tot und warf sie hinaus in den Teich.
+Bärenhäuter	15	4	Der Bärenhäuter
+Spieglein	15	5	»Spieglein, Spieglein an der Wand, wer ist die Schönste im ganzen Land?«
+Höhle	14	9	Der Riese sprach: »Wenn du so ein tapferer Kerl bist, so komm mit in unsere Höhle und übernachte bei uns.«
+Rat	14	14	In ihrer Not ging sie zu ihrer Nachbarin und fragte sie um Rat.
+Bank	14	11	Dann hüpften und tanzten sie und sprangen über Stühle und Bänke.
+Reichtum	14	12	Und wir verkaufen dich um alle Reichtümer der Welt nicht wieder,« sprachen die Eltern, herzten und küßten ihren lieben Daumesdick.
+Gnade	14	11	Da rief der König: »O, mein treuester Johannes, Gnade!
+Magd	14	5	Ei, kehrt euch selber,« antwortete es, »ich bin eure Magd nicht.«
+Kessel	14	7	Endlich nahm sie einen Kessel, setzte ihn zum Feuer und sott Garn darin.
+Hexe	14	7	Darauf erzählte sie dem König den Frevel, den die böse Hexe und ihre Tochter an ihr verübt hatten.
+Wiese	14	10	Als der Wolf seine Lust gebüßt hatte, trollte er sich fort, legte sich draußen auf der grünen Wiese unter einen Baum und fing an zu schlafen.
+Schlag	14	12	Da führte er ihn durch dunkle Gänge, zu einem Schmiedefeuer, nahm eine Axt und schlug den einen Amboß mit einem Schlag in die Erde. »
+Ohr	14	10	Un fort güng he wedder wie en Stormwind, dat em de Ohren am Koppe flögen.
+Hahn	14	6	Der Hahn ließ sich den Vorschlag gefallen, und sie gingen alle viere zusammen fort.
+Asche	14	5	Der Esel legte sich auf den Mist, der Hund hinter die Türe, die Katze auf den Herd bei die warme Asche, und der Hahn setzte sich auf den Hahnenbalken.
+Meister	14	11	Da ging es ganz ordentlich als wie bei einem Meister, und der Wagen fuhr den rechten Weg nach dem Walde.
+Brüderchen	14	4	Brüderchen und Schwesterchen
+Kaiser	14	3	Ga hen tom Butt, König bün ik, nu mutt ik ook Kaiser warden.« -- »
+Sorge	13	12	Der getreue Johannes hob ihn auf, trug ihn in sein Bett und dachte voll Sorgen: »Das Unglück ist geschehen, Herr Gott, was will daraus werden!«
+Milch	13	8	Da ging es ihm wohl, es aß Zuckerbrot und trank süße Milch, und seine Kleider waren von Gold, und die Englein spielten mit ihm.
+Kaufmann	13	5	Da antwortete er: »Ich bin ein Kaufmann,« und öffnete sein Schürzchen und ließ sie hineinschauen.
+Gemahlin	13	11	Als die Königstochter vom goldenen Dache das hörte, ward sie getröstet, und ihr Herz ward ihm geneigt, so daß sie gern einwilligte, seine Gemahlin zu werden.
+Boden	13	12	Alsbald sank der Arzt zu Boden und war nun selbst in die Hand des Todes geraten.
+Futter	13	6	Da rief er endlich in der Angst, so laut er konnte: »Bringt mir kein frisch Futter mehr, bringt mir kein frisch Futter mehr.«
+Reihe	13	9	Sie stellten sich also am Ufer in Reihe und Glied auf, und der Hecht gab mit dem Schwanz ein Zeichen, worauf sie alle zusammen aufbrachen.
+Hof	13	11	Darauf kamen die drei Landesflüchtigen an einem Hof vorbei, da saß auf dem Tor der Haushahn und schrie aus Leibeskräften. »
+Messer	13	10	Da antwortete er: »So bitt ich um ein Feuer, eine Drehbank und eine Schnitzbank mit dem Messer.«
+Krieg	13	6	Solange der Krieg dauerte, ging alles gut, aber als Friede geschlossen war, erhielt er seinen Abschied, und der Hauptmann sagte, er könne gehen wohin er wollte.
+Schwein	13	4	Als das Schwein den Schneider erblickte, lief es mit schäumendem Munde und wetzenden Zähnen auf ihn zu und wollte ihn zur Erde werfen.
+Mühe	13	10	Sie liefen herbei und stachen mit Stöcken in das Mausloch, aber das war vergebliche Mühe.
+Fuchs	13	6	Auf dem offenen Feld kam es einem Fuchs in den Weg, der schnappte es in Gedanken auf. »
+Schneeweißchen	13	4	Schneeweißchen und Rosenrot
+Spiegel	13	4	Sie hatte einen wunderbaren Spiegel, wenn sie vor den trat und sich darin beschaute, sprach sie:
+Schwert	12	6	Da nahm der Prinz sein Brot und Schwert wieder zurück, und die drei Brüder ritten weiter.
+Mitternacht	12	10	Nach ein paar Tagen weckte er ihn um Mitternacht, hieß ihn aufstehen, in den Kirchturm steigen und läuten. »
+Rock	12	8	Ich will Hemdlein, Rock, Wams und Höslein für sie nähen, auch jedem ein Paar Strümpfe stricken; mach du jedem ein Paar Schühlein dazu.«
+Küche	12	11	Die Nachbarin sagte, sie sollte den Wechselbalg in die Küche tragen, auf den Herd setzen, Feuer anmachen und in zwei Eierschalen Wasser kochen.
+Augenblick	12	12	Wartet einen Augenblick, Herr Wirt,« sprach er, »ich will nur gehen und Gold holen,« nahm aber das Tischtuch mit.
+Goldstück	12	6	Der zweite sprach: »Ich schenk ihm, daß Goldstücke ihm aus dem Mund fallen, so oft es ein Wort spricht.« --
+He	12	8	He, he, Frau Meisterin,« rief er, steckte den Kopf in die Höhe, und wenn sie zuschlagen wollte, sprang er in die Schublade hinunter.
+Dienst	12	10	Eben deshalb bin ich hierher gekommen,« antwortete er, »ich bin bereit, in des Königs Dienste zu treten.«
+Lohn	12	10	Der König wollte ihm den verheißenen Lohn noch nicht gewähren und machte eine dritte Forderung.
+Bär	12	6	Hüte dich,« sagte die zweite, »die Bären lieben die Süßigkeit, und wenn du ihm gefällst, so frißt er dich auf.« -- »
+Rübe	12	3	Die Rübe
+Männlein	11	7	Die Drei Männlein im Walde
+Gevatter	11	6	Das Mädchen stand nun Gevatter und wollte dann wieder nach Haus gehen, die Wichtelmännlein baten es aber inständig, drei Tage bei ihnen zu bleiben.
+Schrank	11	6	Nun war der König voll Freude, und als er die Königin kommen sah, versteckte er den getreuen Johannes und die beiden Kinder in einen großen Schrank.
+Ofen	11	8	Sie riefen herein, und es trat in die Stube und setzte sich auf die Bank am Ofen, da wollte es sich wärmen und sein Frühstück essen.
+Essen	11	10	Als es nun fertig war mit dem Essen, sprachen sie: »Da hast du einen Besen, kehr uns draußen vor der Hintertür rein.« -- »
+Kohle	11	5	Er zeigte mit dem Finger auf einen Haufen Kohlen, der zur Seite lag, und deutete ihnen durch Gebärden an, daß sie ihre Taschen damit füllen sollten.
+Straße	11	7	Da kam eine Bauersfrau die Straße herab und rief: »Gut Mus feil!
+Nase	11	10	Das Schneiderlein zog weiter, immer seiner spitzen Nase nach.
+Streich	11	5	Und in der Hast schnitt sich das Schneiderlein einen Gürtel, nähte ihn und stickte mit großen Buchstaben darauf: »Siebene auf einen Streich!« -- »
+Vöglein	11	7	Als es Mittag war, sahen sie ein schönes schneeweißes Vöglein auf einem Ast sitzen, das sang so schön, daß sie stehen blieben und ihm zuhörten.
+Dieb	11	6	sprach der eine Dieb erschrocken, »ich hörte jemand sprechen.«
+Daumerling	11	3	Ein Schneider hatte einen Sohn, der war klein geraten und nicht größer als ein Daumen, darum hieß er auch der Daumerling.
+Glückskind	11	5	Nach einiger Zeit kam der König wieder in sein Schloß und sah, daß die Weissagung erfüllt und das Glückskind mit seiner Tochter vermählt war. »
+Flasche	11	5	rief's von neuem, und der Schüler, der an nichts Böses dachte, nahm den Pfropfen von der Flasche ab.
+Knabe	10	5	»Sind wir nicht Knaben glatt und fein?
+Perle	10	8	Was du haben willst, lieber Frosch,« sagte sie, »meine Kleider, meine Perlen und Edelsteine, auch noch die goldene Krone, die ich trage.«
+Herd	10	8	Die Nachbarin sagte, sie sollte den Wechselbalg in die Küche tragen, auf den Herd setzen, Feuer anmachen und in zwei Eierschalen Wasser kochen.
+Sache	10	10	Der treue Diener besann sich lange, wie die Sache anzufangen wäre, denn es hielt schwer, nur vor das Angesicht der Königstochter zu kommen.
+Goldschmied	10	4	Der König hieß alle Goldschmiede herbeiholen, die mußten Tag und Nacht arbeiten, bis endlich die herrlichsten Dinge fertig waren.
+Ordnung	10	8	Die Fische waren schon lange unzufrieden, daß keine Ordnung in ihrem Reich herrschte.
+Silber	10	6	Nun gingen sie ins Schloß und da stand im Saal eine Schüssel, und das gemachte Brauthemd lag darin und sah aus nicht anders, als wäre es von Gold und Silber.
+Stückchen	10	8	Gerne,« sprach es, teilte sein Stückchen Brot entzwei und gab ihnen die Hälfte.
+Hälfte	10	7	Gerne,« sprach es, teilte sein Stückchen Brot entzwei und gab ihnen die Hälfte.
+Weib	10	8	Der Koch mußte sie in Salz kochen, und das boshafte Weib aß sie auf und meinte, sie hätte Sneewittchens Lunge und Leber gegessen.
+Maul	10	9	Seit der Zeit steht der Scholle zur Strafe das Maul schief.
+Schaden	10	8	Als er wieder ohne Schaden herabgefallen war, sprach der Riese: »Was ist das, hast du nicht Kraft, die schwache Gerte zu halten?« -- »
+Schwanz	10	5	Sie stellten sich also am Ufer in Reihe und Glied auf, und der Hecht gab mit dem Schwanz ein Zeichen, worauf sie alle zusammen aufbrachen.
+Fleisch	10	7	Der Hund meinte, ein paar Knochen und etwas Fleisch dran, täten ihm auch gut.
+Treppe	10	7	Die Frau stieg die drei Treppen mit ihrem schweren Korbe zu dem Schneider herauf und mußte die Töpfe sämtlich vor ihm auspacken.
+Goldesel	10	5	Tischchen Goldesel, Knüppel aus deck dich, und dem Sack
+Hunger	10	7	Abends kamen sie in einen großen Wald und waren so müde von Jammer, Hunger und dem langen Weg, daß sie sich in einen hohlen Baum setzten und einschliefen.
+Gan	10	4	Dachte der Bruder Lustig: »Mit einer hast du genug,« rief die zwei Burschen herbei und sprach: »Da nehmt die Gans und verzehrt sie auf meine Gesundheit.«
+Laufer	10	3	Als das verabredet und festgemacht war, schnallte der Mann dem Laufer das andere Bein an und sprach zu ihm: »Nun sei hurtig und hilf, daß wir siegen.«
+Jorinde	10	3	Jorinde und Joringel
+Märchen	9	7	Deutsche Märchen gesammelt durch die Brüder Grimm
+Winter	9	8	Du lieber Gott,« sagte das Mädchen, »im Winter wachsen ja keine Erdbeeren, die Erde ist gefroren, und der Schnee hat auch alles zugedeckt.
+Söhnlein	9	7	Wenn du eingestehst, daß du die verbotene Tür geöffnet hast, so will ich dir deine beiden Söhnlein zurückgeben.«
+Stuhl	9	7	Dann hüpften und tanzten sie und sprangen über Stühle und Bänke.
+Gang	9	7	Als Daumesdick merkte, daß sie fort waren, kroch er aus dem unterirdischen Gang wieder hervor. »
+Grab	9	6	Das Mädchen ging jeden Tag hinaus zu dem Grabe der Mutter und weinte und blieb fromm und gut.
+Meer	9	7	Dann fuhren sie über das Meer, und fuhren so lange, bis sie zur Stadt kamen, worin die Königstochter vom goldenen Dache wohnte.
+Loch	9	7	Aber das Wasser zog das Loch zusammen, und der Stiefel ward voll bis obenhin.
+Garn	9	3	Ich bin ein armes Mädchen und schlittere Garn.«
+Wunsch	9	8	Hans zog weiter und überdachte, wie ihm doch alles nach Wunsch ginge, begegnete ihm ja eine Verdrießlichkeit, so würde sie doch gleich wieder gut gemacht.
+Hut	9	6	Ach, setzt mich nur auf den Rand von eurem Hut, da kann ich auf und ab spazieren und die Gegend betrachten und falle doch nicht herunter.«
+Fliege	9	5	Die Fliegen aber, die kein Deutsch verstanden, ließen sich nicht abweisen, sondern kamen in immer größerer Gesellschaft wieder.
+Hölle	9	5	Da lief dem Schneiderlein endlich, wie man sagt, die Laus über die Leber, es langte aus seiner Hölle nach einem Tuchlappen und: »Wart, ich will es euch geben!«
+Kamerad	9	8	Das Schneiderlein ging beherzt auf ihn zu, redete ihn an und sprach: »Guten Tag, Kamerad, gelt, du sitzest da und besiehst dir die weitläufige Welt?
+Manne	9	6	Dat wullen se nig seggen, de Künig frog awerst de ölleste, ob se ün wol tom Manne hewen wulle?
+Kunst	9	8	Mir gruselt's nicht: das wird wohl eine Kunst sein, von der ich auch nichts verstehe.«
+Sarg	9	4	Sie stellten den Sarg auf die Erde, er aber ging hinzu und nahm den Deckel ab: da lag ein toter Mann darin.
+Slott	9	4	Ich much woll in enen grooten stenern Slott wanen; ga hen tom Butt, he schall uns en Slott schenken.« -- »
+Freier	9	4	Als es nun bekannt ward, daß der alte Fuchs gestorben war, so meldeten sich die Freier.
+Zaunkönig	9	3	Der Zaunkönig und der Bär
+Feind	9	7	Als nun die Zeit kam, wo der Krieg angehen sollte, da schickte der Zaunkönig Kundschafter aus, wer der kommandierende General des Feindes wäre.
+Bild	8	4	Mit vielen Bildern ·von·Dora Polster·
+Krone	8	7	Was du haben willst, lieber Frosch,« sagte sie, »meine Kleider, meine Perlen und Edelsteine, auch noch die goldene Krone, die ich trage.«
+Haupt	8	8	Und als der treue Johannes nochmals dem alten König die Hand darauf gegeben hatte, ward dieser still, legte sein Haupt auf das Kissen und starb.
+Schlüssel	8	5	Es suchte den Schlüssel heraus und als es ihn in der Hand hielt, steckte es ihn auch in das Schloß, und als es ihn hineingesteckt hatte, drehte es auch um.
+Pracht	8	8	Die Hochzeit ward also mit großer Pracht und kleiner Freude gehalten und aus einem Schneider ein König gemacht.
+Schlaf	8	7	Da versank das Mädchen in einen tiefen Schlaf, und als es erwachte, lag es unten auf der Erde, mitten in einer Wildnis.
+Jammer	8	7	So saß es ein Jahr nach dem andern und fühlte den Jammer und das Elend der Welt.
+Reh	8	4	Das Schwesterchen sprach: »Ach, Brüderchen, ich bitte dich, trink nicht, sonst wirst du ein Reh und läufst mir fort.«
+Paar	8	3	Es war ein Schuster ohne seine Schuld so arm geworden, daß ihm endlich nichts mehr übrig blieb, als Leder zu einem einzigen Paar Schuhe.
+Menge	8	8	Nun lebten sie von dem Erworbenen, solange es dauerte, da handelte der Mann wieder eine Menge neues Geschirr ein.
+Ware	8	5	Als die Königstochter die Ware sah, war sie ganz vergnügt und sprach: »Es ist so schön gearbeitet, daß ich dir alles abkaufen will.«
+Schönheit	8	8	Komm mit mir,« sprach er zu ihm, »meine Töchter sind Wunder von Schönheit, wähle dir eine davon zur Frau.
+Knie	8	7	Und wer's weiß und sagt's ihm, der wird zu Stein von den Fußzehen bis zum Knie.«
+Saal	8	8	Nun gingen sie ins Schloß und da stand im Saal eine Schüssel, und das gemachte Brauthemd lag darin und sah aus nicht anders, als wäre es von Gold und Silber.
+Gefängnis	8	7	Do worde de Künig beuse, un leit sine Fru in't Gefängnis smieten, da hed se lange Jaare in setten.
+Leid	8	7	Darüber trug nun der König und die Königin großes Leid, und der König sprach: »Ach, was hab ich große Treue so übel belohnt!«
+Kirche	8	5	Wie sie hereintrat, sprach er zu ihr: »Hast du gebetet in der Kirche?« -- »
+Gras	8	8	Nachdem es lange gewandert war, kam es in den Hof eines königlichen Palastes, und da es Müdigkeit empfand, so legte es sich ins Gras und schlief ein.
+Wille	8	8	Der war nun nach ihres Vaters Willen ihr lieber Geselle und Gemahl.
+Haut	8	8	Oder wenn abends beim Feuer Geschichten erzählt wurden, wobei einem die Haut schaudert, so sprachen die Zuhörer manchmal: »Ach, es gruselt mir!«
+Glied	8	7	Sie stellten sich also am Ufer in Reihe und Glied auf, und der Hecht gab mit dem Schwanz ein Zeichen, worauf sie alle zusammen aufbrachen.
+Zahn	8	7	Als das Schwein den Schneider erblickte, lief es mit schäumendem Munde und wetzenden Zähnen auf ihn zu und wollte ihn zur Erde werfen.
+Art	8	8	Alsbald fuhr das Knüppelchen heraus, dem Wirt auf den Leib und rieb ihm die Nähte, daß es eine Art hatte.
+Furcht	8	7	Die Räuber fuhren bei dem entsetzlichen Geschrei in die Höhe, meinten nicht anders als ein Gespenst käme herein und flohen in größter Furcht in den Wald hinaus.
+Ast	8	8	Es war aber nicht die Holzaxt, es war ein Ast, den er an einen dürren Baum gebunden hatte und den der Wind hin und her schlug.
+Weile	8	8	Sie zankten sich eine Weile herum, doch weil sie müde waren, ließen sie's gut sein, und die Augen fielen ihnen wieder zu.
+Eltern	8	6	Da wollte er sich ausruhen, bis es Tag wäre, und dann zu seinen Eltern wieder heim gehen.
+Lärm	8	6	Darauf hatte Daumesdick gerechnet und fing nun an in dem Leib des Wolfs einen gewaltigen Lärm zu machen, tobte und schrie, was er konnte. »
+Wanderschaft	8	7	Daumerlings Wanderschaft
+Narr	8	8	Und so hatte es sie zu Narren und trieb sie so lange in der Schatzkammer herum, bis sie müde waren und davongingen.
+Teller	8	6	Es waren ihrer dreizehn in seinem Reiche, weil er aber nur zwölf goldene Teller hatte, von welchen sie essen sollten, so mußte eine von ihnen daheim bleiben.
+Keller	8	6	Der Alte führte ihn wieder ins Schloß zurück und zeigte ihm in einem Keller drei Kasten voll Gold. »
+Gedanke	8	8	Auf dem offenen Feld kam es einem Fuchs in den Weg, der schnappte es in Gedanken auf. »
+Gesang	8	5	Da hörte er einen Gesang, der war so lieblich, daß er stille hielt und horchte.
+Nest	8	6	Also nahmen sie das Loch in acht, wo das Nest stand, und trabten wieder ab.
+Zeitlang	8	8	Das dauerte eine Zeitlang, daß sie so allein in der Wildnis waren.
+Ring	8	4	Er nahm einen Ring von seinem Finger, brach ihn entzwei und gab ihr die eine Hälfte, die andere behielt er für sich.
+Marlenich	8	3	Mein Schwester, der Marlenichen« -- »Ach,« säd Marleenken, »ik will ook henuut gahn un sehn, of de Vagel my wat schenkt?«
+Beniche	8	3	Awerst de Mann güng henuut un seeg den Vagel an: »Sucht alle meine Benichen, bind't sie in ein seiden Tuch, legt's unter den Machandelbaum.
+Machandelbaum	8	3	Awerst de Mann güng henuut un seeg den Vagel an: »Sucht alle meine Benichen, bind't sie in ein seiden Tuch, legt's unter den Machandelbaum.
+Kywitt	8	3	Kywitt, kywitt, wat vör'n schöön Vagel bün ik!«
+Sneewittchen	8	4	»Frau Königin, Ihr seid die Schönste hier, aber Sneewittchen ist tausendmal schöner als Ihr.«
+Brat	8	5	Ach, so ist's recht,« sprach er, »nun bin ich ein gemachter Kerl,« ging fort auf eine Wiese und holte den Braten hervor.
+Sessel	8	3	Da reichte er den Ranzen durchs Gitter in den Himmel hinein, und der heilige Petrus nahm ihn und hing ihn neben seinen Sessel auf.
+Ochse	8	4	Die schob der Starke samt den vorgespannten Ochsen in seinen Sack. »
+Fährmann	8	3	Der Fährmann fragte ihn, was er für ein Gewerbe verstände und was er wüßte. »
+Wurzel	7	6	Wurzeln und Waldbeeren waren seine einzige Nahrung, die suchte es sich, so weit es kommen konnte.
+Zunge	7	5	Mein Schneiderlein kroch behende unter den Fingerhut, guckte unten hervor und streckte der Frau Meisterin die Zunge heraus.
+Verwunderung	7	7	Als die beiden fremden Männer den Daumesdick erblickten, wußten sie nicht, was sie vor Verwunderung sagen sollten.
+Gewalt	7	7	Aber der König antwortete: »Ich habe das ganze Schloß gesehen, so will ich auch wissen, was darin ist,« ging und wollte die Türe mit Gewalt öffnen.
+Becher	7	4	Der König aber zeigte ihr drinnen das goldene Geschirr, jedes einzeln, die Schüsseln, Becher, Näpfe, die Vögel, das Gewild, und die wunderbaren Tiere.
+Rand	7	7	Als er zu dem Rand des Waldes kam, sprach er zu seinen Begleitern: »Bleibt hier nur halten, ich will schon allein mit den Riesen fertig werden.«
+Tanz	7	7	Da sprach der Drechsler: »Wo du das Tischchen deck dich und den Goldesel nicht wieder heraus gibst, so soll der Tanz von neuem angeben.« -- »
+Brust	7	5	Das Schneiderlein fing sein Spiel von neuem an, suchte den dicksten Stein aus und warf ihn dem ersten Riesen mit aller Gewalt auf die Brust. »
+Tropfen	7	6	Und wie sie so nähte und nach dem Schnee aufblickte, stach sie sich mit der Nadel in den Finger, und es fielen drei Tropfen Blut in den Schnee.
+Edelsteine	7	6	Was du haben willst, lieber Frosch,« sagte sie, »meine Kleider, meine Perlen und Edelsteine, auch noch die goldene Krone, die ich trage.«
+Geißlein	7	3	Es war einmal eine alte Geiß, die hatte sieben junge Geißlein, und hatte sie lieb, wie eine Mutter ihre Kinder lieb hat.
+Bauch	7	3	Sie betrachtete ihn von allen Seiten und sah, daß in seinem angefüllten Bauch sich etwas regte und zappelte. »
+Fisch	7	4	Die Fische waren schon lange unzufrieden, daß keine Ordnung in ihrem Reich herrschte.
+Hase	7	5	Der Hase und der Igel
+Schritt	7	6	De Swinegel aver lööp ungefähr man dree Schritt, dann duhkde he sick dahl (herab) in de Föhr un bleev ruhig sitten.
+Jagd	7	5	Es trug sich aber zu, daß der König des Landes eine große Jagd in dem Wald hielt.
+Siebene	7	4	Und in der Hast schnitt sich das Schneiderlein einen Gürtel, nähte ihn und stickte mit großen Buchstaben darauf: »Siebene auf einen Streich!« -- »
+Frucht	7	5	Ein reicher Bauer stand eines Tags in seinem Hof und schaute nach seinen Feldern und Gärten; das Korn wuchs kräftig heran und die Obstbäume hingen voll Früchte.
+Königreich	7	5	Der Held aber begab sich zum Könige, der nun, er mochte wollen oder nicht, sein Versprechen halten mußte und ihm seine Tochter und das halbe Königreich übergab.
+Hieb	7	6	Glücklicherweise traf bei dem Zerhacken und Zerlegen den Daumerling kein Hieb, aber er geriet unter das Wurstfleisch.
+Schrecken	7	6	Die Diebe aber waren vor Schrecken ein Stück Wegs zurückgelaufen, endlich faßten sie wieder Mut und dachten: »Der kleine Kerl will uns necken.«
+Speise	7	5	Weil er aber den Hals zu weit hineinstreckte, faßte ihn der Dampf von der Speise und trieb ihn zum Schornstein hinaus.
+Turm	7	4	Er ist vor dir auf den Turm gestiegen.« -- »
+Sinn	7	7	Vater,« antwortete er, »hört nur an, ich bin ganz unschuldig: er stand da in der Nacht, wie einer, der Böses im Sinne hat.
+Träne	7	7	Zwei von ihren Tränen aber benetzten seine Augen, da wurden sie wieder klar, und er konnte damit sehen wie sonst.
+Weide	7	5	Aber die Ziege, weil sie alle zusammen mit ihrer Milch ernährte, mußte ihr gutes Futter haben und täglich hinaus auf die Weide geführt werden.
+Glas	7	7	Der Geist im Glas
+Bisse	7	6	Nein,« antwortete der Schreiner, »die paar Bissen will ich euch nicht vor dem Munde nehmen, lieber sollt ihr meine Gäste sein.«
+Freund	7	7	Ladet nur alle Verwandte und Freunde ein, die sollen sich einmal laben und erquicken, denn das Tischchen macht sie alle satt.«
+Mittag	7	6	Zu Mittag kam er bei seinem Vater an, der ihn mit großer Freude empfing. »
+Rehche	7	3	Da sprach das Mädchen endlich: »Sei still, liebes Rehchen, ich will dich ja nimmermehr verlassen.«
+Wächter	7	5	Der Weg führte ihn zu einer großen Stadt, wo ihn der Wächter an dem Tore ausfragte, was für ein Gewerbe er verstände und was er wüßte. »
+Fest	7	6	Am andern Tag, als das Fest von neuem anhub und die Eltern und Stiefschwestern wieder fort waren, ging Aschenputtel zu dem Haselbaum und sprach:
+Täubchen	7	4	Ich sehe nach meinem Täubchen, das sitzt auf dem Dache und will mir Ade sagen,« antwortete Hänsel. »
+Korn	7	5	Ein reicher Bauer stand eines Tags in seinem Hof und schaute nach seinen Feldern und Gärten; das Korn wuchs kräftig heran und die Obstbäume hingen voll Früchte.
+Mond	7	5	Da schien der Mond ganz helle, und die weißen Kieselsteine, die vor dem Hause lagen, glänzten wie lauter Batzen.
+Maus	7	4	Mein Märchen ist aus, dort lauft eine Maus, wer sie fängt, darf sich eine große, große Pelzkappe daraus machen.
+Butt	7	4	Do güng de Angel to Grund, deep ünner, un as he se heruphaald, so haald he enen grooten Butt heruut.
+Hadd	7	4	Wenn he denn uut de School köhm, so hadd he kene ruhige Städ.
+Volk	7	5	Die Geschenke des kleinen Volkes
+Löwe	7	5	Als der Wolf abgewiesen war, kam ein Hund, ein Hirsch, ein Hase, ein Bär, ein Löwe, und nacheinander alle Waldtiere.
+Machandelboom	7	4	Von dem Machandelboom
+Feder	7	6	Du mußt nur acht geben, daß du mein Bett gut machst und es fleißig aufschüttelst, daß die Federn fliegen, dann schneit es in der Welt; ich bin die Frau Holle.«
+Spule	7	3	Nun trug es sich zu, daß die Spule einmal ganz blutig war, da bückte es sich damit in den Brunnen und wollte sie abwaschen.
+Süster	7	3	Da sehden de beiden Süstern, eine tor annern, se wullen den hübsken Jungen in't Water werpen.
+Herrlichkeit	6	5	Der Schneider verschloß Nadel und Zwirn, Elle und Bügeleisen in einen Schrank und lebte mit seinen drei Söhnen in Freude und Herrlichkeit.
+Ach	6	6	Ach nein,« sagten die Englein, »das wäre Sünde: die Jungfrau Maria hat's verboten, und es könnte leicht dein Unglück werden.«
+Sünde	6	5	Ach nein,« sagten die Englein, »das wäre Sünde: die Jungfrau Maria hat's verboten, und es könnte leicht dein Unglück werden.«
+Haufen	6	6	Es war einmal ein armes Dienstmädchen, das war fleißig und reinlich, kehrte alle Tage das Haus und schüttete den Kehricht auf einen großen Haufen vor die Türe.
+Besen	6	5	Als es nach Haus kam, wollte es seine Arbeit beginnen, nahm den Besen in die Hand, der noch in der Ecke stand, und fing an zu kehren.
+Treue	6	3	Da antwortete der getreue Johannes: »Ich will ihn nicht verlassen und will ihm mit Treue dienen, wenn's auch mein Leben kostet.« --
+Eimer	6	4	Als er in den Schloßhof kam, stand da beim Brunnen ein schönes Mädchen, das hatte zwei goldene Eimer in der Hand und schöpfte damit.
+Galgen	6	5	Da ging der Junge zu dem Galgen, setzte sich darunter und wartete, bis der Abend kam.
+Faß	6	3	Nichts Besseres,« antwortete die Alte, »als daß man den Bösewicht in ein Faß steckt, das mit Nägeln ausgeschlagen ist, und den Berg hinab ins Wasser rollt.« --
+Bettlein	6	5	Hernach wurden zwei schöne Bettlein weiß gedeckt, und Hänsel und Gretel legten sich hinein und meinten, sie wären im Himmel.
+Gemahl	6	5	Der war nun nach ihres Vaters Willen ihr lieber Geselle und Gemahl.
+Nadel	6	5	Da mußte das Geißlein nach Haus laufen und Schere, Nadel und Zwirn holen.
+Durst	6	4	Das Brüderchen trank nicht, ob es gleich so großen Durst hatte, und sprach: »Ich will warten bis zur nächsten Quelle.«
+Kragen	6	6	Damit packte er sie beim Kragen, hob sie auf die Schnitzbank und schraubte ihnen die Pfoten fest. »
+Geschrei	6	6	Die Räuber fuhren bei dem entsetzlichen Geschrei in die Höhe, meinten nicht anders als ein Gespenst käme herein und flohen in größter Furcht in den Wald hinaus.
+Richter	6	3	Und oben auf dem Dache, da sitzt der Richter, der rief, bringt mir den Schelm her.
+Geruch	6	6	Wie er da saß und trank, kam ihm der Geruch von gebratenen Gänsen in die Nase.
+Müdigkeit	6	6	Nun nahm er den Weg tapfer zwischen die Beine, und weil er leicht und behend war, fühlte er keine Müdigkeit.
+Last	6	5	Der Riese, nachdem er ein Stück Wegs die schwere Last fortgeschleppt hatte, konnte nicht weiter und rief: »Hör, ich muß den Baum fallen lassen.«
+Strick	6	4	Er nahm sich einen Strick und eine Axt mit, ging hinaus in den Wald, und hieß abermals die, welche ihm zugeordnet waren, außen warten.
+Nähe	6	6	Der flüchtige Held aber sprang in eine Kapelle, die in der Nähe war, und gleich oben zum Fenster in einem Satze wieder hinaus.
+Riegel	6	5	Dem Ding will ich einen Riegel vorschieben,« sagte das Schneiderlein.
+Handel	6	6	Nun will ich's versuchen und einen Handel mit Töpfen und irdenem Geschirr anfangen: du sollst dich auf den Markt setzen und die Ware feilhalten.« -- »
+Schornstein	6	5	Weil er aber den Hals zu weit hineinstreckte, faßte ihn der Dampf von der Speise und trieb ihn zum Schornstein hinaus.
+Lappe	6	4	sagte die Meisterin, ward bös, ergriff einen Lappen und wollte nach ihm schlagen.
+Ort	6	6	Der Bärenhäuter aber zog in der Welt herum, von einem Ort zum andern, tat Gutes, wo er konnte, und gab den Armen reichlich, damit sie für ihn beteten.
+Landstraße	6	6	Drei Bettler sind mir auf der Landstraße begegnet, davon hab' ich jedem ein Viertel von meinem Brot und einen Kreuzer Geld gegeben.
+Deckel	6	4	Sie stellten den Sarg auf die Erde, er aber ging hinzu und nahm den Deckel ab: da lag ein toter Mann darin.
+Handwerk	6	5	Ein gutes Handwerk,« erwiderte der Alte, »aber was hast du von deiner Wanderschaft mitgebracht?« -- »
+Täubch	6	3	Sie mußten aber an dem Grabe vorbei, da saßen die zwei Täubchen auf dem Haselbäumchen und riefen:
+Mal	6	4	Wer A sagt muß auch B sagen, und weil er das erste Mal nachgegeben hatte, so mußte er es auch zum zweitenmal.
+Flügel	6	5	Im Schloßhof sah er die Pferde und scheckigen Jagdhunde liegen und schlafen, auf dem Dache saßen die Tauben und hatten das Köpfchen unter den Flügel gesteckt.
+Water	6	4	So seet he ook eens by de Angel un seeg jümmer in das blanke Water henin: un he seet un seet.
+Stünn	6	4	Do güng de Mann hen, un syne Fru seet nich meer in'n Pißputt, dar stünn awerst ene lüttje Hütt, un syne Fru seet vor de Döhr up ene Bänk.
+Dornröschen	6	4	Dornröschen
+Jüngling	6	5	Da sprach der Jüngling: »Ich fürchte mich nicht, ich will hinaus und das schöne Dornröschen sehen.«
+Kreis	6	5	Der Alte winkte, sie sollten eintreten, und das kleine Volk öffnete bereitwillig seinen Kreis.
+Feldscherer	6	3	Die drei Feldscherer
+Nachbar	6	3	Es war sein Nachbar, ein armer Mann, der ein Häufchen Kinder hatte, die er nicht mehr sättigen konnte. »
+Sommer	6	4	Darauf fragte er den älteren, wo er sich den Sommer über aufgehalten und wie er sich ernähret hätte. »
+Klumpe	6	4	Hans zog sein Tüchlein aus der Tasche, wickelte den Klumpen hinein, setzte ihn auf die Schulter und machte sich auf den Weg nach Haus.
+Holzhacker	5	3	Vor einem großen Walde lebte ein Holzhacker mit seiner Frau, der hatte nur ein einziges Kind, das war ein Mädchen von drei Jahren.
+Apostel	5	4	Darauf teilte er den Laib in vier Teile und gab davon dem Apostel einen und auch einen Kreuzer.
+Nahrung	5	4	Wurzeln und Waldbeeren waren seine einzige Nahrung, die suchte es sich, so weit es kommen konnte.
+Eis	5	5	Es war gehorsam, ging hin und hackte ein Loch in das Eis, und als es mitten im Hacken war, kam ein prächtiger Wagen hergefahren, worin der König saß.
+Gebüsch	5	5	Ich bin über den Baum gesprungen, weil die Jäger da unten in das Gebüsch schießen.
+Sprache	5	5	Aber das Tischchen regte sich nicht und blieb so leer wie ein anderer Tisch, der die Sprache nicht versteht.
+Gericht	5	5	Es ward ein Gericht über sie gehalten, und weil sie nicht antworten und sich nicht verteidigen konnte, ward sie verurteilt, auf dem Scheiterhaufen zu sterben.
+Stich	5	4	Sie waren so sauber gearbeitet, daß kein Stich daran falsch war, gerade als wenn es ein Meisterstück sein sollte.
+Mut	5	4	Die Diebe aber waren vor Schrecken ein Stück Wegs zurückgelaufen, endlich faßten sie wieder Mut und dachten: »Der kleine Kerl will uns necken.«
+Geschenk	5	5	Die Geschenke des kleinen Volkes
+Wiege	5	3	»Es schläft in der Wiege fein.«
+Getreuester	5	3	Aber der König sprach: »Schweigt und laßt ihn gehen, es ist mein getreuester Johannes, wer weiß, wozu das gut ist!«
+Liebe	5	5	
+Gefahr	5	4	Nein,« sprach der König, »die Gefahr dabei ist zu groß, lieber will ich sterben.«
+Stelle	5	4	Nun gehe ich nicht von der Stelle, bis du aufgeschlossen hast.«
+Angesicht	5	5	Der treue Diener besann sich lange, wie die Sache anzufangen wäre, denn es hielt schwer, nur vor das Angesicht der Königstochter zu kommen.
+Musik	5	4	Weißt du was,« sprach der Esel, »ich gehe nach Bremen und werde dort Stadtmusikant, geh mit und laß dich auch bei der Musik annehmen.
+Pech	5	3	Der Königssohn hatte aber eine List gebraucht und hatte die ganze Treppe mit Pech bestreichen lassen.
+Gaul	5	3	Als sie nun ans Land kamen, da geschah es, wie der Rabe vorhergesagt hatte, und es sprengte ein prächtiger fuchsroter Gaul daher. »
+Wunde	5	4	Die Wunde aber war so gering, daß das Rehchen am Morgen nichts mehr davon spürte.
+Kuche	5	4	Rotkäppchen, das bringt Kuchen und Wein, mach auf.« -- »
+Kröte	5	3	Der zweite sprach: »Ich schenk ihm, daß ihm bei jedem Wort, das es spricht, eine Kröte aus dem Mund springt.« --
+Fluß	5	3	Ich bin über einen Fluß gefahren,« antwortete er, »und da habe ich es mitgenommen, es liegt dort statt des Sandes am Ufer.« -- »
+Nägel	5	5	Nichts Besseres,« antwortete die Alte, »als daß man den Bösewicht in ein Faß steckt, das mit Nägeln ausgeschlagen ist, und den Berg hinab ins Wasser rollt.« --
+Grund	5	4	Die Königstochter folgte ihr mit den Augen nach, aber die Kugel verschwand, und der Brunnen war tief, so tief, daß man keinen Grund sah.
+Tellerlein	5	3	
+Tafel	5	3	In der Stube war eine Tafel mit köstlichen Speisen besetzt, da sprach der König zu ihnen: »Geht hinein und laßt's euch wohl sein.«
+Schmerz	5	4	Der Königssohn geriet außer sich vor Schmerzen, und in der Verzweiflung sprang er den Turm herab.
+Macht	5	4	Es dauerte nicht lange, so klopfte jemand an die Haustür und rief: »Macht auf, ihr lieben Kinder, eure Mutter ist da und hat jedem von euch etwas mitgebracht.«
+Äste	5	5	Als sie auf die Wiese kam, so lag da der Wolf an dem Baum und schnarchte, daß die Äste zitterten.
+Schere	5	5	Da mußte das Geißlein nach Haus laufen und Schere, Nadel und Zwirn holen.
+Magen	5	3	Da hieß es aufpassen, daß er nicht zwischen die Zähne kam und zermalmt ward, und hernach mußte er doch mit in den Magen hinabrutschen. »
+Scholle	5	3	Die Scholle
+Hilfe	5	5	Ihr Kammermädchen sprach: »Ich will Hilfe schaffen, das Gruseln soll er schon lernen.«
+Ufer	5	4	Sie stellten sich also am Ufer in Reihe und Glied auf, und der Hecht gab mit dem Schwanz ein Zeichen, worauf sie alle zusammen aufbrachen.
+Strafe	5	5	Seit der Zeit steht der Scholle zur Strafe das Maul schief.
+Segg	5	5	As se nu mit eenander ünnerswegs wöören, spröök de Swinegel to sien Fro: »Nu pass up, wat ick seggen will.
+Ärger	5	5	De Haas aver, ganz uuter sick vör Ihwer (Ärger), schreede: »Nochmal geloopen, wedder üm!« -- »
+Güng	5	4	De Mann wull noch nicht recht, wull awerst syn Fru ook nicht to weddern syn un güng hen na de See.
+Mühle	5	3	So schwamm sie bis zwei Meilen von des Königs Hauptstadt, wo eine Mühle war, an dessen Wehr sie hängen blieb.
+Leibeskräft	5	5	Darauf kamen die drei Landesflüchtigen an einem Hof vorbei, da saß auf dem Tor der Haushahn und schrie aus Leibeskräften. »
+Wetter	5	5	Das Pferd war traurig und ging nach dem Wald zu, dort ein wenig Schutz vor dem Wetter zu suchen.
+Ferne	5	5	Einmal ließ der König ein großes Fest anstellen und ladete dazu aus der Nähe und Ferne die heiratslustigen Männer ein.
+Hauptmann	5	5	Du bist ein gewaltiger Held,« sagten sie, »willst du unser Hauptmann werden?«
+Leber	5	3	Da lief dem Schneiderlein endlich, wie man sagt, die Laus über die Leber, es langte aus seiner Hölle nach einem Tuchlappen und: »Wart, ich will es euch geben!«
+Hast	5	5	Und in der Hast schnitt sich das Schneiderlein einen Gürtel, nähte ihn und stickte mit großen Buchstaben darauf: »Siebene auf einen Streich!« -- »
+Gürtel	5	3	Und in der Hast schnitt sich das Schneiderlein einen Gürtel, nähte ihn und stickte mit großen Buchstaben darauf: »Siebene auf einen Streich!« -- »
+Meile	5	3	Die Kriegsleute aber waren dem Schneiderlein aufgesessen und wünschten, es wäre tausend Meilen weit weg. »
+Mitte	5	5	In der Mitte saß ein Alter, der etwas größer war als die übrigen, der einen buntfarbigen Rock trug, und dem ein eisgrauer Bart über die Brust herabhing.
+Beutel	5	4	Daumesdick kroch immer weiter zurück, und da es bald ganz dunkel ward, so mußten sie mit Ärger und mit leerem Beutel wieder heim wandern.
+Kirchhof	5	3	Einmal brachte sie der älteste auf den Kirchhof, wo die schönsten Kräuter standen, ließ sie da fressen und herumspringen.
+Mauer	5	4	In der Abenddämmerung stieg er also über die Mauer in den Garten der Zauberin, stach in aller Eile eine Handvoll Rapunzeln und brachte sie seiner Frau.
+Blick	5	5	Wie kannst du es wagen,« sprach sie mit zornigem Blick, »in meinen Garten zu steigen und wie ein Dieb mir meine Rapunzeln zu stehlen?
+Geschöpf	5	4	Die Biene sprach: »Du dauerst mich, Bär, ich bin ein armes schwaches Geschöpf, das ihr im Wege nicht anguckt, aber ich glaube doch, daß ich euch helfen kann.«
+Lehre	5	4	Der zweite Sohn war zu einem Müller gekommen und bei ihm in die Lehre gegangen.
+Heimweg	5	5	Es trug sich zu, daß er auf dem Heimweg abends in ein Wirtshaus kam, das mit Gästen angefüllt war.
+Koch	5	3	Er wußte gar nicht, was er sagen sollte, dachte aber: »Einen solchen Koch könntest du in deiner Wirtschaft wohl brauchen.«
+Fremde	5	4	Der Schneider freute sich, als er ihn wieder sah und fragte auch ihn, was er in der Fremde gelernt hätte. »
+Heide	5	5	Endlich als der letzte Tag von den sieben Jahren anbrach, ging er wieder hinaus auf die Heide und setzte sich unter den Ring von Bäumen.
+Hüt	5	4	Hüte dich,« sagte die zweite, »die Bären lieben die Süßigkeit, und wenn du ihm gefällst, so frißt er dich auf.« -- »
+Seele	5	4	Die arme Seele war gerettet.
+Lager	5	4	Da ward ihm die kleine Tür aufgetan, es sprang hinein und ruhete sich die ganze Nacht auf seinem weichen Lager aus.
+Pantoffel	5	4	Da warf ihm der Vogel ein golden und silbern Kleid herunter und mit Seide und Silber ausgestickte Pantoffeln.
+Schemel	5	3	Dann setzte es sich auf einen Schemel, zog den Fuß aus dem schweren Holzschuh und steckte ihn in den Pantoffel, der war wie angegossen.
+Häuslein	5	4	Als es ganz dunkel geworden war, kamen die Herren von dem Häuslein, das waren die sieben Zwerge, die in den Bergen nach Erz hackten und gruben.
+Fett	5	4	Hänsel mag fett oder mager sein, morgen will ich ihn schlachten und kochen.«
+Getier	5	3	Also war dem Bären der Krieg angekündigt, und ward alles vierfüßige Getier berufen, Ochs, Esel, Rind, Hirsch, Reh, und was die Erde sonst alles trägt.
+Hügel	5	4	Abends hing der Goldschmied noch ein paar Taschen über die Schulter, um recht einsacken zu können, und machte sich auf den Weg zu dem Hügel.
+Gefallen	5	3	Doch wollte er, ihm zu Gefallen, den Tag noch bleiben.
+Armut	5	5	Das sprach der Mann, weil er nicht wußte, wie weislich Gott Reichtum und Armut verteilt.
+Bruderherz	5	5	Da war ihm der heilige Petrus nicht geschwind genug: »Nun heb die Beine auf, Bruderherz,« sprach er zu ihm, »daß wir noch zu rechter Zeit hin kommen.«
+Bescheid	5	4	»Tom Daude bereit, up wietern Bescheid tom Lilienstrus: Wacker Junge, bist du's?«
+Dorf	5	5	Joringel ging fort und kam endlich in ein fremdes Dorf.
+Schule	5	4	Du gehst ja für dich hin, als wenn du zur Schule gingst, und ist so lustig haußen in dem Wald.«
+Grabhügel	5	3	Der Grabhügel
+Rotkäppchen	5	3	Einmal schenkte sie ihm ein Käppchen von rotem Sammet, und weil ihm das so wohl stand und es nichts anders mehr tragen wollte, hieß es nur das Rotkäppchen.
+Haspel	5	3	Da fürchtete sich die Frau, wenn er das Holz hätte, daß er daraus einen Haspel machte, und sie abhaspeln und dann wieder frisch spinnen müßte.
+Leut	5	3	O mein Sohn,« spricht der Vater, »Kaufleut, geschwinde Leut!
+Rose	4	3	Die Bücher der Rose
+Nüs	4	3	Da ward gutes Essen aufgetragen, Milch und Pfannekuchen mit Zucker, Äpfel und Nüsse.
+Mantel	4	3	Sobald dann die Sonne wieder warm schien, ging es heraus und setzte sich vor den Baum, und seine langen Haare bedeckten es von allen Seiten wie ein Mantel.
+Töchterlein	4	4	Im nächsten Jahre gebar die Königin ein schönes Töchterlein, da erschien ihr zum drittenmal nachts die Jungfrau Maria und sprach: »Folge mir.«
+Wichtelmänner	4	3	Die Wichtelmänner
+Schuld	4	3	Es war ein Schuster ohne seine Schuld so arm geworden, daß ihm endlich nichts mehr übrig blieb, als Leder zu einem einzigen Paar Schuhe.
+Meisterstück	4	4	Sie waren so sauber gearbeitet, daß kein Stich daran falsch war, gerade als wenn es ein Meisterstück sein sollte.
+Wams	4	3	Ich will Hemdlein, Rock, Wams und Höslein für sie nähen, auch jedem ein Paar Strümpfe stricken; mach du jedem ein Paar Schühlein dazu.«
+Decke	4	4	Die Haustüre stand sperrweit auf: Tisch, Stühle und Bänke waren umgeworfen, die Waschschüssel lag in Scherben, Decke und Kissen waren aus dem Bett gezogen.
+Frieden	4	4	Da sagte der alte König: »So sterb' ich getrost und in Frieden.«
+Kissen	4	4	Und als der treue Johannes nochmals dem alten König die Hand darauf gegeben hatte, ward dieser still, legte sein Haupt auf das Kissen und starb.
+Bildnis	4	3	Als er die Türe geöffnet hatte, trat er zuerst hinein und dachte, er wolle das Bildnis bedecken, daß es der König vor ihm nicht sähe: aber was half das?
+Mittel	4	4	Da ratschlagten die Tiere, wie sie es anfangen müßten, um die Räuber hinauszujagen und fanden endlich ein Mittel.
+Wohlan	4	4	Wohlan,« sagten sie, »wir wollen sehen, was du kannst.«
+Liebst	4	3	Da fing der Stein an zu reden und sprach: »Ja, du kannst mich wieder lebendig machen, wenn du dein Liebstes daran wenden willst.«
+Witwe	4	4	Da stieg er selbst hinauf, und als er sah, daß es seine Richtigkeit hatte, ging er zu der Witwe und freite sie, und die Hochzeit ward gehalten.
+Atem	4	4	Es ist draußen so kalt, daß einem der Atem friert.
+Dorn	4	4	Da weht ja der Wind hindurch und die Dornen reißen mir's vom Leib.« -- »
+Hintertür	4	3	Als es sein Brot gegessen hatte, gaben sie ihm einen Besen und sprachen: »Kehre damit an der Hintertür den Schnee weg.«
+Bettchen	4	4	Da ging sie in der Königin Gestalt hinauf, gab ihm zu trinken, schüttelte ihm sein Bettchen, deckte es zu und schwamm als Ente wieder durch die Gosse fort.
+Besseres	4	4	Nichts Besseres,« antwortete die Alte, »als daß man den Bösewicht in ein Faß steckt, das mit Nägeln ausgeschlagen ist, und den Berg hinab ins Wasser rollt.« --
+Bösewicht	4	4	Nichts Besseres,« antwortete die Alte, »als daß man den Bösewicht in ein Faß steckt, das mit Nägeln ausgeschlagen ist, und den Berg hinab ins Wasser rollt.« --
+Band	4	4	Sie holte die andere Hälfte, die sie an einem Band um den Hals trug, hielt sie daran, und es zeigte sich, daß beide Teile vollkommen zueinander paßten.
+Geiß	4	3	Es war einmal eine alte Geiß, die hatte sieben junge Geißlein, und hatte sie lieb, wie eine Mutter ihre Kinder lieb hat.
+Haustür	4	3	Es dauerte nicht lange, so klopfte jemand an die Haustür und rief: »Macht auf, ihr lieben Kinder, eure Mutter ist da und hat jedem von euch etwas mitgebracht.«
+Kasten	4	4	Der Alte führte ihn wieder ins Schloß zurück und zeigte ihm in einem Keller drei Kasten voll Gold. »
+Ungetüm	4	3	sagte der König, »mir ist viel Wunderliches vor die Augen gekommen, aber so ein Ungetüm noch nicht; aus was für Samen mag die gewachsen sein?
+Schnitt	4	3	
+Eile	4	4	Da schleppten die sieben Geißlein in aller Eile die Steine herbei und steckten sie ihm in den Bauch, so viel sie hineinbringen konnten.
+Döhr	4	3	Ga man hen, se stait vor der Döhr,« säd de Butt.
+Verstand	4	4	O mien Gott, Mann,« füng nu den Swinegel sien Fro an to schreen, »büst do nich klook, hest du denn ganz den Verstand verlaaren?
+Säck	4	4	Soviel Ihr nur wollt,« antwortete er, »es ist ein Fährmann auf dem Fluß, von dem laßt Euch überfahren, so könnt Ihr drüben Eure Säcke füllen.«
+Herberge	4	4	Sprach der Esel: »So müssen wir uns aufmachen und noch hingehen, denn hier ist die Herberge schlecht.«
+Räuberhaus	4	4	Du armer Junge,« sprach die Frau, »du bist in ein Räuberhaus geraten, und wenn sie heim kommen, so bringen sie dich um.« -- »
+Woche	4	4	Nun setzten sich die vier Gesellen an den Tisch, nahmen mit dem vorlieb, was übrig geblieben war, und aßen, als wenn sie vier Wochen hungern sollten.
+Spaß	4	4	Aber die Katze verstand keinen Spaß, sprang ihm ins Gesicht, spie und kratzte.
+Laib	4	3	Darauf teilte er den Laib in vier Teile und gab davon dem Apostel einen und auch einen Kreuzer.
+Beistand	4	4	Der Schneider sollte ihm vor der Hochzeit erst ein Wildschwein fangen, das in dem Wald großen Schaden tat; die Jäger sollten ihm Beistand leisten. »
+Baume	4	3	Über ein Weilchen erblickte er beide Riesen: sie lagen unter einem Baume und schliefen und schnarchten dabei, daß sich die Äste auf und nieder bogen.
+Wut	4	4	
+Versprechen	4	3	Der Held aber begab sich zum Könige, der nun, er mochte wollen oder nicht, sein Versprechen halten mußte und ihm seine Tochter und das halbe Königreich übergab.
+Kleine	4	3	Als die Stunde kam, spannte die Mutter an und setzte Daumesdick ins Ohr des Pferdes, und dann rief der Kleine, wie das Pferd gehen sollte, »jüh und joh!
+Fuhrmann	4	4	Da fährt ein Wagen, und ein Fuhrmann ruft dem Pferde zu, und ist doch nicht zu sehen.« -- »
+Heller	4	4	Ich habe gekegelt,« antwortete er, »und ein paar Heller verloren.« -- »
+Dank	4	3	Was,« sagte er, »ist das mein Dank?
+Handvoll	4	4	In der Abenddämmerung stieg er also über die Mauer in den Garten der Zauberin, stach in aller Eile eine Handvoll Rapunzeln und brachte sie seiner Frau.
+Bedingung	4	4	Ich sehe wohl,« sagte der Fremde, »daß dir's an Mut nicht fehlt, aber es ist noch eine Bedingung dabei, die mußt du erfüllen.« -- »
+Gesell	4	4	Die sechs andern hörten das drüben und sprachen: »Unser Gesell, der Herr Schulz, ruft uns, kann er hinüber waden, warum wir nicht auch?«
+Mahlzeit	4	4	Nach der Mahlzeit fragte der Gast, was er schuldig wäre, der Wirt wollte die doppelte Kreide nicht sparen und sagte, noch ein paar Goldstücke müßte er zulegen.
+Gut	4	4	Da ließ er ihren Vater los aus dem Gefängnis, und nahm sie bei sich als seine Gemahlin und befahl ihr das ganze königliche Gut an.
+Schmutz	4	3	Du, Aschenputtel,« sprach sie, »bist voll Staub und Schmutz und willst zur Hochzeit?
+Spott	4	4	Von ihren Schwestern ward ihr nichts als Hohn und Spott zuteil. »
+Zimmer	4	3	Niemand erkannte ihn, der Vater hielt ihn für einen vornehmen Feldobrist und führte ihn in das Zimmer, wo seine Töchter saßen.
+Rehkälbchen	4	3	Das Schwesterchen aber erschrak gewaltig, als es sah, daß sein Rehkälbchen verwundet war.
+Seil	4	4	Dann band es sein goldenes Strumpfband ab und tat es dem Rehchen um den Hals, und rupfte Binsen und flocht ein weiches Seil daraus.
+Laub	4	4	Mir hat geträumt, in einem Königreiche ständ ein Obstbaum, der hätte sonst goldene Äpfel getragen und wollte jetzt nicht einmal Laub treiben.
+Neid	4	3	Da erschrak die Königin und ward gelb und grün vor Neid.
+Bäumche	4	3	»Bäumchen, rüttel dich und schüttel dich, wirf Gold und Silber über mich.«
+Brücke	4	3	Wir können nicht hinüber,« sprach Hänsel, »ich seh keinen Steg und keine Brücke.« -- »
+Sik	4	4	Mit des sett't he em wedder in dat blanke Water, do güng de Butt to Grund und leet enen langen Strypen Bloot achter sik.
+Befehl	4	4	sprach er, »ich habe in meinem Brief einen ganz andern Befehl erteilt.«
+Herde	4	4	
+Zwerge	4	3	Als es ganz dunkel geworden war, kamen die Herren von dem Häuslein, das waren die sieben Zwerge, die in den Bergen nach Erz hackten und gruben.
+Korb	4	3	Du sollst Körbe flechten.«
+Sechs	4	3	Da sah der König, daß ein gewaltiges Feuer unter der Eisenstube brannte, und merkte, daß er den sechsen auf diese Weise nichts anhaben könnte.
+Stange	4	3	antwortete der Teufel, »wenn einer kommt und will überfahren, so muß er ihm die Stange in die Hand geben, dann muß der andere überfahren und er ist frei.«
+Mörder	4	3	Als sie aber hinauskamen, stürzten die Mörder über ihn her, banden ihn und wollten ihn an einen Baum hängen.
+Rad	4	4	Der Fuhrmann aber brummte vor sich: »Du wirst mich nicht arm machen,« knallte mit der Peitsche und trieb den Wagen über den Hund, daß ihn die Räder tot fuhren.
+Pfropfe	4	3	rief's von neuem, und der Schüler, der an nichts Böses dachte, nahm den Pfropfen von der Flasche ab.
+Büffelleder	4	3	Der Stiefel von Büffelleder
+Satz	3	3	Satz und Druck von Oscar Brandstetter in Leipzig
+Stern	3	3	Se kreg en kleinen Jungen, de hadde 'n ritsch roen (roten) Stern mit up de Weld.
+Wohnung	3	3	In der Einöde, in welche es eingeschlossen war, stand ein alter hohler Baum, das mußte seine Wohnung sein.
+Schutz	3	3	Das Pferd war traurig und ging nach dem Wald zu, dort ein wenig Schutz vor dem Wetter zu suchen.
+Speis	3	3	
+Tierchen	3	3	Daran band es das Tierchen und führte es weiter, und ging immer tiefer in den Wald hinein.
+Elend	3	3	So saß es ein Jahr nach dem andern und fühlte den Jammer und das Elend der Welt.
+Überfluß	3	3	Da war nun Fleisch im Überfluß, und der Wolf machte sich gleich daran und dachte: »Bis ich aufhöre, hat's Zeit.«
+Wahrheit	3	3	Da war sie zufrieden, denn sie wußte, daß der Spiegel die Wahrheit sagte.
+Gebet	3	3	Morgens, nachdem er sein Gebet verrichtet hatte und sich zur Arbeit niedersetzen wollte, so standen die beiden Schuhe ganz fertig auf seinem Tisch.
+Abends	3	3	Eines Abends, als sie so vertraulich beisammen saßen, klopfte jemand an die Türe, als wollte er eingelassen sein.
+Geschwindigkeit	3	3	Mit der größten Geschwindigkeit zogen sie sich an, strichen die schönen Kleider am Leib und sangen:
+Herrschaft	3	3	
+Trauer	3	3	Die Trauer ging vorüber, da sprach der treue Johannes zu ihm: »Es ist nun Zeit, daß du dein Erbe siehst: ich will dir dein väterliches Schloß zeigen.«
+Knochen	3	3	Der Hund meinte, ein paar Knochen und etwas Fleisch dran, täten ihm auch gut.
+Gespräch	3	3	Die Kinder waren aber noch wach gewesen und hatten das Gespräch mit angehört.
+Richtigkeit	3	3	Da stieg er selbst hinauf, und als er sah, daß es seine Richtigkeit hatte, ging er zu der Witwe und freite sie, und die Hochzeit ward gehalten.
+Tal	3	3	Des Morgens, als er erwachte, fing er an durch Berg und Tal zu suchen, ob er eine solche Blume fände.
+Mitleide	3	3	Da fühlte der König Mitleiden, und als er sah, wie es so gar schön war, sprach er: »Willst du mit mir fahren?« -- »
+Schwelle	3	3	Da rollte das Bett fort, als wären sechs Pferde vorgespannt, über Schwellen und Treppen auf und ab: auf einmal hopp, hopp!
+Sonntag	3	3	Nun war der König in großer Freude, er hielt aber die Königin in einer Kammer verborgen, bis auf den Sonntag, wo das Kind getauft werden sollte.
+Urteil	3	3	Der König ließ beide vor Gericht führen, und es ward ihnen das Urteil gesprochen.
+Schlosse	3	3	
+Kette	3	3	Auf einmal trat der Königssohn herein, war in Sammet und Seide gekleidet und hatte goldene Ketten um den Hals.
+Traurigkeit	3	3	Wie oft steckt die Traurigkeit hinter dem Spaß!
+Kreide	3	3	Da ging der Wolf fort zu einem Krämer und kaufte sich ein großes Stück Kreide: die aß er und machte seine Stimme damit fein.
+Haustüre	3	3	Die Haustüre stand sperrweit auf: Tisch, Stühle und Bänke waren umgeworfen, die Waschschüssel lag in Scherben, Decke und Kissen waren aus dem Bett gezogen.
+Abendbrot	3	3	Ach Gott,« dachte sie, »sollten meine armen Kinder, die er zum Abendbrot hinuntergewürgt hat, noch am Leben sein?«
+Zwirn	3	3	Da mußte das Geißlein nach Haus laufen und Schere, Nadel und Zwirn holen.
+Schlafe	3	3	Die Alte aber sagte: »Jetzt geht und sucht Wackersteine, damit wollen wir dem gottlosen Tiere den Bauch füllen, solange es noch im Schlafe liegt.«
+Zeichen	3	3	Sie stellten sich also am Ufer in Reihe und Glied auf, und der Hecht gab mit dem Schwanz ein Zeichen, worauf sie alle zusammen aufbrachen.
+Stadtmusikant	3	3	Die Bremer Stadtmusikanten
+Scheibe	3	3	Der Esel schrie, der Hund bellte, die Katze miaute und der Hahn krähte; dann stürzten sie durch das Fenster in die Stube hinein, daß die Scheiben klirrten.
+Gespenst	3	3	Die Räuber fuhren bei dem entsetzlichen Geschrei in die Höhe, meinten nicht anders als ein Gespenst käme herein und flohen in größter Furcht in den Wald hinaus.
+Natur	3	3	Wie die vier Spielleute fertig waren, löschten sie das Licht aus und suchten sich eine Schlafstätte, jeder nach seiner Natur und Bequemlichkeit.
+Kikeriki	3	3	»Kikeriki, unsere goldene Jungfrau ist wieder hie.«
+Gesellschaft	3	3	Die Fliegen aber, die kein Deutsch verstanden, ließen sich nicht abweisen, sondern kamen in immer größerer Gesellschaft wieder.
+Kriegsheld	3	3	Ach,« sprachen sie, »was will der große Kriegsheld hier mitten im Frieden?
+Belohnung	3	3	Das ist zur Belohnung deiner Dienste,« sagte die Frau Holle und schloß das Tor zu.
+Sachte	3	3	Sachte, sachte,« sprach er, »so geschwind geht das nicht,« blieb stehen und wartete, bis das Tier ganz nahe war, dann sprang er behendiglich hinter den Baum.
+Karren	3	3	Das geht nicht mit rechten Dingen zu,« sagte der andere, »wir wollen dem Karren folgen und sehen, wo er anhält.«
+Wurst	3	3	Endlich im Winter wurde er heruntergeholt, weil die Wurst einem Gast sollte vorgesetzt werden.
+Herzenslust	3	3	Der Wolf ließ sich das nicht zweimal sagen, drängte sich in der Nacht zur Gosse hinein und fraß in der Vorratskammer nach Herzenslust.
+Beute	3	3	Sie teilten nun die Beute, das Schneiderlein aber verlangte nur einen Kreuzer, weil es nicht mehr tragen konnte.
+Vorteil	3	3	Endlich ersah er seinen Vorteil, machte sich Luft und sprang heraus.
+Fürchten	3	3	Märchen von einem, der auszog das Fürchten zu lernen
+Geschichte	3	3	Oder wenn abends beim Feuer Geschichten erzählt wurden, wobei einem die Haut schaudert, so sprachen die Zuhörer manchmal: »Ach, es gruselt mir!«
+Glocke	3	3	Der Küster nahm ihn also ins Haus, und er mußte die Glocke läuten.
+Streiche	3	3	Was sind das für gottlose Streiche, die muß dir der Böse eingegeben haben.« »
+Gelegenheit	3	3	Der Wirt, der das hörte, lachte und sprach: »Wenn dich danach lüstet, dazu sollte hier wohl Gelegenheit sein.« -- »
+Kralle	3	3	Da streckten sie die Krallen aus. »
+Gesindel	3	3	Das sah er ein Weilchen ruhig mit an, als es ihm aber zu arg ward, faßte er sein Schnitzmesser und rief: »Fort mit dir, du Gesindel,« und haute auf sie los.
+Lied	3	3	Die zweite Nacht ging er abermals hinauf ins alte Schloß, setzte sich zum Feuer und fing sein altes Lied wieder an, »wenn mir's nur gruselte!«
+Schoß	3	3	Nun nahm er ihn heraus, setzte sich ans Feuer und legte ihn auf seinen Schoß, und rieb ihm die Arme, damit das Blut wieder in Bewegung kommen sollte.
+Bewegung	3	3	Nun nahm er ihn heraus, setzte sich ans Feuer und legte ihn auf seinen Schoß, und rieb ihm die Arme, damit das Blut wieder in Bewegung kommen sollte.
+Wüstenei	3	3	Und sie war so unbarmherzig, daß sie die arme Rapunzel in eine Wüstenei brachte, wo sie in großem Jammer und Elend leben mußte.
+Beere	3	3	Da irrte er blind im Walde umher, aß nichts als Wurzeln und Beeren, und tat nichts als jammern und weinen über den Verlust seiner liebsten Frau.
+Ursache	3	3	Als der Schneider das hörte, stutzte er und sah wohl, daß er seine drei Söhne ohne Ursache verstoßen hatte. »
+Sprung	3	3	Und weil die Elle zu ehrenvoll gewesen wäre, holte er die Peitsche und versetzte ihr solche Hiebe, daß sie in gewaltigen Sprüngen davon lief.
+Tüchlein	3	3	Hans zog sein Tüchlein aus der Tasche, wickelte den Klumpen hinein, setzte ihn auf die Schulter und machte sich auf den Weg nach Haus.
+Kopfkissen	3	3	Als Schlafenszeit war, streckte sich der Gast auf die Bank und legte seinen Sack als Kopfkissen unter.
+Dunkelheit	3	3	Als der Fuchs nach Haus kam, funkelten ihm ein paar große Augen aus der Dunkelheit entgegen, daß er erschrak und wieder zurücklief.
+Pferdefuß	3	3	Ihr habt unverschämt starke Waden,« rief er und verzog den Mund: »Meint Ihr,« erwiderte der Soldat, »ich hätte einen Pferdefuß wie Ihr?
+Wunder	3	3	Komm mit mir,« sprach er zu ihm, »meine Töchter sind Wunder von Schönheit, wähle dir eine davon zur Frau.
+Kleide	3	3	Die Braut aber saß in schwarzem Kleide ihm gegenüber, schlug die Augen nicht auf und sprach kein Wort.
+Vorwurf	3	3	Aber die Frau hörte auf nichts, was er sagte, schalt ihn und machte ihm Vorwürfe.
+Ik	3	3	Ik würr dy doch nich recht smecken: sett my wedder in dat Water un laat my swemmen.« -- »
+Blase	3	3	Seht, ich hinke und habe von dem Weg daher Blasen an den Füßen, ich kann unmöglich wieder umkehren.
+Reiche	3	3	Es waren ihrer dreizehn in seinem Reiche, weil er aber nur zwölf goldene Teller hatte, von welchen sie essen sollten, so mußte eine von ihnen daheim bleiben.
+Gabe	3	3	Da trat der Spielmann in seinen schmutzigen, verlumpten Kleidern herein, sang vor dem König und seiner Tochter und bat, als er fertig war, um eine milde Gabe.
+Bier	3	3	Ich koche warm Bier, tue Butter hinein: Will der Herr mein Gast sein?«
+Welle	3	3	Zur gliche Zit isch au e riche, riche Herr do gsi und het au i Himmel welle.
+Hochmut	3	3	Und der Neid und der Hochmut wuchsen wie ein Unkraut in ihrem Herzen immer höher, daß sie Tag und Nacht keine Ruhe mehr hatte.
+Mitleiden	3	3	Und weil es so schön war, hatte der Jäger Mitleiden und sprach: »So lauf hin, du armes Kind.« -- »
+Zwerglein	3	3	Zum Glück aber war es bald Abend, wo die sieben Zwerglein nach Haus kamen.
+Eule	3	3	Und die Tiere kamen auch und beweinten Sneewittchen, erst eine Eule, dann ein Rabe, zuletzt ein Täubchen.
+Wanderer	3	3	Die Mutter sprach: »Geschwind, Rosenrot, mach auf, es wird ein Wanderer sein, der Obdach sucht.«
+Salbe	3	3	Sie hatten aber eine Salbe, was sie damit bestrichen, das heilte zusammen, und das Fläschchen, wo sie drin war, trugen sie beständig bei sich.
+Sünder	3	3	Da gab ihm das Mädchen ein scharfes Messer, und er ging hin, schnitt dem armen Sünder die rechte Hand ab und brachte sie herbei.
+Krankheit	3	3	Bald hernach verfiel die Tochter des Königs in eine schwere Krankheit.
+Almose	3	3	Der heilige Petrus aber hatte sich als ein armer Bettler an den Weg gesetzt, und wie der Bruder Lustig daher kam, bat er ihn um ein Almosen.
+Trunk	3	3	Hernach sprach er: »Das Essen wäre schon gut, nun schafft auch einen guten Trunk herbei.«
+Schau	3	3	Schau die meinigen an, die sind von Büffelleder und haben schon lange gedient, gehen aber durch dick und dünn.«
+Handwerksbursche	3	3	Wie er so im besten Essen war, kamen zwei Handwerksburschen daher und sahen die eine Gans, die noch nicht angerührt war, mit hungrigen Augen an.
+Gesundheit	3	3	Dachte der Bruder Lustig: »Mit einer hast du genug,« rief die zwei Burschen herbei und sprach: »Da nehmt die Gans und verzehrt sie auf meine Gesundheit.«
+Meinig	3	3	Das Herz zögerte nicht mit der Antwort: »Ich bin hart und unerbittlich gewesen und habe den Meinigen niemals etwas Gutes erzeigt.
+Kinner	3	3	De hett ja keine Kinner.« -- »
+Sechse	3	3	Sechse kommen durch die ganze Welt
+Büchse	3	3	Und als sie ein Weilchen gegangen waren, fanden sie einen Jäger, der lag auf den Knien, hatte die Büchse angelegt und zielte.
+Vögel	3	3	Sie hatte wohl siebentausend solcher Körbe mit so raren Vögeln im Schlosse.
+Halt	3	3	Halt!«
+Anblick	3	3	Da erschraken sie bei dem Anblick des grausamen und wilden Tieres insgesamt und hielten Rat, was zu tun das wenigst Gefährliche wäre.
+Bedient	3	3	rief seinen Bedienten, aber es war keiner da.
+Sperling	3	3	Auf der Straße begegnete ihm ein Sperling, der sprach: »Bruder Hund, warum bist du so traurig?«
+Zweig	3	3	Ja, schlaf nur,« antwortete der Sperling, »ich will mich derweil auf einen Zweig setzen.«
+Dorfe	3	3	Dann trieb er seine Kuh weiter, immer nach dem Dorfe seiner Mutter zu.
+Fahrt	3	3	So ging die Fahrt fort, da kamen sie an einen Bach. »

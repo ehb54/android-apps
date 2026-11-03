@@ -4,6 +4,8 @@ import android.net.Uri
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -46,6 +48,9 @@ fun QuizListScreen(
     onCreate: (String) -> Unit,
     onImport: (Uri) -> Unit,
     onAddSamples: () -> Unit,
+    sampleUpdates: List<String>,
+    onReplaceSamples: () -> Unit,
+    onKeepSamples: () -> Unit,
 ) {
     var creating by rememberSaveable { mutableStateOf(false) }
     var about by rememberSaveable { mutableStateOf(false) }
@@ -93,6 +98,8 @@ fun QuizListScreen(
                     )
                     HorizontalDivider()
                 }
+                // Room to scroll the last quiz out from under the + button.
+                item { Spacer(Modifier.height(88.dp)) }
             }
         }
     }
@@ -102,6 +109,15 @@ fun QuizListScreen(
             creating = false
             onCreate(it)
         }
+    }
+    if (sampleUpdates.isNotEmpty()) {
+        AlertDialog(
+            onDismissRequest = onKeepSamples,
+            title = { Text(stringResource(R.string.samples_updated_title)) },
+            text = { Text(stringResource(R.string.samples_updated_text, sampleUpdates.joinToString(", "))) },
+            confirmButton = { TextButton(onClick = onReplaceSamples) { Text(stringResource(R.string.replace)) } },
+            dismissButton = { TextButton(onClick = onKeepSamples) { Text(stringResource(R.string.keep_mine)) } },
+        )
     }
     if (about) {
         AlertDialog(

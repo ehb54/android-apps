@@ -64,9 +64,9 @@ data class Step(
     val confused: List<Card> = emptyList(),
 )
 
-/** Starts a session on the quiz's due cards, or returns null when nothing is due. */
+/** Starts a session on the quiz's session cards (see [Quiz.sessionCards]), or null when none are due. */
 fun startSession(quiz: Quiz, random: Random = Random.Default): Session? {
-    val ids = quiz.due().map { it.id }
+    val ids = quiz.sessionCards().map { it.id }
     if (ids.isEmpty()) return null
     val settings = quiz.settings
     return Session(

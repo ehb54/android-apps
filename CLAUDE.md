@@ -17,6 +17,7 @@ A monorepo of small Android apps that share one framework, in a single Gradle bu
 | `gradle/libs.versions.toml` | Every version, including the SDK levels. |
 | `lint.xml` | Lint settings shared by every module; each entry says why it is there. |
 | `docker/Dockerfile`, `tools/` | The build pipeline (below). |
+| `tools/wordlists/` | Noun frequency lists from public-domain texts (Gutenberg + spaCy + Wikidata + emoji), reviewed by hand, built into Quiz samples. Read its README before adding a list. |
 | `.github/workflows/build.yml` | CI and the GitHub Pages download site. |
 | `keystore/debug.keystore` | Shared debug signing key (see Signing). |
 
@@ -170,6 +171,8 @@ Keep these so publishing an app is a Console task, not a code rewrite:
   and photos through the system pickers (`OpenDocument`, `CreateDocument`,
   `PickVisualMedia`), which need no storage permission.
 - No native code at present. Adding any brings Play's 16 KB page-size requirement.
+- Testing-only shortcuts are tied to `BuildConfig.DEBUG` so release builds never
+  have them (Quiz: `ESCAPE_HATCH`, long-press the round counter to leave a session).
 
 ## Updating versions
 

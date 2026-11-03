@@ -103,6 +103,36 @@ class SessionTest {
     }
 
     @Test
+    fun withoutARangeASessionTakesTheFirstDueCardsUpToTheSessionSize() {
+        val pairs = (1..30).map { "$it" to "answer $it" }.toTypedArray()
+        val quiz = quiz(*pairs)
+        assertEquals((1L..20L).toList(), startSession(quiz)!!.queue)
+
+        val learned = quiz.replaceCard(quiz.cards[0].copy(statsAToB = Stats(rightFirst = 1)))
+        assertEquals((2L..21L).toList(), startSession(learned)!!.queue)
+
+        assertEquals(30, startSession(quiz.copy(settings = quiz.settings.copy(sessionSize = 0)))!!.total)
+        val ranged = quiz.copy(settings = quiz.settings.copy(rangeFrom = 1, rangeTo = 25))
+        assertEquals(25, startSession(ranged)!!.total)
+    }
+
+    @Test
+    fun replacingAQuizKeepsProgressOnUnchangedCards() {
+        var old = quiz("cat" to "chat", "dog" to "chien").copy(name = "My French")
+        old = old.replaceCard(old.cards[0].copy(statsAToB = Stats(asked = 3, rightFirst = 2)))
+        val fresh = quiz("dog" to "chien", "cat" to "chat", "bird" to "oiseau").copy(sourceVersion = "v2")
+
+        val replaced = old.replacedBy(fresh)
+        assertEquals("My French", replaced.name)
+        assertEquals(listOf("dog", "cat", "bird"), replaced.cards.map { it.a })
+        assertEquals(listOf(1L, 2L, 3L), replaced.cards.map { it.id })
+        assertEquals(Stats(asked = 3, rightFirst = 2), replaced.cards[1].statsAToB)
+        assertEquals(Stats(), replaced.cards[2].statsAToB)
+        assertEquals(4L, replaced.nextCardId)
+        assertEquals("v2", replaced.sourceVersion)
+    }
+
+    @Test
     fun rangeLimitsTheSession() {
         val quiz = quiz("1" to "one", "2" to "two", "3" to "three", "4" to "four")
             .let { it.copy(settings = it.settings.copy(rangeFrom = 2, rangeTo = 3)) }

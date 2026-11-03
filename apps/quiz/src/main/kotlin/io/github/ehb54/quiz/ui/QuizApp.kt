@@ -28,6 +28,9 @@ fun QuizApp(info: BuildInfo, vm: QuizViewModel = viewModel()) {
             onCreate = vm::createQuiz,
             onImport = vm::importQuiz,
             onAddSamples = vm::addSamples,
+            sampleUpdates = state.sampleUpdates,
+            onReplaceSamples = vm::replaceSampleUpdates,
+            onKeepSamples = vm::dismissSampleUpdates,
         )
         is Screen.QuizDetail -> {
             val quiz = state.quiz(screen.quizId)
