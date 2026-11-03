@@ -58,9 +58,10 @@ is dropped, as the original import did.
 - **Answers match forgivingly:** letter case, extra spaces and Unicode
   normalization form are ignored, ä/ö/ü/ß may be typed as ae/oe/ue/ss, curly
   apostrophes count as straight ones, and keyboard autocorrect is off. Other
-  accents still matter (cafe is not café). The original required an exact match. Everything else still counts: an answer listing
-  several meanings ("to become, get") must be typed whole, commas included.
-  This is deliberate; do not change it to accept any one meaning.
+  accents still matter (cafe is not café). The original required an exact
+  match. Everything else still counts: an answer listing several meanings
+  ("to become, get") must be typed whole, commas included. This is
+  deliberate; do not change it to accept any one meaning.
 - **No leaving a session.** There is no quit button, and Back only says how
   many cards are left. The session is saved after every answer and reopens on
   the next launch, even after Android has closed the app.
