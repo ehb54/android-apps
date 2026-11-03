@@ -1,0 +1,162 @@
+# android-apps: working notes
+
+Read this first, whether you are Claude or a person picking the repo up on a new
+machine. The repo is public: never commit hostnames, IP addresses, user names,
+keys or passwords. Machine-specific settings go in `tools/local.env` (git-ignored).
+
+## What this is
+
+A monorepo of small Android apps that share one framework, in a single Gradle build:
+
+| Path | What lives there |
+|---|---|
+| `build-logic/convention/` | Convention plugins `ehb54.android.application` and `ehb54.android.library`: SDK levels, Compose, versioning, signing, R8, lint. Shared build behavior changes here, never in an app's build file. |
+| `core/ui/` | Shared Compose library: `AppTheme`, `BuildInfo`, `BuildInfoCard`. Resources must start with `core_ui_` (`resourcePrefix`; lint warns otherwise). New shared code goes in `core/<module>/`; include it in `settings.gradle.kts`. |
+| `apps/<name>/` | One app each, picked up automatically by `settings.gradle.kts`. Its build file sets only `namespace` and `applicationId`. `apps/starter` is the template. |
+| `gradle/libs.versions.toml` | Every version, including the SDK levels. |
+| `docker/Dockerfile`, `tools/` | The build pipeline (below). |
+| `.github/workflows/build.yml` | CI and the GitHub Pages download site. |
+| `keystore/debug.keystore` | Shared debug signing key (see Signing). |
+
+Stack: Kotlin, Jetpack Compose with Material 3, AGP 9 with its built-in Kotlin
+support (no `org.jetbrains.kotlin.android` plugin in modules; the root build file
+only pins its version), Gradle with configuration cache and build cache, JDK 21 to
+run the build, Java 17 bytecode.
+
+## Device constraints
+
+- `minSdk` is 26 (Android 8.0) and must stay at 28 or lower: the test phone, a
+  Galaxy S8+, cannot go past Android 9 (API 28).
+- Any API above 26 needs a `Build.VERSION.SDK_INT` check (lint's NewApi check
+  fails the build otherwise). `AppTheme` shows the pattern for dynamic color.
+- `compileSdk` only decides which APIs code may call; current Compose requires 37.
+
+## Building
+
+There is one recipe, `tools/ci-build.sh`: `lint testDebugUnitTest assembleDebug
+bundleRelease` across all modules. Arguments replace the task list, e.g.
+`tools/ci-build.sh :apps:starter:assembleDebug`. Version numbers come from git via
+`tools/version-env.sh`, so the same commit gets the same numbers everywhere:
+
+- versionCode = number of commits on HEAD (only grows along `main`);
+- versionName = `0.1.<versionCode>-<sha>`, with `-dirty` for uncommitted changes.
+
+Ways to run it:
+
+1. **GitHub Actions**: every push and pull request. A push to `main` also deploys
+   the download site to `https://ehb54.github.io/android-apps/<app>/`.
+2. **Any Docker host**: `tools/docker-build.sh [tasks]`. Builds the image from
+   `docker/Dockerfile` (JDK 21, Gradle, SDK; tagged by compileSdk and build-tools,
+   so a version bump builds a new one), runs the recipe in it as the calling user,
+   and keeps the Gradle and Android caches in `../android-apps-state`.
+3. **Laptop to a remote Docker host**: put `BUILD_HOST=<ssh alias>` in
+   `tools/local.env`, then `tools/remote-build.sh [tasks]`. It rsyncs the checkout
+   (including `.git`) to `~/claude/android-apps` on that host, runs
+   `tools/docker-build.sh` there, and copies the debug APKs back to `out/`.
+4. **Android Studio**: open the repository root; it is an ordinary Gradle project.
+
+The SDK tools in the image are installed with `android --no-metrics sdk install`.
+The `android` CLI that replaced `sdkmanager` reports usage to Google unless it gets
+`--no-metrics`, and plain `sdkmanager` cannot turn that off.
+
+### Gotchas
+
+- **Renaming a resource folder** (e.g. `mipmap-anydpi-v26` to `mipmap-anydpi`) can
+  make an incremental build lose the resource, and the Gradle build cache then
+  stores the broken output, so even `clean` restores it ("resource mipmap/... not
+  found"). Fix: delete `caches/build-cache-1` under the Gradle user home
+  (`../android-apps-state/gradle/` for Docker builds) and build with `clean`.
+- If AGP wants different build-tools, the Docker build fails because it cannot
+  install into the image's SDK. Set `androidBuildTools` in the toml to the version
+  it names.
+- From API 37 the SDK platform packages carry a minor version (`android-37.0`);
+  `tools/docker-build.sh` adds the `.0` itself.
+
+## Getting an app onto the phone
+
+**Download page.** On the phone, open `https://ehb54.github.io/android-apps/` and
+tap the app, then Download APK. Open the downloaded file; the first time, Android
+asks to allow the browser to install unknown apps (Settings, then allow from this
+source). Play Protect may warn about an unknown developer: choose Install anyway.
+Pages can cache for about 10 minutes after a deploy; the APK file name carries the
+versionCode, so the page never points at a mismatched file.
+
+**USB (adb).**
+1. Once, on the phone: Settings > About phone > Software information, tap Build
+   number seven times. Then Settings > Developer options > USB debugging on.
+2. Connect with a data cable (many cables are charge-only). Unlock the phone and
+   accept "Allow USB debugging?" (tick Always allow from this computer).
+3. `adb devices` must list the phone as `device`. `unauthorized` means the prompt
+   was not accepted; no line at all usually means the cable, or the phone's USB mode
+   (pull down the notification shade and pick File transfer). On a Mac, quit
+   Samsung Smart Switch or Android File Transfer if they are running, since they
+   can hold the device.
+4. `tools/adb-install.sh [app]` installs `out/<app>-debug.apk` over the previous
+   version and keeps its data. Set `ADB=` in `tools/local.env` if adb is not on PATH.
+
+**adb over Wi-Fi.** Android 9 has no Wireless debugging setting. While connected
+by USB, run `adb tcpip 5555`, unplug, and `adb connect <phone-ip>:5555`. This lasts
+until the phone reboots.
+
+## Signing
+
+- **Debug:** `keystore/debug.keystore` is committed and public on purpose (the
+  standard passwords `android` / alias `androiddebugkey`). Every host and CI run
+  signs with it, so debug builds install over each other. Never sign anything
+  else with it.
+- **Release (Google Play upload key):** never in the repo. Make it once, keep it and
+  its password outside the repo, and back it up:
+  `keytool -genkeypair -keystore upload.jks -alias upload -keyalg RSA -keysize 4096 -validity 10000`
+  Then set the Gradle properties `uploadStoreFile`, `uploadStorePassword`,
+  `uploadKeyAlias` and `uploadKeyPassword`, either in `~/.gradle/gradle.properties`
+  (under `GRADLE_USER_HOME`; for Docker builds that is
+  `../android-apps-state/gradle/gradle.properties`) or, in CI, as secrets passed as
+  `ORG_GRADLE_PROJECT_<name>` environment variables. Without them `bundleRelease`
+  still runs R8 and produces an unsigned bundle, which is how CI checks release builds.
+- Enroll each app in Play App Signing. Google then holds the real signing key, and
+  a lost upload key can be reset from the Play Console.
+
+## Adding an app
+
+`tools/new-app.sh <name> "<App label>"` copies `apps/starter` to `apps/<name>`,
+renames the package and sets the applicationId to `io.github.ehb54.<name>` (it is
+permanent once the app is on Play, so pick the name carefully). Then change its
+icon colors in `res/values/colors.xml` and `res/drawable/ic_launcher_foreground.xml`,
+build, and commit. CI builds it and the download site lists it automatically.
+
+## Play-readiness rules
+
+Keep these so publishing an app is a Console task, not a code rewrite:
+
+- `targetSdk` at the latest API level. Play raises its minimum every August; bump
+  it in the toml and check that year's behavior changes.
+- Release builds keep R8 and resource shrinking on. Code reached by reflection needs
+  keep rules in `apps/<name>/proguard-rules.pro`.
+- Upload `.aab` files (`bundleRelease`), not APKs.
+- All UI text in string resources (plurals for counts), so apps can be translated.
+- Edge-to-edge: `enableEdgeToEdge()` plus Scaffold insets (enforced on Android 15+).
+- Backups: each app's `res/xml/data_extraction_rules.xml` (Android 12+) and
+  `res/xml/backup_rules.xml` (older) must exclude anything that must not leave the
+  device.
+- Lint has to pass. Fix new warnings rather than adding a baseline. The one
+  accepted warning is ObsoleteLintCustomCheck, which comes from an androidx library
+  lint jar, not from our code.
+- Ask only for the permissions an app needs; each one becomes a Data safety answer
+  in the Play Console, and every app needs a privacy policy URL there.
+- No native code at present. Adding any brings Play's 16 KB page-size requirement.
+
+## Updating versions
+
+- Edit `gradle/libs.versions.toml`. `kotlin` must stay at or above the Kotlin that
+  AGP bundles; the Compose compiler plugin uses the same version.
+- New Gradle: `./gradlew wrapper --gradle-version <v> --gradle-distribution-sha256-sum <sha>`
+  (the sha256 is published next to each distribution on services.gradle.org), and
+  update the `FROM gradle:<v>-jdk21` line in `docker/Dockerfile`.
+- New SDK command-line tools: `CMDLINE_TOOLS` in `docker/Dockerfile`.
+
+## Conventions
+
+- Kotlin official style, 4 spaces, trailing commas (`.editorconfig`).
+- Packages: `io.github.ehb54.<app>` for apps, `io.github.ehb54.core.<module>` for
+  the framework.
+- Keep app build files minimal; anything two apps need moves to `build-logic/` or `core/`.

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Starter</string>
+    <plurals name="taps">
+        <item quantity="one">Tapped %d time</item>
+        <item quantity="other">Tapped %d times</item>
+    </plurals>
+</resources>

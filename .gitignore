@@ -1,0 +1,22 @@
+# Gradle and Android build output
+.gradle/
+.kotlin/
+build/
+local.properties
+*.apk
+*.aab
+
+# Local-only files (see CLAUDE.md)
+/out/
+/site/
+/tools/local.env
+
+# Signing keys, except the shared public debug key
+*.jks
+*.keystore
+!/keystore/debug.keystore
+
+# IDE and OS
+.idea/
+*.iml
+.DS_Store

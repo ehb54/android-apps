@@ -1,0 +1,41 @@
+# Single source of truth for versions. build-logic reads the SDK levels from here,
+# and tools/docker-build.sh reads compileSdk and androidBuildTools for the Docker image.
+
+[versions]
+# minSdk 26 = Android 8.0. Keep it at 28 or below: the Galaxy S8+ test phone is
+# stuck on Android 9 (API 28).
+# compileSdk only decides which APIs code can call (current Compose needs 37).
+# targetSdk opts in to newer runtime behavior; Google Play requires a minimum
+# that rises every August (36 in 2026, presumably 37 in 2027). Keep it at the latest.
+minSdk = "26"
+compileSdk = "37"
+targetSdk = "37"
+# Build-tools baked into the Docker image; must match what AGP asks for.
+androidBuildTools = "36.0.0"
+
+agp = "9.5.0"
+kotlin = "2.4.21"
+composeBom = "2026.09.00"
+activityCompose = "1.13.0"
+junit = "4.13.2"
+
+[libraries]
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
+androidx-compose-bom = { module = "androidx.compose:compose-bom", version.ref = "composeBom" }
+androidx-compose-material3 = { module = "androidx.compose.material3:material3" }
+androidx-compose-ui = { module = "androidx.compose.ui:ui" }
+androidx-compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
+androidx-compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
+junit = { module = "junit:junit", version.ref = "junit" }
+
+# build-logic only
+android-gradlePlugin = { module = "com.android.tools.build:gradle", version.ref = "agp" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+# Convention plugins from build-logic/
+ehb54-android-application = { id = "ehb54.android.application" }
+ehb54-android-library = { id = "ehb54.android.library" }
