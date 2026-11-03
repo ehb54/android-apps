@@ -2,7 +2,7 @@
  "rank_by": "keyness",
  "reference": "core",
  "size": 1000,
- "min_books": 25,
+ "min_books": 15,
  "exclude_lists": [
   "core"
  ],

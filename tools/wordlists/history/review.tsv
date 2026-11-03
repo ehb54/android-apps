@@ -244,3 +244,1220 @@ Footnot	drop					Gutenberg footnote markup
 Verfolgung	keep	die	Verfolgungen	persecution		
 Legion	keep	die	Legionen	legion		
 Herrscher	keep	der	Herrscher	ruler		
+Plastik	keep	die	Plastiken	sculpture		art sense (die Plastik)
+Blüthe	drop					wrong lemma (Blüte)
+Zersplitterung	keep	die		fragmentation		
+Sklaverei	keep	die		slavery		
+Vorarbeit	keep	die	Vorarbeiten	groundwork		
+Plünderung	keep	die	Plünderungen	plundering		
+Mutterland	keep	das	Mutterländer	mother country		
+Wegnahme	keep	die		seizure		
+Kontrolle	keep	die	Kontrollen	control		
+Substanz	keep	die	Substanzen	substance		
+Sterling	drop					only in 'Pfund Sterling'
+Geschichtsschreiber	keep	der	Geschichtsschreiber	historiographer		
+Unterscheidung	keep	die	Unterscheidungen	distinction		
+Territorium	drop					duplicates Gebiet
+Ritterschaft	keep	die	Ritterschaften	knighthood		the knights as a body
+Stifter	keep	der	Stifter	donor		founder of an endowment
+Preßfreiheit	drop					wrong lemma (Pressefreiheit)
+Südküste	keep	die	Südküsten	south coast		
+Unterhaus	keep	das	Unterhäuser	lower house		
+Eingeborenen	drop					wrong lemma (Eingeborene)
+Fabrikat	keep	das	Fabrikate	manufactured article		
+Uebel	drop					wrong lemma (Übel)
+Sektion	keep	die	Sektionen	branch		section of an organization
+Abendmahl	keep	das		Lord's Supper		
+Mechanismus	keep	der	Mechanismen	mechanism		
+Kriegsflotte	keep	die	Kriegsflotten	war fleet		
+Volksgeist	keep	der		national spirit		
+Defensive	keep	die		defensive		
+Historia	drop					Latin
+Rekrut	keep	der	Rekruten	recruit		
+Staatsmänner	drop					wrong lemma (Staatsmann)
+Verschmelzung	keep	die	Verschmelzungen	fusion		
+Verschiebung	keep	die	Verschiebungen	shift		
+Getreide	keep	das		grain	🌾	
+Vorkehrung	keep	die	Vorkehrungen	precaution		
+Formation	keep	die	Formationen	formation		
+Architektur	keep	die		architecture		
+Einzelstaat	keep	der	Einzelstaaten	individual state		
+Übereinstimmung	keep	die	Übereinstimmungen	conformity		
+Fakultät	keep	die	Fakultäten	faculty		
+Mannigfaltigkeit	keep	die		variety		
+Machtstellung	keep	die	Machtstellungen	position of power		
+Herbeiführung	keep	die		bringing about		
+Abgang	keep	der	Abgänge	departure		
+Intervention	keep	die	Interventionen	intervention		
+Ausschreitung	keep	die	Ausschreitungen	excess		
+Berufe	drop					wrong lemma (Beruf)
+Abfall	keep	der	Abfälle	defection		revolt sense, not waste
+Übergewicht	keep	das		preponderance		
+Bedrohung	keep	die	Bedrohungen	threat		
+Attentat	keep	das	Attentate	assassination attempt		
+Febr	drop					abbreviation
+Auswanderung	keep	die	Auswanderungen	emigration		
+Wirtschaftsleben	keep	das		economic life		
+Hauptteil	keep	der	Hauptteile	main part		
+Kurfürste	drop					wrong lemma (Kurfürst)
+Patriarch	keep	der	Patriarchen	patriarch		
+Epos	keep	das	Epen	epic		
+Abmessung	keep	die	Abmessungen	dimension		
+Liberalismus	keep	der		liberalism		
+Irrthümer	drop					wrong lemma (Irrtum)
+Frhr	drop					abbreviation
+Korporation	keep	die	Korporationen	corporation		
+Streitmacht	drop					duplicates Streitkraft
+Betreff	drop					only in 'in Betreff'
+Uebertragung	drop					wrong lemma (Übertragung)
+Ausleger	keep	der	Ausleger	interpreter		of texts
+Eigenthümlichkeit	drop					wrong lemma (Eigentümlichkeit)
+Kriegszustand	keep	der		state of war		
+Reaktion	keep	die	Reaktionen	reaction		
+Nachtrag	keep	der	Nachträge	addendum		
+Terrain	keep	das	Terrains	terrain		
+Sekte	keep	die	Sekten	sect		
+Lebensbeschreibung	drop					duplicates Biographie
+Baumwolle	keep	die		cotton		
+Kronprinz	keep	der	Kronprinzen	crown prince		
+Rückblick	keep	der	Rückblicke	retrospect		
+Völkerrecht	keep	das		international law		
+Gerichtsbarkeit	keep	die	Gerichtsbarkeiten	jurisdiction		
+Erbrecht	keep	das		inheritance law		
+Telegraphen	drop					wrong lemma (Telegraf)
+Dampfkraft	keep	die		steam power		
+Ansiedelung	drop					variant spelling; duplicates Ansiedlung
+Detachement	keep	das	Detachements	detachment		
+Vorsitz	keep	der		chairmanship		
+Metaphysik	keep	die		metaphysics		
+Konzil	keep	das	Konzile	church council		
+Eroberer	keep	der	Eroberer	conqueror		
+Wettbewerb	keep	der	Wettbewerbe	competition		
+Verlegung	keep	die	Verlegungen	relocation		
+Friedensbedingung	keep	die	Friedensbedingungen	peace term		
+Anlegung	drop					duplicates Errichtung
+Transportschiff	keep	das	Transportschiffe	transport ship		
+Abfassung	keep	die		drafting		
+Naturwissenschaft	keep	die	Naturwissenschaften	natural science		
+Beschlagnahme	keep	die	Beschlagnahmen	confiscation		
+Abänderung	keep	die	Abänderungen	modification		
+Oesterreich	drop					name
+Flieger	keep	der	Flieger	aviator	🧑‍✈️	
+Aristokratie	keep	die	Aristokratien	aristocracy		
+Fragment	keep	das	Fragmente	fragment		
+Kapitänleutnant	keep	der	Kapitänleutnants	lieutenant commander		
+Heerführer	drop					duplicates Feldherr
+Berichtigung	keep	die	Berichtigungen	correction		
+Handelsvertrag	keep	der	Handelsverträge	commercial treaty		
+Großindustrie	keep	die		large-scale industry		
+Hauptsitz	keep	der	Hauptsitze	principal seat		
+Protestantismus	keep	der		Protestantism		
+Grundgedanke	keep	der	Grundgedanken	basic idea		
+Baukunst	drop					duplicates Architektur
+Oberherrschaft	keep	die		supremacy		
+Einschiffung	keep	die	Einschiffungen	embarkation		
+Einflusse	drop					wrong lemma (Einfluss)
+Grundzug	keep	der	Grundzüge	basic trait		
+Erbauung	drop					duplicates Bau
+Position	drop					duplicates Stellung
+Vollmacht	keep	die	Vollmachten	power of attorney		
+Diakon	keep	der	Diakone	deacon		
+Normann	drop					wrong lemma (Normanne)
+Klöstern	drop					wrong lemma (Kloster)
+Kreuzer	keep	der	Kreuzer	cruiser		warship sense; the coin is obsolete
+Gattung	keep	die	Gattungen	kind		
+Plane	drop					wrong lemma (Plan)
+Vorgeschichte	keep	die		prehistory		
+Verletzung	keep	die	Verletzungen	violation		of rights or treaties
+Volksstamm	keep	der	Volksstämme	tribe		
+Reichstage	drop					wrong lemma (Reichstag)
+Handhabung	keep	die		handling		
+Umwandlung	keep	die	Umwandlungen	transformation		
+Eingeborene	keep	der	Eingeborenen	native		
+Proviant	keep	der		provisions		
+Grafschaft	keep	die	Grafschaften	county		
+Konfession	keep	die	Konfessionen	denomination		
+Messias	keep	der		Messiah		
+Maßstabe	drop					wrong lemma (Maßstab)
+Barbarei	keep	die	Barbareien	barbarism		
+Rückmarsch	keep	der	Rückmärsche	return march		
+Beleg	keep	der	Belege	documentary evidence		
+Vorbedingung	keep	die	Vorbedingungen	precondition		
+Papsttum	keep	das		papacy		
+Stempel	keep	der	Stempel	stamp		
+Weiche	drop					tagger artifact (das Weichen, from weichen)
+Proletariat	keep	das		proletariat		
+Bergbau	keep	der		mining		
+Meerbuse	drop					wrong lemma (Meerbusen)
+Kaisertum	keep	das	Kaisertümer	emperorship		
+Konzeption	keep	die	Konzeptionen	concept		
+Belagert	drop					tagger artifact (participle, die Belagerten)
+Verschwörung	keep	die	Verschwörungen	conspiracy		
+Zugeständnis	keep	das	Zugeständnisse	concession		
+Bestrafung	keep	die	Bestrafungen	punishment		
+Vaterlande	drop					wrong lemma (Vaterland)
+Aktie	keep	die	Aktien	share		
+Kilogramm	keep	das	Kilogramme	kilogram		
+Rechtspfleg	drop					wrong lemma (Rechtspflege)
+Besitzergreifung	keep	die		taking possession		
+Entsatz	keep	der		relief		of a besieged place
+Anwerbung	keep	die	Anwerbungen	recruitment		
+Reichsverfassung	keep	die		imperial constitution		
+Repressalie	keep	die	Repressalien	reprisal		
+Torpedo	keep	der	Torpedos	torpedo		
+Todesstrafe	keep	die	Todesstrafen	death penalty		
+Protestant	keep	der	Protestanten	Protestant		
+Beinamen	drop					wrong lemma (Beiname)
+Verkehrsmittel	keep	das	Verkehrsmittel	means of transport		
+Bürgerrecht	keep	das	Bürgerrechte	citizenship		
+Kriegsministerium	keep	das	Kriegsministerien	war ministry		
+Feldzuge	drop					wrong lemma (Feldzug)
+Wahrscheinlichkeit	keep	die	Wahrscheinlichkeiten	probability		
+Geisel	keep	die	Geiseln	hostage		
+Manifest	keep	das	Manifeste	manifesto		
+Astronom	keep	der	Astronomen	astronomer		
+Uebergewicht	drop					wrong lemma (Übergewicht)
+Konsument	keep	der	Konsumenten	consumer		
+Mobilmachung	keep	die	Mobilmachungen	mobilization		
+Tagesordnung	keep	die	Tagesordnungen	agenda		
+Staatsarchiv	keep	das	Staatsarchive	state archive		
+Reiterei	keep	die		cavalry		
+Drucke	drop					wrong lemma (Druck)
+Parallele	keep	die	Parallelen	parallel		
+Großmacht	keep	die	Großmächte	great power		
+Segelschiff	keep	das	Segelschiffe	sailing ship	⛵	
+Durchfahrt	keep	die	Durchfahrten	passage		
+Instanz	keep	die	Instanzen	instance		as in court of last instance
+Geschichtswerk	keep	das	Geschichtswerke	historical work		
+Maßgabe	drop					only in 'nach Maßgabe'
+Disziplin	keep	die	Disziplinen	discipline		
+Landesteil	keep	der	Landesteile	region		
+Kurbel	keep	die	Kurbeln	crank		
+Stellvertreter	keep	der	Stellvertreter	deputy		
+Volksvertretung	keep	die	Volksvertretungen	representative body		
+Fortdauer	keep	die		persistence		
+Magazin	keep	das	Magazine	storehouse		
+Diktatur	keep	die	Diktaturen	dictatorship		
+Mass	drop					wrong lemma (Maß)
+Erteilung	keep	die		issuance		
+Fortführung	keep	die		continuation		
+Bombe	keep	die	Bomben	bomb	💣	
+Verbrauch	keep	der		consumption		
+Schädigung	keep	die	Schädigungen	harm		
+Gegensatze	drop					wrong lemma (Gegensatz)
+Hinblick	drop					only in 'im Hinblick auf'
+Sachse	keep	der	Sachsen	Saxon		
+Reichsregierung	keep	die		imperial government		
+Mechanik	keep	die		mechanics		
+Beschädigung	keep	die	Beschädigungen	damage		
+Dividende	keep	die	Dividenden	dividend		
+Kaiserreich	drop					duplicates Reich
+Fußvolk	keep	das		infantry		
+Grosse	drop					tagger artifact (adjective, der Große)
+Wittwe	drop					wrong lemma (Witwe)
+Vertrieb	keep	der		sales		
+Vollständigkeit	keep	die		completeness		
+Erzielung	drop					duplicates Erreichung
+Republikaner	keep	der	Republikaner	republican		
+Kriegsrat	keep	der	Kriegsräte	council of war		
+Ornament	keep	das	Ornamente	ornament		
+Vasall	keep	der	Vasallen	vassal		
+Germ	drop					abbreviation
+Finanzminister	keep	der	Finanzminister	finance minister		
+Verlagsbuchhandlung	drop					duplicates Verlagshandlung
+Belastung	keep	die	Belastungen	burden		
+Debatte	keep	die	Debatten	debate		
+Motor	keep	der	Motoren	engine		
+Mathematiker	keep	der	Mathematiker	mathematician		
+Rücktritt	keep	der	Rücktritte	resignation		
+Viehzucht	keep	die		animal husbandry		
+Religiosität	keep	die		religiosity		
+Gebirg	drop					wrong lemma (Gebirge)
+Fund	keep	der	Funde	find		
+Großbetrieb	keep	der	Großbetriebe	large enterprise		
+Fortbildung	keep	die	Fortbildungen	further education		
+Mäßigung	keep	die		moderation		
+Grafe	drop					wrong lemma (Graf)
+Kriegsgericht	keep	das	Kriegsgerichte	court-martial		
+Differenz	keep	die	Differenzen	disagreement		
+Liber	drop					Latin
+Herzogtümer	drop					wrong lemma (Herzogtum)
+Nationalökonom	keep	der	Nationalökonomen	economist		
+Vorbilde	drop					wrong lemma (Vorbild)
+Willkür	keep	die		arbitrariness		
+Völkerwanderung	keep	die	Völkerwanderungen	migration of peoples		
+Machtmittel	keep	das	Machtmittel	instrument of power		
+Nahrungsmittel	keep	das	Nahrungsmittel	foodstuff		
+Dynasti	drop					wrong lemma (Dynastie)
+Rückzuge	drop					wrong lemma (Rückzug)
+Nationalökonomie	keep	die		political economy		
+Merkmal	keep	das	Merkmale	feature		
+Tunnel	keep	der	Tunnel	tunnel		
+Mächt	drop					wrong lemma (Macht)
+Mißbräuche	drop					wrong lemma (Missbrauch)
+Selbstverwaltung	keep	die	Selbstverwaltungen	self-government		
+Siebenjährig	drop					tagger artifact (adjective, from Siebenjähriger Krieg)
+Cäsar	drop					name
+Geographie	keep	die		geography		
+Einziehung	keep	die	Einziehungen	conscription		
+Handelskammer	keep	die	Handelskammern	chamber of commerce		
+Neuordnung	keep	die	Neuordnungen	restructuring		
+Ortsnamen	drop					wrong lemma (Ortsname)
+Bekehrung	keep	die	Bekehrungen	conversion		
+Ungunst	keep	die		disfavor		
+Revision	keep	die	Revisionen	revision		
+Einseitigkeit	keep	die	Einseitigkeiten	one-sidedness		
+Truppenmacht	drop					duplicates Streitkraft
+Nordküste	keep	die	Nordküsten	north coast		
+Abmachung	keep	die	Abmachungen	deal		
+Erläuterung	keep	die	Erläuterungen	explanation		
+Emanzipation	keep	die		emancipation		
+Zeitbestimmung	keep	die	Zeitbestimmungen	dating		
+Zwischenhandel	keep	der		intermediary trade		
+Priorität	keep	die	Prioritäten	priority		
+Bezugnahme	drop					duplicates Bezug
+Verwaltungsbehörde	keep	die	Verwaltungsbehörden	administrative authority		
+Zurückführung	keep	die	Zurückführungen	bringing back		
+Ed	drop					abbreviation
+Ausschweifung	keep	die	Ausschweifungen	debauchery		
+Ungleichheit	keep	die	Ungleichheiten	inequality		
+Verwundet	drop					wrong lemma (Verwundete)
+Lebenshaltung	keep	die		standard of living		
+Verantwortlichkeit	keep	die	Verantwortlichkeiten	responsibility		
+Erlangung	keep	die		obtaining		
+Lag	drop					wrong lemma (Lage)
+Regierungsantritt	keep	der	Regierungsantritte	start of reign		
+Begünstigung	keep	die	Begünstigungen	preferential treatment		
+Glaubwürdigkeit	keep	die		credibility		
+Lebensdauer	keep	die		lifespan		
+Forscher	keep	der	Forscher	researcher		
+Zeichner	keep	der	Zeichner	draftsman		
+Oberleitung	keep	die	Oberleitungen	overall direction		
+Anfertigung	keep	die	Anfertigungen	making		
+Depot	keep	das	Depots	depot		
+Kommunist	keep	der	Kommunisten	communist		
+Gleichberechtigung	keep	die		equal rights		
+Geschichtsforscher	keep	der	Geschichtsforscher	historical researcher		
+Waffenruhe	keep	die	Waffenruhen	ceasefire		
+Sonderinteresse	keep	das	Sonderinteressen	special interest		
+Verzeichniss	drop					wrong lemma (Verzeichnis)
+Rechtsverhältnisse	drop					wrong lemma (Rechtsverhältnis)
+Eigenthümer	drop					wrong lemma (Eigentümer)
+Handelsweg	keep	der	Handelswege	trade route		
+Polemik	keep	die	Polemiken	polemics		
+Poet	keep	der	Poeten	poet		
+Moschee	keep	die	Moscheen	mosque	🕌	
+Got	drop					wrong lemma (Gote)
+Paß	drop					wrong lemma (Pass)
+Glauben	drop					wrong lemma (Glaube)
+Ausweisung	keep	die	Ausweisungen	deportation		
+Techniker	keep	der	Techniker	technician		
+Schlachtfelde	drop					wrong lemma (Schlachtfeld)
+Sperre	keep	die	Sperren	barrier		
+Volksversammlung	keep	die	Volksversammlungen	popular assembly		
+Kurie	keep	die	Kurien	curia		
+Mittelstand	keep	der		middle class		
+Seitenstück	keep	das	Seitenstücke	companion piece		
+Seeräuber	keep	der	Seeräuber	pirate		
+Völkerschaft	keep	die	Völkerschaften	tribal people		
+Einmischung	keep	die	Einmischungen	interference		
+Bedeckung	keep	die	Bedeckungen	escort		military escort
+Strafgesetzbuch	keep	das	Strafgesetzbücher	penal code		
+Regulierung	keep	die	Regulierungen	regulation		
+Zusammenarbeit	keep	die		cooperation		
+Erdkunde	drop					duplicates Geographie
+Röhre	keep	die	Röhren	tube		
+Kombination	keep	die	Kombinationen	combination		
+Belgier	keep	der	Belgier	Belgian		
+Streitschrift	keep	die	Streitschriften	polemical tract		
+Genauigkeit	keep	die		accuracy		
+Regierungsgewalt	keep	die		governmental power		
+Umarbeitung	keep	die	Umarbeitungen	reworking		
+Sonderung	keep	die	Sonderungen	separation		
+Byzantiner	keep	der	Byzantiner	Byzantine		
+Wiedereroberung	keep	die	Wiedereroberungen	reconquest		
+Fabel	keep	die	Fabeln	fable		
+Hoflager	keep	das	Hoflager	court residence		
+Karawane	keep	die	Karawanen	caravan		
+Vorhandensein	keep	das		existence		
+Unternehmungsgeist	keep	der		spirit of enterprise		
+Kriegszug	keep	der	Kriegszüge	military expedition		
+Kontinent	keep	der	Kontinente	continent		
+Nationalgefühl	keep	das		national sentiment		
+Gewehrfeuer	keep	das		rifle fire		
+Einheitlichkeit	keep	die		uniformity		
+Tribut	keep	der	Tribute	tribute		
+Ankauf	keep	der	Ankäufe	purchase		
+Königreiche	drop					wrong lemma (Königreich)
+Mißstand	drop					wrong lemma (Missstand)
+Anmerkung	drop					Gutenberg markup (Anmerkungen zur Transkription)
+Fühlung	keep	die		contact		mostly in Fühlung nehmen
+Schätzung	keep	die	Schätzungen	estimate		
+Stadie	drop					wrong lemma (Stadium)
+Ablösung	keep	die	Ablösungen	replacement		relief of a post
+Sprengel	keep	der	Sprengel	ecclesiastical district		
+Kupfer	keep	das		copper		
+Absetzung	keep	die	Absetzungen	deposition		removal from office
+Abstellung	keep	die	Abstellungen	redress		of grievances or abuses
+Grundgedanken	drop					wrong lemma (Grundgedanke)
+Notstand	keep	der	Notstände	state of emergency		
+Desgleichen	drop					tagger artifact (adverb)
+Relation	drop					duplicates Beziehung
+Nachschub	keep	der		resupply		
+Monatshefte	drop					name (Sozialistische Monatshefte)
+Kreuzfahrer	keep	der	Kreuzfahrer	crusader		
+Reorganisation	keep	die	Reorganisationen	reorganization		
+Bauernkrieg	keep	der	Bauernkriege	peasant war		
+Despotismus	keep	der		despotism		
+Durchschnitt	keep	der	Durchschnitte	average		
+Chemie	keep	die		chemistry	🧪	
+Bulletin	keep	das	Bulletins	bulletin		
+Einkommen	keep	das	Einkommen	income		
+Allianz	drop					duplicates Bündnis
+Edikt	keep	das	Edikte	edict		
+Verkürzung	keep	die	Verkürzungen	shortening		
+Anführung	keep	die	Anführungen	citation		
+Geographe	drop					wrong lemma (Geograph)
+Arbeitsgebiet	keep	das	Arbeitsgebiete	field of work		
+Klassiker	keep	der	Klassiker	classic		
+Papiergeld	keep	das		paper money	💵	
+Vorkommen	keep	das	Vorkommen	occurrence		
+Bahnlinie	keep	die	Bahnlinien	railway line		
+Elektrizität	keep	die		electricity	⚡	
+Bulle	keep	die	Bullen	papal bull		
+Arsenal	keep	das	Arsenale	arsenal		
+Gräuel	keep	der	Gräuel	atrocity		
+Ueberschwemmung	drop					wrong lemma (Überschwemmung)
+Verteidigungslinie	keep	die	Verteidigungslinien	defensive line		
+Hauptgegenstand	keep	der	Hauptgegenstände	main subject		
+Regierungsform	keep	die	Regierungsformen	form of government		
+Lobredner	keep	der	Lobredner	eulogist		
+Heeresmacht	drop					duplicates Heer
+Ruhr	drop					name (river)
+Aktiengesellschaft	keep	die	Aktiengesellschaften	joint-stock company		
+Uebermacht	drop					wrong lemma (Übermacht)
+Index	keep	der	Indexe	index		
+Gesuch	keep	das	Gesuche	request		
+Ackerbauer	keep	der	Ackerbauern	arable farmer		
+Übersetzer	keep	der	Übersetzer	translator		
+Erdteil	drop					duplicates Kontinent
+Wiedergeburt	keep	die	Wiedergeburten	rebirth		
+Patriotismus	keep	der		patriotism		
+Mythologie	keep	die	Mythologien	mythology		
+Körperschaft	keep	die	Körperschaften	corporate body		
+Humanität	keep	die		humaneness		
+Beibehaltung	keep	die		retention		
+Direktorium	keep	das	Direktorien	directorate		
+Schriftsprache	keep	die	Schriftsprachen	written language		
+Regimenter	drop					wrong lemma (Regiment)
+Ausbesserung	keep	die	Ausbesserungen	repair		
+Fehd	drop					wrong lemma (Fehde)
+Hohenzoller	drop					name
+Geldstrafe	keep	die	Geldstrafen	fine		
+Ostseite	keep	die	Ostseiten	east side		
+Beginne	drop					wrong lemma (Beginn)
+Dissertation	keep	die	Dissertationen	dissertation		
+Einvernehmen	keep	das		accord		
+Orgie	keep	die	Orgien	orgy		
+Abberufung	keep	die	Abberufungen	recall		
+Aufbringung	keep	die	Aufbringungen	raising of funds		
+Kleinhandel	keep	der		retail trade		
+Detail	keep	das	Details	detail		
+Folter	keep	die		torture		
+Oesterreicher	drop					wrong lemma (Österreicher)
+Weissagung	keep	die	Weissagungen	prophecy		
+Repräsentant	drop					duplicates Vertreter
+Abtei	keep	die	Abteien	abbey		
+Übertragung	keep	die	Übertragungen	transmission		
+Staatsgewalt	keep	die	Staatsgewalten	state power		
+Tragweite	keep	die		implications		
+Gebrüder	keep	die		brothers		plural only
+Kirchenväter	drop					wrong lemma (Kirchenvater)
+Christum	drop					name (Christus, Latin accusative)
+Garantie	keep	die	Garantien	guarantee		
+Gau	keep	der	Gaue	tribal district		
+Bresche	keep	die	Breschen	breach		
+Umstande	drop					wrong lemma (Umstand)
+Weltstadt	keep	die	Weltstädte	metropolis		
+Grundgesetz	keep	das	Grundgesetze	fundamental law		
+Nordweste	drop					wrong lemma (Nordwesten)
+Verteidigungsstellung	keep	die	Verteidigungsstellungen	defensive position		
+Sitt	drop					wrong lemma (Sitte)
+Eingabe	keep	die	Eingaben	submission		petition to an authority
+Errungenschaft	keep	die	Errungenschaften	accomplishment		
+Wohlfahrt	keep	die		welfare		
+Forum	keep	das	Foren	forum		
+Armenier	keep	der	Armenier	Armenian		
+Linienschiff	keep	das	Linienschiffe	ship of the line		
+Fregatte	keep	die	Fregatten	frigate		
+Gewerkschaft	keep	die	Gewerkschaften	trade union		
+Buchdrucker	keep	der	Buchdrucker	book printer		
+Arbeiterin	keep	die	Arbeiterinnen	female worker		
+Arbeitgeber	keep	der	Arbeitgeber	employer		
+Hellenen	drop					wrong lemma (Hellene)
+Abhandlung	keep	die	Abhandlungen	treatise		
+Agitation	keep	die		agitation		
+Oberbefehl	keep	der		supreme command		
+Förderung	keep	die		promotion		
+Generalversammlung	keep	die	Generalversammlungen	general assembly		
+Mongole	keep	der	Mongolen	Mongol		
+Mehrheit	keep	die	Mehrheiten	majority		
+Regelung	keep	die	Regelungen	arrangement		
+Streik	keep	der	Streiks	strike		
+Heeresleitung	keep	die		army command		
+Reformation	keep	die		Reformation		
+Niederlassung	keep	die	Niederlassungen	settlement		
+Mill	drop					abbreviation (Million)
+Abgabe	keep	die	Abgaben	levy		
+Buchhandel	keep	der		book trade		
+Seekrieg	keep	der	Seekriege	naval war		
+Bearbeitung	keep	die	Bearbeitungen	processing		
+Kaiserlich	drop					tagger artifact (adjective kaiserlich)
+Erweiterung	keep	die	Erweiterungen	extension		
+Zensur	keep	die		censorship		
+Statthalter	keep	der	Statthalter	provincial governor		
+Erzeugnis	keep	das	Erzeugnisse	product		
+Staatsmann	keep	der	Staatsmänner	statesman		
+Nachteil	keep	der	Nachteile	disadvantage		
+Arbeitszeit	keep	die	Arbeitszeiten	working hours		
+Privileg	keep	das	Privilegien	privilege		
+Erhaltung	keep	die		preservation		
+Produktion	keep	die	Produktionen	production		
+December	drop					wrong lemma (Dezember); months are excluded
+Staatssekretär	keep	der	Staatssekretäre	state secretary		
+Aufhebung	keep	die	Aufhebungen	repeal		
+Fort	keep	das	Forts	fort		
+Phalanx	keep	die	Phalangen	phalanx		
+Dynastie	keep	die	Dynastien	dynasty		
+Halbinsel	keep	die	Halbinseln	peninsula		
+Schaffung	keep	die		creation		
+Ausfuhr	keep	die	Ausfuhren	export		
+Vertretung	keep	die	Vertretungen	representation		
+Streitigkeit	keep	die	Streitigkeiten	dispute		
+Annale	drop					wrong lemma (Annalen)
+Heere	drop					wrong lemma (Heer)
+Statistik	keep	die	Statistiken	statistics		
+Holzschnitt	keep	der	Holzschnitte	woodcut		
+Monarchie	keep	die	Monarchien	monarchy		
+Verteilung	keep	die	Verteilungen	distribution		
+Gesch	drop					abbreviation (Geschichte)
+Physik	keep	die		physics		
+Auszug	keep	der	Auszüge	excerpt		
+Forschung	keep	die	Forschungen	research		
+Flott	drop					wrong lemma (Flotte)
+Buchdruckerei	drop					duplicates Druckerei
+Offensive	keep	die	Offensiven	offensive		
+Einfuhr	keep	die	Einfuhren	import		
+Betracht	drop					only in 'in Betracht kommen/ziehen'
+Einigung	keep	die		unification		history sense (German unification); also agreement
+Gouvernement	keep	das	Gouvernements	governorate		
+Unterwerfung	keep	die	Unterwerfungen	subjugation		
+Brauerei	keep	die	Brauereien	brewery		
+Galilei	drop					name
+Begründung	keep	die	Begründungen	justification		
+Hülfe	drop					wrong lemma (Hilfe)
+Transport	keep	der	Transporte	transport		
+Schiffahrt	drop					wrong lemma (Schifffahrt)
+Bündnis	keep	das	Bündnisse	alliance		
+Erfinder	keep	der	Erfinder	inventor		
+Beseitigung	keep	die		elimination		
+Einwirkung	keep	die	Einwirkungen	impact		
+Nationalversammlung	keep	die	Nationalversammlungen	national assembly		
+Zensor	keep	der	Zensoren	censor		
+Buchdruckerkunst	keep	die		art of printing		
+Besetzung	keep	die	Besetzungen	occupation		
+Mannschafte	drop					wrong lemma (Mannschaft)
+Geistlichkeit	keep	die		clergy		
+Konstruktion	keep	die	Konstruktionen	design		
+Verordnung	keep	die	Verordnungen	ordinance		
+Jahrg	drop					abbreviation (Jahrgang)
+Kommune	keep	die	Kommunen	commune		
+Geschichtschreiber	drop					wrong lemma (Geschichtsschreiber)
+Gränze	drop					wrong lemma (Grenze)
+Zollverein	keep	der	Zollvereine	customs union		
+Zunahme	keep	die	Zunahmen	increase		
+Beteiligung	keep	die	Beteiligungen	participation		
+Seeherrschaft	keep	die		naval supremacy		
+Komitee	keep	das	Komitees	committee		
+Dampfmaschine	keep	die	Dampfmaschinen	steam engine		
+Verständigung	keep	die	Verständigungen	understanding		
+Entwurf	keep	der	Entwürfe	draft		
+Beschränkung	keep	die	Beschränkungen	restriction		
+Ermordung	keep	die	Ermordungen	assassination		
+Berathung	drop					wrong lemma (Beratung)
+Gestaltung	keep	die		shaping		
+Alterthum	drop					wrong lemma (Altertum)
+Denkschrift	keep	die	Denkschriften	memorandum		
+Vertheidigung	drop					wrong lemma (Verteidigung)
+Seemeile	keep	die	Seemeilen	nautical mile		
+Kaiserzeit	keep	die		imperial era		
+Befehlshaber	keep	der	Befehlshaber	commanding officer		
+Zentrum	keep	das	Zentren	center		
+Mitwirkung	keep	die		involvement		
+Bundestag	keep	der	Bundestage	federal diet		
+Pfd	drop					abbreviation (Pfund)
+Stützpunkt	keep	der	Stützpunkte	base		
+Aufschwung	keep	der	Aufschwünge	upswing		
+Vermehrung	keep	die	Vermehrungen	augmentation		
+Vorhut	keep	die	Vorhuten	vanguard		
+Druckerei	keep	die	Druckereien	printing house		
+Drucker	keep	der	Drucker	printer		
+Verbande	drop					wrong lemma (Verband)
+Wahlrecht	keep	das		suffrage		
+Umfange	drop					wrong lemma (Umfang)
+Buchhändler	keep	der	Buchhändler	bookseller		
+Beamter	drop					wrong lemma (Beamte)
+Reiche	drop					wrong lemma (Reich)
+Taktik	keep	die	Taktiken	tactics		
+Verpflegung	keep	die		rations		
+Abschaffung	keep	die		abolition		
+Erwerbung	keep	die	Erwerbungen	acquisition		
+Handelsschiff	keep	das	Handelsschiffe	merchant ship		
+Sicherung	keep	die	Sicherungen	safeguarding		
+Sklavenhandel	keep	der		slave trade		
+Gesandtschaft	keep	die	Gesandtschaften	legation		
+Abendland	keep	das		Occident		
+Hebung	keep	die	Hebungen	uplift		
+Opposition	keep	die		opposition		
+Denker	keep	der	Denker	thinker		
+Distrikt	keep	der	Distrikte	district		
+Tonne	keep	die	Tonnen	ton		
+Ausbreitung	drop					duplicates Verbreitung
+Gegende	drop					wrong lemma (Gegend)
+Abstimmung	keep	die	Abstimmungen	vote		
+Kampfe	drop					wrong lemma (Kampf)
+Zusammenstoß	keep	der	Zusammenstöße	clash		
+Hauptquartier	keep	das	Hauptquartiere	headquarters		
+Patrouill	drop					wrong lemma (Patrouille)
+Euphrat	drop					name
+Demokratie	keep	die	Demokratien	democracy		
+Unabhängigkeit	keep	die		independence		
+Anhang	keep	der	Anhänge	appendix		
+Serie	keep	die	Serien	series		
+Ausnutzung	keep	die		utilization		
+Ausrüstung	keep	die	Ausrüstungen	equipment		
+Christenthum	drop					wrong lemma (Christentum)
+Union	drop					duplicates Vereinigung
+Kolonne	keep	die	Kolonnen	column		
+Patrouille	keep	die	Patrouillen	patrol		
+Gr	drop					abbreviation (Groschen)
+Aktion	keep	die	Aktionen	action		
+Athener	keep	der	Athener	Athenian		
+Watt	drop					mostly name (James Watt); example is Watte
+Krisis	drop					wrong lemma (Krise)
+Antike	keep	die		classical antiquity		
+Zusammensetzung	keep	die	Zusammensetzungen	composition		
+Friedensverhandlung	keep	die	Friedensverhandlungen	peace negotiation		
+Beurteilung	keep	die	Beurteilungen	assessment		
+Codex	drop					wrong lemma (Kodex); mostly Latin manuscript names
+Überlieferung	keep	die	Überlieferungen	tradition		
+Befugnis	keep	die	Befugnisse	authorization		
+Historiker	keep	der	Historiker	historian		
+Produkt	drop					duplicates Erzeugnis
+Handbuch	keep	das	Handbücher	handbook		
+Leistungsfähigkeit	keep	die		capability		
+Theologie	keep	die	Theologien	theology		
+Kelt	drop					wrong lemma (Kelte)
+Uebersetzung	drop					wrong lemma (Übersetzung)
+Ableitung	keep	die	Ableitungen	derivation		
+Genehmigung	keep	die	Genehmigungen	permit		
+Teilung	keep	die	Teilungen	partition		
+Ergänzung	keep	die	Ergänzungen	supplement		
+Urkunde	keep	die	Urkunden	charter		
+Seeleute	drop					wrong lemma (Seemann)
+Ueberlieferung	drop					wrong lemma (Überlieferung)
+Bekämpfung	keep	die		combating		
+Fabrikation	drop					duplicates Herstellung
+Gesamtheit	keep	die		entirety		
+Aufstellung	keep	die	Aufstellungen	deployment		
+Übergabe	keep	die	Übergaben	handover		
+Orient	keep	der		Orient		
+Einwanderung	keep	die	Einwanderungen	immigration		
+Subsidie	keep	die	Subsidien	subsidy		usually plural
+Mündung	keep	die	Mündungen	river mouth		
+Aufrechterhaltung	keep	die		maintenance		
+Vertrage	drop					wrong lemma (Vertrag)
+Vorrede	keep	die	Vorreden	preface		
+Gesamtzahl	keep	die		total number		
+Genossenschaft	keep	die	Genossenschaften	cooperative		
+Faktor	keep	der	Faktoren	factor		
+Herausgeber	keep	der	Herausgeber	editor		
+Vergleichung	drop					wrong lemma (Vergleich); obsolete form
+Princip	drop					wrong lemma (Prinzip)
+Zufuhr	keep	die	Zufuhren	supply		
+Zusammenstellung	keep	die	Zusammenstellungen	compilation		
+Tabelle	keep	die	Tabellen	table		
+Kriegsmaterial	keep	das		war materiel		
+Kontingent	keep	das	Kontingente	contingent		
+Gehülfe	drop					wrong lemma (Gehilfe)
+Handelspolitik	keep	die		trade policy		
+Gallier	keep	der	Gallier	Gaul		
+Bourgeoisie	keep	die		bourgeoisie		
+Herausgabe	keep	die	Herausgaben	editing		
+Sozialist	keep	der	Sozialisten	socialist		
+Königtum	keep	das	Königtümer	kingship		
+Wiederherstellung	keep	die	Wiederherstellungen	restoration		
+Plebejer	keep	der	Plebejer	plebeian		
+Manuscript	drop					wrong lemma (Manuskript)
+Maschinengewehr	keep	das	Maschinengewehre	machine gun		
+Thronbesteigung	keep	die	Thronbesteigungen	accession		
+Ackerbau	keep	der		arable farming		
+Vormarsch	keep	der	Vormärsche	advance		
+Landrecht	keep	das	Landrechte	territorial law		
+Vgl	drop					abbreviation (vergleiche)
+Zeitraum	keep	der	Zeiträume	time span		
+Miliz	keep	die	Milizen	militia		
+Beschießung	keep	die	Beschießungen	shelling		
+Umgestaltung	keep	die	Umgestaltungen	reshaping		
+Festsetzung	keep	die	Festsetzungen	stipulation		
+Instruktion	keep	die	Instruktionen	instruction		
+Barbar	keep	der	Barbaren	barbarian		
+Unterhandlung	keep	die	Unterhandlungen	parley		
+Aufstande	drop					wrong lemma (Aufstand)
+Jahrbücher	drop					wrong lemma (Jahrbuch); mostly in titles
+Kabel	keep	das	Kabel	cable		
+Verwirklichung	keep	die		realization		
+Arbeitskraft	keep	die	Arbeitskräfte	manpower		
+Veröffentlichung	keep	die	Veröffentlichungen	publication		
+Auslande	drop					wrong lemma (Ausland)
+Seehandel	keep	der		maritime trade		
+Zeitschr	drop					abbreviation (Zeitschrift)
+Einteilung	keep	die	Einteilungen	subdivision		
+Anschluss	keep	der	Anschlüsse	annexation		history sense; also connection
+Anzeiger	drop					mostly in newspaper names (Dresdener Anzeiger)
+Hist	drop					abbreviation (Historie)
+Reliquie	keep	die	Reliquien	relic		
+Hinrichtung	keep	die	Hinrichtungen	judicial execution		execution is taken by Durchführung
+Derselbe	drop					tagger artifact (pronoun derselbe)
+Blockade	keep	die	Blockaden	blockade		
+Synode	keep	die	Synoden	synod		
+Entdecker	keep	der	Entdecker	discoverer		
+Assoziation	drop					duplicates Verein
+Stände	drop					wrong lemma (Stand)
+Rechtswissenschaft	keep	die	Rechtswissenschaften	jurisprudence		
+Resolution	drop					duplicates Beschluss
+Vermuthung	drop					wrong lemma (Vermutung)
+Zauberei	keep	die	Zaubereien	sorcery		
+Einstellung	keep	die	Einstellungen	attitude		
+Biographie	keep	die	Biographien	biography		
+Jahresbericht	keep	der	Jahresberichte	annual report		
+Ind	drop					wrong lemma (Inder)
+Krise	keep	die	Krisen	crisis		
+Kgl	drop					abbreviation
+Zusatz	keep	der	Zusätze	addition		
+Schwerpunkt	keep	der	Schwerpunkte	center of gravity		
+Abmarsch	keep	der		marching off		
+Vermittlung	keep	die	Vermittlungen	mediation		
+Häuptlinge	drop					wrong lemma (Häuptling)
+Achse	keep	die	Achsen	axis		
+Autor	keep	der	Autoren	writer		author is Verfasser
+Kriegsschauplatz	keep	der	Kriegsschauplätze	theater of war		
+Konferenz	keep	die	Konferenzen	conference		
+Oberbefehlshaber	keep	der	Oberbefehlshaber	commander-in-chief		
+Beilage	keep	die	Beilagen	enclosure		
+Vertheidiger	drop					wrong lemma (Verteidiger)
+Waar	drop					wrong lemma (Ware)
+Gros	keep	das		main body		
+Kaliber	keep	das	Kaliber	caliber		
+Ansiedlung	keep	die	Ansiedlungen	settling		
+Kais	drop					abbreviation
+Abkommen	keep	das	Abkommen	pact		
+Übernahme	keep	die	Übernahmen	takeover		
+Steigerung	keep	die	Steigerungen	intensification		
+Thlr	drop					abbreviation
+Benennung	keep	die	Benennungen	naming		
+Erhöhung	keep	die	Erhöhungen	raising		
+Bedarf	keep	der		need		
+Broschüre	keep	die	Broschüren	pamphlet		
+Augenzeuge	keep	der	Augenzeugen	eyewitness		
+Heimath	drop					wrong lemma (Heimat)
+Urheber	keep	der	Urheber	originator		
+Durchmesser	keep	der	Durchmesser	diameter		
+Beförderung	keep	die	Beförderungen	advancement		
+Reibung	keep	die	Reibungen	friction		
+Vermittelung	drop					wrong lemma (Vermittlung)
+Entschädigung	keep	die	Entschädigungen	compensation		
+Reichthum	drop					wrong lemma (Reichtum)
+Kolonisation	keep	die		colonization		
+Beendigung	keep	die		termination		
+Erlass	keep	der	Erlasse	decree		
+Vorrichtung	keep	die	Vorrichtungen	device		
+Arbeiterbewegung	keep	die	Arbeiterbewegungen	labor movement		
+Ostküste	keep	die	Ostküsten	east coast		
+Unterdrückung	keep	die	Unterdrückungen	suppression		
+Kreuzzug	keep	der	Kreuzzüge	crusade		
+Einsetzung	keep	die	Einsetzungen	installation		
+Vereinbarung	keep	die	Vereinbarungen	agreement		
+Gemeinwesen	keep	das	Gemeinwesen	commonwealth		
+Ultimatum	keep	das	Ultimaten	ultimatum		
+Berücksichtigung	keep	die		consideration		
+Westküste	keep	die	Westküsten	west coast		
+Verf	drop					abbreviation
+Vorwort	keep	das	Vorworte	foreword		
+Zulassung	keep	die	Zulassungen	admission		
+Königl	drop					abbreviation
+Marquis	keep	der	Marquis	marquis		
+Sokrat	drop					name (Sokrates)
+Nationalität	keep	die	Nationalitäten	nationality		
+Neutralität	keep	die		neutrality		
+Germane	keep	der	Germanen	Germanic tribesman		
+Baier	drop					wrong lemma (Bayer)
+Abzug	keep	der	Abzüge	withdrawal		
+Strasse	drop					wrong lemma (Straße)
+Anfange	drop					wrong lemma (Anfang)
+Bestandteil	keep	der	Bestandteile	component		
+Ausschuß	drop					wrong lemma (Ausschuss)
+Rohstoff	keep	der	Rohstoffe	raw material		
+Zusammenfassung	keep	die	Zusammenfassungen	consolidation		sense the books use; also summary
+Vorstoß	keep	der	Vorstöße	thrust		
+Eingeboren	drop					wrong lemma (Eingeborene)
+Hegemonie	keep	die	Hegemonien	hegemony		
+Institution	drop					duplicates Einrichtung
+Uebersicht	drop					wrong lemma (Übersicht)
+Ausbau	keep	der		further development		
+Vorläufer	keep	der	Vorläufer	forerunner		
+Erreichung	keep	die		attainment		
+Festland	keep	das		mainland		
+Stimmrecht	keep	das	Stimmrechte	voting right		
+Verminderung	keep	die	Verminderungen	diminution		
+Finanz	drop					wrong lemma (Finanzen)
+Propaganda	keep	die		propaganda		
+Kriegserklärung	keep	die	Kriegserklärungen	declaration of war		
+Sklav	drop					wrong lemma (Sklave)
+Schlusse	drop					wrong lemma (Schluss)
+Typ	keep	der	Typen	type		
+Journal	keep	das	Journale	journal		
+Zeitabschnitt	keep	der	Zeitabschnitte	time period		
+Beitritt	keep	der	Beitritte	joining		
+Landgrafe	drop					wrong lemma (Landgraf)
+Beschaffung	keep	die		procurement		
+Seeschlacht	keep	die	Seeschlachten	naval battle		
+Brigade	keep	die	Brigaden	brigade		
+Vertreibung	keep	die	Vertreibungen	expulsion		
+Aenderung	drop					wrong lemma (Änderung)
+Minderheit	keep	die	Minderheiten	minority		
+Unterthan	drop					wrong lemma (Untertan)
+Stande	drop					wrong lemma (Stand)
+Vorzeit	keep	die	Vorzeiten	remote past		
+Einschränkung	keep	die	Einschränkungen	limitation		
+Bundesrat	keep	der	Bundesräte	federal council		
+Bewaffnung	keep	die		armament		
+Erbfolgekrieg	keep	der	Erbfolgekriege	war of succession		
+Festlande	drop					wrong lemma (Festland)
+Ansiedler	keep	der	Ansiedler	settler		
+Ausübung	keep	die		exercise		
+Gleis	keep	das	Gleise	track	🛤️	
+Verschiedenheit	keep	die	Verschiedenheiten	dissimilarity		
+Geschütze	drop					wrong lemma (Geschütz)
+Monopol	keep	das	Monopole	monopoly		
+Koalition	keep	die	Koalitionen	coalition		
+Commission	drop					wrong lemma (Kommission)
+Verlagshandlung	keep	die	Verlagshandlungen	publishing house		Verlagsbuchhandlung dropped as its duplicate
+Initiative	keep	die	Initiativen	initiative		
+Eigenthum	drop					wrong lemma (Eigentum)
+Lieferung	keep	die	Lieferungen	delivery		
+Massregel	drop					wrong lemma (Maßregel)
+Bauart	keep	die	Bauarten	type of construction		
+Handgranate	keep	die	Handgranaten	hand grenade		
+Beschaffenheit	keep	die		nature		
+Petition	keep	die	Petitionen	petition		
+Begründer	drop					duplicates Gründer
+Fuss	drop					wrong lemma (Fuß)
+Renaissance	keep	die		Renaissance		
+Gewinnung	keep	die		extraction		
+Kulturgeschichte	keep	die		cultural history		
+Geschoß	drop					wrong lemma (Geschoss)
+Bürgerkrieg	keep	der	Bürgerkriege	civil war		
+Berufung	keep	die	Berufungen	calling		
+Täufer	keep	der	Täufer	Anabaptist		also John the Baptist's epithet
+Golf	keep	der	Golfe	gulf		
+Etat	keep	der	Etats	budget		
+Gesandter	drop					wrong lemma (Gesandte)
+Hauptwerk	keep	das	Hauptwerke	major work		
+Hülfsmittel	drop					wrong lemma (Hilfsmittel)
+Ernennung	keep	die	Ernennungen	appointment		
+Unzucht	keep	die		fornication		
+Söldner	keep	der	Söldner	mercenary		
+Erforschung	keep	die		exploration		
+Handelsverkehr	keep	der		commerce		
+Admiralität	keep	die	Admiralitäten	admiralty		
+Flugzeug	keep	das	Flugzeuge	airplane	✈️	
+Auslieferung	keep	die	Auslieferungen	extradition		
+Neuzeit	keep	die		modern times		
+Symbolik	keep	die		symbolism		
+Urkunden	drop					wrong lemma (Urkunde)
+Patrizier	keep	der	Patrizier	patrician		
+Kommunismus	keep	der		communism		
+Südosten	keep	der		southeast		
+Abdruck	keep	der	Abdrucke	reprint		
+Dominikaner	keep	der	Dominikaner	Dominican		
+Herabsetzung	keep	die	Herabsetzungen	lowering		
+Gelehrt	drop					wrong lemma (Gelehrte)
+Kolonist	keep	der	Kolonisten	colonist		
+Schiedsgericht	keep	das	Schiedsgerichte	court of arbitration		
+Nachweis	keep	der	Nachweise	proof		
+Abtretung	keep	die	Abtretungen	cession		
+Th	drop					abbreviation
+Stat	drop					tagger artifact
+Funktion	keep	die	Funktionen	function		
+Erkundung	keep	die	Erkundungen	reconnaissance		
+Hilfsmittel	keep	das	Hilfsmittel	resource		
+Gründer	keep	der	Gründer	founder		
+Astronomie	keep	die		astronomy		
+Physiker	keep	der	Physiker	physicist		
+Ausbeutung	keep	die		exploitation		
+Verzeichnis	keep	das	Verzeichnisse	register		
+Landtag	keep	der	Landtage	state parliament		
+Welthandel	keep	der		world trade		
+Jesuit	keep	der	Jesuiten	Jesuit		
+Oberhoheit	keep	die		suzerainty		
+Vordergrund	keep	der		foreground		
+Sultan	keep	der	Sultane	sultan		
+Schützengraben	keep	der	Schützengräben	trench		
+Alphabet	keep	das	Alphabete	alphabet	🔤	
+Uebergang	drop					wrong lemma (Übergang)
+Arbeiterschaft	keep	die		workforce		
+Phase	keep	die	Phasen	phase		
+Räumung	keep	die	Räumungen	evacuation		
+Uebereinstimmung	drop					wrong lemma (Übereinstimmung)
+Denkwürdigkeit	keep	die	Denkwürdigkeiten	memorable event		plural also means memoirs
+Analogie	keep	die	Analogien	analogy		
+Grundbesitz	keep	der		landed property		
+Übersicht	keep	die	Übersichten	overview		
+Ausgleichung	keep	die		equalization		
+Erzherzog	keep	der	Erzherzöge	archduke		
+Abweichung	keep	die	Abweichungen	deviation		
+Anleihe	keep	die	Anleihen	loan		
+Laie	keep	der	Laien	layman		
+Nachahmung	keep	die	Nachahmungen	imitation		
+Kaufleut	drop					wrong lemma (Kaufmann)
+Kriegsmarine	drop					duplicates Marine
+Zählung	keep	die	Zählungen	counting		
+Farmer	keep	der	Farmer	farmer	👨‍🌾	
+Kriegsminister	keep	der	Kriegsminister	minister of war		
+Hebel	keep	der	Hebel	lever		
+Abschrift	keep	die	Abschriften	transcript		
+Friedensvertrag	keep	der	Friedensverträge	peace treaty		
+Südwesten	keep	der		southwest		
+Bundesstaat	keep	der	Bundesstaaten	federal state		
+Hinterland	keep	das		hinterland		
+Ethik	keep	die		ethics		
+Lieutenant	drop					wrong lemma (Leutnant)
+Vervollkommnung	keep	die		perfecting		
+Generalgouverneur	keep	der	Generalgouverneure	governor-general		
+Milliarde	keep	die	Milliarden	billion		
+Plinius	drop					name
+Handelsschiffen	drop					wrong lemma (Handelsschiff)
+Ortsnam	drop					wrong lemma (Ortsname)
+Nordosten	keep	der		northeast		
+Marsche	drop					wrong lemma (Marsch)
+Farm	keep	die	Farmen	farm		
+Ausgangspunkt	keep	der	Ausgangspunkte	starting point		
+Band	keep	der	Bände	volume		das Band (bond) also occurs
+Erzeugung	keep	die		generation		
+Illustration	drop					duplicates Abbildung
+Act	drop					abbreviation (Act.); otherwise old spelling of Akt
+Anarchie	keep	die		anarchy		
+Mutterlande	drop					wrong lemma (Mutterland)
+Slave	drop					wrong lemma (Slawe)
+Kategorie	keep	die	Kategorien	category		
+Geldmittel	keep	die		financial means		plural-only noun
+Rückgang	keep	der	Rückgänge	decline		
+Kultus	keep	der	Kulte	cult		
+Sold	keep	der		military pay		
+Irrthum	drop					wrong lemma (Irrtum)
+Entsendung	keep	die	Entsendungen	dispatch		
+Geschichtschreibung	drop					wrong lemma (Geschichtsschreibung)
+Deserteur	keep	der	Deserteure	deserter		
+Zustande	drop					wrong lemma (Zustand)
+Umwälzung	keep	die	Umwälzungen	upheaval		
+Abhängigkeit	keep	die	Abhängigkeiten	dependence		
+Invasion	keep	die	Invasionen	invasion		
+Tortur	drop					duplicates Folter
+Unterstand	keep	der	Unterstände	dugout		
+Niederwerfung	keep	die		crushing		
+Auslegung	keep	die	Auslegungen	interpretation		
+Seeverkehr	keep	der		maritime traffic		
+Gräben	drop					wrong lemma (Graben)
+Aristotel	drop					name (Aristoteles)
+Briefwechsel	keep	der	Briefwechsel	exchange of letters		
+Gliederung	keep	die	Gliederungen	structuring		
+Meerenge	keep	die	Meerengen	strait		
+Imperium	keep	das	Imperien	imperium		
+Schifffahrt	keep	die		shipping		
+Abnahme	keep	die		decrease		
+Feststellung	keep	die	Feststellungen	finding		
+Ausgrabung	keep	die	Ausgrabungen	excavation		
+Amnestie	keep	die	Amnestien	amnesty		
+Belagerungszustand	keep	der	Belagerungszustände	state of siege		
+Monatsschrift	keep	die	Monatsschriften	monthly journal		
+Hunn	drop					wrong lemma (Hunne)
+Grösse	drop					wrong lemma (Größe)
+Hauptmacht	keep	die	Hauptmächte	main force		
+Volkswirtschaft	keep	die	Volkswirtschaften	national economy		
+Wortlaut	keep	der		wording		
+Charakteristik	keep	die	Charakteristiken	characterization		
+Gewährung	keep	die		granting		
+Versorgung	keep	die		provisioning		
+Ökonomie	keep	die	Ökonomien	economy		
+Artilleriefeuer	keep	das		artillery fire		
+Stellungnahme	keep	die	Stellungnahmen	statement		
+Privilegium	drop					duplicates Privileg (older Latin form)
+Throne	drop					wrong lemma (Thron)
+Telegraphie	keep	die		telegraphy		
+Bombardement	keep	das	Bombardements	bombardment		
+Folgezeit	keep	die		subsequent period		
+Anhalt	keep	der		clue		also the place name Anhalt
+Zentralisation	keep	die		centralization		
+Zertrümmerung	keep	die		shattering		
+Kulturvölker	drop					wrong lemma (Kulturvolk)
+Römerzeit	keep	die		Roman era		
+Nachwelt	keep	die		posterity		
+Friedensschluss	keep	der	Friedensschlüsse	conclusion of peace		
+Luftdruck	keep	der		air pressure		here the blast of an explosion
+Kanton	keep	der	Kantone	canton		
+Bürgertum	keep	das		burgher class		middle class is Mittelstand
+Hospital	keep	das	Hospitäler	hospital	🏥	
+Nahkampf	keep	der	Nahkämpfe	close combat		
+Aufruf	keep	der	Aufrufe	appeal		
+Generalstabe	drop					wrong lemma (Generalstab)
+Hauptmasse	keep	die	Hauptmassen	bulk		
+Wegfall	keep	der		discontinuation		
+Rundschreiben	keep	das	Rundschreiben	circular		
+Astrologie	keep	die		astrology		
+Dardanelle	drop					name
+Tiefgang	keep	der		draught		of a ship
+Neuerung	keep	die	Neuerungen	innovation		
+Publikation	drop					duplicates Veröffentlichung
+Demonstration	keep	die	Demonstrationen	demonstration	🪧	
+Bekanntmachung	keep	die	Bekanntmachungen	announcement		
+Gegenstoß	keep	der	Gegenstöße	counterattack		
+Biograph	keep	der	Biographen	biographer		
+Landstrich	keep	der	Landstriche	tract of land		
+Ausschluss	keep	der	Ausschlüsse	exclusion		
+Route	keep	die	Routen	route		
+Westfront	keep	die		Western Front		
+Entfaltung	keep	die		unfolding		
+Vergrößerung	keep	die	Vergrößerungen	enlargement		
+Reformator	keep	der	Reformatoren	reformer		
+Judentum	keep	das		Judaism		
+Phänomen	keep	das	Phänomene	phenomenon		
+Anziehung	keep	die		attraction		
+Mittelmeer	drop					name (the Mediterranean)
+Hauptpunkt	keep	der	Hauptpunkte	main point		
+Etablissement	keep	das	Etablissements	commercial establishment		
+Kleinstaat	keep	der	Kleinstaaten	small state		
+Dogmatik	keep	die		dogmatics		
+Aemter	drop					wrong lemma (Amt)
+Sittenlosigkeit	keep	die		immorality		
+Verkehrsweg	keep	der	Verkehrswege	transport route		
+Quantität	keep	die	Quantitäten	amount		quantity is Anzahl
+Schaar	drop					wrong lemma (Schar)
+Besteuerung	keep	die		taxation		
+Zeitrechnung	keep	die	Zeitrechnungen	chronology		
+Struktur	keep	die	Strukturen	structure		
+Einkünfte	keep	die		earnings		plural noun (singular Einkunft rare)
+Staatskasse	keep	die	Staatskassen	treasury		
+Klerus	drop					duplicates Geistlichkeit
+Mißbrauch	drop					wrong lemma (Missbrauch)
+Nachbarstaat	keep	der	Nachbarstaaten	neighboring state		
+Staatsverwaltung	keep	die	Staatsverwaltungen	public administration		
+Besiegung	keep	die		defeat		
+Anschluß	drop					wrong lemma (Anschluss)
+Geschoss	keep	das	Geschosse	projectile		
+Restauration	keep	die		political restoration		the Restoration; restoration is Wiederherstellung
+Sittlichkeit	keep	die		morality		
+Seeweg	keep	der	Seewege	sea route		
+Monarch	keep	der	Monarchen	monarch	🫅	
+Gutachten	keep	das	Gutachten	expert opinion		
+Spaltung	keep	die	Spaltungen	split		
+Proklamation	keep	die	Proklamationen	proclamation		
+Maur	drop					wrong lemma (Maure)
+Schwaben	drop					name (Swabia)
+Gesetzgeber	keep	der	Gesetzgeber	legislator		
+Friedenszeit	keep	die	Friedenszeiten	peacetime		
+Kapitulation	keep	die	Kapitulationen	capitulation		
+Würdigung	keep	die	Würdigungen	appreciation		
+Heranziehung	keep	die		enlistment		calling upon (for service, taxes)
+Seeschiff	keep	das	Seeschiffe	seagoing ship		
+Departement	keep	das	Departements	département		French district; also an old ministry
+Einigkeit	keep	die		unity		
+Germanen	drop					wrong lemma (Germane)
+Vorlage	keep	die	Vorlagen	bill		parliamentary
+Wörterbuch	keep	das	Wörterbücher	dictionary		
+Machthaber	keep	der	Machthaber	potentate		
+Vermeidung	keep	die		avoidance		
+Demokrat	keep	der	Demokraten	democrat		
+Erneuerung	keep	die	Erneuerungen	renewal		
+Ausgestaltung	keep	die	Ausgestaltungen	elaboration		
+Staatswesen	keep	das	Staatswesen	polity		
+Freilassung	keep	die	Freilassungen	release		
+Kredit	keep	der	Kredite	credit		
+Unterlage	keep	die	Unterlagen	supporting document		example is the verb unterliegen
+Handelsgesellschaft	keep	die	Handelsgesellschaften	trading company		
+Beilegung	keep	die		dispute settlement		
+Verwerfung	keep	die	Verwerfungen	rejection		
+Lokalität	keep	die	Lokalitäten	locality		
+Wesentlichen	drop					only in 'im Wesentlichen'
+Schauplatz	keep	der	Schauplätze	scene		
+Reede	keep	die	Reeden	roadstead		
+Waffengewalt	keep	die		force of arms		
+Syrer	keep	der	Syrer	Syrian		
+Regentschaft	keep	die	Regentschaften	regency		
+Mitarbeit	keep	die		collaboration		
+Teilnehmer	keep	der	Teilnehmer	participant		
+Grundstück	keep	das	Grundstücke	plot of land		
+Denkweise	keep	die	Denkweisen	mentality		
+Dieselbe	drop					tagger artifact (pronoun)
+Atheismus	keep	der		atheism		
+Durchbildung	keep	die		full development		
+Dogma	keep	das	Dogmen	dogma		
+Staatsrecht	keep	das		constitutional law		
+Grundform	keep	die	Grundformen	basic form		
+Regierungsbezirk	keep	der	Regierungsbezirke	administrative district		
+Revue	keep	die	Revuen	review		journal
+Zuzug	keep	der	Zuzüge	influx		
+Minimum	keep	das	Minima	minimum		
+Politiker	keep	der	Politiker	politician		
+Ueberrest	drop					wrong lemma (Überrest)
+Inquisition	keep	die		inquisition		
+Abdankung	keep	die	Abdankungen	abdication		
+Fertigstellung	keep	die		completion		
+Range	drop					wrong lemma (Rang)
+Untergange	drop					wrong lemma (Untergang)
+Vorgebirge	keep	das	Vorgebirge	promontory		
+Rechtsgelehrt	drop					wrong lemma (Rechtsgelehrte)
+Uebung	drop					wrong lemma (Übung)
+Beschlussfassung	keep	die		decision-making		
+Basis	keep	die	Basen	basis		
+Tigris	drop					name
+Einschreiten	drop					duplicates Intervention (nominalized verb)
+Nordwesten	keep	der		northwest		
+Übertritt	keep	der	Übertritte	crossing over		to another faith or side
+Disciplin	drop					wrong lemma (Disziplin)
+Besoldung	keep	die	Besoldungen	salary		
+Erstürmung	keep	die	Erstürmungen	storming		
+Nordgrenze	keep	die	Nordgrenzen	northern border		
+Partikularismus	keep	der		particularism		
+Heerwesen	keep	das		military affairs		
+Zuziehung	keep	die		calling in		
+Privatrecht	keep	das		private law		
+Geschichtsschreibung	keep	die		historiography		
+Verwaltungsbeamt	drop					wrong lemma (Verwaltungsbeamte)
+Festschrift	keep	die	Festschriften	commemorative volume		
+Weberei	keep	die	Webereien	weaving		
+Gesammtheit	drop					wrong lemma (Gesamtheit)
+Magistrat	keep	der	Magistrate	magistrate		
+Anlehnung	keep	die		reliance		
+Hauptaufgabe	keep	die	Hauptaufgaben	main task		
+Einmarsch	keep	der	Einmärsche	marching in		
+Koran	keep	der	Korane	Koran		
+Frühjahr	keep	das	Frühjahre	spring		
+Zusammenschluss	keep	der	Zusammenschlüsse	merger		
+Sprachgebrauch	keep	der		linguistic usage		
+Abbild	keep	das	Abbilder	likeness		
+Tribunal	keep	das	Tribunale	tribunal		
+Patrone	keep	die	Patronen	cartridge		
+Champagne	drop					name
+Vorrecht	keep	das	Vorrechte	prerogative		
+Anklang	keep	der	Anklänge	resonance		
+Bewilligung	keep	die	Bewilligungen	approval		
+Autonomie	keep	die		autonomy		
+Arbeitslosigkeit	keep	die		unemployment		
+Blütezeit	keep	die	Blütezeiten	heyday		
+Stadtrat	keep	der	Stadträte	town council		
+Überführung	keep	die	Überführungen	transfer		
+Jahrbuch	keep	das	Jahrbücher	yearbook		
+Wiederaufnahme	keep	die	Wiederaufnahmen	resumption		
+Souveränität	keep	die		sovereignty		
+Landtage	drop					wrong lemma (Landtag)
+Verringerung	keep	die	Verringerungen	reduction		
+Joh	drop					abbreviation
+Landbau	keep	der		agriculture		arable farming is Ackerbau
+Pflanzenwelt	keep	die		flora		
+Thronfolger	keep	der	Thronfolger	heir apparent		
+Entwaffnung	keep	die		disarmament		
+Diplomatie	keep	die		diplomacy		
+Korrespondenz	keep	die	Korrespondenzen	correspondence		
+Wohnsitz	keep	der	Wohnsitze	residence		
+Fürstentum	keep	das	Fürstentümer	principality		
+Gültigkeit	keep	die		validity		
+Hilfstruppe	keep	die	Hilfstruppen	auxiliary troop		
+Okkupation	drop					duplicates Besetzung
+Billigkeit	keep	die		fairness		
+Uneinigkeit	keep	die	Uneinigkeiten	disunity		
+Ausschuss	keep	der	Ausschüsse	panel		committee is already Komitee
+Objekt	keep	das	Objekte	object		
+Gleichstellung	keep	die		equal status		
+Endpunkt	keep	der	Endpunkte	terminus		
+Definition	keep	die	Definitionen	definition		
+Ausrottung	keep	die		extermination		
+Aufrichtung	drop					duplicates Errichtung
+Verurteilung	keep	die	Verurteilungen	conviction		
+Spielraum	keep	der	Spielräume	leeway		
+Verbannung	keep	die	Verbannungen	banishment		
+Gegengewicht	keep	das	Gegengewichte	counterweight		
+Maximum	keep	das	Maxima	maximum		
+Konzession	keep	die	Konzessionen	license		concession in the sense of Zugeständnis
+Indern	drop					wrong lemma (Inder)
+Parteiung	keep	die	Parteiungen	faction		
+Rheinprovinz	drop					name
+Räubereie	drop					wrong lemma (Räuberei)
+Kommentar	keep	der	Kommentare	commentary		
+Zone	keep	die	Zonen	zone		
+Regenzeit	keep	die	Regenzeiten	rainy season		
+Nachbildung	keep	die	Nachbildungen	replica		
+Chronist	keep	der	Chronisten	chronicler		
+Vollkommenheit	keep	die		perfection		
+Konvent	keep	der	Konvente	convention		the French National Convention; a monastic chapter
+Verlängerung	keep	die	Verlängerungen	prolongation		
+Erwerb	keep	der		gain		acquisition is Erwerbung
+Fonds	keep	der	Fonds	fund		
+Streitfrage	keep	die	Streitfragen	point of contention		
+Gefangennahme	keep	die	Gefangennahmen	capture		
+Handelsbeziehung	keep	die	Handelsbeziehungen	trade relation		
+Kriegsmacht	keep	die	Kriegsmächte	military power		
+Lesung	keep	die	Lesungen	reading		
+Ritus	keep	der	Riten	rite		
+Folgerung	keep	die	Folgerungen	inference		
+Ägypter	keep	der	Ägypter	Egyptian		
+Mandat	keep	das	Mandate	mandate		
+Mystik	keep	die		mysticism		
+Spekulation	keep	die	Spekulationen	speculation		
+Tiberius	drop					name
+Festlegung	keep	die	Festlegungen	commitment		
+Verfertigung	drop					duplicates Herstellung
+Priesterschaft	keep	die	Priesterschaften	priesthood		
+Bus	drop					tagger artifact (Latin ending -bus)
+Landsleute	drop					wrong lemma (Landsmann)
+Kriegsdienst	keep	der	Kriegsdienste	military service		
+Verleihung	keep	die	Verleihungen	conferral		
+Rückwirkung	keep	die	Rückwirkungen	repercussion		
+Volksleben	keep	das		folk life		
+Kriegskunst	keep	die		art of war		
+Uebergabe	drop					wrong lemma (Übergabe)
+Zusätz	drop					wrong lemma (Zusatz)
+Uebernahme	drop					wrong lemma (Übernahme)
+Veto	keep	das	Vetos	veto		
+Vorherrschaft	keep	die		predominance		
+Schussweite	keep	die	Schussweiten	firing range		
+Schießpulver	keep	das		gunpowder		
+Ketzerei	keep	die	Ketzereien	heresy		
+Durchbruch	keep	der	Durchbrüche	breakthrough		
+Ersetzung	keep	die	Ersetzungen	substitution		
+Verdrängung	keep	die	Verdrängungen	displacement		
+Rückschritt	keep	der	Rückschritte	step backward		
+Transportmittel	drop					duplicates Verkehrsmittel
+Oertlichkeit	drop					wrong lemma (Örtlichkeit)
+Misstrauen	keep	das		mistrust		
+Julirevolution	drop					name (July Revolution)
+Bureaukratie	drop					wrong lemma (Bürokratie)
+Grade	drop					wrong lemma (Grad)
+Hochverrat	keep	der		high treason		
+Freigelassen	drop					wrong lemma (Freigelassene)
+Freiwillige	keep	der	Freiwilligen	volunteer		
+Prozentsatz	keep	der	Prozentsätze	percentage		
+Unterbringung	keep	die	Unterbringungen	accommodation		
+Verherrlichung	keep	die	Verherrlichungen	glorification		
+Briefe	drop					wrong lemma (Brief)
+Einzelnen	drop					only in 'im Einzelnen'

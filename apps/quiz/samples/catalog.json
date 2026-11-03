@@ -30,43 +30,64 @@
         },
         {
             "file": "Core nouns.xlsx",
-            "bytes": 15334,
-            "sha256": "e666ff631e1d5031842a1cb708c03133660b58acd92e7d880651814579621d4c",
+            "bytes": 151646,
+            "sha256": "d446b29db9c48e724301a52aa6e4f2b3aac382d3f1ad183e58f24b689a4037cf",
             "quizzes": [
                 {
                     "name": "Core nouns",
                     "source": "Core nouns.xlsx#Core nouns",
-                    "version": "f0a12c59ea925869d18ad2eb26795314607f58742f80559f7ff836238f6b67b2",
-                    "cards": 200,
+                    "version": "2fd4965739319ff6e0f7c8e4dcb2e5bd432ce388a9e12e040d4f24f1adbf5c2e",
+                    "cards": 3000,
                     "tab": "Core nouns"
                 },
                 {
                     "name": "Core articles",
                     "source": "Core nouns.xlsx#Core articles",
-                    "version": "689420734ed829c411995d8c19f52be7f6c27128183de747ef5bc9829b0329c9",
-                    "cards": 200,
+                    "version": "e5210d1438bdc3c8708e54b990dc51600d1441eeb1d6c09acb3ce3f541f4bd1c",
+                    "cards": 3000,
                     "tab": "Core articles"
                 },
                 {
                     "name": "Core plurals",
                     "source": "Core nouns.xlsx#Core plurals",
-                    "version": "d50c2fc423e669d39c0c148d29dedadba0fb0153880ec5f20a19d415b16b935e",
-                    "cards": 172,
+                    "version": "4abd251698e7605343ecca672654f788a71af2fe602ade44888a165828ac183e",
+                    "cards": 2362,
                     "tab": "Core plurals"
                 }
             ]
         },
         {
             "file": "Core pictures.zip",
-            "bytes": 1442087,
-            "sha256": "22ea32fe5f6515f877a7925cd51b27bb71b69f18ebeecadd54f52b4e4ec944ba",
+            "bytes": 7662494,
+            "sha256": "52787e246c81526bc760b0c1824896270f99084bc83c8c0d6cd0cfdca149a78f",
             "quizzes": [
                 {
                     "name": "Core pictures",
                     "source": "Core pictures.zip",
-                    "version": "22ea32fe5f6515f877a7925cd51b27bb71b69f18ebeecadd54f52b4e4ec944ba",
-                    "cards": 60,
-                    "pictures": 60
+                    "version": "52787e246c81526bc760b0c1824896270f99084bc83c8c0d6cd0cfdca149a78f",
+                    "cards": 303,
+                    "pictures": 303
+                }
+            ]
+        },
+        {
+            "file": "Core verbs.xlsx",
+            "bytes": 46510,
+            "sha256": "4b7c3fdf6a9bd0531858606ed08417820e5528b313c2e123140b1d1fe41665da",
+            "quizzes": [
+                {
+                    "name": "Core verbs",
+                    "source": "Core verbs.xlsx#Core verbs",
+                    "version": "51dc55df24561d76524a97a2a63eaa81075caebeb9e120f1de8b498497abfc4a",
+                    "cards": 1000,
+                    "tab": "Core verbs"
+                },
+                {
+                    "name": "Core verb forms",
+                    "source": "Core verbs.xlsx#Core verb forms",
+                    "version": "ee4f44d2184d223c44f1ffb858d116fc2d3989f44f5e707751d083e0914fbf59",
+                    "cards": 1000,
+                    "tab": "Core verb forms"
                 }
             ]
         },
