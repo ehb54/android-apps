@@ -57,7 +57,9 @@ is dropped, as the original import did.
 
 - **Answers match forgivingly:** letter case, extra spaces and Unicode
   normalization form are ignored, and keyboard autocorrect is off. The original
-  required an exact match.
+  required an exact match. Everything else still counts: an answer listing
+  several meanings ("to become, get") must be typed whole, commas included.
+  This is deliberate; do not change it to accept any one meaning.
 - **No leaving a session.** There is no quit button, and Back only says how
   many cards are left. The session is saved after every answer and reopens on
   the next launch, even after Android has closed the app.
