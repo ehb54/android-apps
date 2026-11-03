@@ -70,6 +70,10 @@ is dropped, as the original import did.
 - **Zip files carry pictures:** a `.zip` holds one `.qzx` file plus the image
   files, and a side written `!name.png` is the picture of that name. Export
   writes `.qzx` when a quiz has no pictures and `.zip` when it does.
+- **Excel workbooks** (`.xlsx`, for example a Google Sheet downloaded on the
+  phone): each tab becomes its own quiz, named after the tab, with side A from
+  the first column and side B from the second. Rows missing either side are
+  left out, and a tab with no complete rows gives no quiz (`engine/Spreadsheet.kt`).
 - **One user.** The original kept statistics per user name; the phone has one.
 - **Editing.** Cards are added, edited (statistics kept) and deleted on the
   phone; quizzes are created, renamed, reset and deleted.

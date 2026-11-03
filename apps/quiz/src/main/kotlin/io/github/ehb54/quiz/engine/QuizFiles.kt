@@ -45,26 +45,40 @@ fun isZip(bytes: ByteArray) =
     bytes.size >= 4 && bytes[0] == 'P'.code.toByte() && bytes[1] == 'K'.code.toByte() &&
         bytes[2] == 3.toByte() && bytes[3] == 4.toByte()
 
-/** Reads the first .qzx file and every image in a zip; images are keyed by file name without folders. */
-fun readZip(input: InputStream, maxBytes: Long = MAX_IMPORT_BYTES): QuizBundle {
-    var qzx: String? = null
-    val images = mutableMapOf<String, ByteArray>()
+/** Every file in a zip, by its path inside the zip, refusing more than [maxBytes] in total. */
+fun unzip(input: InputStream, maxBytes: Long = MAX_IMPORT_BYTES): Map<String, ByteArray> {
+    val entries = linkedMapOf<String, ByteArray>()
     var budget = maxBytes
     ZipInputStream(input).use { zip ->
         while (true) {
             val entry = zip.nextEntry ?: break
             if (entry.isDirectory) continue
-            val name = entry.name.substringAfterLast('/')
-            val extension = name.substringAfterLast('.', "").lowercase()
-            val wanted = (extension == "qzx" && qzx == null) || extension in imageExtensions
-            if (!wanted || name.startsWith(".")) continue
             val bytes = readLimited(zip, budget)
             budget -= bytes.size
-            if (extension == "qzx") qzx = bytes.toString(Charsets.UTF_8) else images[name] = bytes
+            entries[entry.name] = bytes
+        }
+    }
+    return entries
+}
+
+/** The first .qzx file and every image among unzipped [entries]; images are keyed by file name without folders. */
+fun quizBundle(entries: Map<String, ByteArray>): QuizBundle {
+    var qzx: String? = null
+    val images = mutableMapOf<String, ByteArray>()
+    for ((path, bytes) in entries) {
+        val name = path.substringAfterLast('/')
+        if (name.startsWith(".")) continue
+        val extension = name.substringAfterLast('.', "").lowercase()
+        if (extension == "qzx" && qzx == null) {
+            qzx = bytes.toString(Charsets.UTF_8)
+        } else if (extension in imageExtensions) {
+            images[name] = bytes
         }
     }
     return QuizBundle(qzx ?: throw IOException("no .qzx file in the zip"), images)
 }
+
+fun readZip(input: InputStream, maxBytes: Long = MAX_IMPORT_BYTES) = quizBundle(unzip(input, maxBytes))
 
 /** Reads all of [input], refusing more than [budget] bytes. */
 fun readLimited(input: InputStream, budget: Long = MAX_IMPORT_BYTES): ByteArray {

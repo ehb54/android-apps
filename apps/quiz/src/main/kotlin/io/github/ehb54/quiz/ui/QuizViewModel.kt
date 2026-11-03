@@ -16,14 +16,18 @@ import io.github.ehb54.quiz.engine.IMAGE_MARK
 import io.github.ehb54.quiz.engine.Outcome
 import io.github.ehb54.quiz.engine.QzxCard
 import io.github.ehb54.quiz.engine.Session
+import io.github.ehb54.quiz.engine.cardsFromSheet
 import io.github.ehb54.quiz.engine.formatQzx
+import io.github.ehb54.quiz.engine.isXlsx
 import io.github.ehb54.quiz.engine.isZip
 import io.github.ehb54.quiz.engine.parseQzx
+import io.github.ehb54.quiz.engine.quizBundle
 import io.github.ehb54.quiz.engine.readLimited
-import io.github.ehb54.quiz.engine.readZip
+import io.github.ehb54.quiz.engine.readXlsx
 import io.github.ehb54.quiz.engine.revealAnswer
 import io.github.ehb54.quiz.engine.startSession
 import io.github.ehb54.quiz.engine.submitAnswer
+import io.github.ehb54.quiz.engine.unzip
 import io.github.ehb54.quiz.engine.writeZip
 import io.github.ehb54.quiz.model.Card
 import io.github.ehb54.quiz.model.Quiz
@@ -267,8 +271,9 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
         viewModelScope.launch {
             val assets = getApplication<Application>().assets
             val samples = withContext(Dispatchers.IO) {
-                assets.list(SAMPLES).orEmpty().sorted().mapNotNull { file ->
-                    runCatching { readQuizBytes(file, assets.open("$SAMPLES/$file").use { readLimited(it) }) }.getOrNull()
+                assets.list(SAMPLES).orEmpty().sorted().flatMap { file ->
+                    runCatching { readQuizzes(file, assets.open("$SAMPLES/$file").use { readLimited(it) }) }
+                        .getOrDefault(emptyList())
                 }
             }
             samples.forEach { addQuiz(it.copy(name = uniqueName(it.name))) }
@@ -276,19 +281,23 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
+    /** Imports a .qzx, a .zip with pictures, or an Excel workbook (one quiz per tab). */
     fun importQuiz(uri: Uri) {
         viewModelScope.launch {
-            val quiz = withContext(Dispatchers.IO) {
-                runCatching { readQuiz(getApplication<Application>().contentResolver, uri) }.getOrNull()
-            }
-            if (quiz == null || quiz.cards.isEmpty()) {
+            val quizzes = withContext(Dispatchers.IO) {
+                runCatching { readQuizzes(getApplication<Application>().contentResolver, uri) }.getOrNull()
+            }.orEmpty().filter { it.cards.isNotEmpty() }
+            if (quizzes.isEmpty()) {
                 message(text(R.string.import_failed))
                 return@launch
             }
-            val named = quiz.copy(name = uniqueName(quiz.name))
-            addQuiz(named)
-            openQuiz(named.id)
-            message(plural(R.plurals.imported, named.cards.size))
+            val named = quizzes.map { it.copy(name = uniqueName(it.name)).also(::addQuiz) }
+            if (named.size == 1) {
+                openQuiz(named[0].id)
+                message(plural(R.plurals.imported, named[0].cards.size))
+            } else {
+                message(plural(R.plurals.imported_quizzes, named.size))
+            }
         }
     }
 
@@ -320,20 +329,25 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
-    private fun readQuiz(resolver: ContentResolver, uri: Uri): Quiz {
+    private fun readQuizzes(resolver: ContentResolver, uri: Uri): List<Quiz> {
         val fileName = displayName(resolver, uri) ?: text(R.string.imported_quiz)
         val bytes = resolver.openInputStream(uri)?.use { readLimited(it) } ?: throw IOException("cannot open $uri")
-        return readQuizBytes(fileName, bytes)
+        return readQuizzes(fileName, bytes)
     }
 
-    /** A new quiz named after [fileName], from .qzx text or a zip with pictures. */
-    private fun readQuizBytes(fileName: String, bytes: ByteArray): Quiz {
-        var quiz = Quiz(UUID.randomUUID().toString(), fileName.substringBeforeLast('.').ifBlank { fileName })
-        if (!isZip(bytes)) {
-            parseQzx(bytes.toString(Charsets.UTF_8)).forEach { quiz = quiz.addCard(it.a, it.b) }
-            return quiz
+    /**
+     * New quizzes from a file: one named after [fileName] from .qzx text or a zip
+     * with pictures, or one per non-empty tab, named after the tab, from an Excel workbook.
+     */
+    private fun readQuizzes(fileName: String, bytes: ByteArray): List<Quiz> {
+        val name = fileName.substringBeforeLast('.').ifBlank { fileName }
+        if (!isZip(bytes)) return listOf(newQuiz(name, parseQzx(bytes.toString(Charsets.UTF_8))))
+        val entries = unzip(bytes.inputStream())
+        if (isXlsx(entries)) {
+            return readXlsx(entries).map { newQuiz(it.name, cardsFromSheet(it)) }.filter { it.cards.isNotEmpty() }
         }
-        val bundle = readZip(bytes.inputStream())
+        var quiz = newQuiz(name, emptyList())
+        val bundle = quizBundle(entries)
         val stored = mutableMapOf<String, String?>()
         fun picture(side: String): String? {
             if (!side.startsWith(IMAGE_MARK)) return null
@@ -346,8 +360,11 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
             val imageB = picture(card.b)
             quiz = quiz.addCard(if (imageA != null) "" else card.a, if (imageB != null) "" else card.b, imageA, imageB)
         }
-        return quiz
+        return listOf(quiz)
     }
+
+    private fun newQuiz(name: String, cards: List<QzxCard>) =
+        cards.fold(Quiz(UUID.randomUUID().toString(), name)) { quiz, card -> quiz.addCard(card.a, card.b) }
 
     /** Plain .qzx when the quiz has no pictures; otherwise a zip with the pictures. */
     private fun writeQuiz(quiz: Quiz, out: OutputStream) {

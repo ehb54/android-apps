@@ -16,7 +16,7 @@
     <string name="quiz_name">Quiz name</string>
     <string name="import_quiz">Import quiz file…</string>
     <string name="add_samples">Add sample quizzes</string>
-    <string name="no_quizzes">No quizzes yet. Tap + to make one. The ⋮ menu imports .qzx and .zip quiz files and adds sample quizzes.</string>
+    <string name="no_quizzes">No quizzes yet. Tap + to make one. The ⋮ menu imports quiz files (.qzx, .zip, or Excel .xlsx with one quiz per tab) and adds sample quizzes.</string>
     <plurals name="samples_added">
         <item quantity="one">Added %d sample quiz.</item>
         <item quantity="other">Added %d sample quizzes.</item>
@@ -102,6 +102,10 @@
     <plurals name="imported">
         <item quantity="one">Imported %d card.</item>
         <item quantity="other">Imported %d cards.</item>
+    </plurals>
+    <plurals name="imported_quizzes">
+        <item quantity="one">Imported %d quiz.</item>
+        <item quantity="other">Imported %d quizzes, one per tab.</item>
     </plurals>
     <string name="import_failed">That file could not be read as a quiz.</string>
     <string name="exported">Exported.</string>
