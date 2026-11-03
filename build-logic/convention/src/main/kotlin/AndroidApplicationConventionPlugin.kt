@@ -84,6 +84,7 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
                 lint {
                     abortOnError = true
                     checkDependencies = true
+                    lintConfig = rootDir.resolve("lint.xml")
                 }
             }
 

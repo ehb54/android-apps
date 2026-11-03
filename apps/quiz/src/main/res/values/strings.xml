@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Quiz</string>
+
+    <!-- Common -->
+    <string name="more">More options</string>
+    <string name="back">Back</string>
+    <string name="about">About</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+
+    <!-- Quiz list -->
+    <string name="new_quiz">New quiz</string>
+    <string name="quiz_name">Quiz name</string>
+    <string name="import_quiz">Import quiz file…</string>
+    <string name="add_samples">Add sample quizzes</string>
+    <string name="no_quizzes">No quizzes yet. Tap + to make one. The ⋮ menu imports .qzx and .zip quiz files and adds sample quizzes.</string>
+    <plurals name="samples_added">
+        <item quantity="one">Added %d sample quiz.</item>
+        <item quantity="other">Added %d sample quizzes.</item>
+    </plurals>
+    <string name="two_parts">%1$s · %2$s</string>
+    <plurals name="card_count">
+        <item quantity="one">%d card</item>
+        <item quantity="other">%d cards</item>
+    </plurals>
+    <plurals name="due_count">
+        <item quantity="one">%d due</item>
+        <item quantity="other">%d due</item>
+    </plurals>
+
+    <!-- One quiz -->
+    <string name="rename">Rename</string>
+    <string name="export">Export…</string>
+    <string name="reset_stats">Reset statistics</string>
+    <string name="reset_stats_confirm">Forget all levels and counts in %1$s?</string>
+    <string name="delete_quiz">Delete quiz</string>
+    <string name="delete_quiz_confirm">Delete %1$s and all its cards? This cannot be undone.</string>
+    <string name="direction_ab">A → B</string>
+    <string name="direction_ba">B → A</string>
+    <string name="threshold">Threshold</string>
+    <string name="timer">Timer</string>
+    <string name="timer_off">off</string>
+    <string name="seconds">%1$d s</string>
+    <string name="shuffle">Shuffle</string>
+    <string name="range">Cards</string>
+    <string name="range_from">from</string>
+    <string name="range_to">to</string>
+    <string name="level">level %1$d</string>
+    <plurals name="start_due">
+        <item quantity="one">Start (%d card due)</item>
+        <item quantity="other">Start (%d cards due)</item>
+    </plurals>
+    <string name="nothing_due">No cards are due at this threshold.</string>
+
+    <!-- Card editor -->
+    <string name="add_card">Add card</string>
+    <string name="edit_card">Edit card</string>
+    <string name="side_a">Side A</string>
+    <string name="side_b">Side B</string>
+    <string name="use_picture">Use a picture</string>
+    <string name="remove_picture">Remove picture</string>
+    <string name="picture">Picture</string>
+    <string name="picture_failed">That picture could not be used.</string>
+
+    <!-- Asking -->
+    <string name="round">Round %1$d</string>
+    <plurals name="cards_left">
+        <item quantity="one">%d left</item>
+        <item quantity="other">%d left</item>
+    </plurals>
+    <string name="answer">Answer</string>
+    <string name="check">Check</string>
+    <string name="show_answer">Show answer</string>
+    <string name="answer_is">The answer is</string>
+    <string name="hide_answer">Hide it and answer</string>
+    <string name="wrong">Not quite. Try again.</string>
+    <string name="too_slow">Too slow. Try again.</string>
+    <plurals name="finish_first">
+        <item quantity="one">Finish the quiz first: %d card to go.</item>
+        <item quantity="other">Finish the quiz first: %d cards to go.</item>
+    </plurals>
+
+    <!-- Done -->
+    <string name="done_title">Done</string>
+    <string name="summary_first_try">Right first time: %1$d of %2$d</string>
+    <plurals name="summary_misses">
+        <item quantity="one">%d miss</item>
+        <item quantity="other">%d misses</item>
+    </plurals>
+    <plurals name="summary_rounds">
+        <item quantity="one">%d round</item>
+        <item quantity="other">%d rounds</item>
+    </plurals>
+    <string name="summary_times">Answer time: shortest %1$.1f s, average %2$.1f s, longest %3$.1f s</string>
+    <string name="summary_confused">Also marked missed, because you typed their answers for other cards:</string>
+
+    <!-- Files -->
+    <string name="imported_quiz">Imported quiz</string>
+    <plurals name="imported">
+        <item quantity="one">Imported %d card.</item>
+        <item quantity="other">Imported %d cards.</item>
+    </plurals>
+    <string name="import_failed">That file could not be read as a quiz.</string>
+    <string name="exported">Exported.</string>
+    <string name="export_failed">The quiz could not be exported.</string>
+    <string name="save_failed">Changes could not be saved.</string>
+    <plurals name="unreadable_files">
+        <item quantity="one">%d quiz file could not be read and was left untouched.</item>
+        <item quantity="other">%d quiz files could not be read and were left untouched.</item>
+    </plurals>
+</resources>

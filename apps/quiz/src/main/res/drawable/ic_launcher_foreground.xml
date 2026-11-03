@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Adaptive-icon foreground: two stacked flash cards inside the 66dp safe zone. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Card behind: only its top and right edges show. -->
+    <path
+        android:pathData="M42,36h30a4,4 0 0 1 4,4v24"
+        android:strokeWidth="4"
+        android:strokeColor="#9FB6D9"
+        android:strokeLineCap="round" />
+    <!-- Card in front, with a line of text. -->
+    <path
+        android:pathData="M36,44h30a4,4 0 0 1 4,4v20a4,4 0 0 1 -4,4h-30a4,4 0 0 1 -4,-4v-20a4,4 0 0 1 4,-4z"
+        android:strokeWidth="4"
+        android:strokeColor="#FFFFFF" />
+    <path
+        android:pathData="M41,58h20"
+        android:strokeWidth="4"
+        android:strokeColor="#FFFFFF"
+        android:strokeLineCap="round" />
+</vector>

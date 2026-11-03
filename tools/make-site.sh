@@ -26,6 +26,20 @@ for apk in apps/*/build/outputs/apk/debug/*-debug.apk; do
     file=$app-$APP_VERSION_CODE.apk
     mkdir -p "$site/$app"
     cp "$apk" "$site/$app/$file"
+
+    # An app's sample files (src/main/assets/samples) are offered for download too.
+    samples=
+    sample_dir=apps/$app/src/main/assets/samples
+    if [ -d "$sample_dir" ]; then
+        mkdir -p "$site/$app/samples"
+        for sample in "$sample_dir"/*; do
+            base=$(basename "$sample")
+            cp "$sample" "$site/$app/samples/"
+            samples="$samples<li><a href=\"samples/${base// /%20}\">$base</a></li>"
+        done
+        samples="<p>Sample files:</p><ul>$samples</ul>"
+    fi
+
     cat > "$site/$app/index.html" << EOF
 <!doctype html>
 <html lang="en">
@@ -42,6 +56,7 @@ for apk in apps/*/build/outputs/apk/debug/*-debug.apk; do
 <p><small>Needs Android 8.0 or newer. Open the downloaded file; if asked, allow
 your browser to install unknown apps. This is a debug build signed with a public
 test key: for testing only.</small></p>
+$samples
 <p><small><a href="../">All apps</a></small></p>
 </body>
 </html>

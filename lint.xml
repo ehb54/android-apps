@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Shared lint settings for every module (wired up in build-logic). Keep this
+     list short: each entry hides a whole class of warning. -->
+<lint>
+    <!-- Framework resources in core/ are there for any app; each app uses only some. -->
+    <issue id="UnusedResources">
+        <ignore regexp="core_ui_" />
+    </issue>
+    <!-- An androidx library's own lint checks were built for another lint
+         version and are skipped; not something this code can fix. -->
+    <issue id="ObsoleteLintCustomCheck" severity="ignore" />
+</lint>

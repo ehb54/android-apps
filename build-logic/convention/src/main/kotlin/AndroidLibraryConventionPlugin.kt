@@ -32,6 +32,7 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
 
                 lint {
                     abortOnError = true
+                    lintConfig = rootDir.resolve("lint.xml")
                 }
             }
 

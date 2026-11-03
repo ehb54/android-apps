@@ -4,6 +4,7 @@ Small Android apps built on a shared framework: Kotlin, Jetpack Compose,
 Android 8.0 (API 26) and newer.
 
 - `apps/<name>/`: the apps (`apps/starter` is the template for new ones)
+- `apps/quiz/`: Quiz, a typed-answer flash-card app (rules in `apps/quiz/DESIGN.md`)
 - `core/`: shared UI code
 - `build-logic/`: shared Gradle conventions
 

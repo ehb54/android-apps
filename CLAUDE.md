@@ -11,9 +11,11 @@ A monorepo of small Android apps that share one framework, in a single Gradle bu
 | Path | What lives there |
 |---|---|
 | `build-logic/convention/` | Convention plugins `ehb54.android.application` and `ehb54.android.library`: SDK levels, Compose, versioning, signing, R8, lint. Shared build behavior changes here, never in an app's build file. |
-| `core/ui/` | Shared Compose library: `AppTheme`, `BuildInfo`, `BuildInfoCard`. Resources must start with `core_ui_` (`resourcePrefix`; lint warns otherwise). New shared code goes in `core/<module>/`; include it in `settings.gradle.kts`. |
-| `apps/<name>/` | One app each, picked up automatically by `settings.gradle.kts`. Its build file sets only `namespace` and `applicationId`. `apps/starter` is the template. |
+| `core/ui/` | Shared Compose library: `AppTheme`, `BuildInfo`, `BuildInfoCard`, and the icons `core_ui_ic_add`, `core_ui_ic_more`, `core_ui_ic_back` (Google's material-icons library is deprecated, so icons are small vector drawables). Resources must start with `core_ui_` (`resourcePrefix`; lint warns otherwise). New shared code goes in `core/<module>/`; include it in `settings.gradle.kts`. |
+| `apps/<name>/` | One app each, picked up automatically by `settings.gradle.kts`. Its build file sets `namespace` and `applicationId`, plus any dependencies only that app uses. `apps/starter` is the template for new apps. |
+| `apps/quiz/` | Quiz, the flash-card app. Its rules come from a 1980/1993 terminal program: read `apps/quiz/DESIGN.md` before changing how sessions, levels or files work. |
 | `gradle/libs.versions.toml` | Every version, including the SDK levels. |
+| `lint.xml` | Lint settings shared by every module; each entry says why it is there. |
 | `docker/Dockerfile`, `tools/` | The build pipeline (below). |
 | `.github/workflows/build.yml` | CI and the GitHub Pages download site. |
 | `keystore/debug.keystore` | Shared debug signing key (see Signing). |
@@ -71,6 +73,29 @@ The `android` CLI that replaced `sdkmanager` reports usage to Google unless it g
   it names.
 - From API 37 the SDK platform packages carry a minor version (`android-37.0`);
   `tools/docker-build.sh` adds the `.0` itself.
+
+## Tests
+
+- Plain Kotlin logic (engines, file formats, storage) gets JVM unit tests in
+  `src/test/`. Keep it free of Android classes so it stays testable.
+- UI tests run the real app on **Robolectric** (the Android framework on the JVM),
+  with no device or emulator: see `apps/quiz/src/test/.../QuizUiTest.kt`. What it
+  took to make them work:
+  - **One test per class**, and `forkEvery = 1` on the test task. A second test
+    in the same JVM sees the previous test's screen rather than its own.
+  - `@GraphicsMode(LEGACY)`. Native graphics aborts the JVM
+    (`JniConstants: Class not found: java/nio/ShortBuffer`) when pictures are
+    decoded off the main thread.
+  - JVM flags `--add-exports/--add-opens java.base/jdk.internal.access=ALL-UNNAMED`
+    for Robolectric's Android 17 runtime on JDK 21.
+  - Pinned `androidx.test` core and Espresso: the Compose test library still
+    pulls Espresso 3.5, which calls an `InputManager` method that Android 17 removed.
+  - `@Config(qualifiers = "w412dp-h846dp-xxhdpi")` (the S8+ screen). Robolectric's
+    default 320×470 px screen leaves buttons off-screen, and taps on them do nothing.
+  - On a timeout, the `waitForText` helper prints the whole semantics tree; read
+    it before guessing.
+- Each app's `src/main/assets/samples/` holds sample files: Quiz loads them from its
+  menu, and `tools/make-site.sh` also offers them on that app's download page.
 
 ## Getting an app onto the phone
 
@@ -138,11 +163,12 @@ Keep these so publishing an app is a Console task, not a code rewrite:
 - Backups: each app's `res/xml/data_extraction_rules.xml` (Android 12+) and
   `res/xml/backup_rules.xml` (older) must exclude anything that must not leave the
   device.
-- Lint has to pass. Fix new warnings rather than adding a baseline. The one
-  accepted warning is ObsoleteLintCustomCheck, which comes from an androidx library
-  lint jar, not from our code.
+- Lint has to pass with no findings. Fix new warnings rather than adding a baseline;
+  the few deliberate exceptions live in `lint.xml` with their reasons.
 - Ask only for the permissions an app needs; each one becomes a Data safety answer
-  in the Play Console, and every app needs a privacy policy URL there.
+  in the Play Console, and every app needs a privacy policy URL there. Pick files
+  and photos through the system pickers (`OpenDocument`, `CreateDocument`,
+  `PickVisualMedia`), which need no storage permission.
 - No native code at present. Adding any brings Play's 16 KB page-size requirement.
 
 ## Updating versions
