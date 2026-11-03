@@ -2,7 +2,6 @@ package io.github.ehb54.quiz.ui
 
 import android.os.SystemClock
 import androidx.activity.compose.BackHandler
-import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -14,7 +13,6 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
@@ -35,7 +33,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
-import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
@@ -43,18 +40,10 @@ import androidx.compose.ui.text.input.KeyboardCapitalization
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import io.github.ehb54.quiz.BuildConfig
 import io.github.ehb54.quiz.R
 import io.github.ehb54.quiz.engine.Session
 import io.github.ehb54.quiz.model.Quiz
 import java.io.File
-
-/**
- * Testing only: long-pressing the round counter offers to abandon the session.
- * Debug builds only (release builds, as published, never have it); set to
- * false to turn it off sooner.
- */
-private val ESCAPE_HATCH = BuildConfig.DEBUG
 
 /**
  * One card at a time: the prompt (text or picture) and a field for the answer.
@@ -85,42 +74,12 @@ fun AskingScreen(
     LaunchedEffect(attempt, revealed) {
         if (!revealed) focus.requestFocus()
     }
-    var confirmLeave by rememberSaveable { mutableStateOf(false) }
-    if (confirmLeave) {
-        AlertDialog(
-            onDismissRequest = { confirmLeave = false },
-            title = { Text(stringResource(R.string.leave_title)) },
-            text = { Text(stringResource(R.string.leave_text)) },
-            confirmButton = {
-                TextButton(onClick = {
-                    confirmLeave = false
-                    vm.abandonSession()
-                }) { Text(stringResource(R.string.leave)) }
-            },
-            dismissButton = { TextButton(onClick = { confirmLeave = false }) { Text(stringResource(R.string.cancel)) } },
-        )
-    }
 
     Scaffold(
         topBar = {
             TopAppBar(
                 title = { Text(quiz.name, maxLines = 1, overflow = TextOverflow.Ellipsis) },
-                actions = {
-                    val escape = if (ESCAPE_HATCH) {
-                        Modifier.pointerInput(Unit) { detectTapGestures(onLongPress = { confirmLeave = true }) }
-                    } else {
-                        Modifier
-                    }
-                    Text(
-                        stringResource(
-                            R.string.two_parts,
-                            stringResource(R.string.round, session.round),
-                            pluralStringResource(R.plurals.cards_left, session.remaining, session.remaining),
-                        ),
-                        escape.padding(end = 16.dp),
-                        style = MaterialTheme.typography.labelLarge,
-                    )
-                },
+                actions = { RoundCounter(session.round, session.remaining, vm::abandonSession) },
             )
         },
         snackbarHost = { SnackbarHost(snackbar) },

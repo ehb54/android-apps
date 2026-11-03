@@ -14,7 +14,9 @@ import io.github.ehb54.quiz.data.SampleLibrary
 import io.github.ehb54.quiz.data.storeImage
 import io.github.ehb54.quiz.engine.AnswerTimes
 import io.github.ehb54.quiz.engine.IMAGE_MARK
+import io.github.ehb54.quiz.engine.MatchSession
 import io.github.ehb54.quiz.engine.Outcome
+import io.github.ehb54.quiz.engine.PairOutcome
 import io.github.ehb54.quiz.engine.QzxCard
 import io.github.ehb54.quiz.engine.SampleCatalog
 import io.github.ehb54.quiz.engine.SampleEntry
@@ -26,6 +28,7 @@ import io.github.ehb54.quiz.engine.cardsFromSheet
 import io.github.ehb54.quiz.engine.formatQzx
 import io.github.ehb54.quiz.engine.isXlsx
 import io.github.ehb54.quiz.engine.isZip
+import io.github.ehb54.quiz.engine.pairTiles
 import io.github.ehb54.quiz.engine.parseQzx
 import io.github.ehb54.quiz.engine.quizBundle
 import io.github.ehb54.quiz.engine.readLimited
@@ -34,12 +37,14 @@ import io.github.ehb54.quiz.engine.revealAnswer
 import io.github.ehb54.quiz.engine.sampleEntries
 import io.github.ehb54.quiz.engine.sampleStatus
 import io.github.ehb54.quiz.engine.sha256
+import io.github.ehb54.quiz.engine.startMatch
 import io.github.ehb54.quiz.engine.startSession
 import io.github.ehb54.quiz.engine.submitAnswer
 import io.github.ehb54.quiz.engine.unzip
 import io.github.ehb54.quiz.engine.writeZip
 import io.github.ehb54.quiz.model.Card
 import io.github.ehb54.quiz.model.Quiz
+import io.github.ehb54.quiz.model.QuizMode
 import io.github.ehb54.quiz.model.QuizSettings
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.asCoroutineDispatcher
@@ -63,6 +68,7 @@ sealed interface Screen {
     data object QuizList : Screen
     data class QuizDetail(val quizId: String) : Screen
     data object Asking : Screen
+    data object Matching : Screen
     data object Done : Screen
     data object Samples : Screen
 }
@@ -101,6 +107,9 @@ data class UiState(
     val session: Session? = null,
     val feedback: Feedback? = null,
     val revealed: Boolean = false,
+    val match: MatchSession? = null,
+    /** The last pair tried in match mode, when it was wrong: (side A card, side B card). */
+    val mismatch: Pair<Long, Long>? = null,
     val summary: Summary? = null,
     val library: LibraryState = LibraryState(),
 ) {
@@ -137,18 +146,24 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     private suspend fun load() {
-        val (loaded, session) = withContext(diskDispatcher) {
+        val (loaded, session, match) = withContext(diskDispatcher) {
             val loaded = store.loadQuizzes()
             if (loaded.unreadable.isEmpty()) {
                 store.removeUnusedImages(loaded.quizzes.flatMap { it.imageFiles() }.toSet())
             }
-            loaded to store.loadSession()
+            Triple(loaded, store.loadSession(), store.loadMatch())
         }
         val active = session?.takeIf { s -> !s.finished && loaded.quizzes.any { it.id == s.quizId } }
+        val activeMatch = match?.takeIf { m -> !m.finished && loaded.quizzes.any { it.id == m.quizId } }
         _state.value = UiState(
             quizzes = loaded.quizzes,
             session = active,
-            screen = if (active != null) Screen.Asking else Screen.QuizList,
+            match = activeMatch.takeIf { active == null },
+            screen = when {
+                active != null -> Screen.Asking
+                activeMatch != null -> Screen.Matching
+                else -> Screen.QuizList
+            },
         )
         if (loaded.unreadable.isNotEmpty()) message(plural(R.plurals.unreadable_files, loaded.unreadable.size))
     }
@@ -219,6 +234,10 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
 
     fun startQuiz(id: String) {
         val quiz = _state.value.quiz(id) ?: return
+        if (quiz.settings.mode == QuizMode.Match) {
+            startMatching(quiz)
+            return
+        }
         val session = startSession(quiz)
         if (session == null) {
             message(text(R.string.nothing_due))
@@ -280,22 +299,90 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
 
     fun hideAnswer() = _state.update { it.copy(revealed = false) }
 
+    // Matching
+
+    private fun startMatching(quiz: Quiz) {
+        val match = startMatch(quiz)
+        if (match == null) {
+            message(text(R.string.nothing_due))
+            return
+        }
+        _state.update { it.copy(match = match, mismatch = null, screen = Screen.Matching) }
+        persist { store.saveMatch(match) }
+    }
+
+    /** Pairs the side A tile of card [left] with the side B tile of card [right]. */
+    fun pair(left: Long, right: Long) {
+        val state = _state.value
+        val match = state.match ?: return
+        val quiz = state.quiz(match.quizId) ?: return
+        val step = pairTiles(quiz, match, left, right)
+        if (step.outcome == PairOutcome.Ignored) return
+        val quizzes = state.quizzes.map { if (it.id == quiz.id) step.quiz else it }
+        val next = step.session
+        if (next.finished) {
+            val summary = Summary(
+                quizId = quiz.id,
+                total = next.total,
+                firstTry = next.firstTry,
+                misses = next.misses,
+                rounds = next.round,
+                times = AnswerTimes(),
+                confused = emptyList(),
+            )
+            _state.value = state.copy(
+                quizzes = quizzes,
+                match = null,
+                mismatch = null,
+                summary = summary,
+                screen = Screen.Done,
+            )
+            persist {
+                store.saveQuiz(step.quiz)
+                store.saveMatch(null)
+            }
+        } else {
+            val mismatch = if (step.outcome == PairOutcome.Wrong) left to right else null
+            _state.value = state.copy(quizzes = quizzes, match = next, mismatch = mismatch)
+            persist {
+                if (step.quiz !== quiz) store.saveQuiz(step.quiz)
+                store.saveMatch(next)
+            }
+        }
+    }
+
+    fun clearMismatch() {
+        if (_state.value.mismatch != null) _state.update { it.copy(mismatch = null) }
+    }
+
     /**
-     * Testing escape hatch (debug builds): ends the session without finishing it.
-     * Cards answered so far keep their results; no confusion penalty is applied.
+     * Testing escape hatch (debug builds): ends the session, typed or match,
+     * without finishing it. Results recorded so far are kept; no confusion
+     * penalty is applied, and a match block in progress is not scored.
      */
     fun abandonSession() {
-        val session = _state.value.session ?: return
+        val state = _state.value
+        val quizId = state.session?.quizId ?: state.match?.quizId ?: return
         _state.update {
-            it.copy(session = null, feedback = null, revealed = false, screen = Screen.QuizDetail(session.quizId))
+            it.copy(
+                session = null,
+                match = null,
+                feedback = null,
+                revealed = false,
+                mismatch = null,
+                screen = Screen.QuizDetail(quizId),
+            )
         }
-        persist { store.saveSession(null) }
+        persist {
+            store.saveSession(null)
+            store.saveMatch(null)
+        }
     }
 
     /** There is no leaving a session: Back only says how much is left. */
     fun backDuringQuiz() {
-        val session = _state.value.session ?: return
-        message(plural(R.plurals.finish_first, session.remaining))
+        val remaining = _state.value.session?.remaining ?: _state.value.match?.remaining ?: return
+        message(plural(R.plurals.finish_first, remaining))
     }
 
     fun closeSummary() = _state.update { s ->

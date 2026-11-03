@@ -6,6 +6,10 @@ import kotlinx.serialization.Serializable
 @Serializable
 enum class Direction { AToB, BToA }
 
+/** Typed: one card at a time, type the other side. Match: pair up tiles of side A and side B. */
+@Serializable
+enum class QuizMode { Typed, Match }
+
 /**
  * One card's record for one direction, as in the original quiz program.
  * [rightFirst] counts consecutive first-try rights and drops to 0 on any miss;
@@ -46,6 +50,8 @@ data class Card(
     val imageB: String? = null,
     val statsAToB: Stats = Stats(),
     val statsBToA: Stats = Stats(),
+    /** Match mode's own record: recognizing a pair is easier than typing, so it is kept apart. */
+    val statsMatch: Stats = Stats(),
 ) {
     fun prompt(direction: Direction) = if (direction == Direction.AToB) a else b
 
@@ -65,6 +71,11 @@ data class Card(
     /** Due in a session: askable and below the threshold (threshold 0 asks every card). */
     fun isDue(direction: Direction, threshold: Int) =
         askable(direction) && (threshold == 0 || stats(direction).level < threshold)
+
+    /** Both sides show something, text or picture, so the card can be a pair of tiles. */
+    fun matchable() = (a.isNotBlank() || imageA != null) && (b.isNotBlank() || imageB != null)
+
+    fun isDueForMatch(threshold: Int) = matchable() && (threshold == 0 || statsMatch.level < threshold)
 }
 
 /**
@@ -81,11 +92,15 @@ data class QuizSettings(
     val rangeFrom: Int? = null,
     val rangeTo: Int? = null,
     val sessionSize: Int = DEFAULT_SESSION_SIZE,
+    val mode: QuizMode = QuizMode.Typed,
+    /** Match mode: pairs on screen at a time. */
+    val blockSize: Int = DEFAULT_BLOCK_SIZE,
 ) {
     val hasRange: Boolean get() = rangeFrom != null || rangeTo != null
 
     companion object {
         const val DEFAULT_SESSION_SIZE = 20
+        const val DEFAULT_BLOCK_SIZE = 6
     }
 }
 
@@ -115,7 +130,7 @@ data class Quiz(
 
     fun removeCard(id: Long) = copy(cards = cards.filterNot { it.id == id })
 
-    fun resetStats() = copy(cards = cards.map { it.copy(statsAToB = Stats(), statsBToA = Stats()) })
+    fun resetStats() = copy(cards = cards.map { it.copy(statsAToB = Stats(), statsBToA = Stats(), statsMatch = Stats()) })
 
     /** The cards a session draws from: the settings' range, by position in the list. */
     fun cardsInRange(): List<Card> {
@@ -125,7 +140,18 @@ data class Quiz(
         return cards.subList(from - 1, to)
     }
 
-    fun due(): List<Card> = cardsInRange().filter { it.isDue(settings.direction, settings.threshold) }
+    /** Cards below the threshold for the selected mode (and direction, when typed). */
+    fun due(): List<Card> = cardsInRange().filter {
+        if (settings.mode == QuizMode.Match) {
+            it.isDueForMatch(settings.threshold)
+        } else {
+            it.isDue(settings.direction, settings.threshold)
+        }
+    }
+
+    /** A card's level for the selected mode, as the card list shows it. */
+    fun level(card: Card) =
+        if (settings.mode == QuizMode.Match) card.statsMatch.level else card.stats(settings.direction).level
 
     /**
      * The cards the next session asks: with a range, every due card in it;
@@ -143,10 +169,15 @@ data class Quiz(
      * the name, settings and statistics of cards whose sides did not change.
      */
     fun replacedBy(fresh: Quiz): Quiz {
-        val stats = cards.associate { it.contentKey() to (it.statsAToB to it.statsBToA) }
+        val previous = cards.associateBy { it.contentKey() }
         val replaced = fresh.cards.mapIndexed { index, card ->
-            val (aToB, bToA) = stats[card.contentKey()] ?: (Stats() to Stats())
-            card.copy(id = index + 1L, statsAToB = aToB, statsBToA = bToA)
+            val old = previous[card.contentKey()]
+            card.copy(
+                id = index + 1L,
+                statsAToB = old?.statsAToB ?: Stats(),
+                statsBToA = old?.statsBToA ?: Stats(),
+                statsMatch = old?.statsMatch ?: Stats(),
+            )
         }
         return copy(
             cards = replaced,

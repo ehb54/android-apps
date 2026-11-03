@@ -1,5 +1,6 @@
 package io.github.ehb54.quiz.data
 
+import io.github.ehb54.quiz.engine.MatchSession
 import io.github.ehb54.quiz.engine.Session
 import io.github.ehb54.quiz.model.Quiz
 import kotlinx.serialization.json.Json
@@ -16,6 +17,7 @@ import java.nio.file.StandardCopyOption
 class QuizStore(root: File) {
     private val quizDir = File(root, "quizzes")
     private val sessionFile = File(root, "session.json")
+    private val matchFile = File(root, "match.json")
     val imageDir = File(root, "images")
 
     private val json = Json { ignoreUnknownKeys = true }
@@ -50,6 +52,20 @@ class QuizStore(root: File) {
             sessionFile.delete()
         } else {
             writeAtomically(sessionFile, json.encodeToString(Session.serializer(), session))
+        }
+    }
+
+    /** The running match session, kept apart from a typed one (at most one of the two runs). */
+    fun loadMatch(): MatchSession? {
+        if (!matchFile.exists()) return null
+        return runCatching { json.decodeFromString(MatchSession.serializer(), matchFile.readText()) }.getOrNull()
+    }
+
+    fun saveMatch(match: MatchSession?) {
+        if (match == null) {
+            matchFile.delete()
+        } else {
+            writeAtomically(matchFile, json.encodeToString(MatchSession.serializer(), match))
         }
     }
 

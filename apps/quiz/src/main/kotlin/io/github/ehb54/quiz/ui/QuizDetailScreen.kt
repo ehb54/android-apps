@@ -52,6 +52,7 @@ import io.github.ehb54.quiz.R
 import io.github.ehb54.quiz.model.Card
 import io.github.ehb54.quiz.model.Direction
 import io.github.ehb54.quiz.model.Quiz
+import io.github.ehb54.quiz.model.QuizMode
 import io.github.ehb54.quiz.model.QuizSettings
 import java.io.File
 import io.github.ehb54.core.ui.R as CoreR
@@ -60,6 +61,9 @@ private enum class DetailDialog { None, Rename, Reset, Delete }
 
 private val thresholds = (0..10).toList()
 private val timerSteps = listOf(0, 5, 10, 15, 20, 30, 45, 60, 90, 120)
+
+/** Match mode: pairs per block. */
+private val blockSizes = (3..10).toList()
 
 /** Cards per session when no range is set; 0 means all. */
 private val sessionSizes = listOf(5, 10, 15, 20, 25, 30, 40, 50, 75, 100, 0)
@@ -119,7 +123,7 @@ fun QuizDetailScreen(quiz: Quiz, vm: QuizViewModel, snackbar: SnackbarHostState)
                 HorizontalDivider()
             }
             itemsIndexed(quiz.cards, key = { _, card -> card.id }) { index, card ->
-                CardRow(index + 1, card, quiz.settings.direction, vm.imageDir) { editing = card.id }
+                CardRow(index + 1, card, quiz.level(card), vm.imageDir) { editing = card.id }
             }
             // Room to scroll the last card out from under the + button.
             item { Spacer(Modifier.height(88.dp)) }
@@ -175,16 +179,22 @@ fun QuizDetailScreen(quiz: Quiz, vm: QuizViewModel, snackbar: SnackbarHostState)
 private fun SessionSettings(quiz: Quiz, onChange: (QuizSettings) -> Unit, onStart: () -> Unit) {
     val settings = quiz.settings
     Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+        val matching = settings.mode == QuizMode.Match
         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             Direction.entries.forEach { direction ->
                 FilterChip(
-                    selected = settings.direction == direction,
-                    onClick = { onChange(settings.copy(direction = direction)) },
+                    selected = !matching && settings.direction == direction,
+                    onClick = { onChange(settings.copy(mode = QuizMode.Typed, direction = direction)) },
                     label = {
                         Text(stringResource(if (direction == Direction.AToB) R.string.direction_ab else R.string.direction_ba))
                     },
                 )
             }
+            FilterChip(
+                selected = matching,
+                onClick = { onChange(settings.copy(mode = QuizMode.Match)) },
+                label = { Text(stringResource(R.string.mode_match)) },
+            )
         }
         Stepper(
             stringResource(R.string.threshold),
@@ -192,16 +202,25 @@ private fun SessionSettings(quiz: Quiz, onChange: (QuizSettings) -> Unit, onStar
             thresholds,
             settings.threshold.toString(),
         ) { onChange(settings.copy(threshold = it)) }
-        Stepper(
-            stringResource(R.string.timer),
-            settings.timerSeconds,
-            timerSteps,
-            if (settings.timerSeconds == 0) {
-                stringResource(R.string.timer_off)
-            } else {
-                stringResource(R.string.seconds, settings.timerSeconds)
-            },
-        ) { onChange(settings.copy(timerSeconds = it)) }
+        if (matching) {
+            Stepper(
+                stringResource(R.string.block_size),
+                settings.blockSize,
+                blockSizes,
+                settings.blockSize.toString(),
+            ) { onChange(settings.copy(blockSize = it)) }
+        } else {
+            Stepper(
+                stringResource(R.string.timer),
+                settings.timerSeconds,
+                timerSteps,
+                if (settings.timerSeconds == 0) {
+                    stringResource(R.string.timer_off)
+                } else {
+                    stringResource(R.string.seconds, settings.timerSeconds)
+                },
+            ) { onChange(settings.copy(timerSeconds = it)) }
+        }
         Row(
             Modifier.toggleable(
                 value = settings.shuffle,
@@ -256,12 +275,12 @@ private fun NumberField(value: Int?, placeholder: String, @StringRes label: Int,
 }
 
 @Composable
-private fun CardRow(number: Int, card: Card, direction: Direction, imageDir: File, onClick: () -> Unit) {
+private fun CardRow(number: Int, card: Card, level: Int, imageDir: File, onClick: () -> Unit) {
     ListItem(
         leadingContent = { Text(number.toString(), style = MaterialTheme.typography.labelMedium) },
         headlineContent = { Side(card.a, card.imageA, imageDir) },
         supportingContent = { Side(card.b, card.imageB, imageDir) },
-        trailingContent = { Text(stringResource(R.string.level, card.stats(direction).level)) },
+        trailingContent = { Text(stringResource(R.string.level, level)) },
         modifier = Modifier.clickable(onClick = onClick),
     )
 }

@@ -44,6 +44,13 @@ fun QuizApp(info: BuildInfo, vm: QuizViewModel = viewModel()) {
                 AskingScreen(quiz, session, state.feedback, state.revealed, vm.imageDir, snackbar, vm)
             }
         }
+        Screen.Matching -> {
+            val match = state.match
+            val quiz = state.quiz(match?.quizId)
+            if (match != null && quiz != null) {
+                MatchScreen(quiz, match, state.mismatch, vm.imageDir, snackbar, vm)
+            }
+        }
         Screen.Samples -> SamplesScreen(state, vm, snackbar)
         Screen.Done -> state.summary?.let { summary ->
             DoneScreen(summary, state.quiz(summary.quizId)?.name.orEmpty(), vm::closeSummary)
