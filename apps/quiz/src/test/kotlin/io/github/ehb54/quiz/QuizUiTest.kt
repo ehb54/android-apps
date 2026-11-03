@@ -65,9 +65,9 @@ abstract class QuizUiTest {
     }
 
     companion object {
-        /** Quizzes in assets/samples: three .qzx, Shapes and Grimm pictures (.zip),
-         *  German starter (2 tabs) and Grimm nouns (3 tabs). */
-        const val SAMPLE_QUIZZES = 10
+        /** Quizzes in assets/samples: three .qzx; Shapes, Grimm, Core and History pictures (.zip);
+         *  German starter (2 tabs); Grimm, Core and History nouns (3 tabs each). */
+        const val SAMPLE_QUIZZES = 18
     }
 }
 
