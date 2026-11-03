@@ -2,10 +2,11 @@ lemma	infinitive	english	forms
 betragen	betragen	amount to	beträgt, betrug, hat betragen
 beschränken	beschränken	restrict	beschränkt, beschränkte, hat beschränkt
 hervorgehen	hervorgehen	emerge	geht hervor, ging hervor, ist hervorgegangen
-beruhen	beruhen	be based on	beruht, beruhte, hat beruht
 unterwerfen	unterwerfen	subjugate	unterwirft, unterwarf, hat unterworfen
-drucken	drucken	print	druckt, druckte, hat gedruckt
+beruhen	beruhen	be based on	beruht, beruhte, hat beruht
+herausgeben	herausgeben	edit	gibt heraus, gab heraus, hat herausgegeben
 herbeiführen	herbeiführen	bring about	führt herbei, führte herbei, hat herbeigeführt
+drucken	drucken	print	druckt, druckte, hat gedruckt
 ernennen	ernennen	appoint	ernennt, ernannte, hat ernannt
 übertragen	übertragen	transfer	überträgt, übertrug, hat übertragen
 hinweisen	hinweisen	point out	weist hin, wies hin, hat hingewiesen
@@ -17,8 +18,9 @@ veröffentlichen	veröffentlichen	publish	veröffentlicht, veröffentlichte, hat
 eintreffen	eintreffen	arrive	trifft ein, traf ein, ist eingetroffen
 beitragen	beitragen	contribute	trägt bei, trug bei, hat beigetragen
 erlassen	erlassen	issue	erlässt, erließ, hat erlassen
+zuschreiben	zuschreiben	attribute	schreibt zu, schrieb zu, hat zugeschrieben
 vordringen	vordringen	push forward	dringt vor, drang vor, ist vorgedrungen
-herausgeben	herausgeben	edit	gibt heraus, gab heraus, hat herausgegeben
+hervorheben	hervorheben	highlight	hebt hervor, hob hervor, hat hervorgehoben
 erzielen	erzielen	achieve	erzielt, erzielte, hat erzielt
 fördern	fördern	foster	fördert, förderte, hat gefördert
 voraussetzen	voraussetzen	presuppose	setzt voraus, setzte voraus, hat vorausgesetzt
@@ -31,22 +33,22 @@ erweitern	erweitern	expand	erweitert, erweiterte, hat erweitert
 ausbilden	ausbilden	train	bildet aus, bildete aus, hat ausgebildet
 bekämpfen	bekämpfen	combat	bekämpft, bekämpfte, hat bekämpft
 scheitern	scheitern	fail	scheitert, scheiterte, ist gescheitert
-zuschreiben	zuschreiben	attribute	schreibt zu, schrieb zu, hat zugeschrieben
 landen	landen	land	landet, landete, ist gelandet
 verstärken	verstärken	reinforce	verstärkt, verstärkte, hat verstärkt
 festsetzen	festsetzen	stipulate	setzt fest, setzte fest, hat festgesetzt
 organisieren	organisieren	organize	organisiert, organisierte, hat organisiert
 bedrohen	bedrohen	threaten	bedroht, bedrohte, hat bedroht
+segeln	segeln	sail	segelt, segelte, ist gesegelt
 erzeugen	erzeugen	generate	erzeugt, erzeugte, hat erzeugt
 hinrichten	hinrichten	execute	richtet hin, richtete hin, hat hingerichtet
 erstrecken	sich erstrecken	stretch	erstreckt sich, erstreckte sich, hat sich erstreckt
-hervorheben	hervorheben	highlight	hebt hervor, hob hervor, hat hervorgehoben
 begünstigen	begünstigen	favor	begünstigt, begünstigte, hat begünstigt
 entsenden	entsenden	dispatch	entsendet, entsandte, hat entsandt
 zurückführen	zurückführen	trace back	führt zurück, führte zurück, hat zurückgeführt
 verwirklichen	verwirklichen	realize	verwirklicht, verwirklichte, hat verwirklicht
 räumen	räumen	vacate	räumt, räumte, hat geräumt
 erschweren	erschweren	complicate	erschwert, erschwerte, hat erschwert
+verteilen	verteilen	distribute	verteilt, verteilte, hat verteilt
 berechnen	berechnen	calculate	berechnet, berechnete, hat berechnet
 umfassen	umfassen	comprise	umfasst, umfasste, hat umfasst
 befördern	befördern	promote	befördert, beförderte, hat befördert
@@ -66,7 +68,6 @@ bewähren	sich bewähren	prove oneself	bewährt sich, bewährte sich, hat sich b
 regeln	regeln	regulate	regelt, regelte, hat geregelt
 beschießen	beschießen	bombard	beschießt, beschoss, hat beschossen
 belagern	belagern	besiege	belagert, belagerte, hat belagert
-hervortreten	hervortreten	stand out	tritt hervor, trat hervor, ist hervorgetreten
 aufweisen	aufweisen	display	weist auf, wies auf, hat aufgewiesen
 entwerfen	entwerfen	draft	entwirft, entwarf, hat entworfen
 befehligen	befehligen	command	befehligt, befehligte, hat befehligt
@@ -78,14 +79,17 @@ marschieren	marschieren	march	marschiert, marschierte, ist marschiert
 unterstellen	unterstellen	subordinate	unterstellt, unterstellte, hat unterstellt
 verwerfen	verwerfen	reject	verwirft, verwarf, hat verworfen
 beauftragen	beauftragen	commission	beauftragt, beauftragte, hat beauftragt
+vermehren	vermehren	multiply	vermehrt, vermehrte, hat vermehrt
 erbauen	erbauen	build	erbaut, erbaute, hat erbaut
 vermindern	vermindern	diminish	vermindert, verminderte, hat vermindert
 schwächen	schwächen	weaken	schwächt, schwächte, hat geschwächt
 zusammenfassen	zusammenfassen	summarize	fasst zusammen, fasste zusammen, hat zusammengefasst
 bestrafen	bestrafen	punish	bestraft, bestrafte, hat bestraft
+ableiten	ableiten	derive	leitet ab, leitete ab, hat abgeleitet
 widerlegen	widerlegen	refute	widerlegt, widerlegte, hat widerlegt
 zunehmen	zunehmen	increase	nimmt zu, nahm zu, hat zugenommen
 zahlen	zahlen	pay	zahlt, zahlte, hat gezahlt
+zuführen	zuführen	supply	führt zu, führte zu, hat zugeführt
 einleiten	einleiten	initiate	leitet ein, leitete ein, hat eingeleitet
 bezwecken	bezwecken	aim at	bezweckt, bezweckte, hat bezweckt
 übersetzen	übersetzen	translate	übersetzt, übersetzte, hat übersetzt
@@ -113,13 +117,13 @@ plündern	plündern	plunder	plündert, plünderte, hat geplündert
 ermitteln	ermitteln	ascertain	ermittelt, ermittelte, hat ermittelt
 anstreben	anstreben	seek	strebt an, strebte an, hat angestrebt
 verweisen	verweisen	refer	verweist, verwies, hat verwiesen
-vermehren	vermehren	multiply	vermehrt, vermehrte, hat vermehrt
 verdrängen	verdrängen	displace	verdrängt, verdrängte, hat verdrängt
 zurückweisen	zurückweisen	repudiate	weist zurück, wies zurück, hat zurückgewiesen
 anzeigen	anzeigen	notify	zeigt an, zeigte an, hat angezeigt
 auslaufen	auslaufen	set sail	läuft aus, lief aus, ist ausgelaufen
 zusammenstellen	zusammenstellen	compile	stellt zusammen, stellte zusammen, hat zusammengestellt
 berechtigen	berechtigen	entitle	berechtigt, berechtigte, hat berechtigt
+fechten	fechten	fight	ficht, focht, hat gefochten
 erneuern	erneuern	renew	erneuert, erneuerte, hat erneuert
 abtreten	abtreten	cede	tritt ab, trat ab, hat abgetreten
 abdrucken	abdrucken	reprint	druckt ab, druckte ab, hat abgedruckt
@@ -145,15 +149,13 @@ repräsentieren	repräsentieren	represent	repräsentiert, repräsentierte, hat r
 einverleiben	einverleiben	annex	verleibt ein, verleibte ein, hat einverleibt
 anfertigen	anfertigen	produce	fertigt an, fertigte an, hat angefertigt
 verbleiben	verbleiben	remain	verbleibt, verblieb, ist verblieben
-ableiten	ableiten	derive	leitet ab, leitete ab, hat abgeleitet
-segeln	segeln	sail	segelt, segelte, ist gesegelt
-zuführen	zuführen	supply	führt zu, führte zu, hat zugeführt
 fortdauern	fortdauern	endure	dauert fort, dauerte fort, hat fortgedauert
 vorfinden	vorfinden	encounter	findet vor, fand vor, hat vorgefunden
 erstürmen	erstürmen	storm	erstürmt, erstürmte, hat erstürmt
 beeinträchtigen	beeinträchtigen	impair	beeinträchtigt, beeinträchtigte, hat beeinträchtigt
 einlaufen	einlaufen	put into port	läuft ein, lief ein, ist eingelaufen
 niedermachen	niedermachen	cut down	macht nieder, machte nieder, hat niedergemacht
+abhängen	abhängen	depend on	hängt ab, hing ab, hat abgehangen
 billigen	billigen	approve of	billigt, billigte, hat gebilligt
 eignen	sich eignen	be suitable	eignet sich, eignete sich, hat sich geeignet
 befürchten	befürchten	fear	befürchtet, befürchtete, hat befürchtet
@@ -164,7 +166,6 @@ mitwirken	mitwirken	participate	wirkt mit, wirkte mit, hat mitgewirkt
 herrühren	herrühren	stem from	rührt her, rührte her, hat hergerührt
 sicherstellen	sicherstellen	ensure	stellt sicher, stellte sicher, hat sichergestellt
 zusichern	zusichern	assure	sichert zu, sicherte zu, hat zugesichert
-abhängen	abhängen	depend on	hängt ab, hing ab, hat abgehangen
 verringern	verringern	reduce	verringert, verringerte, hat verringert
 zusammentreten	zusammentreten	assemble	tritt zusammen, trat zusammen, ist zusammengetreten
 verkennen	verkennen	misjudge	verkennt, verkannte, hat verkannt
@@ -209,6 +210,7 @@ ermächtigen	ermächtigen	empower	ermächtigt, ermächtigte, hat ermächtigt
 zerfallen	zerfallen	fall apart	zerfällt, zerfiel, ist zerfallen
 verfertigen	verfertigen	craft	verfertigt, verfertigte, hat verfertigt
 ausscheiden	ausscheiden	withdraw	scheidet aus, schied aus, ist ausgeschieden
+aufbringen	aufbringen	raise	bringt auf, brachte auf, hat aufgebracht
 herabsetzen	herabsetzen	lower	setzt herab, setzte herab, hat herabgesetzt
 verbürgen	verbürgen	vouch for	verbürgt, verbürgte, hat verbürgt
 abschaffen	abschaffen	abolish	schafft ab, schaffte ab, hat abgeschafft
@@ -221,13 +223,12 @@ würdigen	würdigen	appreciate	würdigt, würdigte, hat gewürdigt
 hinzukommen	hinzukommen	be added	kommt hinzu, kam hinzu, ist hinzugekommen
 hemmen	hemmen	inhibit	hemmt, hemmte, hat gehemmt
 erwirken	erwirken	obtain	erwirkt, erwirkte, hat erwirkt
-vermählen	sich vermählen	wed	vermählt sich, vermählte sich, hat sich vermählt
 zustehen	zustehen	be entitled	steht zu, stand zu, hat zugestanden
+vermählen	sich vermählen	wed	vermählt sich, vermählte sich, hat sich vermählt
 bedingen	bedingen	entail	bedingt, bedingte, hat bedingt
 übersteigen	übersteigen	exceed	übersteigt, überstieg, hat überstiegen
 obliegen	obliegen	be incumbent on	obliegt, oblag, hat oblegen
 aufrechterhalten	aufrechterhalten	uphold	erhält aufrecht, erhielt aufrecht, hat aufrechterhalten
-auffassen	auffassen	interpret	fasst auf, fasste auf, hat aufgefasst
 betrauen	betrauen	entrust	betraut, betraute, hat betraut
 befolgen	befolgen	comply with	befolgt, befolgte, hat befolgt
 verwickeln	verwickeln	entangle	verwickelt, verwickelte, hat verwickelt
@@ -246,6 +247,7 @@ verherrlichen	verherrlichen	glorify	verherrlicht, verherrlichte, hat verherrlich
 entkommen	entkommen	escape	entkommt, entkam, ist entkommen
 fortbestehen	fortbestehen	continue to exist	besteht fort, bestand fort, hat fortbestanden
 verwüsten	verwüsten	devastate	verwüstet, verwüstete, hat verwüstet
+beigeben	beigeben	append	gibt bei, gab bei, hat beigegeben
 besagen	besagen	state	besagt, besagte, hat besagt
 entspringen	entspringen	spring from	entspringt, entsprang, ist entsprungen
 unterbringen	unterbringen	accommodate	bringt unter, brachte unter, hat untergebracht
@@ -259,12 +261,12 @@ stiften	stiften	endow	stiftet, stiftete, hat gestiftet
 ausstellen	ausstellen	exhibit	stellt aus, stellte aus, hat ausgestellt
 erörtern	erörtern	discuss	erörtert, erörterte, hat erörtert
 vorsehen	vorsehen	provide for	sieht vor, sah vor, hat vorgesehen
-zusammenhängen	zusammenhängen	be connected	hängt zusammen, hing zusammen, hat zusammengehangen
 abhelfen	abhelfen	remedy	hilft ab, half ab, hat abgeholfen
 erwachsen	erwachsen	arise	erwächst, erwuchs, ist erwachsen
 verlorengehen	verlorengehen	be lost	geht verloren, ging verloren, ist verlorengegangen
 aufzeichnen	aufzeichnen	record	zeichnet auf, zeichnete auf, hat aufgezeichnet
 überführen	überführen	convict	überführt, überführte, hat überführt
+zusammenhängen	zusammenhängen	be connected	hängt zusammen, hing zusammen, hat zusammengehangen
 erbringen	erbringen	render	erbringt, erbrachte, hat erbracht
 bestatten	bestatten	bury	bestattet, bestattete, hat bestattet
 abspielen	sich abspielen	take place	spielt sich ab, spielte sich ab, hat sich abgespielt
@@ -273,7 +275,6 @@ belegen	belegen	document	belegt, belegte, hat belegt
 bewerkstelligen	bewerkstelligen	accomplish	bewerkstelligt, bewerkstelligte, hat bewerkstelligt
 übermitteln	übermitteln	transmit	übermittelt, übermittelte, hat übermittelt
 einteilen	einteilen	divide up	teilt ein, teilte ein, hat eingeteilt
-fechten	fechten	fight	ficht, focht, hat gefochten
 verschärfen	verschärfen	intensify	verschärft, verschärfte, hat verschärft
 erwählen	erwählen	elect	erwählt, erwählte, hat erwählt
 weihen	weihen	consecrate	weiht, weihte, hat geweiht
@@ -298,4 +299,3 @@ auferlegen	auferlegen	impose	erlegt auf, erlegte auf, hat auferlegt
 entgegensetzen	entgegensetzen	counter	setzt entgegen, setzte entgegen, hat entgegengesetzt
 befürworten	befürworten	advocate	befürwortet, befürwortete, hat befürwortet
 zuerkennen	zuerkennen	award	erkennt zu, erkannte zu, hat zuerkannt
-erzwingen	erzwingen	force	erzwingt, erzwang, hat erzwungen
