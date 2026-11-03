@@ -1,0 +1,11 @@
+{
+ "rank_by": "keyness",
+ "reference": "core",
+ "size": 200,
+ "min_books": 25,
+ "exclude_lists": ["core"],
+ "exclude_lemmas": {
+  "months": ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"]
+ },
+ "unique": ["english", "emoji"]
+}

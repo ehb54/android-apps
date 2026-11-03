@@ -7,6 +7,8 @@ Steps, each writing into a list folder (e.g. grimm/):
   enrich <list> [top] [reference]   draft.tsv: top nouns (by keyness against a reference list,
                                     if given) plus article, plural and English from Wikidata,
                                     and emoji candidates from Unicode's German names
+  select <list>                     nouns.tsv: the reviewed nouns (review.tsv) the list's rules
+                                    (list.json) take, in draft order
   build  <list> <title> <outdir>    from the hand-reviewed nouns.tsv: "<title> nouns.xlsx"
                                     (tabs: nouns, articles, plurals) and "<title> pictures.zip"
 
@@ -32,7 +34,7 @@ CLDR_RELEASE = "release-49"
 NOTO_RELEASE = "v2026-09-24-unicode18_0"
 CHUNK_TOKENS = 1000          # spread is counted over chunks of this many tokens
 MIN_RANGE = 3                # a noun must appear in at least this many chunks
-EXAMPLES = 1000              # counts.tsv keeps example sentences for this many top nouns
+EXAMPLES = 5000              # counts.tsv keeps example sentences for this many top nouns
 PICTURE_SIZE = 256           # pixels, square
 ARTICLES = {"Q499327": "der", "Q1775415": "die", "Q1775461": "das"}
 
@@ -55,10 +57,13 @@ def read_tsv(path):
 
 
 def write_tsv(path, rows, fields):
-    with open(path, "w", encoding="utf-8", newline="") as f:
+    """Writes to a temporary file first, so a failure never leaves a half-written TSV."""
+    temporary = Path(f"{path}.tmp")
+    with open(temporary, "w", encoding="utf-8", newline="") as f:
         writer = csv.DictWriter(f, fields, delimiter="\t", lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
+    temporary.replace(path)
 
 
 # --- count -------------------------------------------------------------------
@@ -256,6 +261,51 @@ def enrich(name, top, reference=None):
           f"emoji candidates for {sum(bool(d['emoji']) for d in draft)} -> {name}/draft.tsv")
 
 
+# --- select ------------------------------------------------------------------
+
+def select(name):
+    """nouns.tsv: the first `size` nouns in draft order that review.tsv keeps,
+    after the rules in list.json. Lists the undecided nouns that stand in the
+    way (the next review batch) instead of writing anything."""
+    rules = json.loads((Path(name) / "list.json").read_text())
+    review = {r["lemma"]: r for r in read_tsv(Path(name) / "review.tsv")}
+    excluded = {}
+    for other in rules.get("exclude_lists", []):
+        excluded.update({r["lemma"]: f"in the {other} list" for r in read_tsv(Path(other) / "nouns.tsv")})
+    for group, lemmas in rules.get("exclude_lemmas", {}).items():
+        excluded.update({lemma: group for lemma in lemmas})
+    min_books = rules.get("min_books", 0)
+
+    kept, undecided, skipped = [], [], collections.Counter()
+    for row in read_tsv(Path(name) / "draft.tsv"):
+        if len(kept) + len(undecided) == rules["size"]:
+            break
+        lemma = row["lemma"]
+        if lemma in excluded:
+            skipped[excluded[lemma]] += 1
+        elif row.get("books") and int(row["books"]) < min_books:
+            skipped[f"in fewer than {min_books} books"] += 1
+        elif lemma not in review:
+            undecided.append(lemma)
+        elif review[lemma]["decision"] == "drop":
+            skipped["dropped in review"] += 1
+        else:
+            kept.append(review[lemma])
+    if undecided:
+        sys.exit(f"{len(undecided)} undecided nouns; review them into {name}/review.tsv:\n" + " ".join(undecided))
+    if len(kept) < rules["size"]:
+        sys.exit(f"only {len(kept)} nouns; enrich {name} with more than {sum(1 for _ in open(Path(name) / 'draft.tsv')) - 1}")
+    for field in rules.get("unique", []):
+        values = [k[field] for k in kept if k[field]]
+        repeated = sorted({v for v in values if values.count(v) > 1})
+        if repeated:
+            sys.exit(f"repeated {field}: {repeated}")
+    fields = ["lemma", "article", "plural", "english", "emoji"]
+    write_tsv(Path(name) / "nouns.tsv", [{f: k[f] for f in fields} for k in kept], fields)
+    print(f"{len(kept)} nouns ({sum(bool(k['plural']) for k in kept)} with plurals, "
+          f"{sum(bool(k['emoji']) for k in kept)} with pictures); skipped: {dict(skipped)} -> {name}/nouns.tsv")
+
+
 # --- build -------------------------------------------------------------------
 
 def noto_picture(emoji):
@@ -324,6 +374,8 @@ if __name__ == "__main__":
         count(args[0], [int(book) for book in args[1:]])
     elif command == "enrich":
         enrich(args[0], int(args[1]) if len(args) > 1 else 250, args[2] if len(args) > 2 else None)
+    elif command == "select":
+        select(args[0])
     elif command == "build":
         build(*args)
     else:

@@ -1,0 +1,246 @@
+lemma	decision	article	plural	english	emoji	note
+Regierung	keep	die	Regierungen	government		
+Jahrhundert	keep	das	Jahrhunderte	century		
+Flotte	keep	die	Flotten	fleet		
+Staat	keep	der	Staaten	state		
+Truppe	keep	die	Truppen	troop		
+Gebiet	keep	das	Gebiete	territory		
+Zahl	keep	die	Zahlen	number		
+Entwicklung	keep	die	Entwicklungen	development		
+Angriff	keep	der	Angriffe	attack		
+Verein	keep	der	Vereine	association		
+Schrift	keep	die	Schriften	writing		
+Mitglied	keep	das	Mitglieder	member		
+Heer	keep	das	Heere	army		
+Arbeiter	keep	der	Arbeiter	worker	⚒️	
+Küste	keep	die	Küsten	coast		
+Organisation	keep	die	Organisationen	organization		
+Gegner	keep	der	Gegner	opponent		
+Verhältnis	keep	das	Verhältnisse	relationship		
+Engländer	keep	der	Engländer	Englishman		
+Gefecht	keep	das	Gefechte	engagement		
+Handel	keep	der		trade		
+Form	keep	die	Formen	form		
+Lage	keep	die	Lagen	situation		
+Erfolg	keep	der	Erfolge	success		
+Schlacht	keep	die	Schlachten	battle	⚔️	
+Bevölkerung	keep	die		population		
+Bedeutung	keep	die	Bedeutungen	significance		
+Nation	keep	die	Nationen	nation		
+Geschwader	keep	das	Geschwader	squadron		
+Verbindung	keep	die	Verbindungen	connection		
+Verband	keep	der	Verbände	federation		
+Partei	keep	die	Parteien	party		
+Kolonie	keep	die	Kolonien	colony		
+Provinz	keep	die	Provinzen	province		
+Kompanie	keep	die	Kompanien	company		
+Verhandlung	keep	die	Verhandlungen	negotiation		
+Expedition	keep	die	Expeditionen	expedition		
+Einfluss	keep	der	Einflüsse	influence		
+Reich	keep	das	Reiche	empire		
+Vertrag	keep	der	Verträge	treaty		
+Kultur	keep	die	Kulturen	culture		
+Angabe	keep	die	Angaben	indication		
+Zweck	keep	der	Zwecke	purpose		
+Mittelalter	keep	das		Middle Ages		
+Stellung	keep	die	Stellungen	position		
+Verfasser	keep	der	Verfasser	author		
+Folge	keep	die	Folgen	consequence		
+Unterstützung	keep	die		support		
+Besatzung	keep	die	Besatzungen	crew		
+Admiral	keep	der	Admirale	admiral		
+Verlust	keep	der	Verluste	loss		
+Bericht	keep	der	Berichte	report		
+Marine	keep	die		navy		
+Armee	drop					duplicates Heer
+Politik	keep	die		politics		
+Abteilung	keep	die	Abteilungen	department		
+Gen	drop					artifact (abbreviation)
+Gesetz	keep	das	Gesetze	law		
+System	keep	das	Systeme	system		
+Versuch	keep	der	Versuche	attempt		
+Einführung	keep	die	Einführungen	introduction		
+Kongress	keep	der	Kongresse	congress		
+Franzose	keep	der	Franzosen	Frenchman		
+Abbildung	keep	die	Abbildungen	illustration		
+Jahrh	drop					abbreviation
+Kriegsschiff	keep	das	Kriegsschiffe	warship	🚢	
+Insel	keep	die	Inseln	island	🏝️	
+Unternehmung	keep	die	Unternehmungen	undertaking		
+Aufgabe	keep	die	Aufgaben	task		
+Tätigkeit	keep	die	Tätigkeiten	activity		
+Verwaltung	keep	die	Verwaltungen	administration		
+Senat	keep	der	Senate	senate		
+Grundlage	keep	die	Grundlagen	foundation		
+Revolution	keep	die	Revolutionen	revolution		
+Darstellung	keep	die	Darstellungen	portrayal		
+Beschluss	keep	der	Beschlüsse	resolution		
+Ausgabe	keep	die	Ausgaben	edition		
+Literatur	keep	die		literature		
+Geschütz	keep	das	Geschütze	cannon		
+Anzahl	keep	die		quantity		
+General	keep	der	Generale	general		
+Reichstag	keep	der	Reichstage	imperial diet		
+Ausführung	keep	die	Ausführungen	implementation		
+Bischof	keep	der	Bischöfe	bishop		
+Maschine	keep	die	Maschinen	machine		
+Anwendung	keep	die	Anwendungen	application		
+Herstellung	keep	die		manufacture		
+Aufstand	keep	der	Aufstände	uprising		
+Beitrag	keep	der	Beiträge	contribution		
+Einheit	keep	die	Einheiten	unit		
+Linie	keep	die	Linien	line		
+Vertreter	keep	der	Vertreter	representative		
+Antrag	keep	der	Anträge	motion		
+Abschnitt	keep	der	Abschnitte	section		
+Mittel	keep	das	Mittel	means		
+Reichskanzler	keep	der	Reichskanzler	chancellor		
+Verfassung	keep	die	Verfassungen	constitution		
+Gründung	keep	die	Gründungen	founding		
+Material	keep	das	Materialien	material		
+Gegensatz	keep	der	Gegensätze	contrast		
+Periode	keep	die	Perioden	period		
+Anfang	keep	der	Anfänge	beginning		
+Spanier	keep	der	Spanier	Spaniard		
+Presse	keep	die		press	📰	
+Bestimmung	keep	die	Bestimmungen	provision		
+Norden	keep	der		north		
+Grieche	keep	der	Griechen	Greek		
+Industrie	keep	die	Industrien	industry		
+Beziehung	keep	die	Beziehungen	relation		
+Maßregel	keep	die	Maßregeln	measure		
+Minister	keep	der	Minister	minister		
+Verfahren	keep	das	Verfahren	procedure		
+Schwierigkeit	keep	die	Schwierigkeiten	difficulty		
+Ausdehnung	keep	die		expansion		
+Betrieb	keep	der	Betriebe	operation		
+Bildung	keep	die		education		
+Leitung	keep	die	Leitungen	management		
+Kaufmann	keep	der	Kaufleute	merchant		
+Fürst	keep	der	Fürsten	prince		
+Hafen	keep	der	Häfen	port	⚓	
+Eroberung	keep	die	Eroberungen	conquest		
+Interesse	keep	das	Interessen	interest		
+Einrichtung	keep	die	Einrichtungen	institution		
+Division	keep	die	Divisionen	division		
+Gemeinde	keep	die	Gemeinden	community		
+Taufe	keep	die	Taufen	baptism		
+Religion	keep	die	Religionen	religion		
+Befehl	keep	der	Befehle	command		
+Nachricht	keep	die	Nachrichten	news		
+Kanon	drop					doubtful lemma (likely Kanone)
+Fußnote	drop					Gutenberg footnote markup
+Vereinigung	keep	die	Vereinigungen	union		
+Nachfolger	keep	der	Nachfolger	successor		
+Verwendung	keep	die	Verwendungen	usage		
+Forderung	keep	die	Forderungen	demand		
+Mk	drop					abbreviation
+Kap	drop					abbreviation
+Zivilisation	keep	die	Zivilisationen	civilization		
+Einwohner	keep	der	Einwohner	inhabitant		
+Philosophie	keep	die	Philosophien	philosophy		
+Tatsache	keep	die	Tatsachen	fact		
+Gesetzgebung	keep	die		legislation		
+Fahrzeug	keep	das	Fahrzeuge	vehicle		
+Sammlung	keep	die	Sammlungen	collection		
+Verbesserung	keep	die	Verbesserungen	improvement		
+Belagerung	keep	die	Belagerungen	siege		
+Artikel	keep	der	Artikel	article		
+Notwendigkeit	keep	die	Notwendigkeiten	necessity		
+Wissenschaft	keep	die	Wissenschaften	science	🔬	
+Westen	keep	der		west		
+Gouverneur	keep	der	Gouverneure	governor		
+Durchführung	keep	die		execution		
+Parlament	keep	das	Parlamente	parliament		
+Richtung	keep	die	Richtungen	direction	🧭	
+Verstärkung	keep	die	Verstärkungen	reinforcement		
+Bezug	keep	der	Bezüge	reference		
+Altertum	keep	das		antiquity		
+Museum	keep	das	Museen	museum	🏛️	
+Bund	keep	der	Bünde	league		
+Papst	keep	der	Päpste	pope		
+Osten	keep	der		east		
+Umfang	keep	der		extent		
+Charakter	keep	der	Charaktere	character		
+Auffassung	keep	die	Auffassungen	conception		
+Regel	keep	die	Regeln	rule		
+Befestigung	keep	die	Befestigungen	fortification		
+Errichtung	keep	die		establishment		
+Wirksamkeit	keep	die		effectiveness		
+Patent	keep	das	Patente	patent		
+Landung	keep	die	Landungen	landing		
+Mangel	keep	der	Mängel	lack		
+Annahme	keep	die	Annahmen	assumption		
+Portugiese	keep	der	Portugiesen	Portuguese		
+Lokomotive	keep	die	Lokomotiven	locomotive	🚂	
+Erfindung	keep	die	Erfindungen	invention		
+Ministerium	keep	das	Ministerien	ministry		
+Vergl	drop					abbreviation
+Hauptstadt	keep	die	Hauptstädte	capital		
+Islam	keep	der		Islam		
+Feldherr	keep	der	Feldherren	commander		
+Bau	keep	der	Bauten	construction		
+Ausbildung	keep	die		training		
+Führer	keep	der	Führer	leader		
+Untersuchung	keep	die	Untersuchungen	investigation		
+Anlage	keep	die	Anlagen	facility		
+Entstehung	keep	die		origin		
+Bataillon	keep	das	Bataillone	battalion		
+Quelle	keep	die	Quellen	source		
+Festung	keep	die	Festungen	fortress	🏰	
+Grundsatz	keep	der	Grundsätze	principle		
+Archiv	keep	das	Archive	archive	🗄️	
+Ergebnis	keep	das	Ergebnisse	result		
+Vorteil	keep	der	Vorteile	advantage		
+Fortschritt	keep	der	Fortschritte	progress		
+Eisenbahn	keep	die	Eisenbahnen	railway		
+Element	keep	das	Elemente	element		
+Führung	keep	die		leadership		
+Einnahme	keep	die	Einnahmen	revenue		
+Missionar	keep	der	Missionare	missionary		
+Bedingung	keep	die	Bedingungen	condition		
+Unternehmen	keep	das	Unternehmen	business		
+Benutzung	drop					duplicates Gebrauch and Verwendung
+Sieg	keep	der	Siege	victory	🏆	
+Gewerbe	keep	das	Gewerbe	craft		
+Kosten	keep	die		costs		
+Masse	keep	die	Massen	mass		
+Reform	keep	die	Reformen	reform		
+Kriegführung	keep	die		warfare		
+Ansicht	keep	die	Ansichten	view		
+Versammlung	keep	die	Versammlungen	assembly		
+Unternehmer	keep	der	Unternehmer	entrepreneur		
+Seemacht	keep	die	Seemächte	naval power		
+Epoche	keep	die	Epochen	epoch		
+Leistung	keep	die	Leistungen	achievement		
+Süden	keep	der		south		
+Bestrebung	keep	die	Bestrebungen	endeavor		
+Gebrauch	keep	der		use		
+Ausnahme	keep	die	Ausnahmen	exception		
+Verbreitung	keep	die		spread		
+Offizier	keep	der	Offiziere	officer		
+Wahl	keep	die	Wahlen	election	🗳️	
+Artillerie	keep	die		artillery		
+Kenntnis	keep	die	Kenntnisse	knowledge		
+Behörde	keep	die	Behörden	authority		
+Botschafter	keep	der	Botschafter	ambassador		
+Batterie	keep	die	Batterien	battery		
+Tendenz	keep	die	Tendenzen	tendency		
+Bezeichnung	keep	die	Bezeichnungen	designation		
+Bundesgenosse	keep	der	Bundesgenossen	ally		
+Streitkraft	keep	die	Streitkräfte	armed force		
+Mission	keep	die	Missionen	mission		
+Konsulat	keep	das	Konsulate	consulate		
+Zeitgenosse	keep	der	Zeitgenossen	contemporary		
+Römer	keep	der	Römer	Roman		
+Frieden	keep	der		peace		
+Gesetzbuch	keep	das	Gesetzbücher	legal code		
+Anm	drop					abbreviation
+Perser	keep	der	Perser	Persian		
+Kloster	keep	das	Klöster	monastery		
+Munition	keep	die		ammunition		
+Statut	keep	das	Statuten	statute		
+Footnot	drop					Gutenberg footnote markup
+Verfolgung	keep	die	Verfolgungen	persecution		
+Legion	keep	die	Legionen	legion		
+Herrscher	keep	der	Herrscher	ruler		
