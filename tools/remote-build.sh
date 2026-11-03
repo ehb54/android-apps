@@ -15,6 +15,7 @@ REMOTE_DIR=${REMOTE_DIR:-claude/android-apps}   # relative to the remote home
 rsync -a --delete \
     --exclude build/ --exclude .gradle/ --exclude .kotlin/ \
     --exclude /out/ --exclude /site/ --exclude local.properties --exclude /tools/local.env \
+    --exclude /tools/wordlists/cache/ \
     ./ "$BUILD_HOST:$REMOTE_DIR/"
 
 ssh "$BUILD_HOST" "$REMOTE_DIR/tools/docker-build.sh" "$@"
