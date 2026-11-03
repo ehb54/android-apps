@@ -15,21 +15,8 @@
     <string name="new_quiz">New quiz</string>
     <string name="quiz_name">Quiz name</string>
     <string name="import_quiz">Import quiz file…</string>
-    <string name="add_samples">Add sample quizzes</string>
-    <string name="no_quizzes">No quizzes yet. Tap + to make one. The ⋮ menu imports quiz files (.qzx, .zip, or Excel .xlsx with one quiz per tab) and adds sample quizzes.</string>
-    <plurals name="samples_added">
-        <item quantity="one">Added %d sample quiz.</item>
-        <item quantity="other">Added %d sample quizzes.</item>
-    </plurals>
-    <string name="samples_all_here">All sample quizzes are already here.</string>
-    <string name="samples_updated_title">Updated samples</string>
-    <string name="samples_updated_text">The app has newer versions of: %1$s. Replace them? Your progress on cards that did not change is kept.</string>
-    <string name="replace">Replace</string>
-    <string name="keep_mine">Keep mine</string>
-    <plurals name="samples_replaced">
-        <item quantity="one">Replaced %d sample quiz.</item>
-        <item quantity="other">Replaced %d sample quizzes.</item>
-    </plurals>
+    <string name="sample_quizzes">Sample quizzes…</string>
+    <string name="no_quizzes">No quizzes yet. Tap + to make one. The ⋮ menu imports quiz files (.qzx, .zip, or Excel .xlsx with one quiz per tab) and lists sample quizzes to add.</string>
     <string name="two_parts">%1$s · %2$s</string>
     <plurals name="card_count">
         <item quantity="one">%d card</item>
@@ -39,6 +26,46 @@
         <item quantity="one">%d due</item>
         <item quantity="other">%d due</item>
     </plurals>
+
+    <!-- Sample library -->
+    <string name="samples_title">Sample quizzes</string>
+    <string name="check_updates">Check for updates</string>
+    <string name="add_all">Add all</string>
+    <string name="update_all">Update all</string>
+    <string name="library_loading">Checking the download site…</string>
+    <string name="library_online">Up to date with the download site. Added quizzes work offline.</string>
+    <string name="library_offline">The download site cannot be reached, so this is the list as last seen. Samples built into the app can still be added.</string>
+    <string name="library_none">There are no samples to show.</string>
+    <string name="sample_built_in">built into the app</string>
+    <string name="sample_download">download %1$s</string>
+    <plurals name="picture_count">
+        <item quantity="one">%d picture</item>
+        <item quantity="other">%d pictures</item>
+    </plurals>
+    <string name="sample_added">added</string>
+    <string name="sample_added_as">added as %1$s</string>
+    <string name="sample_update_available">update available</string>
+    <string name="add">Add</string>
+    <string name="update">Update</string>
+    <string name="remove">Remove</string>
+    <string name="add_named">Add %1$s</string>
+    <string name="update_named">Update %1$s</string>
+    <string name="remove_named">Remove %1$s</string>
+    <string name="remove_sample_confirm">Remove %1$s? Its cards and progress go; the sample can be added again.</string>
+    <string name="sample_added_message">Added %1$s.</string>
+    <string name="sample_updated_message">Updated %1$s. Progress on unchanged cards is kept.</string>
+    <string name="sample_removed">Removed %1$s.</string>
+    <string name="sample_failed">%1$s could not be added. Check the connection and try again.</string>
+    <plurals name="samples_added">
+        <item quantity="one">Added %d sample quiz.</item>
+        <item quantity="other">Added %d sample quizzes.</item>
+    </plurals>
+    <plurals name="samples_updated">
+        <item quantity="one">Updated %d sample quiz.</item>
+        <item quantity="other">Updated %d sample quizzes.</item>
+    </plurals>
+    <string name="samples_all_here">All sample quizzes are already here.</string>
+    <string name="samples_up_to_date">All added samples are up to date.</string>
 
     <!-- One quiz -->
     <string name="rename">Rename</string>

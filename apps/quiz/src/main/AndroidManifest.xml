@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Sample quizzes are listed and downloaded from the app's download site. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <!-- Backups on: app data follows the user to a new phone. The two rule files
          (Android 12+ and older) are where files that must not leave the device are excluded. -->
     <application

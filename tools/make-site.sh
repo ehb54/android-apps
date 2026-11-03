@@ -27,18 +27,19 @@ for apk in apps/*/build/outputs/apk/debug/*-debug.apk; do
     mkdir -p "$site/$app"
     cp "$apk" "$site/$app/$file"
 
-    # An app's sample files (src/main/assets/samples) are offered for download too.
+    # An app's sample files go to <app>/samples/: the ones built into the app
+    # (src/main/assets/samples) and the online-only ones (apps/<app>/samples),
+    # with that folder's catalog.json, from which an app can list and download them.
     samples=
-    sample_dir=apps/$app/src/main/assets/samples
-    if [ -d "$sample_dir" ]; then
+    for sample in apps/$app/src/main/assets/samples/* apps/$app/samples/*; do
+        [ -f "$sample" ] || continue
+        base=$(basename "$sample")
         mkdir -p "$site/$app/samples"
-        for sample in "$sample_dir"/*; do
-            base=$(basename "$sample")
-            cp "$sample" "$site/$app/samples/"
-            samples="$samples<li><a href=\"samples/${base// /%20}\">$base</a></li>"
-        done
-        samples="<p>Sample files:</p><ul>$samples</ul>"
-    fi
+        cp "$sample" "$site/$app/samples/"
+        [ "$base" = catalog.json ] && continue
+        samples="$samples<li><a href=\"samples/${base// /%20}\">$base</a></li>"
+    done
+    [ -n "$samples" ] && samples="<p>Sample files:</p><ul>$samples</ul>"
 
     cat > "$site/$app/index.html" << EOF
 <!doctype html>

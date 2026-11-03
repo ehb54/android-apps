@@ -60,10 +60,13 @@ Everything except `choose_books.py` runs in Docker (`run.sh`, image from
    review batch. It also refuses repeated values in the `unique` fields (no two
    nouns with the same English gloss, or English → German cards become
    ambiguous; no picture twice).
-6. `tools/wordlists/run.sh build <list> <Title> ../../apps/quiz/src/main/assets/samples`
+6. `tools/wordlists/run.sh build <list> <Title> ../../apps/quiz/samples`
    Writes `<Title> nouns.xlsx` and, if any noun has a picture, `<Title>
    pictures.zip` (Noto Emoji pictures, resized, with their Apache 2.0 license
-   and a credits file inside the zip).
+   and a credits file inside the zip). These are online-only samples: the app
+   downloads them from the site when added. Then regenerate
+   `apps/quiz/samples/catalog.json` (see `apps/quiz/DESIGN.md`), or
+   `SampleCatalogTest` fails.
 
 ### Growing a list
 

@@ -1,7 +1,10 @@
 # Sources of the Quiz samples
 
-The files in `../src/main/assets/samples/` (offered by "Add sample quizzes" and
-on the download page) and where each comes from:
+The sample files and where each comes from. The small ones are built into the
+app (`../src/main/assets/samples/`); the long word lists are online only
+(`../samples/`). Both are listed in `../samples/catalog.json`, offered on the
+app's Sample quizzes screen, and on the download page. After changing any of
+them, regenerate the catalog (see `../DESIGN.md`).
 
 | Sample | Made by |
 |---|---|

@@ -27,10 +27,7 @@ fun QuizApp(info: BuildInfo, vm: QuizViewModel = viewModel()) {
             onOpen = vm::openQuiz,
             onCreate = vm::createQuiz,
             onImport = vm::importQuiz,
-            onAddSamples = vm::addSamples,
-            sampleUpdates = state.sampleUpdates,
-            onReplaceSamples = vm::replaceSampleUpdates,
-            onKeepSamples = vm::dismissSampleUpdates,
+            onSamples = vm::openSamples,
         )
         is Screen.QuizDetail -> {
             val quiz = state.quiz(screen.quizId)
@@ -47,6 +44,7 @@ fun QuizApp(info: BuildInfo, vm: QuizViewModel = viewModel()) {
                 AskingScreen(quiz, session, state.feedback, state.revealed, vm.imageDir, snackbar, vm)
             }
         }
+        Screen.Samples -> SamplesScreen(state, vm, snackbar)
         Screen.Done -> state.summary?.let { summary ->
             DoneScreen(summary, state.quiz(summary.quizId)?.name.orEmpty(), vm::closeSummary)
         }

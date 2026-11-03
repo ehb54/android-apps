@@ -1,0 +1,209 @@
+{
+    "files": [
+        {
+            "file": "Amino acids.qzx",
+            "bytes": 236,
+            "sha256": "ed0487ea76658d543e94c24b26f3a19b8f48cfc1a465fddf32bbd5ecc9424cb8",
+            "builtIn": true,
+            "quizzes": [
+                {
+                    "name": "Amino acids",
+                    "source": "Amino acids.qzx",
+                    "version": "ed0487ea76658d543e94c24b26f3a19b8f48cfc1a465fddf32bbd5ecc9424cb8",
+                    "cards": 20
+                }
+            ]
+        },
+        {
+            "file": "Chemical symbols.qzx",
+            "bytes": 143,
+            "sha256": "9163365c6a81c583897a66b85b5506078e6202fafc74678e3a58a40917d544b0",
+            "builtIn": true,
+            "quizzes": [
+                {
+                    "name": "Chemical symbols",
+                    "source": "Chemical symbols.qzx",
+                    "version": "9163365c6a81c583897a66b85b5506078e6202fafc74678e3a58a40917d544b0",
+                    "cards": 14
+                }
+            ]
+        },
+        {
+            "file": "Core nouns.xlsx",
+            "bytes": 15334,
+            "sha256": "e666ff631e1d5031842a1cb708c03133660b58acd92e7d880651814579621d4c",
+            "quizzes": [
+                {
+                    "name": "Core nouns",
+                    "source": "Core nouns.xlsx#Core nouns",
+                    "version": "f0a12c59ea925869d18ad2eb26795314607f58742f80559f7ff836238f6b67b2",
+                    "cards": 200,
+                    "tab": "Core nouns"
+                },
+                {
+                    "name": "Core articles",
+                    "source": "Core nouns.xlsx#Core articles",
+                    "version": "689420734ed829c411995d8c19f52be7f6c27128183de747ef5bc9829b0329c9",
+                    "cards": 200,
+                    "tab": "Core articles"
+                },
+                {
+                    "name": "Core plurals",
+                    "source": "Core nouns.xlsx#Core plurals",
+                    "version": "d50c2fc423e669d39c0c148d29dedadba0fb0153880ec5f20a19d415b16b935e",
+                    "cards": 172,
+                    "tab": "Core plurals"
+                }
+            ]
+        },
+        {
+            "file": "Core pictures.zip",
+            "bytes": 1442087,
+            "sha256": "22ea32fe5f6515f877a7925cd51b27bb71b69f18ebeecadd54f52b4e4ec944ba",
+            "quizzes": [
+                {
+                    "name": "Core pictures",
+                    "source": "Core pictures.zip",
+                    "version": "22ea32fe5f6515f877a7925cd51b27bb71b69f18ebeecadd54f52b4e4ec944ba",
+                    "cards": 60,
+                    "pictures": 60
+                }
+            ]
+        },
+        {
+            "file": "French words.qzx",
+            "bytes": 114,
+            "sha256": "b6f87942948788adfd1a82d72d188ae1b14e5f1c78ed5d491228e35c5a7fb14b",
+            "builtIn": true,
+            "quizzes": [
+                {
+                    "name": "French words",
+                    "source": "French words.qzx",
+                    "version": "b6f87942948788adfd1a82d72d188ae1b14e5f1c78ed5d491228e35c5a7fb14b",
+                    "cards": 10
+                }
+            ]
+        },
+        {
+            "file": "German starter.xlsx",
+            "bytes": 2113,
+            "sha256": "35f820a7091c25b679d3dbcaffb90a5cc6d26dc3ba55b8091d462753bdb1fcc7",
+            "builtIn": true,
+            "quizzes": [
+                {
+                    "name": "Numbers",
+                    "source": "German starter.xlsx#Numbers",
+                    "version": "36860bfbd0e480884c17088c02868124e51e97c9616a3545e71c9aa0f90cc1b1",
+                    "cards": 10,
+                    "tab": "Numbers"
+                },
+                {
+                    "name": "Colors",
+                    "source": "German starter.xlsx#Colors",
+                    "version": "6dfd5ff4f4baae71ad784b19c89de6efea6bbf005b4c63228dbac800a29f37b1",
+                    "cards": 8,
+                    "tab": "Colors"
+                }
+            ]
+        },
+        {
+            "file": "Grimm nouns.xlsx",
+            "bytes": 15408,
+            "sha256": "eeedc02053c30cdaa60e33a0766b648c528849f48bc29b2974970c1c493c325d",
+            "quizzes": [
+                {
+                    "name": "Grimm nouns",
+                    "source": "Grimm nouns.xlsx#Grimm nouns",
+                    "version": "16f42343855e3e5a78887c135aed9970c73e4e722699b1f28f3311fa1510d146",
+                    "cards": 200,
+                    "tab": "Grimm nouns"
+                },
+                {
+                    "name": "Grimm articles",
+                    "source": "Grimm nouns.xlsx#Grimm articles",
+                    "version": "70421b72392a60767493b45af5bf4b15e606ef543a11c44e32ca0f3737863ef9",
+                    "cards": 200,
+                    "tab": "Grimm articles"
+                },
+                {
+                    "name": "Grimm plurals",
+                    "source": "Grimm nouns.xlsx#Grimm plurals",
+                    "version": "3eecd6c02bbff7c8e3867392da2655a0de146abde3beab3efcde75682fa6a63a",
+                    "cards": 175,
+                    "tab": "Grimm plurals"
+                }
+            ]
+        },
+        {
+            "file": "Grimm pictures.zip",
+            "bytes": 1996268,
+            "sha256": "c425aa4cf74adc4bab36877277cb411879f5f4fc180b3228ca5e910bb961b6f4",
+            "quizzes": [
+                {
+                    "name": "Grimm pictures",
+                    "source": "Grimm pictures.zip",
+                    "version": "c425aa4cf74adc4bab36877277cb411879f5f4fc180b3228ca5e910bb961b6f4",
+                    "cards": 81,
+                    "pictures": 81
+                }
+            ]
+        },
+        {
+            "file": "History nouns.xlsx",
+            "bytes": 16119,
+            "sha256": "90b4a0bc548ba5921423d85109efd7c160dfab3c824874997739a410872fa92c",
+            "quizzes": [
+                {
+                    "name": "History nouns",
+                    "source": "History nouns.xlsx#History nouns",
+                    "version": "f1c37dfa46cf5f646976bda196374290d9693f70c80eb03c4be34c2b85b66c92",
+                    "cards": 200,
+                    "tab": "History nouns"
+                },
+                {
+                    "name": "History articles",
+                    "source": "History nouns.xlsx#History articles",
+                    "version": "08d1c4e402793af66be0c809355ae6f64ebb52e2165dc1e09759cd3d833ac3fb",
+                    "cards": 200,
+                    "tab": "History articles"
+                },
+                {
+                    "name": "History plurals",
+                    "source": "History nouns.xlsx#History plurals",
+                    "version": "10b2dd2cea236dbc8fc16c1fd5c6e234ca5eeac0803450014a4f1d59913f6471",
+                    "cards": 173,
+                    "tab": "History plurals"
+                }
+            ]
+        },
+        {
+            "file": "History pictures.zip",
+            "bytes": 321683,
+            "sha256": "d68d3c7be76f3dcc7e16ad98fc6b13cb557dc19ee3b000b572a5e19aed199e6b",
+            "quizzes": [
+                {
+                    "name": "History pictures",
+                    "source": "History pictures.zip",
+                    "version": "d68d3c7be76f3dcc7e16ad98fc6b13cb557dc19ee3b000b572a5e19aed199e6b",
+                    "cards": 13,
+                    "pictures": 13
+                }
+            ]
+        },
+        {
+            "file": "Shapes.zip",
+            "bytes": 7793,
+            "sha256": "cf51461a0b92a613b48a169a45d9f27ee93ef1a5cdeabc78b7d1a3a5c08c72ec",
+            "builtIn": true,
+            "quizzes": [
+                {
+                    "name": "Shapes",
+                    "source": "Shapes.zip",
+                    "version": "cf51461a0b92a613b48a169a45d9f27ee93ef1a5cdeabc78b7d1a3a5c08c72ec",
+                    "cards": 6,
+                    "pictures": 6
+                }
+            ]
+        }
+    ]
+}

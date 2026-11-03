@@ -10,12 +10,18 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import io.github.ehb54.quiz.R
 import io.github.ehb54.quiz.data.QuizStore
+import io.github.ehb54.quiz.data.SampleLibrary
 import io.github.ehb54.quiz.data.storeImage
 import io.github.ehb54.quiz.engine.AnswerTimes
 import io.github.ehb54.quiz.engine.IMAGE_MARK
 import io.github.ehb54.quiz.engine.Outcome
 import io.github.ehb54.quiz.engine.QzxCard
+import io.github.ehb54.quiz.engine.SampleCatalog
+import io.github.ehb54.quiz.engine.SampleEntry
+import io.github.ehb54.quiz.engine.SampleFile
+import io.github.ehb54.quiz.engine.SampleStatus
 import io.github.ehb54.quiz.engine.Session
+import io.github.ehb54.quiz.engine.buildCatalog
 import io.github.ehb54.quiz.engine.cardsFromSheet
 import io.github.ehb54.quiz.engine.formatQzx
 import io.github.ehb54.quiz.engine.isXlsx
@@ -25,6 +31,9 @@ import io.github.ehb54.quiz.engine.quizBundle
 import io.github.ehb54.quiz.engine.readLimited
 import io.github.ehb54.quiz.engine.readXlsx
 import io.github.ehb54.quiz.engine.revealAnswer
+import io.github.ehb54.quiz.engine.sampleEntries
+import io.github.ehb54.quiz.engine.sampleStatus
+import io.github.ehb54.quiz.engine.sha256
 import io.github.ehb54.quiz.engine.startSession
 import io.github.ehb54.quiz.engine.submitAnswer
 import io.github.ehb54.quiz.engine.unzip
@@ -46,7 +55,6 @@ import kotlinx.coroutines.withContext
 import java.io.File
 import java.io.IOException
 import java.io.OutputStream
-import java.security.MessageDigest
 import java.util.UUID
 import java.util.concurrent.Executors
 
@@ -56,22 +64,25 @@ sealed interface Screen {
     data class QuizDetail(val quizId: String) : Screen
     data object Asking : Screen
     data object Done : Screen
+    data object Samples : Screen
 }
 
 enum class Feedback { Wrong, TooSlow }
 
-/** Folder in assets with the sample quiz files. */
+/** Folder in assets with the built-in sample files. */
 private const val SAMPLES = "samples"
 
 /**
- * One quiz a sample file provides: which sample it is ([source]: file, plus
- * tab for workbooks), a fingerprint of its contents, and how to build it.
- * Building stores pictures, so it happens only for samples actually added.
+ * The sample library as the Samples screen shows it. [online]: the catalog
+ * came from the download site just now (otherwise it is the last one seen,
+ * or only the built-in samples). [busy]: sources being added or updated.
  */
-private class SampleQuiz(val source: String, val version: String, val build: () -> Quiz)
-
-private fun fingerprint(bytes: ByteArray): String =
-    MessageDigest.getInstance("SHA-256").digest(bytes).joinToString("") { "%02x".format(it) }
+data class LibraryState(
+    val catalog: SampleCatalog? = null,
+    val online: Boolean = false,
+    val loading: Boolean = false,
+    val busy: Set<String> = emptySet(),
+)
 
 /** What the Done screen shows after a session. */
 data class Summary(
@@ -91,10 +102,11 @@ data class UiState(
     val feedback: Feedback? = null,
     val revealed: Boolean = false,
     val summary: Summary? = null,
-    /** Names of sample quizzes the app has newer versions of, waiting for "replace?". */
-    val sampleUpdates: List<String> = emptyList(),
+    val library: LibraryState = LibraryState(),
 ) {
     fun quiz(id: String?) = quizzes.find { it.id == id }
+
+    fun quizFrom(source: String) = quizzes.find { it.source == source }
 }
 
 /**
@@ -168,9 +180,11 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
 
     fun deleteCard(quizId: String, cardId: Long) = changeQuiz(quizId) { it.removeCard(cardId) }
 
-    fun deleteQuiz(id: String) {
+    fun deleteQuiz(id: String, showList: Boolean = true) {
         val quiz = _state.value.quiz(id) ?: return
-        _state.update { s -> s.copy(quizzes = s.quizzes.filterNot { it.id == id }, screen = Screen.QuizList) }
+        _state.update { s ->
+            s.copy(quizzes = s.quizzes.filterNot { it.id == id }, screen = if (showList) Screen.QuizList else s.screen)
+        }
         persist {
             store.deleteQuiz(id)
             store.deleteImages(quiz.imageFiles())
@@ -289,77 +303,119 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
         s.copy(summary = null, screen = if (s.quiz(id) != null) Screen.QuizDetail(id!!) else Screen.QuizList)
     }
 
-    // Files
+    // Sample library
 
-    /** Sample quizzes with newer versions in the app, by the id of the quiz they would replace. */
-    private var pendingSampleUpdates: List<Pair<String, SampleQuiz>> = emptyList()
+    private val library get() = SampleLibrary(getApplication<Application>().cacheDir)
+
+    fun openSamples() {
+        _state.update { it.copy(screen = Screen.Samples) }
+        refreshLibrary()
+    }
 
     /**
-     * Adds the sample quizzes shipped in assets/samples, through the same import
-     * code as files. Samples already here are skipped; for ones the app has a
-     * newer version of, the UI asks whether to replace them ([replaceSampleUpdates]).
+     * Fetches the catalog from the download site. Offline, shows the catalog as
+     * last fetched, or, if there never was one, the samples built into the app.
      */
-    fun addSamples() {
+    fun refreshLibrary() {
+        if (_state.value.library.loading) return
+        _state.update { it.copy(library = it.library.copy(loading = true)) }
         viewModelScope.launch {
-            val assets = getApplication<Application>().assets
-            val samples = withContext(Dispatchers.IO) {
-                assets.list(SAMPLES).orEmpty().sorted().flatMap { file ->
-                    runCatching { sampleQuizzes(file, assets.open("$SAMPLES/$file").use { readLimited(it) }) }
-                        .getOrDefault(emptyList())
+            val (catalog, online) = withContext(Dispatchers.IO) {
+                runCatching { library.fetchCatalog() to true }.getOrElse {
+                    (library.cachedCatalog() ?: runCatching { builtInCatalog() }.getOrNull()) to false
                 }
             }
-            val here = _state.value.quizzes.filter { it.source != null }.associateBy { it.source }
-            val new = samples.filter { it.source !in here }
-            val updated = samples.mapNotNull { sample ->
-                here[sample.source]?.takeIf { it.sourceVersion != sample.version }?.let { it.id to sample }
-            }
-            val added = withContext(Dispatchers.IO) { new.map(::buildSample) }
-            added.forEach { addQuiz(it.copy(name = uniqueName(it.name))) }
-            when {
-                added.isNotEmpty() -> message(plural(R.plurals.samples_added, added.size))
-                updated.isEmpty() -> message(text(R.string.samples_all_here))
-            }
-            if (updated.isNotEmpty()) {
-                pendingSampleUpdates = updated
-                _state.update { s -> s.copy(sampleUpdates = updated.mapNotNull { (id, _) -> s.quiz(id)?.name }) }
-            }
+            _state.update { it.copy(library = it.library.copy(catalog = catalog, online = online, loading = false)) }
         }
     }
 
-    /** Replaces the quizzes [addSamples] found newer versions of, keeping progress on unchanged cards. */
-    fun replaceSampleUpdates() {
-        val updates = pendingSampleUpdates
-        dismissSampleUpdates()
+    fun addSample(source: String) = runSamples(listOf(source), update = false)
+
+    fun updateSample(source: String) = runSamples(listOf(source), update = true)
+
+    fun addAllSamples() {
+        val entries = _state.value.library.catalog?.files.orEmpty().flatMap { it.quizzes }
+        runSamples(entries.filter { _state.value.quizFrom(it.source) == null }.map { it.source }, update = false)
+    }
+
+    fun updateAllSamples() {
+        val entries = _state.value.library.catalog?.files.orEmpty().flatMap { it.quizzes }
+        val outdated = entries.filter { sampleStatus(it, _state.value.quizFrom(it.source)) == SampleStatus.UpdateAvailable }
+        runSamples(outdated.map { it.source }, update = true)
+    }
+
+    /** Removes the quiz added from a sample; it can be added again (without its progress). */
+    fun removeSample(source: String) {
+        val quiz = _state.value.quizFrom(source) ?: return
+        deleteQuiz(quiz.id, showList = false)
+        message(text(R.string.sample_removed, quiz.name))
+    }
+
+    /** Adds, or with [update] replaces keeping progress, the sample quizzes [sources], one at a time. */
+    private fun runSamples(sources: Collection<String>, update: Boolean) {
+        val library = _state.value.library
+        val wanted = library.catalog?.files.orEmpty()
+            .flatMap { file -> file.quizzes.filter { it.source in sources && it.source !in library.busy }.map { file to it } }
+        if (wanted.isEmpty()) {
+            message(text(if (update) R.string.samples_up_to_date else R.string.samples_all_here))
+            return
+        }
+        _state.update { it.copy(library = it.library.copy(busy = it.library.busy + wanted.map { (_, e) -> e.source })) }
         viewModelScope.launch {
-            val built = withContext(Dispatchers.IO) { updates.map { (id, sample) -> id to buildSample(sample) } }
-            built.forEach { (id, fresh) -> changeQuiz(id) { it.replacedBy(fresh) } }
-            message(plural(R.plurals.samples_replaced, built.size))
-        }
-    }
-
-    fun dismissSampleUpdates() {
-        pendingSampleUpdates = emptyList()
-        _state.update { it.copy(sampleUpdates = emptyList()) }
-    }
-
-    private fun buildSample(sample: SampleQuiz) =
-        sample.build().copy(source = sample.source, sourceVersion = sample.version)
-
-    /** The quizzes in one sample file: one per workbook tab, otherwise one per file. */
-    private fun sampleQuizzes(file: String, bytes: ByteArray): List<SampleQuiz> {
-        if (isZip(bytes)) {
-            val entries = unzip(bytes.inputStream())
-            if (isXlsx(entries)) {
-                return readXlsx(entries).mapNotNull { sheet ->
-                    val cards = cardsFromSheet(sheet).takeIf { it.isNotEmpty() } ?: return@mapNotNull null
-                    SampleQuiz("$file#${sheet.name}", fingerprint(formatQzx(cards).toByteArray())) {
-                        newQuiz(sheet.name, cards)
+            var done = 0
+            for ((file, entry) in wanted) {
+                val quiz = withContext(Dispatchers.IO) { runCatching { buildSample(file, entry) }.getOrNull() }
+                val existing = _state.value.quizFrom(entry.source)
+                when {
+                    quiz == null -> message(text(R.string.sample_failed, entry.name))
+                    existing == null -> {
+                        addQuiz(quiz.copy(name = uniqueName(quiz.name)))
+                        done++
+                    }
+                    update -> {
+                        changeQuiz(existing.id) { it.replacedBy(quiz) }
+                        done++
                     }
                 }
+                _state.update { it.copy(library = it.library.copy(busy = it.library.busy - entry.source)) }
+            }
+            when {
+                done == 0 -> Unit
+                wanted.size == 1 -> message(text(if (update) R.string.sample_updated_message else R.string.sample_added_message, wanted[0].second.name))
+                else -> message(plural(if (update) R.plurals.samples_updated else R.plurals.samples_added, done))
             }
         }
-        return listOf(SampleQuiz(file, fingerprint(bytes)) { readQuizzes(file, bytes).single() })
     }
+
+    /** One quiz from a sample file: the built-in copy if it matches the catalog, otherwise downloaded. */
+    private fun buildSample(file: SampleFile, entry: SampleEntry): Quiz {
+        val builtIn = if (file.builtIn) {
+            runCatching { getApplication<Application>().assets.open("$SAMPLES/${file.file}").use { readLimited(it) } }
+                .getOrNull()
+        } else {
+            null
+        }
+        val bytes = builtIn?.takeIf { sha256(it) == file.sha256 } ?: library.download(file)
+        val actual = sampleEntries(file.file, bytes).first { it.source == entry.source }
+        val quiz = if (entry.tab != null) {
+            val sheet = readXlsx(unzip(bytes.inputStream())).first { it.name == entry.tab }
+            newQuiz(sheet.name, cardsFromSheet(sheet))
+        } else {
+            readQuizzes(file.file, bytes).single()
+        }
+        return quiz.copy(source = actual.source, sourceVersion = actual.version)
+    }
+
+    /** A catalog of just the samples built into the app, for when the site was never reached. */
+    private fun builtInCatalog(): SampleCatalog {
+        val assets = getApplication<Application>().assets
+        val files = assets.list(SAMPLES).orEmpty().associateWith { file ->
+            assets.open("$SAMPLES/$file").use { readLimited(it) }
+        }
+        return buildCatalog(files, files.keys)
+    }
+
+    // Files
 
     /** Imports a .qzx, a .zip with pictures, or an Excel workbook (one quiz per tab). */
     fun importQuiz(uri: Uri) {
@@ -477,7 +533,7 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
         _messages.trySend(text)
     }
 
-    private fun text(@StringRes id: Int) = getApplication<Application>().getString(id)
+    private fun text(@StringRes id: Int, vararg args: Any) = getApplication<Application>().getString(id, *args)
 
     private fun plural(@PluralsRes id: Int, count: Int) =
         getApplication<Application>().resources.getQuantityString(id, count, count)

@@ -20,6 +20,10 @@ android {
 tasks.withType<Test>().configureEach {
     // A fresh JVM per test class: Robolectric UI tests otherwise see the previous test's screen.
     forkEvery = 1
+    // SampleCatalogTest checks samples/catalog.json against the sample files;
+    // -PwriteCatalog=true lets it regenerate the catalog.
+    inputs.dir("samples").withPathSensitivity(PathSensitivity.RELATIVE)
+    systemProperty("writeCatalog", providers.gradleProperty("writeCatalog").getOrElse("false"))
     // Robolectric's Android 17 runtime reaches into a JDK-internal package.
     jvmArgs(
         "--add-exports=java.base/jdk.internal.access=ALL-UNNAMED",

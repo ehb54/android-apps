@@ -1,6 +1,8 @@
 package io.github.ehb54.quiz
 
+import androidx.compose.ui.semantics.SemanticsActions
 import androidx.compose.ui.test.ComposeTimeoutException
+import androidx.compose.ui.test.hasContentDescription
 import androidx.compose.ui.test.hasScrollToIndexAction
 import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.isRoot
@@ -11,13 +13,16 @@ import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollToNode
+import androidx.compose.ui.test.performSemanticsAction
 import androidx.compose.ui.test.performTextInput
 import androidx.compose.ui.test.printToString
+import io.github.ehb54.quiz.data.SampleLibrary
 import org.junit.Rule
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config
 import org.robolectric.annotation.GraphicsMode
+import java.io.File
 
 /**
  * Base for end-to-end tests of the app on Robolectric (the real Android
@@ -36,16 +41,39 @@ abstract class QuizUiTest {
     @get:Rule
     val compose = createEmptyComposeRule()
 
-    /** Adds every sample quiz from assets/samples to an empty app. */
-    protected fun addSamples() {
-        compose.waitForText("No quizzes yet", substring = true)
+    init {
+        // The sample library reads the repository's samples/ folder instead of the download site.
+        SampleLibrary.baseUrl = File("samples").absoluteFile.toURI().toString()
+    }
+
+    /** Opens the sample library from the quiz list and waits for its catalog. */
+    protected fun openSamples() {
         compose.onNodeWithContentDescription("More options").performClick()
-        compose.onNodeWithText("Add sample quizzes").performClick()
-        compose.waitForText("Added $SAMPLE_QUIZZES sample quizzes.")
-        // The message covers the bottom of the list until it goes away.
-        compose.waitUntil(10_000) {
-            compose.onAllNodesWithText("Added $SAMPLE_QUIZZES sample quizzes.").fetchSemanticsNodes().isEmpty()
-        }
+        compose.onNodeWithText("Sample quizzes…").performClick()
+        compose.waitForText("Up to date with the download site.", substring = true)
+    }
+
+    /** In the sample library: adds the sample quiz [name] and waits until it is added. */
+    protected fun addSample(name: String) {
+        pressInList("Add $name")
+        waitForMessage("Added $name.")
+    }
+
+    /**
+     * Scrolls the list to the button described as [description] and presses it.
+     * The press goes through the button's click action, not a tap: lists scroll
+     * under the top bar, scrolling to a node counts that area as visible, and a
+     * tap there lands on the bar.
+     */
+    protected fun pressInList(description: String) {
+        compose.onNode(hasScrollToIndexAction()).performScrollToNode(hasContentDescription(description))
+        compose.onNodeWithContentDescription(description).performSemanticsAction(SemanticsActions.OnClick)
+    }
+
+    /** Waits for the message [text], then until it goes away: it covers the bottom of the screen. */
+    protected fun waitForMessage(text: String) {
+        compose.waitForText(text)
+        compose.waitUntil(10_000) { compose.onAllNodesWithText(text).fetchSemanticsNodes().isEmpty() }
     }
 
     /** Scrolls the quiz list (or card list) until an item with [text] is on screen. */
@@ -53,21 +81,18 @@ abstract class QuizUiTest {
         compose.onNode(hasScrollToIndexAction()).performScrollToNode(hasText(text))
     }
 
-    /** Adds the samples, opens Shapes and turns shuffle off: circle, square, triangle, ... */
+    /** Adds the Shapes sample, opens it and turns shuffle off: circle, square, triangle, ... */
     protected fun openShapesInOrder() {
-        addSamples()
-        scrollListTo("Shapes")
+        compose.waitForText("No quizzes yet", substring = true)
+        openSamples()
+        addSample("Shapes")
+        compose.onNodeWithContentDescription("Back").performClick()
+        compose.waitForText("6 cards · 6 due")
         compose.onNodeWithText("Shapes").performClick()
         compose.waitForText("Start (6 cards due)")
         // The zip's "!circle.png" sides became pictures, not text.
         compose.onNodeWithText("!circle.png").assertDoesNotExist()
         compose.onNodeWithText("Shuffle").performClick()
-    }
-
-    companion object {
-        /** Quizzes in assets/samples: three .qzx; Shapes, Grimm, Core and History pictures (.zip);
-         *  German starter (2 tabs); Grimm, Core and History nouns (3 tabs each). */
-        const val SAMPLE_QUIZZES = 18
     }
 }
 

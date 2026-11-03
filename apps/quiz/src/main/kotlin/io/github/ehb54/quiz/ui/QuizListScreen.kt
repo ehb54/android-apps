@@ -47,10 +47,7 @@ fun QuizListScreen(
     onOpen: (String) -> Unit,
     onCreate: (String) -> Unit,
     onImport: (Uri) -> Unit,
-    onAddSamples: () -> Unit,
-    sampleUpdates: List<String>,
-    onReplaceSamples: () -> Unit,
-    onKeepSamples: () -> Unit,
+    onSamples: () -> Unit,
 ) {
     var creating by rememberSaveable { mutableStateOf(false) }
     var about by rememberSaveable { mutableStateOf(false) }
@@ -66,7 +63,7 @@ fun QuizListScreen(
                     OverflowMenu(
                         listOf(
                             R.string.import_quiz to { importer.launch(arrayOf("*/*")) },
-                            R.string.add_samples to onAddSamples,
+                            R.string.sample_quizzes to onSamples,
                             R.string.about to { about = true },
                         ),
                     )
@@ -109,15 +106,6 @@ fun QuizListScreen(
             creating = false
             onCreate(it)
         }
-    }
-    if (sampleUpdates.isNotEmpty()) {
-        AlertDialog(
-            onDismissRequest = onKeepSamples,
-            title = { Text(stringResource(R.string.samples_updated_title)) },
-            text = { Text(stringResource(R.string.samples_updated_text, sampleUpdates.joinToString(", "))) },
-            confirmButton = { TextButton(onClick = onReplaceSamples) { Text(stringResource(R.string.replace)) } },
-            dismissButton = { TextButton(onClick = onKeepSamples) { Text(stringResource(R.string.keep_mine)) } },
-        )
     }
     if (about) {
         AlertDialog(
