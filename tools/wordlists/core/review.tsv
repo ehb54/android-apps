@@ -3004,3 +3004,542 @@ Schnur	keep	die	Schnüre	cord
 Fichte	keep	die	Fichten	spruce		
 Mast	keep	der	Masten	mast		
 Christentum	keep	das		Christianity		
+Buchhandlung	keep	die	Buchhandlungen	bookstore		
+Beredsamkeit	keep	die		eloquence		
+Rucksack	keep	der	Rucksäcke	backpack	🎒	
+Überfluss	keep	der		overabundance		abundance taken by Fülle
+Pulse	drop					wrong lemma (Puls)
+Mägdlein	drop					diminutive (Magd)
+Buddha	drop					name
+Schanze	keep	die	Schanzen	redoubt		also in 'sein Leben in die Schanze schlagen' (risk)
+Feldzug	keep	der	Feldzüge	campaign		
+Landrat	keep	der	Landräte	district administrator		
+Line	drop					name
+Apothekerin	keep	die	Apothekerinnen	pharmacist's wife		the books' sense; today also a woman pharmacist
+Knöpfe	drop					wrong lemma (Knopf)
+Vorsätz	drop					wrong lemma (Vorsatz)
+Läufer	keep	der	Läufer	runner	🏃	also runner rug, bishop in chess
+Geschirr	keep	das		crockery		also harness
+Spinne	keep	die	Spinnen	spider	🕷️	
+Weihnachtsabend	keep	der	Weihnachtsabende	Christmas Eve		
+Dinger	drop					wrong lemma (Ding)
+Beschützer	keep	der	Beschützer	protector		
+Zipfel	keep	der	Zipfel	pointed end		corner of a cloth, tip of a land
+Treiben	keep	das		goings-on		bustle taken by Betrieb
+Tour	keep	die	Touren	tour		
+Stande	drop					wrong lemma (Stand)
+Lebensweise	keep	die	Lebensweisen	way of life		
+Heilung	keep	die	Heilungen	healing		cure taken by Kur
+Rebell	keep	der	Rebellen	rebel		
+Waise	keep	die	Waisen	orphan		
+Diskussion	drop					duplicates Unterredung (discussion); debate taken by Erörterung
+Frosch	keep	der	Frösche	frog	🐸	
+Disziplin	drop					duplicates Zucht (discipline)
+Mutti	keep	die	Muttis	mommy		mom taken by Mama
+Kammerherr	keep	der	Kammerherren	chamberlain		
+Pfote	keep	die	Pfoten	paw	🐾	
+Zeiger	keep	der	Zeiger	clock hand		
+Ablauf	keep	der	Abläufe	expiration		nach Ablauf: when a time has run out; also drain, sequence
+Sonderling	keep	der	Sonderlinge	eccentric		
+Obrigkeit	keep	die	Obrigkeiten	authorities		
+Angebot	keep	das	Angebote	offer		
+Blässe	keep	die		pallor		
+Zwilling	keep	der	Zwillinge	twin		
+Schuldigkeit	drop					duplicates Pflicht (duty); mostly 'seine Schuldigkeit tun'
+Rente	keep	die	Renten	pension		in older texts also income from capital
+Kommandeur	keep	der	Kommandeure	commander		
+Regenbog	drop					wrong lemma (Regenbogen)
+Wacht	drop					poetic; duplicates Wache
+Zerstörung	keep	die	Zerstörungen	destruction		
+Obhut	keep	die		safekeeping		care taken by Pflege
+Verhaftung	keep	die	Verhaftungen	arrest		
+Gaststube	keep	die	Gaststuben	taproom		public room of an inn
+Fässer	drop					wrong lemma (Fass)
+Panzer	keep	der	Panzer	armor plating		armor taken by Rüstung; also an animal's shell, tank
+Stiftung	keep	die	Stiftungen	foundation		
+Maultier	keep	das	Maultiere	mule		
+Detail	drop					duplicates Einzelheit (detail)
+Geheftet	drop					tagger artifact (participle of heften, publishers' price lists)
+Kurve	keep	die	Kurven	curve		
+Piaster	drop					obsolete coin
+Müllerin	keep	die	Müllerinnen	miller's wife		also a woman miller
+Vergessenheit	keep	die		oblivion		
+Mühsal	keep	die	Mühsale	toil		
+Käufer	keep	der	Käufer	buyer		
+Ausbildung	keep	die	Ausbildungen	training		
+Tänze	drop					wrong lemma (Tanz)
+Mitbürger	keep	der	Mitbürger	fellow citizen		
+Höhepunkt	keep	der	Höhepunkte	high point		
+Kopfschmerz	keep	der	Kopfschmerzen	headache		
+Gutsbesitzer	keep	der	Gutsbesitzer	estate owner		
+Schwamm	keep	der	Schwämme	sponge	🧽	
+Besinne	drop					tagger artifact (nominalized verb besinnen, 'nach kurzem Besinnen'; the noun is Besinnung)
+Eröffnung	keep	die	Eröffnungen	disclosure		as in the example; also opening (of a shop, a session)
+Typ	drop					duplicates Typus (type)
+Hemmung	keep	die	Hemmungen	inhibition		
+Befinden	keep	das		state of health		
+Grill	drop					wrong lemma (Grille)
+Acht	drop					only in idioms ('außer Acht lassen', 'sich in Acht nehmen')
+Feindseligkeit	keep	die	Feindseligkeiten	hostility		
+Angreifer	keep	der	Angreifer	attacker		
+Lamm	keep	das	Lämmer	lamb		
+Häuslichkeit	keep	die		domesticity		
+Felswand	keep	die	Felswände	rock face		
+Traume	drop					wrong lemma (Traum)
+Larve	keep	die	Larven	larva		in older texts also mask, as in the example
+Ent	drop					wrong lemma (Ente)
+Aufbau	keep	der	Aufbauten	structure		also construction, setup
+Parade	keep	die	Paraden	parade		
+Herrenhaus	keep	das	Herrenhäuser	manor house		
+Konditorei	keep	die	Konditoreien	pastry shop		
+Apostel	keep	der	Apostel	apostle		
+Kürze	keep	die		brevity		
+Belieben	drop					only in 'nach Belieben'
+Wiederholung	keep	die	Wiederholungen	repetition		
+Einfalt	keep	die		simple-mindedness		simplicity taken by Einfachheit
+Sprichwort	keep	das	Sprichwörter	proverb		
+Ministerium	keep	das	Ministerien	ministry		
+Grobheit	keep	die	Grobheiten	rudeness		
+Forst	keep	der	Forste	managed forest		forest taken by Wald
+Schimpfwort	keep	das	Schimpfwörter	swearword		
+Unannehmlichkeit	keep	die	Unannehmlichkeiten	unpleasantness		
+Hauswesen	drop					duplicates Haushalt (household)
+Versehen	keep	das	Versehen	oversight		
+Gauner	keep	der	Gauner	crook		
+Kunststück	keep	das	Kunststücke	trick		also feat
+Anfrage	keep	die	Anfragen	query		
+Richtigkeit	keep	die		correctness		
+Lebhaftigkeit	keep	die		liveliness		
+Teint	keep	der	Teints	complexion		
+Vorsprung	keep	der	Vorsprünge	head start		also ledge
+Ankömmling	keep	der	Ankömmlinge	new arrival		
+Beerdigung	keep	die	Beerdigungen	burial		funeral taken by Begräbnis
+Schwesterche	drop					diminutive (Schwester)
+Stiel	keep	der	Stiele	stem		also handle (of a tool)
+Konversation	keep	die		small talk		conversation taken by Gespräch
+Tiergart	drop					wrong lemma (Tiergarten); mostly the Berlin park
+Versprechung	drop					duplicates Versprechen (promise)
+Fuge	keep	die	Fugen	crevice		joint between stones or boards; also fugue
+Landgerichtsrat	keep	der	Landgerichtsräte	regional court judge		
+Erz	keep	das	Erze	ore		poetic also bronze
+Ausländer	keep	der	Ausländer	foreigner		
+Exempel	drop					duplicates Beispiel (example)
+Tanzsaal	keep	der	Tanzsäle	dance hall		
+Knechten	drop					wrong lemma (Knecht)
+Bübchen	drop					diminutive (Bube)
+Nimmer	drop					tagger artifact (adverb nimmer)
+Vorgarten	keep	der	Vorgärten	front garden		
+Weihrauch	keep	der		incense		
+Schauspielerin	keep	die	Schauspielerinnen	actress		
+Antrieb	keep	der	Antriebe	impetus		aus freiem Antrieb: of one's own accord
+Leine	keep	die	Leinen	leash		also line (clothesline)
+Abenteurer	keep	der	Abenteurer	adventurer		
+Gehorsamst	drop					tagger artifact (adverb gehorsamst)
+Amme	keep	die	Ammen	wet nurse		
+Wachstum	keep	das		growth		
+Kläng	drop					wrong lemma (Klang)
+Chronik	keep	die	Chroniken	chronicle		
+Besatzung	keep	die	Besatzungen	occupying force		garrison and crew taken by Garnison and Mannschaft
+Sozialdemokratie	keep	die		social democracy		
+Bauernhof	keep	der	Bauernhöfe	farm		
+Aufseher	keep	der	Aufseher	overseer		
+Peterl	drop					name
+Gebaren	keep	das		demeanor		behavior and conduct taken by Benehmen and Betragen
+Donnerstag	keep	der	Donnerstage	Thursday		
+Letzter	drop					nominalized adjective (letzt)
+Monde	drop					wrong lemma (Mond)
+Schal	keep	der	Schals	scarf	🧣	
+Äuglein	drop					diminutive (Auge)
+Wirtsstube	drop					duplicates Gaststube (taproom)
+Nachforschung	keep	die	Nachforschungen	inquiry		investigation taken by Untersuchung
+Hin	drop					only in 'Hin und Her'
+Baumeister	keep	der	Baumeister	master builder		
+Millionär	keep	der	Millionäre	millionaire		
+Gewölk	keep	das		mass of clouds		cloud taken by Wolke
+Schwalb	drop					wrong lemma (Schwalbe)
+Terrain	drop					duplicates Gelände (terrain)
+Koketterie	keep	die		coquetry		
+Anekdote	keep	die	Anekdoten	anecdote		
+Abgründe	drop					wrong lemma (Abgrund)
+Schere	keep	die	Scheren	scissors	✂️	
+Ausschnitt	keep	der	Ausschnitte	neckline		also excerpt, newspaper cutting
+Auflehnung	keep	die		revolt		uprising taken by Aufstand
+Neustadt	drop					name (towns and districts)
+Gewerbe	keep	das	Gewerbe	line of business		trade, business and industry taken
+Wiederkehr	drop					duplicates Rückkehr (return)
+Großherzog	keep	der	Großherzöge	grand duke		
+Liese	drop					name
+Doktorin	keep	die	Doktorinnen	doctor's wife		the books' sense; today a woman with a doctorate
+Reis	keep	der		rice	🍚	das Reis (Reiser) is a twig, as in the example
+Goldschmied	keep	der	Goldschmiede	goldsmith		
+Hühner	drop					wrong lemma (Huhn)
+Sankt	drop					name (part of saints' and place names)
+Laboratorium	keep	das	Laboratorien	laboratory		
+Frühlingstag	keep	der	Frühlingstage	spring day		
+Männlichkeit	keep	die		masculinity		
+Becken	keep	das	Becken	basin		also pelvis, cymbal
+Wirtschafterin	drop					duplicates Haushälterin (housekeeper)
+Detektiv	keep	der	Detektive	detective	🕵️	
+Spektakel	keep	der	Spektakel	racket		noise, row; das Spektakel is a spectacle
+Röcke	drop					wrong lemma (Rock)
+Vierteljahr	keep	das	Vierteljahre	quarter year		quarter taken by Viertel
+Firmament	keep	das		firmament		
+Dämmerlicht	keep	das		half-light		
+Lazarett	keep	das	Lazarette	military hospital		
+Sinnbild	keep	das	Sinnbilder	emblem		symbol taken by Symbol
+Spiegelbild	keep	das	Spiegelbilder	mirror image		
+Wärterin	keep	die	Wärterinnen	female attendant		attendant for Wärter
+Gotteshaus	keep	das	Gotteshäuser	house of God		
+Schwall	keep	der		gush		
+Väterchen	drop					diminutive (Vater)
+Fensternische	keep	die	Fensternischen	window recess		
+Glücksgefühl	keep	das	Glücksgefühle	feeling of happiness		
+Vöglein	drop					diminutive (Vogel)
+Schütze	keep	der	Schützen	marksman		
+Chevalier	drop					French title (8 books)
+Tücke	keep	die	Tücken	treachery		malice taken by Bosheit
+Freudigkeit	keep	die		joyfulness		
+Fang	keep	der	Fänge	catch		
+Personal	keep	das		personnel		staff taken by Stab
+Umzug	keep	der	Umzüge	house move		also procession
+Mannschafte	drop					wrong lemma (Mannschaft)
+Ausfall	keep	der	Ausfälle	sally		sortie or verbal attack; also loss, failure
+Leber	keep	die	Lebern	liver		
+Füchse	drop					wrong lemma (Fuchs)
+Jahrgang	keep	der	Jahrgänge	vintage		also year of birth, annual volume of a periodical
+Habe	keep	die		belongings		
+Visitenkarte	keep	die	Visitenkarten	visiting card		
+Christbaum	keep	der	Christbäume	Christmas tree	🎄	
+Körbchen	drop					diminutive (Korb)
+Kanzel	keep	die	Kanzeln	pulpit		
+Silhouette	keep	die	Silhouetten	silhouette		
+Idiot	keep	der	Idioten	idiot		
+Waffenstillstand	keep	der	Waffenstillstände	armistice		
+Düft	drop					wrong lemma (Duft)
+Hurra	keep	das	Hurras	hurrah		
+Schützling	keep	der	Schützlinge	protégé		
+Strähne	keep	die	Strähnen	strand		
+Hunderttausend	drop					tagger artifact (numeral)
+Amerikanerin	keep	die	Amerikanerinnen	American woman		
+Zwerg	keep	der	Zwerge	dwarf		
+Mieter	keep	der	Mieter	tenant		
+Büste	keep	die	Büsten	bust		
+Beere	keep	die	Beeren	berry		
+Zahlung	keep	die	Zahlungen	payment		
+Lämpchen	drop					diminutive (Lampe)
+Gehrock	keep	der	Gehröcke	frock coat		
+Handtasche	keep	die	Handtaschen	handbag	👜	
+Deckung	keep	die		cover		as in 'in Deckung'; also covering of costs
+Einwendung	drop					duplicates Einwand (objection)
+Hafer	keep	der		oats		
+Parfüm	keep	das	Parfüms	perfume		
+Banknote	keep	die	Banknoten	banknote		
+Geiger	keep	der	Geiger	violinist		
+Gewandtheit	keep	die		adroitness		dexterity taken by Geschicklichkeit
+Pfoste	drop					wrong lemma (Pfosten)
+Beethove	drop					name (Beethoven)
+Wollen	drop					nominalized verb; will taken by Wille
+Ungetüm	keep	das	Ungetüme	monstrosity		monster taken by Ungeheuer
+Anteilnahme	keep	die		sympathy		
+Jugendzeit	keep	die		days of youth		youth taken by Jugend
+Junggeselle	keep	der	Junggesellen	bachelor		
+Päckchen	keep	das	Päckchen	packet		lexicalized (postal packet); 📦 taken by Paket
+Rückseite	keep	die	Rückseiten	rear		back taken by Rücken
+Vorsehung	keep	die		providence		
+Bankdirektor	keep	der	Bankdirektoren	bank director		
+Lebensmittel	keep	das	Lebensmittel	foodstuffs		food taken by Essen
+Vorgänger	keep	der	Vorgänger	predecessor		
+Bildhauer	keep	der	Bildhauer	sculptor		
+Dukaten	drop					obsolete coin
+Lerche	keep	die	Lerchen	lark		
+Ketzer	keep	der	Ketzer	heretic		
+Weltgeschichte	keep	die		world history		
+Todesangst	keep	die	Todesängste	mortal fear		
+Diamant	keep	der	Diamanten	diamond	💎	
+Erbteil	keep	das	Erbteile	share of inheritance		inheritance taken by Erbe
+Muße	keep	die		leisure		
+Qualität	keep	die	Qualitäten	quality		
+Tumult	keep	der	Tumulte	commotion		tumult taken by Getöse; uproar by Aufruhr
+Kanapee	keep	das	Kanapees	settee		sofa taken by Sofa
+Gemisch	keep	das	Gemische	mix		mixture taken by Mischung
+Straßenecke	keep	die	Straßenecken	street corner		
+Luftzug	keep	der	Luftzüge	draft		draught taken by Trunk
+Weichheit	keep	die		softness		
+Mitgift	keep	die	Mitgiften	dowry		
+Hilflosigkeit	keep	die		helplessness		
+Schraube	keep	die	Schrauben	screw	🔩	
+Gelehrsamkeit	keep	die		erudition		
+Großmama	keep	die	Großmamas	grandma		
+Fraktur	drop					Gutenberg markup (font note)
+Druckfehler	drop					Gutenberg markup (transcriber's note; 99 books)
+Mehrzahl	keep	die		majority		also the grammatical plural
+Gemächer	drop					wrong lemma (Gemach)
+Eindringling	keep	der	Eindringlinge	intruder		
+Verwendung	keep	die	Verwendungen	usage		use taken by Gebrauch
+Klirren	keep	das		clinking		nominalized verb (clink; clank of chains)
+Aufzug	keep	der	Aufzüge	get-up		the example's sense; also lift, procession, act of a play
+Umschau	drop					only in 'Umschau halten'
+Blonde	keep	die	Blonden	blonde		adjectival noun: a blonde woman
+Schlusse	drop					wrong lemma (Schluss)
+Quell	keep	der	Quelle	wellspring		poetic for Quelle (source)
+Athlet	keep	der	Athleten	athlete		
+Landsmann	keep	der	Landsleute	compatriot		
+Dukat	drop					obsolete coin (Dukaten)
+Prinzeß	drop					wrong lemma (Prinzessin): old short form
+Eid	keep	der	Eide	sworn oath		oath taken by Schwur
+Gedräng	drop					wrong lemma (Gedränge)
+Fee	keep	die	Feen	fairy	🧚	
+Klima	keep	das	Klimas	climate		
+Strohhut	keep	der	Strohhüte	straw hat		
+Fortsetzung	keep	die	Fortsetzungen	continuation		
+Starke	drop					tagger artifact (adjective stark: die Starken)
+Flöte	keep	die	Flöten	flute	🪈	
+Galle	keep	die		bile		
+Pfanne	keep	die	Pfannen	pan	🍳	
+Patron	keep	der	Patrone	patron		also pejorative 'fellow' as in the example
+Kerls	drop					wrong lemma (Kerl)
+Einsiedler	keep	der	Einsiedler	hermit		
+Feuchtigkeit	keep	die		moisture		
+Mist	keep	der		manure		
+Freier	keep	der	Freier	suitor		
+Lebenslust	keep	die		lust for life		zest for life taken by Lebensfreude
+Männlein	drop					diminutive (Mann)
+Protest	keep	der	Proteste	protest		
+Lauer	drop					only in 'auf der Lauer'
+Wohnhaus	keep	das	Wohnhäuser	residential building		
+Jugendfreund	keep	der	Jugendfreunde	childhood friend		
+Geister	drop					wrong lemma (Geist)
+Pack	drop					two genders and senses (der Pack bundle; das Pack rabble)
+Haft	keep	die		custody		
+Ruh	drop					wrong lemma (Ruhe): elided Ruh'
+Protokoll	keep	das	Protokolle	official record		record taken by Aufzeichnung
+Verfahren	keep	das	Verfahren	procedure		also legal proceedings
+Äcker	drop					wrong lemma (Acker)
+Prost	drop					tagger artifact (interjection)
+Fabrikant	keep	der	Fabrikanten	manufacturer		
+Gefährtin	keep	die	Gefährtinnen	female fellow traveler		follows Gefährte; female companion taken by Begleiterin
+Kampfe	drop					wrong lemma (Kampf)
+Genüge	drop					only in 'zur Genüge' and 'Genüge tun'
+Liebste	keep	die	Liebsten	sweetheart		adjectival noun; der Liebste for a man
+Übermacht	keep	die		superior force		superiority taken by Überlegenheit
+Halde	keep	die	Halden	hillside		also slag heap
+Auflösung	keep	die	Auflösungen	dissolution		
+Frevel	keep	der	Frevel	sacrilege		crime and outrage taken
+Lieutenant	drop					wrong lemma (Leutnant)
+Brause	drop					wrong lemma (Brausen): the example is das Brausen (roar)
+Rinde	keep	die	Rinden	bark		
+Weltkrieg	keep	der	Weltkriege	world war		
+Däne	keep	der	Dänen	Dane		
+Bettdecke	keep	die	Bettdecken	duvet		blanket taken by Decke
+Feuerschein	keep	der		firelight		
+Gleichnis	keep	das	Gleichnisse	parable		
+Gurgel	keep	die	Gurgeln	gullet		throat taken by Kehle
+Aufwand	keep	der		outlay		expenditure taken by Ausgabe; effort by Mühe
+Hack	drop					wrong lemma (Hacke): heel, as in 'auf den Hacken'
+Dialekt	keep	der	Dialekte	dialect		
+Poet	drop					duplicates Dichter (poet)
+Flieder	keep	der	Flieder	lilac		
+Besitzung	keep	die	Besitzungen	landed property		estate taken by Gut
+Briefchen	drop					diminutive (Brief)
+Tüchtigkeit	keep	die		competence		
+Unsterblichkeit	keep	die		immortality		
+Sühne	keep	die		atonement		
+Porzellan	keep	das		porcelain		
+Jungfraue	drop					wrong lemma (Jungfrau)
+Amsel	keep	die	Amseln	blackbird		🐦‍⬛ taken by Krähe
+Tran	drop					wrong lemma (Träne): the example is Träne
+Theologe	keep	der	Theologen	theologian		
+Organisation	keep	die	Organisationen	organization		
+Spanier	keep	der	Spanier	Spaniard		
+Gleichviel	drop					tagger artifact (adverb gleichviel)
+Aufgebot	keep	das	Aufgebote	contingent		also banns
+Entlassung	keep	die	Entlassungen	dismissal		
+Zeitpunkt	keep	der	Zeitpunkte	point in time		
+Stöhnen	keep	das		groaning		
+Prozession	keep	die	Prozessionen	procession		
+Aufschrift	keep	die	Aufschriften	label		inscription taken by Inschrift
+Büsche	drop					wrong lemma (Busch)
+Beachtung	keep	die		heed		attention taken by Aufmerksamkeit
+Erdgeschoß	drop					wrong lemma (Erdgeschoss)
+Rumpf	keep	der	Rümpfe	torso		also hull
+Herzklopfe	drop					wrong lemma (Herzklopfen)
+Schüchternheit	keep	die		bashfulness		shyness taken by Scheu
+Stalle	drop					wrong lemma (Stall)
+Hirte	drop					wrong lemma (Hirt): variant form; Hirt is kept as shepherd
+Steuermann	keep	der	Steuermänner	helmsman		
+Episode	keep	die	Episoden	episode		
+Ortschaft	keep	die	Ortschaften	locality		
+Überwindung	keep	die		overcoming		as in 'es kostete Überwindung'
+Eingebung	keep	die	Eingebungen	inspiration		
+Westentasche	keep	die	Westentaschen	vest pocket		
+Anweisung	drop					duplicates Weisung (instruction taken by Anordnung)
+Murmel	drop					wrong lemma (Murmeln): the example is das Murmeln (murmuring)
+Besorgung	keep	die	Besorgungen	errand		
+Anflug	keep	der	Anflüge	tinge		as in 'Anflug von Spott'
+Hoch	keep	das	Hochs	cheer		a toast (ein Hoch); also a weather high
+Glücke	drop					wrong lemma (Glück)
+Bürde	drop					duplicates Last (burden)
+Insasse	keep	der	Insassen	occupant		
+Kutte	keep	die	Kutten	cowl		
+Schutt	keep	der		debris		rubble taken by Trümmer
+Kostbarkeit	keep	die	Kostbarkeiten	valuable		
+Schulkind	keep	das	Schulkinder	schoolchild		
+Harfe	keep	die	Harfen	harp	🪉	
+Erzähler	keep	der	Erzähler	narrator		
+Wohlgefalle	drop					wrong lemma (Wohlgefallen)
+Augenlider	drop					wrong lemma (Augenlid)
+Schwärmerei	keep	die	Schwärmereien	infatuation		enthusiasm taken by Begeisterung
+Pflichtgefühl	keep	das		sense of duty		
+Weiblichkeit	keep	die		femininity		
+Erhebung	keep	die	Erhebungen	exaltation		the example's sense; elevation and uprising taken
+Bürgerschaft	keep	die	Bürgerschaften	citizenry		
+Rauchwolke	keep	die	Rauchwolken	cloud of smoke		
+Lenchen	drop					name
+Gouverneur	keep	der	Gouverneure	governor		
+Partner	keep	der	Partner	partner		
+Flocki	drop					name (a dog; 3 books)
+Gedränge	keep	das		crowd		throng taken by Gewühl
+Bestand	keep	der	Bestände	stock		supply taken by Vorrat
+Spor	drop					wrong lemma (Sporn): plural Sporen
+Passion	drop					duplicates Leidenschaft (passion)
+Gondel	keep	die	Gondeln	gondola		
+Kameradschaft	keep	die	Kameradschaften	comradeship		
+Fußtritt	keep	der	Fußtritte	kick		
+Amtsrichter	keep	der	Amtsrichter	district judge		
+Feuerwerk	keep	das	Feuerwerke	fireworks	🎆	
+Plätzchen	drop					diminutive (Platz) in the books; the biscuit sense is rarer
+Unfug	keep	der		mischief		
+Starre	keep	die		rigidity		
+Ausgleich	keep	der		compensation		balance taken by Gleichgewicht
+Lotse	keep	der	Lotsen	ship's pilot		
+Besen	keep	der	Besen	broom	🧹	
+Tagewerk	keep	das		day's work		
+Gäßche	drop					diminutive (Gasse); wrong lemma (Gässchen)
+Besitztum	drop					duplicates Besitz
+Enkelin	keep	die	Enkelinnen	granddaughter		
+Umwelt	keep	die		environment		surroundings taken by Umgebung
+Torf	keep	der		peat		
+Janitschar	drop					book-specific (3 books)
+Amtsrat	drop					book-specific (4 books)
+Zigeuner	drop					ethnic slur today
+Käfer	keep	der	Käfer	beetle	🪲	
+Mademoiselle	drop					French title; duplicates Fräulein
+Strauch	keep	der	Sträucher	shrub		
+Kannst	drop					tagger artifact (verb können)
+Tast	drop					wrong lemma (Taste)
+Birne	keep	die	Birnen	pear	🍐	also light bulb, as in the example
+Brat	drop					wrong lemma (Braten)
+Gleichmut	keep	der		imperturbability		equanimity taken by Gelassenheit
+Anstoß	keep	der	Anstöße	stimulus		push taken by Stoß; impetus by Antrieb; also offence (Anstoß nehmen)
+Beten	drop					nominalized verb beten; duplicates Gebet
+Bucht	keep	die	Buchten	bay		
+Scholl	drop					wrong lemma (Scholle)
+Ausdauer	keep	die		endurance		
+Ergebenheit	keep	die		devotedness		devotion taken by Andacht; loyalty by Treue
+Belehrung	keep	die	Belehrungen	lesson		lecture taken by Vortrag
+Stengel	drop					wrong lemma (Stängel)
+Träumerei	keep	die	Träumereien	reverie		
+Korrektur	drop					Gutenberg markup (counted from transcriber's notes)
+Windstoß	keep	der	Windstöße	gust		
+Hingebung	drop					duplicates Hingabe
+Kirsche	keep	die	Kirschen	cherry	🍒	
+Lakaie	drop					wrong lemma (Lakai)
+Ansturm	keep	der	Anstürme	onslaught		
+Glaub	drop					tagger artifact (verb glauben: glaub')
+Eule	keep	die	Eulen	owl	🦉	
+Menschenseel	drop					wrong lemma (Menschenseele)
+Regierungsrat	keep	der	Regierungsräte	government councilor		civil service title
+Lung	drop					wrong lemma (Lunge)
+Würmer	drop					wrong lemma (Wurm)
+Ähnliches	drop					tagger artifact (adjective ähnlich: etwas Ähnliches)
+Neige	drop					only in 'zur Neige gehen'; the example is the verb neigen
+Gewebe	keep	das	Gewebe	tissue		fabric taken by Stoff
+Geleit	keep	das		escort		
+Gatten	drop					wrong lemma (Gatte)
+Nässe	keep	die		wetness		
+Umkreis	keep	der	Umkreise	radius		environs taken by Umgegend
+Büschel	keep	das	Büschel	tuft		
+Schulkamerad	keep	der	Schulkameraden	schoolmate		
+Abendrot	keep	das		sunset glow		
+Fratze	keep	die	Fratzen	grotesque face		grimace taken by Grimasse
+Sträucher	drop					wrong lemma (Strauch)
+Architekt	keep	der	Architekten	architect		
+Materie	keep	die		physical matter		matter taken by Sache
+Rübe	keep	die	Rüben	beet	🫜	
+Herzogtum	keep	das	Herzogtümer	duchy		
+Steig	keep	der	Steige	steep path		path taken by Pfad
+Hochschule	keep	die	Hochschulen	college		university taken by Universität
+Frösche	drop					wrong lemma (Frosch)
+Sanitätsrat	keep	der	Sanitätsräte	medical councilor		honorary title for physicians
+Eigensinn	keep	der		stubbornness		
+Kralle	keep	die	Krallen	claw		
+Unglückliche	drop					adjective used as noun (der/die Unglückliche)
+Äther	keep	der		ether		
+Veranstaltung	keep	die	Veranstaltungen	organized event		event taken by Ereignis
+Helligkeit	keep	die		luminosity		brightness taken by Helle
+Baß	drop					wrong lemma (Bass)
+Ergriffenheit	drop					duplicates Rührung (emotion)
+Einbruch	keep	der	Einbrüche	burglary		also onset (Einbruch der Nacht)
+Pritsche	keep	die	Pritschen	plank bed		
+Lehrling	keep	der	Lehrlinge	apprentice		
+Behausung	keep	die	Behausungen	dwelling		
+Gnädigst	drop					tagger artifact (adjective gnädig: meine Gnädigste)
+Flusse	drop					wrong lemma (Fluss)
+Abteil	keep	das	Abteile	train compartment		compartment taken by Fach
+Trunkenheit	keep	die		drunkenness		
+Genius	keep	der	Genien	guardian spirit		
+Beobachter	keep	der	Beobachter	observer		
+Gesichtspunkt	keep	der	Gesichtspunkte	point of view		
+Wappe	drop					wrong lemma (Wappen)
+Gutmütigkeit	keep	die		good nature		
+Österreicher	keep	der	Österreicher	Austrian		
+Fährte	keep	die	Fährten	trail		
+Prophezeiung	keep	die	Prophezeiungen	prophecy		
+Andrer	drop					tagger artifact (pronoun)
+Wölfchen	drop					diminutive (and a name)
+Sperling	drop					duplicates Spatz
+Dienstag	keep	der	Dienstage	Tuesday		
+Paradiese	drop					wrong lemma (Paradies)
+Schalter	keep	der	Schalter	counter		
+Vorstand	keep	der	Vorstände	chairman		
+Verfall	keep	der		decay		
+Rudel	keep	das	Rudel	pack		
+Einkäuf	drop					wrong lemma (Einkauf)
+Gruft	keep	die	Grüfte	crypt		
+Ratlosigkeit	keep	die		perplexity		
+Schulhaus	keep	das	Schulhäuser	schoolhouse		
+Erwähnung	keep	die	Erwähnungen	mention		
+Nachher	drop					tagger artifact (adverb)
+Bahnsteig	keep	der	Bahnsteige	platform		
+Erniedrigung	keep	die	Erniedrigungen	abasement		
+Halbkreis	keep	der	Halbkreise	semicircle		
+Sanatorium	keep	das	Sanatorien	sanatorium		
+Klappe	keep	die	Klappen	flap		
+Gehilfe	keep	der	Gehilfen	aide		
+Gatter	drop					counts mostly wrong lemma (Gatten, of Gatte)
+Stammtisch	keep	der	Stammtische	regulars' table		
+Ertrag	keep	der	Erträge	yield		
+Weibchen	drop					diminutive
+Gleichheit	keep	die		equality		
+Brüderchen	drop					diminutive
+Volkslied	keep	das	Volkslieder	folk song		
+Spielmann	keep	der	Spielleute	minstrel		
+Lustspiel	keep	das	Lustspiele	light comedy		
+Automobil	keep	das	Automobile	automobile		
+Knaben	drop					wrong lemma (Knabe)
+Anwendung	keep	die	Anwendungen	application		
+Trinker	keep	der	Trinker	drunkard		
+Handfläche	keep	die	Handflächen	palm	🫴	
+Inhaber	keep	der	Inhaber	proprietor		
+Kneifer	keep	der	Kneifer	pince-nez		
+Wade	keep	die	Waden	calf muscle		
+Zehenspitz	drop					wrong lemma (Zehenspitze)
+Honorar	keep	das	Honorare	fee		
+Knopfloch	keep	das	Knopflöcher	buttonhole		
+Gastgeber	keep	der	Gastgeber	host		
+Kies	keep	der		gravel		
+Kopfkissen	keep	das	Kopfkissen	bed pillow		
+Ringkämpfer	keep	der	Ringkämpfer	wrestler		
+Gläschen	drop					diminutive
+Lügner	keep	der	Lügner	liar		
+Neujahr	keep	das		New Year		
