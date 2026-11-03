@@ -16,7 +16,8 @@ import urllib.request
 from pathlib import Path
 
 CATALOG_URL = "https://www.gutenberg.org/cache/epub/feeds/pg_catalog.csv"
-PER_AUTHOR = 3  # at most this many books by one author, lowest Gutenberg numbers first
+PER_AUTHOR = 3  # at most this many books by one author, lowest Gutenberg numbers first,
+SINGLE_AUTHOR = {"goethe"}  # except in these lists, which are one author's works
 
 
 def author(row):
@@ -34,6 +35,34 @@ def german_text(row):
 
 def has(field, pattern):
     return lambda row: re.search(pattern, row[field]) is not None
+
+
+def not_in(*ids):
+    return lambda row: row["Text#"] not in ids
+
+
+def verse(row):
+    return has("Bookshelves", r"Plays|Poetry|DE Lyrik|DE Drama|Picture Books")(row)
+
+
+def fairy_tales(row):
+    """Fairy tales, folk tales and legends in prose, translated ones included."""
+    return german_text(row) and not verse(row) and (
+        row["Text#"] == "77905"  # the only German Grimm text (#20050 and #20051 are audiobooks)
+        or has("Title", r"Märchen|Mährchen|Sagen\b|Sagenbuch")(row)
+        or has("Subjects", r"Fairy tales|Folklore|Legends|Tales --")(row)) and not_in(
+        "7810",  # Hebel, calendar stories
+        "14225",  # Achleitner, a crime novel
+        "14962",  # Gjellerup, a novel
+        "26694",  # Greinz, a humorous story
+        "35794", "45189",  # Guerber, readers for learners
+        "39175", "61615",  # Remizov, Bjørnson: literary stories
+        "44868", "53856", "67261", "68594",  # Krauss, Schäfer, Spiess, Holz: studies
+        "52483", "66770",  # local description
+        "52517",  # Kayser, a biblical story
+        "58520", "67897",  # Ewald, nature stories
+        "68862",  # de Coster, a novel
+    )(row)
 
 
 LISTS = {
@@ -59,8 +88,30 @@ LISTS = {
                                      r"Guizot")(r),
         lambda r: born(r) is None or born(r) >= 1750,
     ],
-    # The only German Grimm text on Gutenberg (#20050 and #20051 are audiobooks).
-    "grimm": [german_text, lambda r: r["Text#"] == "77905"],
+    # Fairy tales, folk tales and legends; grew out of the Grimm-only pilot list.
+    "fairytales": [fairy_tales],
+    # Goethe's prose: novels, stories, travel and campaign writing; no plays, poems or letters.
+    "goethe": [
+        german_text,
+        has("Authors", r"^Goethe, Johann Wolfgang"),
+        has("Bookshelves", r"DE Prosa|DE Sachbuch"),
+        lambda r: not verse(r),
+    ],
+    # Children's books, fiction only, other than fairy tales.
+    "children": [
+        german_text,
+        has("Bookshelves", r"DE Kinderbuch|Children"),
+        lambda r: not verse(r) and not fairy_tales(r),
+        lambda r: not has("Bookshelves", r"Science|Nature|Mathematics|Language Education|DE Sachbuch|"
+                                         r"Biographies|How To")(r),
+        not_in(
+            "6341",  # E.T.A. Hoffmann, Nachtstücke: tales for adults
+            "7511",  # the same Heidi as #7500
+            "28279",  # sex education
+            "31281",  # riddles
+            "35794", "45189",  # Guerber, readers for learners
+        ),
+    ],
 }
 
 
@@ -74,7 +125,7 @@ def main():
     picked = [r for r in rows if all(test(r) for test in LISTS[name])]
     per_author = collections.defaultdict(list)
     for r in sorted(picked, key=lambda r: int(r["Text#"])):
-        if len(per_author[author(r)]) < PER_AUTHOR:
+        if name in SINGLE_AUTHOR or len(per_author[author(r)]) < PER_AUTHOR:
             per_author[author(r)].append(r)
     chosen = sorted((r for books in per_author.values() for r in books), key=lambda r: int(r["Text#"]))
     Path(name).mkdir(exist_ok=True)

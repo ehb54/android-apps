@@ -1,0 +1,1001 @@
+rank	lemma	count	range	books	keyness	reference	english	present	past	participle	perfect	example
+1	rufen	2735	1393	54	891.4	10833	loudly vocalizatize; to cause someone to appear	ruft 72	rief 2160	gerufen 89	haben 51; sein 1	"Hier rief es aus einer Tür: ""Wart einen Augenblick, Dete, ich komme mit, wenn du weiter hinaufgehst."
+2	sagen	11838	2388	55	849.0	68950	to say	sagt 499; sag 1	sagte 7864	gesagt 990	haben 694; sein 9	Man sagt allerhand von ihm;
+3	können	10477	2542	57	297.0	68492	to be able to; can	kann 1972; könnt 118	konnte 3280	gekonnt 7	haben 7	bis Maienfeld hatte sie auf einem Heuwagen fahren können, auf dem ein Bekannter von ihr heimfuhr und sie und das Kind mitnahm.
+4	fliegen	584	396	51	185.6	2336		fliegt 35	flog 221	geflogen 51; flogen 19	sein 39	Da schoss der Schlitten davon die Alm hinab mit einer solchen Schnelligkeit, dass das Heidi meinte, es fliege in der Luft wie ein Vogel, und laut aufjauchzte.
+5	sehen	6061	2261	57	171.7	39626	to see; to look; to perceive; to judge	sieht 275; seht 80	sah 1980	gesehen 886	haben 659; sein 3	so hab ich ihn nicht gesehen, wie er jung war, das wirst du nicht erwarten.
+6	erwiederen	46	41	11	153.9	9			erwiederte 42	erwiedert 2		»Ich nicht!« erwiederte schnell der Papagei.
+7	fangen	205	149	39	147.7	539	to catch a person or animal; to catch something that was thrown	fängt 26; fangt 6				"""morgen fangen wir an zu lesen."""
+8	entdecken	346	292	46	134.8	1273		entdeckt 13	entdeckte 101	entdeckt 111	haben 76	Derweilen schaute das Heidi vergnüglich um sich, entdeckte den Geißenstall, der an die Hütte angebaut war, und guckte hinein.
+9	entgegnen	355	294	30	132.8	1329		entgegnet 4	entgegnete 350			"""Nein, es ist mir heiß"", entgegnete das Kind."
+10	ausrufen	207	168	33	132.4	588		ruft aus 1	rief aus 161; ausrief 26	ausgerufen 5	haben 3; sein 1	"""Ich möchte nicht das Kind sein!"", rief die Barbel mit abwehrender Gebärde aus."
+11	kommen	6618	2323	56	132.3	44604	to come; to have an orgasm	kommt 831; komm 8	kam 2287	gekommen 875	sein 785; haben 2	Es kommt ein Besuch und dann noch einer, der mehr Folgen hat 6
+12	tun	3018	1618	55	113.5	19161	to act	tut 377; tust 3	tat 647	getan 411	haben 273; sein 8	Wie kannst du so etwas tun!
+13	ertönen	173	155	32	110.4	492		ertönt 13	ertönte 116			Jetzt ertönte ein schriller Pfiff.
+14	machen	4824	2119	57	108.8	32191	to do; to make	macht 456; mach 10	machte 1300	gemacht 842	haben 542; sein 36	Der Fußweg machte einige Krümmungen, doch konnte man ihn fast bis zum Dörfli hinunter übersehen, es war aber niemand darauf sichtbar.
+15	gethan	160	140	16	106.6	443			gethan 11	gethan 141	haben 91; sein 1	Alice hatte sich gar nicht weh gethan.
+16	ausreißen	65	47	20	96.1	88		reißt aus 5; ausreißt 1		ausgerissen 2		»Und dazu ein Anführer, wie du einer bist, der muss sich doppelt schämen, so auszureißen«, fuhr der Öhi fort.
+17	aussehen	911	674	51	94.3	4973		sieht aus 126; aussieht 53	sah aus 413; aussah 114	ausgesehen 29	haben 25	"""Ich brauch es nicht"", sagte das Kind und sah gar nicht reuevoll aus über seine Tat."
+18	bekommen	1002	737	55	92.6	5589	to get	bekommt 95; bekommst 2	bekam 236	bekommen 80	haben 58; sein 5	"""Nach Frankfurt"", erklärte Dete, ""da bekomm ich einen extraguten Dienst."
+19	hinfliegen	57	48	8	90.8	70		fliegt hin 2	flog hin 16			Er flog hin und kostete und fand sie ungemein süß und rief hundert näschige Brüder herbei.
+20	hören	2148	1313	53	86.6	13531	sensory perception of sound by living organisms	hört 166; gehört 3	hörte 874	gehört 131	haben 116	Der Hausherr hört allerlei in seinem Hause, das er noch nicht gehört hat 10
+21	erblicken	256	234	49	86.4	1000	to see	erblickt 38	erblickte 161	erblickt 3	haben 2	"Kaum aber hatte diese die herankletternde Gesellschaft erblickt, als sie laut aufschrie: ""Heidi, was machst du?"
+22	lernen	748	500	54	84.3	4015	any process in an organism in which a relatively long-lasting adaptive behavioral change occurs as the result of experience; conscious cognitive process of creating complete memories of certain information	lernt 51	lernte 84	gelernt 212	haben 171	"""da lernt man lesen und schreiben, und das geht manchmal schwer, da hilft's ein wenig nach, wenn man am Griffel nagt;"
+23	fortfahren	502	408	44	77.1	2513		fährt fort 4	fuhr fort 462	fortgefahren 1	sein 1	"""So, nun kommt noch das Schüsselchen hinein"", fuhr der Öhi fort, ""denn das Kind kann nicht trinken wie du, nur so von der Geiß weg, es kennt das nicht."
+24	wollen	7055	2360	57	74.0	49662	want	will 817; wollt 20	wollte 2303	gewollt 41; wollt 4	haben 31	"""Das ist es"", erwiderte Dete, ""ich will mit ihm hinauf zum Öhi, es muss dort bleiben."""
+25	folgen	756	602	52	71.9	4195	to follow	folgt 29	folgte 357	gefolgt 77	sein 35; haben 4	Die Base folgte seinem Finger.
+26	aufmachen	168	147	37	71.5	594		macht auf 8; aufmacht 3	machte auf 57; aufmachte 26	aufgemacht 27	haben 14	Jetzt machte der Alte die Tür auf und Heidi trat hinter ihm her in einen ziemlich großen Raum ein, es war der Umfang der ganzen Hütte.
+27	helfen	827	632	52	68.8	4700	to help	hilft 69	half 155	geholfen 80	haben 58; sein 5	du weißt dir zu helfen;
+28	klettern	129	117	40	67.3	412		klettert 6	kletterte 66	geklettert 10	sein 7	"""Es klettert die Abhänge hinauf mit dem Geißenpeter und seinen Geißen."
+29	darfstn	142	121	34	65.8	482		darfst 51				"""Du darfst ihm nichts tun, es tut ihm weh, lass ihn los!"""
+30	versprechen	362	317	48	65.4	1738		versprecht 4; verspricht 3	versprach 140	versprochen 138; versprecht 1	haben 113; sein 2	Sie versprach ihr, sogleich an den Papa zu schreiben und auch ihr Bett in Klaras Zimmer stellen und sie nie mehr allein lassen zu wollen.
+31	niederlassen	179	148	32	64.7	680			ließ nieder 77; niederließ 7	niedergelassen 44	haben 39	Es tat, wie es gewohnt war, und der Herr Doktor ließ sich gleich auch neben Heidi auf den sonnigen Weideboden nieder.
+32	geln	64	58	14	64.4	130		gelt 64				Aber wir wollen auch alle Tage beten, gelt Großvater, und wir wollen es nie mehr vergessen, damit der liebe Gott uns auch nicht vergisst.
+33	denken	2884	1548	55	64.3	19264		denkt 137	dachte 1100; denkte 1	gedacht 380	haben 271; sein 3	"Es nimmt mich nur wunder, was du denkst, Dete"", sagte die Barbel vorwurfsvoll."
+34	erzählen	1266	830	55	63.6	7762		erzählt 83	erzählte 471	erzählt 160	haben 115; sein 2	Wenn ich aber wüsste, dass es nachher nicht im ganzen Prättigau herumkäme, so könnte ich dir schon allerhand erzählen von ihm;
+35	niederlegen	119	108	30	61.8	381		legt nieder 4	legte nieder 55; niederlegte 14	niedergelegt 14	haben 10	Der Fuchs verbarg sich hinter einem Haufen Schnee, und der Hase legte sich nieder.
+36	heirathen	33	19	5	61.6	32			heirathete 3			denn ihn wirklich heirathen, daran konnte doch niemand ernstlich denken, und ich am allerwenigsten.
+37	essen	295	236	47	61.2	1362	to ingest food; to have a meal					"""Ich meine, wir könnten erst einmal etwas essen"", sagte der Großvater, ""oder was meinst du?"""
+38	fragen	2433	1393	55	56.9	16186	to ask	fragt 59	fragte 1763; frug 10	gefragt 99	haben 63; sein 1	"""Bist du müde, Heidi?"", fragte die Begleiterin."
+39	weinen	556	406	50	55.3	3059		weint 30; weinet 1	weinte 224	geweint 54; weint 1	haben 39	Heidi weinte fast nie;
+40	freuen	647	505	52	54.7	3667		freut 105; freute 2	freute 188; freuete 1	gefreut 53	haben 47	Und immer wieder freute sich die Großmutter, und bis sie ins Bett ging, sagte sie immer wieder:
+41	probieren	86	77	21	54.0	247		probiert 1	probierte 7	probiert 21	haben 9	Die Großmutter hatte schon allerhand probiert, um das Kind zu beschwichtigen, denn es ging ihr zu Herzen, dass es so jämmerlich schluchzen musste.
+42	melken	35	19	8	53.9	45	removing milk from the mammary glands of an animal	melkt 2	melkte 3			"Nun melkte der Großvater gleich von der Weißen das Schüsselchen voll und schnitt ein Stück Brot ab und sagte: ""Nun iss und dann geh hinauf und schlaf!"
+43	tödten	28	23	6	53.6	26		tödtet 2	tödtete 2	getödtet 11; tödtet 1	haben 2	Jemand unter sich zu tödten;
+44	brummen	150	124	36	51.3	583		brummt 7	brummte 116	gebrummt 3	haben 3	"""Das ist nicht meine Sache"", brummte der Kutscher;"
+45	verzehren	127	113	36	50.8	462		verzehrt 3	verzehrte 30	verzehrt 38; verzehrten 1	haben 17; sein 5	Zweitens wird das Kind vom Heimweh verzehrt, so dass es schon jetzt fast zum Geripplein abgemagert ist und es noch völlig werden würde;
+46	musstn	139	120	35	50.5	527		musst 85				"Schlaf wohl, Schneehöppli, und denk dran, dass ich morgen wiederkomme und dass du nie mehr so jämmerlich meckern musst."""
+47	umschauen	67	61	22	50.4	171		schaut um 1	schaute um 42; umschaute 11			Dete stand still und schaute sich überall um.
+48	fürchten	510	416	51	49.9	2815		fürchtet 25; gefürchtet 2	fürchtete 130	gefürchtet 59	haben 45; sein 4	Sag mir jetzt ein wenig, was mit dem Alten ist und ob der immer so gefürchtet und ein solcher Menschenhasser war.
+49	niesen	33	18	8	49.4	44	to sneeze	niest 4	nieste 17			Der große Taa niest, und Klein-Taa niest, und auch Strix muss niesen.
+50	niedersetzen	87	82	28	47.8	270		setzt nieder 1	setzte nieder 48; niedersetzte 9	niedergesetzt 4	haben 4	Der Junge setzte sich auf die steinernen Stufen vor der Tür nieder und zeigte, dass er nicht mitwollte.
+51	wohnen	552	415	51	47.6	3118	to reside	wohnt 103; wohnet 3	wohnte 109	gewohnt 113	haben 32; sein 3	Es war der alte Herr Pfarrer aus dem Dörfli, der den Öhi vor Jahren gut gekannt hatte, als er noch unten wohnte und sein Nachbar war.
+52	daherkommen	60	56	20	47.4	148		daherkommt 3; kommt daher 2	kam daher 22; daherkam 12			Da kam ein kleines Mädchen daher, es war Dortchen, welche Etwas nach dem fürstlichen Lustschloss zu tragen hatte;
+53	kannstn	200	185	40	47.0	889		kannst 5				"Es ist aber gerad recht, er kann nun zu dem Kinde sehen, und du kannst mir umso besser erzählen."""
+54	stricken	49	35	19	46.3	105		strickt 2	strickte 10	gestrickt 4; strickt 3	haben 2	Kannst du stricken?
+55	werdn	63	55	13	46.1	164			wurd 1			"""Wenn mich jetzt mein Vater Papa sehen tät"", rief er, ""der würd sich was Rechts freuen."
+56	umsehen	202	186	37	45.3	911		sieht um 5; seht um 1	sah um 123; umsah 17			Erst sah sie sich aber um, ob das Kind nicht zu nah sei und alles anhöre, was sie sagen wollte;
+57	schlafen	465	341	50	43.9	2584	to sleep	schläft 52		geschlafen 82	haben 69	"Nun sah es sich aufmerksam um in dem Raum und sagte dann: ""Wo muss ich schlafen, Großvater?"""
+58	verwundern	115	110	31	43.9	427		verwundert 74	verwunderte 5	verwundert 7	haben 2	"Auch diese musste sich sehr verwundern und ein Mal über das andere sagen: ""Gott Lob und Dank, dass er so ist mit dem Kind, Gott Lob und Dank!"
+59	herunterkommen	68	62	26	43.2	194		kommt herunter 10; herunterkommt 2	kam herunter 21; herunterkam 8	heruntergekommen 1	sein 1	"dann sagte sie: ""Ich weiß nicht, Mutter, ob der Öhi selber heruntergekommen ist mit ihm;"
+60	weiterfliegen	16	15	4	43.2	7		fliegt weiter 1	flog weiter 7			Er flog langsam hinter den andern drein, während er überlegte, ob er umdrehen oder weiterfliegen solle.
+61	nöthigen	17	17	7	42.8	9			nöthigte 4	genöthigt 12	sein 6	»Ist dir etwas Wein gefällig?« nöthigte sie der Faselhase.
+62	anfangen	433	367	49	42.7	2386	to begin something	fängt an 30; anfängt 20		angefangen 79	haben 57	Was wird der mit einem Kinde anfangen und dann noch einem so kleinen!
+63	anhalten	174	158	44	42.6	763	change the state of something from moving to standing still	hält an 9; anhält 4	hielt an 81; anhielt 20	angehalten 16	haben 8; sein 2	Heidi hielt an in seinen Sprüngen, der Großvater trat heraus.
+64	schmecken	138	117	39	42.4	559	to determine the taste of something; to taste of	schmeckt 34	schmeckte 31	geschmeckt 19	haben 16	Da lachte er sehr stark, und dann sagte er den Gruß und auch noch, Herr Sesemann solle sich's schmecken lassen.
+65	rennen	118	104	31	42.0	451	to run	rennt 13	rannte 63			Heidi fing nun so zu rennen an, dass die Base mit ihrem Bündel auf dem Arm fast nicht mehr nachkam.
+66	herbeiholen	41	41	25	42.0	82		holt herbei 1	holte herbei 21; herbeiholte 1	herbeigeholt 10	haben 6	Heidi fing bei seiner Milch an, und sowie es sein leeres Schüsselchen hinstellte, stand Peter auf und holte ein zweites herbei.
+67	seufzen	206	183	37	41.6	959			seufzte 185	geseufzt 1	haben 1	Während sich solches oben zutrug, stand unten die langjährige Köchin tiefsinnig bei ihren Töpfen und schüttelte den Kopf und seufzte:
+68	schmausen	24	24	11	40.7	27			schmauste 6			Nächtlich, bei des Mondes Schimmer, Sitzt es dort zu schmausen immer;
+69	rannen	105	95	34	40.5	388			rannte 48	gerannt 20	sein 3; haben 2	denn die waren nun auch so an Heidis Gesellschaft gewöhnt, dass sie nicht vorwärts wollten, wenn es nicht dabei war, und auf alle Seiten rannten.
+70	hineingehen	123	108	32	39.7	489	motion from outside to inside of a location	geht hinein 9; hineingeht 3	ging hinein 49	hineingegangen 6	sein 6	"""So komm!"", und der Großvater stand auf und ging voran in die Hütte hinein."
+71	eilen	256	237	45	39.3	1282		eilt 13	eilte 140; eile 2	geeilt 10	sein 6; haben 1	Sebastian erhielt den Auftrag, nach dem Hause zu eilen, wo Heidis Base im Dienst stand, und diese herbeizuholen.
+72	aufragen	41	40	6	38.7	88		aufragt 4; ragt auf 1	ragte auf 9; aufragte 6			So stürzt sie sich denn in einen Wipfel hinein, der aus dem Dickicht aufragt ...
+73	hinaufklettern	36	33	11	38.0	70			kletterte hinauf 19			Heidi kletterte hinauf und langte auf dem Heuboden an.
+74	willen	212	188	45	37.7	1022						"""Aber wohin willst du eigentlich mit dem Kinde, Dete?"", fragte jetzt die neu Hinzugekommene."
+75	indeßn	18	17	7	36.7	15			indeß 18			dabei schien es sich indeß nicht so behaglich und unterhaltend zu fühlen wie bei den anderen Spielen;
+76	zeigen	957	728	53	36.4	6069	act of displaying or showing something; pointing a finger on something	zeigt 44	zeigte 391	gezeigt 94	haben 77	Der Großvater zeigte auf einen großen Zuber voll Wasser, der vor der Tür in der Sonne stand.
+77	schrein	17	16	3	36.3	13						Plötzlich höre ich meine bedauernswerte Cousine aus dem Dunkel schrein: 'Fridolin, ich klebe!
+78	hereinkommen	140	128	36	36.2	603		kommt herein 9; hereinkommt 3	kam herein 54; hereinkam 21	hereingekommen 19	sein 17	Jetzt kam der Mondschein eben leuchtend durch die runde Öffnung herein und fiel gerade auf Heidis Lager.
+79	laufen	722	531	54	36.0	4431	to run; to walk	läuft 39; lauft 6	lief 262	gelaufen 78	sein 44; haben 3	Sie liefen auch dahin und dorthin, und er musste überallhin pfeifen und rufen und seine Rute schwingen, um wieder alle die Verlaufenen zusammenzutreiben.
+80	miauen	18	14	5	35.4	16	sound made by a cat		miaute 4			Sie kann brüllen wie ein Stier, heulen wie ein Wolf, miauen wie eine Katze oder in ein schallendes Gelächter ausbrechen wie ein wahnsinniger Mensch.
+81	ausbrechen	187	178	41	35.0	889		ausbricht 2	brach aus 101; ausbrach 25	ausgebrochen 19	sein 17	"""Oh! oh! oh!"", brach der Peter aus, jeden Ausruf mit verstärkter Missbilligung hervorstoßend;"
+82	herausnehmen	76	70	28	34.9	259		nimmt heraus 2; herausnimmt 1	nahm heraus 32; herausnahm 4	herausgenommen 11	haben 6	Als sie das seltsame rote Bündelchen erblickte, nahm sie es schnell aus dem Korb heraus und warf es auf den Boden.
+83	festschlafen	8	8	7	34.9	0		schläft fest 2	schlaft fest 1			Die meisten Leute schlafen noch fest, aber der Hahn ist wach und kräht ganz laut.
+84	ausbreiten	157	142	40	34.6	712		breitet aus 11; ausbreitet 5	breitete aus 51; ausbreitete 31	ausgebreitet 28	haben 9; sein 4	Dann breitete er die Säcke aus, faltete sie zusammen, noch einmal und noch einmal.
+85	mitnehmen	232	200	43	34.3	1172		nimmt mit 6; mitnimmt 4	nahm mit 18; mitnahm 5	mitgenommen 59	haben 38	bis Maienfeld hatte sie auf einem Heuwagen fahren können, auf dem ein Bekannter von ihr heimfuhr und sie und das Kind mitnahm.
+86	weißen	471	373	50	33.6	2746		weißt 14				du weißt, denk ich, die ganze Geschichte.
+87	baen	41	39	21	33.3	99				baten 1		Albert und Paul baten den großen Knaben, er solle entscheiden, wem die Nuß gehöre.
+88	siehn	58	51	23	32.9	177			sieh 2			"Komm und sieh einmal, wie schön es hier ist, Großvater!"""
+89	entwischen	46	41	15	32.3	123		entwischt 8	entwischte 6	entwischt 6	sein 4	Laßt ihn nicht entwischen!
+90	hineinstecken	29	27	16	31.5	55		steckt hinein 2	steckte hinein 15; hineinsteckte 2	gesteckt 1		"""Mach auf"", befahl der Alte und steckte nun ein großes Stück Brot und ein ebenso großes Stück Käse hinein."
+91	schnitzen	38	27	13	31.2	91		schnitzt 2	schnitzte 12	geschnitzt 16	haben 11; sein 1	"""Er sitzt am Tisch und schnitzt runde Löffel von Holz"", erklärte Heidi und machte nun die Tür wieder auf."
+92	umherziehen	17	16	3	31.1	17	traveling without a purpose	umherzieht 3	umherzog 5; zog umher 1			»Du bist doch wohl nicht der Junge, der mit den Wildgänsen umherzieht und den sie Däumling nennen?« fragte er.
+93	habn	155	112	21	30.9	724		hab 2				Ich hab' dir etwas mitgebracht.
+94	purzelen	18	17	9	30.8	20			purzelte 15			Hieronymus ließ sich mit allen seinen Beinen zugleich los und purzelte durch die Zweige in die Wassertonne.
+95	wolltn	21	20	6	30.6	29		wollt 1				",,Das mein ich! Ich wollt', ich hätt' welchen!"""
+96	untersuchen	95	84	34	30.2	380		untersucht 6	untersuchte 31	untersucht 11	haben 6	Den Vorfall wollte sie nach den Unterrichtsstunden untersuchen und den Schuldigen so bestrafen, dass er daran denken würde.
+97	verwunderen	27	27	6	30.0	50			verwunderte 16			Die Menschen glaubten, sie hätten es für das Eichhörnchen recht gut gemacht, und sie verwunderten sich sehr, dass es ihm offenbar nicht gefiel.
+98	einsperren	69	53	23	29.6	243		sperrt ein 6	sperrte ein 1	eingesperrt 46	sein 10; haben 7	Da aber der Oberst erklärte, nun müsse alles das Haus verlassen, faßten die Männer den Beschluss, vorläufig müsse der Joggi eingesperrt werden.
+99	fortlaufen	42	39	26	29.6	112		läuft fort 7; fortlauft 1	lief fort 11			"""Aber auf einmal wollte er sein Hab und Gut für sich haben und sein eigener Meister sein und forderte es dem Vater ab und lief fort damit und verprasste alles."
+100	eingeschlafen	65	56	30	29.5	223				eingeschlafen 57	sein 50	Es dachte, er sei vielleicht ein wenig eingeschlafen;
+101	zurufen	173	159	41	29.4	844		ruft zu 8	rief zu 114; zurief 15	zugerufen 6	haben 5	"""Du stehst ja doch nur und reißest deine Augen auf und kommst, denk ich, nicht weit auf die Art!"", rief ihm die Base Dete zu."
+102	erwischen	77	71	21	29.3	286		erwischt 2	erwischte 14; erwische 1	erwischt 27	haben 10	Peter wollte es eben packen, da stürzte er auf den Boden und konnte nur noch im Sturze ein Bein des Tierleins erwischen und es daran festhalten.
+103	ankommen	352	308	52	29.2	2002	to arrive; gain acceptance; with the preposition “auf”: be dependent on something	kommt an 40; ankommt 6	kam an 65; ankam 45	angekommen 136	sein 99	"wenn er's hörte, so käme ich schön an!"""
+104	bleibn	22	20	5	28.4	35			bleibn 12			"""Dann bleib ich auch!"""
+105	ausgerissen	22	17	6	28.4	35				ausgerissen 22	sein 11	»Ja,« erklärte ihr Hannibal, »das tun unsere Beine immer, nachdem sie ausgerissen worden sind.
+106	ergreifen	354	309	46	28.3	2026		ergreift 7	ergriff 231	ergriffen 73	haben 24; sein 2	Heidi ergriff sein Schüsselchen und trank und trank ohne Aufenthalt, denn der ganze Durst seiner langen Reise war ihm wieder aufgestiegen.
+107	rathen	18	17	7	27.8	23				gerathen 10	sein 6	»Ich bin so froh, dass sie anfangen Rätsel aufzugeben -- Ich glaube, das kann ich rathen,« fuhr sie laut fort.
+108	hinunterfliegen	13	12	5	27.6	10			flog hinunter 10			"Sid flog hinunter und schrie: ,,O, Tante Polly, komm, Tom stirbt!"""
+109	zurücklaufen	28	28	19	27.0	59			lief zurück 19			Es lief von einem Fenster zum anderen und dann wieder zum ersten zurück;
+110	hopsen	17	11	5	27.0	21			hopste 8			"""Hör auf zu hopsen, es ist Zeit zum Essen"", sagte Peter, ""jetzt sitz und fang an."""
+111	hinausspringen	22	22	10	26.9	37		springt hinaus 1	sprang hinaus 17			Nun stieg es die Leiter hinunter und sprang vor die Hütte hinaus.
+112	hinsagen	43	39	13	26.8	124			sagte hin 36; hinsagte 1	hingesagt 1	haben 1	Mitten in der Nacht stand der Großvater auf und sagte halblaut vor sich hin:
+113	hineinlaufen	25	25	8	26.8	48		hineinläuft 1; läuft hinein 1	lief hinein 21			Es gab der Frau Oberst nur flüchtig die Hand und lief scheu in die Küche hinein, um sich zu verstecken.
+114	davonlaufen	58	53	24	26.3	199		läuft davon 1	lief davon 14; davonlief 1	davongelaufen 17	sein 10	"Wie kannst du so davonlaufen!"", fuhr Fräulein Rottenmeier das Kind an."
+115	herbeikommen	40	39	18	26.2	112		kommt herbei 2	kam herbei 24; herbeikam 2			Ihm folgt der wunderschöne Mai, Der Juni kommt drauf schnell herbei,
+116	hinlaufen	43	41	17	26.1	126		läuft hin 5	lief hin 19	hinlief 1		"Heidi lief zu ihm hin und fragte: ""Wo ist der Turm mit der goldenen Kugel zuoberst?"
+117	zugehen	235	213	44	26.0	1266		geht zu 14; zugeht 10	ging zu 133; zuging 20	zugegangen 27	sein 24	"es ging geradeaus auf den Alten zu, streckte ihm die Hand entgegen und sagte: ""Guten Abend, Großvater!"""
+118	hervorgucken	18	18	8	25.2	26		guckt hervor 4	guckte hervor 5; hervorguckte 1			Das Kind guckte sehr harmlos darunter hervor und betrachtete mit unverhehlter Verwunderung den Turmbau auf dem Kopf der Dame.
+119	anlangen	104	100	36	24.3	463		anlangt 3	langte an 15; anlangte 13	angelangt 56	sein 20	So langten endlich die Kinder samt den Geißen oben bei der Hütte an und kamen der Base Dete zu Gesicht.
+120	umherschauen	17	16	9	24.3	24		schaut umher 2	schaute umher 11			Nach allen Seiten war die Aussicht offen, und er konnte frei umherschauen.
+121	brummeln	17	17	3	24.3	24			brummelte 15	gebrummelt 1	haben 1	»Ja, wenn ich das wüßte!« brummelte er.
+122	trösteen	15	14	12	24.3	18						Die Beamten trösteten: „In drei Stunden kommt wieder ein Zug.“
+123	bemerken	560	453	47	24.2	3499		bemerkt 23	bemerkte 316	bemerkt 109; bemerkten 1	haben 81	"""Mit dem Nach-ihm-Sehen muss sich der Peter nicht anstrengen"", bemerkte die Dete;"
+124	zanken	52	45	21	24.2	176		zankt 6	zankte 9	gezankt 15	haben 5	"Nicht zanken und böse werden, und dann weinen und dann versöhnen, und dann wieder von vorn anfangen, nun?"""
+125	springen	331	283	47	24.0	1925		springt 15	sprang 217			auf einmal sprang es weg und an den Schrank und von da hin und her.
+126	nähen	63	44	19	24.0	234	fastening or attaching objects using stitches made with a needle and thread		nähte 13	genäht 16	haben 10; sein 1	War er genäht, so musste er umgewendet werden, aber das tat Frau Greiner nie selbst, dazu war ihre Zeit zu kostbar.
+127	hineinschlüpfen	19	19	12	23.9	31			schlüpfte hinein 13; hineinschlüpfte 1			Die Tür wurde sofort geöffnet und er schlüpfte hinein.
+128	davongeflogen	10	10	5	23.9	6				davongeflogen 10	sein 10	Deshalb sagte er: »Meine Mutter war wohl sehr ärgerlich, als sie entdeckte, dass der Gänserich Martin davongeflogen war?«
+129	vernehmen	235	205	43	23.6	1290		vernimmt 6; vernehmt 1	vernahm 100	vernommen 67; vernehmet 1	haben 52	--Die Barbel wollte also diesmal die gute Gelegenheit, etwas zu vernehmen, nicht unbenutzt vorbeigehen lassen;
+130	verfertigen	23	19	11	23.6	46		verfertigt 1	verfertigte 5	verfertigt 11	haben 3; sein 2	»Mein Bruder,« hatte sie gesagt, »verfertigt solche Puppen, wie Edith hier eine hat.
+131	zutragen	53	52	23	23.4	184		zuträgt 1	zutrug 10; trug zu 6	zugetragen 34	haben 28	Während sich solches oben zutrug, stand unten die langjährige Köchin tiefsinnig bei ihren Töpfen und schüttelte den Kopf und seufzte:
+132	scharren	31	27	10	23.4	79		scharrt 3	scharrte 14	gescharrt 2	haben 1	Sie watschelt in den Eingang des Loches hinein und scharrt sich eine Vertiefung, einen richtigen Nestraum mit Wölbung und reichlich Platz zum Rühren;
+133	zunehmen	50	46	21	23.1	170		nimmt zu 10; zunimmt 1	nahm zu 22; zunahm 7	zugenommen 6	haben 6	Eine Großmama 11 Heidi nimmt auf einer Seite zu und auf der anderen ab 12
+134	meinen	1286	901	53	23.0	8742	judgment, viewpoint, or statement that is not conclusive; may deal with subjective matters in which there is no conclusive finding	meint 106	meinte 668	gemeint 131; gemeinet 1	haben 72	"nimm meine mit!"""
+135	hüten	113	96	32	22.8	526		hütet 3; gehütet 1	hütete 29	gehütet 16	haben 6; sein 3	diese musste er hüten, und er hatte nur noch Fetzen auf sich und bekam nur von den Trebern, welche die Schweinchen aßen, ein klein wenig.
+136	auspacken	36	32	17	22.4	104		packt aus 1	packte aus 9; auspackte 1	ausgepackt 10	haben 2	"""Ich denke, erst wird der Unterricht beendet, dann der Korb ausgepackt"", bemerkte Fräulein Rottenmeier."
+137	sehn	83	64	10	22.1	354		sehn 18		sehn 2		"Du wirst wohl sehn, wie teuer man es hält."""
+138	fressen	79	67	27	21.9	332	to ingest food	frißt 17				Und hatt es nie, nur in der Not, vergessen, Dass Bäre selten Tote fressen.
+139	heulen	72	57	19	21.9	293	to cry	heult 27	heulte 13	geheult 2	haben 1	Der Löwe brüllt, der Wolf heult und so werdet, ihr euch noch oft beizeiten mit der Flucht retten können.
+140	umfallen	35	35	21	21.8	101		fällt um 3; umfällt 1	fiel um 8; umfiel 7			Und gib Acht auf das Kind, Peterli, dass es nicht umfällt, und steh nicht still mit ihm, dass es nicht friert, hörst du?
+141	krabbelten	5	5	4	21.8	0						
+142	dazusingen	5	5	4	21.8	0			sang dazu 4			Im Dorf tanzten die Leute vergnügt und sangen dazu:
+143	seydn	5	4	3	21.8	0			seyd 2			Ihr holden Kleinen seyd ja auch die Schäflein seiner Heerde!
+144	nachsehen	148	143	35	21.7	749		sieht nach 3; seht nach 1	sah nach 57; nachsah 10	nachzusehen 4; nachgesehen 1	sein 1	"ich will, wenn's meine Herrschaft erlaubt, bald wieder kommen und nachsehen, wie es geht mit ihm."""
+145	hinaufsteigen	74	71	22	21.7	305		steigt hinauf 3	stieg hinauf 40			Er stieg die Leiter hinauf und trat an Heidis Lager heran.
+146	finden	2150	1333	56	21.6	15172	to find; judgment, viewpoint, or statement that is not conclusive; may deal with subjective matters in which there is no conclusive finding	findet 133; find 1	fand 667	gefunden 359	haben 253; sein 7	da war diese gestorben, und die Dete war nach dem Bade Ragaz hinübergezogen, wo sie im großen Hotel als Zimmermädchen einen guten Verdienst fand.
+147	ausstoßen	94	89	30	21.6	421		stößt aus 12	stieß aus 63			"So war's?"", stieß Sebastian jetzt in größter Verwunderung aus, denn es war ihm eben ein großes Licht aufgegangen über die Geistererscheinung."
+148	davonfliegen	15	14	8	21.6	21		fliegt davon 1	flog davon 6	davonfliegt 1		Nur die Depesche wurde arg zugerichtet und flog in Fetzen davon.
+149	zurückfliegen	15	15	8	21.6	21			flog zurück 4			Du darfst zuerst nur kleine Strecken fliegen und musst dir die Gegenstände genau merken, an denen du vorüberkommst, damit du immer zurückfliegen kannst.
+150	zusammenfahren	58	55	20	21.5	218		fährt zusammen 3	fuhr zusammen 44			Der Sultan fuhr erschreckt zusammen.
+151	hinaufkommen	26	26	13	21.5	62		kommt hinauf 2	hinaufkam 7; kam hinauf 4			Aber einmal kommen wir dann miteinander hinauf, der Großvater hat es uns versprochen.«
+152	herumspringen	18	18	11	21.5	31			sprang herum 11			Die Kätzchen sind auch lustig droben, die springen auf dem ganzen Estrich herum und tun wie närrisch.
+153	weggelaufen	14	9	6	21.5	18				weggelaufen 4	sein 2	', dann hat keiner Mitleiden mit ihm, sondern jeder sagt zu ihm: 'Du bist ja selbst vom lieben Gott weggelaufen, der dir helfen konnte!
+154	wartn	23	22	10	21.4	50		wart 2				"Aber die Großmutter rief besorgt: ""Wart, wart, Heidi;"
+155	zuschauen	60	57	25	21.0	231		schaut zu 1	schaute zu 27; zuschaute 4	zugeschaut 13	haben 10	Der Großvater stand unter der Schopftür und schaute dem Kind zu.
+156	hervornehmen	16	15	9	21.0	25		nimmt hervor 1	nahm hervor 13			Dann ging sie an den Schrank, nahm Heidis Sachen hervor und packte sie zusammen:
+157	weideten	16	16	9	21.0	25						Auf der einen Seite der sumpfigen Wiese, wo die Gänse weideten, lag eine breite steinerne Mauer.
+158	vertheidigen	12	11	6	20.9	13			vertheidigte 4			»Aber ich bin nicht daran gewöhnt!« vertheidigte sich die arme Alice in weinerlichem Tone.
+159	mitbringen	180	152	38	20.7	962		bringt mit 8; mitbringt 2	brachte mit 24	mitgebracht 92	haben 72; sein 1	"""aber du musst heraufkommen und mir ein Leintuch mitbringen, denn auf ein Bett kommt auch ein Leintuch, und darauf liegt man."""
+160	vermittelsen	14	12	3	20.7	19		vermittelst 12				denn auch den Spiegel des Schiffs hatte man fortbringen können, da man ihn vermittelst des gefundenen Beiles kleiner gemacht hatte.
+161	nachfolgen	31	28	17	20.6	86		folgt nach 2; nachfolgt 1	folgte nach 12; nachfolgte 2			"""So geh hinunter, wenn wir denn einig sind"", sagte der Alte und folgte dem Kind auf dem Fuß nach."
+162	aufheben	185	173	42	20.4	997		hebt auf 6; aufhebt 5	hob auf 88; aufhob 6	aufgehoben 43	haben 15; sein 8	Der Türmer hob Heidi vom Boden auf und hielt es an das offene Fenster.
+163	dauern	233	218	44	20.1	1316		dauert 36	dauerte 130	gedauert 18	haben 16	Denn siehst du, alle Morgen um zehn Uhr kommt der Herr Kandidat, und dann fangen die Stunden an und dauern bis um zwei Uhr, das ist so lange.
+164	ermahnen	48	45	26	20.1	171		ermahnt 2	ermahnte 28	ermahnt 5	haben 2	Dann klopfte es dem Schneehöppli, das sich immer am nächsten zu ihm hielt, zärtlich auf den Rücken und ermahnte es noch besonders, nun recht folgsam zu sein.
+165	anschauen	194	166	36	20.0	1060	look at	schaut an 7; anschaut 5	schaute an 112; anschaute 17	angeschaut 10	haben 8	Der Peter gehorchte sofort und verschwand, denn der Öhi hatte ihn angeschaut, dass er schon genug davon hatte.
+166	erreichen	429	358	50	19.7	2660		erreicht 21	erreichte 66	erreicht 176	haben 136; sein 15	Wie das Kind ihn erreicht hatte, umfaßte es zärtlich den ausgestreckten Arm und rief in voller Herzensfreude: »Guten Tag, Herr Doktor!
+167	brauchsen	100	90	30	19.7	469		brauchst 32				"""Warum brauchst du's nicht mehr?"", setzte er laut hinzu."
+168	aufpassen	88	76	29	19.7	397		paßt auf 7	paßte auf 8; aufpaßte 3	aufgepaßt 14	haben 7	Dann sollte der Peter ihnen Milch dazu geben, soviel sie trinken wollten, aber das Heidi sollte gut aufpassen, dass er sie vom Schwänli nehme.
+169	schrien	70	57	20	19.5	294			schrien 28			Und so rissen sie nun alle drei jeder mit beiden Händen an den Haaren eines anderen und schrien dazu fürchterlich.
+170	verrathen	16	16	6	19.5	27			verrathen 5	verrathen 4	haben 4	er scheute sich, seine Eltern zu verrathen;
+171	verstecken	173	142	42	19.1	932		versteckt 8	versteckte 22	versteckt 73	haben 37; sein 4	Als Heidi später in sein Zimmer kam und in sein Bett steigen wollte, lag sein zerdrücktes Strohhütchen unter der Decke versteckt.
+172	hinrennen	7	7	5	19.1	3		rennt hin 1	rannte hin 5			Das Heidi rannte zu ihr hin und wurde mit großer Zärtlichkeit begrüßt.
+173	pflücken	59	52	25	19.0	235		pflückt 2	pflückte 17	gepflückt 13	haben 5; sein 1	Und überlegen noch um vieles Den Früchten, die sich Aladdin Im Zaubergarten einst gepflückt.
+174	hinaufzuklettern	11	11	5	19.0	12						sie finden den Baum, versuchen hinaufzuklettern, sind aber nicht imstande dazu.
+175	ändern	268	93	33	18.9	1565		ändert 4	änderte 14	geändert 194	haben 5	dann änderte sie den Ton ein wenig und fuhr halb freundlich, halb ärgerlich weiter:
+176	erzeigen	12	11	6	18.9	15			erzeigte 2	erzeigt 3	haben 1	»Aber Sie haben ihn doch einmal bitter enttäuscht und gekränkt, dafür sollten Sie ihm wirklich Gutes erzeigen.«
+177	vorkommen	410	352	50	18.8	2543		kommt vor 33; vorkommt 12	kam vor 203; vorkam 38	vorgekommen 67	sein 66	"""Aber, Jungfer Dete, ich muss Ihnen doch sagen, dass mir das Kind für sein Alter sonderbar vorkommt."
+178	gehn	42	34	8	18.8	145		gehn 3		gehn 4		Willst du nicht mit mir gehn?
+179	zurückkehren	394	330	44	18.6	2435	to return	zurückkehrt 8; kehrt zurück 5	kehrte zurück 112; zurückkehrte 39	zurückgekehrt 47	sein 40	Aber schon unter der Haustür traf es auf ein großes Reisehindernis, auf Fräulein Rottenmeier selbst, die eben von einem Ausgang zurückkehrte.
+180	heuln	44	39	17	18.6	156			heulte 44			durch den Schornstein heulte und ächzte es wie Jammerstimmen, und in den alten Tannen draußen tobte es mit solcher Wut, dass hier und da ein Ast niederkrachte.
+181	hinausfliegen	17	17	13	18.6	32		fliegt hinaus 3	flog hinaus 8			Nur einmal hob sie den Arm und ließ ein langes Haar über die Linde draußen in die Morgenluft hinausfliegen.
+182	zurannen	10	10	7	18.3	10			rannte zu 7	zugerannt 1		Augenblicklich sprang Heidi in die Höhe und rannte mit seiner Schürze voller Blumen dem Peter zu.
+183	schluchzen	118	102	35	18.1	591			schluchzte 96			Voller Jammer schluchzte es fortwährend:
+184	anmachen	13	13	8	18.1	19	to fix one objec onto to another; to enable a device; to talk to someone with the intend to provoke sexual interest	macht an 1	machte an 5; anmachte 1			Und machte Wiseli zuvor das Feuer an, so zankte wieder der Chäppi, dass es nicht zuerst das Loch in seinem Jackenärmel hatte flicken können.
+185	herausdringen	13	13	7	18.1	19			drang heraus 7; herausdrang 2			In diesem Augenblick ging eine Zimmertüre auf, fröhliches Kindergelächter drang heraus;
+186	kommn	63	58	22	18.0	262		komm 1				"""Ach was, komm jetzt!"
+187	heimtragen	12	10	6	18.0	16			trug heim 1			jubelnd trug man es heim, genoß mit großem Behagen den Inhalt, und hatte noch obendrein mehre ganz artige Gefäße, an denen es ihnen seither sehr gefehlt hatte.
+188	beistehen	45	42	17	17.9	164		beisteht 2; steht bei 2	stand bei 2			Der Peter schrie nach Heidi, dass es ihm beistehe, denn er konnte nicht aufstehen und riss dem Distelfink fast das Bein aus.
+189	herausholen	40	39	23	17.9	138		holt heraus 2	holte heraus 21	herausgeholt 5	haben 1	Jetzt holen Sie mir das Kind heraus und bringen Sie mir's in meine Stube, ich will ihm einige hübsche Bücher geben, die ich mitgebracht habe.
+190	zumachen	47	46	24	17.8	175		macht zu 2	machte zu 22; zumachte 6			Damit kehrte sich der Türmer um und wollte die Tür zumachen.
+191	erklettern	15	15	12	17.8	26		erklettert 1	erkletterte 3	erklettert 2	haben 2	Und als sie, diesem Rufe gehorsam, die unerreichbaren Diskanttöne zu erklettern strebte, da scholl ein rasendes Gelächter durch den Saal.
+192	bekommsen	29	27	16	17.6	85		bekommst 18		bekommst 6		"""Und von wem bekommst du die Milch?"", wollte Heidi wissen."
+193	herauskommn	4	4	3	17.5	0						Jetzt kam durch das offene Fenster ein Sonnenstrahl so lustig hereingeschossen, und es war geradezu, als riefe er: »Komm heraus, Heidi, komm heraus!«
+194	fortschleichen	4	4	4	17.5	0		schleicht fort 1				Der Fall bringt ihn fast um den Oden, Und keuchend schleicht er zornig fort.
+195	ausstopfen	4	4	3	17.5	0			ausstopfte 1			So machte auch sie ein betrübtes Gesicht, während sie die Puppenbälge mit Sägspänen ausstopfte, und es lag eine rechte Mißstimmung über der ganzen Familie.
+196	hinauflassen	4	3	3	17.5	0						»Geh einmal herunter, Hermann, und lasse mich hinauf, ich will dir zeigen, wie man das macht.
+197	erwiedern	4	4	3	17.5	0						»Wir wollen weiter spielen,« sagte die Königin zu Alice, und diese, viel zu erschrocken, ein Wort zu erwiedern, folgte ihr langsam nach dem Croquet-Felde.
+198	hinaufkrabbelen	4	4	3	17.5	0			krabbelte hinauf 3; hinaufkrabbelte 1			Sie sah ihm nach, wie er eifrig den Zweig hinaufkrabbelte.
+199	hinausschallen	4	4	4	17.5	0			hinausschallte 2; schallte hinaus 1			Tante Toni saß ganz still und freute sich, wie der helle Kindergesang so frisch in die freie Natur hinausschallte.
+200	hineinrutschen	4	4	4	17.5	0		rutscht hinein 1	rutschte hinein 2			aber er versucht es auch und sein Finger rutscht gleich ganz tief hinein.
+201	umhertanzen	4	4	4	17.5	0			tanzte umher 3			Dieser war überglücklich und tanzte im bloßen Hemde vor lauter Freude in dem kleinen Zimmer umher.
+202	verschlaufen	4	3	3	17.5	0			verschlief 4			Dann ging er und legte sich in sein Bett und verschlief den schönen Pfingstnachmittag.
+203	hinabrennen	4	4	3	17.5	0		rennt hinab 1	rannte hinab 2	hinabrennt 1		Das ging so geschwinde, wie Tauwasser einen Berg hinabrennt.
+204	bewirthen	4	4	4	17.5	0			bewirthete 2			William, der wirklich mit sich selbst kämpfte, folgte dieser Einladung und Capitain Hansen bewirthete seinen jungen Gast auf das Beste.
+205	hervorziehen	63	61	28	17.3	266			zog hervor 54; hervorzog 1	hervorgezogen 2	haben 1	dann zog er unter seinen Hemden ein langes, grobes Tuch hervor, das musste so etwas sein wie ein Leintuch.
+206	versorgen	60	55	19	17.3	249		versorgt 1	versorgte 9	versorgt 19	sein 8; haben 2	Sie wissen ja, wo das Wiseli versorgt ist.
+207	zähmen	24	15	9	17.3	63				gezähmt 3		Wenn du inzwischen das Wiseli schützen und den groben Chäppi ein wenig zähmen kannst, ohne selbst dabei grob zu werden, so bin ich ganz damit einverstanden.
+208	niederschlagen	75	71	29	17.2	336	to fall from the sky	schlägt nieder 2	schlug nieder 15; niederschlug 2	niedergeschlagen 32	sein 2	es zog bald seinen Kopf zurück und sagte niedergeschlagen:
+209	hinsetzen	68	62	25	17.0	296		setzt hin 3	setzte hin 40; hinsetzte 7	hingesetzt 6	haben 5	Nachdem die Dete verschwunden war, hatte der Öhi sich wieder auf die Bank hingesetzt und blies nun große Wolken aus seiner Pfeife;
+210	anstimmen	38	34	19	16.8	132		stimmt an 5	stimmte an 9; anstimmte 3	angestimmt 7	haben 5	Jetzt begann der Peter mit einem Mal ein so gewaltiges Pfeifen und Rufen anzustimmen, dass Heidi gar nicht wusste, was begegnen sollte;
+211	dableiben	32	29	16	16.8	102		bleibt da 2; dableibt 1	blieb da 2	dageblieben 1	sein 1	Aber Klara beschwichtigte immer wieder diese Anfälle und bewies Heidi, dass es doch sicher dableiben müsse, bis der Papa komme;
+212	fortdauern	14	14	7	16.8	24		dauert fort 2	dauerte fort 10			Der Winter dauert fort
+213	putzen	79	74	36	16.7	363	to clean	putzt 3	putzte 30	geputzt 23	haben 6; sein 1	"""Der Alm-Öhi putzt und wäscht sie und gibt ihnen Salz und hat den schönsten Stall."""
+214	verleben	60	57	26	16.7	252		verlebt 2	verlebte 21	verlebt 20	haben 13; sein 1	Die Tage, die nun folgten, waren noch von den allerschönsten, welche Klara auf der Alp verlebt hatte.
+215	anziehen	202	182	46	16.6	1150		anzieht 5; zieht an 3	zog an 46; anzog 10	angezogen 67	haben 25	Die Brigitte war eben daran, Peters zweites Hemd an die Sonne zu hängen, damit, wenn das eine wieder genug getragen war, das andere angezogen werden konnte.
+216	stibitzen	9	9	4	16.5	9		stibitzt 3	stibitzte 2			Ich sehe so etwas gar zu gern, besonders die Affen -- von ihnen kann man recht geschickt stibitzen lernen.
+217	erblickn	25	22	15	16.4	70						sie erblickten darin eine weitere Bestätigung für die Annahme, dass die große Eule ein Zaubervogel sei, den man am besten in Ruhe ließ.
+218	herauskommen	176	162	41	16.2	982		kommt heraus 14; herauskommt 10	kam heraus 61; herauskam 23	herausgekommen 8; herauskommen 1	sein 8	Denn der Großvater war in den Schopf hineingegangen und kam nun heraus mit einem breiten Stoßschlitten:
+219	hüpfen	56	52	27	16.0	233		hüpft 6	hüpfte 28			Das Heidi und die Geißen hüpften und sprangen fröhlich neben ihm her.
+220	hineinkommen	38	32	18	16.0	135		kommt hinein 3; hineinkommt 2	kam hinein 13; hineinkam 4	hineingekommen 2	sein 2	"""So, nun kommt noch das Schüsselchen hinein"", fuhr der Öhi fort, ""denn das Kind kann nicht trinken wie du, nur so von der Geiß weg, es kennt das nicht."
+221	erschrocken	92	87	31	15.9	447						"""Ich wollte nicht herumstreichen, ich wollte nur heimgehen"", entgegnete Heidi erschrocken."
+222	schauen	392	331	47	15.8	2470		schaut 19	schaute 239	geschaut 22	haben 14	Derweilen schaute das Heidi vergnüglich um sich, entdeckte den Geißenstall, der an die Hütte angebaut war, und guckte hinein.
+223	lecken	39	29	12	15.8	141	to have a leak; to lick	leckt 1	leckte 25	geleckt 2	haben 1	Die Kinder holten Milch herbei und es leckte dieselbe mit seinem rosarothen Züngelchen.
+224	weiden	38	35	16	15.7	136		weidet 2	weidete 14	geweidet 2	haben 1	Dann weidet er die Schäfchen
+225	erfreuen	83	77	25	15.5	395		erfreut 11	erfreute 15	erfreut 4	haben 2	Herz erfreuten die Blumen und der Sonnenschein, wenn es am Morgen in die Schule ging und nachher wieder zum Buchenrain zurückkehrte.
+226	konnten	12	11	7	15.5	19		konnt 4; konntet 2				Die Mutter konnt' ihm nicht verhehlen, Wie sehr sie drob verwundert war.
+227	übern	15	13	3	15.4	30						"Jetzt, wo wir Geld haben und 'ne Höhle und alles, was wir als Räuber brauchen, wirft einem so 'ne verrückte Tollheit alles übern Haufen!"""
+228	fleigen	9	7	5	15.4	10		flieg 8				Doch wette,--seh ich schon nicht adlermäßig aus-- Ich flieg ihm gleich.--Fleug, Prahler, rief die Maus.
+229	hingelangen	7	7	4	15.4	5		hingelangt 2	gelangte hin 3			Geh' nur gradaus, dann wirst du bald Zu einer Treppe hingelangen;
+230	dranliegen	7	6	4	15.4	5		liegt dran 4	lag dran 2			Da lagen die Holzscheite vorne dran, und die Base sah Kasperle nicht.
+231	daherkamen	6	6	3	15.4	3						Aber da sah der Junge, dass zwei Kinder, die auf dem Wege daherkamen, seinen Schuh aufgelesen hatten.
+232	hinuntergehen	63	55	21	15.3	277		geht hinunter 4; hinuntergeht 1	ging hinunter 37; hinunterging 3			so gingen sie den Berg hinunter.
+233	schnarchen	34	26	14	15.3	117	sound made while sleeping	schnarcht 6	schnarchte 21			Da lag er reglos wie ein Brett Und schnarchte bis zum späten Morgen.
+234	hinunterspringen	17	15	9	15.3	38			sprang hinunter 14; hinuntersprang 1			Inzwischen sprang das Wiseli mit vergnügtem Herzen den Berg hinunter, vorbei an Schreiner Andres’ Gärtchen.
+235	losstürzen	17	17	11	15.3	38		stürzt los 2	stürzte los 9			Hinter jedem Busch hervor, aus jeder Hecke heraus meinte jetzt der Peter den Polizeidiener aus Frankfurt auf sich losstürzen zu sehen.
+236	hineinfliegen	11	10	5	15.3	16		fliegt hinein 4	flog hinein 1			Sie fliegt in eine Tanne hinein und setzt sich zusammengekauert hin, mit gesträubten Hörnern und funkelnden Lichtern.
+237	davonrannen	11	10	7	15.3	16			rannte davon 8; davonrannte 2			Die Tante hatte kaum vor den Kindern diese Befürchtung ausgesprochen, als auch Heinrich schon davonrannte nach der Bahnhofstraße.
+238	zurennen	10	10	8	15.3	13		rennt zu 1	rannte zu 9			Jetzt kam das Heidi aus der Hütte gesprungen und rannte dem Schopf zu.
+239	entrüstetrufen	10	10	7	15.3	13			rief entrüstet 9			»Wie kann man diese Worte reizend finden!« rief Flora entrüstet.
+240	wirstn	21	21	13	15.2	55						"""Großvater, heut wirst du immer schöner, so warst du noch gar nie."""
+241	nachlaufen	42	41	23	15.1	160		läuft nach 1	lief nach 18; nachlief 3	nachgelaufen 4	sein 1	"Gut Nacht--wie heißen sie, Großvater, wie heißen sie?"", rief das Kind und lief dem verschwindenden Alten und den Geißen nach."
+242	hinausschlüpfen	13	12	10	15.1	23			schlüpfte hinaus 5			Aber als die Marder hinausschlüpften, flog auch Strix auf ...
+243	holen	493	403	51	15.0	3201		holt 24; hol 3	holte 108; hole 17	geholt 65	haben 34; sein 1	"""So, das kannst du, aber hol das Zeug"", befahl der Großvater, ""es kommt in den Kasten."""
+244	wanderen	79	72	29	15.0	374			wanderte 67			Mit diesen Worten nahm Herr Sesemann den Arm seines Freundes und wanderte mit ihm hin und her, um die Sache noch weiter zu besprechen.
+245	zappeln	30	29	16	15.0	98		zappelt 3	zappelte 17			Aber es zappelte jämmerlich und schrie: “
+246	herumfliegen	14	14	8	14.9	27		fliegt herum 3	flog herum 3			Da fliegt sie einmal rund im Hofe herum -- die Jungen sind weg!
+247	gefallen	191	167	44	14.8	1099			gefiel 131	gefallen 2; gefalle 1	haben 1	"so hat es dir gefallen auf der Weide?"""
+248	trösten	174	161	37	14.5	988		tröstet 7	tröstete 80	getröstet 13	haben 1	Die Großmutter suchte nun das Kind zu trösten, aber es gelang ihr nicht so bald.
+249	anbrechen	38	37	19	14.5	141		bricht an 2	brach an 18; anbrach 10	angebrochen 7	sein 6	Es wird dunkler und die Nacht bricht an.
+250	auswählen	33	29	16	14.5	115	to choose	auswählt 1	wählte aus 3; auswählte 1	ausgewählt 10	haben 9	In völliger Ruhe kann sie ihre Beute auswählen: dasjenige der Zicklein das zu äußerst liegt.
+251	erschallen	23	23	15	14.5	66		erschallt 6	erschallte 1			Der Ruf bis in die Stadt erschallt?
+252	fortsetzen	108	105	35	14.4	559		setzt fort 3; fortsetzt 2	setzte fort 35; fortsetzte 7	fortgesetzt 25	haben 2; sein 1	Das Kind setzte seine Untersuchungen fort und kam hinter die Hütte zu den alten Tannen.
+253	bessern	44	40	23	14.4	174		bessert 3	besserte 2	gebessert 7	haben 2; sein 1	Ich hatt' einen Kameraden, Einen bessern find'st du nit.
+254	wuchsen	37	36	16	14.4	136						die wuchsen förmlich aus dem Boden, wo die Axt rodete und wohin der Pflug kam.
+255	grämen	32	29	15	14.4	110			grämte 4	gegrämt 5	haben 4	"""Freund, sollte dich der Gegensatz In meiner Stimmung Wunder nehmen,"" Begann sie lächelnd, ""So vernimm, Ich mag mich jetzt nicht länger grämen."
+256	meckern	10	10	7	14.4	14			meckerte 1	gemeckert 1		"Schlaf wohl, Schneehöppli, und denk dran, dass ich morgen wiederkomme und dass du nie mehr so jämmerlich meckern musst."""
+257	vertraun	9	9	7	14.4	11						"Doch wirds auch nicht von mir ernährt, Der über uns wirds schon ernähren, Dem über uns vertrau!"""
+258	fortmachen	9	8	7	14.4	11		macht fort 3	machte fort 1			Es war hohe Zeit sich fortzumachen;
+259	herzulaufen	9	8	4	14.4	11			lief herzu 2			Dem Waldhüter blieb nichts andres übrig, als hinter Karr herzulaufen, und als er an das Moor kam
+260	heraufkommen	72	64	26	14.3	337		kommt herauf 6; heraufkommt 2	kam herauf 29; heraufkam 9			"""aber du musst heraufkommen und mir ein Leintuch mitbringen, denn auf ein Bett kommt auch ein Leintuch, und darauf liegt man."""
+261	schlüpfen	72	69	27	14.3	337		schlüpft 2	schlüpfte 42	geschlüpft 10	sein 5	Rasch schlüpfte ich in den darunter befindlichen Raum, in welchem ich an der Wand entlang ganz aufrecht gehen konnte;
+262	besann	69	65	30	14.3	319			besann 66			Heidi legte seine Hände ineinander und besann sich noch ein Weilchen:
+263	versammeln	103	98	40	14.1	530			versammelte 13	versammelt 72	sein 25; haben 11	desto lieber, da es ihm an Dienerschaft nicht fehlte, versammelte er bei sich die Gesellschaft seiner Freunde und Freundinnen.
+264	dastinden	36	35	18	14.1	132			dastand 36			In dem Augenblick trat der Lehrer aus seinem Zimmer und schaute überrascht um sich und auf den Otto, der mit großen Augen dastand.
+265	entschlüpfen	30	30	17	14.1	101		entschlüpft 6	entschlüpfte 10	entschlüpft 5	sein 4	Murr ergriff die Sperlingsmutter mit scharfer sicherer Kralle, während das Männchen schreiend entschlüpfte.
+266	aufwachen	94	78	32	14.0	474		aufwacht 10; wacht auf 8	aufwachte 20; wachte auf 20	aufgewacht 14	sein 9	Als er aufwachte, lagen da ein paar glänzende Samenkörner.
+267	stillstehen	84	82	34	14.0	412		steht still 6	stand still 60	stillgestanden 1	sein 1	Die Angeredete stand still;
+268	verklatschen	7	6	3	14.0	6						Na, ich werd' nicht hingehn und diese Närrin beim alten Dobbins verklatschen, aber 's kommt auf irgend 'ne andere Art ja doch raus;
+269	beschließen	99	91	34	13.9	506		beschließt 3		beschlossen 65	haben 14; sein 2	Und es wurde gleich beschlossen, der Vater sollte am folgenden Tag hingehen, um sich mit dem Herrn Pfarrer zu beraten, was für Wiseli getan werden könnte.
+270	zubringen	61	58	29	13.9	274		bringt zu 1	brachte zu 13	zugebracht 17	haben 12	Dies war der letzte Winter, den das Kind so ohne allen Unterricht zugebracht hat;
+271	schrieen	32	30	15	13.9	112			schrieen 17			Da schrieen die Leute vor Schrecken, die Glocken läuteten;
+272	gefressen	31	28	18	13.9	107						Das Geißlein hatte sich schnell umgewandt und dem Heidi vergnüglich die Kräuter aus der Hand gefressen.
+273	abzuholen	30	30	16	13.9	102						Die Kinder waren so spät zu ihrer Mahlzeit gekommen, dass schon gleich nachher der Großvater zu sehen war, der die Alm hinanstieg, um sie abzuholen.
+274	herausbringen	64	62	22	13.8	292		bringt heraus 2; herausbringt 1	brachte heraus 25	herausgebracht 7	haben 6	dann hatte er beide schön geputzt und gewaschen zur Bergreise und brachte sie nun auf den Platz heraus.
+275	fortziehen	38	37	22	13.8	144		fortzieht 1	zog fort 20			Heidi nahm die Großmutter bei der Hand und wollte sie fortziehen, denn es fing an, ihm ganz ängstlich zumute zu werden, dass es ihr nirgends hell wurde.
+276	eingewöhnen	11	8	5	13.8	18		eingewöhnt 2		eingewöhnt 6	haben 2	] Wenn Sie dadurch auch mehr Mühe haben, wird es doch für die ersten Wochen, bis der Kleine eingewöhnt ist, gut sein.«
+277	wehtun	75	66	29	13.7	359		tut weh 39	tat weh 30	wehgetan 3	haben 3	Sieh, da kannst du hinabfallen und ein Bein brechen, das tut dir furchtbar weh.
+278	verkaufen	183	119	34	13.6	1060	selling a product or service in return for money or other compensation      sales; breaking or violation of a presumptive contract, trust, or confidence	verkauft 6	verkaufte 14	verkauft 68	haben 23; sein 2	"""Es tut so, weil die Alte nicht mehr mitkommt, sie haben sie verkauft nach Maienfeld vorgestern, nun kommt sie nicht mehr auf die Alm."""
+279	besinnen	103	100	32	13.6	534		besinnt 6	besann 12			Ich bin gekommen, es Euch zeitig zu sagen, Nachbar, damit Ihr Euch besinnen und einrichten könnt den Sommer durch.
+280	kreischen	57	43	17	13.6	252		kreischt 5	kreischte 30	gekreischt 2	haben 2	"Da ward der Wind voll Trotz und Wut Und kreischte: """
+281	hingelaufen	8	8	7	13.6	9				hingelaufen 8	sein 8	Es war wieder zu ihr hingelaufen und hielt sie fest.
+282	herausschlüpfen	8	7	7	13.6	9		schlüpft heraus 1	schlüpfte heraus 5; herausschlüpfte 1			Das war Kätzchen eben recht, es schlüpfte heraus aus den seidenen Fesseln und ergriff die Flucht;
+283	backen	34	25	16	13.5	124	to bake; to be in a baking oven; to mix something into something else; working as a baking appliance	backt 1		gebacken 13	haben 6; sein 1	Wer wird Brot daraus backen?
+284	hinaufziehen	20	17	12	13.5	55		hinaufzieht 1	zog hinauf 6; hinaufzog 4	hinaufgezogen 3	sein 2	Dann kehrte er um mit seinem Schlitten und zog ihn den Berg hinauf.
+285	hinunterrufen	12	10	6	13.5	22			rief hinunter 10			"""Hier will ich schlafen"", rief Heidi hinunter, ""hier ist's schön!"
+286	herumsuchen	9	9	5	13.5	12		sucht herum 1	suchte herum 6			Heidi suchte in seiner Tasche herum.
+287	merken	543	458	52	13.4	3595	conscious cognitive process of creating complete memories of certain information	merkt 42	merkte 223	gemerkt 79	haben 64	"""der Nachmittag ist mir auch vergangen, ohne dass ich's merkte."""
+288	versuchen	524	428	51	13.2	3463		versucht 22	versuchte 212	versucht 70	haben 47	"""Und Heidi hat auch noch gar nie versucht zu zanken, Papa"", warf Klara schnell ein."
+289	erhalten	460	389	50	13.1	3005	to get, to receive; to maintain	erhält 32; erhaltet 2	erhielt 147	erhalten 128	haben 78; sein 2	"Und die Großmutter sagte wieder: ""Wenn mir nur der Herrgott das Kind erhält und dem Alm-Öhi den guten Willen!"
+290	mitkommen	65	56	25	13.1	303		kommt mit 14; mitkommt 4	kam mit 2			"Hier rief es aus einer Tür: ""Wart einen Augenblick, Dete, ich komme mit, wenn du weiter hinaufgehst."
+291	überreichen	60	55	23	13.1	273		überreicht 3	überreichte 42	überreicht 7	haben 5	"Denn achtundsechzig will dafür Ich auf dem Fleck dir überreichen."""
+292	vorbeifahren	18	16	7	13.1	47		fährt vorbei 1	fuhr vorbei 6			Es fuhren viele Wagen hintereinander vorbei, darum ist es so fortgeschossen;
+293	wiederrufen	11	11	8	13.1	19			rief wieder 11			"""Ich mache jetzt das Bett!"", rief das Kind wieder, indem es oben geschäftig hin und her fuhr;"
+294	durchstechen	3	3	3	13.1	0	to punctuate					aber das war sehr gut, denn durch das feste Zeug konnten die spitzen Heuhalme nicht durchstechen.
+295	herunterkämen	3	3	3	13.1	0				herunterkämen 1		sehnsüchtig ausschauend, ob nicht die Mutter endlich wieder die Straße herunterkäme, in der sie vor seinen Augen verschwunden war.
+296	dahergesprungen	3	3	3	13.1	0						Sie brauchten auch nicht vergeblich zu warten, denn sobald die Krähen fertig waren, kamen die Hasen dahergesprungen.
+297	aufgeflogen	3	3	3	13.1	0				aufgeflogen 3	sein 3	Es war ihr gar nicht recht zum Bewußtsein gekommen, dass sie aufgeflogen war.
+298	überwältign	3	3	3	13.1	0						die Erinnerung, die eben durchgemachte Aufregung, das lang verhaltene Weinen überwältigten die Kräfte des Kindes;
+299	zusammenklemmen	3	3	3	13.1	0		klemmt zusammen 1	klemmte zusammen 2			Dem Peter lag etwas auf dem Magen, das nagte und würgte ihn und klemmte ihm jeden Bissen zusammen.
+300	herunterjagen	3	3	3	13.1	0			jagte herunter 1; herunterjagte 1	heruntergejagt 1	haben 1	»Der Wind kann ihn heruntergejagt haben, das hat der Öhi selbst gesagt«, bemerkte die Barbel, die nicht genug das schöne rote Zeug bewundern konnte.
+301	liefen	3	3	3	13.1	0						Und das war gut, denn eben sah es, wie die beiden Buben dem Haus zuliefen, und es durfte um alles nicht nach ihnen daheim ankommen.
+302	einherbrausen	3	3	3	13.1	0		braust einher 1	brauste einher 2			 Da braust der Wind gar wild einher Und rüttelt an den Bäumen, Er beugt sie hin, er beugt sie her, Läßt keine Zeit zum Träumen.
+303	vorüberstrichen	3	3	3	13.1	0						mitunter, wenn die Fledermäuse an den Scheiben vorüberstrichen, sah er verlangend in die Mondnacht hinaus, die wie ein Zauber draußen über den Feldern lag.
+304	herauszuheben	3	3	3	13.1	0						Miguelito war einige Sekunden unschlüssig, dann aber siegte die Versuchung, er ging nach der Wiege und bat Carlos, ihm zu helfen, das Kind herauszuheben.
+305	hinterdreinlaufen	3	3	3	13.1	0			lief hinterdrein 1			Die Kinder hielten ihn zum Narren Und liefen gröhlend hinterdrein.
+306	festversprechen	3	3	3	13.1	0			versprach fest 1			Wenn dieses Spiel auch recht verfänglich Ihr vorkam, so versprach sie fest, Sie werde tun, was unumgänglich.
+307	losfliegen	3	3	3	13.1	0			flog los 3			Mit dem Rufe: »Wart', das sollst du büßen!« flog er wie ein Pfeil auf den schlechten Kameraden los, faßte ihn um den Leib und warf ihn zu Boden.
+308	herumkugelen	3	3	3	13.1	0			kugelte herum 2			Es kugelte mit dem dreijährigen Bruder, dem Johann, auf dem Boden herum;
+309	wegzuräumen	3	3	3	13.1	0						Allen Leuten, die Holz vorn an das Haus aufgeschichtet hatten, ist anbefohlen worden, es wegzuräumen.
+310	weiterschnarchen	3	3	3	13.1	0			schnarchte weiter 3			Sid schnarchte weiter.
+311	einzunicken	3	3	3	13.1	0				einzunicken 3		selbst Akka war nahe daran, einzunicken, als sie plötzlich etwas Rundes, Dunkles aus dem Gipfel einer Woge auftauchen sah.
+312	unterrichteen	3	3	3	13.1	0						denn sowohl die Tante als Marie schrieben mir lange, ausführliche Briefe, welche mich von allem unterrichteten, was sich in ihrem Kreise zutrug.
+313	willkommenhießen	3	3	3	13.1	0						
+314	aufverwundern	3	3	3	13.1	0		verwundert auf 3				
+315	hinterdreinstürmen	3	3	3	13.1	0			stürmte hinterdrein 2			
+316	herausklettern	3	3	3	13.1	0			kletterte heraus 3			
+317	weiterzogen	3	3	3	13.1	0				weiterzogen 2		
+318	nachrutschen	3	3	3	13.1	0			nachrutschte 2			
+319	zusammengetrieben	3	3	3	13.1	0				zusammengetrieben 3	haben 1	
+320	umgehauen	3	3	3	13.1	0				umgehauen 3	haben 1	
+321	fällen	90	82	35	13.0	457		gefällt 17	fällte 4	gefällt 56	haben 4	da tut er seine letzten Geschäfte ab, um dann nachher dahin zu gehen, wo es ihm gefällt, und sich da zur Ruhe zu setzen.
+322	könnteen	33	31	23	13.0	121						du musst noch unter den Tannen bleiben, du könntest mir wieder krank werden.
+323	schwänzen	12	9	4	12.9	23		schwänzt 1	schwänzte 1	geschwänzt 7	haben 5	Sie sind in Australien aber kleiner, als bei uns, braun und schwarz gestreift, lang, dünn und lang geschwänzt;
+324	hinabsinken	10	9	3	12.8	16		sinkt hinab 1	sank hinab 1			Sie fliegt nach der Tiefe der alten Tannen und sinkt in ihr warmes, lichtschwaches Gewölbe hinab.
+325	davonrennen	7	7	6	12.8	7			rannte davon 4			"Als der Bäcker Heidi heruntergehoben hatte, sagte es eilig: ""Danke, der Großvater holt dann schon den Koffer"", und wollte davonrennen."
+326	gerathen	7	7	4	12.8	7				gerathen 3	sein 1	»Hast du das Rätsel schon gerathen?« wandte sich der Hutmacher an Alice.
+327	hinüberfliegen	11	11	7	12.5	20			flog hinüber 6			"""Ja, freili!"" erwiderte sie, und ein Blick voll Liebe flog zu ihrem Mann hinüber."
+328	sollen	4135	1918	55	12.4	30670		soll 996; sollt 65	sollte 1211	gesollt 1	haben 1	"""Was, beim Alm-Öhi soll das Kind bleiben?"
+329	gefangen	47	42	17	12.4	201				gefangen 42	haben 13; sein 1	Und ihren Kaiser haben wir gefangen, dem soll es schlecht gehen!“
+330	hinunterlaufen	20	20	14	12.4	58		läuft hinunter 1	lief hinunter 13			Fräulein Rottenmeier lief hinaus und die Treppe hinunter.
+331	gewöhnen	180	164	36	12.3	1056		gewöhnt 7	gewöhnte 4	gewöhnt 136	haben 29; sein 1	denn die waren nun auch so an Heidis Gesellschaft gewöhnt, dass sie nicht vorwärts wollten, wenn es nicht dabei war, und auf alle Seiten rannten.
+332	herumtreiben	30	28	14	12.3	108		treibt herum 4	trieb herum 14			Er wollte auch nicht mit seinen Geschwistern spielen, sondern trieb sich lieber draußen herum.
+333	hineinspringen	18	18	8	12.3	49	diving		sprang hinein 14			Bei der Geißenpeter-Hütte trennten sie sich, und Heidi sprang hinein.
+334	verzieren	18	17	12	12.3	49				verziert 17	sein 5; haben 1	Juwelen sind es, nicht zu schlecht, Um eine Krone zu verzieren
+335	studiren	12	9	3	12.3	24			studirte 2			Als der eine Stiefel glücklich angezogen war, saß der Senator mit dem andern in der Hand da und schien die Figuren des Teppichs gründlich zu studiren.
+336	einschlafen	53	48	19	12.2	237		schläft ein 1		eingeschlafen 1	sein 1	Sie waren müde und schliefen bald ein.
+337	vorwärtsgehen	22	22	17	12.2	68		geht vorwärts 2	ging vorwärts 17	vorwärtsgehen 1		Jetzt ging Miezchen vorwärts und kam ganz nahe an den Joggi heran, hielt den Mund an sein Ohr und flüsterte hinein: “
+338	hinaufschwingen	6	6	5	12.2	5			schwang hinauf 6			Gorgo bewegte die Flügel und schwang sich hinauf.
+339	herausgelassen	6	5	4	12.2	5				herausgelassen 6	haben 1	Die Kälber und Schafe wurden auch herausgelassen, und auch diese waren unverkennbar in der allerbesten Laune.
+340	hinkommen	46	44	24	12.1	197		hinkommt 4; kommt hin 1	hinkam 5; kam hin 1			Und wo die Frommen Dann sollen hinkommen, Wenn sie mit Frieden Von hinnen geschieden
+341	ankamen	23	23	16	12.1	73				ankamen 19	sein 1	Er stand still und starrte die zwei Entgegenkommenden an, bis sie bei ihm ankamen;
+342	ausbessern	17	16	13	12.1	45				ausgebessert 6	haben 1	ach, und da ist kein Mensch, der etwas ausbessern könnte an der Hütte, der Peter versteht's nicht.
+343	munden	17	17	10	12.1	45	to be tasty		mundete 9	gemundet 4	haben 4	es mundete ihm, da der Wein sehr süß und angenehm war.
+344	umherspähen	10	10	6	12.1	17			spähte umher 8; umherspähte 1			Es drehte sich um und spähte im Hof umher.
+345	jubeln	57	53	24	12.0	262		jubelt 2	jubelte 37	gejubelt 1	haben 1	Die Kinder jubelten.
+346	herunterheben	5	5	3	12.0	3			hob herunter 4			Vorsichtig hob Frau Greiner das Köpfchen herunter, nahm es vor ans Kammerfenster;
+347	hinabschlucken	5	5	3	12.0	3			schluckte hinab 5			Er füllte wieder Kasperles Hände, und wieder schluckte der eins, zwei, drei! alles hinab.
+348	einfallen	408	350	51	11.9	2660		fällt ein 58; einfällt 5	fiel ein 225; einfiel 24	eingefallen 39; einfällt 1	sein 38	Was fällt dir denn ein?
+349	graben	62	50	17	11.9	293	to dig; to perform an archaeological excavation	gräbt 4		gegraben 10; gruben 1	haben 7	Wer andern eine Grube gräbt, Fällt selbst hinein.
+350	hinauffliegen	11	11	8	11.9	21		fliegt hinauf 2	flog hinauf 7			Sie fliegt auf ihren Ast hinauf und sitzt da und starrt und sieht auf den toten Hasen hinab, als wolle sie ihn noch einmal mit Grauen erfüllen.
+351	lachn	41	36	21	11.8	170			lachte 2			Sie lachten: Nicht waschen, nicht kämmen?
+352	verkündigen	23	23	15	11.8	74			verkündigte 9	verkündigt 5; verkündigen 1	haben 3	Und Wiseli sah nicht, wie leise der helle Abendschein in die Stube fiel und einen schönen Tag verkündigte.
+353	hingehen	155	147	45	11.7	896		geht hin 14; hingeht 3	ging hin 61; hinging 4			"""Wart einen Augenblick"", sagte er, stieg die Leiter hinab und ging an sein Lager hin."
+354	jammeren	54	51	23	11.7	246			jammerte 51			"""Ach du unglückseliges, vernunftloses Heidi, hast du denn auch noch gar keine Begriffe?"", jammerte und schalt die Base weiter."
+355	bewegen	337	297	47	11.6	2160		bewegt 90	bewegte 107; bewog 3	bewegt 27; bewogen 2	haben 11; sein 1	Alle die Drohungen und geheimen Schrecknisse hatten ihm so zugesetzt, dass er kein Glied mehr bewegte und schreckensvoll das Heidi anstarrte.
+356	übergeben	85	80	32	11.4	439		übergibt 1	übergab 29	übergeben 21	haben 10; sein 1	"""Und dem Alten da droben willst du nun das Kind übergeben?"
+357	zuzubringen	15	15	9	11.4	38						Aber Fräulein Rottenmeier war entschlossen, ihre Tage nicht mehr in Schrecken zuzubringen, und sie wusste sich zu helfen.
+358	setzen	1005	807	57	11.3	7046	to sit; to typeset; to bet; to settling	setzt 42	setzte 509	gesetzt 161	haben 75; sein 28	sofort machte sich das Kind von ihrer Hand los und setzte sich auf den Boden.
+359	gefällen	50	47	26	11.3	225		gefällt 46		gefällt 1		Du weißt gar nicht, wie schön es ist in Frankfurt und was du alles sehen wirst, und gefällt es dir dann nicht, so kannst du wieder heimgehen;
+360	pflanzen	41	32	18	11.3	173		pflanzt 1	pflanzte 8	gepflanzt 18; pflanzt 1	haben 10; sein 1	Die pflanzte der Knabe in seinem Garten.
+361	ausdachen	14	14	9	11.3	34			dachte aus 4; ausdachte 2	ausgedacht 8	haben 7	aber der liebe Gott hatte schon alles ausgedacht, so viel schöner, als ich es wusste;
+362	vorüberfliegen	14	12	7	11.3	34		vorüberfliegt 1	flog vorüber 9			es ist ein Hase, den sie in den Fängen hält, während sie vorüberfliegt.
+363	fortfliegen	14	13	6	11.3	34		fliegt fort 1	flog fort 6			»Ich werde ganz nervös über so einer Person«, sagte Maja und beschloss fortzufliegen.
+364	heimkommen	78	76	25	11.2	397		heimkommt 2; kommt heim 2	kam heim 17; heimkam 16	heimgekommen 2	sein 2	"""Kann ich gerad wieder umkehren und heimkommen heut Abend?"", fragte Heidi."
+365	hsen	63	53	31	11.2	304		gehst 31		gehst 1		"Aber wohin gehst du eigentlich, Barbel, wir sind ja schon halbwegs auf der Alm?"""
+366	erschalln	12	11	9	11.2	26			erschallte 12			Die Kinder vergaßen in ihrem Jubel ganz, dass nun der Augenblick komme, da sie sich trennen mussten, und als mit einem Mal der Ruf erschallte:
+367	guckn	12	11	6	11.2	26						Aber sie gaben acht, liefen im Bogen um sie herum, bloß ein paar blieben stehen und spitzten die Ohren und guckten, was das für ein kleines Ding sein mochte.
+368	ausstassen	20	19	9	11.0	62			ausstieß 19; stieß aus 1			Kaum war das aber geschehen, als der kleine Täufling ein durchdringendes Geschrei ausstieß und in der höchsten Wut nach Jennys Gesicht sprang;
+369	besuchstn	6	6	4	11.0	6		besuchst 3				»Weine doch nicht, Helene,« sagte er, »ich komme ja alle vierzehn Tage heim und so oft du nach Neustadt kommst, besuchst du mich in der Apotheke.«
+370	beginnen	1187	832	50	10.9	8418	to begin	beginnt 33	begann 873	begonnen 53	haben 43	Er selbst setzte sich nun auf die Ecke des Tisches und begann sein Mittagsmahl.
+371	schnappen	38	32	16	10.9	158		schnappt 4	schnappte 18			Ihre Lichter füllen sich mit Wasser -- sie schnappt nach Luft ...
+372	aufgeschossen	8	8	6	10.9	12						Der Peter war bei dem Ton der bekannten Stimme aufgeschossen.
+373	nachrannen	8	8	7	10.9	12			rannte nach 4			Dann rannte er in großen Sprüngen dem kleinen Kameraden nach.
+374	errathen	8	8	5	10.9	12			errathen 3	errathen 3	haben 3	Es ist ein Mittelding zwischen U und O und scheint aus der Erde zu kommen, so dass man die Richtung nicht errathen kann.
+375	mitteilen	203	179	34	10.8	1235		teilt mit 3; mitteilt 1	teilte mit 39; mitteilte 23	mitgeteilt 38	haben 24; sein 1	Dann wurde ihm das Vorgefallene mitgeteilt sowie auch die Nachricht, dass fortgesetzt die Tür jeden Morgen offen stehe;
+376	hereintreten	36	36	21	10.8	147		tritt herein 2	trat herein 30; hereintrat 2	hereingetreten 1	sein 1	Aber noch bevor die Schüsselchen vom Mittagessen weggestellt waren, trat schon wieder ein Besuch zur Tür herein, es war die Base Dete.
+377	zurückbringen	27	26	14	10.8	98		zurückbringt 1; bringt zurück 1	brachte zurück 10	zurückgebracht 1		Heidi schoss pfeilschnell zum Herd hin, brachte den kleinen Dreifuß zurück und setzte sich drauf.
+378	auszuruhen	16	16	9	10.8	44						»Und doch war es ein lieber kleiner Hund!« sagte Alice, indem sie sich an eine Butterblume lehnte um auszuruhen, und sich mit einem der Blätter fächelte.
+379	aufbleiben	14	10	8	10.8	35			blieb auf 1			»Ich empfinde gar keine Müdigkeit,« entgegnete diese, »und könnte noch lange aufbleiben!«
+380	banden	14	14	7	10.8	35						banden eine kleine Puppe an einen Bindfaden und ließen sie tanzen.
+381	umherspringen	10	10	9	10.8	19			sprang umher 9			Lange sprang er wild umher und stieß mit dem Kopfe, so zornig war er.
+382	herauskamen	7	7	6	10.8	9						denn die Puppenköpfe, die da herauskamen, gefielen ihm nicht, er machte sie nur, weil er Geld dafür bekam.
+383	hineingeflogen	7	6	3	10.8	9				hineingeflogen 3	sein 3	sie wusste nicht recht, ob es gerathen sei, das Kamin zu öffnen, es konnte ja eine Eule oder ein Uhu hineingeflogen sein;
+384	widerfahren	38	35	19	10.7	159				widerfahren 25	sein 20	Das Heidi hüpfte und jauchzte nebenher, und der Großvater sah aus, als sei ihm ein großes Glück widerfahren.
+385	entgegenrufen	25	25	14	10.7	88			rief entgegen 24			"Schaffen Sie sie weg, Sebastian, sofort!"", rief sie ihm entgegen."
+386	einfahren	21	21	12	10.7	68		fährt ein 5	fuhr ein 8	eingefahren 3	sein 1	Jetzt fuhren sie im Dörfli ein, eben schlug die Glocke fünf Uhr.
+387	auflauern	12	12	9	10.7	27		lauert auf 1	lauerte auf 2			Er wusste nicht recht, wo er am besten dem Wohltäter auflauern konnte.
+388	ersteigen	12	11	8	10.7	27						Joe legte die Hand ans Messer, zögerte einen Moment unentschlossen, dann begann er die Treppe zu ersteigen.
+389	hinziehen	62	59	26	10.6	302		hinzieht 7; zieht hin 5	zog hin 18; hinzog 9	hingezogen 8	sein 1	Heidi zog aus Leibeskräften an dem Sacke hin und her, um ihn auseinander zu legen, aber die kleinen Hände konnten das schwere Zeug nicht bewältigen.
+390	ausfliegen	15	14	8	10.6	40		ausfliegt 1		ausgeflogen 5; auszufliegen 4	sein 5	Strix ist kurz davor, auszufliegen, so genau untersucht der neue Forstmeister die Buche.
+391	traben	35	33	20	10.5	143		trabt 1	trabte 15	getrabt 1		Als Antwort brummte der Peter wie ein gereizter Bär und schlug mit Wut nach dem unschuldigen Distelfink, der neben ihm trabte.
+392	übernachten	29	25	15	10.5	110		übernachtet 1	übernachtete 1	übernachtet 7	haben 5	Immer bald hier, bald dort zu übernachten, hat viel gegen sich.
+393	beisammensitzen	26	26	10	10.5	94			saß beisammen 6			Mann und Frau saßen beisammen und sprachen von dem großen Plan, den Frau Greiner mitgeteilt und warm befürwortet hatte.
+394	sorgen	223	188	44	10.4	1381	to be concerned about something; to care for something or someone	sorgt 22	sorgte 36	gesorgt 41	haben 30	für sich selbst wird Er schon sorgen.
+395	kommsen	111	103	35	10.4	618		kommst 110				"""Du stehst ja doch nur und reißest deine Augen auf und kommst, denk ich, nicht weit auf die Art!"", rief ihm die Base Dete zu."
+396	entrüsten	39	36	18	10.4	166		entrüstet 1	entrüstete 2	entrüstet 36		»_Einen_, wirklich!« sagte das Murmeltier entrüstet.
+397	einstimmen	34	33	19	10.4	138		stimmt ein 2	stimmte ein 15; einstimmte 3	eingestimmt 1	haben 1	Klara stimmte mit dem ganzen Herzen ein.
+398	ergötzen	34	34	14	10.4	138		ergötzt 5	ergötzte 17	ergötzt 1		Da hat sie geliebt und gehofft, gekröpft und sich Tag und Nacht beim Raube ergötzt.
+399	herumhüpfen	9	9	8	10.4	16			hüpfte herum 8; herumhüpfte 1			"Nun hüpfte das Kind vor Freude im ganzen Hüttenraum herum und rief ein Mal ums andere: ""Morgen tun wir's!"
+400	hinauskönnen	9	7	6	10.4	16			konnte hinaus 5			“Wenn du mit den anderen herumliefst, konnte ich schon hinaus.
+401	herbeiziehen	9	9	5	10.4	16			zog herbei 4; herbeizog 1	herbeigezogen 4	haben 3	Sie kommen von weit her, wie an der Nase herbeigezogen und sitzen da und geifern, während die beiden großen Uhus in aller Ruhe ihre Mahlzeit verzehren.
+402	hineingedrängen	5	5	5	10.4	4		hineingedrängt 1		hineingedrängt 4	haben 2	»Nein nein, es riecht so sehr schlecht im Stalle,« sagte sie und wollte eben zurücktreten, da wurde sie von außenher hineingedrängt.
+403	antriffen	5	5	4	10.4	4		antrifft 5				Ermattet vom Kampfe und schwer von dem Regen, der sie niederzuschlagen droht, sucht sie schleunigst Schutz hinter dem ersten Hügelabhang, den sie antrifft.
+404	wegschleudern	5	5	3	10.4	4			schleuderte weg 4			Sie war so schlecht, dass sie ihn nicht einmal des Aufhebens wert deuchte, und er schleuderte sie mit dem Fuße weg.
+405	müssen	4580	2032	56	10.3	34237	to have to	muss 307; muß 38	musste 1751; mußte 10			jetzt, es muss dich nicht gereuen.
+406	umkehren	95	86	33	10.3	514		kehrt um 1	kehrte um 36; umkehrte 4	umkehrt 2		Der Alte kehrte sich um und schaute durchdringend auf das Kind, dessen schwarze Augen glühten in Erwartung der Dinge, die da drinnen sein konnten.
+407	ausruhen	57	54	30	10.3	274	to rest	ruht aus 2; ausruht 1	ruhte aus 6; ausruhte 2	ausgeruht 7	haben 6	Deshalb ist ein Tag da, an dem ein jeder von feiner Arbeit ausruhen und fröhlich Gott danken soll für allen Segen.
+408	stecken	420	359	50	10.2	2785		steckt 63	steckte 156	gesteckt 66	haben 24; sein 3	Peter steckte es schnell tief in seine Tasche, und sein Gesicht glänzte und lachte in voller Breite, denn ein solcher Schatz wurde ihm nicht oft zuteil.
+409	zueilen	41	39	16	10.2	179			eilte zu 26; zueilte 5			Fröhlich eilte Hermann seiner Heimat zu.
+410	hinschauen	32	30	17	10.2	128		schaut hin 1; hinschaut 1	schaute hin 22; hinschaute 3			Der Mann schaute nach dem Koffer hin und maß ihn ein wenig mit den Augen;
+411	zusammenpacken	18	18	11	10.2	55		packt zusammen 2	packte zusammen 9; zusammenpackte 1			Dann ging sie an den Schrank, nahm Heidis Sachen hervor und packte sie zusammen:
+412	herunterspringen	12	11	7	10.2	28			sprang herunter 9			Heidi sprang nun von seinem Bett herunter und machte sich fertig.
+413	nachsetzen	12	11	6	10.2	28		setzt nach 3	setzte nach 3; nachsetzte 1	nachgesetzt 3	sein 1; haben 1	Aber auf einmal sprang Peter auf und setzte in großen Sprüngen den Geißen nach, und das Heidi lief hintendrein;
+414	herunterholen	12	10	8	10.2	28		herunterholt 1	holte herunter 5			Die Mutter holte hurtig das Buch herunter, und die Großmutter freute sich, sie hatte so lange kein gutes Wort gehört.
+415	dransein	11	11	10	10.2	24		ist dran 5	war dran 2			“Nein, er atmet ganz leise, aber er ist böse dran.
+416	niederschauen	10	10	7	10.2	20			schaute nieder 9			Rottenmeier schaute darauf nieder, in tiefsinnige Betrachtungen über die Kunst zu packen versunken.
+417	verpflegen	10	10	7	10.2	20				verpflegt 3		Wisi hatte ihn nun auch noch zu verpflegen zu allem andern.
+418	ungern	10	10	6	10.2	20						der Faselhase rückte an den Platz des Murmeltiers, und Alice nahm, obgleich etwas ungern, den Platz des Faselhasen ein.
+419	nehmen	2180	1390	55	10.1	15937	to ride a vehicle	nimmt 91; nehmt 16	nahm 959	genommen 301	haben 155; sein 30	Das kleine Kind der Adelheid nahmen wir zu uns, die Mutter und ich;
+420	verschwinden	445	380	53	10.1	2968		verschwindet 18	verschwand 153	verschwunden 181	sein 151	Der Peter gehorchte sofort und verschwand, denn der Öhi hatte ihn angeschaut, dass er schon genug davon hatte.
+421	danken	327	278	47	10.1	2120		dankt 6	dankte 75	gedankt 10	sein 5; haben 3	"Geh hinaus, Brigitte, und wenn es der Alm-Öhi ist, so sag ihm, er soll doch dann auch einen Augenblick hereinkommen, dass ich ihm auch danken kann."""
+422	klagen	165	149	43	10.1	985		klagt 7	klagte 99	geklagt 4	haben 2	"""Ach Kind, ich kann ja gar nichts sehen, gar nichts, nicht nur den Laden nicht"", klagte die Großmutter."
+423	aufgegessen	8	8	6	10.1	13				aufgegessen 8	haben 4; sein 3	und es dauerte gar nicht lange, da war der Barsch aufgegessen.
+424	heranwachsen	25	22	9	10.0	91			wuchs heran 11	herangewachsen 8	sein 8	Deshalb gibt es hier auch die kostbarsten Häuser und die schönsten Kirchen, und die Kirchspiele sind zu Handelsplätzen und Städten herangewachsen.
+425	näheren	64	61	29	9.9	320			näherte 62			Ich näherte mich ihr ganz vertraulich und dachte, sie würde mich so recht als einen alten Bekannten begrüßen;
+426	hineinfahren	23	23	15	9.9	81		fährt hinein 3	fuhr hinein 9			Nun fuhr es in alle Winkel hinein und schaute jedes Plätzchen aus, wo am schönsten zu schlafen wäre.
+427	anzischen	7	7	4	9.9	10			zischte an 3; anzischte 2			Und sie reckten alle die Hälse und zischten ihn zornig an.
+428	hinzeigen	6	6	5	9.9	7			zeigte hin 4; hinzeigte 2			Und neben dem Wiseli stand seine Mutter und hielt es liebevoll bei der Hand, wie immer, und dabei zeigte sie auf den Weg hin und sagte: “
+429	kaun	6	6	6	9.9	7			kaute 1			Und dann kauten sie Gummi und stemmten die Knie gegen die Bank und waren seelenvergnügt.
+430	hinausdürfen	6	4	3	9.9	7		darf hinaus 1				keine Katze darf hinaus und das Kasperle erst recht nicht.«
+431	erröthen	6	6	3	9.9	7			erröthete 4			Sie erröthete leicht und biss sich auf die Lippen.
+432	versetzen	223	192	42	9.8	1391		versetzt 16	versetzte 158	versetzt 24	haben 10; sein 2	"""Man kann diese Fenster nicht aufmachen"", versetzte Heidi traurig."
+433	ausrichten	55	49	18	9.8	265		richtet aus 3	richtete aus 7; ausrichtete 1	ausgerichtet 7; ausrichtet 1	haben 5	Es war schwierig für die Tante, sich Gehör zu verschaffen drinnen in der Stube, als sie den Auftrag ausrichten wollte.
+434	herlaufen	21	20	10	9.8	71		läuft her 2	lief her 9; herlief 1			Dann lief er davon und sein Gefolge hinter ihm her.
+435	auffliegen	36	33	18	9.7	153		fliegt auf 4	flog auf 18			Das Mückchen aber folgte nicht und flog so lange auf und nieder und um das Licht, bis es daran seine Flügelchen sengte und in die Flamme fiel.
+436	umkommen	24	24	12	9.7	87			kam um 2	umgekommen 8	sein 8	Dass das untere Dorf in Brand geschossen war und viele Menschen dabei umgekommen seien.
+437	hinunterschauen	12	12	4	9.7	29		schaut hinunter 1	schaute hinunter 7			Smirre stand oben auf dem Gebirgskamm und schaute zu den Wildgänsen hinunter.
+438	hervorschauen	10	10	9	9.7	21			schaute hervor 4			Am Ende jeder Straße sah man die Mauer turm- und zinnengekrönt hervorschauen.
+439	hoffen	343	307	45	9.6	2245	optimistic attitude of mind based on an expectation of positive outcomes	hofft 15	hoffte 68	gehofft 36	haben 31	da habe ich gehofft, wenn der Peterli nun lesen lerne, so könne er mir etwa ein gutes Lied lesen;
+440	herankommen	86	80	28	9.6	462		herankommt 2	kam heran 48			Jetzt kam der Großvater mit einem Topf und dem Käsebraten an der Gabel zum Tisch heran;
+441	fortsein	68	60	30	9.5	348		ist fort 15	war fort 28			 Der Wind ist fort, der Tanz ist aus, Die Blätter sinken nieder;
+442	necken	53	52	19	9.5	255		neckt 1	neckte 18	geneckt 6	haben 5	Und überzeugt, ihn wolle necken
+443	zusammentreffen	52	49	16	9.5	249		trifft zusammen 2	traf zusammen 11; zusammentraf 5	zusammengetroffen 13	sein 13	"""es können auch einmal zwei Dinge glücklich zusammentreffen, wie ein neuer Lerneifer und eine neue Lehrmethode, und beide können nichts schaden, Herr Kandidat."
+444	zustürzen	30	30	12	9.5	120			stürzte zu 21; zustürzte 1	zustürzen 1	haben 1	Als diese merkten, wo das Heidi war, stürzten sie alle der Stelle zu.
+445	hineinrufen	21	21	16	9.5	72		ruft hinein 1	rief hinein 18			"Sofort aufhören!"", rief Fräulein Rottenmeier ins Zimmer hinein."
+446	fertigen	18	16	11	9.5	57		fertigt 1	fertigte 3	gefertigt 10	haben 6	Er hatte sich selbst einigen Schmuck gefertigt: wundersam gezackte Sterne, auch Blumen und Vögel und allerlei Getier.
+447	ln	32	29	11	9.4	132		gelt 32				Vor dem fürcht' ich mich, gelt, den legst nicht zu mir?
+448	aufheitern	13	12	7	9.4	34						Und solche Wollust bereitete ihm sein Kummer, dass er sich nicht um die Welt von irgend jemand hätte trösten oder aufheitern lassen;
+449	mitdürfen	8	8	6	9.4	14		darf mit 2	durfte mit 2			»Er hat gar keinen Rock an, darf er im Hemd mit?«
+450	krabbeln	8	8	7	9.4	14		krabbelt 3				allerlei Gewürm eilt Stengel auf Stengel ab, es krabbelt, mißt, klettert und spinnt sich vorwärts.
+451	zuwanderen	8	8	7	9.4	14			wanderte zu 8			Sie wickelte das Lämmchen in ihre Schürze, und wanderte damit dem Eichhofe zu, obwohl es noch nicht ganz aufhörte zu regnen und die Sonne bereits unterging.
+452	drandenken	8	8	5	9.4	14		denkt dran 2	dachte dran 1			",,Tantchen, ich wollt', ich hätt's nicht getan -- aber ich dachte nicht dran."""
+453	habeben	8	8	8	9.4	14		habest 1; habet 1				»Es sieht aus, als habest du mehr von mir erwartet, als ich dir jetzt geboten habe.«
+454	schwerseufzen	8	8	4	9.4	14			seufzte schwer 7			Ilse seufzte schwer und stieg aus.
+455	hinzufügen	193	170	35	9.2	1191			fügte hinzu 177; hinzufügte 2	hinzugefügt 4	haben 2	Ja, ja”, fügte die Frau hinzu, “ich habe nicht vor, immer wieder von vorn mit ihm anzufangen.
+456	heimgehen	42	37	17	9.2	191		geht heim 3	ging heim 3			Du weißt gar nicht, wie schön es ist in Frankfurt und was du alles sehen wirst, und gefällt es dir dann nicht, so kannst du wieder heimgehen;
+457	sestin	39	37	21	9.2	173		wärest 13				Aber weißt du, wenn ich so bald fortgelaufen wäre, so wärest du nie gekommen, und du wärest nicht gesund geworden auf der Alp.«
+458	baumeln	19	18	10	9.2	63			baumelte 3; baumelt 2			Tinette erfaßte das bezeichnete Ding an einer Ecke und ließ es verächtlich an ihrer Hand baumeln.
+459	aufgefressen	14	14	8	9.2	39				aufgefressen 2	sein 1	sie hat versehentlich den rechtmäßigen Inhaber des Baues aufgefressen.
+460	jubelen	14	14	5	9.2	39			jubelte 14			Sie jubelte vor Freude, als der Halm sich unter ihrer Last so niederbog, dass er grade quer über den zappelnden Kurt sank.
+461	auszupacken	10	8	4	9.2	22						Es fiel ihr nicht ein, ihre Sachen auszupacken, und sie war geradezu empört, dass man Dinge von ihr verlangte, die den Dienstboten zukämen.
+462	sollsen	9	9	3	9.2	18		solls 9				Schorschi, du solls sofort zu Mamma kommen.«
+463	herumschwingen	5	5	4	9.2	5			schwang herum 4			Das Rad sollte sein Spielzimmer sein, wo es spielen und klettern und sich im Kreise herumschwingen könnte.
+464	zusammenhelfen	5	5	4	9.2	5						Aber wir müssen auch alle zusammenhelfen.
+465	hinausgeschauen	5	5	4	9.2	5				hinausgeschaut 5	haben 4	Lange hatte er, sinnend am Fenster stehend, in den abendlichen Herbstnebel hinausgeschaut;
+466	entlangfliegen	5	4	3	9.2	5		fliegt entlang 1	flog entlang 3			Die Gänse flogen die langgestreckte Insel entlang, die jetzt deutlich sichtbar unter ihnen lag.
+467	umgestoßen	5	5	4	9.2	5				umgestoßen 5	haben 5	Da lagen sie unbehülflich umher und erinnerten sie sehr an ein Glas mit Goldfischen, das sie die Woche vorher aus Versehen umgestoßen hatte.
+468	aushacken	5	4	3	9.2	5						Oder ich hacke dir die Augen aus!«
+469	zusammendrehen	5	5	4	9.2	5			drehte zusammen 3; zusammendrehte 1			Sie ärgerte sich darüber und drehte ihr Taschentuch wie eine Wurst fest zusammen.
+470	aussiehen	23	20	13	9.1	84		siehst aus 1				Wie siehst du aus?
+471	erjagen	7	5	3	9.1	11						Als wir die Jäger erblickten, hätten wir gar zu gerne gewußt, was für ein Wild sie erjagen wollten.
+472	hinaufgekletteren	7	7	4	9.1	11				hinaufgeklettert 7	sein 4	Der Junge war auf einen Steinblock hinaufgeklettert und hatte von da dem Kampfe der Menschen mit dem Feuer zugesehen.
+473	kratzen	53	51	24	9.0	259	to scratch	kratzt 6	kratzte 19	gekratzt 5	haben 4	Der Teufel kratzte sich mit dem Pferdehuf hinter den Ohren und sagte dann, einen überlegenen Ton annehmend:
+474	hinausschauen	29	28	19	9.0	117		hinausschaut 1	schaute hinaus 17	hinausschauten 1		Als die Kinder heute von ihren Betten in den Sternenschein hinausschauten, sagte das Heidi:
+475	ausstehen	29	29	18	9.0	117			stand aus 2	ausgestanden 4	haben 2	»Ach, lass mich in Frieden,« sagte die Herzogin, »ich habe Zahlen nie ausstehen können!«
+476	beachteen	6	6	4	9.0	8						Die Eltern beachteten ihn nicht und sprachen miteinander.
+477	dahergekommen	6	6	6	9.0	8						Der Gedanke an die lange Nase und das Räubergesicht bedrückte ihn etwas, und dann war die Base dahergekommen, als trüge sie den schönsten Rohrstock im Korb.
+478	hinhsen	6	6	6	9.0	8		gehst hin 4				»Wo gehst du hin,« fragte er noch einmal, »und was hältst du in der Tasche?«
+479	befinden	316	263	42	8.9	2066		befindet 18	befand 182	befunden 14	haben 10	Gesellschaft hat er sich so wohl befunden wie sonst nirgends mehr.
+480	schallen	33	31	17	8.9	140		schallt 10	schallte 16			Da schallte das einzige Wort durch die Klasse: Österreich!
+481	beifügen	26	24	8	8.9	101			fügte bei 24; beifügte 1			Daher unsere hohe Geisteskraft«, fügte der Professor belehrend bei.
+482	hersagen	23	19	12	8.9	85		sagt her 2	sagte her 8; hersagte 3	hergesagt 2	haben 2	"Er aber sagte, kaum belebt: ""Ach, Mutter, hol' vor allen Dingen Mir was zu essen her;"
+483	schnurren	19	18	10	8.9	64	to purr	schnurrt 2	schnurrte 10			"""Er verdient's"", schnurrte Peter und wollte zuschlagen."
+484	betrüben	14	14	8	8.9	40			betrübte 4			Da gab es enttäuschte, betrübte und ärgerliche Gesichter.
+485	aussein	69	65	30	8.8	361		ist aus 38	war aus 25			"Nun ist alles aus, Peter!"""
+486	herbeibringen	15	14	12	8.8	45		bringt herbei 2	brachte herbei 10			Er brachte jetzt auch immer einen großen Topf voll von der schäumenden Milch herbei und füllte Schüsselchen um Schüsselchen.
+487	weiterreisen	8	8	3	8.8	15				weitergereist 1		Am nächsten Tag wollten die Wildgänse durch den Allbobezirk in Småland nach Norden weiterreisen und schickten Yksi und Kaksi als Kundschafter voraus;
+488	zurechtzupfen	8	8	7	8.8	15		zupft zurecht 1	zupfte zurecht 6	zurechtgezupft 1		Krahirius reckte die Flügel und zupfte seinen Federbalg zurecht;
+489	versichern	149	136	34	8.7	895		versichert 4	versicherte 104	versichert 11	haben 8; sein 1	"""Ja, ja, morgen schon!"", versicherte Peter."
+490	zugehören	39	38	22	8.7	176		zugehört 10	gehörte zu 1	zugehört 26	haben 24	Gewiss hast du nicht recht mit all deinen Gedanken dem Herrn Kandidaten zugehört und seine Buchstaben angesehen.
+491	zulaufen	34	33	20	8.7	147		läuft zu 2; lauft zu 1	lief zu 21; zulief 2			Da sah er, wie dieses dem Abhange zulief, laut schreiend: »Sie kommen, sie kommen!
+492	ermuntern	33	32	19	8.7	141		ermuntert 1	ermunterte 23	ermuntert 5	haben 2	»Na, Junge, frisch heran!« ermunterte Herr Sesemann.
+493	dasehen	21	21	11	8.7	75		sieht da 1; seht da 1				Aber siehe da!
+494	nachhelfen	16	16	12	8.7	50		hilft nach 3	half nach 4			»Das ist unser Bergwind, der hilft nach, wo die Küche zurückbleibt.«
+495	niederkaueren	11	9	7	8.7	27			kauerte nieder 8; kauert nieder 1			Er kauert sich auf einen Zweig nieder und heult wonnevoll zurück ...
+496	hätteen	10	10	9	8.7	23						»Anpreisen freilich nicht, aber du hättest doch so zufällig die Rede darauf bringen sollen, dass er schon so gelehrt ist.«
+497	herbeigeschaffen	9	9	9	8.7	19		herbeigeschafft 1		herbeigeschafft 8	haben 2; sein 1	Nun sei nur noch herbeigeschafft
+498	schwatzen	69	61	20	8.6	363	especially unnecessary talk; fuss	schwatzt 12	schwatzte 15	geschwatzt 3	haben 1	Doch schließlich schwatzte man sich satt.
+499	hineinschauen	23	23	9	8.6	86		schaut hinein 2	schaute hinein 13; hineinschaute 2			"""--Als er ihn hierauf bei der großen Nase packte und ihm zwischen die Kinnladen hineinschaute, trat auch der Doktor Faust wieder in das Zimmer."
+500	erquicken	23	23	16	8.6	86		erquickt 4	erquickte 6	erquickt 4	haben 2	Doch unter diesen Siegesliedern, Da jede von Triumphen sprach, Erwacht der matte Löwe wieder, Und eilt erquickt dem Raube nach.
+501	naschn	4	4	4	8.6	3			naschte 1; naschn 1	genascht 2	haben 1	Was Ernst naschte, war nicht Zucker gewesen.
+502	herbeigeflogen	4	4	3	8.6	3						Sie ist aus Scharen gebildet, die von allen Seiten herbeigeflogen kamen und sich miteinander vereinigt haben.
+503	anstrengten	4	4	4	8.6	3						Wir strengten uns auch nicht sonderlich an.
+504	umgeschauen	4	4	3	8.6	3				umgeschaut 4	haben 3	Christian hatte sich zwar vorsichtig umgeschaut, aber den in dem Schatten der Tür ruhenden Hirtenknaben nicht entdeckt.
+505	grunzten	4	4	3	8.6	3						Sie grunzten was als Antwort und gruben weiter.
+506	vergruben	4	4	4	8.6	3				vergruben 1		Und das trieb er so lange, bis Carlos und Nicolás es nicht mehr ertragen konnten und die Schlangen vergruben.
+507	fortzuhelfen	4	4	4	8.6	3						»Es ist allerdings ein Gesetz erlassen worden, mein Kind, welches verbietet, den von Kentucky herüber kommenden flüchtigen Sklaven fortzuhelfen.
+508	mitessen	4	4	4	8.6	3						»Ja, ja!« schrien die Buben, »du kannst mitessen, knacke nur fleißig auf.«
+509	besorgen	126	111	43	8.5	741		besorgt 4	besorgte 24	besorgt 14	haben 8	"""Das will ich schon besorgen, Fräulein Klara"", entgegnete Sebastian bereitwillig;"
+510	widerstehen	49	47	25	8.5	238		widersteht 1	widerstand 1	widerstanden 3	haben 3	Das Verlangen stieg immer höher im Heidi, es konnte nicht mehr widerstehen.
+511	verdorben	36	31	19	8.5	160				verdorben 36	haben 19; sein 7	Ihr selbst war ja das Fest verdorben, aber dem Kind nicht;
+512	aufgetragen	31	30	20	8.5	131				aufgetragen 31	haben 11; sein 2	Und er hat ihr so gut geschmeckt, und dann hat sie mir aufgetragen, ich soll Ihnen sagen, sie danke Ihnen vielmal dafür und auch noch für alles Gute.
+513	antworteen	28	25	10	8.5	114						Aber die Kinder antworteten gar nicht, sie sahen ihn nur vorwurfsvoll an.
+514	wedelen	14	13	8	8.5	41			wedelte 13			er sah gar nicht grimmig aus, sondern wedelte freundlich mit dem Riesenschweif und legte sich dann vor der Prinzessin nieder.
+515	entgegneen	14	12	7	8.5	41			entgegnete 11			",,Doch, du tatst es Sid,"" entgegnete Mary."
+516	aufjauchzen	12	12	8	8.5	32		jauchzt auf 1	jauchzte auf 6; aufjauchzte 1			Da schoss der Schlitten davon die Alm hinab mit einer solchen Schnelligkeit, dass das Heidi meinte, es fliege in der Luft wie ein Vogel, und laut aufjauchzte.
+517	hineinsehen	45	40	18	8.4	214		sieht hinein 1	sah hinein 24; hineinsah 1			Auch in den vorhin undurchdringlich dunkeln Bodenraum konnte ich jetzt hineinsehen.
+518	nachrufen	37	34	19	8.4	166			rief nach 32			"Der Peter rief dem Heidi nach: """
+519	aufsperren	25	25	16	8.4	98		sperrt auf 3	sperrte auf 16; aufsperrte 1	aufgesperrt 1		Sie kokettiert mit ihm, sitzt da und sperrt den Schnabel auf, sobald er sich zeigt -- und der verliebte Bursche kann so vielem Entgegenkommen nicht widerstehen.
+520	spuken	18	16	7	8.4	61		spukt 8	spukte 2	gespukt 1	haben 1	Und der Wald fährt fort, sie zu locken, sie zu betören, in ihren Träumen zu spuken.
+521	verpacken	17	16	9	8.4	56				verpackt 13; verpacken 1	sein 3; haben 2	Das Kind war trotz der heißen Junisonne so verpackt, als hätte es sich eines bitteren Frostes zu erwehren.
+522	anstrichen	15	15	8	8.4	46				angestrichen 12	sein 3; haben 1	die Stelle ist angestrichen.“
+523	zuwandern	7	7	6	8.4	12						Sobald alle Kinder versammelt waren, wanderten sie in einem langen Zuge dem Walde zu.
+524	hinuntereilen	11	10	7	8.3	28			eilte hinunter 8			Jetzt wandte sich der Herr Doktor rasch und eilte den Berg hinunter.
+525	hintragen	11	10	6	8.3	28			trug hin 3			Sie nahm sich vor, davonzugehen, aber ihre Füße trugen sie, ihrem Vorsatz zum Trotz, wieder zu der Gruppe hin.
+526	gegessen	77	69	31	8.2	418				gegessen 77	haben 52; sein 1	"""Hm, etwa so, wie wenn man etwas gegessen hat und wollte es nachher lieber wieder zurückgeben?"""
+527	schielen	27	24	16	8.2	110			schielte 23			' Dabei schielte er mit dem übriggebliebenen Auge auf den bedauernswerten Ankömmling.
+528	zeign	10	10	4	8.2	24		zeign 3; zeig 1				Marie, zeig deinen Korb.
+529	vorbeihuschen	8	8	5	8.2	16			huschte vorbei 3; vorbeihuschte 1			Im nächsten Augenblick huschten zwei Männer vorbei, und einer schien etwas unter dem Arm zu haben.
+530	wussten	112	105	38	8.1	652						sie kannten ja alle die Dete genau und wussten, wem das Kind gehörte und alles, was mit ihm vorgegangen war.
+531	aufschauen	41	40	16	8.1	192		aufschaut 1	schaute auf 37			Der Großvater schaute auf.
+532	bürsten	19	19	14	8.1	67		bürstet 1	bürstete 8	gebürstet 6	sein 2	Vorher mussten alle die vielen Buben noch einmal gewaschen und gekämmt, gebürstet und gestriegelt werden.
+533	bezeigen	16	16	9	8.1	52			bezeigte 6			Die Hottentotten waren indeß sehr mutig und bezeigten keine Furcht.
+534	heranwagen	12	12	9	8.1	33		wagt heran 2	wagte heran 5; heranwagte 1	herangewagt 1	haben 1	Ein verwegener Schelm wagt sich ganz dicht heran und guckt in das Loch hinein, fährt aber mit einem Gekreisch zurück.
+535	herausstecken	12	12	4	8.1	33			steckte heraus 10			Dann glauben die Jungen, dass es die Starenmutter ist -- sie stecken den Kopf heraus, und -- wupp hat Glip sie im Nacken gefaßt.
+536	weiterkönnen	9	9	7	8.1	20			konnte weiter 7			Heidi konnte nicht weiter;
+537	übrigsein	9	8	8	8.1	20		ist übrig 2	war übrig 4			es war kein Brot übrig und war kein Platz frei für ein weiteres Familienglied.
+538	vorschreten	6	6	3	8.1	9		vorschritt 6				Alles was mürbe und überlebt war, musste sich beugen -- und mit den Tagen, die gingen, und dem Winter, der vorschritt, ward es lichter und offener im Walde.
+539	wegschlagen	5	5	4	8.1	6			schlug weg 1			Auf einmal steigt ein großer, brauner Kopf in die Höhe und ein Paar lange Lauscher schlagen die Schneeschollen weg, als schlügen sie nach Mücken.
+540	umpflügen	5	5	3	8.1	6			umpflügte 1; pflügte um 1			sie hatten die Natur zahm gemacht, sie pflügten sie um und eggten sie, sie bestellten sie und klecksten ein Haus neben dem andern auf.
+541	striegelen	5	5	4	8.1	6			striegelte 4			»Zu der Zeit, wo es noch Riesen in Jämtland gab, geschah es einmal, dass ein alter Bergriese auf dem Hofe vor seinem Hause stand und seine Pferde striegelte.
+542	geradeausschauen	5	5	3	8.1	6			schaute geradeaus 5			der Junge hatte sich abermals aufgerichtet und schaute geradeaus, denn er dachte, jetzt sei hier im Walde gewiss nichts Besonderes mehr zu sehen.
+543	bedurfen	29	27	14	8.0	122			bedurfte 20	bedurft 1	haben 1	Es galt nur, so schnell wie möglich alles zu bedenken und zuzurüsten, was die Krieger im Felde bedurften.
+544	erlernen	24	20	11	8.0	94	to learn	erlernt 1	erlernte 1	erlernt 10	haben 8	es hatte vom Großvater allerlei Kunstgriffe erlernt:
+545	bringen	1472	1049	57	7.9	10700	to bring	bringt 108	brachte 402	gebracht 318	haben 196; sein 6	"""Das Feuer und die Rosen am Felsen und die blauen und gelben Blumen, und sieh, was ich hier bringe!"""
+546	mitgehen	65	56	25	7.9	343		geht mit 7; mitgeht 1	ging mit 13; mitging 1	mitgegangen 5; gegangen 1	sein 4	Wie auch die Großmama eiferte, er möchte doch nicht so weit mitgehen, es half nichts:
+547	kämmen	25	23	12	7.9	100			kämmte 8	gekämmt 5		Nicht waschen, nicht kämmen!
+548	anzuziehen	22	21	14	7.9	84						»Du kannst gehen,« sagte der König, worauf der Hutmacher eilig den Gerichtssaal verließ, ohne sich einmal Zeit zu nehmen, seine Schuhe anzuziehen.
+549	vermehrn	13	13	9	7.9	38			vermehrte 11			Dieses Vermögen vermehrte sich noch im Laufe einiger Jahre und man durfte glauben, dass unser Capitain binnen Kurzem ein reicher Mann sein würde.
+550	köpfen	11	8	4	7.9	29			köpfte 1	geköpft 5; köpfen 3		Da hatte der Joggi angefangen furchtbar zu schreien und zu jammern, denn er glaubte, er werde geköpft.
+551	anzukleiden	11	10	6	7.9	29						Trübselig stand er auf und begann sich anzukleiden.
+552	verlassen	692	560	53	7.8	4851	motion from inside to outside of a location	verläßt 33; verlaßt 1	verließ 160	verlassen 96	haben 66; sein 6	Als es diesen noch in derselben Stellung erblickte, wie es ihn verlassen hatte, stellte es sich vor ihn hin, legte die Hände auf den Rücken und betrachtete ihn.
+553	vorlesen	73	63	30	7.8	396	reading while verbaly speaking the read text	liest vor 3; las vor 3	vorlas 13; las vor 11			Nun Heidi lesen konnte, durfte es auch immer wieder der Großmama seine Geschichten vorlesen;
+554	ertrunken	24	19	8	7.8	95				ertrunken 24	sein 17	",,_Jetzt_ weiß ich!"" schrie Tom, ,,'s ist jemand ertrunken!"""
+555	wecken	174	149	39	7.7	1084	to wake someone/something up	weckt 9	weckte 48	geweckt 42	haben 21	Denn die Beschreibungen weckten in seinem Gehirn allerlei Vorstellungen, nur keine Buchstaben.
+556	umdrehen	122	109	32	7.7	724		dreht um 4	drehte um 74; umdrehte 10			man konnte aber sehen, dass er noch etwas im Hinterhalt hatte, denn er drehte immer den Kopf um und rollte mit den Augen.
+557	verschaffen	109	100	34	7.7	637		verschafft 7	verschaffte 5	verschafft 15	haben 12	Es war schwierig für die Tante, sich Gehör zu verschaffen drinnen in der Stube, als sie den Auftrag ausrichten wollte.
+558	bestrafen	44	37	21	7.7	213		bestraft 2	bestrafte 1	bestraft 28		Den Vorfall wollte sie nach den Unterrichtsstunden untersuchen und den Schuldigen so bestrafen, dass er daran denken würde.
+559	hilfn	38	28	20	7.7	177						"aber erst hilf du!"""
+560	wegstoßen	9	9	8	7.7	21			stieß weg 6	weggestoßen 2		»Ja, und ich hab' sie weggestoßen, ich war so zornig!«
+561	durchstreifen	9	9	8	7.7	21		durchstreift 3		durchstreift 2	haben 1	Er dachte mehr und mehr, wie schön es doch wäre, wenn er einmal wieder die weite Welt durchstreifen könnte.
+562	striegeln	9	9	6	7.7	21				gestriegelt 5	haben 1	Vorher mussten alle die vielen Buben noch einmal gewaschen und gekämmt, gebürstet und gestriegelt werden.
+563	flitzen	9	9	4	7.7	21			flitzte 6	geflitzt 1	sein 1	An diesem hellen Frühlingstag flitzte die Sonne auch durch das kleine Flurfenster;
+564	nähern	110	106	37	7.6	645		nähert 9	näherte 50	genähert 12	haben 12	Als er sich demselben näherte, kam sein Vater gerade wieder vom Hügel herab.
+565	erklingen	54	51	26	7.6	276		erklingt 2	erklang 44			Jeden Abend nämlich, gerade wenn Miezchen im besten Zug der Unterhaltung war, erklang auf einmal der Befehl, ins Bett zu gehen.
+566	beistimmen	32	32	14	7.6	142			stimmte bei 25			"""So ist es,"" stimmte jener bei, zumal er einsah, dass der Knoten Nicht anders mehr zu lösen sei."
+567	zurücktönen	8	8	6	7.6	17			tönte zurück 8			"""Da"", tönte es von irgendwoher zurück."
+568	betrachten	400	342	52	7.5	2709		betrachtet 16	betrachtete 215	betrachtet 34	haben 17	Als es diesen noch in derselben Stellung erblickte, wie es ihn verlassen hatte, stellte es sich vor ihn hin, legte die Hände auf den Rücken und betrachtete ihn.
+569	herausziehen	54	52	31	7.5	277		zieht heraus 3; herauszieht 1	zog heraus 27; herauszog 7	herausgezogen 10	haben 4	Sie zog jetzt ihren Beutel heraus und nahm einen großen, runden Taler heraus;
+570	aufsein	23	22	18	7.5	91		ist auf 2	war auf 12			»War noch niemand auf«, gab er zurück.
+571	hinfallen	23	23	17	7.5	91		fällt hin 1	fiel hin 11; hinfiel 3			sich und fiel Bewußtlos hin;
+572	abbilden	11	11	7	7.5	30			abbildete 1	abgebildet 9		Dieselben Pferde und dieselben Reiter waren viele Male abgebildet.
+573	vergingen	48	45	21	7.4	240				vergingen 13		So vergingen die Stunden.
+574	vortreten	42	40	20	7.4	203		tritt vor 3	trat vor 32; vortrat 1			"Jetzt trat der Doktor vor: ""Sesemann, der Fall gehört in mein Gebiet;"
+575	bellen	35	29	15	7.4	161	to bark	bellt 5	bellte 16	gebellt 2; bellen 1	haben 2	Sie bellen, und sobald der Wald Von ihrem Bellen widerschallt, Fliehn schnell der schwache Fuchs und starke Hirsch davon.
+576	mitbringstn	6	6	5	7.4	10						"Was bringst du denn für einen Segen mit!"", rief die Großmutter aus, als es nicht enden wollte mit den Brötchen und immer noch eines folgte."
+577	hineinrannen	6	6	3	7.4	10			rannte hinein 4			Jetzt rannte er in einen großen prächtigen Buchenwald hinein, und der Junge lief hinter ihm her, ohne an irgend eine Gefahr zu denken.
+578	heranfliegen	6	6	4	7.4	10			flog heran 1	heranfliegen 1		Die Wildgans wich dem Fuchs nicht aus, sondern flog ganz nahe heran.
+579	aufkönnen	6	6	6	7.4	10			konnte auf 3			Zimmer riss er seinen Mund, so weit er konnte, auf und gähnte erschrecklich.
+580	bahnen	18	17	8	7.3	65			bahnte 1	gebahnt 3	sein 1; haben 1	Sie hört, wie sich große, gehörnte Krallen einen Weg am Stamm hinauf bahnen.
+581	weglegen	17	17	12	7.3	60			legte weg 13; weglegte 3			Der Lehrer legte sein Buch weg.
+582	herzukommen	10	10	9	7.3	26		kommt herzu 1	kam herzu 2; herzukam 1			"Er aber sprach voll Seelenruh': ""Nein, liebe Gattin, komm herzu!"
+583	fehltreten	4	4	4	7.3	4		tritt fehl 1	trat fehl 2			und da wir die spitzigen Pflastersteine nicht gewohnt waren, traten mehrere von uns häufig fehl und fielen zu Boden.
+584	ausgerenken	4	4	4	7.3	4				ausgerenkt 4	haben 2; sein 1	Er hatte ein Auge verloren, ein Bein gebrochen und sein Unterkiefer war ausgerenkt.
+585	schaun	40	34	12	7.2	192						"""Da schau mir nur das Buberl"", sagte sie dann wohl zu ihrem Mann;"
+586	ausschauen	36	35	13	7.2	168		schaut aus 8; ausschaut 4	schaute aus 14; ausschaute 3			Nun fuhr es in alle Winkel hinein und schaute jedes Plätzchen aus, wo am schönsten zu schlafen wäre.
+587	geschehn	15	15	3	7.2	50				geschehn 13	sein 1	Doch wenn du mir's mit Recht verübelt, Heut will ich offen dir gestehn: Ich kann, so viel ich nachgegrübelt, Nicht fassen, was mit mir geschehn.
+588	hineingekommen	9	9	7	7.2	22				hineingekommen 9	sein 8	Aber nun wollte Otto noch wissen, wie es denn wieder in die Stube hineingekommen sei, da er doch gewartet hatte, bis alle Kinder draußen waren.
+589	aufladen	9	8	8	7.2	22		ladet auf 1	lud auf 4			Nun lud der Treiber die ganze Last dem Pferde auf.
+590	herauftönen	7	7	5	7.2	14			tönte herauf 5			"""Weiß schon"", tönte es von unten herauf."
+591	umherhüpfen	7	7	5	7.2	14			hüpfte umher 4; umherhüpfte 1			Dann hüpfte das Tierchen in der Stube umher und suchte Krumen am Boden.
+592	hinausstecken	7	7	4	7.2	14			steckte hinaus 5; hinaussteckte 1			»Da sind wir schon!« rief Frau Rat und steckte den Kopf zum Fenster hinaus, um sich nach Gontraus umzusehn.
+593	auszuteilen	5	5	5	7.2	7						Aber eins fehlte, was Mr. Walters Glück vollgemacht hätte, das war die Gelegenheit, einen Bibelpreis auszuteilen und eins seiner Wunderkinder zu zeigen.
+594	anschicken	40	40	19	7.1	193			schickte an 18; anschickte 13			Als nun das vergnügte Mahl zu Ende war, fing es an zu dunkeln, und Peter schickte sich zur Heimkehr an.
+595	aussahen	32	32	18	7.1	145						Pfäffling wurde ein wenig ungeduldig, er war schon so lang unterwegs und ihm war es ganz gleichgültig, wie die Zimmer aussahen.
+596	geigen	11	9	5	7.1	31		geigt 1	geigte 2	gegeigt 1	haben 1	Es sah aus, als geigte es auf einer versteckten Geige, und richtig entstand jener zirpende Silberton, der die ganze Mondnacht füllte.
+597	hineinkriechen	8	8	6	7.1	18		kriecht hinein 2		hineinkriechen 1		denn wenn man ins Bett geht, kriecht man zwischen das Leintuch und die Decke hinein.
+598	anzubinden	8	8	7	7.1	18				anzubinden 8		"Nun er eine hervorragende Persönlichkeit war, würde sie wohl versuchen, wieder ,,anzubinden""."
+599	herumwühlen	8	8	6	7.1	18		wühlt herum 2				Aber die Fänge wühlen in einem Berg von Daunen herum und es gelingt ihnen nicht, etwas anderes als die Haut zu fassen.
+600	darbeten	8	8	6	7.1	18			darbot 8			Eine dicke Staubdecke war das erste, was sich den vier neugierig gesenkten Kinderköpfen darbot.
+601	nahesein	8	8	8	7.1	18		ist nahe 3	war nahe 2			»Mr. Wilson, es ist =so= dreist, und dieses Wirthshaus ist =so= nahe, dass Niemand je daran denken wird;
+602	beißen	44	42	27	7.0	218	to bite	beißt 9				Peter rief von seinem Sitz aus, mit einigen Unterbrechungen, denn er hatte immer noch zu beißen und zu schlucken:
+603	lebn	20	19	11	7.0	77						"So leb wohl, Dete, mit Glück!"""
+604	siehen	114	100	29	6.9	681						"""siehst du dort?"", und sie wies mit dem Zeigefinger weitab vom Bergpfad."
+605	spitzen	35	35	19	6.9	164		spitzt 3	spitzte 19			In langgestrecktem Bogen, unter spitzen, unbeholfenen Wendungen stoßen sie auf sie ein.
+606	herabkommen	19	18	14	6.9	72		herabkommt 2; kommt herab 2	kam herab 9			Als er sich demselben näherte, kam sein Vater gerade wieder vom Hügel herab.
+607	nachzusehen	13	13	9	6.9	41		nachzusehen 1		nachzusehen 6	sein 2	Sie ging nachzusehen.
+608	hinaufschauen	13	13	6	6.9	41			schaute hinauf 5; hinaufschaute 1			Diese aber schauten nur in die Luft hinauf, als dächten sie an ganz andre Dinge.
+609	hineingucken	10	10	6	6.9	27		guckt hinein 1	guckte hinein 6	hineinguckt 1		Derweilen schaute das Heidi vergnüglich um sich, entdeckte den Geißenstall, der an die Hütte angebaut war, und guckte hinein.
+610	ergehen	111	100	35	6.8	662		ergeht 7	erging 31	ergangen 32	sein 31	Der Peter nickte ganz zerknirscht, aber wie ein Kenner, denn gerade so war es ihm ergangen.
+611	anstellen	81	77	34	6.8	460		stellt an 4	stellte an 4; anstellte 1	angestellt 35	haben 17; sein 5	"was stellt aber auch die kleine Mamsell an, so fortzulaufen?"""
+612	brüllen	69	54	21	6.8	380		brüllt 8	brüllte 18	gebrüllt 4	haben 4	Der Löwe brüllt, der Wolf heult und so werdet, ihr euch noch oft beizeiten mit der Flucht retten können.
+613	heimbringen	25	23	12	6.8	106		bringt heim 1	brachte heim 1	heimgebracht 10	haben 6	und wenn es doch heim wolle, so könne es ja gleich gehen und dann erst noch der Großmutter etwas mit heimbringen, was sie freue.
+614	mahlen	17	16	7	6.8	62	reduce to smaller pieces by crushing			gemahlen 6; gemahlt 4	haben 4	aber leider wird er nichts andres zu mahlen haben, als die Rinde von seinen Bäumen.
+615	hineinmüssen	11	11	10	6.8	32			musste hinein 6			»Müssen wir in die Hütte hinein zum Schreiben?« fragte Klara, die wohl dafür war, der Großmama Bericht zu geben;
+616	heimkommsen	9	9	6	6.8	23		heimkommst 8; kommst heim 1				Am Abend, wenn du heimkommst, da gehst du noch ganz hinein in den Zuber, wie ein Fisch;
+617	jemmerten	9	9	7	6.8	23						Nun jammerten die Weiber: „Was tun, wohin fliehen vor diesen Barbaren?“
+618	wegnehmen	39	36	19	6.7	190	to remove something from where it is currently located; to take something from another person (against their will)	nimmt weg 4; nehmt weg 1	nahm weg 3; wegnahm 1	weggenommen 1	haben 1	"""es liegt alles bereit, nehmen Sie noch den Staub von den Möbeln weg."
+619	trauten	27	26	20	6.7	118			traute 9			Sie hatte noch immer Schwamm und Kamm in der Hand und traute sich nicht loszulassen.
+620	anstaunen	23	23	15	6.7	95			staunte an 4; anstaunte 2	angestaunt 4	haben 1	da war es auf einmal ein Stuhl, wie der vom Großvater, nur viel höher, und Heidi staunte das Werk an, sprachlos vor Verwunderung.
+621	mitspielen	19	13	8	6.7	73		spielt mit 3; mitspielt 2	spielte mit 1			Wer spielt also mit?
+622	einwickeln	16	14	9	6.7	57			einwickelte 1	eingewickelt 8	sein 1; haben 1	Der Braten wurde eingewickelt und verschwand in der Tasche des jungen Mannes, der sich nun dankbar entfernen wollte.
+623	tadelen	16	15	9	6.7	57			tadelte 15			»Da sehen Sie, Gretchen, wie Sie die Kinder erschrecken«, tadelte Tante Toni das Mädchen.
+624	abmühen	15	15	11	6.7	52		müht ab 1; abmüht 1	mühte ab 5; abmühte 4	abgemüht 2	haben 2	Während sie sich ausdauernd, aber vergeblich, unten in dem hohlen Stamm abmüht, klagt sie vor sich hin.
+625	weiterfragen	12	12	12	6.7	37			fragte weiter 11; weiterfragte 1			"Wie hast du denn lesen gelernt?"", fragte die Dame weiter."
+626	wiederfragen	6	6	5	6.7	11			fragte wieder 5; frug wieder 1			"""Warum haben die Berge keinen Namen, Großvater?"", fragte Heidi wieder."
+627	nachgerufen	6	6	4	6.7	11				nachgerufen 3	haben 3	es hatte ja nicht vergessen, wie der Großvater beim Abschied nachgerufen hatte, in einem Federnhut wolle er es niemals sehen;
+628	dagegenhaben	6	5	4	6.7	11		hat dagegen 1	hatte dagegen 1			das ist jetzt ganz zahm, und wenn es zufällig dein Pfarrer zu lesen bekäme, so hätte er selbst nichts dagegen.«
+629	hinrannen	6	6	6	6.7	11			rannte hin 2			Kasperle stöhnte, seufzte und weinte und rannte verzweifelt im Zimmer hin und her;
+630	heimziehen	6	6	4	6.7	11			zog heim 3			Danach wurde die Ruhe nicht mehr gestört, und wieder zog Michele mit seinen Geißen heim, und Kasperle blieb einsam zurück.
+631	abreisen	67	56	16	6.6	369		abreist 4; reist ab 1	abreiste 8; reiste ab 7	abgereist 8	sein 7	"übermorgen reisen wir ab, und der Dienst ist gut, das kann ich dir sagen."""
+632	erstrecken	25	23	12	6.6	107		erstreckt 5	erstreckte 14			Dieser Fjord aber ist die zweitgrößte von den langen Buchten, die der Mälar nach Uppland hinein erstreckt.
+633	herbeirufen	18	17	14	6.6	68			rief herbei 13			Er flog hin und kostete und fand sie ungemein süß und rief hundert näschige Brüder herbei.
+634	herabsehen	18	18	12	6.6	68		herabsieht 1	sah herab 10; herabsah 1			von dem Berge, der am Ende der Straße die Stadt überragt, sah fast drohend der schwarze Tannenwald herab;
+635	hinaufgehen	54	52	19	6.5	286		geht hinauf 5; hinaufging 1	ging hinauf 32; hinaufging 2			sie musste aber schnell erraten haben, was vorging, die Tochter hatte ihr ja vor kurzem berichtet, sie habe die Dete gesehen zum Alm-Öhi hinaufgehen.
+636	vergaßen	27	26	17	6.5	119						Die Kinder vergaßen in ihrem Jubel ganz, dass nun der Augenblick komme, da sie sich trennen mussten, und als mit einem Mal der Ruf erschallte:
+637	tadeln	23	23	13	6.5	96				getadelt 3	haben 1	wie er ihr Ungeschick wohl aufnehmen, ob er sie tadeln würde vor den Herren.
+638	aufgeschlossen	10	9	7	6.5	28				aufgeschlossen 10	haben 4	Dann wurde unten die große Haustür mit dem gemalten Schützenbruder knarrend aufgeschlossen.
+639	hineintun	10	9	8	6.5	28		tut hinein 1	tat hinein 6			Sobald drüben die beiden ruhig ihre Milch tranken, öffnete der Peter den Sack und tat einen Blick hinein.
+640	aufnehmen	270	237	46	6.4	1794	process of capturing data or translating information to a recording format	nimmt auf 5; aufnimmt 4	nahm auf 49; aufnahm 16	aufgenommen 81	haben 26; sein 6	Das Gespräch wurde wieder aufgenommen.
+641	daliegen	74	70	24	6.4	418		liegt da 5; daliegt 4	lag da 29; dalag 16			Von leuchtendem Golde bedeckt lag die ganze Halde da.
+642	verirren	40	34	19	6.4	198		verirrt 3	verirrte 4	verirrt 20	haben 16; sein 1	Einstmals, erinnere ich mich, kam mir ein blökendes Lamm, welches sich von der Herde verirrt hatte, so nahe, dass ich es gar leicht hätte erwürgen können;
+643	bescheren	25	20	11	6.4	108		beschert 6	bescherte 4	beschert 9	haben 5	Da wird sie uns dein Vater bescheren, meinst du nicht?
+644	zurückeilen	16	16	11	6.4	58		zurückeilt 1	eilte zurück 11			So verließen sie Frankreich noch vor dem eigentlichen Ausbruch des Krieges und eilten in ihr Vaterland zurück.
+645	hingekommen	14	13	8	6.4	48				hingekommen 8	sein 3	Und wo ist der bitterböse Jörg schließlich hingekommen?
+646	hinausmüssen	12	11	10	6.4	38			musste hinaus 6			"Jetzt fuhr er auf einmal sehr tapfer empor und rief: ""Nun, Sebastian, wir müssen doch einmal hinaus und sehen, wie's steht;"
+647	aufstanden	12	12	10	6.4	38				aufgestanden 7	sein 5	Aber es nimmt alles einmal ein Ende.--Da wir eines Morgens aufgestanden waren, fanden wir ihn tot in seinem Bette.
+648	rügen	11	11	5	6.4	33			rügte 5	gerügt 2	haben 1	»Aber pfui, Anna, was gibst du dem Kleinen für ein schlechtes Beispiel!« rügte die Mutter.
+649	bewillkommnen	9	9	7	6.4	24		bewillkommnet 1	bewillkommnete 3	bewillkommnet 1		Dann wandte sich die Großmama zum Almöhi um, der sich genaht hatte, um sie zu bewillkommnen.
+650	zugeschritten	5	5	5	6.4	8						Die Sonne war längst über den Mittag hinaus, als ein Trüppchen der Geißen ganz ernsthaft auf die Blumenhalde zugeschritten kam.
+651	zurückmachen	5	5	3	6.4	8			machte zurück 4			Einen Augenblick war sie es willens, ja, schon machte sie eine leichte Wendung zurück, da hörte sie Fräulein Güssow die Treppe herabkommen.
+652	einschlagen	107	102	35	6.3	642		schlägt ein 2; einschlägt 2	schlug ein 43; einschlug 11	eingeschlagen 14; einschlagen 1	haben 11; sein 1	Wie er auch stampfte und einschlug mit den Absätzen, kaum konnte er ein kleines Eissplitterchen herausschlagen.
+653	umarmen	78	74	27	6.3	446	to hug	umarmt 7	umarmte 50	umarmt 1	haben 1	Lachend und weinend umarmte sie ihr Klärchen, dann das Heidi, dann wieder Klara.
+654	niedersehen	24	24	16	6.3	103		sieht nieder 1	sah nieder 20; niedersah 1			Heidi sah auf ein Meer von Dächern, Türmen und Schornsteinen nieder;
+655	durchkommen	24	21	13	6.3	103		kommt durch 3; durchkommt 2	kam durch 1	durchgekommen 2	sein 1	kaum kann der feste Peter durchkommen.
+656	darbieten	23	21	15	6.3	97		darbietet 3; bietet dar 2	bot dar 11; darbot 3			Was irgend man zu wünschen hatte, Das bot sich drauf in Fülle dar:
+657	erschraken	13	13	10	6.3	43						Die Kinder erschraken.
+658	verspeisen	13	13	6	6.3	43		verspeist 2	verspeiste 1	verspeist 3	sein 1; haben 1	Und dem kleinen Leo den Kuchen hinhaltend, fügte sie hinzu: »Auf dein Wohl, o großer, berühmter Kaiser, werde ich diesen Kuchen verspeisen.«
+659	hinaufarbeiten	4	4	3	6.3	5			hinaufarbeitete 2; arbeitete hinauf 2			Arbeitete man sich die Hügel hinauf, so erreichte man Höhenpunkte mit weiter und ferner Aussicht;
+660	hinausschauten	4	4	4	6.3	5			hinausschaute 1	hinausschauten 2		Lisei und ich haben oftmals draußen an den Fenstern gestanden, die schon aus grünem Weinlaub gar traulich auf den Hof hinausschauten;
+661	zubinden	4	4	3	6.3	5			band zu 1	zubindet 1		»Das nächste Mal musst du sie selbst holen, jetzt aber binde fest den Kolben zu und lösche das Lämpchen sorgfältig;
+662	hergesagen	4	4	4	6.3	5		hergesagt 4				Einmal hatte er dreitausend Verse hergesagt, ohne zu stocken.
+663	hinunterlassen	4	4	3	6.3	5			ließ hinunter 1			Darauf rollte Tom seinen Schinken über den Abhang und ließ sich selbst ebenso hinunter, bei dem Experiment Kleider und Haut in Mitleidenschaft ziehend.
+664	müßtestn	4	4	3	6.3	5		müßtest 3				»Wenn du sie anhören müßtest, würde dir bald die Geduld ausgehen.«
+665	herwerfen	4	4	4	6.3	5			warf her 2			Als er sah, dass er sie nicht mehr zurückhalten konnte, warf er in seiner Verzweiflung seinen Spieß hinter ihr her.
+666	herausgekriegen	4	3	3	6.3	5		herausgekriegt 4				»Ha, ha«, so verstand Max, »endlich habe ich herausgekriegt, wo du, teure Frau Biene, wohnst!
+667	ausschwitzen	4	4	3	6.3	5						Was das Wachs betrifft, so schwitzen wir es in unserem Hause an der Unterseite des Hinterleibes aus.«
+668	weiterschriten	4	4	3	6.3	5			schritten weiter 1			Die Drei schritten in ihrer Besichtigung weiter.
+669	ausbrüten	10	10	8	6.2	29		ausbrütet 1	brütete aus 1; ausbrütete 1	ausgebrütet 3	haben 2	In dieses legte es Eier hinein und brütete Junge aus.
+670	herunterbringen	8	8	6	6.2	20			brachte herunter 3	herunterbringen 2; heruntergebracht 2	haben 2	"Da stand der Großvater auf vom Mittagstisch, stieg auf den Heuboden hinauf, brachte den dicken Sack herunter, der Heidis Bettdecke war, und sagte: ""So komm!"""
+671	aufessen	8	8	6	6.2	20						Aber sie hatte sich jetzt anders besonnen, denn sie fürchtete, der Peter könnte vor Freuden die ganze Wurst auf einmal aufessen.
+672	durchsuchen	24	22	15	6.1	104		durchsucht 2	durchsuchte 1	durchsucht 9	haben 3; sein 1	Da durchsucht sie den Wald, steigt über Mooren und kleinen Wiesen auf ... sie rüttelt wie ein Falke auf hastig klappenden Flügeln und späht hinab.
+673	mitlachen	24	23	12	6.1	104			lachte mit 14			Die Herren lachten, da lachte Frau Greiner mit.
+674	vorsagen	15	13	11	6.1	54		sagt vor 1	sagte vor 5	vorsagt 1		die hatte ihren Arm um seinen Hals gelegt und sagte ihm das Lied vor, das er eben von Heidi hörte und das er so lange nicht mehr vernommen hatte.
+675	aufhieln	12	12	9	6.1	39		aufhielt 10	aufhielt 1	aufhielt 1		Eugenie sollte später mit ihrem Gatten eine Reise nach den schönen Gegenden Süddeutschlands machen, in denen der Vater sich aufhielt.
+676	herausgucken	11	11	9	6.1	34			herausguckte 4; guckte heraus 3			sie sah aus wie eine Schmetterlingspuppe, nur dass oben noch das allerliebste Gesichtchen herausguckte.
+677	angebunden	11	11	9	6.1	34				angebunden 11	sein 2; haben 1	Alice war etwas ärgerlich, dass die Raupe so sehr kurz angebunden war;
+678	ausgesehen	7	6	5	6.1	16				ausgesehen 7	haben 6	Da kam der Herr Doktor eines Morgens und sah nicht so fröhlich aus, wie er sonst immer ausgesehen hatte.
+679	aufgestiegen	7	7	6	6.1	16				aufgestiegen 7	sein 7	Bis zu diesem Augenblick war sie über ihren Einfall sehr glücklich gewesen, und kein zagender Gedanke war in ihr aufgestiegen;
+680	durcheinanderrufen	7	7	7	6.1	16			rief durcheinander 2			Aber mit einemmal faßte ihn eine Schar rüstiger Kerle, seine Klassengenossen, an allen Ecken an, und die Stimmen riefen durcheinander: “
+681	herbeiströmen	7	7	4	6.1	16						Rund um sich her hatte er schon einen ganzen Kreis von Ratten, die ihm entzückt und hingerissen zuhörten, und mit jedem Augenblick strömten neue herbei.
+682	erwingen	7	7	5	6.1	16			erwachte 7			Als der Junge am nächsten Morgen erwachte, lag er auf einem Bett, und als er vier Wände um sich her und ein Dach über sich sah, glaubte er daheim zu sein.
+683	überlegten	6	6	5	6.1	12						Einer sah den andern an, sie waren still und überlegten.
+684	herstürzen	6	6	3	6.1	12		stürzt her 1	stürzte her 4			er stürzte sich über den Bauer her und fügte seine Krallen in dessen Drathgitter, um sie herauszuholen;
+685	mithsen	6	6	5	6.1	12		gehst mit 2				Du gehst auch mit,« sagte sie zu ihrer Puppe, die nach ihrer Geberin, Ilse, getauft war.
+686	wünschen	404	335	46	6.0	2784	feel desire for a specific item or event	wünscht 28	wünschte 110	gewünscht 65	haben 48	"""Ich wünsche Euch guten Tag, Öhi"", sagte die Dete hinzutretend, ""und hier bring ich Euch das Kind vom Tobias und der Adelheid."
+687	einnehmen	106	103	34	6.0	639	to ingest	einnimmt 3; nimmt ein 2	nahm ein 12; einnahm 11	eingenommen 39	haben 16; sein 7	Rottenmeier setzte sich neben sie und winkte Heidi, es sollte den Platz ihr gegenüber einnehmen.
+688	befestigen	66	58	25	6.0	369		befestigt 2	befestigte 20	befestigt 31	haben 4; sein 3	Er zieht seine Strickleiter heraus und befestigt sie an einem Zweig.
+689	niederwerfen	26	25	17	6.0	116		wirft nieder 5	warf nieder 12			Im Frühling wirft er Blüten nieder.
+690	vergelten	9	9	8	6.0	25	to take revenge			vergelten 3		-- Wenn ich ihm das nicht noch 'mal vergelte!
+691	schreien	449	332	42	5.9	3119	shout, yell, scream	schreit 39	schrie 327			"Warum schreit er so?"", fragte Heidi weiter."
+692	nahen	55	54	30	5.9	298		naht 12	nahte 33; nahete 1	genaht 2	haben 1; sein 1	Dann wandte sich die Großmama zum Almöhi um, der sich genaht hatte, um sie zu bewillkommnen.
+693	hüen	27	25	16	5.9	123						Die Einwohner sollten sich hüten und wenn künftig nur auch _ein_ Schuss fiele, so würde das ganze Dorf verbrannt.
+694	anhören	100	95	37	5.8	601		hört an 8	hörte an 30; anhörte 5	angehört 4	haben 4	Der höre ihn immer an und wolle ihm gern helfen, wenn gar keine Menschen ihm mehr zuhören wollen oder helfen können.
+695	nacheilen	19	19	14	5.8	77		eilt nach 2; nacheilt 1	eilte nach 6			Unser Hase aber eilte ihm in großen Sätzen nach.
+696	umgesehen	12	11	5	5.8	40				umgesehen 12	haben 10	Die Dete hatte wohl zehn Minuten gewartet und sich nach allen Seiten umgesehen, ob die Kinder mit den Geißen noch nirgends zu sehen seien;
+697	kömmen	12	10	4	5.8	40		kömmt 8	kömmt 4			Hans kömmt mit Matzen nach der Stadt.
+698	abhelfen	10	10	8	5.8	30						"dem ist abzuhelfen!"" fiel ihm ein."
+699	hineinzugehen	10	10	6	5.8	30						Aber in das Haus hineinzugehen, dazu war Wiseli zu schüchtern.
+700	anstießen	10	10	9	5.8	30						zuletzt kam der Stadtmusikus mit seinen Gesellen, wie ich aus dem Tönen des Brummbasses hörte, mit dem sie beim Fortgehen an den Wänden anstießen.
+701	turnen	10	10	5	5.8	30	to perform gymnastics	turnt 1	turnte 5	geturnt 1	haben 1	Sie sprang und turnte, lief und kletterte wie der tollste Junge, und für sie war kein Baum zu hoch und kein Graben zu breit.
+702	wäschen	8	8	6	5.8	21		wäscht 8				"""Der Alm-Öhi putzt und wäscht sie und gibt ihnen Salz und hat den schönsten Stall."""
+703	hinausrennen	8	8	7	5.8	21		rennt hinaus 1	rannte hinaus 7			Jetzt stieg Heidi eilig von seinem Schemel herunter, rannte zur Tür hinaus, die Treppe hinunter und trat auf die Straße hinaus.
+704	aufschneiden	8	8	6	5.8	21			schnitt auf 2			Einen halbtoten Fisch aufschneiden, das konnte sie nicht und noch viel weniger ihn töten.
+705	vermuthen	8	8	3	5.8	21			vermuthete 2			nur Jenny weinte, denn sie blutete und es war zu vermuthen, dass sie noch lange die Narben der Katzenkrallen und Zähne tragen würde.
+706	aufstellen	111	102	36	5.7	679		aufstellt 1; stellt auf 1	stellte auf 13; aufstellte 2	aufgestellt 54	haben 17; sein 12	In dem ziemlich großen Raume zwischen dem Ofen und der Wand waren vier Bretter aufgestellt, so wie zu einem Apfelbehälter.
+707	gebrauchen	73	71	30	5.7	419	to use (e.g. a resource to perform a task)		gebrauchte 5			"--""Verzeihen Euere Magnifizenz"", sagte Wagner, ""ich werde diesen jungen Mann in meinem Dienst nicht gebrauchen können;"
+708	glänzten	53	52	26	5.7	287						Die freundlichen Augen des Pfarrers glänzten vor Freude.
+709	fortmüssen	25	24	17	5.7	112			musste fort 8; mußte fort 2			Wohlan, so musste sie denn fort;
+710	vorgerücken	5	5	5	5.7	9				vorgerückt 5	sein 4	»Wir müssen uns bald rüsten, Klärchen, die Sonne ist schon weit vorgerückt;
+711	herausgefahren	5	5	5	5.7	9						Bismarck war mit Knight herausgefahren, um diesem als Dolmetsch zur Seite zu stehen.
+712	hochbeglücken	5	5	3	5.7	9				hochbeglückt 5	sein 1	So rief er hochbeglückt und leerte Den Becher aus bis auf den Grund.
+713	hinabsenken	5	5	5	5.7	9		senkt hinab 1	senkte hinab 2; hinabsenkte 1			Aus der kleinen weißen Rauchsäule war jetzt eine schwere weiße Wolke geworden, die sich am Hügelrand hinwälzte und von da ins Tal hinabsenkte.
+714	kniffen	5	3	3	5.7	9			kniffte 3			dabei kniffen sie es von beiden Seiten zugleich.
+715	kapern	5	5	4	5.7	9						Es befand sich dort ein kleines Holzfloß, das sie zu kapern beschlossen.
+716	hinwegnehmen	5	5	5	5.7	9			nahm hinweg 3			Gott kann sie hinwegnehmen, und mein Herz ist fest, ganz fest gebunden fürs Leben.“
+717	statten	5	5	3	5.7	9						Dabei kam ihm wieder die Aufmerksamkeit zu statten, die er von jeher allen ihm begegnenden Dingen und Sachen schenkte.
+718	bedanken	41	37	20	5.6	211		bedankt 6	bedankte 12	bedankt 4	haben 3	Die Mutter schwamm in Seligkeit, Hieß ihn sich tausendmal bedanken
+719	zuführen	27	27	17	5.6	125		führt zu 1	führte zu 11; zuführte 1	zugeführt 3; zuführen 2	haben 2	Dann nahm es das Schneehöppli um den Hals, das ihm gleich zugelaufen war, und führte es der Klara zu.
+720	verschlafen	27	26	16	5.6	125				verschlafen 6	haben 3	_Karl_: Seid nicht böse, liebe Eltern, ich habe mich verschlafen.
+721	belohnen	27	24	13	5.6	125		belohnt 2	belohnte 1	belohnt 12	haben 1	Sie kam und sah den Sultan thronen, Recht sprechen, warnen und belohnen, Und immer wieder brach er auf, Bevor an ihr die Reihe war.
+722	verunglücken	14	13	11	5.6	51				verunglückt 13	sein 6	»Vielleicht gerade in der Stunde, in der sie verunglückt ist;
+723	wohnn	14	14	10	5.6	51			wohnte 14			Die Gerufene war die erste Lehrerin im Institute und wohnte daselbst.
+724	forteilen	14	13	10	5.6	51			eilte fort 13			Dann eilte sie fort.
+725	heraushelfen	7	6	3	5.6	17						»Ich wünschte, ich hätte nicht so sehr geweint!« sagte Alice, als sie umherschwamm und sich herauszuhelfen suchte;
+726	vorbeigekommen	7	7	6	5.6	17				vorbeigekommen 7	sein 6	Wir haben oft Händel mit ihnen gehabt, wenn wir an ihrer Schule vorbeigekommen sind.“--„Die gehören auch nicht herein ins Gymnasium!“
+727	hinablassen	7	7	4	5.6	17			ließ hinab 4			Sobald sie es wagen konnten, ließen sich die Gänse wieder aufs Meer hinab;
+728	beratschlagen	7	7	4	5.6	17			beratschlagte 1	beratschlagt 2		Alle Kinder waren gleich Feuer und Flamme für den Spaziergang, und es wurde beratschlagt, um wieviel Uhr man aufbrechen und was man alles mitnehmen müsse.
+729	wachn	7	7	7	5.6	17			wachte 7			Eugenie weinte still am Halse der treuen Tante, und ihr guter Genius schloss einen Bund mit dem besten Herzen, das über ihr wachte.
+730	fehen	7	7	4	5.6	17			fing 7			Da merkte er, dass das Wasser ihn trug, und nun fing er an zu schwimmen.
+731	vorkommsen	6	6	5	5.6	13		kommst vor 6				»Mein lieber Sesemann, wie kommst du mir denn vor?« entgegnete der Angekommene, indem er sich zu seinem Freunde hinsetzte.
+732	zujagen	6	6	6	5.6	13			jagte zu 5			Jockerl jagte derweil auf den nächsten Baum zu, kletterte daran in die Höhe und hüpfte bald als ein braunes, kleines Etwas im Gewirr der Äste herum.
+733	sputen	6	6	5	5.6	13			sputete 1	gesputet 1	haben 1	"Nachdem der Geist emporgeschossen, Sprach er: ""Dich wiederum zu sputen, Befehl' ich dir."
+734	fortsetzten	6	6	5	5.6	13						Als die Gänse etwas später am Tage ihre Reise fortsetzten, flogen sie dem blauen Tale zu.
+735	wüßten	38	36	21	5.5	193		wüßtet 3				Die Großmama hatte einen Tag vor ihrer Ankunft noch einen Brief nach der Alp hinauf geschrieben, damit sie oben bestimmt wüßten, dass sie komme.
+736	hineinlegen	22	22	16	5.5	96	to insert	legt hinein 1	legte hinein 14	hineingelegt 1		Heidi legte sich mit großer Lust hinein und schlief so herrlich, wie es ein ganzes Jahr lang nicht geschlafen hatte.
+737	besprachen	18	18	12	5.5	73						So besprachen sie das Für und Wider und kamen zu keinem Entschluss.
+738	ziemen	11	10	9	5.5	36			geziemt 9; ziemte 1			für die Frau eines Bürgers und Handwerksmeisters wollte sich das denn doch nicht ziemen.
+739	aussöhnen	10	10	6	5.5	31			söhnte aus 4; aussöhnte 1	ausgesöhnt 1		"""Schäfer"", sprach er, ""ich habe mich mit meinen Brüdern in dem Walde veruneinigt und so, dass ich mich in Ewigkeit nicht wieder mit ihnen aussöhnen werde."
+740	hinmachen	10	10	9	5.5	31		macht hin 1	machte hin 3			Der macht böse Falten hin!«
+741	behen	10	10	6	5.5	31			band 9			Ich machte ein langes Seil band ein Ende an den Handgriff fon der Schreibtischlade, der nebenan schtand, kroch aus den Fenster hilt mich fest an den Seil wi
+742	voranspringen	3	3	3	5.5	3			sprang voran 3			Es sprang ganze Strecken voran und dann auf die Seite, denn dort funkelte es rot und da gelb und lockte Heidi auf alle Seiten.
+743	hinüberschieln	3	3	3	5.5	3			hinüberschielte 3			aber er merkte auch, dass sie ihre Gefangenen immer in seiner Nähe machte, und dass sie dann stets verstohlen zu ihm hinüberschielte.
+744	umgehsen	3	3	3	5.5	3		umgehst 3				“Du sollst daran denken, dass du es mit mir zu tun hast, wenn du so mit dem Wiseli umgehst”, rief Otto zornig. “
+745	nachgraben	3	3	3	5.5	3						Werd' mal gleich im Lehm nachgraben.
+746	heraufgekletteren	3	3	3	5.5	3				heraufgeklettert 3	sein 1	Auf allen Vieren, das Gewehr fest unter die Achselhöhle geklemmt, kommt er heraufgeklettert ...
+747	herausgefallen	3	3	3	5.5	3				herausgefallen 3	sein 3	denn es hatte sicher ein Goldklumpen darin gelegen, der das Loch gebrannt hatte und dann herausgefallen war.
+748	einschleiefen	3	3	3	5.5	3			schlief ein 3			Klein Lilly schlief ein;
+749	formiern	3	3	3	5.5	3						
+750	verursachten	3	3	3	5.5	3						Tom schalt ihn, erzählte ihm von der durch ihn verursachten, Bestürzung und drängte ihn, nach Haus zurückzukommen.
+751	umherliefen	3	3	3	5.5	3						Sobald die Wildgänse die zahmen Gänse sahen, die auf dem Hofe umherliefen, senkten sie sich herab und riefen: »Kommt mit, kommt mit!
+752	nachzuhelfen	3	3	3	5.5	3						
+753	wiederstrahlen	3	3	3	5.5	3			wiederstrahlte 1			
+754	berathen	3	3	3	5.5	3						
+755	dachten	3	3	3	5.5	3		dachtet 2; dachtens 1				
+756	herbeidrängen	3	3	3	5.5	3						
+757	hindürfen	3	3	3	5.5	3						
+758	vorbeischlüpfen	3	3	3	5.5	3			schlüpfte vorbei 2; vorbeischlüpfte 1			
+759	verwirrten	3	3	3	5.5	3				verwirrten 1		
+760	durcheinandertönen	3	3	3	5.5	3			tönte durcheinander 1			
+761	erlauben	218	191	44	5.4	1442		erlaubt 19	erlaubte 38	erlaubt 61	haben 26	"ich will, wenn's meine Herrschaft erlaubt, bald wieder kommen und nachsehen, wie es geht mit ihm."""
+762	bewirten	15	13	8	5.4	57			bewirtete 3	bewirtet 6	haben 1	Sie wurden bewirtet von der freundlichen Mutter des Professors und erzählten aus den Feldpostbriefen ihrer Angehörigen.
+763	pflügen	15	7	4	5.4	57			pflügte 6	gepflügt 3	haben 3	Und von pflügen und säen kann hier oben gar keine Rede sein, dazu ist der Erdboden zu hart.
+764	heraufdringen	8	8	4	5.4	22		dringt herauf 1	drang herauf 6			Ein dumpfer, sich regelmäßig wiederholender Ton drang aus Tante Pollys Schlafzimmer herauf.
+765	anverwundern	4	4	4	5.4	6		verwundert an 4				Doch da sah ihn das Mädchen verwundert an.
+766	heruntergenommen	4	4	4	5.4	6				heruntergenommen 4	haben 1; sein 1	Der Öhi hatte derweilen den Rollstuhl herbeigerückt und einige der Tücher vom Reff heruntergenommen und hineingebettet.
+767	hineinwanderen	4	4	3	5.4	6			wanderte hinein 1; hineinwanderte 1			Die große Tür stand offen, und allerlei Leute wanderten hinein;
+768	weiterhelfen	4	4	3	5.4	6		hilft weiter 1				"""Und sollt' er wirklich zürnend schnauben, Dann hilft gewiss mein Glück mir weiter."
+769	mitfreuen	4	4	3	5.4	6		freut mit 1	freute mit 1			»Dann freut sie sich auch mit, wenn ihr Felix etwas eingesteht und um Verzeihung bittet.«
+770	festkleben	4	4	3	5.4	6		klebt fest 1	klebte fest 2; festklebte 1			Sogar in unsere Kanäle dringt diese Zunge ein, Gott weiß es, und was mit ihr in Berührung kommt, klebt daran fest und wird herausgezogen.
+771	herausdrücken	4	4	4	5.4	6						Darauf nahm Tom eine Nadel, und beide ritzten sich den Ballen des Daumens und drückten einen Blutstropfen heraus.
+772	hinfegen	4	4	3	5.4	6		fegt hin 1	fegte hin 1; hinfegte 1	hingefegt 1		Und jetzt prasselte durchnässender Regen nieder, und der tobende Orkan fegte ihn in Bündeln über die Erde hin.
+773	weggeflogen	4	4	3	5.4	6				weggeflogen 4	sein 3	Diese war von den Hummeln weggeflogen und hatte schon wieder angefangen, sich in der Nähe ein neues Nest zu bauen.
+774	fortsagen	4	4	4	5.4	6			sagte fort 4			»Gut, gut!« sagte Haley, »Du hast mich um beinahe drei Stunden mit Deinem verfluchten Unsinn gebracht; -- nun fort, keine Narrheiten weiter.«
+775	brummelen	4	4	3	5.4	6			brummelte 4			»Dummheit ist's,« brummelte Florian und schüttelte den Kleinen.
+776	könneten	4	3	3	5.4	6		könnet 4				»Und wenn ihr glücklich damit seyd, sprach der kleine Bauerknabe, so könnet ihr wohl noch gar eine ganze Schafheerde bekommen!«
+777	zusammentreiben	4	4	3	5.4	6			trieb zusammen 1; zusammentrieb 1	zusammengetrieben 1	haben 1	Sidsel lief auf den Weideplatz, trieb das Kleinvieh zusammen und zählte ihre Herde heute wohl schon zum zehnten Mal;
+778	hereinlachen	4	4	4	5.4	6			lachte herein 3; hereinlachte 1			Als die Sonne durch die hohen Fenster hereinlachte, erhob sich Schiller mit einem Gefühle des Behagens.
+779	reisen	170	134	40	5.3	1102	to travel	reist 8	reiste 24; reisete 2	gereist 23	sein 22	"""Nein, Adelheid"", sagte sie tadelnd, ""so kannst du nicht reisen von diesem Hause aus; solches Zeug brauchst du überhaupt nicht mitzuschleppen."
+780	vertreiben	65	60	27	5.3	371		vertreibt 2	vertrieb 6	vertrieben 20	haben 11; sein 1	»Ein andermal will ich dir das Vorbeigehen vertreiben, Schlafpelz, was heißt das?« rief ihm der Öhi zu.
+781	fortwollen	24	22	14	5.3	109		will fort 2	wollte fort 4			"Die Sonne sprach: ""Ich will scheinen So fort und immerfort!"""
+782	flechten	14	11	8	5.3	52	to plait; to braid; to weave			geflochten 1		Das Haar war längst geflochten, die Mutter saß auf dem Rand des Bettes.
+783	lehren	136	125	41	5.2	861	to teach	lehrt 7	lehrte 15	gelehrt 58	haben 37; sein 4	"""Ich will dich lehren, Glocken herunterzureißen!"
+784	fortgehen	109	101	33	5.2	672		fortgeht 6; geht fort 6	ging fort 45			"""wenn nun die Großmama wieder fortgeht, dann musst du erst recht bei mir bleiben."""
+785	nachkommen	61	60	27	5.2	345		kommt nach 3; nachkommt 1	kam nach 8; nachkam 4	nachgekommen 4	sein 4	damit war es zur Tür hinaus und huschte so behend weiter, dass der Peter kaum nachkam.
+786	bestürmen	17	17	11	5.2	69		bestürmt 6	bestürmte 6	bestürmt 1		Als Rike wieder hinaufkam, wurde sie von Konrad und Heinrich mit Fragen bestürmt.
+787	umhertreiben	15	15	9	5.2	58		umhertreibt 1	trieb umher 9			dann fahr er durchs Schiebefenster und trieb seine Beute kreiselnd in der Küche umher.
+788	entgegenspringen	11	10	9	5.2	37			sprang entgegen 8			Jetzt sprang das Heidi eine kleine Strecke den Berg hinan, dem Angeredeten entgegen.
+789	einjagen	11	10	4	5.2	37		jagt ein 1	einjagte 2; jagte ein 2	eingejagt 2	haben 2	Eines Morgens jagt sie einem biederen Bauersmann einen gehörigen Schrecken ein ...
+790	sewärn	11	11	9	5.2	37						»Bei allen möglichen Vereinen und wohltätigen Anstalten bist du, da tust du Gutes, und hier, wo du die Nächste dazu wärst, willst du nicht.
+791	bequemen	10	10	9	5.2	32			bequemte 6			Und dennoch wollten sich die Mütter nicht bequemen, Die guten Kinder mitzunehmen.
+792	hinausgetrieben	7	6	4	5.2	18				hinausgetrieben 2		die Dame aber wurde noch ein gutes Stück über ihn hinausgetrieben, so dass sie wieder zurückkehren musste, um nun den Freund des Hauses mit Anstand zu begrüßen.
+793	hervorblicken	7	7	7	5.2	18			blickte hervor 2			auch Professor Kuhn war unter ihnen; und hinter seinem Fenster im Erdgeschoß blickte der Schuldiener hervor.
+794	wendeen	7	7	5	5.2	18						Akka und die andern wendeten sich gegen sie;
+795	schnatteren	7	6	4	5.2	18			schnattere 1; schnatterte 1			Die Gänse schnatterten überlaut, und zu ihrer höchsten Verwunderung hörten die Kinder mitten aus dem Gänsegeschnatter heraus die Worte:
+796	bereiten	168	153	41	5.1	1092		bereitet 5	bereitete 33	bereitet 61	haben 35; sein 8	Der Großvater bereitete unterdessen das Mahl und trat nun heraus mit dem dampfenden Milchkruge und dem goldig glänzenden Käsebraten.
+797	klingelen	39	37	12	5.1	203			klingelte 39			Es klingelte.
+798	schlachten	24	20	15	5.1	110		schlachtet 3	schlachtete 2	geschlachtet 10	haben 3	Er _fängt_ kein Tier, dieser große Uhu -- er _schlachtet_ es!
+799	gefielen	24	22	15	5.1	110				gefielen 4		denn die Puppenköpfe, die da herauskamen, gefielen ihm nicht, er machte sie nur, weil er Geld dafür bekam.
+800	hinabsehen	16	15	12	5.1	64		sieht hinab 2	sah hinab 5; hinabsah 3			Da lag ein frischer, duftender Heuhaufen oben, und durch eine runde Luke sah man weit ins Tal hinab.
+801	herschicken	6	6	5	5.1	14		schickt her 2	schickte her 1			Zweifel schickt der Tod ihn her.
+802	durchnehmen	6	4	4	5.1	14			nahm durch 2			Das ist aber nicht ein Krieg, der uns so fern steht wie die andern Kriege, die wir ganz kühl in der Geschichtsstunde durchnehmen;
+803	wegzunehmen	6	6	4	5.1	14						»Das ist einfach grausam und abscheulich vom Vormund,« fuhr Heinrich auf, »uns heimlich so die Schwester wegzunehmen ohne Abschied!«
+804	auszustehen	5	5	5	5.1	10						»Der gute Mann hatte, seit dem er jene edle Tat vollbrachte, sehr vieles auszustehen.
+805	begaffen	5	5	5	5.1	10		begafft 2		begafft 1		Es flatterte, von Alt und Jung begafft, Mit Reizen ganz besondrer Kraft, Ein Bürgermädchen in der Nachbarschaft.
+806	herunterschlagen	5	5	3	5.1	10			schlug herunter 1			"Sonst lass' ich meinem Wort zum Trotz Dir deinen Kopf herunterschlagen, Als wäre der ein Tannenklotz."""
+807	heruntersinken	5	5	4	5.1	10			sank herunter 1			Nein, jetzt rührte er sich ein wenig; der Arm, den er am Kopf gehalten hatte, sank langsam herunter über das Dach.
+808	schallten	5	4	3	5.1	10						Und »Rudi!« schallte es vielstimmig, so dass Tante Toni sich erschrocken die Ohren zuhielt.
+809	heimkämen	5	5	4	5.1	10			heimkäme 1	heimkämen 2		Wenn nun Vater und Mutter von der Kirche heimkämen, würden sie sich baß verwundern.
+810	platschen	5	5	3	5.1	10			platschte 4			Kasperle schoß vor Vergnügen über die Freiheit und das Zusammensein mit dem traurigen Marlenchen einen Purzelbaum und platschte dabei ins Wasser;
+811	forthelfen	5	5	4	5.1	10			half fort 3			Was soll denn aus mir werden, wenn ich mir nicht selbst in der Welt forthelfen kann?
+812	vorschlagen	76	67	28	5.0	448			schlug vor 47; vorschlug 5	vorgeschlagen 2	haben 1	"""Wir wollen doch dort hinaufklettern und sehen, wo er daheim ist"", schlug Heidi vor."
+813	nachschauen	37	37	20	5.0	191		schaut nach 3	schaute nach 19; nachschaute 3			Dann sah er, wie das Heidi immer noch auf derselben Stelle stand und ihm nachschaute und mit der Hand ihm nachwinkte.
+814	vergraben	37	27	15	5.0	191			vergrub 1	vergraben 32	haben 6; sein 1	"""Man hat mir den Schatz, den ich in meinem Garten vergraben hatte, diese Nacht entwendet und einen verdammten Stein an dessen Stelle gelegt."""
+815	vorüberkommen	28	27	15	5.0	135		vorüberkommt 2; kommt vorüber 1	kam vorüber 14; vorüberkam 5	vorüberkommen 1		Sie kam an einem großen Garten vorüber, in dem es von tausend Farben leuchtete.
+816	geloben	27	25	17	5.0	129		gelobt 1	gelobte 12			Und dann bat er die Vorstände der Parteien, ihm in die Hand zu geloben, dass sie mit ihm durch dick und dünn, durch Not und Tod zusammen halten wollten.
+817	zurückholen	13	12	11	5.0	48		holt zurück 1	holte zurück 2	zurückgeholt 1; zurückholt 1		So plötzlich hatte man sie das erste Mal zur Patin gebracht, so hatte der Onkel sie vorgestern entführt und so wurde sie zurückgeholt.
+818	emporklettern	12	12	8	5.0	43			kletterte empor 9			Am besten klettern wir hier empor.
+819	herkommn	8	8	7	5.0	23						So komm her!«
+820	versüßen	8	8	8	5.0	23		versüßt 1		versüßt 2		Sie könnten es uns so versüßen!
+821	aufspritzen	8	8	4	5.0	23			spritzte auf 4; aufspritzte 3			Aber gerade, als Smirre den Todesschrei der Gänse zu hören erwartete, sah er den Marder in den Fluss hinunterplumpsen, so dass das Wasser hoch aufspritzte.
+822	hinauseilen	19	19	13	4.9	82			eilte hinaus 16			Der Stadtschultheiß warf sein Merkbüchlein beiseite und eilte hinaus.
+823	herausstrecken	14	14	9	4.9	54			streckte heraus 10; herausstreckte 1			»Zehnmal so lang, wie ich es bin, kann er sie mindestens herausstrecken«, rief der Borkkäfer und schwenkte den Arm.
+824	hinablaufen	11	11	8	4.9	38			lief hinab 10			Mit dieser Selbsttröstung lief ich die Treppe hinab und durch die Hintertür ins Freie.
+825	zurückkehrn	11	11	9	4.9	38						»Orla,« sagte Flora, als sie langsam in das Haus zurückkehrten, »auch ich möchte einen Vorschlag machen.
+826	hervorzubringen	10	10	7	4.9	33						Sie versuchte zu sprechen, aber es war ihr unmöglich, ein Wort hervorzubringen, die Kehle erschien ihr wie zugeschnürt.
+827	lautrufen	9	9	8	4.9	28		ruft laut 2	rief laut 7			"Peter! Erwache!"", rief Heidi laut."
+828	löschen	36	32	11	4.8	186	extinguish a fire; to put a fluid to something; turn off light; delete contents or data			gelöscht 13	sein 5; haben 1	Nun fing man an zu löschen, indem man Wasser in das Feuer schüttete und spritzte;
+829	dächen	32	29	17	4.8	161			dächte 16			Sie hatte sich geschämt, dem Freund nur auszusprechen, dass sie daran dächte, in Frankreich zu bleiben.
+830	herbeieilen	17	16	15	4.8	71		herbeieilt 1	eilte herbei 7; herbeieilte 2			Ein Mann eilte herbei und zog ihn heraus.
+831	verweilten	7	7	5	4.8	19						Noch ein paar Minuten verweilten die Gäste, dann verließen sie die Stube;
+832	einrichten	124	115	37	4.7	786			richtete ein 6; einrichtete 1	eingerichtet 67; einrichtet 2	haben 24; sein 5	Ich bin gekommen, es Euch zeitig zu sagen, Nachbar, damit Ihr Euch besinnen und einrichten könnt den Sommer durch.
+833	ausstatten	25	24	15	4.7	119		ausstattet 1		ausgestattet 17	haben 2	drei Monat sind Vonnöten aber, eh' zum Gatten Ich jemand gebe meinem Kind, Um sie geziemend auszustatten.
+834	hinaufspringen	12	12	9	4.7	44		springt hinauf 1	sprang hinauf 8; hinaufsprang 1			Er springt den nächsten Baum hinauf.
+835	hinunterschlucken	11	11	8	4.7	39			schluckte hinunter 5			Sie schluckte ihre Tränen hinunter und wandte sich nun der einzigen Hoffnung zu, die ihr blieb.
+836	aufhäufen	11	11	8	4.7	39				aufgehäuft 9	haben 4; sein 1	Und Heidi packte nun aus seinem Korb ein Brötchen nach dem andern aus, bis es alle zwölf auf dem Schoß der Großmutter aufgehäuft hatte.
+837	foppen	11	11	7	4.7	39		foppt 1		gefoppt 4	haben 1	"Mich foppt, so scheint's, mein Augenpaar."""
+838	umherfliegen	8	8	6	4.7	24		fliegt umher 1	flog umher 1			Obenhin flog der große Raubvogel in weiten Bogen umher, aber er krächzte heute nicht.
+839	behexen	8	4	3	4.7	24		behext 4		behext 3; behexen 1	haben 3	Der Mensch hat auch dein Volk behext, Und wenn du diesen Spruch vollstreckst, Dann wird es den Palast erstürmen.
+840	erfrischen	8	8	6	4.7	24			erfrischte 2			Ich werde Sie auf Ihr Zimmer führen, damit Sie sich von der langen Reise etwas erfrischen können.
+841	herablaufen	4	4	4	4.7	7			lief herab 1			Gefräßig starrt sie dem hahnenschnäbeligen kleinen Kerl in die stechenden Augen und sieht drei lange Narbenstreifen, die an seiner Wange herablaufen.
+842	emporwirbeln	4	4	4	4.7	7		wirbelt empor 1	wirbelte empor 2			Der kotige Zügel griff durch ihre letzten Spitzen, und wenn die Sonne auf diese Mähne schien, sah man Staubwölkchen draus emporwirbeln wie aus einem Sofa.
+843	vorübersausen	4	4	4	4.7	7			sauste vorüber 1	vorübersausen 1		Da hört er auf einmal ein wunderliches Hallo an sich vorübersausen und weiter durch den Strandwald jagen ...
+844	zusammenkehren	4	4	4	4.7	7		zusammengekehrt 1	kehrte zusammen 3			denn nur am Samstag wurde das alles zusammengekehrt, unter der Woche gönnte sich Frau Greiner nicht die Zeit.
+845	umbiegen	4	4	4	4.7	7						ich bog mir eine Schteknadl um, un band sie an einer lange Schnur, di ich in der Tasche hadte
+846	herumspuken	4	3	3	4.7	7		spukt herum 2				's ist sicher, Joes Geist spukt hier herum!
+847	hinunterstürmen	4	4	3	4.7	7			stürmte hinunter 2			Sie stürmte so fröhlich und lachend die Treppe hinunter, als müßte sie sich entschädigen für die ausgestandene Ruhe;
+848	entlangschreiden	4	4	4	4.7	7			schritt entlang 4			Noch einmal schritt er die Schlange entlang, dann blieb er in tiefem Nachdenken stehen und kratzte sich mit dem Fuß im Nacken.
+849	wahrgehen	4	4	4	4.7	7			ging wahr 1			Was für einer herrlichen Zeit gehen wir entgegen, nicht wahr, Großmütterchen?«
+850	heraufbringen	6	6	5	4.6	15			brachte herauf 2			„So, Pierre,“ sagte er, „du kannst uns noch ins Tal hinunter begleiten und dann darfst du den Schlüssel wieder heraufbringen und den Herrn wieder befreien!“
+851	strengen	6	6	5	4.6	15			strengte 2			»Du paßt nicht auf!« sagte die Maus strenge zu Alice.
+852	ankaufen	6	4	4	4.6	15			kaufte an 2	angekauft 1; ankauft 1		Mein Mann kaufte das Gütchen an für ihn, und er hat es keinen Augenblick zu bereuen gehabt.
+853	hinabfallen	6	6	4	4.6	15				hinabfiel 1		Mehrere dunkle Körper fielen aufs Meer hinab, und bei jedem Körper, der hinabstürzte, stießen die Überlebenden laute Jammerrufe aus.
+854	angebinden	6	5	4	4.6	15				angebunden 6	haben 2; sein 1	Die hatten ihn der Bequemlichkeit wegen an den Wagen angebunden, damit sie ihn nicht immer bewachen mussten.
+855	durchbrennen	6	5	4	4.6	15	destroy or tear due to overload because it melts; secretly and suddenly run away or flee, often with another person					Er wird _nicht_ durchbrennen.
+856	hineinwagen	6	6	3	4.6	15			hineinwagte 2			Nie wagten sie sich in die Stadt hinein, die den schwarzen Ratten gehörte.
+857	kugelen	6	6	5	4.6	15			kugelte 4			Kasperle kugelte sich im Wald herum vor Freude, wenn er daran dachte, dass Michele kommen würde.
+858	herausragen	6	6	4	4.6	15			herausragte 2; ragte heraus 1			Mitten in all diesem Weiß ragten die vielgestalteten Inseln kohlschwarz heraus.
+859	sattelen	6	6	4	4.6	15			sattelte 4			Er striegelte und sattelte die Ponnys, er putzte ihr Zaumzeug;
+860	nachgesonnen	5	5	5	4.6	11				nachgesonnen 3	haben 3	William hatte noch nicht lange nachgesonnen, so glaubte er es schon zu haben.
+861	erschreken	5	5	4	4.6	11						Sie erschraken aber doch.
+862	betraueren	5	4	4	4.6	11			betrauerte 1	betrauert 4	haben 1	Eugenie betrauerte die Mutter aufrichtig, denn ihr gutes Herz hing an derselben trotz aller Fehler und Schwächen, welche sie besessen.
+863	ausstießen	5	5	4	4.6	11						Ihr Trommelschlag, ihre Marschmusik, ihre bunten Kleider, ihr Feldgeschrei, das sie zwischen den Mauern ausstießen, nichts erregte Dauphins Aufmerksamkeit.
+864	hineinschluchzen	5	5	4	4.6	11			schluchzte hinein 5			Ilse schluchzte leise in sich hinein;
+865	durchgeprügeln	5	5	5	4.6	11		durchgeprügelt 3		durchgeprügelt 2	haben 2	»Er muss aufgehängt werden, eingesperrt, durchgeprügelt,« schrie die Prinzessin, und dabei schlug sie mit der Faust auf Kasperle ein;
+866	eindringen	76	63	26	4.5	456		eindringt 2; dringt ein 1	drang ein 4; eindrang 1	eingedrungen 19	sein 18	dann drangen alle auf Hinzelmeier ein.
+867	beibringen	46	45	27	4.5	254		beibringt 1	brachte bei 2; beibrachte 2	beigebracht 14	haben 12; sein 1	"""Dir, Adelheid, muss ich überall die ersten Begriffe beibringen, das sehe ich"", fuhr Fräulein Rottenmeier mit tiefem Seufzer fort."
+868	gähnen	39	36	18	4.5	208	to yawn	gähnt 3	gähnte 24			Als ich mich eben dorthin begeben hatte, hörte ich Lisei vom Fenster her so recht aus Herzensgrunde gähnen.
+869	herabfallen	19	19	15	4.5	84		fällt herab 1	fiel herab 6			--Großmütig dumm ließ er ihm also seinen Raub herabfallen und flog stolz davon.
+870	grasen	12	12	10	4.5	45			graste 1			Es war nicht ihr Weideplatz, sie wurden nie dahin geführt, denn es gefiel ihnen nicht, in den Blumen zu grasen.
+871	herunterzukommen	3	3	3	4.5	4						"""Was ist?"", fragte sie auf der Treppe, ohne herunterzukommen."
+872	aufzustehen	3	3	3	4.5	4						"Sebastian! Sebastian!"", denn vom Sessel aufzustehen konnte sie unmöglich wagen, da konnten ja mit einem Mal alle die kleinen Scheusale an ihr emporspringen."
+873	beteen	3	3	3	4.5	4			betete 1			"""Und betest du nun alle Tage, dass alles gut werde und er dich froh mache?"""
+874	herbeigeeilen	3	3	3	4.5	4				herbeigeeilt 3		Auf diesen Ausruf der Mutter waren beide Kinder herbeigeeilt und auf die Altane getreten.
+875	übernimmsen	3	3	3	4.5	4		übernimmst 3				Der Direktor kann nicht von dir verlangen, dass du die Arbeit der Herrn übernimmst, die abgereist sind.“--„Ich muss es ja nicht umsonst tun.
+876	umrennen	3	3	3	4.5	4			rannte um 2			alles, was sie berührt, wird sie umrennen.
+877	vorbeirannen	3	3	3	4.5	4			vorbeirannte 1			Als diese an den Häusern vorbeirannten, kamen die Bewohner heraus und fragten: »Was ist denn los?
+878	hinausfinden	3	3	3	4.5	4			fand hinaus 1			Nein, die Blumen waren alle tot und konnten sich nie mehr durch den dicken Schnee hinausfinden.
+879	davontraben	3	3	3	4.5	4			trabte davon 1; davontrabte 1			Nun wandte er sich um, so vorsichtig, als wäre er ein Schiff gewesen, und trabte dann rasch, aber vorsichtig davon.
+880	freun	3	3	3	4.5	4		freun 1				Schien dich mächtig zu freun.
+881	übernachteten	3	3	3	4.5	4						Die großen Städte, in denen sie übernachteten, erregten ihr Staunen und ihre Neugierde;
+882	aufstreichen	3	3	3	4.5	4			strich auf 1			Zuerst packte sie ihn und schüttelte ihn, dann strich sie ihm mit dem Schnabel am ganzen Körper auf und ab, und dann schüttelte sie ihn noch einmal.
+883	herumtummeln	3	3	3	4.5	4		tummelt herum 1	tummelte herum 1			
+884	passiren	3	3	3	4.5	4						
+885	hinausrasen	3	3	3	4.5	4		rast hinaus 1	raste hinaus 1			
+886	hinseufzen	3	3	3	4.5	4			seufzte hin 3			
+887	wegsetzen	3	3	3	4.5	4			setzte weg 1			
+888	anbekommen	3	3	3	4.5	4			bekam an 2			
+889	verfließen	19	19	13	4.4	85		verfließt 1	verfloß 5	verflossen 13	sein 1	"""Heidi schläft schon lange"", sagte Klara mit ganz belustigtem Gesicht, denn das Abendessen war für sie seit langer Zeit nie so kurzweilig verflossen."
+890	hinausstürzen	15	14	10	4.4	62		stürzt hinaus 1	stürzte hinaus 8			Sebastian warf fast seine Schüssel auf den Tisch und stürzte hinaus.
+891	bepflanzen	7	7	6	4.4	20				bepflanzt 5	haben 2	sie ist über ihre einstmals so große Heide geflogen, die jetzt zum größten Teil umgepflügt und bepflanzt ist.
+892	hineinstarren	7	7	4	4.4	20		starrt hinein 1	starrte hinein 1			dann weiß er von nichts mehr, er zappelt mit den Hinterläufen und streckt die Drossel ... die gelben Lichter starren steif in den Raum hinein.
+893	verhauen	7	5	3	4.4	20						"Ich werd's meinem großen Bruder sagen, der kann dich mit dem kleinen Finger verhauen, und ich werd's ihm sagen, dass er's tut!"""
+894	seelenvergnügen	7	7	5	4.4	20		seelenvergnügt 5		seelenvergnügt 2		Und dann kauten sie Gummi und stemmten die Knie gegen die Bank und waren seelenvergnügt.
+895	gehen	4321	1957	57	4.3	32862	to move on foot; to leave; for a tool or process, to work properly; to move to a different place, independed of the means	geht 591	ging 1404	gegangen 384	sein 319; haben 1	"""es geht nicht so streng mit dem Schwatzen im Prättigau, und dann kann ich schon etwas für mich behalten, wenn es sein muss."
+896	mahnen	80	76	22	4.3	486		mahnt 5	mahnte 69			"""Ja nu, so will ich, aber halt Wort!"", mahnte die Dete."
+897	zurechtmachen	17	17	10	4.3	74		macht zurecht 2	machte zurecht 6; zurechtmachte 2			So machte es jetzt alle Morgen mit großer Anstrengung sein Bett zurecht und strich so lange daran herum, bis es ganz glatt aussah.
+898	entlehnen	8	7	5	4.3	25				entlehnt 5	haben 1; sein 1	Im Reichtum, den er mir entlehnt!
+899	anfechten	8	8	5	4.3	25						Akka verstand, dass er sich über sie lustig machte, ließ sich das aber nicht anfechten.
+900	kochen	86	66	28	4.2	530	to boil food; to prepare food; being a cook; to boil a liquid	kocht 9		gekocht 20	haben 3	Jemand sollte noch für ein paar Wochen Ihr Essen kochen oder es bei mir holen und allerlei kleine Hilfsleistungen ausführen.
+901	flicken	25	23	16	4.2	122			flickte 2	geflickt 10	haben 3; sein 1	Peters Mutter, die Brigitte, die am Tisch geflickt hatte, war aufgestanden und betrachtete nun mit Neugierde das Kind von oben bis unten;
+902	bedeckn	20	20	11	4.2	92						Den Sarg unseres Vaters bedeckten wir mit allen Blumen des von ihm selbst gepflegten Gartens;
+903	zerspringen	19	16	13	4.2	86		zerspringt 3	zersprang 4			"Sie waren für die Großmutter, nun sind sie alle fort und die Großmutter bekommt keine!"", und Heidi weinte auf, als wollte ihm das Herz zerspringen."
+904	ermatten	19	19	9	4.2	86		ermattet 3		ermattet 13	sein 3	Taa ist im Begriff zu ermatten.
+905	aufsagen	18	16	13	4.2	80			sagte auf 8; aufsagte 2	gesagt 1		Und wie sie gewünscht hatte, sagte es nun andächtig sein Verslein auf.
+906	erzitteren	15	15	10	4.2	63			erzitterte 14			In der Nacht kam der Wind so gewaltig, dass bei seinen Stößen die ganze Hütte erzitterte und es in allen Balken krachte;
+907	trippelen	15	15	10	4.2	63			trippelte 14			Die Kleine trippelte so schnell sie konnte nebenher;
+908	festmachen	11	9	7	4.2	41		macht fest 1		festgemacht 5	haben 1	Der Stuhl wurde hineingestoßen und die hohen Bretter wieder an ihre Stelle gebracht, wenn auch nicht festgemacht.
+909	eingepacken	11	10	6	4.2	41				eingepackt 11	haben 7; sein 1	Richtig--auch das alte rote Tuch lag noch da, Fräulein Rottenmeier hatte es zu gering erachtet, um mit eingepackt zu werden.
+910	hinauflaufen	11	10	7	4.2	41			lief hinauf 8			Er kroch ganz zahm und sachte aus dem Knäuel heraus und lief aus allen Kräften den Berg hinauf, so als wäre einer hinter ihm drein, der ihn packen wollte.
+911	hineinschieben	11	10	9	4.2	41		schiebt hinein 1	schob hinein 9			Da kann man sein Bett hineinschieben.
+912	entgegentönen	6	6	4	4.2	16			tönte entgegen 4			So rief sie auf alle die Fragen und Anrufungen, die ihr aus allen Fenstern und Türen entgegentönten, nur immer zurück:
+913	herausstürzen	6	6	6	4.2	16			stürzte heraus 2			Strix sitzt in einer der Tannen und sieht den Menschen herausstürzen und wieder in sein Nest verschwinden.
+914	ausgeschicken	6	6	5	4.2	16				ausgeschickt 6	haben 3	»Die Leute, bei denen wir sind, haben uns auf den Bettel ausgeschickt.«
+915	ausgefahren	6	6	4	4.2	16				ausgefahren 5	sein 4	Mistreß ist ausgefahren, um einen Besuch zu machen;
+916	aushalten	133	122	37	4.1	862	to endure	hält aus 7; aushält 1	hielt aus 14; aushielt 4	ausgehalten 8	haben 5	"Ich kann auch gar nicht begreifen, dass Ihr den Winter durch nicht halb erfriert in Eurer Hütte, und wie das zarte Kind es nur aushalten kann!"""
+917	trocknen	52	49	32	4.1	298		trocknet 2	trocknete 29	getrocknet 10	haben 3; sein 1	Es trocknete in größter Eile seine Tränen und schluckte und würgte sein Schluchzen mit Gewalt hinunter, so dass kein Tönchen mehr laut wurde.
+918	wißen	34	34	19	4.1	180		wißt 12				Wißt ihr schon das Neueste?
+919	erbarmen	23	23	16	4.1	111		erbarmt 6	erbarmte 8	erbarmt 1		"""O nein, keinem Menschen"", versicherte Heidi und sah dabei so unglücklich aus, dass es die Großmama erbarmte."
+920	vorstrecken	20	20	10	4.1	93		streckt vor 1	streckte vor 15; vorstreckte 1			Damit streckte der Storch den Hals vor, schlug mit den Flügeln und flog wie ein Pfeil von einem straff gespannten Bogen davon.
+921	wegziehen	16	16	12	4.1	69			zog weg 3; wegzog 2	weggezogen 9	sein 6; haben 1	Selbst die nächsten werden gleichsam von weitem weggezogen und klingen schließlich ganz fern.
+922	wetteiferen	10	10	9	4.1	36			wetteiferte 3			Sie brachten in ihrer Sprache das Lob des Mitsommerabends zum Ausdruck und wetteiferten, wer das am betörendsten zu tun vermochte.
+923	einsiehen	7	7	5	4.1	21		einsieht 2				Wir wollen lieber beten für ihn, damit er sein Unrecht einsieht, dann wird es ihm sicher selbst sehr leid tun.
+924	aufzulesen	7	7	6	4.1	21			aufzulese 1			Wie ein tolles Kind lachte sie dann über ihren mutwilligen Streich, während ich bestürzt niederkniete, die vielen kleinen Geldstücke mühsam aufzulesen.
+925	hinunterwerfen	7	7	3	4.1	21			warf hinunter 3			Sie sollte sich lieber um ihre Arbeit kümmern und nicht Eimer und Bürsten die Treppe hinunterwerfen.
+926	belln	7	7	6	4.1	21			bellte 4			Und Cäsar bellte lustig und sprang an der Tür hinauf.
+927	mitgehelfen	7	6	4	4.1	21				mitgeholfen 7	haben 4	Ihr habt wohl beim Errichten von diesen Bergen mitgeholfen?
+928	heranbringen	5	5	5	4.1	12			brachte heran 3			Es brachte alles so nahe an die Großmutter heran als nur möglich, damit sie recht alles berühren könne und wisse, was es sei.
+929	hergerichten	5	5	5	4.1	12				hergerichtet 5	haben 2; sein 1	Er verschwand im Schlafzimmer, wo sein Festgewand hergerichtet war.
+930	einschliefen	5	5	4	4.1	12				einschliefen 4		Aber Klärchen war zarter, ängstlicher, wenn sie sich zu sehr aufregte oder wenn sie einschliefe?
+931	heimkamen	5	5	5	4.1	12		heimkamet 1		heimkamen 4	sein 1	»Die beiden Mütter sind schon ganz besorgt, und wir konnten uns gar nicht denken, weshalb ihr nicht heimkamet!«
+932	davonspringen	5	5	5	4.1	12			sprang davon 5			Damit sprang Lilly davon.
+933	abgeladen	5	5	4	4.1	12				abgeladen 5		Da wurde der schwarze Kasten wieder abgeladen, und Kasperle sah durch sein Guckloch die Protzendorfer Kinder den Postwagen umstehen.
+934	anblickten	5	5	3	4.1	12						Wie erschracken aber Beide, als sie sich anblickten!
+935	getrauten	5	5	5	4.1	12				getrauten 3		Zwei andere Knaben sahen dieses, sie hätten auch gern Haare gehabt, getrauten sich aber nicht so nahe an das Pferd;
+936	hineinstopfen	4	4	4	4.1	8		stopft hinein 1	hineinstopfte 1; stopfte hinein 1	hineingestopft 1	haben 1	Strix kröpft und stopft in sich hinein, so viel sie nur kann -- ihr Sklave ist ein tüchtiger Sklave!
+937	hineingestoßen	4	4	4	4.1	8						Der Stuhl wurde hineingestoßen und die hohen Bretter wieder an ihre Stelle gebracht, wenn auch nicht festgemacht.
+938	herumsetzen	4	4	4	4.1	8			setzte herum 1			Jetzt setzten sich alle voller Erwartung um den Tisch herum, und Heidi machte seinen Brief auf und las ihn laut und ohne Anstoß vor.
+939	entgegenglänzen	4	4	4	4.1	8			glänzte entgegen 3; entgegenglänzte 1			Die junge Frau lehnte sich hinaus und sah an der Häuserreihe hinunter -- schön beleuchtet glänzte sie ihr entgegen, Licht an Licht.
+940	rieben	4	4	4	4.1	8						Sie wurden jetzt auch so zutraulich zu Klara, dass sie ihr ganz nahe kamen und ihre Köpfe an ihren Schultern rieben;
+941	losgebunden	4	3	3	4.1	8						Unsere vier Leute sind für mich eingetreten, haben für mich gesprochen, bis man mich losgebunden hat.
+942	fortzuschaffen	4	4	4	4.1	8						Joe half den Körper des Ermordeten aufheben und auf einen Karren laden, um ihn fortzuschaffen.
+943	anscheinen	4	4	3	4.1	8		scheint an 2				»Ich habe es noch nicht geöffnet,« sagte das weiße Kaninchen, »aber es scheint ein Brief von dem Gefangenen an -- an Jemand zu sein.«
+944	aufschrieen	4	4	4	4.1	8			schrieen auf 2			»Ja, und hörtest du nicht, wie sie alle so jammervoll aufschrieen, als er sich den Dolch ins Herz stieß?«
+945	abrieben	4	4	4	4.1	8				abgerieben 4	haben 1; sein 1	Kaum hatte das Mädchen die Hörner abgerieben, als der Bock auch schon wieder rasch in den Wald hineinsprang.
+946	herschenken	4	3	3	4.1	8						»Blumen darf ich schon herschenken, da zankt die Mutter nicht, nur Brot nicht und nichts, was man um Geld kaufen muss, weil man keins hat.«
+947	schnatterten	4	4	3	4.1	8						Sie schnatterten und plauderten und wünschten ihm auf alle mögliche Weise Glück;
+948	hinabrutschen	4	3	3	4.1	8			rutschte hinab 2			Und dann rutschte ich langsam den Stamm hinab.
+949	gefürchten	4	4	4	4.1	8		gefürchtet 1	gefürchtete 2	gefürchtet 1	haben 1	Die gefürchtete Lisa meldete, dass das Essen fertig sei.
+950	einsagen	4	3	3	4.1	8						ja, sie sagten wohl ein bissel unwirsch: »Warte doch, bis du selbst schreiben kannst.«
+951	verschaffn	4	4	3	4.1	8						Sie verschafften sich Flaschen, denen sie die Köpfe abschlugen, und füllten sie mit Spiritus.
+952	geradeausblicken	4	4	3	4.1	8			blickte geradeaus 4			Eine Weile saß er aufgerichtet und blickte stumm geradeaus.
+953	platzen	28	25	15	4.0	143		platzt 3	platzte 5	geplatzt 4	sein 4	um seinen Nebenbuhler zu übertrumpfen, ist er nahe daran zu platzen.
+954	hinspringen	9	9	7	4.0	31		springt hin 1	sprang hin 6			Heidi sprang hin und patschte und rieb, bis es ganz glänzend war.
+955	zurückgebrachen	8	8	6	4.0	26		zurückgebracht 2		zurückgebracht 6	haben 2	Als sie den Flamingo gefangen und zurückgebracht hatte, war der Kampf vorüber und die beiden Igel nirgends zu sehen.
+956	unterweisen	8	8	7	4.0	26			unterwies 1	unterwiesen 1	haben 1	ich werde dich in der Kunst des Kämpfens unterweisen und dich ausstatten wie einen Ritter aus dem Morgenlande.
+957	antreten	92	87	33	3.9	576		tritt an 1	trat an 15; antrat 8	angetreten 19	haben 11	Die Geißen wurden herbeigepfiffen und -gerufen und die Heimfahrt angetreten.
+958	einfinden	37	35	17	3.9	201			fand ein 9; einfand 3			"Erlaube mir also immer, dass ich mich dann und wann bei deiner Herde einfinden und nachfragen darf, ob dir nicht--"""
+959	vorgefallen	29	26	14	3.9	150				vorgefallen 16	sein 16	Sebastian wusste gar nicht recht, was vorgefallen war, denn hinter dem breiten Johann stehend, hatte er den Luftzug nicht so deutlich empfunden.
+960	herumdrehen	26	25	15	3.9	131		dreht herum 6	drehte herum 12			Sie dreht den Kopf ganz nach ihm herum ...
+961	auftragen	22	22	13	3.9	106		trägt auf 1	trug auf 7; auftrug 7	aufgetragen 1	haben 1	Und nun trug die Pfarrfrau das Essen auf, die Kinder traten an den Tisch und falteten die Hände.
+962	verzaubern	16	13	6	3.9	70		verzaubert 2	verzauberte 1	verzaubert 13	haben 3	Kein Wunder drum, dass Aladdin, Nachdem die Herrliche verschwunden, Noch immerdar wie festgebunden Und wie verzaubert sich erschien.
+963	naschen	13	11	9	3.9	53		nascht 2	naschte 3	genascht 2	haben 1	Er ging oft an den Schrank, um Zucker zu naschen.
+964	zurückspringen	11	11	9	3.9	42		springt zurück 1	sprang zurück 9			Das Heidi las aufmerksam seine Adresse ab, dann sprang es zum Großvater in den Schopf zurück und streckte ihm in hoher Freude den Brief entgegen:
+965	herunterrutschen	6	6	5	3.9	17		rutscht herunter 1	rutschte herunter 3; herunterrutschte 1			Vogelhansen setzt sich auf seine vier Buchstaben, hält die geraubten Eier mit der rechten Hand hoch in die Höhe und rutscht resolut vom Dach herunter.
+966	abbeißen	6	6	5	3.9	17						“Ich will dir schon helfen”, sagte Chäppi, schnappte das Brot vom Tisch weg und wollte abbeißen.
+967	luden	6	5	4	3.9	17						Die uns begleitenden Hottentotten machten sodann Feuer, legten ihre Wurfspieße neben sich und die Europäer luden die Flinten mit Kugeln.
+968	abrichten	6	6	5	3.9	17		richtet ab 1		abgerichtet 4	haben 1	Ich hatte ihn seit seiner frühesten Kindheit darauf abgerichtet.
+969	verspoten	6	6	5	3.9	17						Was soll der junge Schäffer von dir denken, er wird dich auslachen und dich verspotten.
+970	gelingen	254	221	46	3.8	1749		gelingt 23	gelang 135	gelungen 51	sein 47	Die Großmutter suchte nun das Kind zu trösten, aber es gelang ihr nicht so bald.
+971	ausstrecken	133	123	41	3.8	869		ausstreckt 3; streckt aus 3	streckte aus 71; ausstreckte 10	ausgestreckt 21	haben 4; sein 2	dann streckte er den Arm aus und sagte befehlend:
+972	weitergehen	109	102	34	3.8	698		geht weiter 8; weitergeht 6	ging weiter 50; weiterging 1			Der Türmer wollte nun weitergehen, aber Heidi konnte sich von dem unterhaltenden Schauspiel fast nicht trennen.
+973	niedersinken	29	28	18	3.8	151			sank nieder 23			 Der Wind ist fort, der Tanz ist aus, Die Blätter sinken nieder;
+974	hingegangen	22	22	16	3.8	107						Unterdessen war der Großvater zum Stalle hingegangen und hatte dem Schwänli und Bärli die Milch abgenommen;
+975	schlichen	17	16	9	3.8	77						Die Kinder schlichen vorbei und fanden Bienlein auf den Blumen.
+976	wimmelen	17	16	8	3.8	77			wimmelte 17			Auf dem Platz vor dem Tor wimmelte es von Menschen.
+977	anschaun	16	15	5	3.8	71		anzuschaun 2		anschaun 4		»Schaun Sie sich doch einmal eine Wespe an.«
+978	anfehen	15	15	14	3.8	65			fing an 12; anfing 3			Es wunderte ihn nun ein wenig, warum das Kind schon wieder heimkommen und während der Fahrt fing er nun mit Heidi ein Gespräch an:
+979	ausgegraben	10	8	4	3.8	37				ausgegraben 10	haben 5; sein 3	Die Kiste war bald ausgegraben.
+980	hinabschauen	9	9	6	3.8	32		hinabschaut 1	schaute hinab 3			Der Peter konnte halb verborgen die Alm hinabschauen und, kam der Öhi zum Vorschein, hurtig sich ganz verstecken.
+981	könntestn	9	9	8	3.8	32		könntest 2				rund, breit bist du ja geworden, wie ich nie geahnt, dass du je werden könntest, und groß bist du, Klärchen!
+982	erwachten	9	9	6	3.8	32						so konnte er sich nicht rühren, ohne dass sie erwachten.
+983	hineingelegen	7	7	7	3.8	22				hineingelegt 7	haben 4	Es war schwerer als sonst, denn der Öhi hatte ein schönes Stück von dem rötlichen Fleische hineingelegt.
+984	stillschweigen	7	7	6	3.8	22			schwieg still 7			Die Großmutter schwieg still, sie wollte des Kindes Freude nicht trüben.
+985	hinauszukommen	7	7	6	3.8	22						Sonst atmeten die Kinder meist alle auf, waren froh, hinauszukommen, heute bettelten selbst die allergrößten Faulpelze:
+986	durchstreiften	7	6	4	3.8	22						Er durchstreifte die ganze Umgegend;
+987	waschen	80	77	34	3.7	495	cleaning using flowing liquid	wäscht 3	wusch 7	gewaschen 19	haben 5; sein 3	"""Aber erst waschen und sauber sein, sonst lacht einen die Sonne aus, wenn sie so schön glänzt da droben und sieht, dass du schwarz bist;"
+988	einholen	54	48	24	3.7	317			holte ein 10; einholte 1	eingeholt 16	haben 12	Endlich sprang er fort und holte die Schildkröte wirklich ein.
+989	beitragen	38	38	23	3.7	210		trägt bei 2; beiträgt 1	trug bei 7; beitrug 5	beigetragen 7	haben 5; sein 1	Die ganze voraufgegangene Nacht hatte Strix nach Uf gerufen, aber vergebens ... auch das hat dazu beigetragen, sie aufzuregen.
+990	hergekommen	27	27	18	3.7	139				hergekommen 27	sein 19	Sie war auch an diesem Morgen mit dem Kinde von Ragaz hergekommen;
+991	zustoßen	22	20	12	3.7	108		zustößt 2; stößt zu 1	stieß zu 3	zugestoßen 11	sein 9	Wenn Euch einmal etwas zustoßen würde hier oben, wer würde Euch beistehen?
+992	schelen	8	8	6	3.7	27			schelte 1			Er bekam wegen seiner Beschießung Sids Schelte und schien sich weiter gar nichts daraus zu machen.
+993	eingefassen	8	8	7	3.7	27				eingefaßt 8		Dahinter lag der Wald, davor ein See, der Vorplatz war von mächtigen Ahornbäumen eingefaßt, und im Garten standen große, vielästige Stachelbeerbüsche.
+994	durchschlüpfen	5	5	5	3.7	13			schlüpfte durch 2			Weil das Löchlein schrecklich eng war, nagte er am Rande mit seinen Kieferzangen so lange, bis er durchschlüpfen konnte.
+995	niederstrecken	5	4	3	3.7	13		streckt nieder 2	streckte nieder 3			Jetzt streckt er seine Zweige nieder, Die voller Frucht zur Erde sinken.
+996	herumkriechen	5	5	5	3.7	13				herumkriechen 2		Denn wo ich bin, da sind auch Raupen und beim besten Willen kann man das nicht vermeiden, dass sie manchmal herumkriechen.
+997	weitermachen	5	4	3	3.7	13		weitermacht 1	machte weiter 1			»Du bist gewiss müde,« sagte Bataki, »und kannst vielleicht nicht mehr weitermachen.«
+998	beigefügen	5	4	4	3.7	13				beigefügt 5	haben 2	Dem Personenverzeichnis war ein »Avertissement« beigefügt, welches lautete:
+999	wegschleppen	3	3	3	3.7	5				weggeschleppt 1	haben 1	Ganz unerhört aber ist es, dass sie auch Eier und Larven der Arbeiterameisen wegschleppen.
+1000	geborsten	3	3	3	3.7	5				geborsten 3	sein 2	Die bisher so weiße Erde liegt geborsten und gefleckt vor ihr.

@@ -1,0 +1,26 @@
+{
+ "rank_by": "keyness",
+ "reference": "core",
+ "size": 1000,
+ "min_books": 4,
+ "exclude_lists": [
+  "core"
+ ],
+ "unique": [
+  "english",
+  "emoji"
+ ],
+ "verbs": {
+  "rank_by": "keyness",
+  "reference": "core",
+  "size": 300,
+  "min_books": 4,
+  "exclude_lists": [
+   "core"
+  ],
+  "unique": [
+   "english",
+   "infinitive"
+  ]
+ }
+}

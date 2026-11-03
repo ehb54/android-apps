@@ -1,0 +1,1001 @@
+rank	lemma	count	range	books	keyness	reference	english	present	past	participle	perfect	example
+1	versetzen	628	315	20	1658.4	1391		versetzt 10	versetzte 542	versetzt 30	haben 5; sein 3	"--""Noch nicht, meine Liebe"", versetzte der Fürst; ""was Sie hier sahen, ist, was es werden kann und wird;"
+2	finden	1466	679	21	763.0	15172	to find; judgment, viewpoint, or statement that is not conclusive; may deal with subjective matters in which there is no conclusive finding	findet 129	fand 389	gefunden 178	haben 98; sein 4	Tiefe Blätterschichten wegräumend, haben wir den merkwürdigsten Platz geebnet gefunden, dessengleichen in der Welt vielleicht nicht wieder zu sehen ist.
+3	ausrufen	266	191	18	703.2	588		ruft aus 5; ausruft 1	rief aus 216; ausrief 8	ausgerufen 1		"""Was hast du, Liebchen?"" rief die Alte verwundert aus."
+4	scheinen	1142	588	21	505.3	12740		scheint 221; scheinet 3	schien 675	scheinet 1		Die Fütterungsstunde der dort zur Schau stehenden wilden Tiere schien herangekommen;
+5	wünschen	419	312	21	442.4	2784	feel desire for a specific item or event	wünscht 51	wünschte 124	gewünscht 39	haben 31	"""ich möchte nicht gern gegen die überzeugung meines Gemahls irgend etwas wünschen und bitten;"
+6	bemerken	425	317	21	332.7	3499		bemerkt 24	bemerkte 98	bemerkt 75	haben 39; sein 1	Sie sahen hin und bemerkten wenigen Rauch;
+7	unterhalten	186	162	21	303.9	816		unterhält 16; unterhielt 7	unterhielt 43	unterhalten 26	haben 10; sein 2	Wer das Glück hat, an Eurer Tafel zu sitzen, wen Ihr beehrt, Eure Gesellschaft unterhalten zu dürfen, der muss die Welt gesehen haben.
+8	mögen	960	552	21	296.0	12340	to like someone or something	mag 253; möchte 248	mochte 109			"""ich möchte nicht gern gegen die überzeugung meines Gemahls irgend etwas wünschen und bitten;"
+9	gelangen	210	173	17	279.2	1141		gelangt 16	gelangte 34	gelangt 55	sein 34	sie sind aufmerksam auf alle Ritzen und Löcher, wo sie zu einem verbotenen Naschwerk gelangen können;
+10	hoffen	300	238	20	270.5	2245	optimistic attitude of mind based on an expectation of positive outcomes	hofft 14	hoffte 73	gehofft 5	haben 4	Die Stücke gefielen mir besonders, in denen ich zu gefallen hoffte, und es waren wenige, die ich nicht in dieser angenehmen Täuschung durchlas;
+11	nötigen	114	106	18	267.0	309		nötigt 5	nötigte 23	genötigt 66; nötigt 3	sein 13; haben 4	Der Fremde nötigte seinen Führer, hineinzutreten und ein Glas Punsch mit ihm zu trinken;
+12	beschäftigen	236	189	21	261.3	1509		beschäftigt 60	beschäftigte 47	beschäftigt 67	sein 15; haben 6	Ich drängte mich näher an die Türe und hörte inwendig am Klappern, dass man mit Aufräumen beschäftigt sei.
+13	genießen	169	131	21	250.5	824		genießt 14		genossen 4	haben 2	"Ich will ihm meine ganze Liebe zeigen, seine Liebe in ihrem ganzen Umfang genießen."""
+14	eröffnen	115	102	20	239.7	371		eröffnet 10	eröffnete 39	eröffnet 17	haben 6	Sie eröffnete sich;
+15	hervorbringen	110	93	19	239.7	333		hervorbringt 13; bringt hervor 7	brachte hervor 23	hervorgebracht 29	haben 9; sein 1	Es finde sich ja so manche leere Zeit, die man dadurch ausfüllen und nach und nach etwas hervorbringen könne, wodurch wir uns und andern ein Vergnügen bereiten.
+16	sollen	1877	722	21	239.4	30670		soll 467; sollt 27	sollte 597	gesollt 2	haben 1	"Scheidend versäumte der Gemahl nicht, einen Spazierritt vorzuschlagen, den sie im Geleit Friedrichs, des fürstlichen Oheims, unternehmen sollte ""."
+17	versichern	165	152	20	219.8	895		versichert 11	versicherte 95	versichert 18	haben 8; sein 3	"""Seien Sie versichert"", rief sie aus, ""dass ich stark genug seien würde, die Wahrheit zu bekennen, wenn ich auch gegen mich selbst sprechen müßte;"
+18	endigen	65	61	18	218.6	87		endigt 4	endigte 13	geendigt 30; endigt 4	haben 15; sein 3	auch endigte der Unfug nicht eher, als bis man zur Tafel ging.
+19	zubringen	96	83	21	217.5	274		zubringt 2; bringt zu 2	brachte zu 11	zugebracht 43	haben 25	"""Ich liebe dieses zärtliche, gute, liebliche Geschöpf so sehr, dass mich jeder Augenblick meines Lebens verdrießt, den ich ohne sie zugebracht habe."
+20	entfernen	158	128	20	214.4	842		entfernt 3	entfernte 45	entfernt 18	haben 10	Nun entfernte der Fürst mit wenigen sich eiligst, die Fürstin folgte langsamer mit dem übrigen Gefolge;
+21	vermehrn	50	47	18	205.1	38			vermehrte 45			Da lernt ich deine Bescheidenheit kennen, und wie vermehrte sich meine Liebe!
+22	entwickeln	134	116	18	202.9	639		entwickelt 8	entwickelte 21	entwickelt 26	haben 8; sein 2	In diesem Sinne entwickelte sich unser Privattheater.
+23	erhalten	321	244	21	202.6	3005	to get, to receive; to maintain	erhält 30; erhaltet 3	erhielt 49	erhalten 73; erhaltet 1	haben 27; sein 2	Seine Jugend ließ ihn reiche Freuden genießen, die von einer lebhaften Dichtung erhöht und erhalten wurden.
+24	verbergen	220	177	21	194.9	1667		verbirgt 9	verbarg 47	verborgen 63	haben 10; sein 1	Wir wollen uns verbergen;
+25	zueignen	30	29	14	193.4	0		eignet zu 1	zueignete 3; eignete zu 2	zueignet 1; zugeeignet 1	haben 1	wie leicht eignet er sich die Herzen zu!
+26	begünstigen	55	54	12	192.1	67		begünstigt 6	begünstigte 14	begünstigt 22	haben 4	es fängt nach und nach an, gleichgültig gegen sie zu werden, und begünstigt viel geringere, aber neu erscheinende Talente;
+27	beleben	93	83	17	167.0	365		belebt 27	belebte 19	belebt 16	haben 3	Das Nesseltuch, durch die Farbe der halbaufgerollten Bänder belebt, lag wie ein Christgeschenk auf dem Tischchen;
+28	erzeigen	35	35	15	165.8	15		erzeigt 9	erzeigte 8	erzeigt 1	haben 1	dann sprach er mit Entzücken von dem glücklichen Abende, an dem er eine Gelegenheit gefunden, ihr eine Gefälligkeit zu erzeigen und ein Gespräch einzuleiten.
+29	vernehmen	177	148	19	165.6	1290		vernimmt 8; vernehmt 3	vernahm 60	vernommen 23	haben 17	die Stellung der Lichter erhöhte den Glanz der Gabe, alles war in Ordnung, als die Alte den Tritt Marianens auf der Treppe vernahm und ihr entgegeneilte.
+30	können	3554	843	21	158.9	68492	to be able to; can	kann 898; könnt 13	konnte 879			Wie sehr dieses gelungen war, ließ sich in diesen Tagen gewahr werden, als eben der Hauptmarkt sich versammelte, den man gar wohl eine Masse nennen konnte.
+31	sehen	2181	776	21	152.5	39626	to see; to look; to perceive; to judge	sieht 193; seht 19	sah 369	gesehen 320	haben 188; sein 3	Ferner sieht man seitwärts Mauern angeschlossen und Zwinger terrassenmäßig herab sich erstreckend.
+32	darstellen	117	100	18	149.5	660		darstellt 11; stellt dar 2	darstellte 3; stellte dar 3	dargestellt 24	haben 3; sein 2	und meine lebhafte Vorstellungskraft, da ich mich in alle Rollen denken konnte, verführte mich zu glauben, dass ich auch alle darstellen würde;
+33	hereintreten	60	55	17	149.5	147		tritt herein 7	trat herein 36; hereintrat 8			Fürst Oheim, Friedrich mit Namen, trat sodann, angemeldet, mit seinem Zeichner herein, der ein großes Portefeuille unter dem Arm trug.
+34	vermehren	49	45	17	149.4	82			vermehrte 1	vermehrt 2		"""Die Zerstreuungen der Jugend, da meine Gespanschaft sich zu vermehren anfing, taten dem einsamen, stillen Vergnügen Eintrag."
+35	unterrichten	89	79	18	146.9	386		unterrichtet 3	unterrichtete 12	unterrichtet 47	sein 22; haben 3	"es ist, als wenn man sich nur für andere zu unterrichten hätte""."
+36	enthalten	125	110	19	146.2	763		enthält 17	enthielt 36	enthalten 25; enthielt 4	haben 2; sein 1	ja sie enthielt sich nicht, abermals mit dem Schnupftuche zu winken, als sie ein augenblickliches Stillhalten und Rückblicken mehr vermutete als gewahr ward.
+37	entstehen	156	140	19	143.8	1149		entsteht 39	entstand 43	entstanden 21	sein 19	Aus der Süßigkeit ihrer zärtlichen Träume wurden sie durch einen Lärm geweckt, welcher auf der Straße entstand.
+38	nutzen	60	54	17	143.1	158	to use	nutzt 6	nutzte 1	genutzt 10	haben 3	Die Gelegenheit war so glücklich, das Zeugnis so bei der Hand, und wieviel Geschichten und Erzählungen wußt er nicht zu nutzen.
+39	zeichnen	101	82	16	142.5	518	to draw	zeichnet 5	zeichnete 19	gezeichnet 39	haben 8; sein 4	"""Man muss euch Männer scharf zeichnen, wenn ihr merken sollt!"" rief sie mit einer wilden Heiterkeit aus, die bald in eine hastige Geschäftigkeit überging."
+40	ausbilden	58	49	14	138.8	152		bildet aus 3; ausgebildet 1	bildete aus 2; ausbildete 1	ausgebildet 17; ausbildet 1	haben 6	In diesem Sinne unterhielt er sich mit einem jeden und bildete den Wahn des Moments so poetisch als möglich aus.
+41	überzeugen	167	138	20	138.2	1326		überzeugt 3	überzeugte 11	überzeugt 97	haben 16; sein 2	Danken wir also dem wackern Künstler, der uns so löblich in verschiedenen Bildern von allem überzeugt, als wenn wir gegenwärtig wären;
+42	ergötzen	55	50	12	135.1	138		ergötzt 11	ergötzte 11	ergötzt 1	haben 1	Ich war völlig überzeugt, dass alles, was in der Erzählung ergötzte, vorgestellt eine viel größere Wirkung tun müsse;
+43	befinden	218	186	21	134.6	2066		befindet 40	befand 60	befunden 15	haben 12; sein 1	Ein Mensch, der übel haushält, befindet sich in der Dunkelheit sehr wohl;
+44	eilen	161	132	20	132.6	1282		eilt 19	eilte 91; eile 1	geeilt 2	sein 1	Die Fürstin eilte, das Lieblingspferd zu besteigen, und führte, statt zum Hintertore bergauf, zum Vordertore bergunter ihren widerwillig bereiten Begleiter;
+45	versprechen	194	155	19	132.3	1738		verspricht 17	versprach 92	versprochen 27	haben 19; sein 1	Ich habe versprochen, sie einem Freunde zu zeigen, dem ich viel Vergnügen machte, indem ich ihn neulich von diesem Kinderspiel unterhielt.
+46	antreffen	64	59	18	130.0	214		trifft an 3	antraf 12; traf an 1	angetroffen 16; antrefft 1	haben 8	Aber wie verwundert war Wilhelm, als die Kutsche verschwunden, und wie noch mehr, als Philine nicht zu Hause anzutreffen war.
+47	gedenken	86	79	15	126.7	422		gedenkt 15				der Verbrecher scheint dem Abgrunde, der ihm bestimmt ist, ausweichen zu wollen und stürzt hinein, eben da, wo er seinen Weg glücklich auszulaufen gedenkt.
+48	verschaffen	106	95	20	126.2	637		verschafft 10	verschaffte 10	verschafft 14	haben 8	"""Verschafft Sie uns, was wir wünschen, so soll Sie's mit genießen."""
+49	schätzen	93	82	17	125.8	497		schätzt 7	schätzte 11	geschätzt 18	haben 3	Er behauptete, nur ein seltenes Vergnügen könne bei den Menschen einen Wert haben, Kinder und Alte wüßten nicht zu schätzen, was ihnen Gutes täglich begegnete.
+50	verweilen	60	56	16	125.3	193		verweilt 4	verweilte 6	verweilt 3		Aber auch hier verweilt man bequem im Schatten, denn dieser Baum ist es, der sich über das Ganze wunderbar hoch in die Luft hebt.
+51	verbinden	130	108	18	123.3	938		verbindet 11	verband 11	verbunden 59	haben 8; sein 3	Ich finde nichts natürlicher, als alles zu verbinden, was uns Vergnügen und Vorteil bringt.
+52	vortragen	64	62	18	122.0	233		vorträgt 1	trug vor 12; vortrug 9	vorgetragen 20; vortragt 1	haben 7	Er trug sein Anbringen bescheiden vor und fand gar bald mehr und weniger Schwierigkeiten, als er vermutet hatte.
+53	nähern	103	96	18	116.9	645		nähert 19; genähert 3	näherte 4	genähert 12	haben 10	wir suchten uns der Höhe des Standes, der Vortrefflichkeit der Charaktere durch Steifheit und Affektation zu nähern und dünkten uns durchaus nicht wenig;
+54	bilden	177	147	19	115.6	1626	learning in which knowledge and skills are transferred through teaching	bildet 23; gebildet 1	bildete 16	gebildet 61	haben 16; sein 1	Herrlich gebildet, in ihrem Wesen und Betragen als eine Tochter der Freiheit anzusehen.
+55	erinnern	240	195	20	115.4	2579	mental faculties and processes involved in storing and retrieving information	erinnert 29	erinnerte 59	erinnert 12	haben 1	"--""Es würde mich immer an diesen schrecklichen Augenblick erinnern"", versetzte sie."
+56	suchen	501	349	21	114.8	7081	to search for	sucht 68	suchte 173	gesucht 46	haben 25	Wir suchten ihm von der Seite beizukommen, haben Mauern durchbrochen, Gewölbe gesprengt und so einen bequemen, aber geheimen Weg bereitet.
+57	erfreuen	79	77	18	114.3	395		erfreut 14	erfreute 14			sie verlieren die Menschen aus den Augen, welche zu erfreuen und zu versammeln nur sehr wenigen glückt.
+58	hervorzubringen	31	28	12	113.9	33						Der Liebhaber und Kenner zeigt dem Künstler an, was er wünscht, und überläßt ihm alsdann die Sorge, das Werk hervorzubringen.
+59	betragen	53	49	17	108.2	176		beträgt 4	betrug 15	betragen 13; betrügen 2	haben 4	Die Art, wie sie gekleidet war und sich überhaupt betrug, zeigte, dass sie ein Mädchen sei, die etwas auf sich halte.
+60	ausdrücken	99	88	19	107.7	642		ausdrückt 4; drückt aus 3	ausdrückte 12; drückte aus 4	ausgedrückt 14	sein 4; haben 2	allein man merkte bald, dass es nur eine Wortdeklamation war, die auf einzelnen Stellen lastete und die Empfindung des Ganzen nicht ausdrückte.
+61	aufführen	63	53	12	105.1	270			aufführte 2; führte auf 1	aufgeführt 37	haben 3; sein 2	Ich hatte kaum das erste Stück, wozu Theater und Schauspieler geschaffen und gestempelt waren, etlichemal aufgeführt, als es mir schon keine Freude mehr machte.
+62	hervortun	26	26	9	104.7	21		hervortut 5	tat hervor 11			Madame Melina besonders tat sich durch Fleiß und Aufmerksamkeit sehr hervor.
+63	bekennen	75	69	18	103.3	394	acknowledging some sensitive personal fact	bekennt 6	bekannte 8			"""Seien Sie versichert"", rief sie aus, ""dass ich stark genug seien würde, die Wahrheit zu bekennen, wenn ich auch gegen mich selbst sprechen müßte;"
+64	entdecken	145	124	19	102.3	1273		entdeckt 9	entdeckte 36	entdeckt 29	haben 13; sein 3	Ahnungsvoll fiel ich darüber her; und mit welcher überirdischen Empfindung entdeckte ich, dass darin meine Helden- und Freudenwelt aufeinandergepackt sei!
+65	erblicken	125	113	20	102.3	1000	to see	erblickt 28	erblickte 54	erblickt 1	haben 1	Dabei hatte ich zu meinem größten Erstaunen den Lieutenant im Heiligtume sehr geschäftig erblickt.
+66	gestehen	135	127	20	101.0	1144	acknowledging some sensitive personal fact	gesteht 7	gestand 31	gestanden 7	haben 1	Sie merkte auf, drang in mich, und ich gestand.
+67	aufklären	62	53	15	96.5	287		aufklärt 2; klärt auf 2	klärte auf 11	aufgeklärt 19	haben 3	In welcher Geschwindigkeit klärte man einander auf!
+68	überliefern	33	28	8	95.1	62		überliefert 3	überlieferte 2	überliefert 10	haben 4	Kronen und Dolche, Ketten und Masken, wie sie mir meine Vorgänger überliefert hatten, waren ihr auch hier zugeteilt.
+69	überlassen	109	102	18	92.9	848	to entrust	überläßt 5; überlaßt 2	überließ 21	überlassen 22	sein 4; haben 2	"Ich will mich dieser Leidenschaft überlassen, als wenn sie ewig dauern sollte."""
+70	vergegenwärtigen	30	29	10	91.6	50			vergegenwärtigte 5	vergegenwärtigt 6	haben 3	Doch da ich Ihnen einmal von der Zeit erzählen soll, in der ich mich so gerne in dieser Weste sah, will ich mir auch jene Tage auf alle Weise vergegenwärtigen.
+71	anwenden	63	61	17	91.1	315		anwendet 5	anwendete 1; wendete an 1	angewendet 17; angewandt 4	haben 5; sein 1	er hat die schönsten Stunden des Tages und der Jahrszeit dazu angewendet und sich wochenlang um diese Gegenstände herumbewegt.
+72	tadeln	37	35	12	89.1	96				getadelt 10	haben 3	Ich bin weit entfernt, den Plan dieses Stücks zu tadeln, ich glaube vielmehr, dass kein größerer ersonnen worden sei;
+73	erregen	145	123	18	88.5	1383		erregt 17	erregte 38	erregt 38	haben 13	Meine Schwestern, indem sie ihre Puppen aus- und ankleideten, erregten in mir den Gedanken, meinen Helden auch nach und nach bewegliche Kleider zu verschaffen.
+74	übrigbleiben	70	64	21	87.7	402		bleibt übrig 15; übrigbleibt 6	blieb übrig 15; übrigblieb 13	übriggeblieben 14	sein 11	Leider ging alles einen so gemeinen Gang, dass mir nicht einmal eine merkwürdige Albernheit zu erzählen übrigbleibt.
+75	ausführen	82	74	17	86.6	545		ausführt 1; führt aus 1	führte aus 2	ausgeführt 40	haben 6; sein 4	Nun aber, da alles so rein und charakteristisch umrissen ist, wird er es hier unten mit Bequemlichkeit ausführen.
+76	verändern	107	97	19	84.9	873		verändert 13	veränderte 10	verändert 48	haben 15; sein 5	"In vierzehn Tagen, was kann da nicht vorfallen, was kann sich da nicht verändern!"""
+77	vorbereiten	92	90	17	84.9	677	activity of achieving readiness for some event or activity	bereitet vor 2	bereitete vor 5	vorbereitet 46	haben 13; sein 6	"""Er mag sich vorbereiten"", versetzte der alte Meister, ""und so bald als möglich aufbrechen."
+78	widmen	70	62	15	84.9	414	make an expression of friendly connection or thanks by the author towards another person	widmet 8	widmete 6	gewidmet 33	haben 11; sein 4	man hatte mich dem Handelsstand gewidmet und zu unserm Nachbar auf das Comptoir getan;
+79	wiederherstellen	31	31	12	84.4	65				wiederhergestellt 17	sein 3	Er griff zum sichersten Mittel, ihm die völlige Klarheit und Schönheit wiederherzustellen, indem er nachts auf den gewöhnlichen Wegen zu ihr hineilte.
+80	einrichten	99	89	18	81.9	786		richtet ein 1	richtete ein 5; einrichtete 3	eingerichtet 50; einrichtet 1	haben 10; sein 3	In dieser Ecke ist für ihn und den Wächter, den wir ihm zugegeben, eine kleine, angenehme Wohnung eingerichtet.
+81	vorzeigen	25	23	10	81.5	36		zeigt vor 2; vorzeigt 1	zeigte vor 5; vorzeigte 2			Mariane lachte laut, als Wilhelm die verworrenen Drähte auseinanderzuwickeln und jede Figur einzeln vorzuzeigen bemüht war.
+82	unterscheiden	71	66	17	80.5	445		unterscheidet 9	unterschied 1	unterschieden 4	sein 2	auch in die untere konnte man bequem hineinsehen, ja durch das Fernrohr auf dem Markte sogar die Buden unterscheiden.
+83	vorstellen	173	146	20	80.4	1888		stellt vor 7; vorstellt 3	stellte vor 19; vorstellte 10	vorgestellt 52	haben 18; sein 2	Das ist diese Leidenschaft, die ich so oft vorgestellt habe, von der ich keinen Begriff hatte.
+84	aufnehmen	167	145	20	80.4	1794	process of capturing data or translating information to a recording format	nimmt auf 3; aufnimmt 3	nahm auf 27; aufnahm 20	aufgenommen 63	haben 8; sein 6	Aber auch da wollen sie nicht verharren, mutwillig springen sie tief hinab, der Bach nimmt sie auf, zum Flusse trägt er sie.
+85	hervortreten	52	48	15	80.2	243		tritt hervor 8	trat hervor 26; hervortrat 4	hervorgetreten 4	sein 3	Nach einer Pause trat ein Bergmann mit einer Hacke hervor und stellte, indes die andern eine ernsthafte Melodie spielten, die Handlung des Schürfens vor.
+86	bedienen	76	69	15	79.6	508	to operate a device; service offered in restaurants to customers by by skilled gastronomic employees	bedient 7	bediente 11	bedient 20	haben 3; sein 1	Alles andere, was uns umgibt, ist entweder nur Element, in dem wir leben, oder Werkzeug, dessen wir uns bedienen.
+87	fortsetzen	80	75	17	79.2	559		setzt fort 3; fortsetzt 2	setzte fort 6; fortsetzte 4	fortgesetzt 13	haben 4	Und wirklich drängte sich die ganze Menschenmasse dergestalt an die Reitenden heran, dass sie ihren Weg nur langsam fortsetzen konnten.
+88	fortfahren	210	169	21	78.5	2513		fährt fort 4; fahrt fort 1	fuhr fort 159			Ein anderes Blatt aber vorlegend, fuhr er fort:
+89	betriegen	12	12	8	77.4	0		betriegt 4				Betriegen wir uns nicht;
+90	entspringen	37	34	13	77.3	119		entspringt 18; entsprang 1	entsprang 6			Wahrhaftig, ich verzeihe dem Schauspieler jeden Fehler, der aus dem Selbstbetrug und aus der Begierde zu gefallen entspringt;
+91	scheiden	74	68	18	77.1	497	termination of a marital union	scheidet 5		geschieden 7	sein 2	Der Bauer, der jenem zuerst mit Schlägen gedroht hatte, ließ sich nach und nach besänftigen, und sie schieden als gute Freunde voneinander;
+92	verbreiten	75	70	17	76.9	510		verbreitet 8	verbreitete 27	verbreitet 15	sein 4; haben 4	es verbreitete sich schnell, aber fern von uns.
+93	gewähren	87	82	18	76.8	661		gewährt 16	gewährte 15	gewährt 20	sein 4; haben 4	Welche Vorteile gewährt die doppelte Buchhaltung dem Kaufmanne!
+94	betreffen	98	83	18	76.5	808		betrifft 39	betraf 17	betroffen 34	haben 3	Ich habe ihm schon seit einigen Tagen etwas zu eröffnen, das seinen Vetter betrifft und das ich noch immer aus Ursachen aufgeschoben habe.
+95	rühmen	56	55	15	76.4	297		rühmt 4	rühmte 10	gerühmt 6	haben 2	Sie lobte Wilhelmen, rühmte seine Gestalt, seine Augen, seine Liebe.
+96	gewinnen	188	165	20	76.1	2179		gewinnt 20	gewann 26	gewonnen 49	haben 32; sein 3	Meine Einbildungskraft brütete über der kleinen Welt, die gar bald eine andere Gestalt gewann.
+97	fördern	51	49	9	75.8	248		fördert 11	förderte 3	gefördert 19	sein 2; haben 1	Charlotte, ohnehin gewohnt, die Gegenwart zu nutzen, fühlte sich, indem sie ihren Mann zufrieden sah, auch persönlich gefördert.
+98	beurteilen	50	45	13	75.8	238		beurteilt 2	beurteilte 3	beurteilt 12	haben 2	Wenn wir das Stück wieder zusammen lesen werden, könnt ihr beurteilen, ob ich auf dem rechten Wege bin.
+99	vertrauen	55	47	15	75.7	289			vertraute 19	vertraut 1	haben 1	überlegen Sie, was Sie mir vertrauen wollen.
+100	erquicken	32	28	9	75.4	86		erquickt 8	erquickte 3	erquickt 4	haben 1	Um die Küchenfeuer in einem Seitengebäude sahen sie geschäftige Köche sich hin und her bewegen und waren durch diesen Anblick schon erquickt;
+101	verzieren	26	21	9	74.8	49			verzierte 3	verziert 16	sein 2; haben 1	ich verzierte und vergoldete die Schlitten, und ein geheimer Instinkt ließ mich nicht ruhen, bis ich unsre Miliz ins Antike umgeschaffen hatte.
+102	zeigen	404	299	20	74.1	6069	act of displaying or showing something; pointing a finger on something	zeigt 65	zeigte 165	gezeigt 20	haben 11	"da sagte die Fürstin, zum Oheim gewendet: ""reiten wir hinauf, und lassen Sie mich in der Wirklichkeit sehen, was Sie mir hier im Bilde zeigten!"
+103	bedürfen	90	86	17	73.6	720		bedarf 31	bedurfte 23			Es bedarf nur einer Kleinigkeit, um zwei Liebende zu unterhalten, und so vergnügten sich unsre Freunde diesen Abend aufs beste.
+104	bezeichnen	65	62	17	73.4	409		bezeichnet 14	bezeichnete 11	bezeichnet 10	sein 4; haben 2	sie behauptete, ihn schon auf dem Spaziergange gesehen zu haben, und bezeichnete ihm zum Beweis das Kleid, das er am selbigen Tage angehabt;
+105	wirken	153	132	20	72.8	1652		wirkt 27	wirkte 16	gewirkt 26	haben 16	Dann war freilich die perspektivische Magie verschwunden, aber die viel mächtigere Zauberei der Liebe fing erst an zu wirken.
+106	bezeigen	26	24	14	72.6	52		bezeigt 2	bezeigte 12	bezeigt 3	haben 1	Philine bezeigte der Gräfin, die außerordentlich gnädig und freundlich war, alle Ehrfurcht;
+107	vermuten	67	62	18	72.4	437		vermutet 7	vermutete 15	vermutet 4	haben 3	ja sie enthielt sich nicht, abermals mit dem Schnupftuche zu winken, als sie ein augenblickliches Stillhalten und Rückblicken mehr vermutete als gewahr ward.
+108	versammeln	74	71	18	70.9	530		versammelt 3	versammelte 13	versammelt 29	haben 10; sein 3	Wie sehr dieses gelungen war, ließ sich in diesen Tagen gewahr werden, als eben der Hauptmarkt sich versammelte, den man gar wohl eine Masse nennen konnte.
+109	ergetzen	11	11	6	70.9	0		ergetzt 2	ergetzte 2	ergetzt 1		Besonders ergetzte sich Charlotte an einer zufälligen, zwar genauen, aber doch liebevollen Schilderung der ganzen Pensionsanstalt.
+110	bewegen	182	157	20	69.5	2160		bewegt 38	bewegte 39; bewog 3	bewegt 17; bewogen 9	haben 8; sein 2	Sein Haushalt ging einen gelassenen und einförmigen Schritt, und alles, was sich darin bewegte und erneuerte, war gerade das, was niemandem einigen Genuss gab.
+111	preisen	50	46	17	69.0	262		preist 4	pries 15	gepriesen 8	sein 1	Doch wer preist den Ruhm des Herrn, den die Sterne loben von Ewigkeit zu Ewigkeit!
+112	billigen	35	34	14	69.0	122		billigt 4	billigte 4	gebilligt 5	haben 1	Der Fürst ist gerecht, er wird diese Härte nicht billigen.
+113	betrachten	214	180	19	68.9	2709		betrachtet 24	betrachtete 41	betrachtet 37	haben 4; sein 1	Betrachtet hier die Biene!
+114	zerstreuen	73	69	20	68.3	532	to scatter	zerstreut 5	zerstreute 9	zerstreut 36	sein 3	er saß wie in tiefen Gedanken versunken, er sah umher wie zerstreut.
+115	befördern	38	33	14	67.6	151		befördert 3		befördert 8		Er kann auch die Spekulation, mit der ich Sie neulich unterhielt, befördern helfen;
+116	ermangeln	16	15	8	67.5	11		ermangelt 3	ermangelte 3	ermangelt 1	haben 1	Ermangeln ihm nicht eben da die Kräfte, wo er sie am nötigsten braucht?
+117	machen	1653	714	21	67.4	32191	to do; to make	macht 232	machte 305	gemacht 278	haben 171; sein 26	er wusste sie an Ort und Stelle auf die Betriebsamkeit seines Länderkreises aufmerksam zu machen.
+118	umgeben	87	80	18	65.7	733			umgab 24	umgeben 59	sein 9; haben 2	Nach einiger Zeit sah man von ferne einen Wagen herbeikommen, der von einer Bürgerwache mehr lächerlich als fürchterlich umgeben war.
+119	kennenlernen	45	42	11	65.7	223			kennenlernte 4	kennengelernt 7	haben 1	Er folgte ihr mit einigem Unwillen, doch trieb ihn die Neugier: denn da er von vornehmen Personen hörte, war er voll Verlangen, sie näher kennenzulernen.
+120	beschauen	23	23	9	64.9	45				beschaut 4	haben 1	Wir wollten nunmehr auch das Eismeer betreten und diese ungeheuren Massen auf ihnen selbst beschauen.
+121	versäumen	64	60	15	64.1	443		versäumt 2; versäumet 1	versäumte 10	versäumt 26	haben 9; sein 1	"Scheidend versäumte der Gemahl nicht, einen Spazierritt vorzuschlagen, den sie im Geleit Friedrichs, des fürstlichen Oheims, unternehmen sollte ""."
+122	vornehmen	102	94	21	63.4	963		vornimmt 4; nimmt vor 2	nahm vor 23; vornahm 8	vorgenommen 26	haben 17; sein 1	Mariane nahm ihren Jonathan wieder vor, und die Alte wusste das Gespräch auf Wilhelms Lieblingsmaterie zu wenden.
+123	erhöhen	50	49	17	63.4	284		erhöht 2	erhöhte 10; erhöhete 1	erhöht 21	sein 1; haben 1	die Stellung der Lichter erhöhte den Glanz der Gabe, alles war in Ordnung, als die Alte den Tritt Marianens auf der Treppe vernahm und ihr entgegeneilte.
+124	besuchen	142	121	19	63.1	1581	visit; attend	besucht 7	besuchte 28	besucht 19	haben 9	Laertes besuchte seinen Freund.
+125	zustaten	16	15	11	62.8	14						In allen solchen Künsten war er gewandt und glücklich, hier kam beides zustatten.
+126	vereinigen	55	52	16	62.5	344		vereinigt 1	vereinigte 7	vereinigt 13	sein 3; haben 1	nun war er mit ihr vereinigt, die Befriedigung seiner Wünsche ward eine reizende Gewohnheit.
+127	irremachen	15	15	8	62.2	11				irremachen 1		Man kann die Menschen sehr leicht durch tolle und unschickliche Darstellungen irremachen;
+128	aussprechen	135	115	18	61.7	1485		ausspricht 11; spricht aus 8	aussprach 12; sprach aus 10	ausgesprochen 36	haben 10; sein 2	Wer wagte hier zu beschreiben, wem geziemt es, die Seligkeit zweier Liebenden auszusprechen!
+129	einleiten	32	30	10	61.2	116		einleitet 1		eingeleitet 10	haben 2; sein 2	dann sprach er mit Entzücken von dem glücklichen Abende, an dem er eine Gelegenheit gefunden, ihr eine Gefälligkeit zu erzeigen und ein Gespräch einzuleiten.
+130	mitteilen	118	102	16	60.0	1235		teilt mit 5; mitteilt 5	mitteilte 8; teilte mit 6	mitgeteilt 22	haben 5	"Nach einer kleinen Pause rief er aus, ""Es ist nun an dir, Mariane, mir auch deine ersten jugendlichen Freuden mitzuteilen."
+131	pflegen	183	156	21	59.7	2306	to carry out regularly, to perform habitually	pflegt 69	pflegte 61	gepflegt 4		Der Knabe schien seine Flöte versuchen zu wollen, ein Instrument von der Art, das man sonst die sanfte, süße Flöte zu nennen pflegte;
+132	verkündigen	26	26	13	59.0	74			verkündigte 13	verkündigt 7; verkündigen 1	haben 1; sein 1	Sie schlug die Augen nieder, als sie mich sah, aber keine Röte verkündigte eine innere Bewegung des Herzens.
+133	entbehren	56	46	15	58.0	378		entbehrt 3		entbehrt 2	haben 1	Norberg kommt, dem wir unsere ganze Existenz schuldig sind, den wir nicht entbehren können.
+134	leugnen	60	59	17	57.8	428			leugnete 5	geleugnet 1		"O mein Bruder"", fuhr er fort, ""ich leugne nicht, sie war mir bei meinen heimlichen Anschlägen der Kloben, an den eine Strickleiter befestigt ist;"
+135	nähren	46	44	17	57.7	264		nährt 4	nährte 4	genährt 16	haben 1	Seine Unruhe vermehrte sie, da seine Gefühle nicht mehr von den sanften Tönen genährt und gelindert wurden.
+136	begleiten	141	122	18	57.5	1629		begleitet 3	begleitete 31	begleitet 52	haben 11; sein 8	"ich blicke dieses Fell nur an, wie es Euch zur Lust begleiten kann""."
+137	bereiten	107	95	21	57.3	1092		bereitet 1	bereitete 15	bereitet 44	haben 11; sein 10	Wir suchten ihm von der Seite beizukommen, haben Mauern durchbrochen, Gewölbe gesprengt und so einen bequemen, aber geheimen Weg bereitet.
+138	beschädigen	22	21	13	57.3	50		beschädigt 4	beschädigte 2	beschädigt 10	haben 2	Ich sollte nirgends verweilen, denn das Unglück ereilt mich und beschädigt die, die sich zu mir gesellen.
+139	anschließen	52	47	14	57.2	334		anschließt 7; schließt an 6		angeschlossen 8	haben 2; sein 1	Ferner sieht man seitwärts Mauern angeschlossen und Zwinger terrassenmäßig herab sich erstreckend.
+140	bewirken	35	35	13	57.0	154		bewirkt 4	bewirkte 3	bewirkt 11	haben 2	dies zu bewirken, ist am Ende die Summe des ganzen Staatshaushaltes so wie der kleinsten häuslichen Wirtschaft.
+141	verlangen	193	168	20	56.7	2523		verlangt 34	verlangte 67	verlangt 22	haben 6	denn welche würdest du wohl ausfüllen, die Geist und Mut verlangt!
+142	äußern	85	80	18	56.7	771		äußert 5	äußerte 26	geäußert 9	haben 7	Glücklicherweise fiel diese Entdeckung in die Zeit, da der Lieutenant selbst den Wunsch geäußert hatte, mich in diese Geheimnisse einweihen zu dürfen.
+143	erlangen	46	45	14	56.0	271		erlangt 1	erlangte 3	erlangt 8	haben 8	Er eilte zu Laertes und schlug ihm vor, ihr nachzusetzen und, es koste, was es wolle, über ihren Begleiter Gewißheit zu erlangen.
+144	erheitern	22	21	10	56.0	52			erheiterte 12			aber die schöne Liebenswürdige erheiterte jeden Aufenthalt durch eine geistreiche Bemerkung.
+145	loben	75	70	19	55.9	637		lobt 2	lobte 20	gelobt 11	haben 3	Doch wer preist den Ruhm des Herrn, den die Sterne loben von Ewigkeit zu Ewigkeit!
+146	übersehen	53	50	15	55.8	353		übersieht 9; sieht über 1	übersah 10	übersehen 11; übersieht 1	haben 2	"""Bei Kindern möchte es noch hingehen"", sagte Wilhelm, ""indem wir sie so zärtlich lieben und offenbar übersehen;"
+147	gesellen	27	25	12	55.4	89		gesellt 1	gesellte 8	gesellt 1		Ich sollte nirgends verweilen, denn das Unglück ereilt mich und beschädigt die, die sich zu mir gesellen.
+148	beschleunigen	31	30	11	54.1	126	to accelerate	beschleunigt 5	beschleunigte 3	beschleunigt 4	haben 1	Der Schrecken hatte sie beschleunigt, und unter dem Beistande der Wirtin, einer jungen, unerfahrnen Frau, konnte man wenig Gutes erwarten.
+149	übereilen	18	17	11	53.3	32		übereilt 2		übereilt 8	haben 2	"wir übereilten uns und sind nun unglückliche Leute""."
+150	überraschen	86	76	16	53.1	815		überrascht 3	überraschte 17	überrascht 46	haben 2; sein 1	Selbst ein Unfall, wenn er ihn verdrießlich überrascht, erschreckt ihn nicht;
+151	entsagen	34	29	13	53.0	157			entsagte 3	entsagt 5	haben 4	Heißt das etwas weiter, als seinem eignen Verstande entsagen und seinen Neigungen unbedingten Raum geben?
+152	fordern	94	86	18	52.7	937		fordert 21	forderte 16	gefordert 22	haben 3	ich habe ihm alles gerne gegönnt, was die Liebe fordert und was ein überzeugtes Herz nicht versagen kann.
+153	fassen	259	211	21	52.2	3796		faßt 18; fasse 2	faßte 55; fasste 1	gefaßt 59; gefasst 3	haben 26; sein 3	"Der Mann aber, gefaßt, stand in ehrfurchtsvoller Entfernung vor dem Fürsten und sagte: ""es ist nicht Klagenszeit;"
+154	befriedigen	65	55	15	51.7	530	to give someone pleasure	befriedigt 2	befriedigte 3	befriedigt 21	sein 1	"""Wenn Sie so eifrig darauf bestehen, können wir Sie wohl befriedigen"", sagte die Alte."
+155	veranlassen	49	46	12	50.7	331		veranlaßt 3	veranlaßte 5	veranlaßt 34; veranlasst 2	haben 8; sein 1	Gern hätte Wilhelm sie selbst veranlaßt, denn er war durch einen sehr sonderbaren Zufall den Tätern jener nächtlichen Mißhandlung auf die Spur gekommen.
+156	begegnen	165	149	20	50.5	2127		begegnet 39	begegnete 44	begegnet 17	sein 16	Er behauptete, nur ein seltenes Vergnügen könne bei den Menschen einen Wert haben, Kinder und Alte wüßten nicht zu schätzen, was ihnen Gutes täglich begegnete.
+157	üben	72	66	17	50.4	635		übt 5; übe 3	übte 3	geübt 24	haben 6; sein 5	Wir übten unser Gedächtnis und unsern Körper und erlangten mehr Geschmeidigkeit im Sprechen und Betragen, als man sonst in so frühen Jahren gewinnen kann.
+158	erwerben	60	57	16	50.2	473	to purchase	erwirbt 3	erwarb 6	erworben 17	haben 12	Ordnung und Klarheit vermehrt die Lust zu sparen und zu erwerben.
+159	zaudern	23	23	10	49.0	72		zaudert 4	zauderte 7	gezaudert 4	haben 3	sollte ich nun zaudern und stocken, da sie mir Ehre macht?
+160	erweitern	29	28	12	48.8	123		erweitert 3	erweiterte 2	erweitert 5	haben 1	Als sie diese Aufmerksamkeit gesehen, erweiterten sie ihren Kreis und schienen sich zu ihrem wichtigsten Stückchen vorzubereiten.
+161	beschreiben	55	54	14	48.5	418		beschreibt 4	beschrieb 9	beschrieben 13	haben 3; sein 1	Wer wagte hier zu beschreiben, wem geziemt es, die Seligkeit zweier Liebenden auszusprechen!
+162	erwähnen	49	45	14	48.4	343			erwähnte 8	erwähnt 13	haben 6; sein 1	Erst führ ich Euch durch einen beschwerlichen Stieg auf das Gemäuer hinauf, gerade dem Eingang gegenüber, den ich erwähnt habe;
+163	aufdringen	10	10	6	48.0	4		dringt auf 3	drang auf 1			In diesen Gegenden muss man zum Künstler werden, so dringt sich alles auf, man wird voller und voller und gezwungen, etwas zu machen.
+164	rezitieren	17	15	10	47.4	34			rezitierte 9	rezitiert 3	haben 2	Auch erinnerte er sich mancher Stellen aus seinen eigenen Liedern, die er mit einer besondern Zufriedenheit rezitierte.
+165	ankündigen	34	32	12	47.2	177		ankündigt 2; kündigt an 1	ankündigte 8; kündigte an 4	angekündigt 7	haben 3; sein 1	ihr Körper war gut gebaut, nur dass ihre Glieder einen stärkern Wuchs versprachen oder einen zurückgehaltenen ankündigten.
+166	erholen	51	48	17	47.1	375		erholt 1	erholte 7	erholt 25	haben 19	"""Daran tun Sie sehr übel"", sagte Wilhelm nach einer Pause, in welcher er sich von seinem Erstaunen erholt hatte;"
+167	erfahren	208	176	20	47.0	2953		erfährt 12	erfuhr 46	erfahren 16	haben 11; sein 1	Nachdem ich etwas erfahren hatte, kam es mir erst vor, als ob ich gar nichts wisse, und ich hatte recht:
+168	herstellen	47	46	15	47.0	326		stellt her 4; herstellt 1	stellte her 3	hergestellt 13	sein 2; haben 1	nun seh ich, dass ein tiefer früher Schade nicht wieder auswachsen, sich nicht wieder herstellen kann;
+169	auffinden	21	21	11	47.0	61		auffindet 1	fand auf 1			"""Unterdessen, bis ein Kenner uns auffindet, kann man Hungers sterben"", rief einer aus der Ecke."
+170	aufheben	94	85	17	46.5	997		hebt auf 9; aufhebt 3	hob auf 11; aufhob 3	aufgehoben 37	haben 5; sein 3	Ich wollte die obersten aufheben, betrachten, die untersten hervorziehen;
+171	befestigen	50	44	19	46.0	369		befestigt 1	befestigte 4	befestigt 29	haben 4; sein 2	Der kleinste Raum unsers Weltteils ist schon in Besitz genommen, jeder Besitz befestigt, Ämter und andere bürgerliche Geschäfte tragen wenig ein;
+172	leisten	104	93	16	45.3	1168		leistet 13	leistete 11	geleistet 27	haben 16; sein 3	weil jeder, der keine Anlage hat, das Beste zu leisten, sich der Kunst enthalten und sich vor jeder Verführung dazu ernstlich in acht nehmen sollte.
+173	wegeilen	7	7	5	45.1	0			eilte weg 5; wegeilte 1			"""Es ist verdrießlich!"" sagte Wilhelm und eilte weg."
+174	einnehmen	69	65	20	44.4	639	to ingest	nimmt ein 4; einnimmt 2	nahm ein 3; einnahm 3	eingenommen 34	sein 11; haben 11	Sie wollten abermals an einem andern Orte, auf einem benachbarten Jägerhause, ihr Mittagsmahl einnehmen.
+175	angreifen	52	45	15	44.3	405	to assault a person	angreift 6; greift an 1	griff an 4	angegriffen 22	sein 4; haben 2	Der Alte schwieg, ließ erst seine Finger über die Saiten schleichen, dann griff er sie stärker an und sang:
+176	verwahren	35	32	13	44.3	199		verwahrt 2	verwahrte 5	verwahrt 13	sein 1	Er nahm sie mit auf seine Stube und verwahrte sie sorgfältig.
+177	hinreichen	30	29	13	44.0	148	be enough	reicht hin 3	reichte hin 6	hinreicht 2		"""Es ist wohl noch Zeit"", versetzte Wilhelm und reichte der Alten einen Louisdor hin."
+178	zerstören	66	59	18	43.8	601		zerstört 4	zerstörte 6	zerstört 28	haben 3; sein 1	Sie können durch keine Art von Behandlung zerstört, ja kaum verunstaltet werden.
+179	verehren	47	46	15	43.4	346	show affection to	verehrt 3	verehrte 7	verehrt 11; verehren 1	haben 1	Und muss ich nicht das Schicksal verehren, das mich ohne mein Zutun hierher an das Ziel aller meiner Wünsche führt?
+180	erkundigen	63	57	17	43.2	563		erkundigt 4	erkundigte 29	erkundigt 4	haben 1	Der Alte nahm wieder Mut und fing nun an, nach den süßen Geheimnissen der Liebe mit dürren Worten und in hergebrachten, trockenen Formeln sich zu erkundigen.
+181	aufwarten	23	18	11	42.9	86		aufwartet 1	wartete auf 3; aufwartete 1	aufgewartet 2	haben 2	"""Ich habe mich verpflichtet"", rief er aus, ""Ihnen zu dienen, aber nicht, allen Menschen aufzuwarten."""
+182	bestimmen	114	104	19	42.6	1365		bestimmt 6	bestimmte 5	bestimmt 70	haben 13; sein 2	endlich trennten sie sich, ohne dass sie einander sonderlich überzeugt zu haben schienen, doch bestimmten sie auf den folgenden Tag einen Ort der Zusammenkunft.
+183	nachahmen	27	21	6	42.6	123		ahmt nach 2; nachahmt 1	ahmte nach 1; nachahmte 1	nachgeahmt 9	haben 3	Aber die Originalität der Wendungen konnte er nur von ferne nachahmen.
+184	behandeln	93	85	18	42.2	1026		behandelt 4	behandelte 12	behandelt 44	haben 7; sein 2	sie behandelt das Notwendige als den Grund ihres Daseins;
+185	ergreifen	152	135	21	42.1	2026		ergreift 14	ergriff 64	ergriffen 31; ergreift 1	haben 15; sein 1	In der kleinsten Abwesenheit ergriff ihn ihr Andenken.
+186	überschauen	24	22	11	41.7	98		überschaut 2	überschaute 3	überschauten 2		Sie lässt uns jederzeit das Ganze überschauen, ohne dass wir nötig hätten, uns durch das Einzelne verwirren zu lassen.
+187	unternehmen	58	55	18	41.4	506		unternimmt 4; unternehmt 1	unternahm 5	unternommen 21	haben 8	"Scheidend versäumte der Gemahl nicht, einen Spazierritt vorzuschlagen, den sie im Geleit Friedrichs, des fürstlichen Oheims, unternehmen sollte ""."
+188	verfahren	22	20	10	41.2	82			verfuhr 2	verfahren 6		Auch wollte sie ihm die Landkarten erklären, mit denen sie sich noch immer sehr abgab, wobei sie jedoch nicht mit der besten Methode verfuhr.
+189	bepflanzen	13	13	7	41.2	20				bepflanzt 13	sein 3	so eng waren die Wege, und so reichlich war alles bepflanzt.
+190	gründen	46	40	12	40.8	348		gründet 6	gründete 3	gegründet 25	sein 8; haben 1	Darauf gründen wir unsre politischen Raisonnements;
+191	vollenden	53	47	16	40.7	442		vollendet 2	vollendete 4	vollendet 26	haben 6	"jetzt stockt noch manches, die Kunst muss erst vollenden, wenn sie sich vor der Natur nicht schämen soll""."
+192	erneuern	29	27	14	40.3	151		erneuert 3	erneuerte 9	erneuert 3	haben 1	Sein Haushalt ging einen gelassenen und einförmigen Schritt, und alles, was sich darin bewegte und erneuerte, war gerade das, was niemandem einigen Genuss gab.
+193	erleuchten	37	35	13	40.0	241		erleuchtet 20	erleuchtete 10	erleuchtet 6	sein 3	Neben dem anmutigen Garten, den der eben aufgegangene Vollmond herrlich erleuchtete, standen die traurigen Ruinen, von denen hier und da noch Dampf aufstieg;
+194	zauderen	17	17	11	39.9	46		zaudert 2	zauderte 13			Alle jedoch warteten auf den Fürsten, der, von seiner jungen Gemahlin Abschied nehmend, allzulange zauderte.
+195	beziehen	54	50	14	39.8	462		bezieht 12	bezog 17	bezogen 8	haben 1	Darauf bezogen sich die Worte der jungen Dame, deren sich Wilhelm noch gar wohl erinnerte.
+196	schelten	21	21	12	39.4	78		scheltet 2		gescholten 3		"""Scheltet sie nicht darüber"", rief Wilhelm aus, ""bedauert sie vielmehr!"
+197	bereden	27	27	15	38.8	136			beredete 4	beredet 6	haben 2; sein 1	Ich lag der Mutter an, und diese suchte zu einer gelegenen Stunde den Vater zu bereden;
+198	modifizieren	6	6	6	38.7	0		modifiziert 1				Durch das, was ich mache und denke, häng' ich mit euch zusammen, übrigens bin ich freilich sehr allein und muss meine Gespräche modifizieren.
+199	hervortatn	6	6	4	38.7	0						Da nun auch Gesang zwischen den Instrumenten sich hervortat, konnte kein Zweifel übrigbleiben, dass auch dieser begünstigt werde.
+200	aufschließen	18	18	11	38.5	56		schließt auf 4; aufschließt 2				Der Alte bat ihn, aufzuschließen, weil er fliehen wolle und müsse.
+201	aufzehren	14	13	8	38.3	29		zehrt auf 1	zehrte auf 1	aufgezehrt 9	haben 3; sein 1	Kommen Sie nun und zehren mich auch auf!
+202	verharren	23	22	11	38.2	99		verharrt 3				Aber auch da wollen sie nicht verharren, mutwillig springen sie tief hinab, der Bach nimmt sie auf, zum Flusse trägt er sie.
+203	bedenken	57	54	16	38.1	517		bedenkt 8		bedacht 1	haben 1	"""Was bedenken Sie sich lange"", rief ich aus, ""die Tafel ist das Geschäft eines Frauenzimmers, lassen Sie mich dafür sorgen."""
+204	nossen	32	30	10	37.9	193				genossen 32	haben 16	Als die Gesellschaft in die freie Luft kam, merkte fast jedes, dass man für diesen Abend des Guten zuviel genossen hatte.
+205	vergleichen	50	47	17	37.6	422		vergleicht 4	verglich 6	verglichen 11	haben 1	Auch konnte der Reiz der Melodie mit nichts verglichen werden.
+206	abgehen	46	45	13	37.6	368		geht ab 7; abgeht 4	ging ab 9; abging 7	abgegangen 2	sein 2	Es ging die Treppe weder auf noch ab, sondern sprang;
+207	ersuchen	34	33	11	37.5	218			ersuchte 16	ersucht 3		Darauf ersuchte er den Baron, die Damen mit seinem Plane bekannt zu machen.
+208	verherrlichen	12	12	5	37.5	19		verherrlicht 2	verherrlichte 1	verherrlicht 3		So arbeitete man immer mit Anstrengung, um Ottiliens Geburtstag zu verherrlichen, ohne dass man es aussprach oder sichs recht aufrichtig bekannte.
+209	ankommen	146	127	21	37.0	2002	to arrive; gain acceptance; with the preposition “auf”: be dependent on something	kommt an 26; ankommt 12	ankam 11; kam an 10	angekommen 52	sein 42	denn es fehlte mir der Zusammenhang, und darauf kommt doch eigentlich alles an.
+210	erwarten	203	174	20	36.8	3059		erwartet 13	erwartete 36	erwartet 29	haben 9	"""Nicht so geschwind!"" rief sie aus, ""ich habe noch heute Besuch zu erwarten."""
+211	bedauern	50	48	17	36.8	428		bedauert 1	bedauerte 14	bedauert 6	haben 4	Ich habe den unsrigen, der soweit ein guter Mann war, oft bedauert, wenn er mir gleich zu anderer Zeit Ursache zu Mißvergnügen gab.
+212	anerkennen	41	37	11	36.8	308		anerkennt 4; erkennt an 1		anerkannt 14	sein 1	es war Werner, der gleichfalls einen Augenblick anstand, ihn anzuerkennen.
+213	verweiln	15	15	7	36.6	38			verweilte 15			Zu eben der Zeit verweilte ein Stiefbruder meines Vaters, der uns sonst nur im Vorbeigehn besucht hatte, länger bei uns.
+214	obwalten	8	8	4	36.6	4		obwaltet 3	obwaltete 1			Die angenehmsten Gesellschaften sind die, in welchen eine heitere Ehrerbietung der Glieder gegeneinander obwaltet.
+215	abgesonderen	14	14	7	36.3	32				abgesondert 14	haben 2; sein 1	Von allem abgesondert, schwebt sie auf dem treulosen, unzugänglichen Elemente.
+216	widerstehen	35	33	16	35.9	238		widersteht 7		widerstanden 1	haben 1	Aber im Palmenwald trat er auf, der Löwe, ernsten Schrittes durchzog er die Wüste, dort herrscht er über alles Getier, und nichts widersteht ihm.
+217	aufhalten	70	64	20	35.7	732		aufhält 4; hält auf 1	hielt auf 7	aufgehalten 30	haben 7	Der Roman muss langsam gehen, und die Gesinnungen der Hauptfigur müssen, es sei auf welche Weise es wolle, das Vordringen des Ganzen zur Entwicklung aufhalten.
+218	teilnehmen	49	42	15	35.7	422		teilnimmt 1	teilnahm 2; nahm teil 2	teilgenommen 6	haben 4	Ich nahm an euren Arbeiten, an euren Vergnügungen teil;
+219	säumen	20	20	10	35.7	79			säumte 7			Man entschloss sich nachzufahren, und der Kutscher säumte nicht;
+220	ausüben	42	39	14	35.3	330		ausübt 6	ausübte 1; übte aus 1	ausgeübt 9	haben 2	nur die Fähigkeit dazu wird uns angeboren, sie will gelernt und sorgfältig ausgeübt sein.
+221	empfehlen	61	59	18	35.1	600		empfiehlt 2; empfehlt 1	empfahl 17	empfohlen 14	sein 2; haben 1	er empfahl sich bald.
+222	nachbilden	10	10	6	35.1	12		nachbildet 1				Er hatte sie gar oft schon vorgestellt und begab sich nun auf die Reise, die Umgebungen, worin sie gelebt, der Natur nachzubilden;
+223	hindern	52	52	19	34.9	470		hindert 12		gehindert 23	sein 5; haben 3	"""Soviel ich"", sagte Laertes, ""überall, wo ich herumgeschwärmt bin, habe bemerken können, weiß man nur zu verbieten, zu hindern und abzulehnen;"
+224	pflanzen	29	24	10	34.8	173			pflanzte 5	gepflanzt 13; pflanzt 1	haben 4; sein 2	Hier wird ein Eichbaum in ein köstliches Gefäß gepflanzt, das nur liebliche Blumen in seinen Schoß hätte aufnehmen sollen;
+225	bekanntmachen	14	14	9	34.5	35		macht bekannt 1	machte bekannt 10			Wilhelm wurde gerufen, und man machte ihm den Entschluss bekannt.
+226	vorlegen	37	34	15	34.4	271		vorlegt 2; legt vor 1	legte vor 10; vorlegte 1	vorgelegt 5		Wilhelm eilte morgens gleich, den Baron wegen gewisser Umstände zu sprechen, und legte ihm seinen Plan vor.
+227	gereichen	16	16	10	34.1	50			gereichte 5	gereichen 8		Man klatschte und rief ihm zu, es möge dieses Glas zu seiner Gesundheit, zur Stärkung seiner alten Glieder gereichen.
+228	versehen	51	46	17	33.9	464		versieht 7	versah 18	versehen 17	sein 1; haben 1	Die Truppe war nun wirklich mit Kleidern für das größte Stück versehen, und man hätte denken sollen, es würde nun erst recht eine Aufführung der andern folgen;
+229	wendeen	11	10	7	33.9	18						Eine große, mit immergrünen Eichen und hohen Pinien eingefaßte flache Wiese war ganz mit Maßlieben übersäet, die ihre Köpfchen alle nach der Sonne wendeten;
+230	schonen	39	37	15	33.8	300		schont 1	schonte 6	geschont 8	haben 5	und ist das Frauenzimmer wirklich Ihre Freundin, so müssen wir sie schonen, denn sie vermutet keinesweges, Sie hier zu sehen.
+231	benutzen	65	60	16	33.7	674	use of a resource to perform a task; process of handling the function of a device or tool	benutzt 4	benutzte 9	benutzt 20	haben 5; sein 2	Serlo benutzte die Todespost zu seinem Vorteil, und wirklich hatte er auch täglich immer mehr Ursache, an eine andere Einrichtung seines Schauspiels zu denken.
+232	verfehlen	35	33	12	33.6	250		verfehlt 1	verfehlte 13	verfehlt 8; verfehlen 7	haben 3	"den ungefähren Inhalt dürfen wir nicht verfehlen: ""sie haben dich ermordet, armes Tier!"
+233	berechtigen	26	25	12	33.6	145		berechtigt 7		berechtigt 17		Man beneidete die wunderlichen Gesellen, die in seligem Müßiggange alle abenteuerlichen Reize der Natur zu genießen berechtigt sind;
+234	hegen	45	43	15	33.3	384		hegt 7	hegte 9	gehegt 4	haben 1	Sie wissen nicht, wen Sie in Ihrer Nähe hegen.
+235	einschließen	39	38	9	33.3	303		einschließt 5		eingeschlossen 23	haben 2; sein 1	"""Wer heißt sie sich einschließen!"" versetzte Friedrich, ""ich hörte alles ganz genau, Natalie war sehr bewegt."
+236	dergleichen	33	31	11	33.1	228						Hunde, Katzen und Vögel, dergleichen mein Vater von allen Arten ernährte, vergnügten mich sehr;
+237	anführen	27	27	12	33.1	158		führt an 2	führte an 2; anführte 1	angeführt 9	haben 3; sein 1	"""Ich habe sie schön angeführt;"
+238	besetzen	47	44	12	33.0	414		besetzt 2	besetzte 1	besetzt 36	sein 7	Der Platz war ziemlich mit Volk gefüllt und die Fenster mit Zuschauern einiger Art besetzt.
+239	loswerden	33	31	15	33.0	229		wird los 1				Ein guter Akteur steigert ihn, die schlechten kann er nicht loswerden;
+240	ausfüllen	29	28	15	32.6	183		ausfüllt 3; füllt aus 2	füllte aus 2	ausgefüllt 1		denn welche würdest du wohl ausfüllen, die Geist und Mut verlangt!
+241	entsprungen	16	15	8	32.3	54						Wir sind nicht mehr Herr über das, was daraus entsprungen ist, aber wir sind Herr, es unschädlich zu machen, die Verhältnisse zu unserm Glücke zu leiten.
+242	folgendermaßen	13	13	7	32.3	32						Der glücklichste Gedanke jedoch ist in einem Charakter ausgedrückt, der sich folgendermaßen darstellt.
+243	aufhubn	5	5	5	32.2	0			hub auf 1			Ich hub den untern Teppich auf und guckte zwischen dem Gestelle durch.
+244	abmerken	5	5	4	32.2	0			merkte ab 3			er bittet nur, und seine Geliebte sucht ihm abzumerken, was er wünscht, um es noch eher zu vollbringen, als er bittet.
+245	zuzueignen	5	5	4	32.2	0						Es ward ihm das um so leichter, als er sich noch immer fürchtete, den schönen Felix sich als seinen Sohn zuzueignen.
+246	willigen	12	11	7	32.1	26			willigte 3	gewilligt 2	haben 1	ich gewann den Alten, er willigte in unsre Wünsche, und ich kehrte mit einer glücklichen Nachricht zu meiner Wohltäterin zurück.
+247	schweben	76	74	18	32.0	866		schwebt 22; geschwebt 2	schwebte 25	geschwebt 1	haben 1	Engel schweben, ihn zu laben, wäre da dem Guten bang?
+248	belehren	38	37	11	31.7	300		belehrt 4	belehrte 6	belehrt 11	haben 2	Hier werden wir anders belehrt;
+249	erdulden	22	21	11	31.5	111		erduldet 2	erduldete 1	erduldet 3	haben 2	Ich übernehme den Auftrag, ob ich gleich schon die Qual voraussehe, die ich von Lydiens Tränen, von ihrer Verzweiflung werde zu erdulden haben.
+250	berufen	42	40	14	31.4	356		beruft 3	berief 12	berufen 13	sein 8	Ich dachte, dass ich nicht zur Untersuchung und Herzensprüfung berufen sei.
+251	herbeikommen	22	20	10	31.3	112		kommt herbei 1	kam herbei 10; herbeikam 7			Wilhelm verweilte bei ihnen und ließ sich mit einem jungen Menschen, der zu Pferde herbeikam, in ein Gespräch ein.
+252	einschränken	19	19	11	31.2	83		schränkt ein 1		eingeschränkt 12; einschränkt 1	haben 1	"Wilhelm ist sehr eingeschränkt, er kann nichts für mich tun."""
+253	verdienen	114	105	21	31.1	1527		verdient 38	verdiente 15	verdient 21; verdienet 1	haben 10	andere wunderliche, bunte Geschöpfe verdienten neben diesen mächtigen weniger Aufmerksamkeit.
+254	erlauben	109	100	21	30.9	1442		erlaubt 7	erlaubte 22	erlaubt 31	haben 5; sein 1	Der Oheim fühlte das Vernünftige, ja das Notwendige dieser Worte und ritt, so eilig als der Boden erlaubte, den wüsten, steinigen Hang hinunter.
+255	zurücklassen	32	31	15	30.9	228		zurückläßt 7	ließ zurück 6; zurückließ 5	zurücklassen 2		Sie empfindet einen heftigen Schmerz, der nach und nach vergeht, erst eine kleine Röte und dann keine Spur zurückläßt.
+256	gefallen	89	82	20	30.7	1099			gefiel 32	gefallen 2; gefalle 2		"""Ist es doch, als ob die Weiber nicht brauschig und die Männer nicht pausig genug sich gefallen könnten!"""
+257	einführen	40	40	15	30.6	334		führt ein 1	führte ein 3	eingeführt 16	haben 5; sein 3	Es ist eine der schönsten Erfindungen des menschlichen Geistes, und ein jeder gute Haushalter sollte sie in seiner Wirtschaft einführen.
+258	belohnen	23	22	11	30.6	125			belohnte 2	belohnt 13	sein 1; haben 1	selten aber zu gebieten, zu befördern und zu belohnen.
+259	abhalten	49	46	15	30.4	463		hält ab 3; abhält 1	hielt ab 4; abhielt 3	abgehalten 10	haben 4	Werner wollte ihn abhalten, allein es war geschehen.
+260	schmeicheln	30	28	9	30.4	206		schmeichelt 4	schmeichelte 3	geschmeichelt 1		Wie kann es einem vernünftigen Manne schmeicheln, sich in effigie aufgestellt und seinen Namen auf geöltem Papiere schimmern zu sehen!
+261	einflößen	29	28	14	30.4	194		einflößt 3	einflößte 2	eingeflößt 7	haben 6	Sollte das nicht Ergebenheit in das Schicksal, Zutrauen zu einer solchen Leitung einflößen?
+262	leiten	62	59	18	30.2	662		leitet 7	leitete 7	geleitet 24	haben 3	aber das weiß ich, dass, wenn die Musik die Bewegungen des Körpers leitet, ihnen Leben gibt und ihnen zugleich das Maß vorschreibt;
+263	abgewinnen	16	16	10	30.2	59						Das Kind war sonderbar geputzt und aufgeziert, ich konnte ihm aber in keiner Sprache etwas abgewinnen.
+264	deuten	77	72	17	30.1	905		deutet 19	deutete 23	gedeutet 3	haben 1	"""Stellt denn das den Herrn Grafen vor?"" sagte Philine, indem sie auf ein reiches Medaillon deutete, das die Gräfin an kostbaren Ketten an der linken Seite trug."
+265	lindern	15	13	8	30.1	51		lindert 1		gelindert 6	sein 1	Seine Unruhe vermehrte sie, da seine Gefühle nicht mehr von den sanften Tönen genährt und gelindert wurden.
+266	auslegen	24	23	15	30.0	138			auslegte 4; legte aus 2	ausgelegt 5	haben 1	"Ich werde nicht am Ende noch gar meine Worte auslegen sollen."""
+267	hervorsteigen	8	8	5	30.0	8		steigt hervor 3; hervorsteigt 1	stieg hervor 1	hervorsteigt 1		stiegen dagegen manche aus der Dunkelheit hervor und traten wie unbekannte Sterne an den Horizont:
+268	fehlen	192	166	21	29.9	3002		fehlt 50	fehlte 61	gefehlt 10	haben 7; sein 1	Leider jedoch war gefehlt;
+269	andeuten	35	32	12	29.7	273		deutet an 3; andeutet 2	andeutete 4	angedeutet 8	sein 2; haben 1	alles ist nur angedeutet, und man findet nirgends Grund noch Ausführung.
+270	gedachen	40	36	13	29.5	342			gedachte 25	gedachte 4		Den nächsten Morgen gedachte Wilhelm Madame Melina zu besuchen;
+271	abtun	24	23	13	29.1	142				abgetan 19	sein 2	man bildet sich einen Augenblick ein, es sei kein Geld nötig, jedes Geschäft könne hier durch Tausch abgetan werden, und so ist auch im Grunde.
+272	anbieten	63	59	15	28.9	692	economic activity aimed at covering the consumption needs of an economic unit; act of putting forward an item for consideration for approval, consideration, marking etc.	anbietet 6; bietet an 4	bot an 14; anbot 8	angeboten 9	haben 5; sein 1	Ein Krämer in H***, der uns noch einiges schuldig, aber sonst ein guter Mann ist, hat mir eins an Zahlungs Statt angeboten;
+273	auszeichnen	45	42	16	28.8	418		auszeichnet 1; zeichnet aus 1	zeichnete aus 12; auszeichnete 6	ausgezeichnet 6; auszeichnet 4	haben 2	Man fühlte bald, dass Serlo die Seele des Ganzen war, und er zeichnete sich sehr zu seinem Vorteil aus.
+274	verfertigen	14	13	11	28.8	46			verfertigte 2	verfertigt 8	haben 1	Der Baron bat sie, ein Drama, das er selbst verfertigt und das er von ihnen gespielt zu sehen wünschte, mit Aufmerksamkeit anzuhören.
+275	trachteten	14	13	7	28.8	46			trachtete 7			Man erzählt von einem Schiffer, der, von einer stürmischen Nacht auf der See überfallen, nach Hause zu steuern trachtete.
+276	retten	101	86	19	28.7	1335	the saving of life, or prevention of injury	rettet 2	rettete 4	gerettet 37	haben 11; sein 4	Dann aber mit kreischendem Geheul rettete jeder, was zur Hand lag;
+277	verkennen	19	17	13	28.4	92		verkennt 2		verkannt 2		Darfst du meine Absicht verkennen, und hast du vergessen, dass ich jederzeit mehr für dich als für mich gesorgt habe?
+278	zugedenken	16	16	8	28.3	64				zugedacht 16	haben 9; sein 5	Eine solche Entschädigung hat Ihnen das edle Mädchen zugedacht;
+279	berechnen	27	27	11	28.2	181				berechnet 12	sein 4; haben 1	Ich disponierte gleich über ein paar Zimmer in eines benachbarten Gespielen Haus, ohne zu berechnen, dass die alte Tante sie nimmermehr hergeben würde;
+280	zuschreiben	19	18	11	28.1	93		zuschreibt 2	schrieb zu 1; zuschrieb 1	zugeschrieben 2		man sollte die Aufführung mancher Stücke eher für eine Erzählung halten und diesen musikalischen Erzählungen eine sinnliche Gegenwart zuschreiben.
+281	übergeben	46	44	16	28.0	439		übergibt 4	übergab 10	übergeben 8	haben 2; sein 1	Er ahnte nichts Böses, drang nicht weiter in sie, fühlte aber, dass es nicht die Stunde sei, ihr seinen Brief zu übergeben.
+282	zubrachen	13	13	12	28.0	40			zubrachte 12			Indem nun Wilhelm auf diese Weise sehr angenehme Stunden zubrachte, befanden sich Melina und die übrigen in einer desto verdrießlichern Lage.
+283	übersitzen	6	6	4	27.5	3			saß über 1			Die beiden Frauen saßen gegeneinander über;
+284	zerrütten	11	11	8	27.4	27		zerrüttet 2	zerrüttete 1	zerrüttet 8	haben 2; sein 1	Die gnädigsten Ausputzer summten ihm schon um den Kopf, und die geläufige Rede des Mädchens hatte ihm den Entwurf des Protokolls gänzlich zerrüttet.
+285	wiederholen	128	118	20	27.3	1846		wiederholt 7	wiederholte 31	wiederholt 28	haben 8	"""Ich wiederhole"", sagte sie, ""meine gestrige Lektion, da denn doch die Notwendigkeit unsere Geduld prüfen will""."
+286	ergeben	68	62	16	27.2	792		ergibt 8	ergab 19	ergeben 26	haben 7	Nach dem ersten Erkennen verstummte man, und nach einigem Erholen ward, was der Anblick nicht selbst ergab, mit wenigen Worten erläutert.
+287	zusammensetzen	21	20	10	26.5	120		zusammengesetzt 1	setzte zusammen 1; zusammensetzte 1	zusammengesetzt 13	haben 2	"""Es war eben nicht das beste Gemälde, nicht gut zusammengesetzt, von keiner sonderlichen Farbe, und die Ausführung durchaus manieriert."""
+288	aufgeopferen	7	7	4	26.3	7		aufgeopfert 1		aufgeopfert 6	haben 3	Alle äußere Symmetrie, jedes architektonische Ansehn schien dem Bedürfnis der innern Bequemlichkeit aufgeopfert zu sein.
+289	erblickn	16	15	6	26.2	70						Weiter hin, auf einem Mauerstücke sitzend, erblickten sie Honorio, seine Doppelbüchse in den Schoß gelegt, auf einem Posten als wie zu jedem Ereignis gefaßt.
+290	produzieren	13	13	7	26.2	44	to produce	produziert 1	produzierte 3	produziert 1		Die Seiltänzer hatten ihre Künste schon zu produzieren angefangen.
+291	offenbaren	35	33	9	26.0	298		offenbart 7	offenbarte 7			Es scheint, als wenn er uns alle Rätsel offenbarte, ohne dass man doch sagen kann: hier oder da ist das Wort der Auflösung.
+292	aufopfern	9	9	6	25.9	17		aufopfert 2; opfert auf 1				er soll sich aufopfern, seine Zeit seine Gesinnungen, seine Art zu sein, und das ist ihm unmöglich.
+293	hervorbrachen	15	15	9	25.8	62			hervorbrachte 11			Nun kennen wir das herrliche Personal, das jene großen Wirkungen hervorbrachte.
+294	auszuspenden	4	4	4	25.8	0						
+295	hineinzutreen	4	4	3	25.8	0						Der Fremde nötigte seinen Führer, hineinzutreten und ein Glas Punsch mit ihm zu trinken;
+296	wegbegeben	4	4	3	25.8	0			begab weg 2			Dieser, da er merkte, dass von ihm die Rede sei, begab sich weg und ging einige Straßen auf und ab.
+297	genugzutun	4	4	4	25.8	0				genugzutun 4		Ihre Klagen wurden lauter und die Bemühungen ihres Freundes, ihnen genugzutun, immer fruchtloser.
+298	versichren	4	4	4	25.8	0						Ich versichre Sie, es ist mir bisher unbegreiflich gewesen, wie Sie sich mit solchem Volke haben gemein machen können.
+299	dazusetzen	4	4	4	25.8	0						"""Dein Brief ist so wohl geschrieben und so gescheit und klug gedacht, dass sich nichts mehr dazusetzen lässt."
+300	übereintreffen	4	4	4	25.8	0		trifft überein 2	traf überein 1			Trifft nicht alles mit dem überein, was ich erzählt habe?
+301	wohlgebauen	4	4	4	25.8	0		wohlgebaut 1		wohlgebaut 1		Ein Jüngling im vollen Sinne des Wortes, wohlgebaut, schlank, eher ein wenig zu groß, bescheiden ohne ängstlich, zutraulich ohne zudringend zu sein.
+302	vorträgen	4	4	3	25.8	0		vorträgt 4				
+303	vorwalten	4	4	3	25.8	0		waltet vor 1	vorwaltete 2; waltete vor 1			Wir fanden sie freilich schon sehr weltlich mit vollständigstem Orchester, obgleich der Gesang noch immer vorwaltete.
+304	herschreiben	6	6	5	25.5	4		schreibt her 1				"Tumenia, deren Namen sich von ""bimenia"" oder ""trimenia"" herschreiben soll, ist eine herrliche Gabe der Ceres:"
+305	versagen	61	57	16	25.3	700		versagt 3	versagte 8	versagt 15	sein 7; haben 1	Er wolle unterzukommen suchen, sie alsdann abholen, er hoffe, sie werde ihm ihre Hand nicht versagen.
+306	wirden	13	13	11	25.3	46			ward 10			Nach dem ersten Erkennen verstummte man, und nach einigem Erholen ward, was der Anblick nicht selbst ergab, mit wenigen Worten erläutert.
+307	zuzubringen	12	12	9	25.3	38						Die gefällige Wohnung in einem ruhigen Bergstädtchen zieht uns an, und wir fassen den Entschluss, den ganzen Tag hier zuzubringen.
+308	liegenbleiben	9	8	5	25.1	18		liegenbleibt 2	liegenblieb 1			"doch auf alle Fälle will ich im Hinterhalte liegenbleiben."""
+309	empfinden	160	141	20	25.0	2501		empfindet 13	empfand 23	empfunden 33; empfanden 1	haben 16; sein 1	Erst vor kurzer Zeit zusammen getraut, empfanden sie schon das Glück übereinstimmender Gemüter;
+310	ablehnen	52	47	15	24.9	560	act of declining to accept an item for approval, consideration, marking etc.	lehnt ab 4; ablehnt 2	lehnte ab 7; ablehnte 4	abgelehnt 6	haben 3	"""Soviel ich"", sagte Laertes, ""überall, wo ich herumgeschwärmt bin, habe bemerken können, weiß man nur zu verbieten, zu hindern und abzulehnen;"
+311	sorgen	100	90	18	24.8	1381	to be concerned about something; to care for something or someone	sorgt 9	sorgte 5	gesorgt 42	haben 15; sein 6	"""Auch lasse ich"", sagte er, ""dir unsern Honorio als Stallund Hofjunker, der für alles sorgen wird""."
+312	entschließen	62	58	18	24.8	722		entschließt 8		entschlossen 21; entschließen 1	sein 3; haben 3	So entschlossen er war, seinen liebsten Vorstellungen zu entsagen, so war doch einige Zeit nötig, um ihn von seinem Unglücke völlig zu überzeugen.
+313	fortsetzten	8	8	6	24.7	13						Ihr setztet Eure Erkundigungen durch mehrere Wochen fort, bis endlich mein Bruder Euch besuchend für uns beide danken konnte.
+314	veredeln	11	11	6	24.6	32		veredelt 1		veredelt 6	haben 1; sein 1	Sein Herz strebte, den Gegenstand seiner Leidenschaft zu veredeln, sein Geist, das geliebte Mädchen mit sich emporzuheben.
+315	bequemen	11	11	6	24.6	32			bequemte 3			Man fing an, sich zu bequemen.
+316	beistehen	24	22	12	24.5	164		steht bei 2				Allein der Mensch besitzt noch manches, womit er seinen Freunden beistehen kann, das eben nicht klingende Münze zu sein braucht.
+317	tadelen	14	13	10	24.4	57			tadelte 13			Das lebhafte Kind war unter einem solchen Druck höchst ungeduldig und zeigte sich immer unartiger, je mehr sie es tadelte und zurechtwies.
+318	verweilten	9	9	7	24.4	19						Wir verweilten lange bei der Schönheit des einen, der über schwarze Felsen in ziemlicher Breite herunterkam.
+319	aufstellen	59	53	13	24.3	679		aufstellt 4; stellt auf 1	aufstellte 2	aufgestellt 38	sein 10; haben 3	Genug, das Theater ward wieder aufgestellt, einige Nachbarskinder gebeten und das Stück wiederholt.
+320	angeben	39	38	15	24.3	368	to boast	angibt 2	gab an 6; angab 3	angegeben 13	haben 6	Doch gab er hiervon die Ursache an, dass die langen, weiten Ärmel ihn im Schreiben hinderten.
+321	ausstatten	20	20	12	24.1	119			ausstattete 1	ausgestattet 13		Können Schauspieler besser ausgestattet sein?
+322	schärfen	16	16	10	24.0	77		schärft 4	schärfte 1	geschärft 6	haben 4	vielmehr musste diese Lust durch das Lob, das man dem Dritten beilegte, geschärft und erhöht werden;
+323	auszulegen	8	7	6	23.9	14						Sie erklärten mir die Gegenstände der Gemälde und wussten überhaupt das Kabinett recht gut auszulegen.
+324	hereintreen	6	6	5	23.9	5						Er hatte gefürchtet, sooft sich etwas regte, eine Türe möchte sich auftun und der Gemahl hereintreten.
+325	durchdachen	6	5	3	23.9	5			durchdachte 1	durchgedacht 5	haben 3	ich habe sie durchgedacht, durchgefühlt;
+326	überreichen	32	32	14	23.7	273		überreicht 2	überreichte 20	überreicht 3	haben 2	Jarno durchblätterte einige Papiere, die ihm der Ankommende überreicht hatte;
+327	geselln	14	14	9	23.7	59			gesellte 14			Endlich gesellte sich ein gesprächiger Gefährte zu ihm und erzählte die Ursache der starken Pilgerschaft.
+328	heilen	38	36	15	23.6	359		heilt 9		geheilt 8	haben 1	"""Ich weiß nicht, ob es nicht ein edleres Vergnügen wäre, die Menschen von ihren Torheiten zu heilen."""
+329	verdrießen	12	12	8	23.6	42		verdrießt 7				"""Ich liebe dieses zärtliche, gute, liebliche Geschöpf so sehr, dass mich jeder Augenblick meines Lebens verdrießt, den ich ohne sie zugebracht habe."
+330	zusagen	30	28	14	23.5	247		sagt zu 1; zusagt 1	zusagte 7; sagte zu 3	zugesagt 7; zusagt 4	haben 5; sein 1	Aber das Steile, Jähe scheint der Jugend zuzusagen;
+331	herausputzen	10	9	7	23.5	27			putzte heraus 1; herausputzte 1	herausgeputzt 7	sein 2	Die Läden von getrocknetem Obst und Hülsenfrüchten sind auf das mannigfaltigste herausgeputzt.
+332	erbauen	26	24	8	23.4	195			erbaute 2	erbaut 13	haben 2; sein 1	Zerstören, was seine Eltern erbaut haben, anstatt es zu vollenden und zu erheben, wenn er in demselben Sinne fortfährt?“
+333	aufzeichnen	13	13	11	23.4	51				aufgezeichnet 9	sein 2; haben 2	Wilhelm öffnete die Türe, das Kind trat herein und sang das Lied, das wir soeben aufgezeichnet haben.
+334	erkennen	218	188	21	23.3	3689	to recognise; to have sexial intercourse	erkennt 18; erkennet 1	erkannte 47	erkannt 22	haben 7	"Von Zeit zu Zeit erkannte man eine rote Flammenglut, der Dampf stieg empor, und Fürst Oheim sprach: ""laßt uns zurückkehren!"
+335	vorgehen	50	46	16	23.3	545		vorgeht 10; geht vor 1	ging vor 4	vorgegangen 18	sein 15	alles sollte vor meinen Augen, alles auf der Bühne vorgehen.
+336	ereignen	30	29	8	23.2	249		ereignet 6	ereignete 8	ereignet 4	haben 1	Die kleinsten Umstände dieses Zufalls stehn mir noch vor Augen, als hätte er sich gestern ereignet.
+337	verwirren	33	32	16	23.1	291	to cause confusion	verwirrt 3	verwirrte 5	verwirrt 2; verwirren 1		Sie lässt uns jederzeit das Ganze überschauen, ohne dass wir nötig hätten, uns durch das Einzelne verwirren zu lassen.
+338	zugestehen	22	21	10	23.1	147		zugesteht 3	gestand zu 2	zugestanden 6	sein 1	Eine der Bedingungen, unter denen Wilhelm sich aufs Theater begab, war von Serlo nicht ohne Einschränkung zugestanden worden.
+339	fühlen	554	375	21	22.9	10775	to feel	fühlt 85	fühlte 196	gefühlt 31	haben 18	"Die guten Menschen wollen eingeschüchtert sein, um hinterdrein erst recht zu fühlen, wie schön und löblich es sei, frei Atem zu holen""."
+340	durchgehen	23	22	11	22.9	160		durchgeht 3; geht durch 3	ging durch 2	durchgegangen 1		was in der einen sich regt, muss auch die andere mit bewegen, denn es ist nur eins, was in beiden wirkt, eine Kraft, die sie durchgeht.
+341	durchreisen	7	7	5	22.9	10			durchreiste 1			Das Wallis selbst zu durchreisen macht uns eine angenehme Aussicht;
+342	erforschen	17	16	9	22.7	92			erforschte 1	erforscht 2		Sie suchte zu erforschen, ob einer vor dem andern hiezu den Anlass gäbe;
+343	hineintreten	11	11	8	22.7	36			trat hinein 4; hineintritt 2			Zitternd vor Freude trat ich hinein und erblickte auf beiden Seiten des Gestelles die herabhängenden Puppen in der Ordnung, wie sie auftreten sollten;
+344	wiederfinden	34	33	14	22.6	309			fand wieder 3	wiedergefunden 1; wiederfindet 1	haben 1	Bleibe ja, damit ich den steinernen Mann auf der steinernen Bank wiederfinde.
+345	entscheiden	77	66	17	22.5	1008	to decide	entscheidet 4	entschied 6	entschieden 34	haben 5; sein 4	"""Ich habe keine Wahl"", fuhr Mariane fort, ""entscheide du!"
+346	ehren	34	30	14	22.5	310		ehrt 2	ehrte 2	geehrt 9; ehrt 1		Es enthielt ein Lob auf den Gesang, pries das Glück der Sänger und ermahnte die Menschen, sie zu ehren.
+347	herbeitreten	6	4	3	22.5	6			trat herbei 4			"""Treten Sie herbei!"" rief er seinem verwunderten Freunde zu."
+348	ausweiten	6	6	5	22.5	6		weitet aus 1		ausgeweitet 4	haben 1	Es scheint mir kein Vorteil zu sein, dass wir unser Theater gleichsam zu einem unendlichen Naturschauplatze ausgeweitet haben;
+349	lassen	1284	659	21	22.3	26981		laßt 1; lasst 1	ließ 439	gelassen 32	haben 18; sein 1	Wie sehr dieses gelungen war, ließ sich in diesen Tagen gewahr werden, als eben der Hauptmarkt sich versammelte, den man gar wohl eine Masse nennen konnte.
+350	trennen	102	90	17	22.3	1462		trennt 13	trennte 16	getrennt 24; trennet 1	haben 2	ich liebe ihn, der mich liebt, sehe, dass ich mich von ihm trennen muss, und weiß nicht, wie ich es überleben kann.
+351	bemächtigen	31	30	11	21.9	272		bemächtigt 7	bemächtigte 12	bemächtigt 5; bemächtigen 1	haben 5	Mutter aber und Sohn stiegen, von dem Wärtel, der sich eines Gewehrs bemächtigt hatte, begleitet, steiler gegen den Berg hinan.
+352	abhängen	26	23	13	21.9	204		hängt ab 10; abhängt 9				dass ich aber für meine Handlungen völlige Freiheit verlange, dass mein Tun und Lassen von meiner überzeugung abhängen müsse;
+353	erlustigen	5	5	4	21.9	3		erlustigt 1		erlustigen 1		Die Pferde standen vor der Tür, und Jarno setzte sich mit einigen Kavalieren auf, um sich mit der Jagd zu erlustigen.
+354	weggeritten	5	5	3	21.9	3						Lothario ging darauf mit dem Abbe in sein Zimmer, Jarno war vorher weggeritten;
+355	hervortriten	5	5	5	21.9	3				hervortritt 5		sie gehorchen, und der Erfolg bewährt sich, indem auf der Stelle eine Teufelslarve hervortritt.
+356	gleichzustellen	5	5	3	21.9	3						er wagt, sich Gott gleichzustellen, ja sich für Gott zu erklären.
+357	bringen	548	394	21	21.8	10700	to bring	bringt 54	brachte 116	gebracht 128	haben 50; sein 12	Durch einen Wink, die Pferde näher herbeizuführen, brachte der Fürst zuerst wieder in die Gruppe Bewegung;
+358	aufgetragen	20	18	13	21.5	131				aufgetragen 20	sein 7; haben 3	Die guten Speisen zogen die Aufmerksamkeit der Gäste auf sich, und niemand bemerkte, dass sie in gemeinem Geschirr aufgetragen wurden.
+359	weglassen	10	9	7	21.4	31						"Sie hatten, wenn ich mich recht erinnere, ein Lieblingsbild darunter, von dem Sie mich gar nicht weglassen wollten."""
+360	behaupten	92	87	19	21.3	1296		behauptet 12	behauptete 35	behauptet 6	haben 2	Er behauptete, nur ein seltenes Vergnügen könne bei den Menschen einen Wert haben, Kinder und Alte wüßten nicht zu schätzen, was ihnen Gutes täglich begegnete.
+361	unterzukommen	6	6	3	21.3	7						Er wolle unterzukommen suchen, sie alsdann abholen, er hoffe, sie werde ihm ihre Hand nicht versagen.
+362	aufzuopfern	6	6	5	21.3	7						Unsere liebste Leidenschaft, unsere besten Wünsche sind wir für ihn aufzuopfern schuldig.
+363	mitgenießen	6	6	4	21.3	7		mitgenießt 2				Die königlichen Säle sind ihm ihre Pracht schuldig, deren größte Wirkung er nicht mitgenießt.
+364	verrichten	29	27	16	21.2	249		verrichtet 1	verrichtete 6	verrichtet 6	sein 3	Korrespondenz und Rechnungen, und was ihm aufgetragen wurde, besorgte und verrichtete er mit größtem Fleiß und Eifer.
+365	vorschweben	18	18	11	21.2	109		schwebt vor 2	vorschwebte 9; schwebte vor 3	vorgeschwebt 2	haben 2	aber dein Bild schwebte mir vor;
+366	bewirten	13	13	10	21.2	57			bewirtete 2	bewirtet 8	haben 1	Sind wir nicht ganz unvermutet, eben da es mit uns am schlimmsten aussah, gut aufgenommen und bewirtet worden?
+367	wohltun	15	14	10	21.1	77		wohltut 2		wohlgetan 8; wohltut 1	haben 5; sein 1	"""Meister!"" sagte sie, ""behalte mich bei dir, es wird mir wohltun und weh."""
+368	leerfinden	7	7	5	21.1	12			fand leer 3			Mit großem Erstaunen fand er sein Bette leer, die Kissen und Decken in schönsten Ruhe.
+369	bewundern	39	37	14	20.9	398		bewundert 2		bewundert 11	haben 3; sein 1	"""Wir sind gewohnt"" sagte er, ""dass man über uns lacht und unsre Künste bewundert;"
+370	übersetzen	27	26	10	20.9	224		übersetzt 1	übersetzte 3; setzte über 1	übersetzt 5; übergesetzt 1		Vergebens würde man sie in unsern Mundarten übersetzen wollen;
+371	wiederzusehen	21	18	10	20.9	146				wiederzusehen 3		Das Verlangen, seine Retterin wiederzusehen, wuchs mit jedem Tage.
+372	aussetzen	45	43	16	20.7	493		setzt aus 1	setzte aus 2; aussetzte 2	ausgesetzt 22	sein 6; haben 2	da erschienen ihr die Vorfälle, denen sie ausgesetzt war, nur einzeln:
+373	bedrohen	25	24	11	20.6	199	to threaten	bedroht 1	bedrohte 3; bedrohete 1	bedroht 13	haben 1	Und dann ist es doch wieder gut, sich in einiger Ferne vom Setzer bedroht zu sehen.
+374	vorzutragen	11	11	6	20.6	41				vorzutragen 10	haben 1	Herders Werk, das, unter einem lakonischen Titel, über Gott und göttliche Dinge die verschiedenen Ansichten in Gesprächsform vorzutragen bemüht war.
+375	niedersetzen	30	28	15	20.3	270		setzt nieder 1	setzte nieder 13; niedersetzte 2	niedergesetzt 2	haben 2	Unter einer alten Eiche hielten sie stille, setzten ihre Flinten nieder und lagerten sich bequem auf dem Rasen, um eine Pfeife zu rauchen.
+376	abzuholen	17	16	9	20.3	102						Erschrocken sei die Baronesse sogleich auf des Grafen Zimmer gelaufen, um ihn abzuholen.
+377	heranwachsen	16	13	10	20.3	91			wuchs heran 7	herangewachsen 3	sein 1	Phyllis wuchs nun schnell heran, war ganz gesund und fing an, die Welt zu sehen.
+378	verfähren	7	7	4	20.3	13		verfährt 7				Mit den andern verfährt man nach Geschmack oder Willkür.
+379	auflösen	41	41	12	20.2	436		auflöst 3; löst auf 2	auflöste 5; löste auf 3	aufgelöst 16	haben 4	Ihre blonden Haare fielen nachlässig aufgelöst um ihren Nacken;
+380	angeboren	9	9	8	20.2	26				angeboren 9	sein 6	nur die Fähigkeit dazu wird uns angeboren, sie will gelernt und sorgfältig ausgeübt sein.
+381	bebauen	9	8	3	20.2	26		bebaut 1		bebaut 8		Die Hügel am Fuße der Berge sind mit Wein bebaut.
+382	bewillkommen	6	6	5	20.2	8		bewillkommt 2	bewillkommte 2	bewillkommt 1		Die Gäste waren bewillkommt und eingeführt;
+383	antriffen	5	5	4	20.2	4		antrifft 5				Dieser spielte gewöhnlich die gutmütigen, polternden Alten, wovon das deutsche Theater nicht leer wird und die man auch im gemeinen Leben nicht selten antrifft.
+384	anfangen	148	136	21	20.1	2386	to begin something	fängt an 15; anfängt 13		angefangen 33	haben 19; sein 3	hierauf nun steht gemauert ein Turm, doch niemand wüßte zu sagen, wo die Natur aufhört, Kunst und Handwerk aber anfangen.
+385	mäßigen	10	8	7	20.1	34		mäßigt 2				"""Mäßigt Euch"", sagte die Alte gelassen, ""mäßigt Euch!"
+386	auszulöschen	10	9	8	20.1	34						Glaubst du denn jemals einen solchen Eindruck auszulöschen oder zu verbannen?
+387	führen	352	280	21	20.0	6586		führt 47	führte 101	geführt 70	haben 20; sein 2	um diese müssen wir uns herumschlängeln und unsere Fußpfade verständig führen.
+388	zurückhalten	60	55	17	20.0	750		hält zurück 3; zurückhielt 1	hielt zurück 16; zurückhielt 3	zurückgehalten 9	haben 6	allein wenn ich nicht irre, so ist die Ursache, warum er Euch bisher zurückhielt, bald gehoben.
+389	zusammenhalten	22	22	12	19.8	165		hält zusammen 3; zusammenhält 1	hielt zusammen 2			"""Sie sehen leicht"", versetzte Wilhelm, ""wie ich nunmehr auch das übrige zusammenhalten kann."
+390	erheiteren	9	9	4	19.7	27				erheitert 4	haben 1	Die angenehmen Töne, die er aus dem Instrumente hervorlockte, erheiterten gar bald die Gesellschaft.
+391	verzweifeln	17	16	11	19.6	105						Aber nun will ich auch verzweifeln, absichtlich verzweifeln.
+392	weggehen	29	28	15	19.5	262			ging weg 6; wegging 2	weggegangen 6	sein 5	Die schöne Dame richtete jedoch das Fernrohr etwas tiefer nach einer öden, steinigen Fläche, über welche der Jagdzug weggehen musste.
+393	einschalten	13	13	7	19.4	63	enabeling a device		einschalte 1	eingeschaltet 6	sein 4	Einige Blätter aus der Mitte des Vortrags mögen hier eingeschaltet stehen, vielleicht nimmt man hievon Veranlassung, das Ganze wieder abzudrucken.
+394	erstiegen	11	11	8	19.4	44				erstiegen 3	haben 3	Besonders wünschten wir das Schloss Tourbillion, das bei Sion liegt, erstiegen zu haben;
+395	vermannigfaltigen	3	3	3	19.3	0				vermannigfaltigt 1	sein 1	der hohe Sockel der Kirche selbst war damit vermannigfaltigt und geziert.
+396	verfertigeen	3	3	3	19.3	0				verfertiget 3		Auch werden hier die Dauben zu fichtenen Fässern geschnitten, Eimer, Bottiche und allerlei hölzerne Gefäße verfertiget.
+397	heraussehnen	3	3	3	19.3	0		heraussehnt 2				Er wünscht sich immer den seines Nächsten, aus welchem sich dieser gleichfalls heraussehnt.
+398	betrugen	3	3	3	19.3	0						man hätte es wahrhaftig für Abscheu nehmen können, wie du dich betrugst.
+399	hererzählen	3	3	3	19.3	0			hererzählte 1			Sie gesellten sich endlich zum Gärtner, der die Namen und den Gebrauch mancher Pflanzen hererzählen musste;
+400	herumschweben	3	3	3	19.3	0			herumschwebte 1			
+401	ausgezieren	3	3	3	19.3	0				ausgeziert 3	sein 1	
+402	hereinreiten	3	3	3	19.3	0		reitet herein 1				"Ich habe ihn soeben zum Seitentor hereinreiten sehen."""
+403	näherzukommen	3	3	3	19.3	0						
+404	weggeschlichen	3	3	3	19.3	0				weggeschlichen 3	haben 2; sein 1	Da man bei seinem Eintritt leiser sprach, war es wieder weggeschlichen, saß auf dem Saale still und wartete.
+405	supplieren	3	3	3	19.3	0						Mauern und andere Angebäude von Ziegelsteinen, sich anschließend, supplierten die nötigen Gänge und Hallen.
+406	hinriten	3	3	3	19.3	0			ritt hin 1			des Felix Freimütigkeit schien ihm zu gefallen, und so ritten sie zusammen die Straße hin.
+407	losgesprochen	3	3	3	19.3	0				losgesprochen 1		die Natur hat dich losgesprochen.
+408	zurechten	3	3	3	19.3	0			zurechte 1			Wir machen uns bei Licht zurechte, um mit Tages Anbruch wieder hinunter zu gehen.
+409	liegengeblieben	3	3	3	19.3	0						Man ging im Saale auf und ab, der Gehülfe blätterte in einigen Büchern und kam endlich an den Folioband, der noch von Lucianens Zeiten her liegengeblieben war.
+410	grünn	3	3	3	19.3	0						schon grünten die Büsche der künftigen Ranunkeln und Anemonen;
+411	hintendrein	3	3	3	19.3	0						er aber immer hintendrein, indem er aufzuspringen versuchte.
+412	nachzubringen	3	3	3	19.3	0						Genug, das Jagdgedicht selbst ward abgesendet, von welchem wir jedoch einige Worte nachzubringen haben.
+413	angelegen	3	3	3	19.3	0				angelegen 3	sein 2; haben 1	Der Minister liebt mich seit langer Zeit, hatte lange mir angelegen, ich sollte mich irgendeinem Geschäfte widmen;
+414	hindeuteten	3	3	3	19.3	0						Wir kamen an Umzäunungen vorbei, die zwar auf keine Gärten, aber doch auf spärlichen, sorgfältig gehüteten Wieswachs hindeuteten.
+415	obwalen	3	3	3	19.3	0			obwalte 3			
+416	erstrecken	17	17	7	19.2	107		erstreckt 4	erstreckte 8			Der Hauptmann, ihn zu begütigen, sagte darauf: „lass uns diesen Vorfall als eine Aufforderung annehmen, unsere ländliche Polizei auch hierüber zu erstrecken!
+417	umgiben	14	14	11	19.2	74		umgibt 10		umgibt 4		Doch ich sage nicht recht, denn es ist eigentlich ein Wald, der diesen uralten Gipfel umgibt.
+418	ziemen	10	10	7	19.2	36			geziemt 2	geziemen 1		und da es sich nicht ziemen will, unter den Tätigen müßig zu sein, so werden Sie nicht verschmähen, auch hier Mitarbeiter zu werden“.
+419	durchzugehen	6	6	6	19.2	9						Doch trieb ihn seine Unruhe bald aus dieser vorteilhaften Lage in andere Gegenden seines Vaterlandes, wo er wieder eine neue Schule durchzugehen hatte.
+420	verhalten	32	31	11	19.1	309	to behave in a particular way	verhält 11; verhielt 1		verhalten 3		"""Hamlet"", sagte er, ""muss sich ruhig verhalten;"
+421	bauen	92	75	15	19.0	1339	assembling a building	baut 7	baute 7; bauete 1	gebaut 54	sein 16; haben 9	Noch spät im Herbst sammelt sie emsig und baut sich ein Haus, winkel- und waagerecht, als Meister und Geselle.
+422	beitragen	25	25	12	19.0	210		trägt bei 3	trug bei 4; beitrug 1	beigetragen 4	haben 3	und ich gestehe, dass der Geruch, den die Puppen aus der Speisekammer an sich gezogen hatten, nicht wenig dazu beitrug.
+423	überzugehen	9	9	6	18.8	29						"""Lassen Sie den Vorsatz nicht fahren, in ein tätiges Leben überzugehen, und eilen Sie, die guten Jahre, die Ihnen gegönnt sind, wacker zu nutzen."
+424	abzutragen	7	7	6	18.8	15						"denn ich hielt für Schuldigkeit, selbst mit Aufopferung meines Gefühls diesem trefflichen Kreise von Menschen meinen Einstand abzutragen."""
+425	gönnen	51	49	16	18.5	617		gönnt 1	gönnte 9	gegönnt 17; gönnt 1	sein 6; haben 4	ich habe ihm alles gerne gegönnt, was die Liebe fordert und was ein überzeugtes Herz nicht versagen kann.
+426	entgegenrufen	15	14	7	18.4	88			rief entgegen 14			Serlo empfing ihn mit offenen Armen und rief ihm entgegen:
+427	setzen	370	290	21	18.3	7046	to sit; to typeset; to bet; to settling	setzt 36	setzte 98	gesetzt 98	haben 36; sein 16	Sie setzte zärtlich ihren Fuß auf den Fuß des Geliebten und gab ihm scheinbare Zeichen ihrer Aufmerksamkeit und ihres Beifalls.
+428	befürchten	27	27	11	18.3	243		befürchtet 1	befürchtete 3	befürchtet 3	haben 1	Sobald er aufstand, warf er es über und befürchtete den ganzen Tag, es möchte durch einen Flecken oder auf sonst eine Weise beschädigt werden.
+429	bessern	22	22	15	18.3	174				gebessert 10	sein 1; haben 1	Mariane war durch diese Vorstellungen nur für kurze Zeit gebessert.
+430	abbilden	9	8	3	18.3	30				abgebildet 6	haben 1	Paulus ist auch stehend abgebildet, aber abgewendet, wie einer, der gehen will und nochmals zurücksieht;
+431	sonderen	6	5	4	18.3	10		sondert 1	sonderte 5			Serlo hingegen sonderte gern und beinah zuviel;
+432	gesehn	27	25	11	18.1	244				gesehn 27	haben 17	Einige der Gesellschaft hatten ehemals das Puppenspiel mit mir aufgeführt, alle hatten es oft gesehn;
+433	werden	5160	860	21	18.0	117079	to become	wird 1270; werd 6	wurde 328; ward 144	worden 333; geworden 262	sein 368; haben 6	Wie sehr dieses gelungen war, ließ sich in diesen Tagen gewahr werden, als eben der Hauptmarkt sich versammelte, den man gar wohl eine Masse nennen konnte.
+434	zieren	18	17	9	18.0	125			zierte 1	geziert 5; ziert 3		Uralte Bäume zieren sein Haupt, und so gekrönt schaut er weit umher; stürzt aber ein Teil herunter
+435	durchziehen	16	15	9	18.0	101		durchzieht 1	zog durch 2	durchzogen 8; durchgezogen 2		Ist nicht Deutschland von einem Ende zum andern durchreist, durchkreuzt, durchzogen, durchkrochen und durchflogen?
+436	sichern	35	34	15	17.9	365	the saving of life, or prevention of injury	sichert 3		gesichert 14	sein 2; haben 1	Wenn sie nur auch bei Ankunft des Winters sich so leicht in ferne Gegenden begäben, dem Mangel auszuweichen und sich vor dem Froste zu sichern!
+437	anzeigen	27	24	14	17.9	246		zeigt an 2	anzeigte 3; zeigte an 2	angezeigt 7; anzeigt 1	haben 5	Der Liebhaber und Kenner zeigt dem Künstler an, was er wünscht, und überläßt ihm alsdann die Sorge, das Werk hervorzubringen.
+438	knüpfen	24	24	14	17.9	204		knüpft 3		geknüpft 11	sein 2	War sie ihm sonst notwendig gewesen, so war sie ihm jetzt unentbehrlich, da er mit allen Banden der Menschheit an sie geknüpft war.
+439	vollbringen	23	22	12	17.9	190		vollbringt 1		vollbracht 13	sein 4; haben 4	Wäre unsre Reise glücklich vollbracht, so würde sich jeder wegen des guten Einfalls loben, dass er diesen Weg angeraten, dass er ihn vorgezogen;
+440	zusammenstürzen	12	10	7	17.9	58		stürzt zusammen 1; zusammenstürzt 1	zusammenstürzte 1	zusammengestürzt 5	sein 1	Die inneren eigentlichen Wohnungen sind sämtlich zusammengestürzt.
+441	begreifen	142	126	21	17.8	2329		begreift 20	begriff 17	begriffen 29	sein 5; haben 3	Du fühlst nicht das zusammenbrennende, zusammentreffende Ganze, das allein durch den Geist erfunden, begriffen und ausgeführt wird;
+442	einlassen	39	37	15	17.8	429		einläßt 3	ließ ein 3; einließ 2	eingelassen 11	haben 5	Wilhelm verweilte bei ihnen und ließ sich mit einem jungen Menschen, der zu Pferde herbeikam, in ein Gespräch ein.
+443	zusammennehmen	29	29	14	17.8	276		zusammennimmt 1	nahm zusammen 18; zusammennahm 1			Sie nahm die Eier zusammen, den Teppich unter den Arm, fragte, ob er noch etwas zu befehlen habe, und schwang sich zur Türe hinaus.
+444	erzeugen	26	25	12	17.7	233		erzeugt 3	erzeugte 4	erzeugt 10	haben 4; sein 1	Die menschliche Natur hat mehr ähnliche Eigenheiten, solche Skrupel gern zu erzeugen und sorgfältig zu nähren.
+445	vermindern	11	11	5	17.7	49		vermindert 1		vermindert 5		Es sind mir gar manche Zweifel aufgestoßen, die das kanonische Ansehn, das Sie dem Stücke so gerne geben möchten, sehr zu vermindern scheinen.
+446	betrüben	10	9	8	17.7	40			betrübte 4			sie fühlte es und betrübte sich darüber nur desto mehr, als sie glaubte, diesmal ihre Sache recht gut gemacht zu haben.
+447	erzogen	24	23	12	17.6	206				erzogen 23	sein 3; haben 1	Sage mir: unter welchen Umständen bist du erzogen?
+448	verbannen	16	16	11	17.6	103		verbannt 1		verbannt 7	haben 1; sein 1	sie kannten es genug, um das Gute zu schätzen und das Schlechte zu verbannen.
+449	überdecken	12	12	5	17.6	59		überdeckt 1	überdeckte 1	überdeckt 10	sein 1	
+450	aufpacken	6	6	6	17.5	11			aufpackte 1	aufgepackt 1		"Indem man aufpackte und alles zubereitete, sagte Melina: ""Es ist mir verdrießlich, dass wir wie Seiltänzer und Marktschreier reisen;"
+451	zusammenbringen	14	14	9	17.4	81		zusammenbringt 2; bringt zusammen 1	brachte zusammen 1	zusammengebracht 7	haben 5	Der anbrechende Tag brachte nun alle Freunde und Bekannte nach und nach zusammen.
+452	kleiden	50	50	18	17.3	617		kleidet 6	kleidete 6	gekleidet 31; kleiden 2	sein 2; haben 1	Die Art, wie sie gekleidet war und sich überhaupt betrug, zeigte, dass sie ein Mädchen sei, die etwas auf sich halte.
+453	besehen	30	30	16	17.3	295			besah 16	besehen 2	haben 2	Sechs Tage besah ich das Kabinett, und am siebenten riet ich meinem Freunde, die ganze geforderte Summe ohne Anstand zu bezahlen.
+454	ausrichten	28	28	16	17.3	265		richtet aus 1	richtete aus 3; ausrichtete 2	ausgerichtet 7	haben 2	Aber wie man sich denken kann, richtete er wenig aus.
+455	hervorrufen	30	28	8	17.1	297		ruft hervor 2; hervorruft 1	hervorrief 4; rief hervor 2	hervorgerufen 8	sein 1; haben 1	Sie eilt nach dem neuen Gebäude, sie ruft den Chirurgus hervor, sie übergibt ihm das Kind.
+456	stiften	20	19	9	17.0	156		stiftet 3		gestiftet 8	haben 4	dabei war er äußerst gesellig und tätig und hatte seit vielen Jahren eine besondere Neigung, mit allen Landgeistlichen Freundschaft zu stiften.
+457	verwenden	31	30	12	16.9	314		verwendet 6	verwendete 3	verwendet 3; verwandt 2	haben 1	Verwendet der Vater nicht jährlich einen ansehnlichen Teil seines Handelsgewinnes zur Verschönerung der Zimmer?
+458	hervorblicken	7	7	5	16.9	18		hervorblickt 1	blickte hervor 2; hervorblickte 1			Sein kahler Scheitel war von wenig grauen Haaren umkränzt, große blaue Augen blickten sanft unter langen weißen Augenbrauen hervor.
+459	gelingen	111	95	18	16.7	1749		gelingt 19	gelang 45	gelungen 22	sein 20	Wie sehr dieses gelungen war, ließ sich in diesen Tagen gewahr werden, als eben der Hauptmarkt sich versammelte, den man gar wohl eine Masse nennen konnte.
+460	abreden	6	6	5	16.7	12			redete ab 1	abgeredet 2	haben 1	Der Neffe sekundierte meine Absicht, als wenn wir es abgeredet hätten.
+461	glücken	15	15	10	16.6	96		glückt 5	glückte 5	glücken 2		sie verlieren die Menschen aus den Augen, welche zu erfreuen und zu versammeln nur sehr wenigen glückt.
+462	zurückrufen	27	25	15	16.5	257		ruft zurück 2	rief zurück 6	zurückruft 3; zurückgerufen 3	haben 1	Unaufhörlich rief er sich jene Begebenheit zurück, welche einen unauslöschlichen Eindruck auf sein Gemüt gemacht hatte.
+463	aufzuschließen	5	5	4	16.5	7						Allein ein Schwur drückt mir die Lippen zu, Und nur ein Gott vermag sie aufzuschließen.
+464	ausdauern	4	4	4	16.5	3				ausdauern 2		sie könne nicht mehr mit Melina unter einem Dache ausdauern und habe sich deswegen herüberquartiert.
+465	herbeidrängen	4	3	3	16.5	3			drängte herbei 2			Der gelbe Laufer drängte sich auch herbei, seine Ergötzlichkeiten abzuholen.
+466	gleichen	32	29	14	16.4	334		gleicht 12				Er gleicht einem Wanderer, der nicht weit von der Herberge ins Wasser fällt;
+467	darbieten	15	15	10	16.4	97		darbietet 4	bot dar 4; darbot 2			Das große Haus verkaufen wir, wozu sich sogleich eine gute Gelegenheit darbietet;
+468	konnten	7	6	5	16.4	19		konnt 7				Indessen wurde sie stiller, aus ihren Fragen konnt' ich erraten, sie vermute, dass ich vom Handwerk sei.
+469	abwechseln	9	9	6	16.3	35			wechselte ab 3			Darauf sollten sie mit andern Scherzen abwechseln und zuletzt zu einem immer wiederkehrenden Reihentanze ein fröhliches Lied singen.
+470	umzusehen	18	18	12	16.2	135						"ich habe große Lust, mich heute weit in der Welt umzusehen""."
+471	anzubringen	11	11	8	16.2	54						Auch fand sich in den Opern mehr Gelegenheit, meinen David und Goliath anzubringen, welches im regelmäßigen Drama gar nicht angehen wollte.
+472	entgegenstehen	8	7	6	16.1	27		steht entgegen 2	stand entgegen 4; entgegenstand 1			Auf eine ganz natürliche, aber doch sonderbare Weise stand er seiner schönen Nachbarin abermals entgegen.
+473	übereinkommen	12	12	8	16.0	65	participate in a dialogue between two or more people or parties intended to reach a beneficial outcome	übereinkommt 1; kommt überein 1	kam überein 2	übereingekommen 3	sein 3	Mit meinem Bruder war sie schon früher übereingekommen, dass sie sich wechselsweise ihre Heirat nur melden, sich darüber nicht zu Rate ziehen wollten.
+474	anzustellen	10	10	7	16.0	45						Serlo und Aurelie hatten Gelegenheit genug, hierüber Betrachtungen anzustellen.
+475	verwickeln	17	17	9	15.9	124		verwickelt 2	verwickelte 4	verwickelt 11		Der Umweg bringt uns auch dahin, aber in welche schlimmen Wege verwickelt er uns, wie weit führt er uns ab!
+476	vergönnen	17	16	9	15.9	124		vergönnt 2; vergönnet 1	vergönnte 3	vergönnt 5	sein 2	Sogleich wandte ich mich an meinen unsichtbaren Führer, und da dieser es mir vergönnte, ging ich ohne Bedenken auf meinem Wege fort.
+477	voraussetzen	22	22	10	15.8	191		setzt voraus 4; voraussetzt 2	voraussetzte 4	vorausgesetzt 8	haben 2	"""Der vornehme Anstand"", sagte er, ""ist schwer nachzuahmen, weil er eigentlich negativ ist und eine lange anhaltende übung voraussetzt."
+478	einwirken	14	14	6	15.8	88		wirkt ein 1; einwirkt 1	wirkte ein 1; einwirkte 1	eingewirkt 3	haben 2	Ottilie wirkte stets mit ein, aber mehr zufällig, nach Gelegenheit und Neigung.
+479	geben	1170	652	21	15.7	25004	give	gibt 194; gebt 8	gab 327	gegeben 171	haben 81; sein 16	Und im Gefolg dieser Worte gab er im Hinabsteigen einem wohlgebildeten jungen Mann die nötigen Aufträge, verschwand sodann bald mit Gästen und Gefolge.
+480	zusammentreffen	26	26	14	15.7	249		trifft zusammen 2	zusammentraf 5; traf zusammen 2	zusammengetroffen 1		Der Tod ihres Mannes, die neue Bekanntschaft, das Alter des Kindes, alles trifft zusammen.
+481	festsetzen	22	22	12	15.7	192				festgesetzt 13	haben 5	Die Ordnung und Einteilung ward endlich nur mit Mühe ausgemacht und festgesetzt, doch leider ohne Wirkung.
+482	entgegenstellen	10	10	9	15.7	46		stellt entgegen 4	stellte entgegen 1	entgegenstellt 1		Wo Ihr Euch an den Mauern andrängt, stellt sich der glatte Ahorn, die rauhe Eiche, die schlanke Fichte mit Schaft und Wurzeln entgegen;
+483	nachzuahmen	9	9	6	15.6	37						Denn freilich regt sich in jedem Menschen ein gewisses unbestimmtes Verlangen, dasjenige, was er sieht, nachzuahmen;
+484	präludieren	5	5	4	15.6	8				präludiert 2	haben 2	Der Alte blickte auf seine Saiten, und nachdem er sanft präludiert hatte, stimmte er an und sang:
+485	memorieren	5	4	3	15.6	8		memoriert 1	memorierte 1			So memorierte ich, und so übte ich mich und glaubte nach und nach mit meinem Helden zu einer Person zu werden.
+486	stehenlassen	5	5	3	15.6	8		stehenläßt 1				Ferner hatte Wilhelm in seinem Stücke die beiden Rollen von Rosenkranz und Güldenstern stehenlassen.
+487	beriefen	5	4	3	15.6	8						Als er zu den Frauen ins Versammlungszimmer kam, beriefen sie ihn einstimmig, dass nichts recht sitze;
+488	abgewonnen	5	5	3	15.6	8				abgewonnen 5	haben 1	Man hat nicht mit ihnen gelebt, ihnen ihre Eigentümlichkeiten nicht abgewonnen.
+489	bemühen	63	59	19	15.5	871		bemüht 8	bemühte 13	bemüht 15	haben 4	Mariane lachte laut, als Wilhelm die verworrenen Drähte auseinanderzuwickeln und jede Figur einzeln vorzuzeigen bemüht war.
+490	hinaufführen	12	12	7	15.5	67		hinaufführt 2	führte hinauf 2; hinaufführte 2			er schien dich hinaufführen zu wollen, aber leitete dich seitwärts und schien dich nach sich zu ziehen.
+491	zusammenkommen	26	25	12	15.4	252		zusammenkommt 2	kam zusammen 4; zusammenkam 2	zusammengekommen 5	sein 4	die übrigen wurden auch nach und nach, doch geringer, ausstaffiert, und es kam ein stattliches Korps zusammen.
+492	fertigen	11	8	5	15.4	57			fertigte 1	gefertigt 7		wir haben kostbare chinesische Teppiche, auf gleiche Weise gefertigt, vor Augen gehabt.
+493	eindrücken	8	8	5	15.3	29		drückt ein 1	drückte ein 1	eingedrückt 3	haben 1	Der Sänger drückt' die Augen ein Und schlug die vollen Töne;
+494	durcharbeiten	7	7	4	15.3	21		arbeitet durch 1	arbeitete durch 2; durcharbeitete 1			Nun arbeitet meine Phantasie durch, was Ottilie tun sollte, sich mir zu nähern.
+495	hervorschauen	7	7	4	15.3	21			schaute hervor 1			Von nun an aber blickten wir umher, ob nicht irgendwo eins der Homerischen Schreckbilder hervorschauen möchte.
+496	vermissen	30	30	12	15.1	316		vermißt 2	vermißte 8; vermisste 1	vermißt 9; vermisst 1	haben 4	"""Gewiß tat mir der Verkauf des Kabinetts gleich sehr leid, und ich habe es auch in reifern Jahren öfters vermißt;"
+497	auftreten	41	38	16	15.0	495		auftritt 5; tritt auf 3	trat auf 8; auftrat 5			Aber im Palmenwald trat er auf, der Löwe, ernsten Schrittes durchzog er die Wüste, dort herrscht er über alles Getier, und nichts widersteht ihm.
+498	unterlassen	25	25	10	15.0	241		unterläßt 2	unterließ 6			Aufs freundlichste ward er empfangen, auch schien er sehr munter und scherzhaft und konnte endlich nicht unterlassen, zu sagen:
+499	vorerzählen	4	4	4	15.0	4			erzählte vor 1; vorerzählte 1			Er erzählte sich Geschichten vor, wie sein Freund Werner in diese Gegend kommen und ihn überraschen könnte, dass Mariane vielleicht erscheinen dürfte.
+500	vorgespiegeln	4	4	4	15.0	4				vorgespiegelt 4	haben 4	
+501	entgegenzusehen	4	4	4	15.0	4				entgegenzusehen 1		"Nein, es ist mir unmöglich, dieser Szene entgegenzusehen."""
+502	anreizen	4	4	4	15.0	4						ein selbstischer Mutwille mochte sie gewöhnlich anreizen;
+503	verdeutlichen	4	4	4	15.0	4		verdeutlicht 1	verdeutlichte 1			Diese mehrmals in Kupfer gestochenen Werke müßte man vor sich sehen, um das Gesagte verdeutlichen zu können.
+504	niederlegen	34	32	14	14.9	381		legt nieder 2	legte nieder 5; niederlegte 3	niedergelegt 8	haben 5	Er zeigte hie und da Lust, sich niederzulegen;
+505	abtreten	18	18	9	14.9	143		tritt ab 1; abtritt 1	abtrat 2	abgetreten 4	sein 3	Als er in einem Wirtshause auf dem Markte abtrat, ging es darin sehr lustig, wenigstens sehr lebhaft zu.
+506	herbeischaffen	8	8	6	14.9	30						Ihre beiden Freunde mussten ihr Blumen in Menge herbeischaffen.
+507	erstaunen	15	15	9	14.8	105			erstaunte 5			Er kam und erstaunte im Hereintreten über die Gestalt, über die Anmut der Gräfin, die durch ihren Putz nur sichtbarer geworden waren.
+508	verdenken	13	13	8	14.8	81						"""Ist es dem zu verdenken"", antwortete er, ""der so lange vergebens an ihnen und um sie gearbeitet hat?"
+509	übernehmen	62	60	13	14.7	868		übernimmt 6; übernehmt 1	übernahm 23	übernommen 13	haben 11	Auch hier übernahm die ausdauernde Freundschaft wieder ihr Amt.
+510	hinwegnehmen	5	5	5	14.7	9			nahm hinweg 4			Aber auch der abwesende Geist nahm seinen Teil Lob und Bewunderung hinweg.
+511	andern	5	5	5	14.7	9						Ihr war es nicht unmöglich gewesen, andern sollte das gleiche möglich sein.
+512	erscheinen	301	244	21	14.6	5744	appear	erscheint 61	erschien 89	erschienen 34; erscheinet 1	sein 18	das fürstliche Schloss mit seinen Teilen, Hauptgebäuden, Flügeln, Kuppeln und Türmen erschien gar stattlich, die obere Stadt in ihrer völligen Ausdehnung;
+513	anschaffen	19	19	11	14.6	158			schaffte an 2; anschaffte 1	angeschafft 11	haben 4	So ging es mir eine Zeitlang recht gut, ich ward leidlich bezahlt, schaffte mir manches an, und meine Verhältnisse machten mir keine Schande.
+514	abschließen	31	29	8	14.5	337		abschließt 2		abgeschlossen 16	haben 3; sein 2	Melina wusste zu seinem Vorteil mit dem Baron den Kontrakt abzuschließen und ihn vor den übrigen Schauspielern geheimzuhalten.
+515	verwunderen	10	10	7	14.5	50			verwunderte 6			Wie sehr verwunderten sie sich dagegen, als sich dieser Empfang in ein entsetzliches Fluchen auflöste.
+516	angehören	39	37	10	14.3	470		angehört 5; gehört an 5	angehörte 2; gehörte an 1	angehört 4	haben 1	Wir gehören einander an, und keins von beiden verläßt oder verliert etwas, wenn wir füreinander leben.
+517	teilen	62	58	17	14.2	877	joint use of a resource or space; separating one entity to form others	teilt 2	teilte 11	geteilt 12	haben 5; sein 2	sie teilte die Empfindung seines lebhaften Glücks mit ihm.
+518	eingepacken	9	9	7	14.2	41				eingepackt 9	sein 2; haben 1	"""Sie können denken, was wir Kinder verloren, als alle die Sachen heruntergenommen und eingepackt wurden."
+519	überdenken	9	9	7	14.2	41				überdenkt 2		überdenken Sie, und wenn es Ihnen möglich ist, so setzen Sie mich in den Besitz der theatralischen Gerätschaften, die sich hier vorfinden.
+520	anmelden	20	19	11	14.1	176		meldet an 2	anmeldete 3	angemeldet 10	haben 1	Fürst Oheim, Friedrich mit Namen, trat sodann, angemeldet, mit seinem Zeichner herein, der ein großes Portefeuille unter dem Arm trug.
+521	sinnen	18	17	8	14.1	148		sinnt 1	sann 1	gesinnt 13	sein 3	Die Menschen sind durchaus natürlich und leicht gesinnt.
+522	ableiten	7	6	6	14.0	24				abgeleitet 5		Philinens Reize konnten die Unruhe unsers Freundes nicht ableiten.
+523	geziemtn	5	5	5	14.0	10			geziemt 2			Wer wagte hier zu beschreiben, wem geziemt es, die Seligkeit zweier Liebenden auszusprechen!
+524	abbüßen	5	5	4	14.0	10				abgebüßt 2	haben 1	Sie nahm an, dass das Kind nunmehr für sich und seine Eltern abgebüßt habe, dass Fluch und Strafe, die bisher auf ihnen geruht, nunmehr gänzlich gehoben sei;
+525	vervielfältigen	5	4	3	14.0	10				vervielfältigt 3		außerordentlich dagegen, einen Trank zu veredeln, eine Speise zu vervielfältigen, dass sie für eine Unzahl hinreiche.
+526	wählen	68	60	18	13.9	993	to participate in a vote; to choose something	wählt 3	wählte 7	gewählt 17	haben 7	Laßt uns ein Stück wählen;
+527	ängstigen	20	19	13	13.9	177		ängstigt 2	ängstigte 1	geängstigt 11; ängstigen 1	haben 3	nun ängstigte ihn Felix, und da er das Leben bei alle seinem Elend unendlich liebt, scheint seine Abneigung gegen das Kind daher entstanden zu sein.
+528	herumführen	10	10	9	13.9	52			führte herum 1; herumführte 1	herumgeführt 3	haben 1	aber er irrt gewaltig, denn wir alle sind einmal auf diesem Wege herumgeführt worden;
+529	verlängern	13	13	10	13.8	86		verlängert 2	verlängerte 1	verlängert 5	haben 2	aber sogleich verändert sich ihr Bild, ihr schönes, rundes, himmlisches Gesichtchen verlängert sich:
+530	mildern	13	13	7	13.8	86		mildert 1		gemildert 8	sein 3	Die Leidenschaft erhöht und mildert sich durchs Bekennen.
+531	zirkulieren	4	4	4	13.8	5		zirkuliert 1	zirkulierte 1			
+532	abzuleiten	4	4	4	13.8	5						Jedes ihrer Spiele schien nur eine innere heftige Erschütterung abzuleiten.
+533	beiseitelegen	4	4	3	13.8	5			beiseitelegte 1	beiseitegelegt 2		Könnte man Zeit wie bares Geld beiseitelegen, ohne sie zu benutzen, so wäre dies eine Art von Entschuldigung für den Müßiggang der halben Welt;
+534	wegtreiben	4	3	3	13.8	5			wegtrieb 1	wegtreiben 1		Anstatt ungeduldig ans Ufer zu eilen, blieben wir auf dem Verdeck, bis man uns wegtrieb;
+535	aufmunteren	6	6	6	13.7	17			munterte auf 5			sie riefen ihren übrigen Gesellen zu und munterten sie zu einer allgemeinen Verteidigung auf.
+536	umkehren	41	36	15	13.6	514		kehrt um 4; umkehrt 2	kehrte um 9; umkehrte 6			Sie grüßte die ganze Gesellschaft im Vorbeigehen freundlich und kehrte sich nochmals gegen Wilhelmen um, indem sie mit der huldreichsten Miene zu ihm sagte:
+537	verstellen	14	11	9	13.5	100		verstellt 1		verstellt 7	sein 1; haben 1	Auf diesem Wege kam er nach und nach dazu, natürlich zu spielen und doch immer verstellt zu sein.
+538	beordern	7	6	4	13.5	25		beordert 1	beorderte 1	beordert 5	sein 2; haben 1	Tags vorher hatte man Bauern beordert, das Getreide, das gegen die Stadt zu steht, in dieser Nacht abzumähen;
+539	wegfahren	7	7	5	13.5	25	to travel using a vehicle		fuhr weg 2; wegfuhr 1			aber schnell fuhr sie in die Tasche, riss den Dolch blitzgeschwind heraus und fuhr mit Spitze und Schneide ihm rasch über die Hand weg.
+540	vernachlässigen	20	20	12	13.4	181		vernachlässigt 3	vernachlässigte 1	vernachlässigt 7	haben 3	"Verzeih mir"", rief sie aus, indem sie den Stahl küßte, ""dass ich dich so vernachlässigt habe!"""
+541	vorauszusehen	8	8	7	13.4	34						Wie vorauszusehen, durften sie auf dem Markte nur Schritt vor Schritt reiten;
+542	weissagen	8	8	5	13.4	34		weissagt 1	weissagte 1	geweissagt 2	haben 2	Diese wunderbaren Ereignisse schienen ihr eine bedeutende Zukunft, aber keine unglückliche zu weissagen.
+543	vorkommen	146	136	18	13.3	2543		kommt vor 20; vorkommt 8	kam vor 21; vorkam 19	vorgekommen 15	sein 13	Der Hohepriester Samuel erschien mit Jonathan, und ihre wechselnden wunderlichen Stimmen kamen mir höchst ehrwürdig vor.
+544	reinigen	24	23	11	13.3	241	to clean	reinigt 2	reinigte 2	gereinigt 9	haben 2; sein 2	"Als Wilhelm mit einem kleinen Pudermesser seine Stirne gereinigt hatte, sagte sie zu ihm: ""Stecken Sie es ein, und gedenken Sie meiner dabei."""
+545	illuminieren	5	5	4	13.3	11	to apply light to something	illuminiert 1		illuminiert 3		denn dass ich von Jugend auf ein Geschick gehabt hatte, mit dem Zirkel umzugehen, Pappe auszuschneiden und Bilder zu illuminieren, kam mir jetzt wohl zustatten.
+546	bespiegeln	5	5	4	13.3	11		bespiegelt 4				er bespiegelt sich überall gern selbst, er legt sich als Folie der ganzen Welt unter“.
+547	aufgehen	83	72	20	13.2	1292		geht auf 6; aufgeht 5	ging auf 34; aufging 5	aufgegangen 13	sein 13	Dagegen schwebte Wilhelm glücklich in höheren Regionen, ihm war auch eine neue Welt aufgegangen, aber reich an herrlichen Aussichten.
+548	verleugnen	21	20	12	13.2	197		verleugne 1; verleugnet 1	verleugnete 2	verleugnet 1		seine Art zu denken konnte das Handwerksmäßige nicht verleugnen.
+549	verkürzen	12	12	9	13.2	77		verkürzt 1	verkürzte 3	verkürzt 4		"""Wenn Sie es mit diesem jungen Manne, wie es scheint, gut meinen"", sagte er, ""so sorgen Sie selbst dafür, dass unser Teil nicht verkürzt werde;"
+550	übriglassen	8	8	6	13.1	35			ließ übrig 3	übriglassen 3		"Ich werde"", rief er aus, indem er aufsprang, ""von diesen unglückseligen Papieren keines übriglassen."""
+551	zunehmen	19	19	10	13.0	170		zunimmt 1	zunahm 4; nahm zu 4	zugenommen 6	haben 5	Er sagte noch viel und trug die Sache von so mancherlei vorteilhaften Seiten vor, dass ihre Furcht sich verringerte und ihr Mut zunahm.
+552	begaben	9	9	5	13.0	45			begabte 1			Nachdem wir nun zwei Hauptpunkte außerhalb der Stadt betrachtet, begaben wir uns in den Palast, wo der geschäftige Laufer die Zimmer und ihren Inhalt vorzeigte.
+553	hinbringen	10	10	7	12.9	56			brachte hin 4			Alle fühlten sich einander näher, alle wünschten in einem so angenehmen Aufenthalt ihr ganzes Leben hinzubringen.
+554	bestehen	111	97	19	12.8	1851	consist	besteht 27	bestand 35	bestanden 11	haben 3; sein 1	"""Wenn Sie so eifrig darauf bestehen, können wir Sie wohl befriedigen"", sagte die Alte."
+555	bestärken	16	16	12	12.8	130			bestärkte 5	bestärkt 4		Die Gesellschaft sah einander an und ward noch mehr in dem Verdacht bestärkt, dass Serlo um die Erscheinung des Geistes wisse.
+556	wegwenden	8	7	6	12.8	36		wegwendet 1	wendete weg 2; wandte weg 1			sobald aber die Sache entschieden ist, wenden wir unser Auge sogleich von ihm weg;
+557	hineinreiten	4	4	4	12.8	6				hineinreitet 1; hineinreiten 1		"Als sie, herabgekommen, den Pferden wieder zugingen, sagte die Fürstin zu dem alten Herrn: ""reiten Sie hinein, eilig, aber nicht ohne den Reitknecht!"
+558	eingewurzeln	4	4	4	12.8	6				eingewurzelt 4	haben 2	Wilhelm stand wie eingewurzelt.
+559	herausgetrieben	4	4	4	12.8	6						das dürre Holz schlug prasselnd in Flammen auf, und auch die Flamme ward herausgetrieben;
+560	führeen	4	4	4	12.8	6		führet 4				es ist ein Trieb, der mich leitet und mich immer recht führet;
+561	aufgehangen	4	4	4	12.8	6				aufgehangen 4	sein 1	Säle voll Lappen und Fetzen, dann wieder die gips-marmornen Wände mit Haken und großen Nägeln zerspengt, Gewehre dort aufgehangen und umher gestellt.
+562	verzeihen	65	57	16	12.7	961	to forgive	verzeiht 5		verziehen 11	haben 6; sein 3	"sie faßte des Freundes beide Hände und rief, indem er erstaunt vor ihr stand: ""Verzeihen Sie, verzeihen Sie einem geängstigten Herzen!"
+563	zusammenfinden	17	17	9	12.7	144		findet zusammen 2	fand zusammen 3	zusammengefunden 9	haben 7	So viel Mühe gaben sich beide Männer mit der Ausbildung einer Gesellschaft, die sich so glücklich zusammengefunden hatte.
+564	anstrichen	9	9	3	12.7	46				angestrichen 9	haben 1; sein 1	Philine hatte beim Herausgehen aus dem Theater ihn mit dem Ellenbogen angestrichen und ihm einige Worte zugelispelt, die er aber nicht verstanden hatte.
+565	anzuschaffen	7	7	5	12.7	27						er hatte sich einen Teppich in die Mitte des Zimmers und einen feinern auf den Tisch anzuschaffen gewußt;
+566	kontrastieren	6	6	5	12.7	19		kontrastiert 1	kontrastierte 3	kontrastiert 1		überdies brauche ich sie in meiner Bearbeitung als ein Paar, das mit dem einen, guten, trefflichen Horatio kontrastiert.
+567	verloschen	6	6	4	12.7	19				verloschen 6	sein 5	diesmal war es nur ein leeres Wort: denn die Empfindungen für den Unsichtbaren waren bei mir fast ganz verloschen.
+568	herumziehen	6	6	5	12.7	19		herumzieht 1; zieht herum 1				Dass das Leben des Menschen nur ein Traum sei, ist manchem schon so vorgekommen, und auch mit mir zieht dieses Gefühl immer herum.
+569	einweihen	18	17	8	12.6	159			weihte ein 1	eingeweiht 14	haben 2	Glücklicherweise fiel diese Entdeckung in die Zeit, da der Lieutenant selbst den Wunsch geäußert hatte, mich in diese Geheimnisse einweihen zu dürfen.
+570	erwehren	14	13	10	12.6	105			erwehrte 1			ich mich so in Träumen verliere, kann ich mich des Gedankens nicht erwehren: wie, wenn Albert stürbe?
+571	hindeuten	10	10	5	12.6	57		hindeutet 2; deutet hin 1	hindeutete 3; deutete hin 1	hingedeutet 2	haben 1	sie deutete auf das Kind hin.
+572	auffordern	41	37	17	12.5	529		fordert auf 1	forderte auf 4; aufforderte 4	aufgefordert 21; auffordert 2	haben 2; sein 1	Einen gebornen Fürsten, der sich glücklich fühlt, gegen den Usurpator seiner Krone aufgefordert zu werden?
+573	umsehen	62	60	21	12.4	911		sieht um 2	sah um 13; umsah 11			"""Er mag sich in der Welt umsehen"", sagte der alte Meister, ""und zugleich unsre Geschäfte an fremden Orten betreiben;"
+574	steigern	37	34	10	12.3	463		steigert 6	steigerte 3	gesteigert 9	haben 2; sein 1	Ein guter Akteur steigert ihn, die schlechten kann er nicht loswerden;
+575	ansprechen	25	25	11	12.3	266		spricht an 2; anspricht 1	sprach an 6	angesprochen 5	haben 1	Die Frau sprach ihn an mit Bitte, das Feuer nicht anzünden zu lassen;
+576	dächen	18	16	11	12.3	161			dächte 3	dächt 2		Nun dächt ich, lieber Herr Baron, Wir ließen's beide, wie wir sind:
+577	beruhen	17	17	9	12.3	147		beruht 7	beruhte 1			Die Vaterschaft beruht überhaupt nur auf der überzeugung;
+578	streben	27	26	13	12.2	298		strebt 8	strebte 10	gestrebt 2	haben 1	Sein Herz strebte, den Gegenstand seiner Leidenschaft zu veredeln, sein Geist, das geliebte Mädchen mit sich emporzuheben.
+579	speisen	24	23	9	12.2	251	to ingest food	speist 2	speiste 6	gespeist 5	haben 2	Ich mag gern einen Hausgottesdienst in dem Saale gehalten sehen, wo man zu speisen, sich gesellig zu versammeln, mit Spiel und Tanz zu ergötzen pflegt.
+580	hereinstürzen	8	8	7	12.2	38		stürzt herein 1	hereinstürzte 3; stürzte herein 2			"In diesem Augenblick stürzte jemand herein und rief: ""Der Geist!"
+581	ungern	6	6	5	12.2	20						Melina übernahm die Regie, und seine Frau versprach, auf die Kinder ein mütterliches Auge zu haben, von denen sich Wilhelm ungern losriss.
+582	vorsetzen	16	16	11	12.1	135		setzt vor 1; vorsetzt 1	setzte vor 2; vorsetzte 1	vorgesetzt 7	haben 3	Denn er setzte sich fest vor, hier ein Mittelsmann zu werden und die glückliche und anständige Verbindung beider Liebenden zu befördern.
+583	verheimlichen	15	14	9	12.1	121		verheimlicht 3	verheimlichte 2	verheimlicht 2	haben 1	Niemand stellte seinem Willen ein Hindernis entgegen, da er seinen Entschluss verheimlichte.
+584	erschaffen	15	13	8	12.1	121	to create	erschafft 1	erschuf 1	erschaffen 1		er würde sich einen zweiten erschaffen, wenn es keinen gäbe;
+585	hingeben	32	32	13	12.0	382		hingibt 6	hingab 4; gab hin 1			Dieses ganze Selbst müssen wir hingeben und, wenn es einigen Wert haben soll, dem Freunde das Gut auf ewig versichern.
+586	entgegeneilen	12	12	9	12.0	83		eilt entgegen 1	eilte entgegen 5; entgegeneilte 2			die Stellung der Lichter erhöhte den Glanz der Gabe, alles war in Ordnung, als die Alte den Tritt Marianens auf der Treppe vernahm und ihr entgegeneilte.
+587	ermannen	7	7	4	12.0	29			ermannte 3			im anderen Fall ermanne dich und suche einer elenden Empfindung los zu werden, die alle deine Kräfte verzehren muss.--Bester!
+588	verunstalten	5	5	3	12.0	13		verunstaltet 2	verunstaltete 1	verunstaltet 2		Sie können durch keine Art von Behandlung zerstört, ja kaum verunstaltet werden.
+589	zusammenwirken	5	5	3	12.0	13			wirkte zusammen 1			Auch er lernte sie näher kennen, und beiden wurde es leicht, zusammenzuwirken und etwas zustande zu bringen.
+590	aufsuchen	61	57	18	11.9	901			aufsuchte 3; suchte auf 2	aufgesucht 3	haben 2	denn er dachte nicht anders, als dass der Schauspieler, sobald er mit seiner jungen Gattin befreit worden, das Theater aufsuchen werde.
+591	vorbrachen	10	10	7	11.9	60			vorbrachte 10			Die Gründe, die sie vorbrachte, schienen ihr unwiderleglich und waren es auch, weil sie ganz gemein waren.
+592	genossen	9	9	5	11.9	49				genossen 4	haben 2; sein 1	Sie genossen vergnüglich in einer höheren Region der freien, frischen Luft bei dem schönsten Wetter.
+593	umbilden	4	4	3	11.9	7				umgebildet 1		Jeder hat sein eigen Glück unter den Händen, wie der Künstler eine rohe Materie, die er zu einer Gestalt umbilden will.
+594	hinaussetzen	4	4	4	11.9	7			hinaussetzte 1			"setzen Sie sich über das Gildegefühl hinaus und folgen Sie mir."""
+595	fortwirken	4	4	4	11.9	7		wirkt fort 2	fortwirkte 1			auch in euren Herzen lebt es, wirkt es fort.
+596	vermeiden	45	44	17	11.8	610		vermeidet 1	vermied 8	vermieden 3	haben 2	Er, der Baron, vermeide alle Unterredung mit ihm, und Wilhelm werde wohl tun, sich auch von ihm entfernt zu halten, denn am Ende gebe er jedermann etwas ab.
+597	auszufüllen	6	6	5	11.8	21						"wir müssen alles aufbieten, um einigermaßen die Lücke auszufüllen, die er finden wird, und das wird am besten durch eine größere Gesellschaft geschehen."""
+598	logieren	6	6	5	11.8	21		logiert 3				der Platz gehe sehr zusammen, sie würden auch deswegen nicht so gut logieren, als man es ihnen vorher bestimmt habe, welches ihm außerordentlich leid tue.
+599	schaeltn	6	6	5	11.8	21			schalt 2			Er schalt die anwesenden Herren, dass sie ein solches meuchlerisches Beginnen nicht auf der Stelle geahndet;
+600	beunruhigen	22	22	14	11.7	225		beunruhigt 5	beunruhigte 4	beunruhigt 2		"Ihre Gegenwart beunruhigt mich mehr, als Sie glauben."""
+601	abstumpfen	8	8	6	11.6	40				abgestumpft 2		"Aber seht, unsere schönen, geschäftigen, niedlichen Besen vermehren, zuletzt abgestumpft, nur den Unrat vor unsern Häusern."""
+602	versiegeln	8	8	7	11.6	40		versiegelt 4		versiegelt 1		nach seinem Tode ward alles versiegelt.
+603	verrücken	5	5	4	11.5	14				verrückt 1	haben 1	In frühern Zeiten würde ein solches Verhältnis mich sehr verwirrt, ja mir vielleicht den Kopf verrückt haben;
+604	unterschieben	5	5	4	11.5	14			schob unter 1	untergeschoben 2		Denn das versichre ich Sie, wenn ich ein Mann wäre, mir sollte niemand ein Kind unterschieben;
+605	verführen	21	19	10	11.4	213			verführte 4	verführt 7	sein 2; haben 1	und meine lebhafte Vorstellungskraft, da ich mich in alle Rollen denken konnte, verführte mich zu glauben, dass ich auch alle darstellen würde;
+606	zusammenhängen	13	13	7	11.4	99		zusammenhängt 7; hängt zusammen 3				"Wenn ich es recht überlege, wie genau in der Rolle alles zusammenhängt, so getraue ich mir kaum, eine leidliche Wirkung hervorzubringen."""
+607	forteilen	9	8	8	11.4	51			eilte fort 6			Sie sprang zur Tür hinaus und eilte mit Gelächter fort.
+608	beschämen	9	9	6	11.4	51			beschämte 1			Lass sehen, ob ich die Rede noch ganz im Gedächtnis habe, die den grausamen Freund beschämen soll.
+609	umrissen	6	6	4	11.4	22				umrissen 4	sein 1	Nun aber, da alles so rein und charakteristisch umrissen ist, wird er es hier unten mit Bequemlichkeit ausführen.
+610	voraussehen	14	14	10	11.3	113		sieht voraus 1		vorausgesehen 4	haben 3	Ich fürchtete für ihn, denn ich sah gewisse Umstände und Verwickelungen voraus, und das übel kam schneller, als ich vermutet hatte;
+611	aneignen	12	10	4	11.3	87	to aquire; to learn	aneignet 2	aneignete 1	angeeignet 2	haben 2	Ein Bild aber tat sich vor allen hervor, welches der Künstler auf der Herreise, noch eh' er Wilhelmen begegnet, mit allen Charakterzügen sich angeeignet hatte.
+612	hervorragen	8	7	4	11.3	41		ragt hervor 2	hervorragte 2			Hier beginnt eine große, herrliche Gegend von Bergen und Gründen, über welche zuletzt Schneegipfel hervorragen.
+613	heraufriten	3	3	3	11.3	3		heraufritt 1				Auf dem Wege nach Biel ritten wir das schöne Birsch-Tal herauf und kamen endlich an den engen Pass der hierher führt.
+614	verkündign	3	3	3	11.3	3						Wir hofften nunmehr einen bequemern Hinabstieg, allein unsere Führer verkündigten uns einen noch tiefern Schnee, den wir auch bald fanden.
+615	beisammenfinden	3	3	3	11.3	3						"""Sie finden den ganzen Adel der Welt beisammen, Marchesen, Marquis, Mylords und Baronen, es hat nur noch an einem Grafen gefehlt."""
+616	verführn	3	3	3	11.3	3						Das wunderbare Wehen, das sie heute Abend verführten, war außerordentlich schön.
+617	wogten	3	3	3	11.3	3						So abwechselnd hin und wider geschaukelt, angezogen und abgelehnt, genähert und entfernt, wallten und wogten sie verschiedene Tage.
+618	verwunden	23	19	11	11.2	246		verwundet 6	verwundete 3; verwundene 1	verwundet 12		Vater und Tochter seien darauf noch in der Nacht abgereist, und er sei leider auf eine doppelte Weise verwundet zurückgeblieben.
+619	verschöneren	4	4	3	11.2	8				verschönert 4	sein 1	Er konnte seine Augen nicht von dem schönen Gesicht wegwenden, das von einem grünen Halblichte verschönert war.
+620	ratschlagen	4	4	4	11.2	8			ratschlagte 1	geratschlagt 1		man ratschlagte, was man tun sollte, und konnte keinen Entschluss fassen.
+621	wegzuwerfen	4	4	3	11.2	8						
+622	ausschlagen	18	18	11	11.1	171		ausschlägt 1; schlägt aus 1	schlug aus 5; ausschlug 4	ausgeschlagen 3	haben 1; sein 1	die Einladung schlug er ganz aus.
+623	losreißen	12	11	10	11.0	89		losreißt 1				Ich konnte mich von dem lebendigen Bilde voriger Glückseligkeit, das vor mir stand, nicht losreißen.
+624	hervorheben	12	12	7	11.0	89		hebt hervor 1	hob hervor 2	hervorgehoben 4		Das Eigentümliche müßte durch die Lebensart erst recht hervorgehoben werden.
+625	eingeprägen	8	8	5	11.0	42				eingeprägt 8	haben 4	Vorzüglich willkommen aber waren mir die Meisterstücke der Künstler, deren Art und Weise ich mir schon eingeprägt hatte.
+626	übertreten	8	7	6	11.0	42				übertreten 5; übergetreten 1	sein 1	Deine zarten Gebote will ich nicht übertreten;
+627	zugeschlossen	6	6	5	11.0	23				zugeschlossen 6	haben 1; sein 1	Es wird nachts zugeschlossen, ein Eremit wohnt darin an einem Kirchelchen, und Bettler nisten in den verfallenen Gewölben.
+628	ausladen	5	5	3	11.0	15				ausgeladen 1	sein 1	Unglücklicherweise war der Kahn auf der andern Seite, mit Feuerwerk gefüllt, nur langsam konnte man ihn ausladen, und die Hülfe verzögerte sich.
+629	empfangen	105	93	20	10.8	1791		empfängt 10	empfing 35	empfangen 38	haben 8; sein 2	In dem neuen weißen Negligè empfing sie ihn, er glaubte sie noch nie so reizend gesehen zu haben.
+630	anknüpfen	13	13	8	10.8	103		anknüpft 1; knüpft an 1	anknüpfte 1	angeknüpft 4	haben 1	Den andern Abend konnten wir unser Gespräch wieder anknüpfen und schonten unsre Gesundheit sehr.
+631	fortdauern	6	6	6	10.6	24			dauerte fort 5			Der Unterricht meiner Lehrer dauerte fort;
+632	zubereiten	6	6	5	10.6	24			zubereitete 1	zubereitet 4	sein 2	"Indem man aufpackte und alles zubereitete, sagte Melina: ""Es ist mir verdrießlich, dass wir wie Seiltänzer und Marktschreier reisen;"
+633	aufmuntern	6	6	6	10.6	24						Vergebens, dass sein Oheim ihn aufmuntern, ihm seine Lage aus einem andern Gesichtspunkte zeigen will;
+634	hinziehen	26	26	11	10.5	302		hinzieht 6; zieht hin 3	hinzog 3; zog hin 2	hingezogen 5	haben 1	Schon zu jener Zeit, als ihn Verlangen und Hoffnung zu Marianen hinzog, fühlte er sich wie neu belebt, er fühlte, dass er ein anderer Mensch zu werden beginne;
+635	vorbringen	24	23	12	10.5	269		bringt vor 2	brachte vor 7	vorgebracht 2	haben 1	sie brachte ihre Antworten in einem gebrochenen Deutsch und mit einer sonderbar feierlichen Art vor;
+636	auszuweichen	12	12	8	10.5	92						Wenn sie nur auch bei Ankunft des Winters sich so leicht in ferne Gegenden begäben, dem Mangel auszuweichen und sich vor dem Froste zu sichern!
+637	nachhängen	9	9	6	10.5	55						Dagegen versagte ich mir nicht, meiner Neigung zu Narzissen nachzuhängen.
+638	mißfallen	8	8	6	10.5	44		mißfällt 1				Die Furcht, der Gräfin zu mißfallen oder ihr mehr als billig zu gefallen, war gleich groß bei ihm.
+639	mitfühlen	5	5	5	10.5	16	sympathetic sorrow evoked by the suffering of others; have compassion for	fühlt mit 1	fühlte mit 2			Er fühlt das Traurige und das Freudige jedes Menschenschicksals mit.
+640	behorchen	4	3	3	10.5	9				behorcht 4	haben 4	Noch vor wenigen Tagen hatte Wilhelm seinen Gesang behorcht und folgende Zeilen wohl bemerkt:
+641	anempfohlen	4	4	4	10.5	9				anempfohlen 4	sein 1; haben 1	Sie ward einem Geistlichen anempfohlen, dem sie vorher schon ihren Zustand vertraut hatte.
+642	entwenden	4	4	3	10.5	9	taking another's property without permission or consent		entwendete 2			Aber auch diese beiden Klassen forderten umsonst, was die Würdigen umsonst erhielten, und da man ihnen nicht nachgab, suchten sie die Stämme zu entwenden.
+643	hingehen	59	58	19	10.4	896		geht hin 4; hingeht 2	ging hin 17; hinging 4			wenn du siehst, wo so manches herkommt, wo es hingeht, so wirst du es gewiss auch mit Vergnügen durch deine Hände gehen sehen.
+644	heraufsteigen	10	10	6	10.4	67		steigt herauf 2	heraufstieg 1; stieg herauf 1			Aus den tiefen Felsschluchten steigen sie herauf, bis sie an die höchsten Gipfel der Berge reichen;
+645	vorkamen	7	7	5	10.4	34		kamst vor 1				ich sah dich auf einem schönen Hügel, die Sonne beschien den ganzen Platz; wie reizend kamst du mir vor!
+646	hervortreen	7	7	6	10.4	34				hervortreten 1		Dies sind mit wenigen Zügen die Hauptgegenstände, die uns in die Augen fallen, wenn wir zwischen den zwei Säulen des Markusplatzes hervortreten.
+647	erleichtern	26	26	13	10.3	304		erleichtert 2		erleichtert 9	haben 1	Es tat ihr wohl, die jugendliche Brust von dem Druck erleichtert zu fühlen, mit dem die vorhergehenden Minuten sie belastet hatten.
+648	überreden	17	16	11	10.3	163			überredete 1			Hätte er die geheimen Triebfedern gekannt, so würde er sich die Mühe gar nicht gegeben haben, die Eltern überreden zu wollen.
+649	hinderen	13	13	9	10.3	106		hindert 1	hinderte 2			Doch gab er hiervon die Ursache an, dass die langen, weiten Ärmel ihn im Schreiben hinderten.
+650	erweisen	60	56	10	10.1	921		erweist 5	erwies 19	erwiesen 13	haben 5	man kann einem jungen Menschen keine größere Wohltat erweisen, als wenn man ihn zeitig in die Bestimmung seines Lebens einweiht.
+651	anlegen	57	53	19	10.1	864		legt an 2; anlegt 1	anlegte 4; legte an 1	angelegt 30; angelegen 4	haben 6; sein 3	Haus und Theater waren, ohne sonderlichen Geschmack, munter und artig genug angelegt.
+652	beklagen	29	28	14	10.1	357		beklagt 3	beklagte 11	beklagt 1		sie beklagte sich über Kopfweh, sie wollte sich auf den Vorschlag, dass er heute nacht wiederkommen wolle, nicht einlassen.
+653	hinführen	10	10	9	10.1	69		hinführt 2; führt hin 1	hinführte 1; führte hin 1	hingeführt 2		"Eine Hauptbedingung aber muss man zum voraus eingehen: dass ich meinen Felix mitnehmen und ihn überall mit hinführen darf."""
+654	fortleben	7	7	5	10.1	35		lebt fort 1	lebte fort 3	fortlebt 2		So lebte die junge Witwe monatelang fort.
+655	zustellen	7	7	4	10.1	35			zustellte 1; stellte zu 1	zugestellt 1		Vergebens suchte ich mich Ihnen zu nähern, vergebens Ihnen diese Blätter zuzustellen;
+656	ansiedeln	7	7	4	10.1	35				angesiedelt 3	haben 3	Ganze sogenannte Grafschaften standen noch zu Kauf an der Grenze des bewohnten Landes, auch der Vater unseres Herrn hatte sich dort bedeutend angesiedelt.
+657	aufgedrungen	3	3	3	10.1	4				aufgedrungen 3	haben 2	so ließ ich auch das Ebersdorfer Gesangbuch bei mir liegen, das mir der Freund in ähnlicher Absicht gleichsam aufgedrungen hatte.
+658	zugehauen	3	3	3	10.1	4						Zum neuen Hause oben war auch schon der Keller mehr gebrochen als gegraben und ein schöner Grundstein mit Fächern und Deckplatten zugehauen.
+659	umschaffen	3	3	3	10.1	4						Hätt ich doch nicht geglaubt, dass eine Göttin selbst mich zum seufzenden Liebhaber umschaffen könnte.
+660	statthaben	3	3	3	10.1	4						
+661	voreilen	3	3	3	10.1	4						„Lassen Sie mich voreilen“, sagte Charlotte, „ob ich treffe, wo Sie hinwollen.
+662	verzehren	35	33	15	10.0	462			verzehrte 5	verzehrt 15; verzehrten 1	haben 3; sein 1	ehe das verzehrt ist, wird der Himmel weiterhelfen.
+663	verbessern	19	19	14	10.0	196	to improve	verbessert 1	verbesserte 2	verbessert 7	haben 1	Bei seinem lebhaften, freien und durch nichts gehinderten Geist verbesserte er sich, indem er Rollen und Stücke oft wiederholte, sehr geschwind.
+664	heraushelfen	5	5	4	10.0	17						"""Es wäre gar schlimm"", sagte er, ""gnädige Frau, wenn Sie sich aus dieser Sache nicht allein heraushelfen wollten;"
+665	zusammentrafen	5	5	4	10.0	17						Juliette war in der letzten Zeit viel um die Tante, wo manche derjenigen zusammentrafen, auf die sie wohltätigen Einfluss gehabt;
+666	durchführen	18	18	10	9.9	181		durchführt 1	durchführte 1	durchgeführt 7	haben 2; sein 1	Diese Spiele, obgleich ohne Verstand unternommen und ohne Anleitung durchgeführt, waren doch nicht ohne Nutzen für uns.
+667	niederstürzen	10	9	8	9.9	70			niederstürzte 5; stürzte nieder 2			Als Lydie ihren Freund von Sterben reden hörte, stürzte sie vor seinem Bette nieder, hing an seinen Armen und weinte bitterlich.
+668	zurückgebrachen	6	6	5	9.9	26		zurückgebracht 1		zurückgebracht 5	haben 2; sein 1	Kniep ist herabgekommen und hat zwei ungeheure Blätter, reinlichst gezeichnet, zufrieden und vergnügt zurückgebracht.
+669	ausbitten	6	6	5	9.9	26			bat aus 5			über weniges bat er sich einige Erklärung aus;
+670	übereinstimmen	11	11	10	9.8	83		übereinstimmt 1	übereinstimmte 3; stimmte überein 1			Meine Bekanntschaften wurden erst recht weitläufig, nicht nur mit Einheimischen, deren Gesinnungen mit den meinigen übereinstimmten, sondern auch mit Fremden.
+671	vergüten	4	4	3	9.8	10				vergütet 3		Vergnügen und Verdruß lösten sich ab, Demütigung wurde durch Eitelkeit, und Mangel oft durch augenblicklichen Überfluss vergütet;
+672	auszustehen	4	4	4	9.8	10						Was hat man von dem Neide seiner Mitgenossen und der Parteilichkeit des Direktors, von der veränderlichen Laune des Publikums auszustehen!
+673	beklatschen	4	4	3	9.8	10				beklatscht 4		
+674	beteueren	4	4	3	9.8	10						Die Frauen beteuerten, diese Tracht lasse ihm vorzüglich gut.
+675	vorgearbeiten	4	4	3	9.8	10		vorgearbeitet 1		vorgearbeitet 3	haben 1	Es kommt die Nachricht, dass das Essen fertig ist, die, ob wir gleich schon einiges vorgearbeitet haben, sehr willkommen klingt.
+676	sehnn	12	10	8	9.7	97		sehn 3				Oh, ihr werdet Wunder sehn!
+677	lernen	209	159	19	9.6	4015	any process in an organism in which a relatively long-lasting adaptive behavioral change occurs as the result of experience; conscious cognitive process of creating complete memories of certain information	lernt 24	lernte 21	gelernt 38	haben 27	Da lernt ich deine Bescheidenheit kennen, und wie vermehrte sich meine Liebe!
+678	zuführen	14	14	8	9.6	125			führte zu 5	zugeführt 5; zuführen 2	haben 3	"""Bist du es"", sagte er zu ihr mit Ernst, ""die dieses Kind Aurelien zugeführt hatte?"""
+679	entziffern	7	7	6	9.6	37						Auch sahen wir in einem unfreundlichen Lokal verschiedene Reste antiker marmorner Statuen, die wir aber zu entziffern keine Geduld hatten.
+680	verargen	7	7	6	9.6	37		verargt 1				Ich verarge dieser tätigen Frau keinesweges, dass sie verlangt, man soll die Früchte ihrer Sorgfalt äußerlich und deutlich sehen;
+681	belebten	6	6	6	9.6	27						Wilhelmen stieg die Röte ins Gesicht, und die Wangen der artigen Verbrecherin belebten sich gleichfalls durch die reizende Farbe der Schamhaftigkeit.
+682	umgehen	31	31	16	9.5	399		umgeht 5; geht um 1	ging um 2	umgegangen 3	sein 3	denn dass ich von Jugend auf ein Geschick gehabt hatte, mit dem Zirkel umzugehen, Pappe auszuschneiden und Bilder zu illuminieren, kam mir jetzt wohl zustatten.
+683	absteigen	15	15	11	9.5	140			stieg ab 6			Wilhelm kam zu Hochdorf an, wo er übernachten sollte, und stieg bei der Fabrik ab, deren Unternehmer auch als Schuldner auf seiner Liste stand.
+684	durchsehen	9	9	8	9.5	60			sah durch 1			Der Alte sah bald durch, und um mich treuherzig zu machen, lobte er meine Arbeit gar sehr.
+685	versorgen	22	20	11	9.4	249		versorgt 1	versorgte 2	versorgt 11	sein 3; haben 1	"Man versorge mich hier, man gebe mir einen kleinen Schreiber- oder Einnehmerdienst, und ich will mich glücklich schätzen."""
+686	nachfolgen	11	10	7	9.3	86		folgt nach 1; nachfolgt 1	folgte nach 2; nachfolgte 2			Reitknechte, Bedienten und ein Trupp Husaren folgten nach.
+687	besprachen	10	10	8	9.3	73						Als die beiden Freunde nach Tische allein waren, befragten und besprachen sie sich sehr lebhaft über alles, was sie sich mitzuteilen wünschten.
+688	aufgeschlossen	6	6	5	9.3	28				aufgeschlossen 6	haben 1	Da ward mir der Sinn des Gesangs erst aufgeschlossen.
+689	herunterstürzen	4	4	4	9.3	11		stürzt herunter 1	stürzte herunter 1			Uralte Bäume zieren sein Haupt, und so gekrönt schaut er weit umher; stürzt aber ein Teil herunter
+690	beunruhign	4	4	4	9.3	11						Endlich fühlte er sich gestärkt genug, um sich aufzurichten und ihnen die Unart vorzustellen, mit der sie ihren Freund und Führer beunruhigten.
+691	zurückließen	4	4	4	9.3	11						Sie waren bescheiden genug, sich mit einigen Jahren zu begnügen für mannigfaltiges Gute, das sie zurückließen“.
+692	sitzenbleiben	4	3	3	9.3	11						
+693	heranfahren	4	4	3	9.3	11		fährt heran 1	fuhr heran 2			Dieser fuhr auch bald heran, hielt auf dem Platze unfern der Kirche und winkte, worauf wir drei ganz nah an seinem Kutschenschlag uns vereinigten.
+694	durften	4	4	4	9.3	11		durft 3		durft 1		Schon einige Jahre her durft' ich keinen lateinischen Autor ansehen, nichts betrachten, was mir ein Bild Italiens erneute.
+695	desgleichen	4	4	4	9.3	11				desgleichen 1		Als sie uns gewahrten, stand der Abbé auf, ich desgleichen, wir neigten uns.
+696	stärken	22	21	11	9.2	251			stärkte 1	gestärkt 17	haben 3; sein 1	Endlich fühlte er sich gestärkt genug, um sich aufzurichten und ihnen die Unart vorzustellen, mit der sie ihren Freund und Führer beunruhigten.
+697	verknüpfen	13	13	9	9.2	114		verknüpft 1		verknüpft 7		Man weicht der Welt nicht sicherer aus als durch die Kunst, und man verknüpft sich nicht sicherer mit ihr als durch die Kunst.
+698	umgeschaffen	3	3	3	9.2	5						ich verzierte und vergoldete die Schlitten, und ein geheimer Instinkt ließ mich nicht ruhen, bis ich unsre Miliz ins Antike umgeschaffen hatte.
+699	versinnlichen	3	3	3	9.2	5						
+700	wegreisen	3	3	3	9.2	5						Da er hinausging, ließen einige Offiziere bei der Gräfin um die Erlaubnis bitten, ihr, weil sie noch vor Tafel wegreisen müßten, aufwarten zu dürfen.
+701	anzuraen	3	3	3	9.2	5						Jedermann war eifrig, unsrer Gesellschaft die Gefahr, die auf sie wartete, recht gefährlich zu beschreiben und ihr einen andern Weg anzuraten.
+702	zusammenberufen	3	3	3	9.2	5		zusammenberuft 1				
+703	verspän	3	3	3	9.2	5						aber als er eben im Abstoßen begriffen war, gedachte er Ottiliens, gedachte, dass ihn diese Wasserfahrt verspäten, wer weiß erst wann zurückführen würde.
+704	vermehrten	3	3	3	9.2	5						Seine Leiden vermehrten sich;
+705	erneuen	3	3	3	9.2	5			erneute 1			Er wird den Scherz nicht leicht erneuen;
+706	widersprechen	29	26	13	9.1	371		widerspricht 2	widersprach 12	widersprochen 1		Werner widersprach;
+707	erfinden	29	27	14	9.1	370			erfand 3	erfunden 15	haben 3; sein 2	Du fühlst nicht das zusammenbrennende, zusammentreffende Ganze, das allein durch den Geist erfunden, begriffen und ausgeführt wird;
+708	beschwichtigen	16	14	6	9.1	158				beschwichtigt 6	haben 1	Alles war wie beschwichtigt, jeder in seiner Art gerührt.
+709	entgegensetzen	12	11	7	9.1	101		entgegengesetzt 1; setzt entgegen 1	setzte entgegen 2	entgegengesetzt 1		Ihr Wesen war dem seinigen ganz entgegengesetzt.
+710	aufhieln	7	7	7	9.1	39		aufhielt 5		aufhielt 2		Sie sorgten für die künftige Zufriedenheit des Publikums, indes sich dieses über ihre entschiedene Liebhaberei gelegentlich aufhielt.
+711	mangeln	7	7	5	9.1	39		mangelt 5				Verwandeln Sie solche übers Jahr in Fertigkeiten, so wird es Ihnen und Ihrer begünstigten Schülerin nicht an Beifall mangeln.
+712	sellen	7	7	5	9.1	39		gesellt 3		gesellt 4	haben 3	Und so kommt tagtäglich etwas Neues zum Vorschein, was, zu dem Alten und Bleibenden gesellt, ein großes Vergnügen gewährt.
+713	fruchten	6	6	6	9.0	29			fruchtete 2	fruchtet 1; gefruchtet 1	haben 1	„Hier siehst du“, sagte Charlotte, „wie wenig eigentlich ein Dritter fruchtet, wenn es zwischen zwei nah verbundenen Personen nicht ganz im Gleichgewicht steht.
+714	geneigen	29	28	14	8.9	374		geneigt 5		geneigt 24	sein 9	"""Ich schäme mich"", fuhr dieser fort, ""dass ich ihr so geneigt war."
+715	komponieren	9	9	6	8.9	63			komponierte 1	komponiert 3		Ich schicke ihn über Zürich, denn ich wünsche, dass Kayser Zwischenakte dazu und was sonst von Musik nötig ist, komponieren möge.
+716	übertragen	19	19	11	8.8	208		trägt über 1		übertragen 9	sein 3; haben 1	wenn Deklamation und Ausdruck schon von dem Kompositeur auf mich übertragen werden:
+717	ausstehen	13	13	11	8.8	117				ausgestanden 7	haben 4	"ja wenn man sie zu Hause reden hört, so ist es ihnen kaum begreiflich, wie sie eine solche Not haben ausstehen können."""
+718	absprechen	7	7	6	8.8	40			sprach ab 1	abgesprochen 2	haben 2	Sollen wir uns aus irgendeiner Art von Bedenklichkeit dasjenige versagen, was uns die Sitten der Zeit nicht absprechen?
+719	kömmen	7	6	4	8.8	40		kömmt 6	kömmt 1			der Mann mag seinen Rock abtragen und die Frau den ihrigen vertrödeln, sobald er nur einigermaßen aus der Mode kömmt.
+720	geziemen	5	5	4	8.8	20			geziemte 3	geziemen 2		nur will es einem Frauenzimmer nicht wohl geziemen, sich Männern auf diese Weise ergeben und dienstbar zu bezeigen“.
+721	niedergesetzen	4	4	4	8.8	12		niedergesetzt 2		niedergesetzt 2	haben 2	Darauf habe er den Felix niedergesetzt, mit wunderlichen Gebärden die Hände auf des Kindes Kopf gelegt und ein Messer gezogen, als wenn er ihn opfern wolle.
+722	erfreuten	4	4	4	8.8	12						Man begrüßte sich, man erfreute und erquickte sich.
+723	auseinanderhalten	4	4	4	8.8	12		hält auseinander 1; auseinanderhält 1	hielt auseinander 1			Schweigend hält sie daher die Liebenden noch immer auseinander, und die Sache wird dadurch nicht besser.
+724	manifestieren	4	4	3	8.8	12						Und in diesem Sinne gebe es eine allgemeine Sprache, welche zu manifestieren ein jeder autochthonische Stamm versucht habe.
+725	auszuziehen	8	8	6	8.7	52						Zu schlafen denkt er so wenig, dass es ihm nicht einmal einfällt, sich auszuziehen.
+726	schlichten	6	4	3	8.7	30				geschlichtet 2		Diese wurden unterrichtet, mit ihnen das Nötige verabredet, der Ort des Zusammentreffens bestimmt und so für diesmal die Sache geschlichtet.
+727	lagern	14	13	7	8.6	133				gelagert 14	haben 6; sein 4	die Genießenden sind dabei im Garten umher gelagert, vornehmlich in dem kleinen daselbst befindlichen Amphitheater.
+728	vergnügen	14	14	7	8.6	133	to have pleasure	vergnügt 2	vergnügte 4	vergnügt 1	haben 1	Er bat mich, ja wiederzukommen, besonders müsse ich das Fest des Heiligen nicht versäumen, wo ich mich mit größter Sicherheit erbauen und vergnügen sollte.
+729	schaudern	9	9	6	8.5	65		schaudert 5		geschaudert 2	haben 1	"mich schaudert, wenn ich ein französisches Wort höre!"""
+730	durchschneiden	8	8	3	8.5	53		durchschneidet 2	durchschnitt 1			denn nicht die Polhöhe allein macht Klima und Witterung, sondern die Bergreihen, besonders jene, die von Morgen nach Abend die Länder durchschneiden.
+731	einsehen	57	56	16	8.4	903		sieht ein 3; einsieht 2	sah ein 6; einsah 4	eingesehen 5	haben 3	"""Ich sehe nicht ein, wie du zu diesem Extrem kommst"", sagte dieser."
+732	senden	42	36	11	8.4	616		sendet 11	sendete 5	gesendet 9	haben 2; sein 1	Das Fegefeuer sendet seinen Geist und fordert Rache, aber vergebens.
+733	übergehen	37	36	18	8.4	525		übergeht 2	ging über 6; überging 5	übergegangen 3; übergangen 1	sein 3; haben 1	"""Man muss euch Männer scharf zeichnen, wenn ihr merken sollt!"" rief sie mit einer wilden Heiterkeit aus, die bald in eine hastige Geschäftigkeit überging."
+734	aufbewahren	16	16	8	8.4	165		aufbewahrt 7		aufbewahrt 6	sein 1	Statt Tassos Gefängnis zeigen sie einen Holzstall oder Kohlengewölbe, wo er gewiss nicht aufbewahrt worden ist.
+735	vermelden	6	6	5	8.4	31						ich hoffe, der Brief wird das Nötige vermelden;
+736	ausfüllten	6	6	5	8.4	31						Wir glaubten unter uns einen großen See zu erblicken, indem ein tiefer Nebel das ganze Tal, was wir übersehen konnten, ausfüllte.
+737	hinschwanken	3	3	3	8.4	6			schwankte hin 3			Doch er entfernte sich langsam, schwankte halb träumend unter den Bäumen hin, wollte nach Hause und ward immer wieder umgewendet;
+738	nachholfen	3	3	3	8.4	6				nachgeholfen 3	haben 2	Den Schauspielern hätte er hie und da gerne nachgeholfen;
+739	eingeschiffen	3	3	3	8.4	6				eingeschifft 3	haben 1	Philine trieb, die Gesellschaft zauderte nicht und war bald eingeschifft.
+740	bestreichen	3	3	3	8.4	6						aus den Schlossfenstern sollte man es übersehen, von dorther Schloss und Gärten wieder bestreichen können.
+741	verschafften	3	3	3	8.4	6						Wie glücklich fühlte sich der lose Knabe nun in der freien Welt, da ihm seine Eulenspiegelspossen überall eine gute Aufnahme verschafften.
+742	zurückwünschen	3	3	3	8.4	6			zurückwünschte 1			
+743	entgehn	3	3	3	8.4	6		entgehn 1		entgehn 1		Wir stiegen stärker den Berg hinan, ihm nochmals zu entgehn, allein er überflügelte uns und hüllte uns ein.
+744	sondern	3	3	3	8.4	6				gesondert 3	haben 1	Er geht auf den Lagen einer schroffen Felswand hinunter, an der rechten Seite mit einer geringen Planke von dem Abgrunde gesondert.
+745	hintansetzen	3	3	3	8.4	6						Das Wetter darf ich auch nicht ganz hintansetzen.
+746	examinieren	3	3	3	8.4	6			examinierte 1			Darauf übersetzt' ich ihr erst alle Substantiva und examinierte sie, ob sie auch ihre Bedeutung wohl behalten.
+747	bewogen	3	3	3	8.4	6				bewogen 3	haben 1	Dabei erinnerte ich mich, dass Agricola schon dieser Erscheinung gedacht und sie unter die feurigen Phänomene zu rechnen sich bewogen gesehen.
+748	zufahren	9	8	6	8.3	66			fuhr zu 4	zugefahren 1	sein 1	Wilhelm fuhr wie ein Blitz auf den Mann zu und faßte ihn bei der Brust.
+749	vorsagen	8	8	7	8.3	54			sagte vor 3; vorsagte 2			sein Herz floß beständig über, und er sagte sich in einer Fülle von prächtigen Worten die erhabensten Gesinnungen vor.
+750	wegzugehen	4	4	3	8.3	13						Ich glaube wohl, dass dir's leid tut, von hier wegzugehen;
+751	hinschreiben	4	4	3	8.3	13			schrieb hin 1			Was er in seiner Muttersprache zu sagen errötete, konnte er nun mit gutem Gewissen hinschreiben.
+752	folgen	214	177	21	8.2	4195	to follow	folgt 34	folgte 61	gefolgt 8	sein 6	denn wer wäre nicht gern an ihrer Seite geritten, wer wäre ihr nicht gern gefolgt!
+753	entzücken	33	33	15	8.2	456		entzückt 6	entzückte 3	entzückt 15	haben 1	Der Beifall wird lauter, und ich denke: Wüßtet ihr, was euch entzückt!
+754	verschweigen	25	25	13	8.2	315			verschwieg 7	verschwiegen 2	haben 1	Dieser verschwieg ebensowenig seinen Namen als seine Wohnung.
+755	schließen	130	120	19	8.1	2401	act of changing the state of something from open to closed	schließt 25		geschlossen 42	haben 12; sein 2	Ich kann nicht schließen;
+756	verzögern	8	8	6	8.1	55			verzögerte 4	verzögert 3	haben 1	nur einige Kleinigkeiten, die an der Equipage fehlten, verzögerten seinen Aufbruch um einige Tage.
+757	seinesgleichen	7	7	6	8.1	43						Der Kammerdiener wird aber wahrscheinlich seinesgleichen zu schätzen wissen.
+758	entgegenkommen	36	33	14	7.9	515		kommt entgegen 2	kam entgegen 20; entgegenkam 5			Seine Geliebte kam ihm an der Treppe entgegen, und wie schön!
+759	einfinden	18	17	11	7.9	201		findet ein 1	fand ein 7			Die Gesellschaft war zu gemischt, und es fanden sich dort oft Menschen, wo nicht vom rohsten, doch vom plattsten Schlage mit ein.
+760	beseitigen	15	14	5	7.9	154				beseitigt 6	sein 1; haben 1	Ist diese beseitigt, so treten sie gleich wieder zusammen“.
+761	verspäten	7	7	6	7.9	44			verspätete 2	verspätet 3	haben 3	Man verspätete sich.
+762	transportieren	6	6	4	7.9	33	to transport	transportiert 1	transportierte 1			Die Zapfen, an denen man die Steine transportiert, sind an den Stufen des Tempels ringsum nicht weggehauen, zum Beweis, dass der Tempel nicht fertig geworden.
+763	herannahen	6	6	6	7.9	33		herannaht 1	nahte heran 3	herannaht 1		Ich fühle, dass das Ende meines Lebens bald herannaht;
+764	möblieren	4	4	3	7.9	14				möbliert 3		Man hat ihm einen Flügel des Palasts Francavilla eingeräumt, den er mit Künstlergeschmack möblieren ließ und mit Zufriedenheit bewohnt.
+765	herauszuziehen	4	4	4	7.9	14						Mann ein Papier stecken, welches ihm der Alte, wiewohl vergebens, herauszuziehen suchte.
+766	darreichen	4	4	4	7.9	14		darreicht 2	reichte dar 1			er schien sich vor einem Geschenke zu fürchten, das ihm ein böser Genius darreichte.
+767	beruhigen	75	67	21	7.8	1277		beruhigt 10	beruhigte 9; beruhige 1	beruhigt 15	haben 3	Er setzte sich auf ihre Schwelle nieder und war schon mehr beruhigt.
+768	wegziehen	9	9	6	7.8	69		zieht weg 1	zog weg 4	weggezogen 4	sein 2; haben 1	Langsam, langsam sonderten ihre Enden sich ab, einige Flocken wurden weggezogen und in die Höhe gehoben;
+769	umgingen	5	5	5	7.8	23						"""O ja!"" versetzte Lothario, ""wir könnten manches vom Kapital entbehren, wenn wir mit den Interessen weniger willkürlich umgingen."""
+770	gäben	5	5	4	7.8	23						Man gab ihnen zu essen, und die Gäste glaubten den Kindern eine Wohltat zu erzeigen, wenn sie ihnen so viel süßen Wein gäben, als sie nur trinken wollten;
+771	lehren	54	47	17	7.7	861	to teach	lehrt 6	lehrte 13	gelehrt 20	haben 10; sein 2	Es ist sündlich, dass Sie Ihre Stunden verderben, diese Affen menschlicher auszuputzen und diese Hunde tanzen zu lehren.
+772	gebieten	17	16	10	7.7	188		gebietet 3		gebieten 1; geboten 1	haben 1	selten aber zu gebieten, zu befördern und zu belohnen.
+773	trachten	13	13	5	7.7	126		trachtet 3	trachtete 1	getrachtet 5	haben 1	Die Freunde gelangen bald zum großen See, Wilhelm trachtet, die angedeuteten Stellen nach und nach aufzufinden.
+774	erhaschen	12	12	8	7.7	111			erhaschte 3			doch nur der einzige Melina nahm seine Maßregeln darnach, die andern suchten nur noch von dem Augenblicke soviel als möglich das Vergnüglichste zu erhaschen.
+775	hinzutreten	9	8	7	7.7	70		tritt hinzu 2; hinzutritt 1	trat hinzu 3			nur wenig Andächtige knieten in den Winkeln, ihre alte Freundin saß zu ihren Häupten, er trat hinzu und grüßte sie und fragte, wie sich ihre Gebieterin befände.
+776	genoßn	8	8	6	7.7	57			genoß 7			Es waren die ersten vergnügten Augenblicke, die ich in dem neuen, leeren Hause genoß;
+777	erlangn	3	3	3	7.7	7						Wir übten unser Gedächtnis und unsern Körper und erlangten mehr Geschmeidigkeit im Sprechen und Betragen, als man sonst in so frühen Jahren gewinnen kann.
+778	irregeführen	3	3	3	7.7	7		irregeführt 1		irregeführt 2		Wer sich durch Schelme bedienen lässt, kommt in Gefahr, von ihnen irregeführt zu werden.
+779	einzuschärfen	3	3	3	7.7	7				einzuschärfen 3		Ebenso nötig scheint es mir, gewisse Gesetze auszusprechen und den Kindern einzuschärfen, die dem Leben einen gewissen Halt geben.
+780	zusammentriffen	3	3	3	7.7	7				zusammentrifft 3		Wenn ein Mann mit einem Weibe zusammentrifft und ein Knabe entsteht, so wird aus etwas Bekanntem ein Unbekanntes.
+781	abgeraten	3	3	3	7.7	7						man hat es mir abgeraten;
+782	täfeln	3	3	3	7.7	7				getäfelt 3		Eines Kabinetts muss ich noch erwähnen, welches aus alten vergoldeten, zusammengeschnittenen Rahmen aneinander getäfelt ist.
+783	hinzugesellen	3	3	3	7.7	7		gesellt hinzu 1	hinzugesellte 1; gesellte hinzu 1			Sodann gesellte sich noch ein anderer Umstand hinzu, um die Ungeduld und eine Art böser Laune des Majors zu vermehren.
+784	zurückbleiben	42	40	16	7.6	633		bleibt zurück 4	blieb zurück 5; zurückblieb 3	zurückgeblieben 13	sein 12	Die Fürstin blieb ungern zurück;
+785	verschließen	32	32	15	7.6	448		verschließt 2		verschlossen 21	sein 1; haben 1	Wilhelm bemerkte, dass Philine mit dem Rücken gegen ihren Koffer saß, der noch ganz wohl verschlossen und unbeschädigt aussah.
+786	einbilden	30	29	15	7.6	411		bildet ein 3; einbildet 3	einbildete 3; bildete ein 1			man bildet sich einen Augenblick ein, es sei kein Geld nötig, jedes Geschäft könne hier durch Tausch abgetan werden, und so ist auch im Grunde.
+787	anregen	20	19	6	7.6	238		anregt 4	regte an 2; anregte 1	angeregt 11	sein 1	Was ihn auch anregt, sein inneres Behagen kommt zum Vorschein.
+788	erbitten	18	18	9	7.6	205			erbat 10			Er legte mir den Zustand seines Vermögens, seine Plane, seine Aussichten vor und erbat sich meine Mitwirkung.
+789	überschwemmen	10	10	7	7.6	84		überschwemmt 3	überschwemmte 1	überschwemmt 6	haben 1; sein 1	man sieht sich in jene Jahrhunderte versetzt, in denen die Presse noch nicht die Welt mit so viel unnützen Schriften überschwemmt hatte;
+790	verewigen	6	6	5	7.6	34				verewigt 2		"nicht wie einem Vornehmen und Reichen, um den Irrtum, den man nutzt, zu verewigen."""
+791	ersetzen	32	29	12	7.5	449	to replace		ersetzte 3	ersetzt 9	haben 1	Sein Keller hielt nicht viel Wein, aber der ausgetrunkene ward gewöhnlich durch einen bessern ersetzt.
+792	eingeschlafen	19	18	10	7.5	223				eingeschlafen 17	sein 14	Mignon war mit dem festen Vorsatz zu wachen in einer Ecke eingeschlafen.
+793	erstürmen	5	5	4	7.5	24				erstürmt 2		dies zu unternehmen, zu erstürmen, zu erobern, ist jungen Gliedern ein Genuss.
+794	geheimhalten	5	5	5	7.5	24				geheimgehalten 1		Melina wusste zu seinem Vorteil mit dem Baron den Kontrakt abzuschließen und ihn vor den übrigen Schauspielern geheimzuhalten.
+795	bepacken	5	5	3	7.5	24			bepackte 1	bepackt 3	sein 1	Die Herrschaften selbst scheinen es gerne zu sehen, wenn ihre Wagen recht bepackt sind;
+796	resignieren	5	5	4	7.5	24						"""wenn ich mich alle acht Tage resigniere, so hab' ich es freilich bei dreihundertundfünfundsechzigen zugute."""
+797	ruhen	79	74	17	7.4	1368		ruht 20	ruhte 11	geruht 2	haben 1	ich verzierte und vergoldete die Schlitten, und ein geheimer Instinkt ließ mich nicht ruhen, bis ich unsre Miliz ins Antike umgeschaffen hatte.
+798	laben	9	9	7	7.4	72			labte 1	gelabt 5		Engel schweben, ihn zu laben, wäre da dem Guten bang?
+799	durchkreuzen	6	6	4	7.4	35		durchkreuzt 3	durchkreuzte 2			Ist nicht Deutschland von einem Ende zum andern durchreist, durchkreuzt, durchzogen, durchkrochen und durchflogen?
+800	vorstehen	6	6	6	7.4	35		vorsteht 1				"""Wohlhabend ist jeder, der dem, was er besitzt, vorzustehen weiß; vielhabend zu sein ist eine lästige Sache, wenn man es nicht versteht."""
+801	begütigen	6	6	3	7.4	35						Der Hauptmann, ihn zu begütigen, sagte darauf: „lass uns diesen Vorfall als eine Aufforderung annehmen, unsere ländliche Polizei auch hierüber zu erstrecken!
+802	aufgewecken	6	6	5	7.4	35		aufgeweckt 2		aufgeweckt 4	sein 1	Wie lange ich so in halbem Schlafe gelegen, wüßte ich nicht zu sagen, aufgeweckt aber ward ich durch ein gewaltsames Getöse über mir;
+803	hervorwachsen	4	4	4	7.4	15		wächst hervor 1	wuchs hervor 1	hervorwachsen 1		Zart und edel entsprossen, wuchs die königliche Blume unter den unmittelbaren Einflüssen der Majestät hervor;
+804	aufzuzeichnen	4	4	4	7.4	15						Doch war auch uns irgend etwas aufzuzeichnen nicht erlaubt.
+805	anziehen	68	63	18	7.3	1150		anzieht 5; zieht an 3	zog an 8; anzog 3	angezogen 33	haben 9; sein 2	Auch war es natürlich, dass mich die Oper mit ihren mannigfaltigen Veränderungen und Abenteuern mehr als alles anziehen musste.
+806	untersuchen	28	26	10	7.3	380		untersucht 3	untersuchte 3	untersucht 3	haben 2	Er untersuchte genau, erklärte, keine Wunde sei gefährlich, er wolle sie auf der Stelle verbinden, alsdann könne man den Kranken in das nächste Dorf bringen.
+807	besteigen	17	16	9	7.3	192		besteigt 1	bestieg 3			Die Fürstin eilte, das Lieblingspferd zu besteigen, und führte, statt zum Hintertore bergauf, zum Vordertore bergunter ihren widerwillig bereiten Begleiter;
+808	verdrängen	14	14	9	7.3	145		verdrängt 2		verdrängt 4	haben 1	aber in den allgemeinen Unterricht sollte dergleichen nicht einfließen, um so weniger, als etwas Näheres und Würdigeres sich dadurch leicht verdrängt sieht.
+809	hinzugeben	11	11	9	7.3	100						Sie zog sogleich den überrock aus, und ihre Absicht, ihn dem Verwundeten und Unbekleideten hinzugeben, war nicht zu verkennen.
+810	loskommen	10	10	9	7.3	86		kommt los 1	kam los 3; loskam 1	losgekommen 1		„Da du uns einmal aufgerufen hast“, versetzte Eduard, „so kommst du so leicht nicht los;
+811	beschien	7	7	6	7.3	47			beschien 1	beschienen 1		ich sah dich auf einem schönen Hügel, die Sonne beschien den ganzen Platz; wie reizend kamst du mir vor!
+812	beschweren	16	15	7	7.2	177		beschwert 1	beschwerte 5	beschwert 4		Nun beschwerte man sich, mit wie wenig Achtung man ihnen begegnet, wie sehr man sie zurückgesetzt habe.
+813	vorführen	14	13	8	7.2	146			vorführte 1	vorgeführt 7	haben 2	Honorio trat ein und meldete, die Pferde seien vorgeführt;
+814	beiwohnen	14	14	9	7.2	146			wohnte bei 2	beigewohnt 5	haben 4	Mit der größten Zufriedenheit wohnte aber auch unser Freund den Abend darauf der Vorstellung bei.
+815	entfremden	9	9	5	7.2	73	condition in social relationships	entfremdet 1	entfremdete 1	entfremdet 7	sein 2	Auch Ottilie entfremdete sich einigermaßen von Charlotten und dem Hauptmann.
+816	verdüstern	8	8	5	7.2	60		verdüstert 3		verdüstert 3		Durch die hellste Sonne erschien die Glut verdüstert, nur ein mäßiger Rauch stieg in die reine Luft.
+817	befreunden	8	8	5	7.2	60			befreundete 1	befreundet 1	haben 1	ich konnte mich mit den Würmern und Käfern niemals befreunden.
+818	beigewohnen	6	5	5	7.2	36				beigewohnt 5; beigewohnet 1	haben 3	Er habe sich daselbst an der Türe der Hauptkirche gewöhnlich aufgehalten, dem Gottesdienst beigewohnt und sich von geringem Almosen der Gläubigen genährt.
+819	halten	672	465	21	7.1	14567	to hold	hält 65; haltet 1	hielt 142; hielte 2	gehalten 130	haben 36; sein 10	Honorio war vom Pferde gesprungen und kniete schon auf dem Tiere, dämpfte seine letzten Bewegungen und hielt den gezogenen Hirschfänger in der rechten Hand.
+820	streiten	32	30	14	7.1	456	engaging in a verbal or written exchange to present differing perspectives and support one's position	streitet 1	stritt 4	gestritten 3	haben 3	denn es war längst herkömmlich, über die Zahl zu streiten, wieviel man deren von hier oben gewahr werde.
+821	ablaufen	16	16	11	7.1	178		abläuft 1	lief ab 3; ablief 2	abgelaufen 2	sein 2	"""Ich fürchte, es ist nicht alles abgelaufen, wie es sollte."""
+822	austeilen	11	11	8	7.1	102			teilte aus 2	ausgeteilt 7	haben 1	Die Rollen hatte man schon früher ausgeteilt;
+823	hingekommen	7	7	7	7.1	48				hingekommen 5	sein 4	Ich bitte Sie, wo sind die Puppen hingekommen?
+824	ausarbeiten	7	7	4	7.1	48				ausgearbeitet 4	haben 1; sein 1	"""Nur geschwind"", versetzte Serlo, ""setzen Sie sich hin und arbeiten das Stück aus;"
+825	zusammengehalen	4	4	3	7.1	16				zusammengehalten 2		In vollem Galopp stürzt eine große Masse solcher edlen Tiere heran, sie werden durch reitende Hüter gelenkt und zusammengehalten.
+826	herbeiziehen	4	4	3	7.1	16			zog herbei 1	herbeigezogen 1	sein 1	Man erzählt von Zauberern, die durch magische Formeln eine ungeheure Menge allerlei geistiger Gestalten in ihre Stube herbeiziehen.
+827	entgegenglänzen	3	3	3	7.1	8		glänzt entgegen 1	entgegenglänzte 2			Der Glanz der sizilischen Städte, jetzt verdunkelt, glänzt aus diesen geformten Metallen wieder frisch entgegen.
+828	herbeilocken	3	3	3	7.1	8		lockt herbei 1; herbeilockt 1				Darauf sollte der Harfner mit Mignon herbeikommen, Neugierde erregen und mehrere Landleute herbeilocken;
+829	weiterzukommen	3	3	3	7.1	8						An den lebendigen Kreaturen hängt's noch, da ist ein Abgrund, doch wäre mit Ernst und Applikation hier auch weiterzukommen.
+830	abhandeln	3	3	3	7.1	8						So handelten sie noch manches ab, das sich besonders auf die Frage bezog: was man noch etwa an dem Stücke verändern dürfe und was unberührt bleiben müsse.
+831	beobachten	74	65	16	7.0	1279	observe	beobachtet 3	beobachtete 8	beobachtet 15	haben 7; sein 1	Alles war still, hörte, horchte, und nur erst, als die Töne verhallten, konnte man den Eindruck bemerken und allenfalls beobachten.
+832	dringen	74	70	18	7.0	1279		dringt 14	drang 19	gedrungen 12	sein 6; haben 2	Werner, aus Not sein Vertrauter, griff voll Eifer zu Feuer und Schwert, um einer verhaßten Leidenschaft, dem Ungeheuer, ins innerste Leben zu dringen.
+833	verderben	38	38	16	7.0	570		verdirbt 3	verdarb 2; verderbe 1	verdorben 7; verderbt 3	haben 2; sein 2	Wie man seine Zeit nur so verderben könne?
+834	anbringen	17	16	10	7.0	196		anbringt 1		angebracht 12	haben 3; sein 1	An dem westlichen Ende ist eine merkwürdige Mühle in einer Felskluft angebracht, die ehemals der kleine See ausfüllte.
+835	verhehlen	14	14	10	7.0	148			verhehlte 7			Er fand dabei einiges Bedenken, das er Philinen nicht verhehlte;
+836	benetzen	5	5	4	7.0	26			benetzte 5			Er schloss sie an sein Herz und benetzte sie mit seinen Tränen.
+837	wiedersehen	31	28	16	6.9	442		sieht wieder 1	wiedersah 2			Wie lang ward ihm die Zeit bis zur Nacht, bis zur Stunde, in der er seine Geliebte wiedersehen sollte!
+838	verweisen	17	17	13	6.9	197		verweist 1	verwies 9	verwiesen 2	sein 1	Philine verwies ihm einigemal seine Unart, stieß ihn endlich ungeduldig hinweg und jagte ihn zur Türe hinaus.
+839	zusammenfassen	10	10	7	6.9	89		faßt zusammen 2	faßte zusammen 2	zusammengefaßt 1		„Wenn Sie glauben, dass es nicht pedantisch aussieht“, versetzte der Hauptmann, „so kann ich wohl in der Zeichensprache mich kürzlich zusammenfassen.
+840	abtragen	8	8	6	6.9	62		abträgt 1		abgetragen 2		der Mann mag seinen Rock abtragen und die Frau den ihrigen vertrödeln, sobald er nur einigermaßen aus der Mode kömmt.
+841	aufzuschlagen	6	6	6	6.9	37						Die Häuser des Marktes, vom Widerschein gerötet, schienen schon zu glühen, drohend sich jeden Augenblick zu entzünden und in Flammen aufzuschlagen;
+842	zusammengenommen	6	5	4	6.9	37				zusammengenommen 5	haben 3	"""""Nur alle Menschen machen die Menschheit aus, nur alle Kräfte zusammengenommen die Welt."
+843	beleuchten	22	21	9	6.8	283		beleuchtet 7	beleuchtete 6	beleuchtet 4	sein 1	Komm, dass ich sie mit diesem Licht beleuchte!
+844	beilegen	12	11	8	6.8	119			beilegte 2	beigelegt 5		es gab manche Mißhelligkeit, die aber bald beigelegt war.
+845	aufrufen	11	10	5	6.8	104		aufruft 3	aufrief 4; rief auf 2	aufgerufen 2	haben 1	„Da du uns einmal aufgerufen hast“, versetzte Eduard, „so kommst du so leicht nicht los;
+846	gebärden	10	10	7	6.8	90		gebärdet 1	gebärdete 2			Nun putzte die Gräfin selbst Philinen an, die fortfuhr, sich mit einer scheinheiligen, unschuldigen Miene gar artig zu gebärden und zu betragen.
+847	umarmen	31	30	14	6.7	446	to hug	umarmt 2	umarmte 14	umarmt 2	haben 2	"""Mein Kind!"" rief er aus, indem er sie aufhob und fest umarmte, ""mein Kind, was ist dir?"""
+848	erfordern	14	14	8	6.7	151		erfordert 8	erforderte 1	erfordert 4		Welche regelmäßige Tätigkeit wird erfordert, um diese immer wiederkehrende Ordnung in einer unverrückten, lebendigen Folge durchzuführen!
+849	anfingen	13	12	9	6.7	135		fingt an 1				Unschlüssig, ob er gehen oder bleiben sollte, stand er unter dem Tore und sah den Arbeitern zu, die auf dem Platze ein Gerüst aufzuschlagen anfingen.
+850	disponieren	5	5	5	6.7	27			disponierte 1	disponiert 1	haben 1	Ich disponierte gleich über ein paar Zimmer in eines benachbarten Gespielen Haus, ohne zu berechnen, dass die alte Tante sie nimmermehr hergeben würde;
+851	zuschicken	5	5	3	6.7	27		zuschickt 1	schickte zu 1	zugeschickt 3	haben 2	das üble haben sie uns zugeschickt.
+852	eingefassen	5	5	3	6.7	27				eingefaßt 5		Das Ufer, auf beiden Seiten von Hügeln und Bergen eingefaßt, glänzt von unzähligen kleinen Ortschaften.
+853	losspringen	4	4	3	6.7	17			sprang los 3			doch da sie in fernerem Wortwechsel heftig und bitter ward, sprang Mariane auf sie los und faßte sie bei der Brust.
+854	herunterfallen	9	8	6	6.6	77		fällt herunter 1	fiel herunter 2			als Karl der Erste von England von seinen sogenannten Richtern stand, fiel der goldne Knopf des Stöckchens, das er trug, herunter.
+855	nachgeschicken	3	3	3	6.6	9		nachgeschickt 1		nachgeschickt 2	haben 1	und da indes Laertes zurückkommt, soll dieser bis zum Meuchelmord erhitzte Jüngling ihm nachgeschickt werden.
+856	verborgen	3	3	3	6.6	9				verborgen 2; verborgt 1		Ich vernachlässigte das, und wäre vielleicht nie hingekommen, hätte mir der Zufall nicht den Schatz entdeckt, der in der stillen Gegend verborgen liegt.
+857	bespülen	3	3	3	6.6	9		bespült 3				Eine schöne Strecke Meer bespült die so bebaute Küste.
+858	einteilen	9	8	5	6.5	78		teilt ein 1		eingeteilt 4	haben 1; sein 1	"Sie erlauben, dass ich fortfahre, denn die Stunden sind eingeteilt."""
+859	aufhäufen	6	5	3	6.5	39				aufgehäuft 4	haben 1	Stroh und Reisholz, die man daselbst aufgehäuft hatte, brannten mit heller Flamme;
+860	zurückkehren	128	109	21	6.4	2435	to return	kehrt zurück 12; zurückkehrt 4	kehrte zurück 14; zurückkehrte 9	zurückgekehrt 9	sein 6	"Von Zeit zu Zeit erkannte man eine rote Flammenglut, der Dampf stieg empor, und Fürst Oheim sprach: ""laßt uns zurückkehren!"
+861	veranstalten	15	14	8	6.4	170		veranstaltet 1	veranstaltete 2	veranstaltet 8		Ganz anders hatte es der Oheim veranstaltet.
+862	zustandekommen	11	11	8	6.4	108			kam zustande 5			Ich sah es noch kurz vorher, ehe es verkauft wurde, und ich darf wohl sagen, ich war Ursache, dass der Kauf zustande kam.
+863	hervorleuchten	5	5	4	6.4	28		hervorleuchtet 2	leuchtete hervor 2			aus dessen Umgange so viel Empfindung für Freundschaft und Liebe hervorleuchtet.
+864	darbeten	4	4	4	6.4	18			darbot 4			
+865	gereuen	4	4	3	6.4	18						"""Schelten Sie das Puppenspiel nicht, lassen Sie sich Ihre Liebe und Vorsorge nicht gereuen!"
+866	leiben	4	4	4	6.4	18			leibte 1			Ich ward rot, denn er beschrieb mich, wie ich leibte und lebte.
+867	beherzigen	4	4	4	6.4	18			beherzigte 1	beherzigt 1	haben 1	"""Hier ist Ihr Lehrbrief"", sagte der Abbe, ""beherzigen Sie ihn, er ist von wichtigem Inhalt."""
+868	verwünschten	4	4	3	6.4	18						Sie verwünschte die Zeit, die es braucht, um sie zu lindern;
+869	mussn	79	74	18	6.3	1407		muss 57				Ich muss Eure Freude durch ein Wort unterbrechen: Norberg kommt!
+870	kehren	44	44	14	6.3	702	to sweep; to turn		kehrte 9	gekehrt 24	sein 3; haben 1	Mit schwerem Herzen ging sie hin und fand den Grafen zwar still und in sich gekehrt, aber in seinen äußerungen milder und freundlicher als gewöhnlich.
+871	befragen	18	18	9	6.3	221			befragte 5	befragt 5	sein 1	Indes war Narziß nach Hause gekommen, welchen Wilhelm über die Schicksale und die Herkunft des Kindes befragte.
+872	besänftigen	12	12	8	6.3	124				besänftigt 1		Der Bauer, der jenem zuerst mit Schlägen gedroht hatte, ließ sich nach und nach besänftigen, und sie schieden als gute Freunde voneinander;
+873	entsetzen	10	10	8	6.3	94			entsetzte 5	entsetzt 1		Wie verwunderte sich Mariane, wie entsetzte sich Barbara, als die aufgebundene Serviette einen verworrenen Haufen spannenlanger Puppen sehen ließ.
+874	verabscheuen	10	9	8	6.3	94		verabscheut 4	verabscheute 2; verabscheuete 1			"Ich habe dich von jeher verabscheut, und noch kann ich mir Marianen nicht unschuldig denken, wenn ich dich, ihre Gesellschafterin, nur ansehe."""
+875	anstehen	10	10	9	6.3	94		ansteht 4	anstand 2			er darf überall vorwärtsdringen, anstatt dass dem Bürger nichts besser ansteht als das reine, stille Gefühl der Grenzlinie, die ihm gezogen ist.
+876	begrüßen	77	69	15	6.2	1368			begrüßte 33	begrüßt 13	haben 4	Er begrüßte die Gesellschaft, die ihm nach ihrer Weise dankte und ihn bald mit ihrem Scherz bekannt machte.
+877	nachgeben	39	38	14	6.2	608			gab nach 7; nachgab 4	nachgegeben 6	haben 5	hie und da gab er nach, meistens aber behauptete er seine Meinung, und im ganzen diente diese Unterhaltung sehr zur Bildung seines Geschmacks.
+878	zurückgelassen	12	12	8	6.2	125						Vergebens stellte sie ihrem Freunde vor, dass der Jäger auch diesen Leuten eine ansehnliche Summe zurückgelassen, dass man ihn nur zum besten habe.
+879	verleiten	12	12	11	6.2	125		verleitet 1	verleitete 2	verleitet 4	haben 2	Hätte ich mich doch nicht durch Umstände verleiten lassen, mit meinem Geheimnisse hervorzutreten!
+880	auffrischen	7	7	6	6.2	53				aufgefrischt 3		Dieser Inselzustand hat doch immer etwas Einsames, nur durch vorübergehende Teilnahme aufgefrischt und erhalten.
+881	verfolgen	60	58	17	6.1	1026		verfolgt 4	verfolgte 13	verfolgt 10	haben 3; sein 1	der Tiger sprang seitwärts, das Pferd stutzte, das ergrimmte Tier aber verfolgte seinen Weg aufwärts, unmittelbar der Fürstin nach.
+882	anweisen	18	18	13	6.1	223			anwies 5; wies an 2	angewiesen 3; anweisen 1		allein der Wirt versicherte, dass er ihm nicht den geringsten Raum anweisen könne.
+883	wegnehmen	16	16	11	6.1	190	to remove something from where it is currently located; to take something from another person (against their will)	wegnimmt 2	wegnahm 3; nahm weg 2			Diese Fehler sind wie flüchtige Stützen eines Gebäudes, die man nicht wegnehmen darf, ohne vorher eine feste Mauer unterzuziehen.
+884	erwählen	11	11	8	6.1	110			erwählte 2	erwählt 4	haben 3	Man schritt sogleich zur Sache und erwählte Wilhelmen zum ersten Direktor.
+885	einräumen	11	11	6	6.1	110			einräumte 1	eingeräumt 5	haben 2; sein 1	Eine gewisse Freundin, der ich erst zuviel eingeräumt hatte, wollte sich immer in meine Angelegenheiten mengen;
+886	absolvieren	6	5	3	6.1	41				absolviert 4	haben 2; sein 1	Indes die Umstehenden auf verschiedene Weise ihre Teilnahme zu erkennen gaben, hatten die Gerichte ihre Zeremonien absolviert;
+887	herausgehen	6	6	6	6.1	41		herausgeht 1; geht heraus 1	ging heraus 1	herausgegangen 1	sein 1	Indessen hatte jeder, der nur ein einziges Mal aus seinem Charakter herausgegangen war, ein Pfand geben müssen.
+888	herbeigeschaffen	4	4	3	6.1	19				herbeigeschafft 4		Es musste deshalb ein Buch nach dem andern aus der Bibliothek herbeigeschafft werden, so dass der Graf zuletzt in einem Haufen von Büchern saß.
+889	bejammern	3	3	3	6.1	10		bejammert 1				Die beängstigten Reisenden fingen, sobald die Sorge für ihr Leben vorüber war, ihren Verlust zu bejammern an
+890	hervorzutreten	3	3	3	6.1	10						Hätte ich mich doch nicht durch Umstände verleiten lassen, mit meinem Geheimnisse hervorzutreten!
+891	genugtun	3	3	3	6.1	10				genugtun 1		Wilhelm beschaute ein Bild, das über dem Kanapee hing, mit Aufmerksamkeit, er musste es für das Bild Nataliens erkennen, sowenig es ihm genugtun wollte.
+892	anwandelen	3	3	3	6.1	10			anwandelte 2; wandelte an 1			
+893	wenden	178	159	20	6.0	3535		wendet 20; gewendet 1	wendete 41; wandte 16	gewendet 25; gewandt 6	haben 13; sein 1	"da sagte die Fürstin, zum Oheim gewendet: ""reiten wir hinauf, und lassen Sie mich in der Wirklichkeit sehen, was Sie mir hier im Bilde zeigten!"
+894	landen	16	16	6	6.0	191	to land	landet 1	landete 2			Durch Sturm aber und andere Umstände sei er genöthiget worden, in Italien zu landen.
+895	zurückgekommen	12	12	11	6.0	127						Er war eben aus Amerika zurückgekommen, wo er in Gesellschaft einiger Franzosen mit vieler Distinktion unter den Fahnen der Vereinigten Staaten gedient hatte.
+896	ausgleichen	10	10	7	6.0	96		ausgleicht 1		ausgeglichen 2		Ältere waren schon mit Asche bedeckt und ausgeglichen, neuere, besonders die langsam geflossenen, boten einen seltsamen Anblick;
+897	anzugehören	7	7	5	6.0	54						Wenn ich an ihn denke, vermischt sich sein Bild immer mit dem deinigen, und ich weiß nicht, wie ich es wert bin, zwei solchen Menschen anzugehören.
+898	einquartieren	5	4	4	6.0	30				einquartiert 5	sein 3	sah ich viele Menschen in einem engen Raume eingesperrt, so dachte ich, sie müßten in die großen Zimmer mancher Häuser und Paläste einquartiert werden.
+899	prüfen	39	39	13	5.9	613	examine	prüft 1	prüfte 2	geprüft 15	haben 3	"""Ich wiederhole"", sagte sie, ""meine gestrige Lektion, da denn doch die Notwendigkeit unsere Geduld prüfen will""."
+900	verletzen	38	36	14	5.9	594			verletzte 5	verletzt 19	haben 7; sein 3	Der zweite Schlag, der ihn traf, verletzte tiefer, beugte noch mehr.
+901	zugehören	15	15	9	5.9	176		zugehört 7	zugehörte 1	zugehört 4	haben 4	Werner hatte, wie man sich denken kann, mit Verwunderung zugehört.
+902	beharren	14	14	8	5.9	159	to persevere	beharrt 1	beharrte 3			Werner beharrte auf seiner Anklage und erbot sich zu Beweisen und Zeugen.
+903	verstoßen	10	9	7	5.9	97		verstößt 1		verstoßen 4		Wilhelm nahm sich zusammen, so gut er konnte, um nicht gleich anfangs gegen seine so lebhaft gepredigten Grundsätze zu verstoßen.
+904	vernahmen	7	7	6	5.9	55						Die beiden Eingekerkerten hatten kaum Zeit, sich von ihrem Erstaunen zu erholen, als sie Menschenstimmen vernahmen, welche sich langsam zu nähern schienen.
+905	aufputzen	6	6	3	5.9	42		aufputzt 1		aufgeputzt 4	haben 1; sein 1	"""wo auch der Mensch seinen überfluss hinwendet, ihm ist wohl dabei, am wohlsten, wenn er sich damit schmückt und aufputzt""."
+906	treiben	155	138	21	5.8	3049		treibt 27	trieb 29	getrieben 50	haben 8; sein 3	Dieses Spiel, das die andern sehr unterhielt, war kaum etlichemal getrieben worden, als es mich schon nicht mehr befriedigte.
+907	dienen	81	74	18	5.8	1467		dient 12	diente 15	gedient 11	haben 6; sein 2	"Kann ich Ihnen mit einigen Empfehlungen dienen, so wird es mir viel Freude machen."""
+908	vergolden	9	8	4	5.8	83			vergoldete 1	vergoldet 7	sein 2	ich verzierte und vergoldete die Schlitten, und ein geheimer Instinkt ließ mich nicht ruhen, bis ich unsre Miliz ins Antike umgeschaffen hatte.
+909	verpachten	4	4	4	5.8	20			verpachtete 1	verpachtet 3		Er wird teilweis verpachtet und bündelweis in die Stadt gebracht.
+910	freuen	183	142	20	5.7	3667		freut 31; freute 1	freute 52; freuete 2	gefreut 4	haben 3	Ich kann mich nur über den Menschen freuen, der weiß, was ihm und andern nütze ist, und seine Willkür zu beschränken arbeitet.
+911	mochen	26	26	12	5.7	372		mocht 3	mochte 8			Des Grafen vortreffliches Gedächtnis stellte ihm alle Minerven vor, die etwa noch auf Titelkupfern, Vignetten oder sonst vorkommen mochten.
+912	voraussagen	8	7	6	5.7	70			voraussagte 1	vorausgesagt 5; voraussagen 1	haben 4	es ist auch, wie man uns im Bernschen voraussagte, hier der Herbst sehr gefällig.
+913	untergraben	6	6	4	5.7	43				untergraben 5	haben 2	er lobte mein Verhalten und suchte meinen Entschluss zu untergraben.
+914	fortschreiten	5	5	5	5.7	31		schreitet fort 1	fortschritt 1			doch nur indem man sich über das Bekannte völlig verständig hat, kann man miteinander zum Unbekannten fortschreiten“.
+915	enterben	3	3	3	5.7	11		enterbt 1		enterbt 1	haben 1	Aber wenigstens sollte man rechtmäßige Kinder nicht enterben;
+916	absonderen	3	3	3	5.7	11			absonderte 1			Langsam, langsam sonderten ihre Enden sich ab, einige Flocken wurden weggezogen und in die Höhe gehoben;
+917	niederfielen	3	3	3	5.7	11						
+918	erwartestn	3	3	3	5.7	11						In der Naturgeschichte bring' ich dir Sachen mit, die du nicht erwartest.
+919	verlieren	227	189	21	5.6	4640	to shed; to loose in a game; to loose in a battle; to misplace something	verliert 27	verlor 35	verloren 91	haben 54; sein 10	Sie kennt ihren Weg und verliert ihn nicht, sie baut sich eine Wohnung aus Grashalmen, Erdbröslein und Kiefernadeln, sie baut es in die Höhe und wölbet es zu;
+920	mischen	40	36	10	5.6	640		mischt 4	mischte 5	gemischt 12		Man bezeugte übrigens, dass er sich sonst gut aufgeführt, die Damen mischten sich darein, und er ward entlassen.
+921	emporgehoben	6	5	4	5.6	44				emporgehoben 6	haben 2	Leicht ward es emporgehoben und konnte mir nicht einmal seine Hand reichen.
+922	anbauen	6	6	4	5.6	44				angebaut 6	haben 1; sein 1	Doch ist auch dieser Teil des Thals sehr angebaut.
+923	festhalten	73	70	16	5.5	1313		festhält 6; hält fest 1	hielt fest 12	festgehalten 10	haben 2	Wollte ich gehen, so schien der Boden mich festzuhalten;
+924	ausbleiben	21	20	12	5.5	285		bleibt aus 1; ausbleibt 1	blieb aus 6; ausblieb 4	ausgeblieben 1	sein 1	Und die Folgen, die ich hoffe, werden gewiss auch nicht ausbleiben.
+925	verschmähen	15	15	10	5.5	181	act of declining to accept an item for approval, consideration, marking etc.	verschmäht 4	verschmähte 2; verschmähete 1	verschmäht 1		Die warnenden Drohungen der Alten wurden verschmäht;
+926	vordringen	10	10	7	5.5	101				vorgedrungen 2		Unbändig drangen seine geheimen Wünsche den Begebenheiten vor.
+927	fortbringen	5	5	5	5.5	32						Mit Hebel und Walzen kann man schon ziemliche Lasten fortbringen;
+928	überließen	5	5	3	5.5	32						Beide schwangen sich darauf zu Pferde und überließen unsern verwunderten Freund seinen eigenen Betrachtungen.
+929	herumgetrieben	5	5	5	5.5	32				herumgetrieben 5	haben 1	Seit ich unter dem Volke alle Tage herumgetrieben werde und sehe, was sie tun und wie sie's treiben, stehe ich viel besser mit mir selbst.
+930	verzehrten	4	4	3	5.5	21				verzehrten 3		
+931	hervordringen	4	4	3	5.5	21		hervordringt 1; dringt hervor 1	drang hervor 1	hervordringen 1		
+932	hervorlocken	4	4	3	5.5	21		hervorlockt 1	hervorlockte 2			Die angenehmen Töne, die er aus dem Instrumente hervorlockte, erheiterten gar bald die Gesellschaft.
+933	vorgezeichnen	4	4	4	5.5	21				vorgezeichnet 4	haben 2; sein 2	Wie hat aber Shakespeare seinen Hamlet vorgezeichnet?
+934	ausnehmen	21	20	8	5.4	286		ausnimmt 3; nimmt aus 3	nahm aus 3	ausgenommen 5	haben 1	Von unserm heutigen Weg kann ich wenig erzählen, ausgenommen, wenn Sie mit einer weitläuftigen Wettergeschichte sich wollen unterhalten lassen.
+935	vorwerfen	19	18	13	5.4	251		wirft vor 1	warf vor 2; vorwarf 1	vorgeworfen 6	haben 3	Ich bin als Mensch überzeugt, dass sie sich nichts weiter vorzuwerfen hat;
+936	bevorstehen	18	15	10	5.4	234		bevorsteht 4; steht bevor 2	stand bevor 3; bevorstand 2			"""Es ahnte meinem Geliebten"", versetzte Mariane dagegen mit Tränen, ""dass uns eine Trennung bevorstehe;"
+937	aufregen	18	17	8	5.4	233		regt auf 1; aufregt 1	regte auf 4; aufregte 3	aufgeregt 2; aufregt 1	haben 1	Sie bat um Aufschub und wusste diesen Abend bei Eduard die Lust zu einer musikalischen Unterhaltung aufzuregen.
+938	erschweren	10	10	7	5.4	102		erschwert 2	erschwerte 1	erschwert 1	haben 1	Kommen Sie, lieber, lieber Freund, nun dreifach Geliebter, da man mir Ihren Besitz rauben oder wenigstens erschweren will.
+939	belieben	9	9	9	5.4	87		beliebt 3	beliebte 3			Nichts als Geld, und dann auf eine vernünftige Weise jeden Tag getan, was dir beliebt.
+940	herbeibringen	6	6	4	5.4	45		bringt herbei 1	brachte herbei 2			"Ich lasse deswegen aus meiner Bibliothek alle Bücher herbeibringen, worin sich das Bild derselben befindet."""
+941	wegbleiben	6	5	4	5.4	45		bleibt weg 1				"""Gewiß, ich war in der größten Sorge"", rief Wilhelm, ""dass vielleicht diese Stelle wegbleiben müßte, und das ganze Stück würde dadurch gelähmt werden."""
+942	ankamen	8	6	6	5.3	73				ankamen 8	sein 1	Als sie ankamen, fanden sie das Gerüst aufgeschlagen und den Hintergrund mit aufgehängten Teppichen geziert.
+943	verschmähten	4	4	3	5.3	22			verschmähte 1			ich freute mich, dass sie eine Richtung von außen anzunehmen nicht verschmähten;
+944	einschleichen	4	4	4	5.3	22				einschleicht 1		so wird sich kein Wahnsinn einschleichen und, wenn er da ist, nach und nach wieder verschwinden.
+945	stillschweigen	4	4	3	5.3	22			schwieg still 3			Er schwieg einen Augenblick still, sah vor sich hin, und Jarno wollte reden.
+946	mauern	3	3	3	5.3	12				gemauert 3	haben 1	hierauf nun steht gemauert ein Turm, doch niemand wüßte zu sagen, wo die Natur aufhört, Kunst und Handwerk aber anfangen.
+947	hervorzuheben	3	3	3	5.3	12						Keine Stelle blieb ihm unbemerkt, wo noch irgendeine Schönheit hervorzuheben oder anzubringen war.
+948	hinbewegen	3	3	3	5.3	12		hinbewegt 1	bewegte hin 1; hinbewegte 1			Ja, hätte man eins von beiden am letzten Ende der Wohnung festgehalten, das andere hätte sich nach und nach von selbst, ohne Vorsatz, zu ihm hinbewegt.
+949	heranbringen	3	3	3	5.3	12				herangebracht 2		einer ward mit dem Harpun getroffen, aber nicht herangebracht.
+950	abstechen	3	3	3	5.3	12	to stabb someone	sticht ab 1				Seine gelassene Außenseite sticht gegen die Unruhe meines Charakters sehr lebhaft ab, die sich nicht verbergen lässt.
+951	überstimmen	3	3	3	5.3	12			überstimmte 1	überstimmt 1		Dann wollte sich mancherlei von Recht und Pflicht wieder auftun, welche mich aber nicht überstimmen konnten.
+952	verschlungen	3	3	3	5.3	12				verschlungen 3		
+953	übelnehmen	6	6	6	5.2	46			übelnahm 1			"Man soll ja keinem Schauspieler übelnehmen, wenn er bei seinen Debüts vorsichtig und eigensinnig ist."""
+954	gewöhnen	60	55	17	5.1	1056		gewöhnt 6	gewöhnte 1	gewöhnt 37	haben 8	"""Wieviel Mühe habe ich mir gegeben, ihn an mich zu gewöhnen! aber vergebens."
+955	abwarten	39	38	13	5.1	635			abwartete 4	abgewartet 1		Nachdem man es allerorten gesucht hatte, musste man sich beruhigen und abwarten, ob es nicht von selbst wieder herbeikommen wolle.
+956	zurücklegen	23	22	12	5.1	329		zurücklegt 1	zurücklegte 1	zurückgelegt 16	haben 7	Nun war das zwölfte Jahr zurückgelegt.
+957	zeugen	20	20	9	5.1	273		zeugt 9	zeugte 6			"""Und es zeugt von Ihrer Unbekanntschaft mit der Welt, wenn Sie diese Erscheinungen dem Theater so hoch anrechnen."
+958	vorbeifahren	6	6	6	5.1	47		fährt vorbei 1	fuhr vorbei 2			Nun fuhren sie durch das Dorf und am Wirtshause vorbei.
+959	zugewenden	6	6	5	5.1	47		zugewendet 1		zugewendet 5	haben 3	Auch war ihre ganze Sinnesweise dem Hause und dem Häuslichen mehr als der Welt, mehr als dem Leben im Freien zugewendet.
+960	entbinden	6	6	5	5.1	47				entbunden 4	sein 2	sie war von ihrer frühen Einschränkung, von ihrer Dienstbarkeit entbunden.
+961	hinleben	5	5	4	5.1	34			lebte hin 3			Stille lebte sie vor sich hin, aber kaum verbarg sie ihre Sehnsucht, ihre Wünsche.
+962	beschönigen	5	5	4	5.1	34						Ich will ganz aufrichtig sein, weder leugnen noch beschönigen, dass ich Marianen beredete, sich einem gewissen Norberg zu ergeben;
+963	dürfen	475	350	21	5.0	10297		darf 117; dürft 1	durfte 64			Wie vorauszusehen, durften sie auf dem Markte nur Schritt vor Schritt reiten;
+964	abschneiden	27	25	13	5.0	404		abschneidet 3	schnitt ab 1	abgeschnitten 18	haben 3; sein 1	Das Kind schlug heftig nach dem Küchenmädchen, das einige Tauben abgeschnitten hatte.
+965	beschränken	18	18	9	5.0	240		beschränkt 2	beschränkte 1	beschränkt 7	haben 1	Ich kann mich nur über den Menschen freuen, der weiß, was ihm und andern nütze ist, und seine Willkür zu beschränken arbeitet.
+966	anpassen	12	12	7	5.0	137			paßte an 1	angepaßt 3	sein 1	man dichtete sie, und Philine, die in alles einging, paßte ihnen gleich bekannte Melodien an und sang sie aus dem Stegreife.
+967	herausfordern	9	9	8	5.0	90			forderte heraus 2	herausgefordert 5	haben 2	Kurz darauf betrat Saul die Szene, in großer Verlegenheit über die Impertinenz des schwerlötigen Kriegers, der ihn und die Seinigen herausgefordert hatte.
+968	herangewachsen	4	4	4	5.0	23				herangewachsen 4	sein 3	Die Töchter waren seit der Zeit herangewachsen;
+969	überheben	4	4	4	5.0	23				überhoben 1	sein 1	Wer sich leicht loskaufen kann, wird so leicht versucht, sich auch der Erkenntlichkeit zu überheben.
+970	hinausgeschoben	4	4	4	5.0	23						"""Meine Hoffnung, dass du vernünftig werden würdest"", schrieb dieser, ""ist nun wieder eine gute Weile hinausgeschoben."
+971	hinstreben	3	3	3	5.0	13		hinstrebt 2	hinstrebte 1			wir fühlen dabei, dass wir nicht ganz in der Fremde sind, wir wähnen einer Heimat näher zu sein, nach der unser Bestes, Innerstes ungeduldig hinstrebt.
+972	ausbedingen	3	3	3	5.0	13		ausbedingt 1		ausbedungen 1	haben 1	Nur eins bedinge ich mir aus, dass Sie sich an die Form nicht stoßen;
+973	herstelln	3	3	3	5.0	13			herstellte 3			Alles, was er anzulegen gedachte, sollte dem Knaben entgegenwachsen, und alles, was er herstellte, sollte eine Dauer auf einige Geschlechter haben.
+974	erreichen	135	121	18	4.9	2660		erreicht 7	erreichte 11	erreicht 40	haben 18; sein 10	Beide Renner erreichten zugleich den Ort, wo die Fürstin am Pferde stand;
+975	mitbringen	55	51	17	4.9	962		mitbringt 3; bringt mit 1	brachte mit 7	mitgebracht 17	haben 11	Der alte Polterer hatte eines dieser Art mitgebracht, und die Vorlesung war beschlossen worden.
+976	einkehren	11	11	7	4.9	122			kehrte ein 1			Wir kehrten ein, bestellten uns auf Morgen ein Mittagessen und stiegen den Berg hinauf.
+977	schilen	5	5	3	4.9	35		schilt 5				Ich verzeihe jedem, der sie tadelt und schilt;
+978	herumschlagen	5	5	4	4.9	35			schlug herum 1			Der Morgenwind blies stark und schlug sich mit einigen Schneewolken herum, und jagte abwechselnd leichte Gestöber an den Bergen und durch das Tal.
+979	besorgen	44	39	16	4.8	741			besorgte 13	besorgt 3		"""Der Lieutenant schlug nunmehr das Theater auf und besorgte das Übrige."
+980	ergehen	40	40	14	4.8	662		ergeht 2	erging 11	ergangen 7	sein 3; haben 2	Ebensoschlimm erging es ihm, wenn man ihm eine Ehre erzeigen wollte.
+981	bekleiden	15	15	9	4.8	190		bekleidet 7	bekleidete 3	bekleidet 3	haben 1	Mit der größten Sorgfalt für dieses Gewand war das lebhafteste Verlangen verbunden, sich damit zu bekleiden.
+982	durchdringen	13	13	8	4.8	156		durchdringt 3	drang durch 1			Er hatte Mühe, mit seinen Vorstellungen durchzudringen, und erhielt endlich die Erlaubnis, mit dem Delinquenten allein zu sprechen.
+983	aufwenden	6	6	5	4.8	49		wendet auf 1	wendete auf 1	gewendet 1		Will man weiter Geld und Mühe aufwenden, so wäre von der Mooshütte hinaufwärts und über die Anhöhe noch mancherlei zu tun und viel Angenehmes zu leisten“.
+984	ausforschen	6	6	4	4.8	49			ausforschte 1	ausgeforscht 1	haben 1	
+985	hinwenden	5	5	4	4.8	36		hinwendet 2	hinwendete 1			"""wo auch der Mensch seinen überfluss hinwendet, ihm ist wohl dabei, am wohlsten, wenn er sich damit schmückt und aufputzt""."
+986	forttreiben	5	5	4	4.8	36		treibt fort 1	trieb fort 1			"Seine bestimmten Beschäftigungen treibt er fort, und wir haben ihn gewöhnt, die Zeitungen zu lesen, die er jetzt immer mit großer Begierde erwartet."""
+987	zusammenfügen	5	5	5	4.8	36	to join together		fügte zusammen 1; zusammenfügte 1	zusammengefügt 2	haben 1	Der Arzt brachte den Körper in die rechte Lage, fügte die getrennten Teile zusammen und legte den Verband auf.
+988	umherschauen	4	4	4	4.8	24		schaut umher 3				Uralte Bäume zieren sein Haupt, und so gekrönt schaut er weit umher; stürzt aber ein Teil herunter
+989	unternahmen	4	3	3	4.8	24				unternahmen 1		
+990	abnötigen	4	4	4	4.8	24			abnötigte 2; nötigte ab 1			
+991	durchlöcheren	4	4	4	4.8	24		durchlöchert 1		durchlöchert 2		
+992	besitzen	118	106	19	4.7	2303		besitzt 25	besaß 21			Ist es denn ein so großes Unglück, zwei Liebhaber zu besitzen?
+993	schildern	37	34	13	4.7	604			schilderte 4	geschildert 13; schildert 1	haben 5; sein 1	der Liebende wünschte sein Verlangen und seinen Genuss so tausendfach und so harmonisch zu fühlen, als ihn die beseelte Lippe zu schildern verstand;
+994	entziehen	35	32	13	4.7	565		entzieht 2	entzog 3	entzogen 6	haben 2	Wollte ich mich der Gesellschaft entziehen und meine Verhältnisse verändern, so konnte ich nicht.
+995	bekümmern	21	21	12	4.7	299		bekümmert 3		bekümmert 8	haben 4	Noch waren wir immer zu sehr mit dem Gegenwärtigen beschäftigt, als dass wir uns wechselseitig um unsere vorige Lebensweise hätten bekümmern können.
+996	fänden	13	13	8	4.7	158						"""Es ist jetzt nicht Zeit"", versetzte die Alte, ""ich habe zu tun und wünschte nicht, dass man uns beisammen fände."
+997	verfassen	11	11	6	4.7	125			verfaßte 1	verfaßt 8	haben 2; sein 1	ein förmliches Protokoll würde sich nachher schon verfassen lassen.
+998	getrauen	7	7	6	4.7	63			getraute 1			Ich habe Opheliens Rolle wieder angesehen, ich bin zufrieden damit und getraue mir, sie unter gewissen Umständen zu spielen.
+999	rauben	28	25	13	4.6	432	to rob	raubt 2	raubte 2	geraubt 9	haben 7	"""Und wenn mir die Morgensonne meinen Freund rauben sollte, will ich mir's verbergen."
+1000	beurlauben	6	6	4	4.6	50			beurlaubte 4			Er beurlaubte sich darauf und wollte sich eilig entfernen.

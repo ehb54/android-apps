@@ -1,5 +1,16 @@
 {
  "rank_by": "count",
- "size": 200,
- "unique": ["english", "emoji"]
+ "size": 3000,
+ "unique": [
+  "english",
+  "emoji"
+ ],
+ "verbs": {
+  "rank_by": "count",
+  "size": 1000,
+  "unique": [
+   "english",
+   "infinitive"
+  ]
+ }
 }

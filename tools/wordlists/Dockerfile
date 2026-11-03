@@ -1,4 +1,4 @@
-# Image for the word-list pipeline (tools/wordlists/nouns.py): spaCy with its
+# Image for the word-list pipeline (tools/wordlists/words.py): spaCy with its
 # German model, openpyxl for .xlsx files, Pillow for pictures. Built and run by
 # tools/wordlists/run.sh; see tools/wordlists/README.md.
 FROM python:3.12-slim

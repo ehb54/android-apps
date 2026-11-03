@@ -1,11 +1,42 @@
 {
  "rank_by": "keyness",
  "reference": "core",
- "size": 200,
+ "size": 1000,
  "min_books": 25,
- "exclude_lists": ["core"],
+ "exclude_lists": [
+  "core"
+ ],
  "exclude_lemmas": {
-  "months": ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"]
+  "months": [
+   "Januar",
+   "Februar",
+   "März",
+   "April",
+   "Mai",
+   "Juni",
+   "Juli",
+   "August",
+   "September",
+   "Oktober",
+   "November",
+   "Dezember"
+  ]
  },
- "unique": ["english", "emoji"]
+ "unique": [
+  "english",
+  "emoji"
+ ],
+ "verbs": {
+  "rank_by": "keyness",
+  "reference": "core",
+  "size": 300,
+  "min_books": 25,
+  "exclude_lists": [
+   "core"
+  ],
+  "unique": [
+   "english",
+   "infinitive"
+  ]
+ }
 }
