@@ -27,13 +27,16 @@ Steps, each reading and writing files in a list folder (e.g. core/):
                                     "verbs" rules in list.json)
   build  <list> <title> <outdir>    "<title> nouns.xlsx" (tabs: nouns, articles, plurals) and
                                     "<title> pictures.zip" from nouns.tsv, and "<title> verbs.xlsx"
-                                    (tabs: verbs, verb forms) from verbs.tsv
+                                    (tabs: verbs, verb forms) and "<title> verb pictures.zip" from
+                                    verbs.tsv; the pictures are the ones picked in
+                                    ../pictures/<list>/picks.tsv, or Noto Emoji for a list without
 
 Run through run.sh, which provides spaCy and the other tools (pending, check
 and merge need only Python). See README.md and REVIEW.md.
 """
 import collections
 import csv
+import functools
 import io
 import json
 import re
@@ -47,6 +50,7 @@ import zipfile
 from pathlib import Path
 
 CACHE = Path("cache")
+PICTURES = Path(__file__).resolve().parent.parent / "pictures"   # the lists' own pictures
 USER_AGENT = "android-apps-wordlists/0.1 (https://github.com/ehb54/android-apps)"
 CLDR_RELEASE = "release-49"
 NOTO_RELEASE = "v2026-09-24-unicode18_0"
@@ -595,26 +599,41 @@ def build_nouns(name, title, outdir):
     ]
     workbook(Path(outdir) / f"{title} nouns.xlsx", tabs)
 
-    if not any(n["emoji"] for n in nouns):
-        print(f"{len(nouns)} nouns, {sum(len(rows) for _, rows in tabs)} cards in 3 tabs, no pictures -> {outdir}")
-        return
-    noto_license = fetch(f"https://raw.githubusercontent.com/googlefonts/noto-emoji/{NOTO_RELEASE}/LICENSE",
-                         f"noto-emoji-{NOTO_RELEASE}-LICENSE")
-    with zipfile.ZipFile(Path(outdir) / f"{title} pictures.zip", "w", zipfile.ZIP_DEFLATED) as z:
-        lines = []
-        for n in nouns:
-            if n["emoji"]:
-                file, png = noto_picture(n["emoji"])
-                z.writestr(file, png)
-                lines.append(f"!{file}\n{n['word']}\n")
-        z.writestr(f"{title} pictures.qzx", "".join(lines))
-        z.writestr("CREDITS.txt",
-                   "Pictures: Noto Emoji by Google (https://github.com/googlefonts/noto-emoji), "
+    picked = picked_pictures(name)
+    if picked:                          # the list's own pictures replace the emoji
+        cards, credits = picked
+        pictured = [(n, cards["noun"][n["lemma"]]) for n in nouns if n["lemma"] in cards["noun"]]
+        license = None
+    else:
+        pictured = [(n, noto_picture(n["emoji"])) for n in nouns if n["emoji"]]
+        credits = ("Pictures: Noto Emoji by Google (https://github.com/googlefonts/noto-emoji), "
                    f"release {NOTO_RELEASE}, Apache License 2.0 (LICENSE-Noto-Emoji.txt), "
                    f"resized to {PICTURE_SIZE} x {PICTURE_SIZE} pixels.\n")
-        z.write(noto_license, "LICENSE-Noto-Emoji.txt")
+        license = fetch(f"https://raw.githubusercontent.com/googlefonts/noto-emoji/{NOTO_RELEASE}/LICENSE",
+                        f"noto-emoji-{NOTO_RELEASE}-LICENSE")
+    if not pictured:
+        print(f"{len(nouns)} nouns, {sum(len(rows) for _, rows in tabs)} cards in 3 tabs, no pictures -> {outdir}")
+        return
+    with zipfile.ZipFile(Path(outdir) / f"{title} pictures.zip", "w", zipfile.ZIP_DEFLATED) as z:
+        for _, (file, data) in pictured:
+            z.writestr(file, data)
+        z.writestr(f"{title} pictures.qzx", "".join(f"!{file}\n{n['word']}\n" for n, (file, _) in pictured))
+        z.writestr("CREDITS.txt", credits)
+        if license:
+            z.write(license, "LICENSE-Noto-Emoji.txt")
     print(f"{len(nouns)} nouns, {sum(len(rows) for _, rows in tabs)} cards in 3 tabs, "
-          f"{sum(bool(n['emoji']) for n in nouns)} pictures -> {outdir}")
+          f"{len(pictured)} pictures ({'own' if picked else 'emoji'}) -> {outdir}")
+
+
+@functools.lru_cache
+def picked_pictures(name):
+    """The list's own pictures, picked in tools/pictures (picks.tsv): ({kind:
+    {lemma: (file name, bytes)}}, credits text), or None if it has none."""
+    if not (PICTURES / name / "picks.tsv").exists():
+        return None
+    sys.path.insert(0, str(PICTURES))
+    import pictures
+    return pictures.card_files(name)
 
 
 def build_verbs(name, title, outdir):
@@ -629,6 +648,20 @@ def build_verbs(name, title, outdir):
     ]
     workbook(Path(outdir) / f"{title} verbs.xlsx", tabs)
     print(f"{len(verbs)} verbs, {sum(len(rows) for _, rows in tabs)} cards in 2 tabs -> {outdir}")
+
+    picked = picked_pictures(name)
+    if not picked:
+        return
+    cards, credits = picked
+    own = [(v, cards["verb"][v["lemma"]]) for v in verbs if v["lemma"] in cards["verb"]]
+    if not own:
+        return
+    with zipfile.ZipFile(Path(outdir) / f"{title} verb pictures.zip", "w", zipfile.ZIP_DEFLATED) as z:
+        for _, (file, data) in own:
+            z.writestr(file, data)
+        z.writestr(f"{title} verb pictures.qzx", "".join(f"!{file}\n{v['infinitive']}\n" for v, (file, _) in own))
+        z.writestr("CREDITS.txt", credits)
+    print(f"{len(own)} verb pictures -> {outdir}")
 
 
 if __name__ == "__main__":

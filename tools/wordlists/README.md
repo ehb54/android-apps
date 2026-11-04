@@ -4,8 +4,10 @@ Builds noun and verb frequency lists from public-domain texts, a general one
 and one per domain (history, fairy tales, Goethe, children's books), and turns
 them into Quiz sample files: a nouns `.xlsx` with tabs for nouns (German →
 English), articles (noun → der/die/das) and plurals, a `.zip` of picture cards
-where an emoji fits, and a verbs `.xlsx` with tabs for verbs (German → English)
-and verb forms (infinitive → present, past, perfect).
+(the list's own pictures from `../pictures/`, or an emoji where one fits), a
+verbs `.xlsx` with tabs for verbs (German → English) and verb forms
+(infinitive → present, past, perfect), and for a list with its own pictures a
+`.zip` of verb picture cards.
 
 Everything needed to grow a list is kept: the full counts, every review
 decision (including drops and why), each list's rules and its book-selection
@@ -75,8 +77,12 @@ The review files and `list.json` are the source of truth; `nouns.tsv` and
    picture or infinitive twice).
 6. `tools/wordlists/run.sh build <list> <Title> ../../apps/quiz/samples`
    Writes `<Title> nouns.xlsx`, `<Title> pictures.zip` if any noun has a
-   picture (Noto Emoji pictures, resized, with their Apache 2.0 license and a
-   credits file inside the zip), and `<Title> verbs.xlsx`. These are
+   picture, and `<Title> verbs.xlsx`. A list with its own pictures
+   (`../pictures/<list>/picks.tsv`, see `../pictures/README.md`) also gets
+   `<Title> verb pictures.zip`, and its pictures zips hold only those
+   pictures; the other lists' pictures zip has the nouns' Noto Emoji
+   (resized, with their Apache 2.0 license inside the zip). Each zip has a
+   credits file. These are
    online-only samples: the app downloads them from the site when added. Then
    regenerate `apps/quiz/samples/catalog.json` (see `apps/quiz/DESIGN.md`), or
    `SampleCatalogTest` fails.
@@ -114,4 +120,6 @@ a few minutes per thousand words (Wikidata is queried politely).
 - Wikidata: CC0. Unicode CLDR emoji names: Unicode License.
 - Noto Emoji pictures: Apache License 2.0; the license and a credits note
   travel inside each picture zip.
+- The lists' own pictures (`../pictures/`): generated with an Apache 2.0
+  model, named in each zip's credits file.
 - English glosses: written during review (Wikidata's rarely fit the domain).
