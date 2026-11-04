@@ -1,0 +1,45 @@
+# Pilot: 40 words to compare models and the style before the full run.
+# Easy nouns: one plain object, plant or animal.
+noun Haus
+noun Hund
+noun Apfel
+noun Schlüssel
+noun Stuhl
+noun Pferd
+noun Katze
+noun Kerze
+noun Brot
+noun Glocke
+noun Schiff
+noun Baum
+# Hard nouns: a sense to pin (See, Schloss), near-synonyms (Weg, Pfad, Gasse),
+# scenes, things made of writing, people, hands and clock faces.
+noun See
+noun Schloss
+noun Weg
+noun Pfad
+noun Gasse
+noun Ufer
+noun Bahnhof
+noun Hochzeit
+noun Zeitung
+noun Brief
+noun Arzt
+noun König
+noun Wald
+noun Hand
+noun Uhr
+noun Nacht
+# Verbs: one figure doing the action, including near pairs (gehen/laufen, legen/stellen).
+verb laufen
+verb gehen
+verb schlafen
+verb essen
+verb schreiben
+verb lesen
+verb schwimmen
+verb weinen
+verb legen
+verb stellen
+verb fliegen
+verb aufstehen
