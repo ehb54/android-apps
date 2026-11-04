@@ -13,12 +13,20 @@ Steps, each resumable (work already done is skipped). <list> is a word list
   generate <list> <model> <words> [seeds] [size]
                                     pictures of the planned words (yes and scene) into
                                     <list>/raw/<model>/<kind>-<word>-<seed>.png, seeds `1-4`
-                                    by default, size 1024 px; each picture's model,
+                                    by default, at the model's size; each picture's model,
                                     revision, settings, prompt and seed go to
                                     <list>/raw/<model>/log.tsv
   sheet  <list> <html> <words> <model>[:<seeds>]...
                                     a contact sheet: one row per word, one column per
                                     model and seed, pictures at card size (256 px) in the page
+  mosaic <list> <png> <words> <start> <count> <model>[:<seeds>]...
+                                    the same as one PNG, for `count` words from `start`
+                                    (for a quick look, or review by an AI agent)
+
+  pick   <list> <decisions>...      adds review decisions (lemma, kind, file, decision, note;
+                                    decision pick, retry or drop) to <list>/picks.tsv
+  restore <list>                    regenerates picked pictures missing from raw/, from
+                                    picks.tsv (words.py build needs them)
 
 <words> is `all` (every planned yes and scene), or a file with one word per line
 as `<kind> <lemma>` (noun Haus, verb laufen); `#` starts a comment.
@@ -53,28 +61,29 @@ KINDS = {
 # The models compared in step 1: the original release (`repo`, its license), and the
 # weights used here (`weights` at `revision`): mflux-community's 8-bit conversions,
 # which keep the original license. `mflux` is the mflux model name; steps and
-# guidance are each model's fast settings (its distilled default).
+# guidance are each model's fast settings (its distilled default); size is the
+# pixel size generated (square), which the cards trim and scale to CARD_SIZE.
 MODELS = {
     "klein": {
         "name": "FLUX.2 [klein] 4B", "mflux": "flux2-klein-4b",
         "repo": "black-forest-labs/FLUX.2-klein-4B", "license": "Apache-2.0",
         "weights": "mflux-community/flux2-klein-4b-mflux-q8",
         "revision": "755dc213d6767d4a4eae9291dd3f6e829454177e",
-        "steps": 4, "guidance": 1.0,
+        "steps": 4, "guidance": 1.0, "size": 768,
     },
     "zimage": {
         "name": "Z-Image-Turbo", "mflux": "z-image-turbo",
         "repo": "Tongyi-MAI/Z-Image-Turbo", "license": "Apache-2.0",
         "weights": "mflux-community/z-image-turbo-mflux-q8",
         "revision": "4ccff28917346aa9daae49cd3c477cf5260a242c",
-        "steps": 9, "guidance": None,
+        "steps": 9, "guidance": None, "size": 768,
     },
     "ernie": {
         "name": "ERNIE-Image-Turbo", "mflux": "ernie-image-turbo",
         "repo": "baidu/ERNIE-Image-Turbo", "license": "Apache-2.0",
         "weights": "mflux-community/ernie-image-turbo-mflux-q8",
         "revision": "1bf0886002924e3b2af5febac79726728a1d4657",
-        "steps": 8, "guidance": 1.0,
+        "steps": 8, "guidance": 1.0, "size": 768,
     },
 }
 
@@ -273,49 +282,180 @@ def load_model(model):
     return ErnieImage(model_config=config, model_path=path)
 
 
-def generate(name, model, words, seeds="1-4", size=1024):
+def make_picture(pipeline, model, prompt, seed, size):
+    """Generates one picture; returns the PIL image and the seconds it took."""
+    m = MODELS[model]
+    start = time.time()
+    image = pipeline.generate_image(seed=seed, prompt=prompt, num_inference_steps=m["steps"],
+                                    width=size, height=size, guidance=m["guidance"]).image
+    return image, time.time() - start
+
+
+def save_picture(name, model, row, seed, size, prompt, image, seconds):
+    """Writes a generated picture into raw/<model>/ (never half-written) and logs it."""
     import importlib.metadata
     m = MODELS[model]
     outdir = HERE / name / "raw" / model
     outdir.mkdir(parents=True, exist_ok=True)
+    file = picture_name(row["kind"], row["lemma"], seed)
+    temporary = outdir / f"{file}.tmp"
+    image.save(temporary, "PNG")
+    temporary.replace(outdir / file)
+    entry = {"file": file, "kind": row["kind"], "lemma": row["lemma"], "model": m["name"],
+             "repo": m["weights"], "revision": m["revision"], "mflux": importlib.metadata.version("mflux"),
+             "steps": m["steps"], "guidance": "" if m["guidance"] is None else m["guidance"], "size": size,
+             "seed": seed, "prompt": prompt, "seconds": f"{seconds:.1f}",
+             "time": datetime.datetime.now().isoformat(timespec="seconds")}
     log_path = outdir / "log.tsv"
+    new_log = not log_path.exists()
+    with open(log_path, "a", encoding="utf-8", newline="") as f:
+        if new_log:
+            f.write("\t".join(LOG_FIELDS) + "\n")
+        f.write("\t".join(str(entry[k]).replace("\t", " ") for k in LOG_FIELDS) + "\n")
+    return file
+
+
+def generate(name, model, words, seeds="1-4", size=None):
+    m = MODELS[model]
+    size = size or m["size"]
+    outdir = HERE / name / "raw" / model
     todo = [(row, seed) for row in chosen_words(name, words) for seed in seed_range(seeds)
             if not (outdir / picture_name(row["kind"], row["lemma"], seed)).exists()]
     print(f"{m['name']}: {len(todo)} pictures to make -> {outdir}", flush=True)
     if not todo:
         return
     pipeline = load_model(model)
-    common = {"model": m["name"], "repo": m["weights"], "revision": m["revision"],
-              "mflux": importlib.metadata.version("mflux"), "steps": m["steps"],
-              "guidance": "" if m["guidance"] is None else m["guidance"], "size": size}
     for done, (row, seed) in enumerate(todo, 1):
-        file = picture_name(row["kind"], row["lemma"], seed)
         prompt = full_prompt(row["prompt"])
-        start = time.time()
-        image = pipeline.generate_image(seed=seed, prompt=prompt, num_inference_steps=m["steps"],
-                                        width=size, height=size, guidance=m["guidance"]).image
-        temporary = outdir / f"{file}.tmp"
-        image.save(temporary, "PNG")
-        temporary.replace(outdir / file)
-        seconds = time.time() - start
-        entry = {**common, "file": file, "kind": row["kind"], "lemma": row["lemma"], "seed": seed,
-                 "prompt": prompt, "seconds": f"{seconds:.1f}",
-                 "time": datetime.datetime.now().isoformat(timespec="seconds")}
-        new_log = not log_path.exists()
-        with open(log_path, "a", encoding="utf-8", newline="") as f:
-            if new_log:
-                f.write("\t".join(LOG_FIELDS) + "\n")
-            f.write("\t".join(str(entry[k]).replace("\t", " ") for k in LOG_FIELDS) + "\n")
+        image, seconds = make_picture(pipeline, model, prompt, seed, size)
+        file = save_picture(name, model, row, seed, size, prompt, image, seconds)
         print(f"{done}/{len(todo)} {file} {seconds:.1f} s", flush=True)
+
+
+# --- picks -------------------------------------------------------------------
+
+PICK_FIELDS = ["lemma", "kind", "file", "prompt", "seed", "decision", "note"]
+DECISION_FIELDS = ["lemma", "kind", "file", "decision", "note"]
+# pick: `file` (<model>/<picture>) goes on the card. retry: no good picture yet;
+# rewrite the plan's prompt and generate the word again. drop: no picture (the
+# word keeps its emoji, if any).
+DECISIONS = ("pick", "retry", "drop")
+CARD_QUALITY = 82            # WebP quality of the card pictures
+
+
+def read_picks(name):
+    path = HERE / name / "picks.tsv"
+    return read_tsv(path) if path.exists() else []
+
+
+def logged(name, model):
+    """Each generated picture's log row, by file name (the latest, if made twice)."""
+    path = HERE / name / "raw" / model / "log.tsv"
+    return {r["file"]: r for r in read_tsv(path)} if path.exists() else {}
+
+
+def pick(name, files):
+    """Adds review decisions to picks.tsv, replacing earlier ones for the same
+    word. A pick's prompt and seed are taken from the generation log."""
+    plan = {(r["kind"], r["lemma"]): r for r in read_plan(name)}
+    picks = {(r["kind"], r["lemma"]): r for r in read_picks(name)}
+    logs, errors, new = {}, [], 0
+    for file in files:
+        for line, row in enumerate(read_tsv(file), 2):
+            row = {f: " ".join((row.get(f) or "").split()) for f in DECISION_FIELDS}
+            key, where = (row["kind"], row["lemma"]), f"{file}:{line} {row['lemma']}"
+            problem = ""
+            entry = {**row, "prompt": "", "seed": ""}
+            if key not in plan or plan[key]["picturable"] == "no":
+                problem = "not planned for a picture"
+            elif row["decision"] not in DECISIONS:
+                problem = f"decision must be one of {', '.join(DECISIONS)}"
+            elif row["decision"] == "pick":
+                model, _, picture = row["file"].partition("/")
+                log = logs.setdefault(model, logged(name, model)).get(picture) if model in MODELS else None
+                if not log or not (HERE / name / "raw" / row["file"]).exists():
+                    problem = f"{row['file']} is not a generated picture (<model>/<picture>)"
+                elif (log["kind"], log["lemma"]) != key:
+                    problem = f"{row['file']} is a picture of {log['lemma']}"
+                else:
+                    entry.update(prompt=log["prompt"], seed=log["seed"])
+            elif row["file"]:
+                problem = "only a pick names a file"
+            elif not row["note"]:
+                problem = f"a {row['decision']} needs its reason in note"
+            if problem:
+                errors.append(f"{where}: {problem}")
+            else:
+                picks[key] = entry
+                new += 1
+    if errors:
+        sys.exit("nothing recorded:\n" + "\n".join(errors))
+    order = {key: i for i, key in enumerate(plan)}
+    rows = sorted(picks.values(), key=lambda r: order[(r["kind"], r["lemma"])])
+    write_tsv(HERE / name / "picks.tsv", rows, PICK_FIELDS)
+    counts = {d: sum(r["decision"] == d for r in rows) for d in DECISIONS}
+    undecided = sum(p["picturable"] != "no" for p in plan.values()) - len(rows)
+    print(f"{new} decisions -> {name}/picks.tsv {counts}, {undecided} planned words undecided")
+
+
+def restore(name):
+    """Regenerates the picked pictures that raw/ does not have (on another
+    machine, or after raw/ was cleared) from the prompt and seed in picks.tsv."""
+    missing = [r for r in read_picks(name)
+               if r["decision"] == "pick" and not (HERE / name / "raw" / r["file"]).exists()]
+    print(f"{len(missing)} picked pictures to regenerate", flush=True)
+    for model in sorted({r["file"].split("/")[0] for r in missing}):
+        pipeline = load_model(model)
+        for r in [r for r in missing if r["file"].startswith(f"{model}/")]:
+            image, seconds = make_picture(pipeline, model, r["prompt"], int(r["seed"]), MODELS[model]["size"])
+            print(save_picture(name, model, r, int(r["seed"]), MODELS[model]["size"], r["prompt"], image, seconds),
+                  flush=True)
+
+
+def card_files(name):
+    """The picked pictures as the quiz zips carry them: {kind: {lemma: (file
+    name, bytes)}}, WebP at CARD_SIZE, and the credits text for them. Used by
+    tools/wordlists/words.py build."""
+    cards, models = {kind: {} for kind in KINDS}, set()
+    for r in read_picks(name):
+        if r["decision"] != "pick":
+            continue
+        path = HERE / name / "raw" / r["file"]
+        if not path.exists():
+            sys.exit(f"{path} is missing: run tools/pictures/run.sh restore {name}")
+        out = io.BytesIO()
+        card_picture(path).save(out, "WEBP", quality=CARD_QUALITY, method=6)
+        cards[r["kind"]][r["lemma"]] = (f"{r['kind']}-{slug(r['lemma'])}.webp", out.getvalue())
+        models.add(r["file"].split("/")[0])
+    credits = "".join(
+        f"Pictures: generated with {MODELS[m]['name']} (https://huggingface.co/{MODELS[m]['repo']}, "
+        f"{MODELS[m]['license']} license; MLX 8-bit weights {MODELS[m]['weights']} at revision "
+        f"{MODELS[m]['revision'][:10]}) using mflux, from prompts written for this list. Prompts, "
+        f"seeds and the pick per word: tools/pictures/{name}/ in https://github.com/ehb54/android-apps.\n"
+        for m in sorted(models))
+    return cards, credits
 
 
 # --- contact sheets ----------------------------------------------------------
 
-def card_picture(path, size=CARD_SIZE):
-    """The picture at card size, as an RGB PIL image."""
-    from PIL import Image
+def card_picture(path, size=CARD_SIZE, margin=0.06):
+    """The picture as it goes on a card, as an RGB PIL image: the white margin
+    around the subject trimmed to `margin` of the side, square, `size` pixels."""
+    from PIL import Image, ImageChops
     with Image.open(path) as image:
-        return image.convert("RGB").resize((size, size), Image.LANCZOS)
+        image = image.convert("RGB")
+    # Not white: any channel below 236 (faint off-white haze at the edges counts as white).
+    r, g, b = image.split()
+    mask = ImageChops.darker(ImageChops.darker(r, g), b).point(lambda v: 255 if v < 236 else 0)
+    box = mask.getbbox() or (0, 0, image.width, image.height)
+    side = max(box[2] - box[0], box[3] - box[1])
+    side = min(round(side * (1 + 2 * margin)), max(image.size))
+    cx, cy = (box[0] + box[2]) / 2, (box[1] + box[3]) / 2
+    left = round(min(max(cx - side / 2, 0), image.width - side))
+    top = round(min(max(cy - side / 2, 0), image.height - side))
+    square = Image.new("RGB", (side, side), "white")
+    square.paste(image.crop((max(left, 0), max(top, 0), left + side, top + side)), (max(-left, 0), max(-top, 0)))
+    return square.resize((size, size), Image.LANCZOS)
 
 
 def data_url(image, quality=85):
@@ -324,7 +464,7 @@ def data_url(image, quality=85):
     return "data:image/webp;base64," + base64.b64encode(out.getvalue()).decode()
 
 
-def sheet(name, html, words, columns, title=None):
+def sheet(name, html, words, columns, title=None, intro=""):
     """Writes a self-contained HTML contact sheet. `columns` are `model` or
     `model:1-4`; a missing picture leaves an empty cell."""
     import html as h
@@ -334,6 +474,7 @@ def sheet(name, html, words, columns, title=None):
     for column in columns:
         model, _, seeds = column.partition(":")
         cols += [(model, seed) for seed in seed_range(seeds or "1-4")]
+    shown = CARD_SIZE if len(cols) <= 4 else 168          # displayed size; the page holds 256 px
     head = "".join(f"<th>{h.escape(MODELS[m]['name'])}<br>seed {s}</th>" for m, s in cols)
     body = []
     for row in rows:
@@ -341,8 +482,8 @@ def sheet(name, html, words, columns, title=None):
         cells = []
         for model, seed in cols:
             path = HERE / name / "raw" / model / picture_name(row["kind"], row["lemma"], seed)
-            cells.append(f'<td><img src="{data_url(card_picture(path))}" width="{CARD_SIZE}" '
-                         f'height="{CARD_SIZE}" alt="{h.escape(row["lemma"])} {seed}"></td>'
+            cells.append(f'<td><img src="{data_url(card_picture(path))}" width="{shown}" '
+                         f'height="{shown}" alt="{h.escape(row["lemma"])} {seed}"></td>'
                          if path.exists() else "<td></td>")
         body.append(f'<tr><th class="word"><b>{h.escape(w["card"])}</b><br>{h.escape(w["english"])}'
                     f'<br><small>{row["kind"]} {w["rank"]} · {row["picturable"]}</small>'
@@ -360,15 +501,47 @@ th.word {{ width: 220px; text-align: left; font-weight: normal; }}
 th.word b {{ font-size: 18px; }}
 th.word p {{ color: #555; font-size: 12px; margin: 6px 0 0; }}
 img {{ display: block; }}
+img:hover {{ transform: scale(1.5); position: relative; z-index: 1; box-shadow: 0 2px 12px #0005; }}
 </style></head><body>
 <h1>{h.escape(title)}</h1>
-<p>{len(rows)} words. Pictures at card size ({CARD_SIZE} px). Every prompt ends with:
-<i>{h.escape(STYLE)}</i>.</p>
+{intro}<p>{len(rows)} words. Pictures as the card shows them (white margins trimmed, {CARD_SIZE} px;
+hover to enlarge). Every prompt ends with: <i>{h.escape(STYLE)}</i>.</p>
 <table><thead><tr><th>word</th>{head}</tr></thead><tbody>
 {chr(10).join(body)}
 </tbody></table></body></html>
 """, encoding="utf-8")
     print(f"{len(rows)} words x {len(cols)} columns -> {html}")
+
+
+def mosaic(name, png, words, columns, tile=200, start=0, count=None):
+    """Writes a contact sheet as one PNG (for a quick look, or review by an AI
+    agent that reads images): one row per word, labelled with its card and
+    gloss, one column per model and seed."""
+    from PIL import Image, ImageDraw, ImageFont
+    rows = chosen_words(name, words)[start:None if count is None else start + count]
+    font = ImageFont.load_default(size=15)
+    ascii_label = str.maketrans({"ä": "ae", "ö": "oe", "ü": "ue", "Ä": "Ae", "Ö": "Oe", "Ü": "Ue", "ß": "ss"})
+    info = {(w["kind"], w["lemma"]): w for w in list_words(name)}
+    cols = []
+    for column in columns:
+        model, _, seeds = column.partition(":")
+        cols += [(model, seed) for seed in seed_range(seeds or "1-4")]
+    label = 170
+    sheet = Image.new("RGB", (label + tile * len(cols), tile * len(rows)), "white")
+    draw = ImageDraw.Draw(sheet)
+    for y, row in enumerate(rows):
+        w = info[(row["kind"], row["lemma"])]
+        # The built-in font has no umlauts.
+        draw.text((6, y * tile + 8), f"{start + y + 1}. {w['card']}".translate(ascii_label), fill="black", font=font)
+        draw.text((6, y * tile + 28), w["english"][:22], fill="#555", font=font)
+        for x, (model, seed) in enumerate(cols):
+            path = HERE / name / "raw" / model / picture_name(row["kind"], row["lemma"], seed)
+            if path.exists():
+                sheet.paste(card_picture(path, tile - 4), (label + x * tile + 2, y * tile + 2))
+            draw.text((label + x * tile + 6, y * tile + 4), f"{model[0]}{seed}", fill="red", font=font)
+        draw.line([(0, y * tile), (sheet.width, y * tile)], fill="#bbb")
+    sheet.save(png)
+    print(f"{len(rows)} words x {len(cols)} columns -> {png}")
 
 
 if __name__ == "__main__":
@@ -383,8 +556,14 @@ if __name__ == "__main__":
         merge(args[0], args[1:])
     elif command == "generate" and 3 <= len(args) <= 5 and args[1] in MODELS:
         generate(args[0], args[1], args[2], args[3] if len(args) > 3 else "1-4",
-                 int(args[4]) if len(args) > 4 else 1024)
+                 int(args[4]) if len(args) > 4 else None)
+    elif command == "pick" and len(args) >= 2:
+        pick(args[0], args[1:])
+    elif command == "restore" and len(args) == 1:
+        restore(args[0])
     elif command == "sheet" and len(args) >= 4:
         sheet(args[0], args[1], args[2], args[3:])
+    elif command == "mosaic" and len(args) >= 6:
+        mosaic(args[0], args[1], args[2], args[5:], start=int(args[3]), count=int(args[4]))
     else:
         sys.exit(__doc__)
