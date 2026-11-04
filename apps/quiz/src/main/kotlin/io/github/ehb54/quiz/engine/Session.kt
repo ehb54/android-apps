@@ -29,6 +29,11 @@ data class AnswerTimes(
  * order, round after round. A card stays on screen until answered right; any
  * miss on it brings it back next round, and the session ends after a round
  * with no misses. Saved after every answer, so it survives the app closing.
+ *
+ * The same session runs pick mode ([picking]): the answer is picked from
+ * [choices] instead of typed, a wrong choice is ruled out until the card is
+ * answered, and the cards whose answers were picked wrongly get the confusion
+ * penalty. Pick mode keeps its own statistics ([Card.pickStats]).
  */
 @Serializable
 data class Session(
@@ -48,13 +53,23 @@ data class Session(
     val firstTry: Int = 0,
     val misses: Int = 0,
     val times: AnswerTimes = AnswerTimes(),
+    /** Pick mode: choices per card; 0 for a typed session. */
+    val choiceCount: Int = 0,
+    /** Pick mode: the current card's choices, by card, in screen order. */
+    val choices: List<Long> = emptyList(),
+    /** Pick mode: choices already tried for the current card. */
+    val ruledOut: Set<Long> = emptySet(),
+    /** Pick mode: cards whose answer was picked for a different card, for the confusion penalty. */
+    val wrongPicks: Set<Long> = emptySet(),
 ) {
     val current: Long? get() = queue.firstOrNull()
     val finished: Boolean get() = queue.isEmpty()
     val remaining: Int get() = queue.size + retry.size
+    val picking: Boolean get() = choiceCount > 0
 }
 
-enum class Outcome { Right, Wrong, TooSlow }
+/** [Ignored]: a pick of a choice that is not on screen, or already ruled out. */
+enum class Outcome { Right, Wrong, TooSlow, Ignored }
 
 /** The result of one answer: the updated quiz and session, plus cards penalized at the end. */
 data class Step(
@@ -108,9 +123,63 @@ fun submitAnswer(quiz: Quiz, session: Session, typed: String, elapsedMillis: Lon
     return advance(updated, counted.copy(missesOnCurrent = 0), id, missed)
 }
 
+/** Starts a pick-mode session: like [startSession], each card offering [QuizSettings.choices] choices. */
+fun startPickSession(quiz: Quiz, random: Random = Random.Default): Session? {
+    val session = startSession(quiz, random) ?: return null
+    return session.copy(choiceCount = quiz.settings.choices.coerceIn(2, 8)).withChoices(quiz, random)
+}
+
+/**
+ * Pick mode: checks the choice [picked] (a card) for the current card. A slow
+ * pick is a miss even when right; a wrong one is a miss, is ruled out, and its
+ * card gets the confusion penalty at the end. A right pick moves on.
+ */
+fun pickAnswer(quiz: Quiz, session: Session, picked: Long, elapsedMillis: Long, random: Random = Random.Default): Step {
+    val id = session.current ?: return Step(quiz, session, Outcome.Ignored)
+    if (picked !in session.choices || picked in session.ruledOut) return Step(quiz, session, Outcome.Ignored)
+    val card = quiz.card(id) ?: return advance(quiz, session.copy(missesOnCurrent = 0), id, missed = false, random)
+    val timed = session.copy(times = session.times.plus(elapsedMillis))
+
+    if (session.timerSeconds > 0 && elapsedMillis > session.timerSeconds * 1000L) {
+        return Step(quiz, timed.missedOnce(), Outcome.TooSlow)
+    }
+    if (picked != id) {
+        val wrong = timed.missedOnce().copy(ruledOut = timed.ruledOut + picked, wrongPicks = timed.wrongPicks + picked)
+        return Step(quiz, wrong, Outcome.Wrong)
+    }
+
+    val direction = session.direction
+    val missed = session.missesOnCurrent > 0
+    val stats = card.pickStats(direction).let { if (missed) it.answeredAfterMiss() else it.answeredFirstTry() }
+    val updated = quiz.replaceCard(card.withPickStats(direction, stats))
+    val counted = if (!missed && session.round == 1) timed.copy(firstTry = timed.firstTry + 1) else timed
+    return advance(updated, counted.copy(missesOnCurrent = 0), id, missed, random)
+}
+
+/**
+ * The choices for [card]: its own answer and up to [count] - 1 other cards'
+ * answers, in random order, no two showing the same thing (so exactly one is right).
+ */
+internal fun pickChoices(quiz: Quiz, card: Card, direction: Direction, count: Int, random: Random): List<Long> {
+    val shown = mutableSetOf(answerKey(card, direction))
+    val others = quiz.cards.filter { it.id != card.id && it.matchable() }
+        .shuffled(random)
+        .filter { shown.add(answerKey(it, direction)) }
+        .take(count - 1)
+    return (others.map { it.id } + card.id).shuffled(random)
+}
+
+private fun answerKey(card: Card, direction: Direction) =
+    card.answerImage(direction)?.let { "picture:$it" } ?: normalizeAnswer(card.answer(direction))
+
+private fun Session.withChoices(quiz: Quiz, random: Random): Session {
+    val card = current?.let(quiz::card) ?: return copy(choices = emptyList(), ruledOut = emptySet())
+    return copy(choices = pickChoices(quiz, card, direction, choiceCount, random), ruledOut = emptySet())
+}
+
 private fun Session.missedOnce() = copy(missesOnCurrent = missesOnCurrent + 1, misses = misses + 1)
 
-private fun advance(quiz: Quiz, session: Session, id: Long, missed: Boolean): Step {
+private fun advance(quiz: Quiz, session: Session, id: Long, missed: Boolean, random: Random = Random.Default): Step {
     var next = session.copy(
         queue = session.queue.drop(1),
         retry = if (missed) session.retry + id else session.retry,
@@ -118,14 +187,21 @@ private fun advance(quiz: Quiz, session: Session, id: Long, missed: Boolean): St
     if (next.queue.isEmpty() && next.retry.isNotEmpty()) {
         next = next.copy(queue = next.retry, retry = emptyList(), round = next.round + 1)
     }
-    if (!next.finished) return Step(quiz, next, Outcome.Right)
+    if (!next.finished) return Step(quiz, if (next.picking) next.withChoices(quiz, random) else next, Outcome.Right)
 
-    // Session over: any card whose answer was typed for a different card gets a miss too.
-    val confused = quiz.cards.filter {
-        it.askable(next.direction) && normalizeAnswer(it.answer(next.direction)) in next.wrongAnswers
+    // Session over: any card whose answer was given for a different card gets a miss too.
+    val direction = next.direction
+    val confused = if (next.picking) {
+        quiz.cards.filter { it.id in next.wrongPicks }
+    } else {
+        quiz.cards.filter { it.askable(direction) && normalizeAnswer(it.answer(direction)) in next.wrongAnswers }
     }
     val penalized = confused.fold(quiz) { q, card ->
-        q.replaceCard(card.withStats(next.direction, card.stats(next.direction).confused()))
+        if (next.picking) {
+            q.replaceCard(card.withPickStats(direction, card.pickStats(direction).confused()))
+        } else {
+            q.replaceCard(card.withStats(direction, card.stats(direction).confused()))
+        }
     }
     return Step(penalized, next, Outcome.Right, confused)
 }

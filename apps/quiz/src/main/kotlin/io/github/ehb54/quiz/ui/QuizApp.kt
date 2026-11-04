@@ -40,8 +40,10 @@ fun QuizApp(info: BuildInfo, vm: QuizViewModel = viewModel()) {
         Screen.Asking -> {
             val session = state.session
             val quiz = state.quiz(session?.quizId)
-            if (session != null && quiz != null) {
-                AskingScreen(quiz, session, state.feedback, state.revealed, vm.imageDir, snackbar, vm)
+            when {
+                session == null || quiz == null -> Unit
+                session.picking -> PickScreen(quiz, session, state.feedback, vm.imageDir, snackbar, vm)
+                else -> AskingScreen(quiz, session, state.feedback, state.revealed, vm.imageDir, snackbar, vm)
             }
         }
         Screen.Matching -> {

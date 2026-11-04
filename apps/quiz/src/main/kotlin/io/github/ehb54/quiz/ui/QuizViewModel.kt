@@ -23,6 +23,7 @@ import io.github.ehb54.quiz.engine.SampleEntry
 import io.github.ehb54.quiz.engine.SampleFile
 import io.github.ehb54.quiz.engine.SampleStatus
 import io.github.ehb54.quiz.engine.Session
+import io.github.ehb54.quiz.engine.Step
 import io.github.ehb54.quiz.engine.buildCatalog
 import io.github.ehb54.quiz.engine.cardsFromSheet
 import io.github.ehb54.quiz.engine.formatQzx
@@ -30,6 +31,7 @@ import io.github.ehb54.quiz.engine.isXlsx
 import io.github.ehb54.quiz.engine.isZip
 import io.github.ehb54.quiz.engine.pairTiles
 import io.github.ehb54.quiz.engine.parseQzx
+import io.github.ehb54.quiz.engine.pickAnswer
 import io.github.ehb54.quiz.engine.quizBundle
 import io.github.ehb54.quiz.engine.readLimited
 import io.github.ehb54.quiz.engine.readXlsx
@@ -38,6 +40,7 @@ import io.github.ehb54.quiz.engine.sampleEntries
 import io.github.ehb54.quiz.engine.sampleStatus
 import io.github.ehb54.quiz.engine.sha256
 import io.github.ehb54.quiz.engine.startMatch
+import io.github.ehb54.quiz.engine.startPickSession
 import io.github.ehb54.quiz.engine.startSession
 import io.github.ehb54.quiz.engine.submitAnswer
 import io.github.ehb54.quiz.engine.unzip
@@ -234,11 +237,14 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
 
     fun startQuiz(id: String) {
         val quiz = _state.value.quiz(id) ?: return
-        if (quiz.settings.mode == QuizMode.Match) {
-            startMatching(quiz)
-            return
+        val session = when (quiz.settings.mode) {
+            QuizMode.Typed -> startSession(quiz)
+            QuizMode.Pick -> startPickSession(quiz)
+            QuizMode.Match -> {
+                startMatching(quiz)
+                return
+            }
         }
-        val session = startSession(quiz)
         if (session == null) {
             message(text(R.string.nothing_due))
             return
@@ -247,11 +253,21 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
         persist { store.saveSession(session) }
     }
 
-    fun submit(typed: String, elapsedMillis: Long) {
+    fun submit(typed: String, elapsedMillis: Long) = answer { quiz, session ->
+        submitAnswer(quiz, session, typed, elapsedMillis)
+    }
+
+    /** Pick mode: the choice [picked] (a card) for the card on screen. */
+    fun pick(picked: Long, elapsedMillis: Long) = answer { quiz, session ->
+        pickAnswer(quiz, session, picked, elapsedMillis)
+    }
+
+    private fun answer(check: (Quiz, Session) -> Step) {
         val state = _state.value
         val session = state.session ?: return
         val quiz = state.quiz(session.quizId) ?: return
-        val step = submitAnswer(quiz, session, typed, elapsedMillis)
+        val step = check(quiz, session)
+        if (step.outcome == Outcome.Ignored) return
         val quizzes = state.quizzes.map { if (it.id == quiz.id) step.quiz else it }
         val next = step.session
         if (next.finished) {
@@ -262,7 +278,9 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
                 misses = next.misses,
                 rounds = next.round,
                 times = next.times,
-                confused = step.confused.map { it.answer(next.direction) },
+                confused = step.confused.map { card ->
+                    card.answer(next.direction).ifBlank { text(R.string.picture) }
+                },
             )
             _state.value = state.copy(
                 quizzes = quizzes,
@@ -280,7 +298,7 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
             val feedback = when (step.outcome) {
                 Outcome.Wrong -> Feedback.Wrong
                 Outcome.TooSlow -> Feedback.TooSlow
-                Outcome.Right -> null
+                Outcome.Right, Outcome.Ignored -> null
             }
             _state.value = state.copy(quizzes = quizzes, session = next, feedback = feedback)
             persist {

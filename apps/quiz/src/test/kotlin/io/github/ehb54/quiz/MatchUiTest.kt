@@ -6,7 +6,7 @@ import androidx.test.core.app.ActivityScenario
 import org.junit.Test
 
 /** A whole match session through the UI: blocks, a wrong pair, round 2, and levels kept apart. */
-class MatchUiTest : MatchUiTestBase() {
+class MatchUiTest : ChemicalSymbolsUiTest() {
     @Test
     fun matchSessionRunsInBlocks() {
         ActivityScenario.launch(MainActivity::class.java).use { scenario ->
@@ -28,9 +28,9 @@ class MatchUiTest : MatchUiTestBase() {
             compose.onNodeWithText("2 rounds").assertExists()
             compose.onNodeWithText("OK").performClick()
 
-            // Hydrogen and Helium are due again for matching; typing A -> B was not touched.
+            // Hydrogen and Helium are due again for matching; typing was not touched.
             compose.waitForText("Start (2 cards due)")
-            compose.onNodeWithText("A → B").performClick()
+            compose.onNodeWithText("Type").performClick()
             compose.waitForText("Start (14 cards due)")
         }
     }

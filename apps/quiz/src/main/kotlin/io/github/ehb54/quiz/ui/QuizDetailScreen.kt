@@ -65,6 +65,15 @@ private val timerSteps = listOf(0, 5, 10, 15, 20, 30, 45, 60, 90, 120)
 /** Match mode: pairs per block. */
 private val blockSizes = (3..10).toList()
 
+/** Pick mode: choices per card. */
+private val choiceCounts = (2..8).toList()
+
+private val modeLabels = mapOf(
+    QuizMode.Typed to R.string.mode_type,
+    QuizMode.Pick to R.string.mode_pick,
+    QuizMode.Match to R.string.mode_match,
+)
+
 /** Cards per session when no range is set; 0 means all. */
 private val sessionSizes = listOf(5, 10, 15, 20, 25, 30, 40, 50, 75, 100, 0)
 
@@ -179,22 +188,28 @@ fun QuizDetailScreen(quiz: Quiz, vm: QuizViewModel, snackbar: SnackbarHostState)
 private fun SessionSettings(quiz: Quiz, onChange: (QuizSettings) -> Unit, onStart: () -> Unit) {
     val settings = quiz.settings
     Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
-        val matching = settings.mode == QuizMode.Match
         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            Direction.entries.forEach { direction ->
+            QuizMode.entries.forEach { mode ->
                 FilterChip(
-                    selected = !matching && settings.direction == direction,
-                    onClick = { onChange(settings.copy(mode = QuizMode.Typed, direction = direction)) },
-                    label = {
-                        Text(stringResource(if (direction == Direction.AToB) R.string.direction_ab else R.string.direction_ba))
-                    },
+                    selected = settings.mode == mode,
+                    onClick = { onChange(settings.copy(mode = mode)) },
+                    label = { Text(stringResource(modeLabels.getValue(mode))) },
                 )
             }
-            FilterChip(
-                selected = matching,
-                onClick = { onChange(settings.copy(mode = QuizMode.Match)) },
-                label = { Text(stringResource(R.string.mode_match)) },
-            )
+        }
+        // Match pairs both sides at once; the other modes ask one way round.
+        if (settings.mode != QuizMode.Match) {
+            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                Direction.entries.forEach { direction ->
+                    FilterChip(
+                        selected = settings.direction == direction,
+                        onClick = { onChange(settings.copy(direction = direction)) },
+                        label = {
+                            Text(stringResource(if (direction == Direction.AToB) R.string.direction_ab else R.string.direction_ba))
+                        },
+                    )
+                }
+            }
         }
         Stepper(
             stringResource(R.string.threshold),
@@ -202,7 +217,7 @@ private fun SessionSettings(quiz: Quiz, onChange: (QuizSettings) -> Unit, onStar
             thresholds,
             settings.threshold.toString(),
         ) { onChange(settings.copy(threshold = it)) }
-        if (matching) {
+        if (settings.mode == QuizMode.Match) {
             Stepper(
                 stringResource(R.string.block_size),
                 settings.blockSize,
@@ -210,6 +225,14 @@ private fun SessionSettings(quiz: Quiz, onChange: (QuizSettings) -> Unit, onStar
                 settings.blockSize.toString(),
             ) { onChange(settings.copy(blockSize = it)) }
         } else {
+            if (settings.mode == QuizMode.Pick) {
+                Stepper(
+                    stringResource(R.string.choices),
+                    settings.choices,
+                    choiceCounts,
+                    settings.choices.toString(),
+                ) { onChange(settings.copy(choices = it)) }
+            }
             Stepper(
                 stringResource(R.string.timer),
                 settings.timerSeconds,

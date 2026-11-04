@@ -5,7 +5,7 @@ import androidx.test.core.app.ActivityScenario
 import org.junit.Test
 
 /** There is no leaving a match session either: closing the app and coming back resumes the block. */
-class MatchResumeUiTest : MatchUiTestBase() {
+class MatchResumeUiTest : ChemicalSymbolsUiTest() {
     @Test
     fun matchSessionSurvivesClosingTheApp() {
         ActivityScenario.launch(MainActivity::class.java).use {

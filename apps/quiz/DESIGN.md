@@ -106,8 +106,9 @@ is dropped, as the original import did.
 
 ## Match mode
 
-A second way to practise a quiz, chosen with the **Match** chip next to A → B
-and B → A (`engine/Match.kt`, `ui/MatchScreen.kt`). Decisions made with eb:
+A way to practise a quiz, chosen with the **Match** chip in the mode row (Type,
+Pick, Match); it has no direction (`engine/Match.kt`, `ui/MatchScreen.kt`).
+Decisions made with eb:
 
 - **Blocks.** The session's cards are shown a block at a time, *Pairs per block*
   (default 6, 3 to 10) as two columns of tiles: side A on the left, side B on
@@ -134,12 +135,34 @@ and B → A (`engine/Match.kt`, `ui/MatchScreen.kt`). Decisions made with eb:
   resumes on the next launch. The debug-only long press on the round counter
   leaves a match session too; an unfinished block is not scored.
 
+## Pick mode
+
+The **Pick** chip: one card at a time, as in typed sessions, but the answer is
+picked from a few choices instead of typed (`engine/Session.kt`, which runs
+both, and `ui/PickScreen.kt`). Decisions made with eb:
+
+- **Choices.** *Choices* per card (default 4, 2 to 8): the card's own answer and
+  other cards' answers from the whole quiz, in random order, never two showing
+  the same thing, so exactly one is right. A small quiz offers fewer.
+- **Direction** as in typing: A → B shows side A and offers side Bs.
+- **Stay until right.** A wrong choice is marked and cannot be picked again;
+  the card stays until the right one is picked, counts as missed, and comes back
+  next round. The timer, threshold, range and cards-per-session settings work as
+  in typed sessions.
+- **Confusion penalty.** A wrong choice is another card's answer, so that card
+  gets a miss at the end of the session, as when its answer is typed.
+- **Its own levels**, one per direction (`statsPickAToB`, `statsPickBToA`):
+  picking from a few choices is easier than typing, so it never makes a card
+  learned for typing or for Match.
+- **Pictures** can be prompts and choices; a card whose answer is a picture is
+  asked in Pick mode but not in typed mode.
+
 ## Code map
 
 | Path | What |
 |---|---|
 | `model/Model.kt` | `Card`, `Stats`, `Quiz`, `QuizSettings`: data and the level/due rules |
-| `engine/Session.kt` | Session state machine: start, answer, show answer, rounds, confusion penalty |
+| `engine/Session.kt` | Session state machine: start, answer, show answer, rounds, confusion penalty; also pick mode |
 | `engine/Match.kt` | Match sessions: blocks of tile pairs, rounds, scoring, fillers |
 | `engine/Answers.kt` | Forgiving answer comparison |
 | `engine/QuizFiles.kt` | `.qzx` and `.zip` reading and writing |
@@ -153,7 +176,7 @@ and B → A (`engine/Match.kt`, `ui/MatchScreen.kt`). Decisions made with eb:
 | `samples/` | Online-only samples and `catalog.json`, which lists both kinds; published to the download site |
 
 The engine and file code is plain Kotlin with JVM unit tests. `SessionRulesUiTest`,
-`ResumeUiTest`, `MatchUiTest`, `MatchResumeUiTest` and the `Sample*UiTest`s drive
+`ResumeUiTest`, `PickUiTest`, `MatchUiTest`, `MatchResumeUiTest` and the `Sample*UiTest`s drive
 the real screens on Robolectric; the UI tests read the sample library from
 `samples/` instead of the site.
 

@@ -6,9 +6,12 @@ import kotlinx.serialization.Serializable
 @Serializable
 enum class Direction { AToB, BToA }
 
-/** Typed: one card at a time, type the other side. Match: pair up tiles of side A and side B. */
+/**
+ * Typed: one card at a time, type the other side. Pick: one card at a time,
+ * pick the other side from a few choices. Match: pair up tiles of side A and side B.
+ */
 @Serializable
-enum class QuizMode { Typed, Match }
+enum class QuizMode { Typed, Pick, Match }
 
 /**
  * One card's record for one direction, as in the original quiz program.
@@ -52,6 +55,9 @@ data class Card(
     val statsBToA: Stats = Stats(),
     /** Match mode's own record: recognizing a pair is easier than typing, so it is kept apart. */
     val statsMatch: Stats = Stats(),
+    /** Pick mode's own records, one per direction, kept apart for the same reason. */
+    val statsPickAToB: Stats = Stats(),
+    val statsPickBToA: Stats = Stats(),
 ) {
     fun prompt(direction: Direction) = if (direction == Direction.AToB) a else b
 
@@ -59,7 +65,7 @@ data class Card(
 
     fun answer(direction: Direction) = if (direction == Direction.AToB) b else a
 
-    private fun answerImage(direction: Direction) = if (direction == Direction.AToB) imageB else imageA
+    fun answerImage(direction: Direction) = if (direction == Direction.AToB) imageB else imageA
 
     fun askable(direction: Direction) = answerImage(direction) == null && answer(direction).isNotBlank()
 
@@ -76,6 +82,23 @@ data class Card(
     fun matchable() = (a.isNotBlank() || imageA != null) && (b.isNotBlank() || imageB != null)
 
     fun isDueForMatch(threshold: Int) = matchable() && (threshold == 0 || statsMatch.level < threshold)
+
+    fun pickStats(direction: Direction) = if (direction == Direction.AToB) statsPickAToB else statsPickBToA
+
+    fun withPickStats(direction: Direction, stats: Stats) =
+        if (direction == Direction.AToB) copy(statsPickAToB = stats) else copy(statsPickBToA = stats)
+
+    /** Pick mode needs both sides too: the answer can be a picture, since it is picked, not typed. */
+    fun isDueForPick(direction: Direction, threshold: Int) =
+        matchable() && (threshold == 0 || pickStats(direction).level < threshold)
+
+    fun withoutStats() = copy(
+        statsAToB = Stats(),
+        statsBToA = Stats(),
+        statsMatch = Stats(),
+        statsPickAToB = Stats(),
+        statsPickBToA = Stats(),
+    )
 }
 
 /**
@@ -95,12 +118,15 @@ data class QuizSettings(
     val mode: QuizMode = QuizMode.Typed,
     /** Match mode: pairs on screen at a time. */
     val blockSize: Int = DEFAULT_BLOCK_SIZE,
+    /** Pick mode: choices per card, the right one included. */
+    val choices: Int = DEFAULT_CHOICES,
 ) {
     val hasRange: Boolean get() = rangeFrom != null || rangeTo != null
 
     companion object {
         const val DEFAULT_SESSION_SIZE = 20
         const val DEFAULT_BLOCK_SIZE = 6
+        const val DEFAULT_CHOICES = 4
     }
 }
 
@@ -130,7 +156,7 @@ data class Quiz(
 
     fun removeCard(id: Long) = copy(cards = cards.filterNot { it.id == id })
 
-    fun resetStats() = copy(cards = cards.map { it.copy(statsAToB = Stats(), statsBToA = Stats(), statsMatch = Stats()) })
+    fun resetStats() = copy(cards = cards.map { it.withoutStats() })
 
     /** The cards a session draws from: the settings' range, by position in the list. */
     fun cardsInRange(): List<Card> {
@@ -140,18 +166,21 @@ data class Quiz(
         return cards.subList(from - 1, to)
     }
 
-    /** Cards below the threshold for the selected mode (and direction, when typed). */
+    /** Cards below the threshold for the selected mode (and direction, when typed or picked). */
     fun due(): List<Card> = cardsInRange().filter {
-        if (settings.mode == QuizMode.Match) {
-            it.isDueForMatch(settings.threshold)
-        } else {
-            it.isDue(settings.direction, settings.threshold)
+        when (settings.mode) {
+            QuizMode.Typed -> it.isDue(settings.direction, settings.threshold)
+            QuizMode.Pick -> it.isDueForPick(settings.direction, settings.threshold)
+            QuizMode.Match -> it.isDueForMatch(settings.threshold)
         }
     }
 
     /** A card's level for the selected mode, as the card list shows it. */
-    fun level(card: Card) =
-        if (settings.mode == QuizMode.Match) card.statsMatch.level else card.stats(settings.direction).level
+    fun level(card: Card) = when (settings.mode) {
+        QuizMode.Typed -> card.stats(settings.direction).level
+        QuizMode.Pick -> card.pickStats(settings.direction).level
+        QuizMode.Match -> card.statsMatch.level
+    }
 
     /**
      * The cards the next session asks: with a range, every due card in it;
@@ -177,6 +206,8 @@ data class Quiz(
                 statsAToB = old?.statsAToB ?: Stats(),
                 statsBToA = old?.statsBToA ?: Stats(),
                 statsMatch = old?.statsMatch ?: Stats(),
+                statsPickAToB = old?.statsPickAToB ?: Stats(),
+                statsPickBToA = old?.statsPickBToA ?: Stats(),
             )
         }
         return copy(

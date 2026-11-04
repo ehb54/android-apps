@@ -76,10 +76,13 @@
     <string name="delete_quiz_confirm">Delete %1$s and all its cards? This cannot be undone.</string>
     <string name="direction_ab">A → B</string>
     <string name="direction_ba">B → A</string>
+    <string name="mode_type">Type</string>
+    <string name="mode_pick">Pick</string>
     <string name="mode_match">Match</string>
     <string name="threshold">Threshold</string>
     <string name="timer">Timer</string>
     <string name="block_size">Pairs per block</string>
+    <string name="choices">Choices</string>
     <string name="timer_off">off</string>
     <string name="seconds">%1$d s</string>
     <string name="shuffle">Shuffle</string>
@@ -117,6 +120,8 @@
     </plurals>
     <string name="match_hint">Tap a tile on each side that belong together.</string>
     <string name="not_a_pair">Not a pair. Try again.</string>
+    <string name="pick_hint">Pick the one that belongs.</string>
+    <string name="not_that_one">Not that one. Try again.</string>
     <string name="answer">Answer</string>
     <string name="check">Check</string>
     <string name="show_answer">Show answer</string>
