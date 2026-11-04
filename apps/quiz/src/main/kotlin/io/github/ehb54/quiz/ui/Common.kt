@@ -146,10 +146,9 @@ fun modeLabel(mode: QuizMode) = when (mode) {
  * has reached ("✓2"). Null when no card can be asked this way.
  */
 @Composable
-fun dueText(progress: Progress): String? = when {
-    progress.lowest == null -> null
-    progress.due == 0 -> stringResource(R.string.cleared_to, progress.lowest)
-    else -> progress.due.toString()
+fun dueText(progress: Progress): String? {
+    val lowest = progress.lowest ?: return null
+    return if (progress.due == 0) stringResource(R.string.cleared_to, lowest) else progress.due.toString()
 }
 
 /** A label with its due count: "Pick 2", "Pick ✓2", or just "Pick" when no card can be asked that way. */

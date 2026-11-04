@@ -1,6 +1,5 @@
 plugins {
     alias(libs.plugins.ehb54.android.application)
-    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
@@ -32,10 +31,11 @@ tasks.withType<Test>().configureEach {
 }
 
 dependencies {
+    // The rules, file formats and storage, shared with the desktop app.
+    implementation(project(":shared:quiz"))
     implementation(libs.androidx.exifinterface)
     implementation(libs.androidx.lifecycle.runtime.compose)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
-    implementation(libs.kotlinx.serialization.json)
 
     testImplementation(platform(libs.androidx.compose.bom))
     testImplementation(libs.androidx.compose.ui.test.junit4)

@@ -2,6 +2,7 @@ import com.android.build.api.dsl.LibraryExtension
 import io.github.ehb54.buildlogic.addComposeDependencies
 import io.github.ehb54.buildlogic.intVersion
 import io.github.ehb54.buildlogic.libs
+import io.github.ehb54.buildlogic.registerUnitTests
 import org.gradle.api.JavaVersion
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -37,6 +38,7 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
             }
 
             addComposeDependencies()
+            registerUnitTests("testDebugUnitTest")
         }
     }
 }

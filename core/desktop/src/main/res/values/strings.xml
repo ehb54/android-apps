@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Desktop-only text of the framework; the rest comes from core/ui. -->
+<resources>
+    <!-- Titles of the system's file dialogs. -->
+    <string name="core_desktop_open">Open</string>
+    <string name="core_desktop_save">Save</string>
+    <string name="core_desktop_choose_picture">Choose a picture</string>
+</resources>

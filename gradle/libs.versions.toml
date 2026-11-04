@@ -26,6 +26,15 @@ robolectric = "4.17"
 androidxTestCore = "1.7.0"
 espresso = "3.7.0"
 
+# Desktop apps: JetBrains' Compose Multiplatform (Android apps keep Google's Compose above).
+# Its Material 3 has its own version: the one each release lists in its notes
+# (1.12.2 ships 1.12.0-alpha03, based on Material3 1.5.0-alpha22).
+composeMultiplatform = "1.12.2"
+composeMultiplatformMaterial3 = "1.12.0-alpha03"
+coroutines = "1.11.0"
+# @StringRes and friends, so screens copied from an Android app compile unchanged.
+androidxAnnotation = "1.11.0"
+
 [libraries]
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
 androidx-compose-bom = { module = "androidx.compose:compose-bom", version.ref = "composeBom" }
@@ -43,15 +52,29 @@ robolectric = { module = "org.robolectric:robolectric", version.ref = "robolectr
 androidx-test-core = { module = "androidx.test:core", version.ref = "androidxTestCore" }
 androidx-test-espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "espresso" }
 
+# Desktop apps (Compose Multiplatform) and the plain-Kotlin modules they share with Android apps
+jetbrains-compose-material3 = { module = "org.jetbrains.compose.material3:material3", version.ref = "composeMultiplatformMaterial3" }
+jetbrains-compose-resources = { module = "org.jetbrains.compose.components:components-resources", version.ref = "composeMultiplatform" }
+jetbrains-compose-ui-test-junit4 = { module = "org.jetbrains.compose.ui:ui-test-junit4", version.ref = "composeMultiplatform" }
+kotlinx-coroutines-swing = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-swing", version.ref = "coroutines" }
+androidx-annotation = { module = "androidx.annotation:annotation", version.ref = "androidxAnnotation" }
+
 # build-logic only
 android-gradlePlugin = { module = "com.android.tools.build:gradle", version.ref = "agp" }
+kotlin-gradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+compose-gradlePlugin = { module = "org.jetbrains.compose:compose-gradle-plugin", version.ref = "composeMultiplatform" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+compose-multiplatform = { id = "org.jetbrains.compose", version.ref = "composeMultiplatform" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 # Convention plugins from build-logic/
 ehb54-android-application = { id = "ehb54.android.application" }
 ehb54-android-library = { id = "ehb54.android.library" }
+ehb54-jvm-library = { id = "ehb54.jvm.library" }
+ehb54-desktop-library = { id = "ehb54.desktop.library" }
+ehb54-desktop-application = { id = "ehb54.desktop.application" }

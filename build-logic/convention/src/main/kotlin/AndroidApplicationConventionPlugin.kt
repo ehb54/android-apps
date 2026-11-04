@@ -3,6 +3,7 @@ import io.github.ehb54.buildlogic.addComposeDependencies
 import io.github.ehb54.buildlogic.intVersion
 import io.github.ehb54.buildlogic.libs
 import io.github.ehb54.buildlogic.library
+import io.github.ehb54.buildlogic.registerUnitTests
 import io.github.ehb54.buildlogic.requiredProperty
 import io.github.ehb54.buildlogic.stringProperty
 import org.gradle.api.JavaVersion
@@ -89,6 +90,7 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
             }
 
             addComposeDependencies()
+            registerUnitTests("testDebugUnitTest")
             dependencies {
                 add("implementation", project(":core:ui"))
                 add("implementation", libs.library("androidx-activity-compose"))

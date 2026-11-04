@@ -1,6 +1,5 @@
 package io.github.ehb54.quiz.data
 
-import androidx.annotation.VisibleForTesting
 import io.github.ehb54.quiz.engine.SampleCatalog
 import io.github.ehb54.quiz.engine.SampleFile
 import io.github.ehb54.quiz.engine.parseCatalog
@@ -69,7 +68,6 @@ class SampleLibrary(cacheRoot: File, private val baseUrl: String = Companion.bas
         const val SITE = "https://ehb54.github.io/android-apps/quiz/samples/"
 
         /** The library address; tests point it at a local folder. */
-        @VisibleForTesting
         var baseUrl: String = SITE
     }
 }

@@ -14,6 +14,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  # Everything on Linux: lint, tests, APKs, bundles, and the desktop apps' .deb.
   build:
     runs-on: ubuntu-latest
     steps:
@@ -29,31 +30,99 @@ jobs:
       # Also validates the checksum of gradle/wrapper/gradle-wrapper.jar.
       - uses: gradle/actions/setup-gradle@v6
 
-      - name: Lint, unit tests, debug APKs, release bundles
+      - name: Lint, unit tests, debug APKs, release bundles, Linux installers
         run: tools/ci-build.sh
 
       - name: Keep lint and test reports
         if: always()
         uses: actions/upload-artifact@v7
         with:
-          name: reports
+          name: reports-linux
           path: |
             **/build/reports/
             **/build/test-results/
           if-no-files-found: ignore
 
+      - run: tools/collect-dist.sh dist linux-x64
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: dist-linux-x64
+          path: dist/
+
+  # The desktop apps' installers for macOS and Windows, each built on its own OS.
+  desktop:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runner: macos-15        # Apple silicon
+            platform: macos-arm64
+          - runner: macos-15-intel
+            platform: macos-x64
+          - runner: windows-latest
+            platform: windows-x64
+    runs-on: ${{ matrix.runner }}
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - uses: gradle/actions/setup-gradle@v6
+
+      - name: Desktop tests and installers
+        run: tools/ci-build.sh desktop
+
+      - name: Keep test reports
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: reports-${{ matrix.platform }}
+          path: |
+            **/build/reports/
+            **/build/test-results/
+          if-no-files-found: ignore
+
+      - run: tools/collect-dist.sh dist ${{ matrix.platform }}
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: dist-${{ matrix.platform }}
+          path: dist/
+
+  site:
+    if: github.event_name != 'pull_request'
+    needs: [build, desktop]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0  # the same version numbers as the builds
+
+      - uses: actions/download-artifact@v8
+        with:
+          pattern: dist-*
+          path: dist
+          merge-multiple: true
+
       - name: Assemble download site
-        if: github.event_name != 'pull_request'
-        run: tools/make-site.sh site
+        run: tools/make-site.sh site dist
 
       - uses: actions/upload-pages-artifact@v5
-        if: github.event_name != 'pull_request'
         with:
           path: site
 
   deploy:
     if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
-    needs: build
+    needs: site
     runs-on: ubuntu-latest
     permissions:
       pages: write

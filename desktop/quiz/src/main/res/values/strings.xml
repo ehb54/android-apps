@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Desktop wording where the Android app's (apps/quiz/src/main/res) speaks of tapping. -->
+<resources>
+    <string name="no_quizzes">No quizzes yet. Click + to make one. The ⋮ menu imports quiz files (.qzx, .zip, or Excel .xlsx with one quiz per tab) and lists sample quizzes to add.</string>
+    <string name="match_hint">Click a tile on each side that belong together.</string>
+</resources>

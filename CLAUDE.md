@@ -6,14 +6,18 @@ keys or passwords. Machine-specific settings go in `tools/local.env` (git-ignore
 
 ## What this is
 
-A monorepo of small Android apps that share one framework, in a single Gradle build:
+A monorepo of small Android apps that share one framework, in a single Gradle
+build, with desktop versions (macOS, Windows, Linux) built from the same code:
 
 | Path | What lives there |
 |---|---|
-| `build-logic/convention/` | Convention plugins `ehb54.android.application` and `ehb54.android.library`: SDK levels, Compose, versioning, signing, R8, lint. Shared build behavior changes here, never in an app's build file. |
+| `build-logic/convention/` | Convention plugins `ehb54.android.application` and `ehb54.android.library` (SDK levels, Compose, versioning, signing, R8, lint), `ehb54.jvm.library` (plain Kotlin shared by an app's Android and desktop versions) and `ehb54.desktop.application` / `ehb54.desktop.library` (see Desktop apps). Shared build behavior changes here, never in an app's build file. |
 | `core/ui/` | Shared Compose library: `AppTheme`, `BuildInfo`, `BuildInfoCard`, and the icons `core_ui_ic_add`, `core_ui_ic_more`, `core_ui_ic_back` (Google's material-icons library is deprecated, so icons are small vector drawables). Resources must start with `core_ui_` (`resourcePrefix`; lint warns otherwise). New shared code goes in `core/<module>/`; include it in `settings.gradle.kts`. |
 | `apps/<name>/` | One app each, picked up automatically by `settings.gradle.kts`. Its build file sets `namespace` and `applicationId`, plus any dependencies only that app uses. `apps/starter` is the template for new apps. |
 | `apps/quiz/` | Quiz, the flash-card app. Its rules come from a 1980/1993 terminal program: read `apps/quiz/DESIGN.md` before changing how sessions, levels or files work. |
+| `shared/<name>/` | Plain Kotlin that apps/<name> and desktop/<name> both use (Quiz: rules, file formats, storage). No Android or desktop classes. |
+| `desktop/<name>/` | The desktop version of apps/<name> (see Desktop apps). |
+| `core/desktop/` | Framework for desktop apps, the counterpart of `core/ui`: theme, build info, Android resources and stand-ins for the Android classes apps use. |
 | `gradle/libs.versions.toml` | Every version, including the SDK levels. |
 | `lint.xml` | Lint settings shared by every module; each entry says why it is there. |
 | `docker/Dockerfile`, `tools/` | The build pipeline (below). |
@@ -24,7 +28,8 @@ A monorepo of small Android apps that share one framework, in a single Gradle bu
 Stack: Kotlin, Jetpack Compose with Material 3, AGP 9 with its built-in Kotlin
 support (no `org.jetbrains.kotlin.android` plugin in modules; the root build file
 only pins its version), Gradle with configuration cache and build cache, JDK 21 to
-run the build, Java 17 bytecode.
+run the build, Java 17 bytecode. Desktop apps use JetBrains' Compose
+Multiplatform (Compose for Desktop) on the JVM; Android apps keep Google's Compose.
 
 ## Device constraints
 
@@ -36,9 +41,13 @@ run the build, Java 17 bytecode.
 
 ## Building
 
-There is one recipe, `tools/ci-build.sh`: `lint testDebugUnitTest assembleDebug
-bundleRelease` across all modules. Arguments replace the task list, e.g.
-`tools/ci-build.sh :apps:starter:assembleDebug`. Version numbers come from git via
+There is one recipe, `tools/ci-build.sh`: `lint unitTests assembleDebug
+bundleRelease packageDistributionForCurrentOS` across all modules (`unitTests` is
+each module's own: `testDebugUnitTest` on Android, `test` on the JVM; the last task
+makes the desktop installers for the OS it runs on). Arguments replace the task
+list, e.g. `tools/ci-build.sh :apps:starter:assembleDebug`; `tools/ci-build.sh
+desktop` builds only the desktop apps (`-PdesktopOnly` leaves the Android modules
+out of the build). Version numbers come from git via
 `tools/version-env.sh`, so the same commit gets the same numbers everywhere:
 
 - versionCode = number of commits on HEAD (only grows along `main`);
@@ -46,8 +55,11 @@ bundleRelease` across all modules. Arguments replace the task list, e.g.
 
 Ways to run it:
 
-1. **GitHub Actions**: every push and pull request. A push to `main` also deploys
-   the download site to `https://ehb54.github.io/android-apps/<app>/`.
+1. **GitHub Actions**: every push and pull request. The Linux job runs the whole
+   recipe; macOS (Apple silicon on `macos-15`, Intel on `macos-15-intel`) and
+   Windows jobs build the desktop installers; `tools/collect-dist.sh` gathers each
+   job's results. A push to `main` also deploys the download site to
+   `https://ehb54.github.io/android-apps/<app>/`.
 2. **Any Docker host**: `tools/docker-build.sh [tasks]`. Builds the image from
    `docker/Dockerfile` (JDK 21, Gradle, SDK; tagged by compileSdk and build-tools,
    so a version bump builds a new one), runs the recipe in it as the calling user,
@@ -77,8 +89,9 @@ The `android` CLI that replaced `sdkmanager` reports usage to Google unless it g
 
 ## Tests
 
-- Plain Kotlin logic (engines, file formats, storage) gets JVM unit tests in
-  `src/test/`. Keep it free of Android classes so it stays testable.
+- Plain Kotlin logic (engines, file formats, storage) lives in `shared/<app>/`
+  with JVM unit tests in its `src/test/`. Keep it free of Android classes so it
+  stays testable and the desktop app can use it.
 - UI tests run the real app on **Robolectric** (the Android framework on the JVM),
   with no device or emulator: see `apps/quiz/src/test/.../QuizUiTest.kt`. What it
   took to make them work:
@@ -103,6 +116,47 @@ The `android` CLI that replaced `sdkmanager` reports usage to Google unless it g
   `apps/<app>/samples/catalog.json`, to `<app>/samples/` on the download site.
   Quiz's Sample quizzes screen lists the catalog there and downloads what the
   user adds (see `apps/quiz/DESIGN.md`; the catalog is regenerated by a test).
+
+## Desktop apps
+
+`desktop/<name>/` is the desktop version of `apps/<name>`, built from the Android
+app's own code, so the Android app is never edited for it and screens exist once:
+
+- **Sources.** The Android app's Kotlin (screens, view model) is compiled for the
+  desktop by `copyAndroidSources` (build-logic's `CopyAndroidSources`), which points
+  its Android imports (`android.*`, `androidx.activity`, `androidx.lifecycle`,
+  `androidx.compose.ui.res`, `LocalContext`, `core.ui`) at stand-ins of the same
+  names in `core/desktop` (`AndroidCompat.kt`, `Resources.kt`, `Back.kt`). A file
+  in `desktop/<name>/src/main/kotlin` replaces the Android file at the same path
+  (Quiz: `data/Images.kt`, pictures with Skia); `*Activity.kt` is left out, and the
+  desktop app has its own `Main.kt`.
+- **Resources.** `generateAndroidResources` turns the Android app's res folder
+  (strings, plurals, colors, vector drawables) and assets into an `R` with Android
+  style ids in the app's package, so `R.string.x` code compiles unchanged.
+  `desktop/<name>/src/main/res` overrides entries by name (desktop wording, e.g.
+  "Click" for "Tap"). Text is formatted with `String.format`, as on Android.
+- **Missing stand-in.** A desktop build that fails with an unresolved
+  `io.github.ehb54.core.desktop.<Name>` means the Android code started using an
+  Android class with no stand-in: add one to `core/desktop` with the same
+  signature (only what is used), or give the desktop app its own version of that file.
+- **Behavior.** Escape is Back (`BackHandler`); file pickers are the system's
+  Open and Save dialogs; data goes in the OS's application data folder
+  (`AppFolders`: macOS `~/Library/Application Support/<App>`, Windows
+  `%APPDATA%\<App>`, Linux `~/.local/share/<app>`).
+- **Versions.** `BuildConfig` has the Android build's numbers. Installers need
+  `MAJOR.MINOR.PATCH` (macOS wants MAJOR above 0, Windows MINOR at most 255), so
+  their version is `1.0.<versionCode>`.
+- **Installers.** `packageDistributionForCurrentOS`: `.dmg` on macOS, `.msi` on
+  Windows, `.deb` on Linux, each with its own Java runtime, for the processor of
+  the machine that builds it (hence two macOS jobs in CI). They are not signed:
+  macOS asks for Control-click, Open the first time; Windows SmartScreen asks for
+  More info, Run anyway. Signing (Apple Developer ID and notarization, a Windows
+  code-signing certificate) is eb's decision. Each app's build file sets a fixed
+  Windows `upgradeUuid`; never change it.
+- **Running one from a checkout:** `./gradlew :desktop:quiz:run` on a computer
+  with a screen (not on the build hosts).
+- **Tests:** `src/test/` with Compose's desktop test rule (`createComposeRule`),
+  which renders off screen, so they run headless in CI and Docker.
 
 ## Getting an app onto the phone
 
@@ -147,6 +201,12 @@ until the phone reboots.
   still runs R8 and produces an unsigned bundle, which is how CI checks release builds.
 - Enroll each app in Play App Signing. Google then holds the real signing key, and
   a lost upload key can be reset from the Play Console.
+
+## Getting a desktop app onto a computer
+
+On the computer, open `https://ehb54.github.io/android-apps/<app>/` and pick the
+installer for it under Desktop (macOS Apple silicon or Intel, Windows, Linux); the
+page says how to get past the unsigned-app warnings.
 
 ## Adding an app
 
@@ -195,3 +255,6 @@ Keep these so publishing an app is a Console task, not a code rewrite:
 - Packages: `io.github.ehb54.<app>` for apps, `io.github.ehb54.core.<module>` for
   the framework.
 - Keep app build files minimal; anything two apps need moves to `build-logic/` or `core/`.
+- Code an app's Android and desktop versions share either lives in `shared/<app>`
+  (plain Kotlin) or stays in `apps/<app>` and is compiled for the desktop through
+  the stand-ins; never copy it into `desktop/<app>`.

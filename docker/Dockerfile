@@ -24,3 +24,11 @@ RUN apt-get update \
  && android --no-metrics sdk install platform-tools "platforms/${PLATFORM}" "build-tools/${BUILD_TOOLS}" > /dev/null \
  && rm -rf /root/.android \
  && chmod -R a+rX ${ANDROID_HOME}
+
+# Desktop apps: jpackage builds Linux .deb installers through fakeroot, and
+# Compose's Skia library links libGL even when it draws off screen (desktop UI
+# tests). The base image already has binutils for jlink and fontconfig with
+# DejaVu fonts. A layer of its own, so the SDK above stays cached.
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends fakeroot libgl1 \
+ && rm -rf /var/lib/apt/lists/*
