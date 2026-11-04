@@ -70,6 +70,11 @@ abstract class QuizUiTest {
         compose.onNodeWithContentDescription(description).performSemanticsAction(SemanticsActions.OnClick)
     }
 
+    /** Taps the mode or direction chip [label]; chips also show a due count ("Pick 2"). */
+    protected fun tapChip(label: String) {
+        compose.onNodeWithText("$label ", substring = true).performClick()
+    }
+
     /** Waits for the message [text], then until it goes away: it covers the bottom of the screen. */
     protected fun waitForMessage(text: String) {
         compose.waitForText(text)

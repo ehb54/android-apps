@@ -170,7 +170,7 @@ internal fun pickChoices(quiz: Quiz, card: Card, direction: Direction, count: In
 }
 
 private fun answerKey(card: Card, direction: Direction) =
-    card.answerImage(direction)?.let { "picture:$it" } ?: normalizeAnswer(card.answer(direction))
+    card.answerMedia(direction)?.let { "file:$it" } ?: normalizeAnswer(card.answer(direction))
 
 private fun Session.withChoices(quiz: Quiz, random: Random): Session {
     val card = current?.let(quiz::card) ?: return copy(choices = emptyList(), ruledOut = emptySet())

@@ -27,17 +27,23 @@ class QuizFilesTest {
     }
 
     @Test
-    fun zipRoundTripKeepsQzxAndPictures() {
+    fun zipRoundTripKeepsQzxPicturesAndSounds() {
         val picture = folder.newFile("mol.png").apply { writeBytes(byteArrayOf(1, 2, 3)) }
+        val sound = folder.newFile("say.mp3").apply { writeBytes(byteArrayOf(4, 5)) }
+        val notes = folder.newFile("notes.txt").apply { writeBytes(byteArrayOf(6)) }
         val out = ByteArrayOutputStream()
-        writeZip(out, "molecules", "!mol.png\ncaffeine\n", mapOf("mol.png" to picture))
+        val qzx = "!mol.png\ncaffeine\n!say.mp3\ncaffeine\n"
+        writeZip(out, "molecules", qzx, mapOf("mol.png" to picture, "sounds/say.mp3" to sound, "notes.txt" to notes))
         val bytes = out.toByteArray()
         assertTrue(isZip(bytes))
         assertFalse(isZip("cat\nchat\n".toByteArray()))
 
+        // Pictures and sounds are kept by file name, without folders; other files are left out.
         val bundle = readZip(bytes.inputStream())
-        assertEquals("!mol.png\ncaffeine\n", bundle.qzx)
-        assertArrayEquals(byteArrayOf(1, 2, 3), bundle.images.getValue("mol.png"))
+        assertEquals(qzx, bundle.qzx)
+        assertEquals(setOf("mol.png", "say.mp3"), bundle.files.keys)
+        assertArrayEquals(byteArrayOf(1, 2, 3), bundle.files.getValue("mol.png"))
+        assertArrayEquals(byteArrayOf(4, 5), bundle.files.getValue("say.mp3"))
     }
 
     @Test(expected = java.io.IOException::class)

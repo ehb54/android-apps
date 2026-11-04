@@ -116,8 +116,8 @@ class MatchTest {
     @Test
     fun picturesAreTilesToo() {
         val quiz = Quiz("q", "test", settings = QuizSettings(mode = QuizMode.Match))
-            .addCard("", "caffeine", imageA = "caffeine.png")
-            .addCard("", "", imageA = "a.png", imageB = "b.png")
+            .addCard("", "caffeine", mediaA = "caffeine.png")
+            .addCard("", "", mediaA = "a.png", mediaB = "b.png")
         assertEquals(2, startMatch(quiz, random)!!.total)
     }
 

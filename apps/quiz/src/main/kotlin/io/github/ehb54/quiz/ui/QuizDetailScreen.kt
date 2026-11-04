@@ -54,6 +54,7 @@ import io.github.ehb54.quiz.model.Direction
 import io.github.ehb54.quiz.model.Quiz
 import io.github.ehb54.quiz.model.QuizMode
 import io.github.ehb54.quiz.model.QuizSettings
+import io.github.ehb54.quiz.model.isSound
 import java.io.File
 import io.github.ehb54.core.ui.R as CoreR
 
@@ -100,7 +101,7 @@ fun QuizDetailScreen(quiz: Quiz, vm: QuizViewModel, snackbar: SnackbarHostState)
                         listOf(
                             R.string.rename to { dialog = DetailDialog.Rename },
                             R.string.export to {
-                                if (quiz.imageFiles().isEmpty()) {
+                                if (quiz.mediaFiles().isEmpty()) {
                                     exportText.launch("${quiz.name}.qzx")
                                 } else {
                                     exportZip.launch("${quiz.name}.zip")
@@ -126,7 +127,7 @@ fun QuizDetailScreen(quiz: Quiz, vm: QuizViewModel, snackbar: SnackbarHostState)
                 HorizontalDivider()
             }
             itemsIndexed(quiz.cards, key = { _, card -> card.id }) { index, card ->
-                CardRow(index + 1, card, quiz.level(card), vm.imageDir) { editing = card.id }
+                CardRow(index + 1, card, quiz.level(card), vm.mediaDir) { editing = card.id }
             }
             // Room to scroll the last card out from under the + button.
             item { Spacer(Modifier.height(88.dp)) }
@@ -137,8 +138,9 @@ fun QuizDetailScreen(quiz: Quiz, vm: QuizViewModel, snackbar: SnackbarHostState)
         val card = quiz.card(id)
         CardEditor(
             card = card,
-            imageDir = vm.imageDir,
+            mediaDir = vm.mediaDir,
             onPickPicture = vm::storePicture,
+            onPickSound = vm::storeSound,
             onDismiss = { editing = null },
             onSave = {
                 vm.saveCard(quiz.id, it)
@@ -303,20 +305,25 @@ private fun NumberField(value: Int?, placeholder: String, @StringRes label: Int,
 }
 
 @Composable
-private fun CardRow(number: Int, card: Card, level: Int, imageDir: File, onClick: () -> Unit) {
+private fun CardRow(number: Int, card: Card, level: Int, mediaDir: File, onClick: () -> Unit) {
     ListItem(
         leadingContent = { Text(number.toString(), style = MaterialTheme.typography.labelMedium) },
-        headlineContent = { Side(card.a, card.imageA, imageDir) },
-        supportingContent = { Side(card.b, card.imageB, imageDir) },
+        headlineContent = { Side(card.a, card.mediaA, mediaDir) },
+        supportingContent = { Side(card.b, card.mediaB, mediaDir) },
         trailingContent = { Text(stringResource(R.string.level, level)) },
         modifier = Modifier.clickable(onClick = onClick),
     )
 }
 
 @Composable
-private fun Side(text: String, image: String?, imageDir: File) {
-    if (image != null) {
-        CardImage(File(imageDir, image), Modifier.height(48.dp), maxSide = 192)
+private fun Side(text: String, media: String?, mediaDir: File) {
+    if (media != null && isSound(media)) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            SoundButton(File(mediaDir, media))
+            Text(stringResource(R.string.sound))
+        }
+    } else if (media != null) {
+        CardImage(File(mediaDir, media), Modifier.height(48.dp), maxSide = 192)
     } else {
         Text(text, maxLines = 2, overflow = TextOverflow.Ellipsis)
     }

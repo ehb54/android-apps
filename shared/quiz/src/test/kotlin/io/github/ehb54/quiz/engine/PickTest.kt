@@ -98,8 +98,8 @@ class PickTest {
     @Test
     fun picturesCanBeChoicesButTypedSessionsSkipThem() {
         val quiz = Quiz("q", "test", settings = QuizSettings(mode = QuizMode.Pick, direction = Direction.BToA))
-            .addCard("", "caffeine", imageA = "caffeine.png")
-            .addCard("", "water", imageA = "water.png")
+            .addCard("", "caffeine", mediaA = "caffeine.png")
+            .addCard("", "water", mediaA = "water.png")
         assertEquals(2, startPickSession(quiz, random)!!.total)
         assertNull(startSession(quiz.copy(settings = quiz.settings.copy(mode = QuizMode.Typed)), random))
     }

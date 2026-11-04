@@ -87,15 +87,16 @@ is dropped, as the original import did.
   Removing a sample deletes the quiz (after asking); it can be added again.
   This is the app's only network use (the INTERNET permission): it fetches
   public files and sends nothing about the user (for Play's Data safety form).
-- **Pictures instead of commands.** A side starting with `!` ran a program in
-  the original (for example a molecule viewer). Here a side can be a picture
-  from the phone. A picture can only be shown, never typed, so a card with a
-  picture is asked only in the direction where the picture is the prompt.
+- **Pictures and sounds instead of commands.** A side starting with `!` ran a
+  program in the original (for example a molecule viewer). Here a side can be
+  a picture or a sound from the phone (see Sounds below). Neither can be
+  typed, so typing asks a card only in the direction whose answer is text.
   Pictures are scaled to at most 1600 pixels, turned upright and stored in the
   app.
-- **Zip files carry pictures:** a `.zip` holds one `.qzx` file plus the image
-  files, and a side written `!name.png` is the picture of that name. Export
-  writes `.qzx` when a quiz has no pictures and `.zip` when it does.
+- **Zip files carry pictures and sounds:** a `.zip` holds one `.qzx` file plus
+  the files, and a side written `!name.png` is the picture of that name,
+  `!name.mp3` the sound (by the extension). Export writes `.qzx` when a quiz
+  has neither and `.zip` when it has either.
 - **Excel workbooks** (`.xlsx`, for example a Google Sheet downloaded on the
   phone): each tab becomes its own quiz, named after the tab, with side A from
   the first column and side B from the second. Rows missing either side are
@@ -129,7 +130,9 @@ Decisions made with eb:
   wrong pair with one still counts as a miss for the scored card.
 - **Same content, either way.** Two cards showing the same thing (two side Bs
   reading "time") may be paired either way round.
-- **Pictures** are tiles like text, on either side, since nothing is typed.
+- **Pictures and sounds** are tiles like text, on either side, since nothing
+  is typed. A sound tile has a button that plays it; a tap elsewhere on the
+  tile picks it, so listening never makes a pair.
 - **No leaving**, as in typed sessions: Back only says how many cards are left,
   and the session (block, pairs made, misses) is saved after every pair and
   resumes on the next launch. The debug-only long press on the round counter
@@ -154,8 +157,43 @@ both, and `ui/PickScreen.kt`). Decisions made with eb:
 - **Its own levels**, one per direction (`statsPickAToB`, `statsPickBToA`):
   picking from a few choices is easier than typing, so it never makes a card
   learned for typing or for Match.
-- **Pictures** can be prompts and choices; a card whose answer is a picture is
-  asked in Pick mode but not in typed mode.
+- **Pictures and sounds** can be prompts and choices; a card whose answer is a
+  picture or a sound is asked in Pick mode but not in typed mode. A sound
+  choice plays from its button and is picked by a tap elsewhere on it.
+
+## Sounds
+
+Added 2026-11-04 (eb: "keep separate for now. add support for sound"; see the
+study below). A side is text or a file, and the file is a picture or a sound by
+its extension (`model/Media.kt`). The engine's rules were already about files,
+not pictures: a file can't be typed, and two tiles or choices showing the same
+file belong together. So sound needed no new rules, only storage, playing and
+screens. In stored quizzes the fields are still named `imageA`/`imageB`.
+
+- **Formats:** MP3, AAC (`.m4a` or raw ADTS), Ogg Vorbis, WAV and FLAC, all of
+  which Android 8 and 9 play. A sound is stored as it is, under the extension
+  its first bytes show (`data/Sounds.kt`), so a file that isn't sound is
+  refused when it is added, not when it fails to play.
+- **Where sounds come from:** zips (`!name.mp3`), and in the card editor
+  *Use a sound*, which picks an audio file. No recording: that would need the
+  microphone permission (a Data safety answer on Play).
+- **Playing** (`ui/SoundPlayer.kt`, the only file that uses Android's media
+  classes): one sound at a time, ducking other
+  apps' audio briefly. A prompt that is a sound plays by itself when the card
+  shows, and its large button stops it or plays it again. The answer timer
+  starts when that first playing ends, so a long sound doesn't count against
+  you. Sounds stop when the app goes to the background, and the volume keys set
+  media volume.
+- **On the desktop** (its own `ui/SoundPlayer.kt`) sounds play through Java
+  Sound, which comes with the Java runtime but reads only uncompressed sound:
+  WAV plays (the Morse sample included); MP3, AAC, Ogg Vorbis and FLAC are
+  stored and exported as on the phone, but report that only WAV plays. Playing
+  them there would take a decoder library per format, or JavaFX.
+- **A card can be two files** (a sound and a picture): typing can't ask it,
+  Pick and Match can. The editor no longer limits a card to one picture.
+- **Sample:** *Morse code*, 26 letters as tones made by `tools/samples/morse.py`
+  (no outside source to credit; 13 KB). Hear the letter and type it; see the
+  letter and pick its sound; pair sounds with letters.
 
 ## Due counts
 
@@ -194,6 +232,39 @@ it rather than replacing it.
 - Escape is Back, with the same rule: a running session cannot be left, and
   closing the window keeps it for next time, as on the phone.
 - Wording that speaks of tapping has desktop text in `desktop/quiz/src/main/res`.
+- Only WAV sounds play on the desktop (see Sounds).
+
+## Several fields per card: studied, not chosen
+
+eb asked (2026-11-04) why a card can't hold text A, text B, a picture and a
+sound together, and be quizzed in any pairing (sound to picture, picture to
+text, text to text, and so on), even when some cards lack some fields. Three
+designs were compared on user experience, dataset upkeep and code:
+
+- **Separate (chosen for now):** quizzes stay two-sided. A word list with
+  pictures and sounds becomes several quizzes (picture/word, sound/word,
+  word/meaning).
+- **Pairings:** one quiz of multi-field records; the quiz page picks a prompt
+  field and an answer field.
+- **Views:** a deck of multi-field records, where each pair of fields shows up
+  as its own quiz and behaves like today's two-sided quiz (Anki's notes and
+  card templates work this way).
+
+What we found:
+
+- **Holes are easy in any design:** a pairing asks only the cards that have
+  both fields, and typing also needs a text answer. That is the rule already
+  used for pictures.
+- **Pairings was dropped.** Four choices before a session starts, up to 24
+  level records per card (5 today), due counts that can't all be shown, and
+  every engine keyed by field pair instead of direction.
+- **Separate or Views turns on dataset upkeep.** Generated lists are fixed
+  once in the generator and rebuilt, so duplicate quizzes cost little.
+  Hand-built picture and sound datasets drift across sibling quizzes, which
+  Views avoids by keeping one record per item.
+- **Views can come later without loss:** a two-sided quiz is a two-field deck
+  with one view. Keeping levels in a map keyed by mode and direction, instead
+  of five named fields, would make that step (and any new mode) cheaper.
 
 ## Code map
 
@@ -213,8 +284,11 @@ them unchanged (see CLAUDE.md, Desktop apps).
 | `shared/quiz`: `engine/Spreadsheet.kt` | `.xlsx` reading |
 | `shared/quiz`: `engine/Samples.kt` | The sample catalog: its format, and building it from the sample files |
 | `shared/quiz`: `data/QuizStore.kt` | JSON files in app storage, written atomically |
+| `shared/quiz`: `model/Media.kt` | Whether a side's file is a picture or a sound |
+| `shared/quiz`: `data/Sounds.kt` | Recognizing and storing sounds |
 | `shared/quiz`: `data/SampleLibrary.kt` | Fetching the catalog and sample files from the download site, with an offline cache |
 | `apps/quiz`: `data/Images.kt` | Storing and loading pictures (Android's BitmapFactory; `desktop/quiz` has its own, with Skia) |
+| `apps/quiz`: `ui/SoundPlayer.kt` | Playing sounds (Android's media classes live here only; `desktop/quiz` has its own, with Java Sound) |
 | `apps/quiz`: `ui/QuizViewModel.kt` | Screen state; every change is saved on one disk thread, in order |
 | `apps/quiz`: `ui/*Screen.kt`, `ui/CardEditor.kt` | Compose screens |
 | `desktop/quiz`: `Main.kt` | The desktop window; Escape is Back |
@@ -223,4 +297,4 @@ them unchanged (see CLAUDE.md, Desktop apps).
 
 Tests follow the code: the rules' tests in `shared/quiz/src/test/`, the Android
 UI tests (Robolectric) and `SampleCatalogTest` in `apps/quiz/src/test/`, and a
-desktop UI test plus the picture tests in `desktop/quiz/src/test/`.
+desktop UI test plus the picture and sound tests in `desktop/quiz/src/test/`.

@@ -380,6 +380,21 @@
             ]
         },
         {
+            "file": "Morse code.zip",
+            "bytes": 13493,
+            "sha256": "29f60634a8fd7dae4ba28f566b263b572bdc15b1374731423a50499442b478c4",
+            "builtIn": true,
+            "quizzes": [
+                {
+                    "name": "Morse code",
+                    "source": "Morse code.zip",
+                    "version": "29f60634a8fd7dae4ba28f566b263b572bdc15b1374731423a50499442b478c4",
+                    "cards": 26,
+                    "sounds": 26
+                }
+            ]
+        },
+        {
             "file": "Shapes.zip",
             "bytes": 7793,
             "sha256": "cf51461a0b92a613b48a169a45d9f27ee93ef1a5cdeabc78b7d1a3a5c08c72ec",

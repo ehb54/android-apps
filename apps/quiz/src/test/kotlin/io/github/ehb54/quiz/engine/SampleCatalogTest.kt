@@ -40,6 +40,14 @@ class SampleCatalogTest {
     }
 
     @Test
+    fun zipsCountTheirPicturesAndSounds() {
+        val shapes = sampleEntries("Shapes.zip", File(builtIn, "Shapes.zip").readBytes()).single()
+        assertEquals(listOf(6, 6, 0), listOf(shapes.cards, shapes.pictures, shapes.sounds))
+        val morse = sampleEntries("Morse code.zip", File(builtIn, "Morse code.zip").readBytes()).single()
+        assertEquals(listOf(26, 0, 26), listOf(morse.cards, morse.pictures, morse.sounds))
+    }
+
+    @Test
     fun statusComparesTheFingerprint() {
         val entry = SampleEntry("Shapes", "Shapes.zip", "v2", 6, 6)
         val added = Quiz("q", "Shapes", source = "Shapes.zip", sourceVersion = "v2")

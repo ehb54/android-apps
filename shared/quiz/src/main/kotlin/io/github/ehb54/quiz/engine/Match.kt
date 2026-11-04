@@ -124,8 +124,8 @@ private fun nextBlock(quiz: Quiz, session: MatchSession, random: Random): MatchS
 /** Tiles belong together when they are the same card's, or when two cards show the same thing. */
 private fun belongTogether(a: Card?, b: Card?): Boolean {
     if (a == null || b == null) return false
-    return a.id == b.id || sameSide(a.b, a.imageB, b.b, b.imageB) || sameSide(a.a, a.imageA, b.a, b.imageA)
+    return a.id == b.id || sameSide(a.b, a.mediaB, b.b, b.mediaB) || sameSide(a.a, a.mediaA, b.a, b.mediaA)
 }
 
-private fun sameSide(text: String, image: String?, otherText: String, otherImage: String?) =
-    if (image != null || otherImage != null) image == otherImage else answersMatch(text, otherText)
+private fun sameSide(text: String, media: String?, otherText: String, otherMedia: String?) =
+    if (media != null || otherMedia != null) media == otherMedia else answersMatch(text, otherText)

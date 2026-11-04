@@ -22,67 +22,90 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import io.github.ehb54.quiz.R
 import io.github.ehb54.quiz.model.Card
+import io.github.ehb54.quiz.model.isSound
 import java.io.File
 
 /**
- * Adds or edits a card. Each side is text or a picture; only one side may be
- * a picture, since the other has to be typed. Editing keeps the card's stats.
+ * Adds or edits a card. Each side is text, a picture or a sound. A picture or
+ * a sound can't be typed, so a card with both sides as files is only asked in
+ * Pick and Match. Editing keeps the card's stats.
  */
 @Composable
 fun CardEditor(
     card: Card?,
-    imageDir: File,
+    mediaDir: File,
     onPickPicture: (Uri, (String?) -> Unit) -> Unit,
+    onPickSound: (Uri, (String?) -> Unit) -> Unit,
     onDismiss: () -> Unit,
     onSave: (Card) -> Unit,
     onDelete: (() -> Unit)?,
 ) {
     var a by rememberSaveable { mutableStateOf(card?.a.orEmpty()) }
     var b by rememberSaveable { mutableStateOf(card?.b.orEmpty()) }
-    var imageA by rememberSaveable { mutableStateOf(card?.imageA) }
-    var imageB by rememberSaveable { mutableStateOf(card?.imageB) }
+    var mediaA by rememberSaveable { mutableStateOf(card?.mediaA) }
+    var mediaB by rememberSaveable { mutableStateOf(card?.mediaB) }
     var pickingA by rememberSaveable { mutableStateOf(true) }
-    val picker = rememberLauncherForActivityResult(ActivityResultContracts.PickVisualMedia()) { uri ->
-        if (uri != null) {
-            onPickPicture(uri) { name ->
-                if (name != null) {
-                    if (pickingA) imageA = name else imageB = name
-                }
-            }
+    val stored: (String?) -> Unit = { name ->
+        if (name != null) {
+            if (pickingA) mediaA = name else mediaB = name
         }
     }
-    fun pick(sideA: Boolean) {
-        pickingA = sideA
-        picker.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
+    val picturePicker = rememberLauncherForActivityResult(ActivityResultContracts.PickVisualMedia()) { uri ->
+        if (uri != null) onPickPicture(uri, stored)
     }
-    val valid = (imageA != null || a.isNotBlank()) && (imageB != null || b.isNotBlank())
+    // Sounds come from files: recording would need the microphone permission.
+    val soundPicker = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
+        if (uri != null) onPickSound(uri, stored)
+    }
+    fun pickPicture(sideA: Boolean) {
+        pickingA = sideA
+        picturePicker.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
+    }
+    fun pickSound(sideA: Boolean) {
+        pickingA = sideA
+        soundPicker.launch(arrayOf("audio/*"))
+    }
+    val valid = (mediaA != null || a.isNotBlank()) && (mediaB != null || b.isNotBlank())
 
     AlertDialog(
         onDismissRequest = onDismiss,
         title = { Text(stringResource(if (card == null) R.string.add_card else R.string.edit_card)) },
         text = {
             Column(Modifier.verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                SideEditor(R.string.side_a, a, { a = it }, imageA, imageDir, imageB == null, { pick(true) }) {
-                    imageA = null
-                }
-                SideEditor(R.string.side_b, b, { b = it }, imageB, imageDir, imageA == null, { pick(false) }) {
-                    imageB = null
-                }
+                SideEditor(
+                    label = R.string.side_a,
+                    text = a,
+                    onText = { a = it },
+                    media = mediaA,
+                    mediaDir = mediaDir,
+                    onPickPicture = { pickPicture(true) },
+                    onPickSound = { pickSound(true) },
+                ) { mediaA = null }
+                SideEditor(
+                    label = R.string.side_b,
+                    text = b,
+                    onText = { b = it },
+                    media = mediaB,
+                    mediaDir = mediaDir,
+                    onPickPicture = { pickPicture(false) },
+                    onPickSound = { pickSound(false) },
+                ) { mediaB = null }
             }
         },
         confirmButton = {
             TextButton(
                 onClick = {
                     val edited = (card ?: Card(id = 0)).copy(
-                        a = if (imageA != null) "" else a.trim(),
-                        b = if (imageB != null) "" else b.trim(),
-                        imageA = imageA,
-                        imageB = imageB,
+                        a = if (mediaA != null) "" else a.trim(),
+                        b = if (mediaB != null) "" else b.trim(),
+                        mediaA = mediaA,
+                        mediaB = mediaB,
                     )
                     onSave(edited)
                 },
@@ -103,23 +126,33 @@ private fun SideEditor(
     @StringRes label: Int,
     text: String,
     onText: (String) -> Unit,
-    image: String?,
-    imageDir: File,
-    canPick: Boolean,
-    onPick: () -> Unit,
+    media: String?,
+    mediaDir: File,
+    onPickPicture: () -> Unit,
+    onPickSound: () -> Unit,
     onRemove: () -> Unit,
 ) {
     Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
-        if (image != null) {
+        if (media != null) {
             Text(stringResource(label), style = MaterialTheme.typography.labelLarge)
-            CardImage(
-                File(imageDir, image),
-                Modifier
-                    .fillMaxWidth()
-                    .heightIn(max = 160.dp),
-                maxSide = 640,
-            )
-            TextButton(onClick = onRemove) { Text(stringResource(R.string.remove_picture)) }
+            val sound = isSound(media)
+            if (sound) {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    SoundButton(File(mediaDir, media))
+                    Text(stringResource(R.string.sound))
+                }
+            } else {
+                CardImage(
+                    File(mediaDir, media),
+                    Modifier
+                        .fillMaxWidth()
+                        .heightIn(max = 160.dp),
+                    maxSide = 640,
+                )
+            }
+            TextButton(onClick = onRemove) {
+                Text(stringResource(if (sound) R.string.remove_sound else R.string.remove_picture))
+            }
         } else {
             OutlinedTextField(
                 value = text,
@@ -128,7 +161,10 @@ private fun SideEditor(
                 singleLine = true,
                 modifier = Modifier.fillMaxWidth(),
             )
-            if (canPick) TextButton(onClick = onPick) { Text(stringResource(R.string.use_picture)) }
+            Row {
+                TextButton(onClick = onPickPicture) { Text(stringResource(R.string.use_picture)) }
+                TextButton(onClick = onPickSound) { Text(stringResource(R.string.use_sound)) }
+            }
         }
     }
 }

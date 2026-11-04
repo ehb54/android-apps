@@ -7,7 +7,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardActions
@@ -26,6 +25,7 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -46,7 +46,7 @@ import io.github.ehb54.quiz.model.Quiz
 import java.io.File
 
 /**
- * One card at a time: the prompt (text or picture) and a field for the answer.
+ * One card at a time: the prompt (text, picture or sound) and a field for the answer.
  * Wrong answers clear the field and the card stays; "Show answer" counts as a
  * miss and hides the answer again before you type it. Back does not leave.
  */
@@ -57,7 +57,7 @@ fun AskingScreen(
     session: Session,
     feedback: Feedback?,
     revealed: Boolean,
-    imageDir: File,
+    mediaDir: File,
     snackbar: SnackbarHostState,
     vm: QuizViewModel,
 ) {
@@ -66,7 +66,8 @@ fun AskingScreen(
     val direction = session.direction
     val attempt = listOf(session.round, card.id, session.missesOnCurrent)
     var typed by rememberSaveable(attempt) { mutableStateOf("") }
-    val shownAt = remember(attempt, revealed) { SystemClock.elapsedRealtime() }
+    // The timer starts when the card shows, or when its sound has played.
+    var shownAt by remember(attempt, revealed) { mutableLongStateOf(SystemClock.elapsedRealtime()) }
     val focus = remember { FocusRequester() }
     fun submit() {
         if (typed.isNotBlank()) vm.submit(typed, SystemClock.elapsedRealtime() - shownAt)
@@ -92,16 +93,9 @@ fun AskingScreen(
                 .verticalScroll(rememberScrollState()),
             verticalArrangement = Arrangement.spacedBy(16.dp),
         ) {
-            card.promptImage(direction)?.let {
-                CardImage(
-                    File(imageDir, it),
-                    Modifier
-                        .fillMaxWidth()
-                        .heightIn(max = 360.dp),
-                )
+            Prompt(card, direction, mediaDir, pictureHeight = 360.dp, playKey = listOf(session.round, card.id)) {
+                shownAt = SystemClock.elapsedRealtime()
             }
-            val prompt = card.prompt(direction)
-            if (prompt.isNotBlank()) Text(prompt, style = MaterialTheme.typography.headlineMedium)
 
             if (revealed) {
                 Text(stringResource(R.string.answer_is), style = MaterialTheme.typography.labelLarge)

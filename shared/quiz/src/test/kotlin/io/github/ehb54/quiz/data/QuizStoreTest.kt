@@ -49,11 +49,11 @@ class QuizStoreTest {
     @Test
     fun onlyUnusedPicturesAreRemoved() {
         val store = QuizStore(folder.newFolder())
-        store.imageDir.mkdirs()
-        store.imageFile("used.png").writeText("x")
-        store.imageFile("left-over.png").writeText("x")
-        store.removeUnusedImages(setOf("used.png"))
-        assertTrue(store.imageFile("used.png").exists())
-        assertFalse(store.imageFile("left-over.png").exists())
+        store.mediaDir.mkdirs()
+        store.mediaFile("used.png").writeText("x")
+        store.mediaFile("left-over.png").writeText("x")
+        store.removeUnusedMedia(setOf("used.png"))
+        assertTrue(store.mediaFile("used.png").exists())
+        assertFalse(store.mediaFile("left-over.png").exists())
     }
 }

@@ -34,11 +34,6 @@ abstract class ChemicalSymbolsUiTest : QuizUiTest() {
 
     protected fun startChemicalSymbolsMatch() = startChemicalSymbols("Match", "Pairs per block")
 
-    /** Taps the mode or direction chip [label]; chips also show a due count ("Pick 2"). */
-    protected fun tapChip(label: String) {
-        compose.onNodeWithText("$label ", substring = true).performClick()
-    }
-
     protected fun pair(left: String, right: String) {
         compose.onNodeWithText(left).performClick()
         compose.onNodeWithText(right).performClick()

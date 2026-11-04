@@ -1,6 +1,7 @@
 // Quiz for macOS, Windows and Linux: the Android app's screens and rules
-// (apps/quiz, shared/quiz) compiled for the desktop. Only the window (Main.kt)
-// and picture decoding (data/Images.kt) are the desktop's own.
+// (apps/quiz, shared/quiz) compiled for the desktop. Only the window (Main.kt),
+// picture decoding (data/Images.kt) and sound playing (ui/SoundPlayer.kt) are
+// the desktop's own.
 plugins {
     alias(libs.plugins.ehb54.desktop.application)
 }

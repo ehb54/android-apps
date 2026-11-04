@@ -55,8 +55,8 @@ class DueTest {
     @Test
     fun aPictureAnswerIsLeftOutOfTypingButNotPickingOrMatching() {
         val quiz = Quiz("q", "test")
-            .addCard("", "circle", imageA = "circle.png")
-            .addCard("", "square", imageA = "square.png")
+            .addCard("", "circle", mediaA = "circle.png")
+            .addCard("", "square", mediaA = "square.png")
 
         // Side A is a picture: typing can ask A -> B (type the name) but not B -> A.
         assertEquals(Progress(cards = 2, due = 2, lowest = 0), quiz.progress(QuizMode.Typed, Direction.AToB))

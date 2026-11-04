@@ -18,7 +18,8 @@ class QuizStore(root: File) {
     private val quizDir = File(root, "quizzes")
     private val sessionFile = File(root, "session.json")
     private val matchFile = File(root, "match.json")
-    val imageDir = File(root, "images")
+    /** Card pictures and sounds. The folder is named for pictures, which came first. */
+    val mediaDir = File(root, "images")
 
     private val json = Json { ignoreUnknownKeys = true }
 
@@ -69,15 +70,15 @@ class QuizStore(root: File) {
         }
     }
 
-    fun imageFile(name: String) = File(imageDir, name)
+    fun mediaFile(name: String) = File(mediaDir, name)
 
-    fun deleteImages(names: Collection<String>) {
-        names.forEach { imageFile(it).delete() }
+    fun deleteMedia(names: Collection<String>) {
+        names.forEach { mediaFile(it).delete() }
     }
 
-    /** Deletes pictures no card uses (left by a cancelled edit). Only call when every quiz loaded. */
-    fun removeUnusedImages(used: Set<String>) {
-        imageDir.listFiles().orEmpty().filter { it.name !in used }.forEach { it.delete() }
+    /** Deletes pictures and sounds no card uses (left by a cancelled edit). Only call when every quiz loaded. */
+    fun removeUnusedMedia(used: Set<String>) {
+        mediaDir.listFiles().orEmpty().filter { it.name !in used }.forEach { it.delete() }
     }
 
     private fun writeAtomically(target: File, text: String) {

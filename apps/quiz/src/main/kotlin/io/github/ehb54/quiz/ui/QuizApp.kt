@@ -1,6 +1,7 @@
 package io.github.ehb54.quiz.ui
 
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
@@ -17,7 +18,13 @@ fun QuizApp(info: BuildInfo, vm: QuizViewModel = viewModel()) {
     LaunchedEffect(vm) {
         vm.messages.collect { snackbar.showSnackbar(it) }
     }
+    CompositionLocalProvider(LocalSoundPlayer provides rememberSoundPlayer(vm::soundFailed)) {
+        CurrentScreen(state, vm, snackbar, info)
+    }
+}
 
+@Composable
+private fun CurrentScreen(state: UiState, vm: QuizViewModel, snackbar: SnackbarHostState, info: BuildInfo) {
     when (val screen = state.screen) {
         Screen.Loading -> Unit
         Screen.QuizList -> QuizListScreen(
@@ -42,15 +49,15 @@ fun QuizApp(info: BuildInfo, vm: QuizViewModel = viewModel()) {
             val quiz = state.quiz(session?.quizId)
             when {
                 session == null || quiz == null -> Unit
-                session.picking -> PickScreen(quiz, session, state.feedback, vm.imageDir, snackbar, vm)
-                else -> AskingScreen(quiz, session, state.feedback, state.revealed, vm.imageDir, snackbar, vm)
+                session.picking -> PickScreen(quiz, session, state.feedback, vm.mediaDir, snackbar, vm)
+                else -> AskingScreen(quiz, session, state.feedback, state.revealed, vm.mediaDir, snackbar, vm)
             }
         }
         Screen.Matching -> {
             val match = state.match
             val quiz = state.quiz(match?.quizId)
             if (match != null && quiz != null) {
-                MatchScreen(quiz, match, state.mismatch, vm.imageDir, snackbar, vm)
+                MatchScreen(quiz, match, state.mismatch, vm.mediaDir, snackbar, vm)
             }
         }
         Screen.Samples -> SamplesScreen(state, vm, snackbar)

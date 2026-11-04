@@ -158,10 +158,10 @@ private fun SampleRow(
 ) {
     val status = sampleStatus(entry, added)
     val cards = pluralStringResource(R.plurals.card_count, entry.cards, entry.cards)
-    val size = if (entry.pictures > 0) {
-        stringResource(R.string.two_parts, cards, pluralStringResource(R.plurals.picture_count, entry.pictures, entry.pictures))
-    } else {
-        cards
+    // "26 cards · 26 sounds": pictures and sounds are what make a sample large.
+    var size = cards
+    for ((count, plural) in listOf(entry.pictures to R.plurals.picture_count, entry.sounds to R.plurals.sound_count)) {
+        if (count > 0) size = stringResource(R.string.two_parts, size, pluralStringResource(plural, count, count))
     }
     val note = when {
         status == SampleStatus.UpdateAvailable -> stringResource(R.string.sample_update_available)

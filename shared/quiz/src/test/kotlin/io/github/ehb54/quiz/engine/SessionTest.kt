@@ -142,7 +142,7 @@ class SessionTest {
     @Test
     fun pictureSidesAreOnlyPrompts() {
         val quiz = Quiz("q", "test", settings = QuizSettings(shuffle = false))
-            .addCard("", "caffeine", imageA = "caffeine.png")
+            .addCard("", "caffeine", mediaA = "caffeine.png")
         assertEquals(listOf(1L), startSession(quiz)!!.queue)
         assertNull(startSession(quiz.copy(settings = quiz.settings.copy(direction = Direction.BToA))))
     }

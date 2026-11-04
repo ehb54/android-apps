@@ -1,5 +1,6 @@
 package io.github.ehb54.quiz.engine
 
+import io.github.ehb54.quiz.model.mediaKind
 import java.io.File
 import java.io.IOException
 import java.io.InputStream
@@ -12,15 +13,14 @@ import java.util.zip.ZipOutputStream
  * Quiz files, in the original program's export format (.qzx): plain text,
  * one line for side A, then one line for side B, card after card.
  *
- * Cards with pictures travel as a .zip holding one .qzx file and the image
- * files; a side written "!name.png" is the picture of that name (the original
- * used a leading "!" for sides that ran a program to show a molecule).
+ * Cards with pictures or sounds travel as a .zip holding one .qzx file and
+ * those files. A side written "!name.png" is the picture of that name and
+ * "!name.mp3" the sound, by the file's extension (the original used a leading
+ * "!" for sides that ran a program to show a molecule).
  */
 data class QzxCard(val a: String, val b: String)
 
-const val IMAGE_MARK = "!"
-
-private val imageExtensions = setOf("png", "jpg", "jpeg", "webp", "gif", "bmp")
+const val MEDIA_MARK = "!"
 
 /** Upper bound on what a zip import may unpack, against zip bombs. */
 const val MAX_IMPORT_BYTES = 256L * 1024 * 1024
@@ -39,7 +39,7 @@ fun formatQzx(cards: List<QzxCard>): String =
 
 private fun oneLine(text: String) = text.replace(Regex("[\r\n]+"), " ")
 
-class QuizBundle(val qzx: String, val images: Map<String, ByteArray>)
+class QuizBundle(val qzx: String, val files: Map<String, ByteArray>)
 
 fun isZip(bytes: ByteArray) =
     bytes.size >= 4 && bytes[0] == 'P'.code.toByte() && bytes[1] == 'K'.code.toByte() &&
@@ -61,21 +61,21 @@ fun unzip(input: InputStream, maxBytes: Long = MAX_IMPORT_BYTES): Map<String, By
     return entries
 }
 
-/** The first .qzx file and every image among unzipped [entries]; images are keyed by file name without folders. */
+/** The first .qzx file and every picture and sound among unzipped [entries], keyed by file name without folders. */
 fun quizBundle(entries: Map<String, ByteArray>): QuizBundle {
     var qzx: String? = null
-    val images = mutableMapOf<String, ByteArray>()
+    val files = mutableMapOf<String, ByteArray>()
     for ((path, bytes) in entries) {
         val name = path.substringAfterLast('/')
         if (name.startsWith(".")) continue
         val extension = name.substringAfterLast('.', "").lowercase()
         if (extension == "qzx" && qzx == null) {
             qzx = bytes.toString(Charsets.UTF_8)
-        } else if (extension in imageExtensions) {
-            images[name] = bytes
+        } else if (mediaKind(name) != null) {
+            files[name] = bytes
         }
     }
-    return QuizBundle(qzx ?: throw IOException("no .qzx file in the zip"), images)
+    return QuizBundle(qzx ?: throw IOException("no .qzx file in the zip"), files)
 }
 
 fun readZip(input: InputStream, maxBytes: Long = MAX_IMPORT_BYTES) = quizBundle(unzip(input, maxBytes))
@@ -95,13 +95,13 @@ fun readLimited(input: InputStream, budget: Long = MAX_IMPORT_BYTES): ByteArray 
     return buffer.toByteArray()
 }
 
-/** Writes a zip with [name].qzx and the given images (zip entry name to file). */
-fun writeZip(output: OutputStream, name: String, qzx: String, images: Map<String, File>) {
+/** Writes a zip with [name].qzx and the given pictures and sounds (zip entry name to file). */
+fun writeZip(output: OutputStream, name: String, qzx: String, files: Map<String, File>) {
     ZipOutputStream(output).use { zip ->
         zip.putNextEntry(ZipEntry("$name.qzx"))
         zip.write(qzx.toByteArray(Charsets.UTF_8))
         zip.closeEntry()
-        for ((entryName, file) in images) {
+        for ((entryName, file) in files) {
             zip.putNextEntry(ZipEntry(entryName))
             file.inputStream().use { it.copyTo(zip) }
             zip.closeEntry()

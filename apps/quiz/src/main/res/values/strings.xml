@@ -50,6 +50,10 @@
         <item quantity="one">%d picture</item>
         <item quantity="other">%d pictures</item>
     </plurals>
+    <plurals name="sound_count">
+        <item quantity="one">%d sound</item>
+        <item quantity="other">%d sounds</item>
+    </plurals>
     <string name="sample_added">added</string>
     <string name="sample_added_as">added as %1$s</string>
     <string name="sample_update_available">update available</string>
@@ -119,6 +123,15 @@
     <string name="remove_picture">Remove picture</string>
     <string name="picture">Picture</string>
     <string name="picture_failed">That picture could not be used.</string>
+    <string name="use_sound">Use a sound</string>
+    <string name="remove_sound">Remove sound</string>
+    <string name="sound">Sound</string>
+    <!-- A sound among choices or tiles, which show no text of their own: "Sound 2". -->
+    <string name="sound_number">Sound %1$d</string>
+    <string name="play_sound">Play sound</string>
+    <string name="stop_sound">Stop sound</string>
+    <string name="sound_failed">That sound could not be used. MP3, AAC (M4A), Ogg Vorbis, WAV and FLAC work.</string>
+    <string name="play_failed">The sound could not be played.</string>
 
     <!-- Asking -->
     <string name="round">Round %1$d</string>

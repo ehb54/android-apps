@@ -1,5 +1,6 @@
 package io.github.ehb54.quiz.model
 
+import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 /** Which side is shown: A -> B shows side A and asks for side B. */
@@ -40,17 +41,19 @@ data class Stats(
 }
 
 /**
- * A flash card. Each side is text or, when its image is set, a picture
- * (a file name in the app's image folder). A picture can only be shown,
- * never typed, so a card is asked only in directions whose answer is text.
+ * A flash card. Each side is text or, when its media is set, a file in the
+ * app's media folder: a picture or a sound ([mediaKind]). A file can only be
+ * shown or played, never typed, so typing asks a card only in directions whose
+ * answer is text.
  */
 @Serializable
 data class Card(
     val id: Long,
     val a: String = "",
     val b: String = "",
-    val imageA: String? = null,
-    val imageB: String? = null,
+    // Saved as "imageA" and "imageB": sides held only pictures before sounds came.
+    @SerialName("imageA") val mediaA: String? = null,
+    @SerialName("imageB") val mediaB: String? = null,
     val statsAToB: Stats = Stats(),
     val statsBToA: Stats = Stats(),
     /** Match mode's own record: recognizing a pair is easier than typing, so it is kept apart. */
@@ -61,21 +64,21 @@ data class Card(
 ) {
     fun prompt(direction: Direction) = if (direction == Direction.AToB) a else b
 
-    fun promptImage(direction: Direction) = if (direction == Direction.AToB) imageA else imageB
+    fun promptMedia(direction: Direction) = if (direction == Direction.AToB) mediaA else mediaB
 
     fun answer(direction: Direction) = if (direction == Direction.AToB) b else a
 
-    fun answerImage(direction: Direction) = if (direction == Direction.AToB) imageB else imageA
+    fun answerMedia(direction: Direction) = if (direction == Direction.AToB) mediaB else mediaA
 
-    fun askable(direction: Direction) = answerImage(direction) == null && answer(direction).isNotBlank()
+    fun askable(direction: Direction) = answerMedia(direction) == null && answer(direction).isNotBlank()
 
     fun stats(direction: Direction) = if (direction == Direction.AToB) statsAToB else statsBToA
 
     fun withStats(direction: Direction, stats: Stats) =
         if (direction == Direction.AToB) copy(statsAToB = stats) else copy(statsBToA = stats)
 
-    /** Both sides show something, text or picture, so the card can be a pair of tiles. */
-    fun matchable() = (a.isNotBlank() || imageA != null) && (b.isNotBlank() || imageB != null)
+    /** Both sides show something (text, a picture or a sound), so the card can be a pair of tiles. */
+    fun matchable() = (a.isNotBlank() || mediaA != null) && (b.isNotBlank() || mediaB != null)
 
     fun pickStats(direction: Direction) = if (direction == Direction.AToB) statsPickAToB else statsPickBToA
 
@@ -84,7 +87,7 @@ data class Card(
 
     /**
      * Whether [mode] can ask this card in [direction]. Typing needs a text answer. Picking
-     * and matching need both sides, but the answer can be a picture, since it is not typed.
+     * and matching need both sides, but the answer can be a picture or a sound, since it is not typed.
      */
     fun canAsk(mode: QuizMode, direction: Direction) =
         if (mode == QuizMode.Typed) askable(direction) else matchable()
@@ -157,8 +160,8 @@ data class Quiz(
 ) {
     fun card(id: Long) = cards.find { it.id == id }
 
-    fun addCard(a: String, b: String, imageA: String? = null, imageB: String? = null) = copy(
-        cards = cards + Card(nextCardId, a, b, imageA, imageB),
+    fun addCard(a: String, b: String, mediaA: String? = null, mediaB: String? = null) = copy(
+        cards = cards + Card(nextCardId, a, b, mediaA, mediaB),
         nextCardId = nextCardId + 1,
     )
 
@@ -212,7 +215,7 @@ data class Quiz(
         return if (settings.hasRange || settings.sessionSize <= 0) due else due.take(settings.sessionSize)
     }
 
-    fun imageFiles(): Set<String> = cards.flatMap { listOfNotNull(it.imageA, it.imageB) }.toSet()
+    fun mediaFiles(): Set<String> = cards.flatMap { listOfNotNull(it.mediaA, it.mediaB) }.toSet()
 
     /**
      * This quiz with [fresh]'s cards, e.g. a newer version of a sample. Keeps
@@ -242,4 +245,4 @@ data class Quiz(
 
 /** What a card says; a stored picture (its file name is random) counts only as "a picture". */
 private fun Card.contentKey() =
-    listOf(imageA != null, a.takeIf { imageA == null }, imageB != null, b.takeIf { imageB == null })
+    listOf(mediaA != null, a.takeIf { mediaA == null }, mediaB != null, b.takeIf { mediaB == null })

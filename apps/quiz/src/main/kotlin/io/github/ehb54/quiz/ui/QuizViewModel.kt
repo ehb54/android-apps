@@ -12,8 +12,9 @@ import io.github.ehb54.quiz.R
 import io.github.ehb54.quiz.data.QuizStore
 import io.github.ehb54.quiz.data.SampleLibrary
 import io.github.ehb54.quiz.data.storeImage
+import io.github.ehb54.quiz.data.storeSound
 import io.github.ehb54.quiz.engine.AnswerTimes
-import io.github.ehb54.quiz.engine.IMAGE_MARK
+import io.github.ehb54.quiz.engine.MEDIA_MARK
 import io.github.ehb54.quiz.engine.MatchSession
 import io.github.ehb54.quiz.engine.Outcome
 import io.github.ehb54.quiz.engine.PairOutcome
@@ -46,9 +47,12 @@ import io.github.ehb54.quiz.engine.submitAnswer
 import io.github.ehb54.quiz.engine.unzip
 import io.github.ehb54.quiz.engine.writeZip
 import io.github.ehb54.quiz.model.Card
+import io.github.ehb54.quiz.model.MediaKind
 import io.github.ehb54.quiz.model.Quiz
 import io.github.ehb54.quiz.model.QuizMode
 import io.github.ehb54.quiz.model.QuizSettings
+import io.github.ehb54.quiz.model.isSound
+import io.github.ehb54.quiz.model.mediaKind
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.asCoroutineDispatcher
 import kotlinx.coroutines.channels.Channel
@@ -136,7 +140,7 @@ private val diskDispatcher = diskThread.asCoroutineDispatcher()
  */
 class QuizViewModel(application: Application) : AndroidViewModel(application) {
     private val store = QuizStore(application.filesDir)
-    val imageDir: File = store.imageDir
+    val mediaDir: File = store.mediaDir
 
     private val _state = MutableStateFlow(UiState())
     val state: StateFlow<UiState> = _state.asStateFlow()
@@ -152,7 +156,7 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
         val (loaded, session, match) = withContext(diskDispatcher) {
             val loaded = store.loadQuizzes()
             if (loaded.unreadable.isEmpty()) {
-                store.removeUnusedImages(loaded.quizzes.flatMap { it.imageFiles() }.toSet())
+                store.removeUnusedMedia(loaded.quizzes.flatMap { it.mediaFiles() }.toSet())
             }
             Triple(loaded, store.loadSession(), store.loadMatch())
         }
@@ -193,7 +197,7 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
 
     /** Saves an edited card, or adds it when its id is 0. */
     fun saveCard(quizId: String, card: Card) = changeQuiz(quizId) { quiz ->
-        if (card.id == 0L) quiz.addCard(card.a, card.b, card.imageA, card.imageB) else quiz.replaceCard(card)
+        if (card.id == 0L) quiz.addCard(card.a, card.b, card.mediaA, card.mediaB) else quiz.replaceCard(card)
     }
 
     fun deleteCard(quizId: String, cardId: Long) = changeQuiz(quizId) { it.removeCard(cardId) }
@@ -205,7 +209,7 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
         }
         persist {
             store.deleteQuiz(id)
-            store.deleteImages(quiz.imageFiles())
+            store.deleteMedia(quiz.mediaFiles())
         }
     }
 
@@ -220,10 +224,10 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
         _state.update { s ->
             s.copy(quizzes = s.quizzes.map { if (it.id == id) new else it }.sortedBy { it.name.lowercase() })
         }
-        val unused = old.imageFiles() - new.imageFiles()
+        val unused = old.mediaFiles() - new.mediaFiles()
         persist {
             store.saveQuiz(new)
-            store.deleteImages(unused)
+            store.deleteMedia(unused)
         }
     }
 
@@ -279,7 +283,12 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
                 rounds = next.round,
                 times = next.times,
                 confused = step.confused.map { card ->
-                    card.answer(next.direction).ifBlank { text(R.string.picture) }
+                    val media = card.answerMedia(next.direction)
+                    when {
+                        media == null -> card.answer(next.direction)
+                        isSound(media) -> text(R.string.sound)
+                        else -> text(R.string.picture)
+                    }
                 },
             )
             _state.value = state.copy(
@@ -522,7 +531,7 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
 
     // Files
 
-    /** Imports a .qzx, a .zip with pictures, or an Excel workbook (one quiz per tab). */
+    /** Imports a .qzx, a .zip with pictures or sounds, or an Excel workbook (one quiz per tab). */
     fun importQuiz(uri: Uri) {
         viewModelScope.launch {
             val quizzes = withContext(Dispatchers.IO) {
@@ -557,15 +566,26 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     /** Stores a picture chosen for a card side; [onStored] gets its file name, or null. */
-    fun storePicture(uri: Uri, onStored: (String?) -> Unit) {
+    fun storePicture(uri: Uri, onStored: (String?) -> Unit) =
+        storeMedia(uri, R.string.picture_failed, onStored) { storeImage(store.mediaDir, it) }
+
+    /** Stores a sound chosen for a card side; [onStored] gets its file name, or null. */
+    fun storeSound(uri: Uri, onStored: (String?) -> Unit) =
+        storeMedia(uri, R.string.sound_failed, onStored) { storeSound(store.mediaDir, it) }
+
+    private fun storeMedia(
+        uri: Uri,
+        @StringRes failed: Int,
+        onStored: (String?) -> Unit,
+        keep: (ByteArray) -> String?,
+    ) {
         viewModelScope.launch {
             val name = withContext(Dispatchers.IO) {
                 runCatching {
-                    getApplication<Application>().contentResolver.openInputStream(uri)
-                        ?.use { storeImage(store.imageDir, readLimited(it)) }
+                    getApplication<Application>().contentResolver.openInputStream(uri)?.use { keep(readLimited(it)) }
                 }.getOrNull()
             }
-            if (name == null) message(text(R.string.picture_failed))
+            if (name == null) message(text(failed))
             onStored(name)
         }
     }
@@ -578,7 +598,7 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
 
     /**
      * New quizzes from a file: one named after [fileName] from .qzx text or a zip
-     * with pictures, or one per non-empty tab, named after the tab, from an Excel workbook.
+     * with pictures or sounds, or one per non-empty tab, named after the tab, from an Excel workbook.
      */
     private fun readQuizzes(fileName: String, bytes: ByteArray): List<Quiz> {
         val name = fileName.substringBeforeLast('.').ifBlank { fileName }
@@ -589,17 +609,24 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
         }
         var quiz = newQuiz(name, emptyList())
         val bundle = quizBundle(entries)
+        // A side "!name" is the zip's picture or sound of that name, stored once however many cards use it.
         val stored = mutableMapOf<String, String?>()
-        fun picture(side: String): String? {
-            if (!side.startsWith(IMAGE_MARK)) return null
-            val entry = side.removePrefix(IMAGE_MARK)
-            val data = bundle.images[entry] ?: return null
-            return stored.getOrPut(entry) { storeImage(store.imageDir, data) }
+        fun media(side: String): String? {
+            if (!side.startsWith(MEDIA_MARK)) return null
+            val entry = side.removePrefix(MEDIA_MARK)
+            val data = bundle.files[entry] ?: return null
+            return stored.getOrPut(entry) {
+                when (mediaKind(entry)) {
+                    MediaKind.Picture -> storeImage(store.mediaDir, data)
+                    MediaKind.Sound -> storeSound(store.mediaDir, data)
+                    null -> null
+                }
+            }
         }
         for (card in parseQzx(bundle.qzx)) {
-            val imageA = picture(card.a)
-            val imageB = picture(card.b)
-            quiz = quiz.addCard(if (imageA != null) "" else card.a, if (imageB != null) "" else card.b, imageA, imageB)
+            val mediaA = media(card.a)
+            val mediaB = media(card.b)
+            quiz = quiz.addCard(if (mediaA != null) "" else card.a, if (mediaB != null) "" else card.b, mediaA, mediaB)
         }
         return listOf(quiz)
     }
@@ -607,15 +634,15 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
     private fun newQuiz(name: String, cards: List<QzxCard>) =
         cards.fold(Quiz(UUID.randomUUID().toString(), name)) { quiz, card -> quiz.addCard(card.a, card.b) }
 
-    /** Plain .qzx when the quiz has no pictures; otherwise a zip with the pictures. */
+    /** Plain .qzx when the quiz has no pictures or sounds; otherwise a zip with them. */
     private fun writeQuiz(quiz: Quiz, out: OutputStream) {
-        fun side(text: String, image: String?) = if (image != null) IMAGE_MARK + image else text
-        val qzx = formatQzx(quiz.cards.map { QzxCard(side(it.a, it.imageA), side(it.b, it.imageB)) })
-        val images = quiz.imageFiles()
-        if (images.isEmpty()) {
+        fun side(text: String, media: String?) = if (media != null) MEDIA_MARK + media else text
+        val qzx = formatQzx(quiz.cards.map { QzxCard(side(it.a, it.mediaA), side(it.b, it.mediaB)) })
+        val files = quiz.mediaFiles()
+        if (files.isEmpty()) {
             out.write(qzx.toByteArray(Charsets.UTF_8))
         } else {
-            writeZip(out, quiz.name.replace(Regex("[/\\\\]"), "_"), qzx, images.associateWith { store.imageFile(it) })
+            writeZip(out, quiz.name.replace(Regex("[/\\\\]"), "_"), qzx, files.associateWith { store.mediaFile(it) })
         }
     }
 
@@ -637,6 +664,9 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
     private fun message(text: String) {
         _messages.trySend(text)
     }
+
+    /** A card sound could not be played (its file is missing, or Android can't play its format). */
+    fun soundFailed() = message(text(R.string.play_failed))
 
     private fun text(@StringRes id: Int, vararg args: Any) = getApplication<Application>().getString(id, *args)
 

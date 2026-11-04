@@ -30,6 +30,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.style.TextAlign
@@ -40,6 +41,7 @@ import io.github.ehb54.quiz.R
 import io.github.ehb54.quiz.engine.MatchSession
 import io.github.ehb54.quiz.model.Card
 import io.github.ehb54.quiz.model.Quiz
+import io.github.ehb54.quiz.model.isSound
 import java.io.File
 
 private val TEXT_TILE = 80.dp
@@ -49,7 +51,8 @@ private val PICTURE_TILE = 112.dp
  * A block of tiles in two columns, side A on the left and side B on the right,
  * each shuffled: tap one on each side to pair them. Paired tiles leave a gap,
  * so the others stay put; a wrong pair is marked until the next tap. When the
- * block is cleared the next one appears. Back does not leave.
+ * block is cleared the next one appears. A sound tile has a button to play
+ * it; a tap elsewhere on it picks it. Back does not leave.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -57,7 +60,7 @@ fun MatchScreen(
     quiz: Quiz,
     session: MatchSession,
     mismatch: Pair<Long, Long>?,
-    imageDir: File,
+    mediaDir: File,
     snackbar: SnackbarHostState,
     vm: QuizViewModel,
 ) {
@@ -109,7 +112,7 @@ fun MatchScreen(
                     wrong = mismatch?.first,
                     quiz = quiz,
                     sideA = true,
-                    imageDir = imageDir,
+                    mediaDir = mediaDir,
                     onPick = { id -> if (id == pickedLeft) pickedLeft = null else pick(id, null) },
                     modifier = Modifier.weight(1f),
                 )
@@ -120,7 +123,7 @@ fun MatchScreen(
                     wrong = mismatch?.second,
                     quiz = quiz,
                     sideA = false,
-                    imageDir = imageDir,
+                    mediaDir = mediaDir,
                     onPick = { id -> if (id == pickedRight) pickedRight = null else pick(null, id) },
                     modifier = Modifier.weight(1f),
                 )
@@ -137,15 +140,16 @@ private fun TileColumn(
     wrong: Long?,
     quiz: Quiz,
     sideA: Boolean,
-    imageDir: File,
+    mediaDir: File,
     onPick: (Long) -> Unit,
     modifier: Modifier = Modifier,
 ) {
     fun Card.text() = if (sideA) a else b
-    fun Card.image() = if (sideA) imageA else imageB
-    val height = if (tiles.any { quiz.card(it)?.image() != null }) PICTURE_TILE else TEXT_TILE
+    fun Card.media() = if (sideA) mediaA else mediaB
+    val pictures = tiles.any { id -> quiz.card(id)?.media()?.let { !isSound(it) } == true }
+    val height = if (pictures) PICTURE_TILE else TEXT_TILE
     Column(modifier, verticalArrangement = Arrangement.spacedBy(8.dp)) {
-        tiles.forEach { id ->
+        tiles.forEachIndexed { index, id ->
             val card = quiz.card(id)
             if (card == null || id in matched) {
                 Spacer(
@@ -154,9 +158,16 @@ private fun TileColumn(
                         .height(height),
                 )
             } else {
-                Tile(card.text(), card.image(), imageDir, selected = id == picked, wrong = id == wrong, height) {
-                    onPick(id)
-                }
+                Tile(
+                    text = card.text(),
+                    media = card.media(),
+                    mediaDir = mediaDir,
+                    number = index + 1,
+                    selected = id == picked,
+                    wrong = id == wrong,
+                    height = height,
+                    modifier = Modifier.testTag(tileTag(id, sideA)),
+                ) { onPick(id) }
             }
         }
     }
@@ -165,16 +176,18 @@ private fun TileColumn(
 @Composable
 private fun Tile(
     text: String,
-    image: String?,
-    imageDir: File,
+    media: String?,
+    mediaDir: File,
+    number: Int,
     selected: Boolean,
     wrong: Boolean,
     height: Dp,
+    modifier: Modifier = Modifier,
     onClick: () -> Unit,
 ) {
     val colors = MaterialTheme.colorScheme
     Surface(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
             .height(height)
             .selectable(selected = selected, role = Role.Button, onClick = onClick),
@@ -194,8 +207,10 @@ private fun Tile(
         ),
     ) {
         Box(Modifier.padding(8.dp), contentAlignment = Alignment.Center) {
-            if (image != null) {
-                CardImage(File(imageDir, image), Modifier.fillMaxSize(), maxSide = 512)
+            if (media != null && isSound(media)) {
+                SoundTileContent(File(mediaDir, media), number)
+            } else if (media != null) {
+                CardImage(File(mediaDir, media), Modifier.fillMaxSize(), maxSide = 512)
             } else {
                 Text(
                     text,

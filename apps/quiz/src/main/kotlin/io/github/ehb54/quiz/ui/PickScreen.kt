@@ -10,7 +10,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -23,10 +22,14 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.style.TextAlign
@@ -35,12 +38,14 @@ import androidx.compose.ui.unit.dp
 import io.github.ehb54.quiz.R
 import io.github.ehb54.quiz.engine.Session
 import io.github.ehb54.quiz.model.Quiz
+import io.github.ehb54.quiz.model.isSound
 import java.io.File
 
 /**
- * Pick mode: one card's prompt (text or picture) and a few choices from the
- * other side. A wrong choice is marked and can't be picked again; the card
- * stays until the right one is picked. Back does not leave.
+ * Pick mode: one card's prompt (text, picture or sound) and a few choices from
+ * the other side. A wrong choice is marked and can't be picked again; the card
+ * stays until the right one is picked. A sound choice has a button to play it;
+ * a tap elsewhere on it picks it. Back does not leave.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -48,14 +53,17 @@ fun PickScreen(
     quiz: Quiz,
     session: Session,
     feedback: Feedback?,
-    imageDir: File,
+    mediaDir: File,
     snackbar: SnackbarHostState,
     vm: QuizViewModel,
 ) {
     BackHandler(onBack = vm::backDuringQuiz)
     val card = session.current?.let(quiz::card) ?: return
     val direction = session.direction
-    val shownAt = remember(session.round, card.id, session.missesOnCurrent) { SystemClock.elapsedRealtime() }
+    // The timer starts when the card shows, or when its sound has played.
+    var shownAt by remember(session.round, card.id, session.missesOnCurrent) {
+        mutableLongStateOf(SystemClock.elapsedRealtime())
+    }
     val colors = MaterialTheme.colorScheme
 
     Scaffold(
@@ -75,16 +83,9 @@ fun PickScreen(
                 .verticalScroll(rememberScrollState()),
             verticalArrangement = Arrangement.spacedBy(12.dp),
         ) {
-            card.promptImage(direction)?.let {
-                CardImage(
-                    File(imageDir, it),
-                    Modifier
-                        .fillMaxWidth()
-                        .heightIn(max = 280.dp),
-                )
+            Prompt(card, direction, mediaDir, pictureHeight = 280.dp, playKey = listOf(session.round, card.id)) {
+                shownAt = SystemClock.elapsedRealtime()
             }
-            val prompt = card.prompt(direction)
-            if (prompt.isNotBlank()) Text(prompt, style = MaterialTheme.typography.headlineMedium)
             Text(
                 stringResource(
                     when (feedback) {
@@ -96,13 +97,15 @@ fun PickScreen(
                 color = if (feedback != null) colors.error else colors.onSurfaceVariant,
                 style = MaterialTheme.typography.bodyMedium,
             )
-            session.choices.forEach { id ->
-                val choice = quiz.card(id) ?: return@forEach
+            session.choices.forEachIndexed { index, id ->
+                val choice = quiz.card(id) ?: return@forEachIndexed
                 Choice(
                     text = choice.answer(direction),
-                    image = choice.answerImage(direction),
-                    imageDir = imageDir,
+                    media = choice.answerMedia(direction),
+                    mediaDir = mediaDir,
+                    number = index + 1,
                     ruledOut = id in session.ruledOut,
+                    modifier = Modifier.testTag(choiceTag(id)),
                 ) { vm.pick(id, SystemClock.elapsedRealtime() - shownAt) }
             }
         }
@@ -110,12 +113,21 @@ fun PickScreen(
 }
 
 @Composable
-private fun Choice(text: String, image: String?, imageDir: File, ruledOut: Boolean, onPick: () -> Unit) {
+private fun Choice(
+    text: String,
+    media: String?,
+    mediaDir: File,
+    number: Int,
+    ruledOut: Boolean,
+    modifier: Modifier = Modifier,
+    onPick: () -> Unit,
+) {
     val colors = MaterialTheme.colorScheme
+    val picture = media != null && !isSound(media)
     Surface(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
-            .height(if (image != null) 120.dp else 64.dp)
+            .height(if (picture) 120.dp else 64.dp)
             .alpha(if (ruledOut) 0.6f else 1f)
             .clickable(enabled = !ruledOut, role = Role.Button, onClick = onPick),
         shape = MaterialTheme.shapes.medium,
@@ -123,8 +135,10 @@ private fun Choice(text: String, image: String?, imageDir: File, ruledOut: Boole
         border = BorderStroke(1.dp, if (ruledOut) colors.error else colors.outlineVariant),
     ) {
         Box(Modifier.padding(8.dp), contentAlignment = Alignment.Center) {
-            if (image != null) {
-                CardImage(File(imageDir, image), Modifier.fillMaxSize(), maxSide = 512)
+            if (media != null && isSound(media)) {
+                SoundTileContent(File(mediaDir, media), number)
+            } else if (media != null) {
+                CardImage(File(mediaDir, media), Modifier.fillMaxSize(), maxSide = 512)
             } else {
                 Text(
                     text,

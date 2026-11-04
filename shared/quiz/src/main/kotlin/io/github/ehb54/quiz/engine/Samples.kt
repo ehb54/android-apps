@@ -1,6 +1,8 @@
 package io.github.ehb54.quiz.engine
 
+import io.github.ehb54.quiz.model.MediaKind
 import io.github.ehb54.quiz.model.Quiz
+import io.github.ehb54.quiz.model.mediaKind
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 import java.security.MessageDigest
@@ -35,6 +37,7 @@ data class SampleEntry(
     val version: String,
     val cards: Int,
     val pictures: Int = 0,
+    val sounds: Int = 0,
     val tab: String? = null,
 )
 
@@ -64,10 +67,14 @@ fun sampleEntries(file: String, bytes: ByteArray): List<SampleEntry> {
     }
     val bundle = quizBundle(entries)
     val cards = parseQzx(bundle.qzx)
-    val pictures = cards.count { card ->
-        listOf(card.a, card.b).any { it.startsWith(IMAGE_MARK) && it.removePrefix(IMAGE_MARK) in bundle.images }
+    // Cards with a picture, and cards with a sound, on either side.
+    fun count(kind: MediaKind) = cards.count { card ->
+        listOf(card.a, card.b).any { side ->
+            val file = side.removePrefix(MEDIA_MARK)
+            side.startsWith(MEDIA_MARK) && file in bundle.files && mediaKind(file) == kind
+        }
     }
-    return listOf(SampleEntry(name, file, sha256(bytes), cards.size, pictures))
+    return listOf(SampleEntry(name, file, sha256(bytes), cards.size, count(MediaKind.Picture), count(MediaKind.Sound)))
 }
 
 /** A catalog of sample files (name to contents); [builtIn] names the ones shipped inside the app. */

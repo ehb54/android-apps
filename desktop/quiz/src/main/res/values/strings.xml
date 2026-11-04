@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Desktop wording where the Android app's (apps/quiz/src/main/res) speaks of tapping. -->
+<!-- Desktop wording where the Android app's (apps/quiz/src/main/res) speaks of tapping,
+     or of what only the phone can do. -->
 <resources>
     <string name="no_quizzes">No quizzes yet. Click + to make one. The ⋮ menu imports quiz files (.qzx, .zip, or Excel .xlsx with one quiz per tab) and lists sample quizzes to add.</string>
     <string name="match_hint">Click a tile on each side that belong together.</string>
+    <string name="play_failed">The sound could not be played. On the desktop, only WAV sounds play.</string>
 </resources>
