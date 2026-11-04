@@ -103,6 +103,10 @@ picture makes the difference plain).
   ground`). Use "a person" unless the verb needs more; keep the figure neutral.
 - People: adults unless the word is about a child; women for female nouns
   (Lehrerin); ordinary, neutral clothes unless the role needs a costume.
+  Name each person's look rather than writing "a person": "a woman with long
+  blond hair", "an older man with grey hair", "a red-haired farmer". Left to
+  itself a model draws the same dark-haired young man every time. Vary hair,
+  age and, where the word allows, gender from one word to the next.
 - `sensitive` (`no`): nationalities and peoples (Franzose, Jude), God, saints
   and religious rites (Gott, Heilige, Taufe), death, killing, executions,
   wounds and anything gory, and anything that would need a stereotype to be
