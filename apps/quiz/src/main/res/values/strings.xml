@@ -22,10 +22,10 @@
         <item quantity="one">%d card</item>
         <item quantity="other">%d cards</item>
     </plurals>
-    <plurals name="due_count">
-        <item quantity="one">%d due</item>
-        <item quantity="other">%d due</item>
-    </plurals>
+    <!-- A mode or direction with the number of cards due for it, e.g. "Pick 2". -->
+    <string name="label_due">%1$s %2$s</string>
+    <!-- In place of the number when nothing is due. -->
+    <string name="all_done_mark">✓</string>
 
     <!-- Sample library -->
     <string name="samples_title">Sample quizzes</string>

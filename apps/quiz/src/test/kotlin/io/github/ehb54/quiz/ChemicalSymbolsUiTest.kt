@@ -25,7 +25,7 @@ abstract class ChemicalSymbolsUiTest : QuizUiTest() {
         compose.onNodeWithContentDescription("Back").performClick()
         compose.onNodeWithText("Chemical symbols").performClick()
         compose.waitForText("Start (14 cards due)")
-        compose.onNodeWithText(chip).performClick()
+        tapChip(chip)
         compose.waitForText(setting)
         compose.onNodeWithText("Shuffle").performClick()
         compose.onNodeWithText("Start (14 cards due)").performClick()
@@ -33,6 +33,11 @@ abstract class ChemicalSymbolsUiTest : QuizUiTest() {
     }
 
     protected fun startChemicalSymbolsMatch() = startChemicalSymbols("Match", "Pairs per block")
+
+    /** Taps the mode or direction chip [label]; chips also show a due count ("Pick 2"). */
+    protected fun tapChip(label: String) {
+        compose.onNodeWithText("$label ", substring = true).performClick()
+    }
 
     protected fun pair(left: String, right: String) {
         compose.onNodeWithText(left).performClick()

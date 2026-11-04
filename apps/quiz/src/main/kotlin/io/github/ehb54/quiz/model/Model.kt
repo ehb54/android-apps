@@ -166,14 +166,18 @@ data class Quiz(
         return cards.subList(from - 1, to)
     }
 
-    /** Cards below the threshold for the selected mode (and direction, when typed or picked). */
-    fun due(): List<Card> = cardsInRange().filter {
-        when (settings.mode) {
-            QuizMode.Typed -> it.isDue(settings.direction, settings.threshold)
-            QuizMode.Pick -> it.isDueForPick(settings.direction, settings.threshold)
-            QuizMode.Match -> it.isDueForMatch(settings.threshold)
+    /**
+     * Cards below the threshold for [mode] (and [direction], when typed or picked),
+     * by default the selected ones. The range applies; the cards-per-session cap does not.
+     */
+    fun due(mode: QuizMode = settings.mode, direction: Direction = settings.direction): List<Card> =
+        cardsInRange().filter {
+            when (mode) {
+                QuizMode.Typed -> it.isDue(direction, settings.threshold)
+                QuizMode.Pick -> it.isDueForPick(direction, settings.threshold)
+                QuizMode.Match -> it.isDueForMatch(settings.threshold)
+            }
         }
-    }
 
     /** A card's level for the selected mode, as the card list shows it. */
     fun level(card: Card) = when (settings.mode) {

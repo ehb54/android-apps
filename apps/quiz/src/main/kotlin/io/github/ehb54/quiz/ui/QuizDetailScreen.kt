@@ -68,12 +68,6 @@ private val blockSizes = (3..10).toList()
 /** Pick mode: choices per card. */
 private val choiceCounts = (2..8).toList()
 
-private val modeLabels = mapOf(
-    QuizMode.Typed to R.string.mode_type,
-    QuizMode.Pick to R.string.mode_pick,
-    QuizMode.Match to R.string.mode_match,
-)
-
 /** Cards per session when no range is set; 0 means all. */
 private val sessionSizes = listOf(5, 10, 15, 20, 25, 30, 40, 50, 75, 100, 0)
 
@@ -189,11 +183,12 @@ private fun SessionSettings(quiz: Quiz, onChange: (QuizSettings) -> Unit, onStar
     val settings = quiz.settings
     Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            // Each chip says how many cards are due for it (Type and Pick in the current direction).
             QuizMode.entries.forEach { mode ->
                 FilterChip(
                     selected = settings.mode == mode,
                     onClick = { onChange(settings.copy(mode = mode)) },
-                    label = { Text(stringResource(modeLabels.getValue(mode))) },
+                    label = { Text(dueLabel(stringResource(modeLabel(mode)), quiz.due(mode).size)) },
                 )
             }
         }
@@ -201,12 +196,13 @@ private fun SessionSettings(quiz: Quiz, onChange: (QuizSettings) -> Unit, onStar
         if (settings.mode != QuizMode.Match) {
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 Direction.entries.forEach { direction ->
+                    val label = stringResource(
+                        if (direction == Direction.AToB) R.string.direction_ab else R.string.direction_ba,
+                    )
                     FilterChip(
                         selected = settings.direction == direction,
                         onClick = { onChange(settings.copy(direction = direction)) },
-                        label = {
-                            Text(stringResource(if (direction == Direction.AToB) R.string.direction_ab else R.string.direction_ba))
-                        },
+                        label = { Text(dueLabel(label, quiz.due(settings.mode, direction).size)) },
                     )
                 }
             }

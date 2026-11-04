@@ -2,6 +2,7 @@ package io.github.ehb54.quiz
 
 import androidx.compose.ui.test.assertIsNotEnabled
 import androidx.compose.ui.test.onAllNodesWithText
+import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.test.core.app.ActivityScenario
@@ -42,13 +43,23 @@ class PickUiTest : ChemicalSymbolsUiTest() {
             compose.onNodeWithText("• $wrong").assertExists()
             compose.onNodeWithText("OK").performClick()
 
-            // Due again for Pick A -> B: Hydrogen and the confused card. B -> A and typing were not touched.
+            // Due again for Pick A -> B: Hydrogen and the confused card. B -> A, typing and matching
+            // were not touched; every chip shows its own count.
             compose.waitForText("Start (2 cards due)")
-            compose.onNodeWithText("B → A").performClick()
+            compose.onNodeWithText("Pick 2").assertExists()
+            compose.onNodeWithText("Type 14").assertExists()
+            compose.onNodeWithText("Match 14").assertExists()
+            compose.onNodeWithText("A → B 2").assertExists()
+            tapChip("B → A")
             compose.waitForText("Start (14 cards due)")
-            compose.onNodeWithText("Type").performClick()
-            compose.onNodeWithText("A → B").performClick()
+            compose.onNodeWithText("Pick 14").assertExists()
+            tapChip("Type")
+            tapChip("A → B")
             compose.waitForText("Start (14 cards due)")
+
+            // The quiz list sums it up, for the current direction.
+            compose.onNodeWithContentDescription("Back").performClick()
+            compose.waitForText("14 cards · Type 14 · Pick 2 · Match 14")
         }
     }
 }

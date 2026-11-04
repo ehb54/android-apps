@@ -157,6 +157,15 @@ both, and `ui/PickScreen.kt`). Decisions made with eb:
 - **Pictures** can be prompts and choices; a card whose answer is a picture is
   asked in Pick mode but not in typed mode.
 
+## Due counts
+
+The quiz list shows what is due in each mode, Type and Pick in the quiz's current
+direction, with a check when nothing is: "14 cards · Type 14 · Pick 2 · Match ✓".
+On the quiz page the mode chips carry the same counts, and the direction chips
+carry the selected mode's count for each direction, so every count is one glance
+away without extra rows (chosen with eb). Counts follow the threshold and range;
+the cards-per-session cap only limits what the Start button takes.
+
 ## Code map
 
 | Path | What |

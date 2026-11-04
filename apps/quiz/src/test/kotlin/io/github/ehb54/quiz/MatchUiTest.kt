@@ -1,11 +1,13 @@
 package io.github.ehb54.quiz
 
+import androidx.compose.ui.test.assertIsNotEnabled
+import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.test.core.app.ActivityScenario
 import org.junit.Test
 
-/** A whole match session through the UI: blocks, a wrong pair, round 2, and levels kept apart. */
+/** Whole match sessions through the UI: blocks, a wrong pair, round 2, levels kept apart, and due counts. */
 class MatchUiTest : ChemicalSymbolsUiTest() {
     @Test
     fun matchSessionRunsInBlocks() {
@@ -28,10 +30,22 @@ class MatchUiTest : ChemicalSymbolsUiTest() {
             compose.onNodeWithText("2 rounds").assertExists()
             compose.onNodeWithText("OK").performClick()
 
-            // Hydrogen and Helium are due again for matching; typing was not touched.
+            // Hydrogen and Helium are due again for matching; typing and picking were not touched.
             compose.waitForText("Start (2 cards due)")
-            compose.onNodeWithText("Type").performClick()
-            compose.waitForText("Start (14 cards due)")
+            compose.onNodeWithText("Match 2").assertExists()
+            compose.onNodeWithText("Type 14").assertExists()
+            compose.onNodeWithText("Pick 14").assertExists()
+
+            // Clearing those two leaves nothing to match: a check instead of a number.
+            compose.onNodeWithText("Start (2 cards due)").performClick()
+            compose.waitForText("Round 1 · 2 left")
+            matchUntilDone()
+            compose.onNodeWithText("OK").performClick()
+            compose.waitForText("Match ✓")
+            compose.onNodeWithText("Start (0 cards due)").assertIsNotEnabled()
+
+            compose.onNodeWithContentDescription("Back").performClick()
+            compose.waitForText("14 cards · Type 14 · Pick 14 · Match ✓")
         }
     }
 }

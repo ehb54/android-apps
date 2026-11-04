@@ -36,6 +36,7 @@ import io.github.ehb54.core.ui.BuildInfo
 import io.github.ehb54.core.ui.BuildInfoCard
 import io.github.ehb54.quiz.R
 import io.github.ehb54.quiz.model.Quiz
+import io.github.ehb54.quiz.model.QuizMode
 import io.github.ehb54.core.ui.R as CoreR
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -119,10 +120,10 @@ fun QuizListScreen(
 
 @Composable
 fun cardsAndDue(quiz: Quiz): String {
-    val due = quiz.due().size
-    return stringResource(
-        R.string.two_parts,
-        pluralStringResource(R.plurals.card_count, quiz.cards.size, quiz.cards.size),
-        pluralStringResource(R.plurals.due_count, due, due),
-    )
+    // What is due in each mode, Type and Pick in the quiz's current direction:
+    // "14 cards · Type 14 · Pick 2 · Match ✓".
+    val cards = pluralStringResource(R.plurals.card_count, quiz.cards.size, quiz.cards.size)
+    return QuizMode.entries.fold(cards) { line, mode ->
+        stringResource(R.string.two_parts, line, dueLabel(stringResource(modeLabel(mode)), quiz.due(mode).size))
+    }
 }

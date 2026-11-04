@@ -31,6 +31,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import io.github.ehb54.quiz.R
 import io.github.ehb54.quiz.data.loadImage
+import io.github.ehb54.quiz.model.QuizMode
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.io.File
@@ -130,3 +131,16 @@ fun CardImage(file: File, modifier: Modifier = Modifier, maxSide: Int = 1600) {
         Box(modifier)
     }
 }
+
+/** "Type", "Pick" or "Match". */
+@StringRes
+fun modeLabel(mode: QuizMode) = when (mode) {
+    QuizMode.Typed -> R.string.mode_type
+    QuizMode.Pick -> R.string.mode_pick
+    QuizMode.Match -> R.string.mode_match
+}
+
+/** A label with how many cards are due for it: "Pick 2", or "Pick ✓" when none are. */
+@Composable
+fun dueLabel(label: String, due: Int): String =
+    stringResource(R.string.label_due, label, if (due == 0) stringResource(R.string.all_done_mark) else due.toString())
