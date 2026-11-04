@@ -58,10 +58,13 @@ class SampleLibraryUiTest : QuizUiTest() {
 
             compose.onNodeWithContentDescription("Back").performClick()
             compose.waitForText("History nouns")
-            // All due, in every mode: "200 cards · Type 200 · Pick 200 · Match 200".
-            fun allDue(cards: Int) = "$cards cards · Type $cards · Pick $cards · Match $cards"
+            // All due, in every mode and direction: "200 cards · Type →200 ←200 · Pick →200 ←200 · Match 200".
+            // Side A of the picture quiz is a picture, which can't be typed, so Type has only A -> B.
+            fun allDue(cards: Int, typeBack: Boolean = true) =
+                "$cards cards · Type →$cards${if (typeBack) " ←$cards" else ""} · Pick →$cards ←$cards · Match $cards"
             compose.onNode(hasText("History nouns") and hasText(allDue(nouns))).assertExists()
-            compose.onNode(hasText("History pictures") and hasText(allDue(pictures.cards))).assertExists()
+            compose.onNode(hasText("History pictures") and hasText(allDue(pictures.cards, typeBack = false)))
+                .assertExists()
             compose.onNodeWithText("Numbers").assertDoesNotExist()
 
             // All due, but a session without a range asks the first 20.

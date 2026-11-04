@@ -35,17 +35,20 @@ class MatchUiTest : ChemicalSymbolsUiTest() {
             compose.onNodeWithText("Match 2").assertExists()
             compose.onNodeWithText("Type 14").assertExists()
             compose.onNodeWithText("Pick 14").assertExists()
+            // The two missed in round 1, then right in round 2: level -1, then 0. The rest are at 1.
+            compose.onNodeWithText("Level 0: 2 · 1: 12").assertExists()
 
-            // Clearing those two leaves nothing to match: a check instead of a number.
+            // Clearing those two leaves nothing to match: a check with the level every card has reached.
             compose.onNodeWithText("Start (2 cards due)").performClick()
             compose.waitForText("Round 1 · 2 left")
             matchUntilDone()
             compose.onNodeWithText("OK").performClick()
-            compose.waitForText("Match ✓")
+            compose.waitForText("Match ✓1")
+            compose.onNodeWithText("Level 1: 14").assertExists()
             compose.onNodeWithText("Start (0 cards due)").assertIsNotEnabled()
 
             compose.onNodeWithContentDescription("Back").performClick()
-            compose.waitForText("14 cards · Type 14 · Pick 14 · Match ✓")
+            compose.waitForText("14 cards · Type →14 ←14 · Pick →14 ←14 · Match ✓1")
         }
     }
 }

@@ -87,7 +87,7 @@ abstract class QuizUiTest {
         openSamples()
         addSample("Shapes")
         compose.onNodeWithContentDescription("Back").performClick()
-        compose.waitForText("6 cards · Type 6 · Pick 6 · Match 6")
+        compose.waitForText("6 cards · Type →6 · Pick →6 ←6 · Match 6")
         compose.onNodeWithText("Shapes").performClick()
         compose.waitForText("Start (6 cards due)")
         // The zip's "!circle.png" sides became pictures, not text.

@@ -31,6 +31,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import io.github.ehb54.quiz.R
 import io.github.ehb54.quiz.data.loadImage
+import io.github.ehb54.quiz.model.Progress
 import io.github.ehb54.quiz.model.QuizMode
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -140,7 +141,18 @@ fun modeLabel(mode: QuizMode) = when (mode) {
     QuizMode.Match -> R.string.mode_match
 }
 
-/** A label with how many cards are due for it: "Pick 2", or "Pick ✓" when none are. */
+/**
+ * How many cards are due: "2", or when none are, a check with the level every card
+ * has reached ("✓2"). Null when no card can be asked this way.
+ */
 @Composable
-fun dueLabel(label: String, due: Int): String =
-    stringResource(R.string.label_due, label, if (due == 0) stringResource(R.string.all_done_mark) else due.toString())
+fun dueText(progress: Progress): String? = when {
+    progress.lowest == null -> null
+    progress.due == 0 -> stringResource(R.string.cleared_to, progress.lowest)
+    else -> progress.due.toString()
+}
+
+/** A label with its due count: "Pick 2", "Pick ✓2", or just "Pick" when no card can be asked that way. */
+@Composable
+fun dueLabel(label: String, progress: Progress): String =
+    dueText(progress)?.let { stringResource(R.string.label_due, label, it) } ?: label

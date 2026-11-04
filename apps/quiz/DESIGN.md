@@ -159,12 +159,26 @@ both, and `ui/PickScreen.kt`). Decisions made with eb:
 
 ## Due counts
 
-The quiz list shows what is due in each mode, Type and Pick in the quiz's current
-direction, with a check when nothing is: "14 cards · Type 14 · Pick 2 · Match ✓".
-On the quiz page the mode chips carry the same counts, and the direction chips
-carry the selected mode's count for each direction, so every count is one glance
-away without extra rows (chosen with eb). Counts follow the threshold and range;
-the cards-per-session cap only limits what the Start button takes.
+The quiz list shows what is due in each mode, Type and Pick both ways (→ is
+A → B, ← is B → A): "14 cards · Type →14 ←3 · Pick →2 ←✓1 · Match ✓2". On the
+quiz page the mode chips carry the counts for the current direction, and the
+direction chips carry the selected mode's count for each direction, so every
+count is one glance away without extra rows (chosen with eb).
+
+- **A check carries a level.** When nothing is due, "✓2" says every card that
+  mode and direction can ask is at level 2 or more (`Quiz.progress`, the lowest
+  level among them). So a quiz cleared at threshold 1 reads differently from one
+  cleared at 2, though both are done at their threshold.
+- **Nothing to ask, nothing shown.** A direction no card can be asked in is left
+  out of the list line (pictures on side A: "Type →6", with no ←), and its chip
+  shows just its label. Picking and matching can ask any card with both sides.
+- **Cards per level.** Between the direction chips and the threshold, one line
+  counts the cards at each level for the selected mode and direction:
+  "Level 2: 10 · 3: 4" (`Quiz.levels`). Once everything is at level 2, it shows
+  what raising the threshold to 3 would ask (10 cards). Levels can be negative,
+  since a card's misses are subtracted (see the level rule above).
+- Counts and levels follow the range; due counts also follow the threshold. The
+  cards-per-session cap only limits what the Start button takes.
 
 ## Code map
 

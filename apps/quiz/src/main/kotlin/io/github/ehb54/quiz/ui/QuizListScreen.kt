@@ -35,6 +35,7 @@ import androidx.compose.ui.unit.dp
 import io.github.ehb54.core.ui.BuildInfo
 import io.github.ehb54.core.ui.BuildInfoCard
 import io.github.ehb54.quiz.R
+import io.github.ehb54.quiz.model.Direction
 import io.github.ehb54.quiz.model.Quiz
 import io.github.ehb54.quiz.model.QuizMode
 import io.github.ehb54.core.ui.R as CoreR
@@ -120,10 +121,26 @@ fun QuizListScreen(
 
 @Composable
 fun cardsAndDue(quiz: Quiz): String {
-    // What is due in each mode, Type and Pick in the quiz's current direction:
-    // "14 cards · Type 14 · Pick 2 · Match ✓".
+    // What is due in each mode, Type and Pick both ways (→ A to B, ← B to A):
+    // "14 cards · Type →14 ←3 · Pick →2 ←✓1 · Match ✓2". A mode or direction
+    // that no card can be asked in is left out.
     val cards = pluralStringResource(R.plurals.card_count, quiz.cards.size, quiz.cards.size)
     return QuizMode.entries.fold(cards) { line, mode ->
-        stringResource(R.string.two_parts, line, dueLabel(stringResource(modeLabel(mode)), quiz.due(mode).size))
+        val counts = if (mode == QuizMode.Match) {
+            listOfNotNull(dueText(quiz.progress(mode)))
+        } else {
+            Direction.entries.mapNotNull { direction ->
+                dueText(quiz.progress(mode, direction))?.let {
+                    stringResource(if (direction == Direction.AToB) R.string.due_ab else R.string.due_ba, it)
+                }
+            }
+        }
+        if (counts.isEmpty()) {
+            line
+        } else {
+            val both = counts.reduce { first, second -> stringResource(R.string.both_ways, first, second) }
+            val label = stringResource(R.string.label_due, stringResource(modeLabel(mode)), both)
+            stringResource(R.string.two_parts, line, label)
+        }
     }
 }

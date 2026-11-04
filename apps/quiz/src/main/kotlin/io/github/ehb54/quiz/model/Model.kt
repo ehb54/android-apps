@@ -74,23 +74,27 @@ data class Card(
     fun withStats(direction: Direction, stats: Stats) =
         if (direction == Direction.AToB) copy(statsAToB = stats) else copy(statsBToA = stats)
 
-    /** Due in a session: askable and below the threshold (threshold 0 asks every card). */
-    fun isDue(direction: Direction, threshold: Int) =
-        askable(direction) && (threshold == 0 || stats(direction).level < threshold)
-
     /** Both sides show something, text or picture, so the card can be a pair of tiles. */
     fun matchable() = (a.isNotBlank() || imageA != null) && (b.isNotBlank() || imageB != null)
-
-    fun isDueForMatch(threshold: Int) = matchable() && (threshold == 0 || statsMatch.level < threshold)
 
     fun pickStats(direction: Direction) = if (direction == Direction.AToB) statsPickAToB else statsPickBToA
 
     fun withPickStats(direction: Direction, stats: Stats) =
         if (direction == Direction.AToB) copy(statsPickAToB = stats) else copy(statsPickBToA = stats)
 
-    /** Pick mode needs both sides too: the answer can be a picture, since it is picked, not typed. */
-    fun isDueForPick(direction: Direction, threshold: Int) =
-        matchable() && (threshold == 0 || pickStats(direction).level < threshold)
+    /**
+     * Whether [mode] can ask this card in [direction]. Typing needs a text answer. Picking
+     * and matching need both sides, but the answer can be a picture, since it is not typed.
+     */
+    fun canAsk(mode: QuizMode, direction: Direction) =
+        if (mode == QuizMode.Typed) askable(direction) else matchable()
+
+    /** This card's level in [mode] and [direction]; Match keeps one record for both ways. */
+    fun level(mode: QuizMode, direction: Direction) = when (mode) {
+        QuizMode.Typed -> stats(direction).level
+        QuizMode.Pick -> pickStats(direction).level
+        QuizMode.Match -> statsMatch.level
+    }
 
     fun withoutStats() = copy(
         statsAToB = Stats(),
@@ -129,6 +133,12 @@ data class QuizSettings(
         const val DEFAULT_CHOICES = 4
     }
 }
+
+/**
+ * Where one mode and direction stands: the [cards] it can ask, how many are [due],
+ * and the [lowest] level among them (the level every one has reached; null without cards).
+ */
+data class Progress(val cards: Int, val due: Int, val lowest: Int?)
 
 /**
  * A quiz. [source] and [sourceVersion] are set for quizzes added from the
@@ -171,20 +181,27 @@ data class Quiz(
      * by default the selected ones. The range applies; the cards-per-session cap does not.
      */
     fun due(mode: QuizMode = settings.mode, direction: Direction = settings.direction): List<Card> =
-        cardsInRange().filter {
-            when (mode) {
-                QuizMode.Typed -> it.isDue(direction, settings.threshold)
-                QuizMode.Pick -> it.isDueForPick(direction, settings.threshold)
-                QuizMode.Match -> it.isDueForMatch(settings.threshold)
-            }
-        }
+        askable(mode, direction).filter { isDue(it.level(mode, direction)) }
 
-    /** A card's level for the selected mode, as the card list shows it. */
-    fun level(card: Card) = when (settings.mode) {
-        QuizMode.Typed -> card.stats(settings.direction).level
-        QuizMode.Pick -> card.pickStats(settings.direction).level
-        QuizMode.Match -> card.statsMatch.level
+    /** Cards in range that [mode] can ask in [direction]. */
+    fun askable(mode: QuizMode = settings.mode, direction: Direction = settings.direction) =
+        cardsInRange().filter { it.canAsk(mode, direction) }
+
+    /** Below the threshold; threshold 0 asks every card. */
+    private fun isDue(level: Int) = settings.threshold == 0 || level < settings.threshold
+
+    /** A card's level for the selected mode and direction, as the card list shows it. */
+    fun level(card: Card) = card.level(settings.mode, settings.direction)
+
+    /** How far [mode] has got in [direction], over the cards [askable] gives. */
+    fun progress(mode: QuizMode = settings.mode, direction: Direction = settings.direction): Progress {
+        val levels = askable(mode, direction).map { it.level(mode, direction) }
+        return Progress(cards = levels.size, due = levels.count(::isDue), lowest = levels.minOrNull())
     }
+
+    /** How many of the [askable] cards are at each level, lowest level first; levels with no cards are left out. */
+    fun levels(mode: QuizMode = settings.mode, direction: Direction = settings.direction): Map<Int, Int> =
+        askable(mode, direction).groupingBy { it.level(mode, direction) }.eachCount().toSortedMap()
 
     /**
      * The cards the next session asks: with a range, every due card in it;

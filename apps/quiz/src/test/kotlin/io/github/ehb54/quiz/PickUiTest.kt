@@ -50,6 +50,9 @@ class PickUiTest : ChemicalSymbolsUiTest() {
             compose.onNodeWithText("Type 14").assertExists()
             compose.onNodeWithText("Match 14").assertExists()
             compose.onNodeWithText("A → B 2").assertExists()
+            // Hydrogen: missed, then right in round 2 (level 0). The confused card was right the
+            // first time, then penalized at the end (-1). The other 12 are at level 1.
+            compose.onNodeWithText("Level -1: 1 · 0: 1 · 1: 12").assertExists()
             tapChip("B → A")
             compose.waitForText("Start (14 cards due)")
             compose.onNodeWithText("Pick 14").assertExists()
@@ -59,7 +62,7 @@ class PickUiTest : ChemicalSymbolsUiTest() {
 
             // The quiz list sums it up, for the current direction.
             compose.onNodeWithContentDescription("Back").performClick()
-            compose.waitForText("14 cards · Type 14 · Pick 2 · Match 14")
+            compose.waitForText("14 cards · Type →14 ←14 · Pick →2 ←14 · Match 14")
         }
     }
 }

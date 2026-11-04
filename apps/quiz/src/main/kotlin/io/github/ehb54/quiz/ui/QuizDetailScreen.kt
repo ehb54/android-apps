@@ -183,12 +183,13 @@ private fun SessionSettings(quiz: Quiz, onChange: (QuizSettings) -> Unit, onStar
     val settings = quiz.settings
     Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            // Each chip says how many cards are due for it (Type and Pick in the current direction).
+            // Each chip says how many cards are due for it (Type and Pick in the current
+            // direction), or with none due, the level every card has reached ("✓2").
             QuizMode.entries.forEach { mode ->
                 FilterChip(
                     selected = settings.mode == mode,
                     onClick = { onChange(settings.copy(mode = mode)) },
-                    label = { Text(dueLabel(stringResource(modeLabel(mode)), quiz.due(mode).size)) },
+                    label = { Text(dueLabel(stringResource(modeLabel(mode)), quiz.progress(mode))) },
                 )
             }
         }
@@ -202,10 +203,18 @@ private fun SessionSettings(quiz: Quiz, onChange: (QuizSettings) -> Unit, onStar
                     FilterChip(
                         selected = settings.direction == direction,
                         onClick = { onChange(settings.copy(direction = direction)) },
-                        label = { Text(dueLabel(label, quiz.due(settings.mode, direction).size)) },
+                        label = { Text(dueLabel(label, quiz.progress(settings.mode, direction))) },
                     )
                 }
             }
+        }
+        // How many cards are at each level, so what a higher threshold would ask is in
+        // plain view: "Level 2: 10 · 3: 4" (10 cards are not at level 3 yet).
+        val levels = quiz.levels()
+        if (levels.isNotEmpty()) {
+            val counts = levels.map { (level, count) -> stringResource(R.string.level_cards, level, count) }
+                .reduce { line, part -> stringResource(R.string.two_parts, line, part) }
+            Text(stringResource(R.string.levels_line, counts), style = MaterialTheme.typography.bodyMedium)
         }
         Stepper(
             stringResource(R.string.threshold),

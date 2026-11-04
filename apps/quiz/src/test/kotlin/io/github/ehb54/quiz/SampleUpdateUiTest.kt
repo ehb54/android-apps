@@ -44,7 +44,7 @@ class SampleUpdateUiTest : QuizUiTest() {
             compose.onNode(hasText("Test words") and hasText("3 cards · added")).assertExists()
 
             compose.onNodeWithContentDescription("Back").performClick()
-            compose.waitForText("3 cards · Type 3 · Pick 3 · Match 3")
+            compose.waitForText("3 cards · Type →3 ←3 · Pick →3 ←3 · Match 3")
         }
     }
 }

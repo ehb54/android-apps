@@ -24,8 +24,16 @@
     </plurals>
     <!-- A mode or direction with the number of cards due for it, e.g. "Pick 2". -->
     <string name="label_due">%1$s %2$s</string>
-    <!-- In place of the number when nothing is due. -->
-    <string name="all_done_mark">✓</string>
+    <!-- In place of the number when nothing is due: a check and the level every card has reached, e.g. "✓2". -->
+    <string name="cleared_to">✓%1$d</string>
+    <!-- Due counts on the quiz list, one per direction: "→14" for A -> B, "←3" for B -> A. -->
+    <string name="due_ab">→%1$s</string>
+    <string name="due_ba">←%1$s</string>
+    <!-- Both directions' counts after a mode's name: "→14 ←3". -->
+    <string name="both_ways">%1$s %2$s</string>
+    <!-- How many cards are at each level, e.g. "Level 2: 10 · 3: 4". -->
+    <string name="levels_line">Level %1$s</string>
+    <string name="level_cards">%1$d: %2$d</string>
 
     <!-- Sample library -->
     <string name="samples_title">Sample quizzes</string>
