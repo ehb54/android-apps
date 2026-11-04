@@ -2969,7 +2969,7 @@ Schuß	drop					wrong lemma (Schuss)
 Schülerin	keep	die	Schülerinnen	female pupil		
 Brauch	keep	der	Bräuche	folk custom		Sitte has custom
 Zins	keep	der	Zinsen	interest rate		mostly plural Zinsen, interest
-Krüppel	keep	der	Krüppel	cripple		dated; offensive today
+Krüppel	drop					offensive today
 Jud	drop					wrong lemma (Jude)
 Severin	drop					name
 Schräger	drop					name
@@ -3543,3 +3543,102 @@ Ringkämpfer	keep	der	Ringkämpfer	wrestler
 Gläschen	drop					diminutive
 Lügner	keep	der	Lügner	liar		
 Neujahr	keep	das		New Year		
+Bewusstsein	keep	das		consciousness		
+Fantasie	keep	die	Fantasien	imagination		
+Beamte	keep	der	Beamten	civil servant		adjectival noun (ein Beamter)
+Braue	keep	die	Brauen	brow		eyebrow is taken by Augenbraue
+Lid	keep	das	Lider	eyelid		lid is taken by Deckel
+Dirne	keep	die	Dirnen	harlot		old-fashioned; in older texts also lass
+Gewissheit	keep	die	Gewissheiten	certainty		
+Scheich	drop					book-specific (4 books); Scheik was dropped the same way
+Pforte	keep	die	Pforten	gateway		gate is taken by Tor
+Büro	keep	das	Büros	bureau		office is taken by Amt
+Fotografie	keep	die	Fotografien	photograph		also photography
+Depesche	keep	die	Depeschen	wire		old-fashioned for telegram; telegram and dispatch are taken
+Kuchen	keep	der	Kuchen	cake	🍰	
+Misstrauen	keep	das		mistrust		distrust is taken by Argwohn
+Dienstbote	keep	der	Dienstboten	domestic servant		servant is taken by Diener
+Erbarmen	keep	das		compassion		mercy and pity are taken
+Gelehrte	keep	der	Gelehrten	scholar		adjectival noun (ein Gelehrter)
+Gardine	keep	die	Gardinen	net curtain		curtain is taken by Vorhang
+Degen	keep	der	Degen	rapier		sword and saber are taken
+Daumen	keep	der	Daumen	thumb		
+Telefon	keep	das	Telefone	telephone	☎️	
+Umriss	keep	der	Umrisse	outline		
+Schenke	keep	die	Schenken	alehouse		tavern, inn and pub are taken
+Wappen	keep	das	Wappen	coat of arms		
+Lakai	keep	der	Lakaien	lackey		liveried footman
+Edelstein	keep	der	Edelsteine	gemstone		
+Hochwürden	drop					title of address used without article (Euer Hochwürden)
+Mitmensch	keep	der	Mitmenschen	fellow human		
+Biene	keep	die	Bienen	bee	🐝	
+Trompete	keep	die	Trompeten	trumpet	🎺	
+Wohlgefallen	keep	das		approbation		pleased approval; pleasure, delight and liking are taken
+Kolben	keep	der	Kolben	rifle butt		also piston, flask
+Augenlid	drop					duplicates Lid
+Huf	keep	der	Hufe	hoof		
+Tiergarten	drop					name (mostly Berlin's Tiergarten park)
+Einkauf	keep	der	Einkäufe	shopping		purchase is taken by Kauf
+Rohheit	keep	die	Rohheiten	coarseness		rudeness is taken by Grobheit
+Selbstbewusstsein	keep	das		self-confidence		
+Esszimmer	drop					duplicates Speisezimmer
+Kajüte	keep	die	Kajüten	ship's cabin		cabin is taken by Kabine
+Braten	keep	der	Braten	roast		
+Taste	keep	die	Tasten	piano key		key is taken by Schlüssel
+Menschenseele	keep	die	Menschenseelen	human soul		keine Menschenseele: not a soul
+Gräuel	keep	der	Gräuel	abomination		
+Regenbogen	keep	der	Regenbogen	rainbow	🌈	
+Verdruss	keep	der		chagrin		annoyance and vexation are taken
+Bergmann	keep	der	Bergleute	miner		
+Kinderauge	keep	das	Kinderaugen	child's eye		
+Gesinde	keep	das		menials		collective: farm and household servants
+Mücke	keep	die	Mücken	mosquito	🦟	
+Sporn	keep	der	Sporen	spur		
+Rabe	keep	der	Raben	raven		
+Seemann	keep	der	Seeleute	seaman		sailor is taken by Matrose
+Spieß	keep	der	Spieße	spear		also spit (for roasting)
+Nuss	keep	die	Nüsse	nut		
+Erdgeschoss	keep	das	Erdgeschosse	ground floor		
+Komtess	keep	die	Komtessen	count's daughter		unmarried daughter of a count; countess is taken by Gräfin
+Großeltern	keep	die		grandparents		plural only
+Klumpen	keep	der	Klumpen	lump		
+Krücke	keep	die	Krücken	crutch	🩼	
+Missverständnis	keep	das	Missverständnisse	misunderstanding		
+Ente	keep	die	Enten	duck	🦆	
+Ungewissheit	keep	die	Ungewissheiten	uncertainty		
+Kleinod	keep	das	Kleinodien	jewel		
+Hässlichkeit	keep	die	Hässlichkeiten	ugliness		
+Bad	keep	das	Bäder	bath	🛁	
+Herzklopfen	keep	das		pounding heart		
+Bass	keep	der	Bässe	bass		
+Urkunde	keep	die	Urkunden	certificate		also deed, charter
+Gässchen	drop					diminutive (Gasse)
+Stängel	keep	der	Stängel	plant stem		stalk and stem are taken
+Maßstab	keep	der	Maßstäbe	yardstick		also scale (of a map)
+Storch	keep	der	Störche	stork		
+Blutstropfen	keep	der	Blutstropfen	drop of blood		
+Generalstab	keep	der	Generalstäbe	general staff		
+Zehenspitze	drop					duplicates Fußspitze
+Zuruf	keep	der	Zurufe	shout		
+Tapete	keep	die	Tapeten	wallpaper		
+Innerste	keep	das		innermost being		adjectival noun; das Innere is interior
+Heilige	keep	der	Heiligen	saint		adjectival noun (ein Heiliger); also die Heilige
+Gleis	keep	das	Gleise	track		example is the older form Geleise
+Schmeichelei	keep	die	Schmeicheleien	flattery		
+Aue	keep	die	Auen	water meadow		example is the interjection au
+Pflanzung	keep	die	Pflanzungen	plantation		also planting
+Beet	keep	das	Beete	flower bed		also a vegetable bed
+Nächste	drop					adjective used as noun (der/die/das Nächste); the biblical sense duplicates Mitmensch
+Vaterhaus	keep	das	Vaterhäuser	father's house		elevated for Elternhaus
+Geistliche	keep	der	Geistlichen	clergyman		adjectival noun (ein Geistlicher)
+Speer	keep	der	Speere	javelin		spear is taken by Spieß; better Spieß pike and Speer spear
+Wölkchen	drop					diminutive (Wolke)
+Armband	keep	das	Armbänder	bracelet		
+Equipage	keep	die	Equipagen	equipage		an elegant carriage with horses and servants
+Blättchen	drop					diminutive (Blatt)
+Pfütze	keep	die	Pfützen	puddle		
+Fledermaus	keep	die	Fledermäuse	bat	🦇	
+Beinkleid	keep	das	Beinkleider	pantaloons		dated for Hose; also women's drawers
+Schwesterchen	drop					diminutive (Schwester)
+Tüte	keep	die	Tüten	paper bag		
+Bildchen	drop					diminutive (Bild)

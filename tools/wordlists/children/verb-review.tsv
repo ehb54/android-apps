@@ -1,0 +1,499 @@
+lemma	decision	infinitive	english	forms	note
+ausreißen	keep	ausreißen	bolt	reißt aus, riss aus, ist ausgerissen	
+hinfliegen	keep	hinfliegen	fly there	fliegt hin, flog hin, ist hingeflogen	
+aufmachen	keep	aufmachen	open	macht auf, machte auf, hat aufgemacht	
+geln	drop				tagger artifact (interjection gelt)
+probieren	keep	probieren	try out	probiert, probierte, hat probiert	
+melken	keep	melken	milk	melkt, melkte, hat gemolken	
+umschauen	keep	sich umschauen	look around	schaut sich um, schaute sich um, hat sich umgeschaut	
+niesen	keep	niesen	sneeze	niest, nieste, hat geniest	
+daherkommen	keep	daherkommen	come along	kommt daher, kam daher, ist dahergekommen	
+niedersetzen	keep	sich niedersetzen	seat oneself	setzt sich nieder, setzte sich nieder, hat sich niedergesetzt	
+stricken	keep	stricken	knit	strickt, strickte, hat gestrickt	
+weiterfliegen	keep	weiterfliegen	fly on	fliegt weiter, flog weiter, ist weitergeflogen	
+herunterkommen	keep	herunterkommen	come down	kommt herunter, kam herunter, ist heruntergekommen	
+herbeiholen	keep	herbeiholen	fetch	holt herbei, holte herbei, hat herbeigeholt	
+schmausen	keep	schmausen	feast	schmaust, schmauste, hat geschmaust	
+rannen	drop				wrong lemma (rennen)
+aufragen	keep	aufragen	tower	ragt auf, ragte auf, hat aufgeragt	
+hinaufklettern	keep	hinaufklettern	climb up	klettert hinauf, kletterte hinauf, ist hinaufgeklettert	
+indeßn	drop				tagger artifact (adverb indes)
+miauen	keep	miauen	meow	miaut, miaute, hat miaut	
+herausnehmen	keep	herausnehmen	take out	nimmt heraus, nahm heraus, hat herausgenommen	
+weißen	drop				wrong lemma (wissen)
+baen	drop				wrong lemma (bitten)
+siehn	drop				wrong lemma (sehen)
+entwischen	keep	entwischen	get away	entwischt, entwischte, ist entwischt	
+hineinstecken	keep	hineinstecken	stick in	steckt hinein, steckte hinein, hat hineingesteckt	
+schnitzen	keep	schnitzen	carve	schnitzt, schnitzte, hat geschnitzt	
+purzelen	drop				wrong lemma (purzeln)
+wolltn	drop				wrong lemma (wollen)
+einsperren	keep	einsperren	lock up	sperrt ein, sperrte ein, hat eingesperrt	
+fortlaufen	drop				duplicates davonlaufen
+bleibn	drop				wrong lemma (bleiben)
+ausgerissen	drop				wrong lemma (ausreißen)
+hinunterfliegen	keep	hinunterfliegen	fly down	fliegt hinunter, flog hinunter, ist hinuntergeflogen	
+zurücklaufen	keep	zurücklaufen	run back	läuft zurück, lief zurück, ist zurückgelaufen	
+hopsen	drop				duplicates hüpfen
+hinausspringen	keep	hinausspringen	jump out	springt hinaus, sprang hinaus, ist hinausgesprungen	
+hinsagen	drop				tagger artifact (hin belongs to 'vor sich hin')
+hineinlaufen	keep	hineinlaufen	run in	läuft hinein, lief hinein, ist hineingelaufen	
+davonlaufen	keep	davonlaufen	run away	läuft davon, lief davon, ist davongelaufen	
+herbeikommen	keep	herbeikommen	come over	kommt herbei, kam herbei, ist herbeigekommen	
+hinlaufen	keep	hinlaufen	run there	läuft hin, lief hin, ist hingelaufen	
+hervorgucken	keep	hervorgucken	peep out	guckt hervor, guckte hervor, hat hervorgeguckt	
+anlangen	keep	anlangen	arrive	langt an, langte an, ist angelangt	
+umherschauen	drop				duplicates umschauen
+trösteen	drop				wrong lemma (trösten)
+zanken	keep	zanken	squabble	zankt, zankte, hat gezankt	
+nähen	keep	nähen	sew	näht, nähte, hat genäht	
+hineinschlüpfen	keep	hineinschlüpfen	slip in	schlüpft hinein, schlüpfte hinein, ist hineingeschlüpft	
+davongeflogen	drop				wrong lemma (davonfliegen)
+verfertigen	keep	verfertigen	craft	verfertigt, verfertigte, hat verfertigt	
+scharren	keep	scharren	scrape	scharrt, scharrte, hat gescharrt	
+zunehmen	keep	zunehmen	increase	nimmt zu, nahm zu, hat zugenommen	
+festschlafen	drop				tagger artifact (fest schlafen)
+auspacken	keep	auspacken	unpack	packt aus, packte aus, hat ausgepackt	
+umfallen	keep	umfallen	fall over	fällt um, fiel um, ist umgefallen	
+krabbelten	drop				wrong lemma (krabbeln)
+dazusingen	drop				tagger artifact (dazu singen)
+davonfliegen	keep	davonfliegen	fly away	fliegt davon, flog davon, ist davongeflogen	
+zusammenfahren	keep	zusammenfahren	give a start	fährt zusammen, fuhr zusammen, ist zusammengefahren	
+herumspringen	keep	herumspringen	jump around	springt herum, sprang herum, ist herumgesprungen	
+weggelaufen	drop				wrong lemma (weglaufen)
+wartn	drop				wrong lemma (warten)
+zutragen	keep	sich zutragen	take place	trägt sich zu, trug sich zu, hat sich zugetragen	
+zuschauen	keep	zuschauen	watch	schaut zu, schaute zu, hat zugeschaut	
+hervornehmen	drop				duplicates herausnehmen
+weideten	drop				wrong lemma (weiden)
+zuwandern	keep	zuwandern	wander toward	wandert zu, wanderte zu, ist zugewandert	today mostly immigrate
+zurückfliegen	keep	zurückfliegen	fly back	fliegt zurück, flog zurück, ist zurückgeflogen	
+nachfolgen	keep	nachfolgen	follow after	folgt nach, folgte nach, ist nachgefolgt	
+hinaufkommen	keep	hinaufkommen	come up	kommt hinauf, kam hinauf, ist hinaufgekommen	
+ermahnen	keep	ermahnen	admonish	ermahnt, ermahnte, hat ermahnt	
+anschauen	keep	anschauen	look at	schaut an, schaute an, hat angeschaut	
+hinrennen	drop				duplicates hinlaufen
+pflücken	keep	pflücken	pick	pflückt, pflückte, hat gepflückt	
+hinaufzuklettern	drop				wrong lemma (hinaufklettern)
+erzeigen	keep	erzeigen	render	erzeigt, erzeigte, hat erzeigt	
+gehn	drop				wrong lemma (gehen)
+heuln	drop				wrong lemma (heulen)
+hinausfliegen	keep	hinausfliegen	fly out	fliegt hinaus, flog hinaus, ist hinausgeflogen	
+zurannen	drop				wrong lemma (zurennen)
+anmachen	keep	anmachen	light	macht an, machte an, hat angemacht	
+herausdringen	keep	herausdringen	issue forth	dringt heraus, drang heraus, ist herausgedrungen	
+hineinfliegen	keep	hineinfliegen	fly in	fliegt hinein, flog hinein, ist hineingeflogen	
+heimtragen	keep	heimtragen	carry home	trägt heim, trug heim, hat heimgetragen	
+beistehen	keep	beistehen	stand by	steht bei, stand bei, hat beigestanden	
+herausholen	keep	herausholen	get out	holt heraus, holte heraus, hat herausgeholt	
+zumachen	keep	zumachen	shut	macht zu, machte zu, hat zugemacht	
+erklettern	keep	erklettern	scale	erklettert, erkletterte, hat erklettert	
+hinkommen	keep	hinkommen	get there	kommt hin, kam hin, ist hingekommen	
+bekommsen	drop				wrong lemma (bekommen)
+fortschleichen	keep	fortschleichen	sneak off	schleicht fort, schlich fort, ist fortgeschlichen	
+hinausschallen	drop				duplicates erschallen
+hineinrutschen	keep	hineinrutschen	slide in	rutscht hinein, rutschte hinein, ist hineingerutscht	
+umhertanzen	keep	umhertanzen	dance around	tanzt umher, tanzte umher, ist umhergetanzt	
+bewirthen	drop				wrong lemma (bewirten)
+umhauen	keep	umhauen	chop down	haut um, haute um, hat umgehauen	
+versorgen	keep	versorgen	provide for	versorgt, versorgte, hat versorgt	
+zähmen	keep	zähmen	tame	zähmt, zähmte, hat gezähmt	
+hinsetzen	keep	sich hinsetzen	sit down	setzt sich hin, setzte sich hin, hat sich hingesetzt	
+anstimmen	keep	anstimmen	strike up	stimmt an, stimmte an, hat angestimmt	
+dableiben	keep	dableiben	stay on	bleibt da, blieb da, ist dageblieben	
+fortdauern	keep	fortdauern	persist	dauert fort, dauerte fort, hat fortgedauert	
+verleben	keep	verleben	spend	verlebt, verlebte, hat verlebt	
+stibitzen	keep	stibitzen	pilfer	stibitzt, stibitzte, hat stibitzt	
+hüpfen	keep	hüpfen	hop	hüpft, hüpfte, ist gehüpft	
+lecken	keep	lecken	lick	leckt, leckte, hat geleckt	
+weiden	keep	weiden	graze	weidet, weidete, hat geweidet	
+konnten	drop				wrong lemma (können)
+fleigen	drop				wrong lemma (fliegen)
+hingelangen	drop				duplicates hinkommen
+dranliegen	drop				tagger artifact (dran liegen)
+schnarchen	keep	schnarchen	snore	schnarcht, schnarchte, hat geschnarcht	
+hinunterspringen	keep	hinunterspringen	jump down	springt hinunter, sprang hinunter, ist hinuntergesprungen	
+losstürzen	keep	losstürzen	rush at	stürzt los, stürzte los, ist losgestürzt	
+davonrannen	drop				wrong lemma (davonrennen)
+zurennen	drop				duplicates zulaufen
+entrüstetrufen	drop				tagger artifact (entrüstet rufen)
+hineinkommen	keep	hineinkommen	get in	kommt hinein, kam hinein, ist hineingekommen	
+wirstn	drop				wrong lemma (werden)
+nachlaufen	keep	nachlaufen	run after	läuft nach, lief nach, ist nachgelaufen	
+hinausschlüpfen	keep	hinausschlüpfen	slip out	schlüpft hinaus, schlüpfte hinaus, ist hinausgeschlüpft	
+zappeln	keep	zappeln	wriggle	zappelt, zappelte, hat gezappelt	
+herumfliegen	keep	herumfliegen	fly around	fliegt herum, flog herum, ist herumgeflogen	
+anbrechen	keep	anbrechen	set in	bricht an, brach an, ist angebrochen	
+auswählen	keep	auswählen	select	wählt aus, wählte aus, hat ausgewählt	
+erschallen	keep	erschallen	ring out	erschallt, erschallte, ist erschallt	
+bessern	drop				tagger artifact (mostly the adjective bessern)
+grämen	keep	sich grämen	grieve	grämt sich, grämte sich, hat sich gegrämt	
+meckern	keep	meckern	bleat	meckert, meckerte, hat gemeckert	
+vertraun	drop				wrong lemma (vertrauen)
+fortmachen	keep	sich fortmachen	make off	macht sich fort, machte sich fort, hat sich fortgemacht	
+herzulaufen	drop				wrong lemma (herlaufen)
+dastinden	drop				wrong lemma (dastehen)
+entschlüpfen	keep	entschlüpfen	slip away	entschlüpft, entschlüpfte, ist entschlüpft	
+zubringen	drop				duplicates verleben
+schrieen	drop				wrong lemma (schreien)
+abzuholen	drop				wrong lemma (abholen)
+fortziehen	keep	fortziehen	pull away	zieht fort, zog fort, hat fortgezogen	
+eingewöhnen	keep	sich eingewöhnen	settle in	gewöhnt sich ein, gewöhnte sich ein, hat sich eingewöhnt	
+kreischen	keep	kreischen	screech	kreischt, kreischte, hat gekreischt	
+hingelaufen	drop				wrong lemma (hinlaufen)
+herausschlüpfen	drop				duplicates hinausschlüpfen
+backen	keep	backen	bake	backt, backte, hat gebacken	
+hinaufziehen	keep	hinaufziehen	pull up	zieht hinauf, zog hinauf, hat hinaufgezogen	
+hinunterrufen	keep	hinunterrufen	call down	ruft hinunter, rief hinunter, hat hinuntergerufen	
+herumsuchen	keep	herumsuchen	search around	sucht herum, suchte herum, hat herumgesucht	
+vorbeifahren	keep	vorbeifahren	drive past	fährt vorbei, fuhr vorbei, ist vorbeigefahren	
+wiederrufen	drop				tagger artifact (wieder rufen)
+fällen	drop				wrong lemma (gefallen)
+könnteen	drop				wrong lemma (können)
+schwänzen	keep	schwänzen	play hooky	schwänzt, schwänzte, hat geschwänzt	example is the adjective geschwänzt (tailed)
+davonrennen	drop				duplicates davonlaufen
+gerathen	drop				wrong lemma (raten)
+hinüberfliegen	keep	hinüberfliegen	fly across	fliegt hinüber, flog hinüber, ist hinübergeflogen	
+hinunterlaufen	keep	hinunterlaufen	run down	läuft hinunter, lief hinunter, ist hinuntergelaufen	
+herumtreiben	keep	sich herumtreiben	hang around	treibt sich herum, trieb sich herum, hat sich herumgetrieben	
+hineinspringen	keep	hineinspringen	jump in	springt hinein, sprang hinein, ist hineingesprungen	
+verzieren	keep	verzieren	decorate	verziert, verzierte, hat verziert	
+auftragen	keep	auftragen	instruct	trägt auf, trug auf, hat aufgetragen	
+vorwärtsgehen	drop				tagger artifact (vorwärts gehen)
+hinaufschwingen	keep	sich hinaufschwingen	soar up	schwingt sich hinauf, schwang sich hinauf, hat sich hinaufgeschwungen	
+herausgelassen	drop				wrong lemma (herauslassen)
+ausbessern	keep	ausbessern	mend	bessert aus, besserte aus, hat ausgebessert	
+munden	keep	munden	taste good	mundet, mundete, hat gemundet	
+umherspähen	keep	umherspähen	peer around	späht umher, spähte umher, hat umhergespäht	
+hinauffliegen	keep	hinauffliegen	fly up	fliegt hinauf, flog hinauf, ist hinaufgeflogen	
+lachn	drop				wrong lemma (lachen)
+verkündigen	keep	verkündigen	proclaim	verkündigt, verkündigte, hat verkündigt	
+zuzubringen	drop				wrong lemma (zubringen)
+gefällen	drop				wrong lemma (gefallen)
+pflanzen	keep	pflanzen	plant	pflanzt, pflanzte, hat gepflanzt	
+ersteigen	keep	ersteigen	ascend	ersteigt, erstieg, hat erstiegen	
+vorüberfliegen	keep	vorüberfliegen	fly past	fliegt vorüber, flog vorüber, ist vorübergeflogen	
+fortfliegen	drop				duplicates davonfliegen
+hsen	drop				wrong lemma (gehen)
+erschalln	drop				wrong lemma (erschallen)
+guckn	drop				wrong lemma (gucken)
+ausstassen	drop				wrong lemma (ausstoßen)
+besuchstn	drop				wrong lemma (besuchen)
+schnappen	keep	schnappen	snap	schnappt, schnappte, hat geschnappt	
+heranwachsen	keep	heranwachsen	grow up	wächst heran, wuchs heran, ist herangewachsen	
+aufgeschossen	drop				wrong lemma (aufschießen)
+nachrannen	drop				wrong lemma (nachrennen)
+errathen	drop				wrong lemma (erraten)
+hereintreten	keep	hereintreten	step inside	tritt herein, trat herein, ist hereingetreten	
+zurückbringen	keep	zurückbringen	bring back	bringt zurück, brachte zurück, hat zurückgebracht	
+aufbleiben	keep	aufbleiben	stay up	bleibt auf, blieb auf, ist aufgeblieben	
+umherspringen	drop				duplicates herumspringen
+herauskamen	drop				wrong lemma (herauskommen)
+widerfahren	keep	widerfahren	befall	widerfährt, widerfuhr, ist widerfahren	
+entgegenrufen	keep	entgegenrufen	call out to	ruft entgegen, rief entgegen, hat entgegengerufen	
+auffressen	keep	auffressen	devour	frisst auf, fraß auf, hat aufgefressen	
+einfahren	keep	einfahren	pull in	fährt ein, fuhr ein, ist eingefahren	
+auflauern	keep	auflauern	lie in wait	lauert auf, lauerte auf, hat aufgelauert	
+ausfliegen	keep	ausfliegen	leave the nest	fliegt aus, flog aus, ist ausgeflogen	
+traben	keep	traben	trot	trabt, trabte, ist getrabt	
+übernachten	keep	übernachten	stay overnight	übernachtet, übernachtete, hat übernachtet	
+beisammensitzen	keep	beisammensitzen	sit together	sitzt beisammen, saß beisammen, hat beisammengesessen	
+entrüsten	drop				adjective (entrüstet)
+einstimmen	keep	einstimmen	join in	stimmt ein, stimmte ein, hat eingestimmt	
+ergötzen	keep	sich ergötzen	revel	ergötzt sich, ergötzte sich, hat sich ergötzt	dated
+herumhüpfen	keep	herumhüpfen	hop around	hüpft herum, hüpfte herum, ist herumgehüpft	
+hinauskönnen	keep	hinauskönnen	can go out	kann hinaus, konnte hinaus, hat hinausgekonnt	colloquial
+herbeiziehen	keep	herbeiziehen	pull closer	zieht herbei, zog herbei, hat herbeigezogen	
+hineingedrängen	drop				wrong lemma (hineindrängen)
+antriffen	drop				wrong lemma (antreffen)
+zueilen	keep	zueilen	hurry toward	eilt zu, eilte zu, ist zugeeilt	
+hinschauen	keep	hinschauen	look toward	schaut hin, schaute hin, hat hingeschaut	
+zusammenpacken	keep	zusammenpacken	pack up	packt zusammen, packte zusammen, hat zusammengepackt	
+herunterspringen	drop				duplicates hinunterspringen
+nachsetzen	keep	nachsetzen	give chase	setzt nach, setzte nach, ist nachgesetzt	jemandem nachsetzen
+herunterholen	keep	herunterholen	fetch down	holt herunter, holte herunter, hat heruntergeholt	
+dransein	drop				tagger artifact (dran sein, two words today)
+niederschauen	drop				duplicates hinunterschauen
+verpflegen	keep	verpflegen	feed	verpflegt, verpflegte, hat verpflegt	provide with meals
+ungern	drop				tagger artifact (adverb)
+dasehen	drop				tagger artifact (interjection siehe da)
+aufgegessen	drop				wrong lemma (aufessen)
+hineinfahren	keep	hineinfahren	drive in	fährt hinein, fuhr hinein, ist hineingefahren	
+anzischen	keep	anzischen	hiss at	zischt an, zischte an, hat angezischt	
+hinzeigen	keep	hinzeigen	point at	zeigt hin, zeigte hin, hat hingezeigt	
+kaun	drop				wrong lemma (kauen)
+herlaufen	drop				duplicates nachlaufen
+auffliegen	keep	auffliegen	take wing	fliegt auf, flog auf, ist aufgeflogen	
+umkommen	keep	umkommen	perish	kommt um, kam um, ist umgekommen	
+hinunterschauen	keep	hinunterschauen	look down	schaut hinunter, schaute hinunter, hat hinuntergeschaut	kept over niederschauen and niedersehen
+hervorschauen	drop				duplicates hervorgucken
+fortsein	drop				tagger artifact (fort sein, two words today)
+necken	keep	necken	tease	neckt, neckte, hat geneckt	
+zusammentreffen	keep	zusammentreffen	encounter	trifft zusammen, traf zusammen, ist zusammengetroffen	
+zustürzen	keep	zustürzen	rush toward	stürzt zu, stürzte zu, ist zugestürzt	
+hineinrufen	keep	hineinrufen	call in	ruft hinein, rief hinein, hat hineingerufen	
+fertigen	keep	fertigen	manufacture	fertigt, fertigte, hat gefertigt	
+ln	drop				tagger artifact (interjection gelt)
+aufheitern	keep	aufheitern	cheer up	heitert auf, heiterte auf, hat aufgeheitert	
+krabbeln	keep	krabbeln	crawl	krabbelt, krabbelte, ist gekrabbelt	
+drandenken	drop				tagger artifact (dran denken, two words today)
+habeben	drop				wrong lemma (haben)
+schwerseufzen	drop				tagger artifact (schwer seufzen, two words)
+hineinsehen	keep	hineinsehen	look in	sieht hinein, sah hinein, hat hineingesehen	
+heimgehen	keep	heimgehen	go home	geht heim, ging heim, ist heimgegangen	
+sestin	drop				wrong lemma (sein)
+baumeln	keep	baumeln	dangle	baumelt, baumelte, hat gebaumelt	
+jubelen	drop				wrong lemma (jubeln)
+auszupacken	drop				wrong lemma (auspacken)
+herumschwingen	keep	herumschwingen	swing around	schwingt herum, schwang herum, hat herumgeschwungen	
+zusammenhelfen	drop				dialect (Swiss and southern for zusammenarbeiten)
+hinausgeschauen	drop				wrong lemma (hinausschauen)
+umgestoßen	drop				wrong lemma (umstoßen)
+zusammendrehen	keep	zusammendrehen	twist together	dreht zusammen, drehte zusammen, hat zusammengedreht	
+hinaufgekletteren	drop				wrong lemma (hinaufklettern)
+kratzen	keep	kratzen	scratch	kratzt, kratzte, hat gekratzt	
+hinausschauen	keep	hinausschauen	look out	schaut hinaus, schaute hinaus, hat hinausgeschaut	
+ausstehen	keep	ausstehen	endure	steht aus, stand aus, hat ausgestanden	nicht ausstehen können: cannot stand
+beachteen	drop				wrong lemma (beachten)
+dahergekommen	drop				wrong lemma (daherkommen)
+hinhsen	drop				wrong lemma (hingehen)
+schallen	keep	schallen	resound	schallt, schallte, hat geschallt	
+beifügen	keep	beifügen	add	fügt bei, fügte bei, hat beigefügt	add a remark
+hersagen	keep	hersagen	recite	sagt her, sagte her, hat hergesagt	
+schnurren	keep	schnurren	purr	schnurrt, schnurrte, hat geschnurrt	
+betrüben	keep	betrüben	sadden	betrübt, betrübte, hat betrübt	
+aussein	drop				tagger artifact (aus sein, two words today)
+herbeibringen	keep	herbeibringen	bring over	bringt herbei, brachte herbei, hat herbeigebracht	
+zurechtzupfen	keep	zurechtzupfen	tug into place	zupft zurecht, zupfte zurecht, hat zurechtgezupft	
+mitdürfen	keep	mitdürfen	may come along	darf mit, durfte mit, hat mitgedurft	colloquial
+zugehören	drop				wrong lemma (zuhören)
+zulaufen	keep	zulaufen	run toward	läuft zu, lief zu, ist zugelaufen	
+ermuntern	keep	ermuntern	encourage	ermuntert, ermunterte, hat ermuntert	
+nachhelfen	keep	nachhelfen	help along	hilft nach, half nach, hat nachgeholfen	
+niederkaueren	drop				wrong lemma (niederkauern)
+hätteen	drop				wrong lemma (haben)
+herbeigeschaffen	drop				wrong lemma (herbeischaffen)
+hineinschauen	drop				duplicates hineinsehen
+erquicken	keep	erquicken	refresh	erquickt, erquickte, hat erquickt	elevated
+naschn	drop				wrong lemma (naschen)
+anstrengten	drop				wrong lemma (anstrengen)
+vergruben	drop				wrong lemma (vergraben)
+fortzuhelfen	drop				wrong lemma (forthelfen)
+mitessen	keep	mitessen	share a meal	isst mit, aß mit, hat mitgegessen	
+widerstehen	keep	widerstehen	resist	widersteht, widerstand, hat widerstanden	
+verdorben	drop				wrong lemma (verderben)
+wedelen	drop				wrong lemma (wedeln)
+entgegneen	drop				wrong lemma (entgegnen)
+aufjauchzen	keep	aufjauchzen	whoop	jauchzt auf, jauchzte auf, hat aufgejauchzt	
+nachrufen	keep	nachrufen	call after	ruft nach, rief nach, hat nachgerufen	
+vermehren	keep	vermehren	multiply	vermehrt, vermehrte, hat vermehrt	
+aufsperren	keep	aufsperren	open wide	sperrt auf, sperrte auf, hat aufgesperrt	
+spuken	keep	spuken	haunt	spukt, spukte, hat gespukt	
+verpacken	keep	verpacken	package	verpackt, verpackte, hat verpackt	
+anstrichen	drop				wrong lemma (anstreichen)
+hinuntereilen	keep	hinuntereilen	hurry down	eilt hinunter, eilte hinunter, ist hinuntergeeilt	
+hintragen	keep	hintragen	carry there	trägt hin, trug hin, hat hingetragen	
+schielen	keep	schielen	squint	schielt, schielte, hat geschielt	
+zeign	drop				wrong lemma (zeigen)
+vorbeihuschen	keep	vorbeihuschen	flit past	huscht vorbei, huschte vorbei, ist vorbeigehuscht	
+aufschauen	keep	aufschauen	look up	schaut auf, schaute auf, hat aufgeschaut	
+bürsten	keep	bürsten	brush	bürstet, bürstete, hat gebürstet	
+bezeigen	keep	bezeigen	display	bezeigt, bezeigte, hat bezeigt	dated
+heranwagen	keep	sich heranwagen	venture close	wagt sich heran, wagte sich heran, hat sich herangewagt	
+herausstecken	keep	herausstecken	stick out	steckt heraus, steckte heraus, hat herausgesteckt	
+weiterkönnen	keep	weiterkönnen	can go on	kann weiter, konnte weiter, hat weitergekonnt	colloquial
+übrigsein	drop				tagger artifact (übrig sein, two words today)
+wegschlagen	keep	wegschlagen	knock away	schlägt weg, schlug weg, hat weggeschlagen	
+striegelen	drop				wrong lemma (striegeln)
+bedurfen	drop				wrong lemma (bedürfen)
+erlernen	keep	erlernen	learn	erlernt, erlernte, hat erlernt	
+kämmen	keep	kämmen	comb	kämmt, kämmte, hat gekämmt	
+anzuziehen	drop				wrong lemma (anziehen)
+köpfen	keep	köpfen	behead	köpft, köpfte, hat geköpft	
+anzukleiden	drop				wrong lemma (ankleiden)
+ertrunken	drop				wrong lemma (ertrinken)
+bestrafen	keep	bestrafen	punish	bestraft, bestrafte, hat bestraft	
+hilfn	drop				wrong lemma (helfen)
+aufessen	keep	aufessen	eat up	isst auf, aß auf, hat aufgegessen	
+wegstoßen	keep	wegstoßen	push away	stößt weg, stieß weg, hat weggestoßen	
+durchstreifen	keep	durchstreifen	roam	durchstreift, durchstreifte, hat durchstreift	
+striegeln	keep	striegeln	groom	striegelt, striegelte, hat gestriegelt	a horse
+flitzen	keep	flitzen	dash	flitzt, flitzte, ist geflitzt	
+beistimmen	keep	beistimmen	assent	stimmt bei, stimmte bei, hat beigestimmt	dated
+zurücktönen	keep	zurücktönen	echo back	tönt zurück, tönte zurück, hat zurückgetönt	
+hinfallen	keep	hinfallen	fall down	fällt hin, fiel hin, ist hingefallen	
+abbilden	keep	abbilden	depict	bildet ab, bildete ab, hat abgebildet	
+vergingen	drop				wrong lemma (vergehen)
+vortreten	keep	vortreten	step forward	tritt vor, trat vor, ist vorgetreten	
+bellen	keep	bellen	bark	bellt, bellte, hat gebellt	
+mitbringstn	drop				wrong lemma (mitbringen)
+willkommenheißen	drop				tagger artifact (willkommen heißen, two words today)
+heranfliegen	keep	heranfliegen	fly closer	fliegt heran, flog heran, ist herangeflogen	
+aufkönnen	drop				tagger artifact (konnte ... auf of aufreißen)
+aufsein	drop				tagger artifact (auf sein, two words today)
+bahnen	keep	bahnen	clear a path	bahnt, bahnte, hat gebahnt	sich einen Weg bahnen
+weglegen	keep	weglegen	put aside	legt weg, legte weg, hat weggelegt	
+herzukommen	drop				duplicates herbeikommen
+fehltreten	keep	fehltreten	miss one's footing	tritt fehl, trat fehl, ist fehlgetreten	
+ausgerenken	drop				wrong lemma (ausrenken)
+schaun	drop				wrong lemma (schauen)
+ausschauen	keep	ausschauen	watch for	schaut aus, schaute aus, hat ausgeschaut	nach jemandem ausschauen; southern also for aussehen
+hineingekommen	drop				wrong lemma (hineinkommen)
+aufladen	keep	aufladen	load up	lädt auf, lud auf, hat aufgeladen	
+herauftönen	keep	herauftönen	sound from below	tönt herauf, tönte herauf, hat heraufgetönt	
+umherhüpfen	drop				duplicates herumhüpfen
+hinausstecken	drop				duplicates herausstecken
+auszuteilen	drop				wrong lemma (austeilen)
+anschicken	keep	sich anschicken	get ready	schickt sich an, schickte sich an, hat sich angeschickt	elevated
+aussahen	drop				wrong lemma (aussehen)
+geigen	keep	geigen	fiddle	geigt, geigte, hat gegeigt	
+hineinkriechen	keep	hineinkriechen	crawl in	kriecht hinein, kroch hinein, ist hineingekrochen	
+anzubinden	drop				wrong lemma (anbinden)
+herumwühlen	keep	herumwühlen	root around	wühlt herum, wühlte herum, hat herumgewühlt	
+darbeten	drop				wrong lemma (darbieten)
+beißen	keep	beißen	bite	beißt, biss, hat gebissen	
+lebn	drop				wrong lemma (leben)
+spitzen	keep	spitzen	prick up	spitzt, spitzte, hat gespitzt	die Ohren spitzen
+herabkommen	drop				duplicates herunterkommen
+nachzusehen	drop				wrong lemma (nachsehen)
+hinaufschauen	drop				duplicates aufschauen
+hineingucken	keep	hineingucken	peek in	guckt hinein, guckte hinein, hat hineingeguckt	
+ausdachen	drop				wrong lemma (ausdenken)
+heimbringen	keep	heimbringen	bring home	bringt heim, brachte heim, hat heimgebracht	
+mahlen	keep	mahlen	grind	mahlt, mahlte, hat gemahlen	
+hineinmüssen	keep	hineinmüssen	must go in	muss hinein, musste hinein, hat hineingemusst	colloquial
+jemmerten	drop				wrong lemma (jammern)
+wegnehmen	keep	wegnehmen	take away	nimmt weg, nahm weg, hat weggenommen	
+trauten	drop				wrong lemma (trauen)
+anstaunen	keep	anstaunen	gape at	staunt an, staunte an, hat angestaunt	
+mitspielen	keep	mitspielen	play along	spielt mit, spielte mit, hat mitgespielt	
+einwickeln	keep	einwickeln	wrap up	wickelt ein, wickelte ein, hat eingewickelt	
+tadelen	drop				wrong lemma (tadeln)
+abmühen	keep	sich abmühen	toil	müht sich ab, mühte sich ab, hat sich abgemüht	
+weiterfragen	keep	weiterfragen	keep asking	fragt weiter, fragte weiter, hat weitergefragt	
+wiederfragen	drop				tagger artifact (wieder fragen, two words)
+nachgerufen	drop				wrong lemma (nachrufen)
+dagegenhaben	drop				tagger artifact (dagegen haben, two words today)
+hinrannen	drop				wrong lemma (hinrennen)
+heimziehen	drop				duplicates heimgehen
+erstrecken	keep	sich erstrecken	extend	erstreckt sich, erstreckte sich, hat sich erstreckt	
+herbeirufen	keep	herbeirufen	summon	ruft herbei, rief herbei, hat herbeigerufen	
+herabsehen	keep	herabsehen	look down on	sieht herab, sah herab, hat herabgesehen	
+nahesein	drop				tagger artifact (nahe sein, two words today)
+vergaßen	drop				wrong lemma (vergessen)
+tadeln	keep	tadeln	scold	tadelt, tadelte, hat getadelt	
+aufgeschlossen	drop				wrong lemma (aufschließen)
+hineintun	keep	hineintun	put in	tut hinein, tat hinein, hat hineingetan	
+verirren	keep	sich verirren	get lost	verirrt sich, verirrte sich, hat sich verirrt	
+zurückeilen	keep	zurückeilen	hurry back	eilt zurück, eilte zurück, ist zurückgeeilt	
+ausschicken	keep	ausschicken	send out	schickt aus, schickte aus, hat ausgeschickt	
+rügen	keep	rügen	rebuke	rügt, rügte, hat gerügt	
+bewillkommnen	keep	bewillkommnen	welcome	bewillkommnet, bewillkommnete, hat bewillkommnet	formal, dated
+zugeschritten	drop				wrong lemma (zuschreiten)
+niedersehen	drop				duplicates hinunterschauen
+darbieten	keep	darbieten	present	bietet dar, bot dar, hat dargeboten	elevated
+verspeisen	keep	verspeisen	consume	verspeist, verspeiste, hat verspeist	
+hinausschauten	drop				wrong lemma (hinausschauen)
+hergesagen	drop				wrong lemma (hersagen)
+ausbrüten	keep	ausbrüten	hatch	brütet aus, brütete aus, hat ausgebrütet	
+herunterbringen	keep	herunterbringen	bring down	bringt herunter, brachte herunter, hat heruntergebracht	
+durchsuchen	keep	durchsuchen	search through	durchsucht, durchsuchte, hat durchsucht	
+mitlachen	keep	mitlachen	laugh along	lacht mit, lachte mit, hat mitgelacht	
+purzeln	keep	purzeln	tumble	purzelt, purzelte, ist gepurzelt	
+herauslassen	keep	herauslassen	let out	lässt heraus, ließ heraus, hat herausgelassen	
+forthelfen	keep	forthelfen	help escape	hilft fort, half fort, hat fortgeholfen	dated
+bewirten	keep	bewirten	host	bewirtet, bewirtete, hat bewirtet	
+wedeln	keep	wedeln	wag	wedelt, wedelte, hat gewedelt	
+niederkauern	keep	sich niederkauern	crouch down	kauert sich nieder, kauerte sich nieder, hat sich niedergekauert	
+ausdenken	keep	sich ausdenken	think up	denkt sich aus, dachte sich aus, hat sich ausgedacht	sich etwas ausdenken
+anstreichen	keep	anstreichen	paint	streicht an, strich an, hat angestrichen	also mark (a passage)
+aufschießen	keep	aufschießen	shoot up	schießt auf, schoss auf, ist aufgeschossen	
+anbinden	keep	anbinden	tie up	bindet an, band an, hat angebunden	
+nachrennen	drop				duplicates nachlaufen
+weglaufen	drop				duplicates davonlaufen
+naschen	keep	naschen	nibble sweets	nascht, naschte, hat genascht	
+herbeiströmen	keep	herbeiströmen	flock	strömt herbei, strömte herbei, ist herbeigeströmt	
+vergraben	keep	vergraben	bury	vergräbt, vergrub, hat vergraben	
+aussöhnen	keep	sich aussöhnen	make peace	söhnt sich aus, söhnte sich aus, hat sich ausgesöhnt	
+kauen	keep	kauen	chew	kaut, kaute, hat gekaut	
+ausrenken	keep	ausrenken	dislocate	renkt aus, renkte aus, hat ausgerenkt	
+verweilen	keep	verweilen	linger	verweilt, verweilte, hat verweilt	
+vorsagen	keep	vorsagen	prompt	sagt vor, sagte vor, hat vorgesagt	
+aufhieln	drop				wrong lemma (aufhalten)
+hinausmüssen	keep	hinausmüssen	must go out	muss hinaus, musste hinaus, hat hinausgemusst	colloquial
+angebunden	drop				wrong lemma (anbinden)
+ausgesehen	drop				wrong lemma (aussehen)
+aufgestiegen	drop				wrong lemma (aufsteigen)
+durcheinanderrufen	keep	durcheinanderrufen	clamor	ruft durcheinander, rief durcheinander, hat durcheinandergerufen	all calling at once
+erwingen	drop				wrong lemma (erwachen)
+mithsen	drop				wrong lemma (mitgehen)
+fortmüssen	keep	fortmüssen	must leave	muss fort, musste fort, hat fortgemusst	colloquial
+umherfliegen	drop				duplicates herumfliegen
+hineinstarren	keep	hineinstarren	stare into	starrt hinein, starrte hinein, hat hineingestarrt	
+bescheren	keep	bescheren	give presents	beschert, bescherte, hat beschert	
+umgesehen	drop				wrong lemma (umsehen)
+umherwandern	keep	umherwandern	wander around	wandert umher, wanderte umher, ist umhergewandert	
+anstießen	drop				wrong lemma (anstoßen)
+turnen	keep	turnen	do gymnastics	turnt, turnte, hat geturnt	
+heimkommsen	drop				wrong lemma (heimkommen)
+wäschen	drop				wrong lemma (waschen)
+hinausrennen	keep	hinausrennen	run outside	rennt hinaus, rannte hinaus, ist hinausgerannt	
+aufschneiden	keep	aufschneiden	cut open	schneidet auf, schnitt auf, hat aufgeschnitten	
+vorgerücken	drop				wrong lemma (vorrücken)
+herausgefahren	drop				wrong lemma (herausfahren)
+hinabsenken	keep	sich hinabsenken	descend	senkt sich hinab, senkte sich hinab, hat sich hinabgesenkt	of clouds, slopes
+kapern	keep	kapern	capture	kapert, kaperte, hat gekapert	a ship or boat
+hinwegnehmen	drop				duplicates wegnehmen
+bedanken	keep	sich bedanken	say thanks	bedankt sich, bedankte sich, hat sich bedankt	
+verschlafen	keep	verschlafen	oversleep	verschläft, verschlief, hat verschlafen	
+belohnen	keep	belohnen	reward	belohnt, belohnte, hat belohnt	
+durchkommen	keep	durchkommen	get through	kommt durch, kam durch, ist durchgekommen	
+verunglücken	keep	verunglücken	have an accident	verunglückt, verunglückte, ist verunglückt	
+herbeischaffen	keep	herbeischaffen	procure	schafft herbei, schaffte herbei, hat herbeigeschafft	
+wohnn	drop				wrong lemma (wohnen)
+forteilen	keep	forteilen	hurry away	eilt fort, eilte fort, ist fortgeeilt	
+vorbeigekommen	drop				wrong lemma (vorbeikommen)
+hinablassen	keep	hinablassen	lower	lässt hinab, ließ hinab, hat hinabgelassen	
+beratschlagen	keep	beratschlagen	deliberate	beratschlagt, beratschlagte, hat beratschlagt	
+wachn	drop				wrong lemma (wachen)
+fehen	drop				wrong lemma (fangen)
+zujagen	keep	zujagen	race toward	jagt zu, jagte zu, ist zugejagt	auf etwas zujagen
+sputen	keep	sich sputen	hurry up	sputet sich, sputete sich, hat sich gesputet	dated
+wüßten	drop				wrong lemma (wissen)
+besprachen	drop				wrong lemma (besprechen)
+ziemen	keep	sich ziemen	be proper	ziemt sich, ziemte sich, hat sich geziemt	dated
+hinmachen	drop				colloquial with vague senses (put there; regional hurry up)
+behen	drop				wrong lemma (binden)
+pflügen	keep	pflügen	plow	pflügt, pflügte, hat gepflügt	
+heraufdringen	keep	heraufdringen	rise up	dringt herauf, drang herauf, ist heraufgedrungen	of sounds, smells
+anverwundern	drop				tagger artifact (verwundert ansehen)
+heruntergenommen	drop				wrong lemma (herunternehmen)
+herausdrücken	keep	herausdrücken	squeeze out	drückt heraus, drückte heraus, hat herausgedrückt	
+herwerfen	drop				tagger artifact (her belongs to 'hinter ... her')
+fortsagen	drop				tagger artifact (sagte ... fort)
+hereinlachen	keep	hereinlachen	beam in	lacht herein, lachte herein, hat hereingelacht	of the sun
+aufschließen	keep	aufschließen	unlock	schließt auf, schloss auf, hat aufgeschlossen	
+nacheilen	keep	nacheilen	hurry after	eilt nach, eilte nach, ist nachgeeilt	
+flechten	keep	flechten	braid	flicht, flocht, hat geflochten	
+bestürmen	keep	bestürmen	besiege	bestürmt, bestürmte, hat bestürmt	mit Fragen bestürmen
+umhertreiben	drop				duplicates herumtreiben
+entgegenspringen	keep	entgegenspringen	leap to meet	springt entgegen, sprang entgegen, ist entgegengesprungen	
+einjagen	keep	einjagen	instill	jagt ein, jagte ein, hat eingejagt	Angst, einen Schrecken einjagen
+sewärn	drop				wrong lemma (sein)
+abhelfen	keep	abhelfen	remedy	hilft ab, half ab, hat abgeholfen	
+bequemen	keep	sich bequemen	deign	bequemt sich, bequemte sich, hat sich bequemt	dated
+hinausgetrieben	drop				wrong lemma (hinaustreiben)
+hervorblicken	drop				duplicates hervorgucken
+schnatteren	drop				wrong lemma (schnattern)
+klingelen	drop				wrong lemma (klingeln)
+schlachten	keep	schlachten	slaughter	schlachtet, schlachtete, hat geschlachtet	
+gefielen	drop				wrong lemma (gefallen)
+herschicken	keep	herschicken	send here	schickt her, schickte her, hat hergeschickt	
+begaffen	keep	begaffen	gawk at	begafft, begaffte, hat begafft	
+heruntersinken	keep	heruntersinken	sink down	sinkt herunter, sank herunter, ist heruntergesunken	
+heimkämen	drop				wrong lemma (heimkommen)
+heimzukommen	drop				wrong lemma (heimkommen)
+vorüberkommen	keep	vorüberkommen	come past	kommt vorüber, kam vorüber, ist vorübergekommen	
+geloben	keep	geloben	vow	gelobt, gelobte, hat gelobt	
+zurückholen	keep	zurückholen	fetch back	holt zurück, holte zurück, hat zurückgeholt	
+emporklettern	drop				duplicates hinaufklettern

@@ -1006,7 +1006,7 @@ Kirchtüre	drop					wrong lemma (Kirchentür)
 Morgenröth	drop					wrong lemma (Morgenröte)
 Blüthe	drop					wrong lemma (Blüte)
 Drachen	drop					wrong lemma (Drache)
-Mohr	keep	der	Mohren	Moor		dated; now considered offensive
+Mohr	drop					offensive today
 Hofleute	drop					wrong lemma (Hofmann)
 Abends	drop					wrong lemma (Abend)
 Tonne	keep	die	Tonnen	barrel		
@@ -1502,3 +1502,689 @@ Schneeflocken	drop					wrong lemma (Schneeflocke)
 Todesfall	keep	der	Todesfälle	case of death		
 Zwiebel	keep	die	Zwiebeln	onion	🧅	
 Sense	keep	die	Sensen	scythe		
+Wohnsitz	keep	der	Wohnsitze	domicile		
+Nahe	drop					tagger artifact (adverb nahe)
+Streite	drop					wrong lemma (Streit)
+Kranze	drop					wrong lemma (Kranz)
+Lebelang	drop					only in 'sein Lebelang' (like Lebtag)
+Grundstein	keep	der	Grundsteine	foundation stone		
+Schalle	drop					wrong lemma (Schall)
+Sporn	keep	der	Sporen	spur		
+Vogelnester	drop					wrong lemma (Vogelnest)
+Deinig	drop					tagger artifact (pronoun 'die Deinigen')
+Wäge	drop					tagger artifact (verb wägen)
+Ränke	drop					wrong lemma (Rank; Ränke is its plural, 'Ränke schmieden')
+Wehgeschrei	drop					duplicates Wehegeschrei (same word, other spelling)
+Geschmeid	drop					wrong lemma (Geschmeide)
+Gesims	keep	das	Gesimse	cornice		
+Kalbe	drop					wrong lemma (Kalb)
+Gedächtnisse	drop					wrong lemma (Gedächtnis)
+Fürder	drop					tagger artifact (adverb fürder)
+Vorfalle	drop					wrong lemma (Vorfall)
+Kümmerni	drop					wrong lemma (Kümmernis)
+Zuzeit	drop					tagger artifact (adverb zurzeit)
+Oberaufseher	keep	der	Oberaufseher	chief overseer		
+Augenschein	drop					only in 'in Augenschein nehmen'
+Vier	drop					tagger artifact (numeral vier)
+Gastwirt	drop					duplicates Wirt
+Freudenträne	keep	die	Freudentränen	tear of joy	🥲	
+Hinterteil	keep	das	Hinterteile	rear end		
+Turmspitze	keep	die	Turmspitzen	spire		
+Vorhof	keep	der	Vorhöfe	forecourt		
+Barthaar	keep	das	Barthaare	whisker		
+Gottesfurcht	keep	die		fear of God		
+Dampfwolke	keep	die	Dampfwolken	cloud of steam		
+Gänsehaut	keep	die		goosebumps		
+Fluche	drop					wrong lemma (Fluch)
+Mager	drop					tagger artifact (adjective mager)
+Packe	drop					wrong lemma (Packen)
+Ermangelung	drop					only in 'in Ermangelung'
+Abnahme	keep	die	Abnahmen	decrease		
+Mündung	keep	die	Mündungen	river mouth		
+Hausknecht	keep	der	Hausknechte	manservant		
+Putz	keep	der		finery		
+Ehefrau	drop					duplicates Weib
+Zange	keep	die	Zangen	tongs		
+Einwilligung	keep	die	Einwilligungen	consent		
+Morgenwind	keep	der	Morgenwinde	morning breeze		
+Nachwelt	keep	die		posterity		
+Esche	keep	die	Eschen	ash tree		
+Angstschweiß	keep	der		cold sweat	😰	
+Vorübergehenden	drop					wrong lemma (Vorübergehende)
+Elenden	drop					wrong lemma (Elende)
+Nachtquartier	drop					duplicates Nachtlager
+Gespenstergeschicht	drop					wrong lemma (Gespenstergeschichte)
+Handgeld	keep	das	Handgelder	earnest money		
+Schafe	drop					wrong lemma (Schaf)
+Quark	keep	der		trifle		tales use the sense 'trifle, nonsense', not curd cheese
+Johannistag	keep	der	Johannistage	Midsummer Day		
+Bereitung	drop					duplicates Zubereitung
+Kindbett	keep	das		childbed		
+Treu	drop					wrong lemma (Treue); the noun Treu only in 'auf Treu und Glauben', otherwise the adjective treu
+Zierde	keep	die	Zierden	ornament		
+Gepolter	keep	das		clatter		
+Silberstück	drop					duplicates Silbermünze
+Landleute	drop					wrong lemma (Landmann)
+Abtei	keep	die	Abteien	abbey		
+Tröpfchen	drop					diminutive
+Schade	drop					wrong lemma (Schaden)
+Menschengedenk	drop					wrong lemma (Menschengedenken), only in 'seit Menschengedenken'
+Ansehen	keep	das		prestige		
+Zufluchtsort	keep	der	Zufluchtsorte	place of refuge		
+Köcher	keep	der	Köcher	quiver		
+Bedrängt	drop					tagger artifact (participle bedrängt)
+Waldlichtung	keep	die	Waldlichtungen	forest clearing		
+Wildbret	keep	das		venison		
+Ackerland	keep	das		arable land		
+Dörfchen	drop					diminutive
+Toben	drop					nominalized verb (toben)
+Hauswirt	keep	der	Hauswirte	householder		
+Essig	keep	der		vinegar		
+Nachtisch	keep	der	Nachtische	dessert		
+Gerassel	keep	das		rattling		
+Baumrinde	keep	die	Baumrinden	tree bark		
+Ursach	drop					wrong lemma (Ursache)
+Zauberspiegel	keep	der	Zauberspiegel	magic mirror		
+Bergkristall	keep	der	Bergkristalle	rock crystal		
+Zimmerleute	drop					wrong lemma (Zimmermann)
+Niederfall	drop					tagger artifact (verb niederfallen)
+Bergspitz	drop					wrong lemma (Bergspitze)
+Hofhaltung	drop					duplicates Hofstaat
+Altersschwäche	keep	die		decrepitude		
+Mildtätigkeit	keep	die		charity		
+Silbergroschen	drop					obsolete coin
+Gattung	keep	die	Gattungen	kind		
+Händchen	drop					diminutive
+Geistlichkeit	keep	die		clergy		
+Halstuch	keep	das	Halstücher	neckerchief		
+Schelt	drop					nominalized verb (schelten)
+Meisterstück	keep	das	Meisterstücke	masterpiece		
+Verwunder	drop					nominalized verb (verwundern)
+Kampfplatz	keep	der	Kampfplätze	arena		
+Angedenken	drop					obsolete form of Andenken
+Berggipfel	keep	der	Berggipfel	mountain peak		
+Neuvermählt	drop					wrong lemma (Neuvermählte)
+Krönchen	drop					diminutive
+Christfest	drop					duplicates Weihnacht
+Silbern	drop					tagger artifact (adjective silbern)
+Au	drop					wrong lemma (Aue); also the interjection au
+Kalk	keep	der		lime		
+Backwerk	keep	das		baked goods		
+Vorzeichen	keep	das	Vorzeichen	omen		
+Aufenthaltsort	keep	der	Aufenthaltsorte	whereabouts		
+Verlöbnis	keep	das	Verlöbnisse	betrothal		
+Armbänd	drop					wrong lemma (Armband)
+Wildpret	drop					wrong lemma (Wildbret)
+Gärtchen	drop					diminutive
+Wohltäter	keep	der	Wohltäter	benefactor		
+Springbrunn	drop					wrong lemma (Springbrunnen)
+Großmut	keep	die		magnanimity		
+Imbiss	keep	der	Imbisse	snack		
+Irre	drop					only in 'in die Irre gehen' and 'in der Irre'
+Festland	keep	das		mainland		
+Lug	drop					only in 'Lug und Trug'
+Lebensart	keep	die	Lebensarten	way of life		
+Halbinsel	keep	die	Halbinseln	peninsula		
+Rosenhecke	keep	die	Rosenhecken	rose hedge		
+Richte	drop					tagger artifact (verb richten)
+Befrage	drop					tagger artifact (verb befragen)
+Beinkleider	drop					wrong lemma (Beinkleid)
+Überbleibsel	keep	das	Überbleibsel	leftover		
+Hagelwetter	keep	das	Hagelwetter	hailstorm		
+Besseres	drop					tagger artifact (adjective, 'etwas Besseres')
+Plage	keep	die	Plagen	plague		
+Sachse	keep	der	Sachsen	Saxon		
+Verrichtung	keep	die	Verrichtungen	chore		
+Pokal	keep	der	Pokale	goblet		
+Festlichkeite	drop					wrong lemma (Festlichkeit)
+Ungewitter	keep	das	Ungewitter	tempest		
+Teuerung	keep	die	Teuerungen	dearth		
+Sterbebette	drop					wrong lemma (Sterbebett)
+Kläger	keep	der	Kläger	plaintiff		
+Ausschmückung	keep	die	Ausschmückungen	embellishment		
+Ameisenhaufen	keep	der	Ameisenhaufen	anthill		
+Hirschfänger	keep	der	Hirschfänger	hunting sword		
+Gottseibeiuns	keep	der		Old Nick		euphemism for the devil
+Rennbahn	keep	die	Rennbahnen	racecourse		
+Höfling	keep	der	Höflinge	courtier		
+Belieben	drop					only in 'nach Belieben'
+Schnupftuch	keep	das	Schnupftücher	handkerchief		
+Häscher	keep	der	Häscher	constable		
+Spanne	keep	die	Spannen	span		
+Bedenkzeit	keep	die		time to consider		
+Hähn	drop					wrong lemma (Hahn)
+Lebendiges	drop					tagger artifact (adjective, 'etwas Lebendiges')
+Kinderche	drop					diminutive (Kinderchen, tagger cut it short)
+Gotte	drop					wrong lemma (Gott)
+Bäche	drop					wrong lemma (Bach)
+Zither	keep	die	Zithern	zither		
+Mannigfaltigkeit	keep	die		diversity		
+Todestag	keep	der	Todestage	day of death		
+Pfütz	drop					wrong lemma (Pfütze)
+Stamme	drop					wrong lemma (Stamm)
+Hute	drop					wrong lemma (Hut, the hat)
+Drossel	keep	die	Drosseln	thrush		
+Karpfen	keep	der	Karpfen	carp		
+Aal	keep	der	Aale	eel		
+Thran	drop					wrong lemma (Low German Thranen = Tränen; also old spelling of Tran)
+Belustigung	keep	die	Belustigungen	amusement		
+Zigeunerin	drop					offensive today
+Brautkleid	keep	das	Brautkleider	wedding dress		
+Walfisch	drop					duplicates Wal
+Neider	keep	der	Neider	envious person		
+Amte	drop					wrong lemma (Amt)
+Füßchen	drop					diminutive
+Schnelle	keep	die		swiftness		
+Zubereitung	keep	die	Zubereitungen	preparation		
+Freudentag	keep	der	Freudentage	day of rejoicing		
+Guttat	keep	die	Guttaten	good deed		
+Auffindung	keep	die		discovery		
+Ringmauer	keep	die	Ringmauern	ring wall		
+Kettlein	drop					diminutive
+Senne	drop					dialect (Bavarian, Swiss Senn: Alpine herdsman)
+Einfassung	keep	die	Einfassungen	edging		
+Gefährter	drop					wrong lemma (Gefährte)
+Zurüstunge	drop					wrong lemma (Zurüstung)
+Winterzeit	drop					duplicates Winterszeit
+Blachfeld	drop					obsolete poetic word (flat open country)
+Zuschnitt	keep	der	Zuschnitte	cut		
+Lichtglanz	keep	der		radiance		
+Gottvertrauen	keep	das		trust in God		
+Sonnabend	keep	der	Sonnabende	Saturday		
+Beitrag	drop					editorial apparatus (citations of 'Beiträge zur ...'), not tale text
+Schnecke	keep	die	Schnecken	snail	🐌	
+Fügung	keep	die	Fügungen	dispensation		
+Trag	drop					tagger artifact (verb tragen)
+Urenkel	keep	der	Urenkel	great-grandson		
+Zierlichkeit	keep	die		daintiness		
+Anemone	keep	die	Anemonen	anemone		
+Halse	drop					wrong lemma (Hals)
+Igel	keep	der	Igel	hedgehog	🦔	
+Kammertür	keep	die	Kammertüren	chamber door		
+Sturme	drop					wrong lemma (Sturm)
+Regenwetter	keep	das		rainy weather	🌧️	
+Abenddämmerung	keep	die		dusk		
+Wasserspiegel	keep	der	Wasserspiegel	water surface		
+Zitrone	keep	die	Zitronen	lemon	🍋	
+Hungersnot	keep	die	Hungersnöte	famine		
+Hausgerät	keep	das	Hausgeräte	household utensil		
+Eheleut	drop					wrong lemma (Eheleute)
+Nabel	keep	der	Nabel	navel		
+Tautropfe	drop					wrong lemma (Tautropfen)
+Kriegszug	keep	der	Kriegszüge	military campaign		
+Kaufpreis	keep	der	Kaufpreise	purchase price		
+Floß	keep	das	Flöße	raft		
+Flehen	drop					nominalized verb (flehen)
+Bildsäule	keep	die	Bildsäulen	statue		
+Ihrigen	drop					tagger artifact (pronoun 'die Ihrigen')
+Vorbedeutung	keep	die	Vorbedeutungen	portent		
+Bauersleute	drop					wrong lemma (Bauersmann)
+Hufen	drop					wrong lemma (Huf)
+Leids	drop					wrong lemma (Leid)
+Verwelke	drop					tagger artifact (verb verwelken)
+Unterweisung	keep	die	Unterweisungen	instruction		
+Rechen	keep	der	Rechen	rake		
+Denkzettel	keep	der	Denkzettel	sharp lesson		
+Nebelwolke	keep	die	Nebelwolken	cloud of mist		
+Eselsohre	drop					wrong lemma (Eselsohr)
+Daunen	drop					wrong lemma (Daune)
+Hoho	drop					tagger artifact (interjection)
+Düfte	drop					wrong lemma (Duft)
+Todesnot	keep	die		mortal distress		
+Rosenblatt	keep	das	Rosenblätter	rose petal		
+Heeresmacht	keep	die	Heeresmächte	military force		
+Haselnuß	drop					wrong lemma (Haselnuss)
+Zusage	keep	die	Zusagen	assurance		
+Stäbe	drop					wrong lemma (Stab)
+Gotteswill	drop					wrong lemma (Gotteswillen), only in 'um Gottes willen'
+Kämmerchen	drop					diminutive
+Bissen	keep	der	Bissen	morsel		
+Streu	keep	die		straw bedding		
+Sproß	drop					wrong lemma (Spross)
+Zutrauen	keep	das		confidence		
+Fliegen	drop					nominalized verb (fliegen)
+Jammern	drop					nominalized verb (jammern)
+Ehestand	keep	der		matrimony		
+Schneide	keep	die	Schneiden	cutting edge		
+Himmelreich	keep	das		kingdom of heaven		
+Auszug	keep	der	Auszüge	departure		
+Feuersbrunst	keep	die	Feuersbrünste	conflagration		
+Mag	drop					dialect (Low German Mäge: maids)
+Recken	drop					wrong lemma (Recke)
+Kirchtür	drop					duplicates Kirchentür (same word, other form)
+Baumwolle	keep	die		cotton		
+Einziger	drop					tagger artifact (adjective einzig)
+Fläschchen	drop					diminutive
+Wurf	keep	der	Würfe	throw		
+Tenne	keep	die	Tennen	threshing floor		
+Bilderbuch	keep	das	Bilderbücher	picture book		
+Morgenrot	keep	das		red dawn	🌅	
+Rentier	keep	das	Rentiere	reindeer		
+Unterirdische	keep	der	Unterirdischen	underground dweller		folk-belief being (die Unterirdischen)
+Überlieferung	keep	die	Überlieferungen	lore		
+Nuss	keep	die	Nüsse	nut		now in the core list
+Küchenjunge	keep	der	Küchenjungen	kitchen boy		
+Gnom	keep	der	Gnomen	gnome		
+Volksglaube	keep	der		folk belief		
+Stollen	keep	der	Stollen	mine tunnel		
+Grapen	drop					dialect (Low German for cooking pot)
+Tote	keep	der	Toten	dead person		
+Met	keep	der		mead		
+Erdgeist	keep	der	Erdgeister	earth spirit		
+Hirtenjunge	drop					duplicates Hirtenknabe
+Rebhuhn	keep	das	Rebhühner	partridge		
+Borste	keep	die	Borsten	bristle		
+Dirne	keep	die	Dirnen	lass		old sense; today 'prostitute'; now in the core list
+Schlosstor	keep	das	Schlosstore	palace gate		
+Hausgeist	keep	der	Hausgeister	household spirit		
+Erdbeere	keep	die	Erdbeeren	strawberry	🍓	
+Menschenknochen	keep	der	Menschenknochen	human bone		
+Scheich	keep	der	Scheiche	sheikh		
+Götze	keep	der	Götzen	idol		
+Böse	keep	das		evil		
+Mücke	keep	die	Mücken	gnat	🦟	now in the core list
+Morgenröte	drop					duplicates Morgenrot
+Zapfen	keep	der	Zapfen	conifer cone		
+Spinnrocken	keep	der	Spinnrocken	distaff		
+Wacholderbusch	keep	der	Wacholderbüsche	juniper bush		
+Feige	keep	die	Feigen	fig		
+Himbeere	keep	die	Himbeeren	raspberry		
+Kornähre	drop					duplicates Ähre
+Pforte	keep	die	Pforten	wicket gate		now in the core list
+Smaragd	keep	der	Smaragde	emerald		
+Bäckerladen	keep	der	Bäckerläden	baker's shop		
+Amboss	keep	der	Ambosse	anvil		
+Gewächs	keep	das	Gewächse	plant		
+Brosame	keep	die	Brosamen	crumb		
+Katzenauge	keep	das	Katzenaugen	cat's eye		
+Gespiele	keep	der	Gespielen	playfellow		Gespielin is playmate
+Räuberei	keep	die	Räubereien	robbery		
+Pflegeeltern	keep	die		foster parents		plural-only noun
+Hungertod	keep	der		starvation		
+Anverwandte	keep	der	Anverwandten	kinsman		
+Almosen	keep	das	Almosen	alms		
+Lebenstag	keep	der	Lebenstage	day of life		
+Zechbruder	keep	der	Zechbrüder	drinking companion		
+Eigentümer	keep	der	Eigentümer	proprietor		
+Krücke	keep	die	Krücken	crutch	🩼	now in the core list
+Fußsteig	keep	der	Fußsteige	footpath		
+Verdruss	keep	der		vexation		now in the core list
+Unglückliche	keep	der	Unglücklichen	unfortunate soul		
+Untreue	keep	die		infidelity		
+Gespött	keep	das		ridicule		
+Schneeflocke	keep	die	Schneeflocken	snowflake		
+Alte	keep	der	Alten	old man		
+Türschwelle	keep	die	Türschwellen	doorstep		
+Schweinestall	keep	der	Schweineställe	pigsty		
+Hofherr	drop					obsolete (courtier; the word is Höfling)
+Tiergestalt	keep	die	Tiergestalten	animal form		
+Weinfass	keep	das	Weinfässer	wine cask		
+Nussknacker	keep	der	Nussknacker	nutcracker		
+Batzen	drop					obsolete coin
+Vergissmeinnicht	keep	das	Vergissmeinnicht	forget-me-not		
+Dorfkind	keep	das	Dorfkinder	village child		
+Eichel	keep	die	Eicheln	acorn		
+Blutstropfen	keep	der	Blutstropfen	drop of blood		now in the core list
+Flüchtige	keep	der	Flüchtigen	fugitive		
+Klumpen	keep	der	Klumpen	lump		now in the core list
+Galgenvogel	keep	der	Galgenvögel	gallows bird		
+Goldgulden	drop					obsolete coin (Gulden is kept)
+Spinngewebe	keep	das	Spinngewebe	cobweb	🕸️	
+Raubvogel	keep	der	Raubvögel	bird of prey		
+Behändigkeit	keep	die		nimbleness		
+Kloß	keep	der	Klöße	dumpling		
+Rank	keep	der	Ränke	intrigue		mostly plural Ränke
+Esslust	keep	die		appetite		
+Zusatz	keep	der	Zusätze	addition		
+Fehde	keep	die	Fehden	feud		
+Bekümmernis	keep	die	Bekümmernisse	distress		
+Ablass	keep	der	Ablässe	indulgence		
+Vorderbein	keep	das	Vorderbeine	foreleg		
+Heller	keep	der	Heller	heller		
+Juwel	keep	das	Juwelen	gem		jewel is Kleinod
+Kupfermünze	keep	die	Kupfermünzen	copper coin		
+Tannenzapfe	drop					wrong lemma (Tannenzapfen)
+Verlobungsring	keep	der	Verlobungsringe	engagement ring	💍	
+Nebenmann	keep	der	Nebenmänner	person alongside		
+Näht	drop					wrong lemma (Naht)
+Fürsprecher	keep	der	Fürsprecher	intercessor		
+Wiederkommen	drop					nominalized verb (wiederkommen)
+Bienchen	drop					diminutive
+Ungebühr	keep	die		impropriety		
+Innen	drop					tagger artifact (adverb innen)
+Freudenthräne	drop					wrong lemma (Freudenträne)
+Gespinnst	drop					wrong lemma (Gespinst)
+Morge	drop					wrong lemma (Morgen)
+Wunderdinge	drop					wrong lemma (Wunderding)
+Eisblöck	drop					wrong lemma (Eisblock)
+Felsenschlucht	keep	die	Felsenschluchten	rocky ravine		
+Brautleute	keep	die		bride and groom		plural-only noun
+Lustgarten	keep	der	Lustgärten	pleasure garden		
+Speere	drop					wrong lemma (Speer)
+Sommermorgen	keep	der	Sommermorgen	summer morning		
+Blümche	drop					diminutive (Blümchen, tagger cut it short)
+Wege	drop					wrong lemma (Weg)
+Pfarrherr	keep	der	Pfarrherren	parson		
+Mittagsstunde	keep	die	Mittagsstunden	noon hour		
+Lebensgefahr	keep	die		mortal danger		
+Hämmer	drop					wrong lemma (Hammer)
+Prise	keep	die	Prisen	pinch		
+Schwänk	drop					wrong lemma (Schwank)
+Hofdame	keep	die	Hofdamen	lady-in-waiting		
+Abendwind	keep	der	Abendwinde	evening breeze		
+Kirchlein	drop					diminutive
+Stubentür	keep	die	Stubentüren	parlor door		
+Gebräuche	drop					wrong lemma (Brauch)
+Befreier	keep	der	Befreier	liberator		
+Ringfinger	keep	der	Ringfinger	ring finger		
+Fußstapfe	keep	die	Fußstapfen	footprint		
+Fegfeuer	drop					wrong lemma (Fegefeuer)
+Vogelgesang	keep	der		birdsong		
+Frauenbild	keep	das	Frauenbilder	female figure		
+Scher	drop					wrong lemma (Schere)
+Hasenfuß	keep	der	Hasenfüße	scaredy-cat		
+Meuchelmörder	keep	der	Meuchelmörder	assassin		
+Bedenket	drop					tagger artifact (verb bedenken)
+Gepräge	keep	das		imprint		
+Wirte	drop					wrong lemma (Wirt)
+Historie	keep	die	Historien	story		
+Gebrauche	drop					wrong lemma (Gebrauch)
+Befragen	drop					nominalized verb (befragen), only in 'auf Befragen'
+Bockshorn	keep	das	Bockshörner	goat's horn		also in 'ins Bockshorn jagen'
+Leichentuch	keep	das	Leichentücher	shroud		
+Stängel	keep	der	Stängel	stalk		now in the core list
+Zigeuner	drop					offensive today
+Mittagszeit	keep	die		lunchtime		
+Eheleute	keep	die		married couple		plural-only noun
+Täubchen	drop					diminutive
+Südseite	keep	die	Südseiten	south side		
+Troste	drop					wrong lemma (Trost)
+Wörtchen	drop					diminutive
+Pflaume	keep	die	Pflaumen	plum		
+Schlösser	drop					wrong lemma (Schloss)
+Weideplatz	keep	der	Weideplätze	grazing ground		
+Pergament	keep	das	Pergamente	parchment		
+Schlafgemach	drop					duplicates Schlafkammer
+Tannenwald	keep	der	Tannenwälder	fir forest		
+Reisegefährte	keep	der	Reisegefährten	traveling companion		
+Kälb	drop					wrong lemma (Kalb)
+Tierlein	drop					diminutive
+Gelüste	keep	das	Gelüste	craving		
+Kehricht	keep	der		sweepings		
+Anwesende	keep	der	Anwesenden	person present		
+Reichtüm	drop					wrong lemma (Reichtum)
+Vögeln	drop					wrong lemma (Vogel)
+Mähre	keep	die	Mähren	old nag		
+Handwerksleute	drop					wrong lemma (Handwerksmann)
+Fürbaß	drop					tagger artifact (adverb fürbass)
+Heumachen	drop					nominalized verb (Heu machen)
+Schlafenden	drop					tagger artifact (participle schlafend)
+Spötter	keep	der	Spötter	mocker		
+Kornfeld	keep	das	Kornfelder	grain field		
+Ungläubig	drop					wrong lemma (Ungläubige)
+Paläst	drop					wrong lemma (Palast)
+Hacke	keep	die	Hacken	heel		
+Laken	keep	das	Laken	bed sheet		
+Ähre	keep	die	Ähren	ear of grain	🌾	
+Gemütsart	keep	die	Gemütsarten	temperament		
+Holde	drop					tagger artifact (adjective hold)
+Führerin	keep	die	Führerinnen	female guide		
+Vogelnest	keep	das	Vogelnester	bird's nest	🪺	
+Brautbett	keep	das	Brautbetten	bridal bed		
+Kunstfertigkeit	keep	die	Kunstfertigkeiten	artistry		
+Nußschal	drop					wrong lemma (Nussschale)
+Bütte	keep	die	Bütten	tub		
+Landwein	keep	der	Landweine	country wine		
+Blumenkranz	keep	der	Blumenkränze	flower wreath		
+Jagdtasche	keep	die	Jagdtaschen	game bag		
+Frösch	drop					wrong lemma (Frosch)
+Schiffsherr	drop					obsolete (shipowner; the word is Reeder)
+Taugenichts	keep	der	Taugenichtse	good-for-nothing		
+Liede	drop					wrong lemma (Lied)
+Rasenplatz	keep	der	Rasenplätze	grass plot		
+Sterblicher	drop					wrong lemma (Sterbliche)
+Gefälligkeit	keep	die	Gefälligkeiten	good turn		
+Stimmchen	drop					diminutive
+Gestank	keep	der		stench		
+Mittagsmahl	keep	das		midday meal		
+Pförtner	keep	der	Pförtner	gatekeeper		
+Steigbügel	keep	der	Steigbügel	stirrup		
+Spitzbub	drop					wrong lemma (Spitzbube)
+Hecht	keep	der	Hechte	northern pike		
+Schelle	keep	die	Schellen	jingle bell		
+Arznei	keep	die	Arzneien	medicine	💊	
+Geläute	keep	das		peal of bells		
+Nachbarinn	drop					wrong lemma (Nachbarin)
+Koppel	keep	die	Koppeln	paddock		
+Heuschrecke	keep	die	Heuschrecken	locust		
+Wam	drop					wrong lemma (Wams)
+Kiesel	drop					duplicates Kieselstein
+Strang	keep	der	Stränge	heavy rope		
+Zwölfe	drop					tagger artifact (numeral zwölf)
+Günstling	keep	der	Günstlinge	favorite		
+Fasse	drop					wrong lemma (Fass)
+Spinnstube	keep	die	Spinnstuben	spinning room		
+Geldgier	keep	die		greed for money		
+Elfe	keep	die	Elfen	elf	🧝	
+Revier	keep	das	Reviere	territory		
+Edle	keep	der	Edlen	noble		
+Scheiterhaufen	keep	der	Scheiterhaufen	pyre		
+Abendgebet	keep	das	Abendgebete	evening prayer		
+Blitzesschnell	drop					wrong lemma (Blitzesschnelle)
+Behuf	drop					only in 'zu diesem Behuf'
+Gefreit	drop					tagger artifact (participle of freien)
+Weizenkörner	drop					wrong lemma (Weizenkorn)
+Klötze	drop					wrong lemma (Klotz)
+Reminiscenz	drop					wrong lemma (Reminiszenz)
+Trompete	keep	die	Trompeten	trumpet	🎺	now in the core list
+Schlupfwinkel	keep	der	Schlupfwinkel	hideout		
+Merkwürdigkeit	keep	die	Merkwürdigkeiten	oddity		
+Sag	drop					wrong lemma (Sage)
+Gemäch	drop					wrong lemma (Gemach)
+Uneinigkeit	keep	die	Uneinigkeiten	disagreement		
+Bet	drop					dialect (Low German bet 'until')
+Maien	drop					wrong lemma (Mai)
+Eßwar	drop					wrong lemma (Esswaren)
+Wassereimer	keep	der	Wassereimer	water bucket		
+Recke	keep	der	Recken	valiant warrior		
+Reitersmann	keep	der	Reitersleute	horseman		
+Weidwerk	keep	das		hunting craft		
+Fürlieb	drop					tagger artifact (verb fürliebnehmen)
+Helme	drop					wrong lemma (Helm)
+Flieg	drop					tagger artifact (verb fliegen)
+Mahle	drop					wrong lemma (Mahl; the example is nominalized mahlen)
+Brunnenwasser	keep	das		well water		
+Ruheplatz	keep	der	Ruheplätze	resting place		
+Pfeifer	keep	der	Pfeifer	piper		
+Beide	drop					tagger artifact (pronoun beide)
+Körperbau	keep	der		physique		
+Zaunkönig	keep	der	Zaunkönige	wren		
+Schöneres	drop					tagger artifact (adjective schön)
+Finster	drop					tagger artifact (adjective finster, 'im Finstern')
+Türhüter	drop					duplicates Türsteher
+Filz	keep	der	Filze	skinflint		old sense; also felt
+Uebermut	drop					wrong lemma (Übermut)
+Säuseln	drop					nominalized verb (säuseln)
+Vorelter	drop					wrong lemma (Voreltern)
+Deinige	drop					tagger artifact (pronoun der deinige)
+Ankommende	drop					tagger artifact (participle ankommend; the noun is Ankömmling)
+Neujahrsnacht	keep	die	Neujahrsnächte	New Year's night		
+Schrie	drop					tagger artifact (verb schreien)
+Häupte	drop					wrong lemma (Haupt)
+Ferkel	keep	das	Ferkel	piglet		
+Archiv	drop					Gutenberg markup (Internet Archive credit)
+Löch	drop					wrong lemma (Loch)
+Ranzen	keep	der	Ranzen	satchel	🎒	
+Geiger	keep	der	Geiger	violinist		
+Schwesterchen	drop					diminutive
+Prophezeiung	drop					duplicates Weissagung
+Stäbchen	drop					diminutive
+Habe	keep	die		belongings		
+Tücke	keep	die	Tücken	malice		
+Blitzesschnelle	drop					only in 'mit Blitzesschnelle'
+Weizenkorn	keep	das	Weizenkörner	grain of wheat		
+Sterbliche	keep	der	Sterblichen	mortal		
+Tannenzapfen	keep	der	Tannenzapfen	fir cone		
+Handwerksmann	keep	der	Handwerksleute	artisan		old-fashioned for Handwerker
+Naht	keep	die	Nähte	seam		the example is the verb nahen
+Blümchen	drop					diminutive
+Spitzbube	keep	der	Spitzbuben	rascal		
+Schwank	keep	der	Schwänke	comic tale		
+Aue	keep	die	Auen	water meadow		poetic for meadow
+Ungläubige	keep	der	Ungläubigen	infidel		
+Fang	keep	der	Fänge	catch		
+Elende	keep	der	Elenden	wretched person		
+Nussschale	keep	die	Nussschalen	nutshell		
+Essware	keep	die	Esswaren	eatables		mostly plural
+Voreltern	keep	die		forebears		plural only
+Kanzel	keep	die	Kanzeln	pulpit		
+Fegefeuer	keep	das		purgatory		
+Gespinst	keep	das	Gespinste	spun thread		
+Menschengedenken	drop					only in 'seit Menschengedenken'
+Gespenstergeschichte	keep	die	Gespenstergeschichten	ghost story		
+Kinderchen	drop					diminutive
+Eisblock	keep	der	Eisblöcke	block of ice	🧊	
+Neuvermählte	keep	der	Neuvermählten	newlywed		
+Vorübergehende	keep	der	Vorübergehenden	passer-by		
+Spross	keep	der	Sprosse	shoot	🌱	
+Gliedmaße	keep	die	Gliedmaßen	limb		
+Luftsprung	keep	der	Luftsprünge	leap for joy		
+Reisewagen	keep	der	Reisewagen	traveling carriage		
+Reisende	keep	der	Reisenden	traveler		
+Kümmernis	drop					duplicates Bekümmernis
+Zurüstung	drop					duplicates Zubereitung
+Daune	keep	die	Daunen	down feather		
+Haselnuss	keep	die	Haselnüsse	hazelnut		
+Gotteswillen	drop					only in 'um Gottes willen'
+Sterbebett	keep	das	Sterbebetten	deathbed		
+Übles	drop					tagger artifact (adjective übel, 'Übles erdulden')
+Büblein	drop					diminutive
+Abendschein	keep	der		evening glow		
+Leibwache	keep	die	Leibwachen	bodyguard		
+Drangsal	keep	die	Drangsale	hardship		
+Platzregen	keep	der	Platzregen	downpour		
+Mistgabel	keep	die	Mistgabeln	pitchfork		
+Lieb	drop					poetic elision of Liebe; das Lieb (sweetheart) duplicates Liebchen
+Kronprinz	keep	der	Kronprinzen	crown prince		
+Gartenhaus	keep	das	Gartenhäuser	garden house		
+Glockenblume	keep	die	Glockenblumen	bellflower		
+Geberde	drop					wrong lemma (Gebärde)
+Voraus	drop					only in 'im Voraus'
+Zubehör	keep	das		accessories		
+Sonntags	drop					wrong lemma (Sonntag)
+Eisengitter	keep	das	Eisengitter	iron grating		
+Zaumzeug	drop					duplicates Zaum
+Sund	keep	der	Sunde	strait		
+Kriegsheld	keep	der	Kriegshelden	war hero		
+Wasche	drop					tagger artifact (verb waschen)
+Schmetterlingsflügel	keep	der	Schmetterlingsflügel	butterfly wing		
+Niederkunft	keep	die	Niederkünfte	childbirth		
+Ratskeller	keep	der	Ratskeller	town hall cellar		
+Hafer	keep	der		oats		
+Blase	keep	die	Blasen	blister		
+Klotz	keep	der	Klötze	wooden block		
+Trompeter	keep	der	Trompeter	trumpeter		
+Windel	keep	die	Windeln	diaper		
+Fürbitte	keep	die	Fürbitten	intercession		
+Trauring	keep	der	Trauringe	wedding ring		
+Pförtchen	drop					diminutive
+Flegel	keep	der	Flegel	lout		
+Redlichkeit	keep	die		integrity		
+Herzensangst	keep	die		anguish		
+Schlafstelle	keep	die	Schlafstellen	place to sleep		
+Brombeer	drop					wrong lemma (Brombeere)
+Hinterlist	keep	die		deceit		
+Gedenken	drop					tagger artifact (verb gedenken)
+Gewande	drop					wrong lemma (Gewand)
+Bergspitze	drop					duplicates Berggipfel
+Lin	drop					wrong lemma (Linnen)
+Bezahlung	keep	die	Bezahlungen	payment		
+Älteste	keep	der	Ältesten	eldest		
+Kirchspiel	keep	das	Kirchspiele	parish		
+Aufgang	keep	der	Aufgänge	rising		
+Barschaft	keep	die		cash on hand		
+Lache	keep	die	Lachen	laugh		also puddle
+Rät	drop					wrong lemma (Rat)
+Fußsohle	keep	die	Fußsohlen	sole		
+Meineid	keep	der	Meineide	perjury		
+Hohngelächter	keep	das		derisive laughter		
+Abgabe	keep	die	Abgaben	levy		
+Brennessel	drop					wrong lemma (Brennnessel)
+Quere	drop					only in 'in die Quere kommen'
+Spende	keep	die	Spenden	donation		
+Scheltwort	keep	das	Scheltworte	harsh word		
+Sommerszeit	keep	die		summertime		
+Nachtigalle	drop					wrong lemma (Nachtigall)
+Unding	keep	das	Undinge	monstrosity		
+Dreschflegel	keep	der	Dreschflegel	flail		
+Nichtsnutz	drop					duplicates Taugenichts
+Weniger	drop					tagger artifact (adverb weniger)
+Eselsohr	keep	das	Eselsohren	donkey ear		
+Sommerzeit	drop					duplicates Sommerszeit
+Teufelskerl	keep	der	Teufelskerle	daredevil		
+Schlachtordnung	keep	die	Schlachtordnungen	battle array		
+Nachsehen	drop					only in 'das Nachsehen haben'
+Scheideweg	keep	der	Scheidewege	parting of ways		
+Schall	keep	der		sound		
+Zutritt	keep	der		admittance		
+Keule	keep	die	Keulen	club		
+Felsblock	keep	der	Felsblöcke	boulder		
+Landesherr	keep	der	Landesherren	territorial lord		
+Tornister	keep	der	Tornister	soldier's knapsack		
+Holzschuh	keep	der	Holzschuhe	clog		
+Dirnlein	drop					diminutive
+Häuflein	drop					diminutive
+Pack	keep	der	Packe	pack		also das Pack (rabble)
+Exempel	keep	das	Exempel	example		old-fashioned for Beispiel
+Marke	drop					dialect (Low German 'marken', notice)
+Wäldchen	drop					diminutive
+Abzug	keep	der	Abzüge	withdrawal		
+Kühlung	keep	die		cooling		
+Sünderin	keep	die	Sünderinnen	female sinner		
+Handtuch	keep	das	Handtücher	towel		
+Ahnherr	keep	der	Ahnherren	ancestor		
+Ermordung	keep	die	Ermordungen	murder		
+Wälle	drop					wrong lemma (Wall)
+Peitschen	drop					wrong lemma (Peitsche)
+Einweihung	keep	die	Einweihungen	inauguration		
+Schwunge	drop					wrong lemma (Schwung)
+Christenmensch	keep	der	Christenmenschen	Christian soul		
+Winsel	drop					tagger artifact (from 'Winseln', verb winseln)
+Zähr	drop					wrong lemma (Zähre)
+Wochenbett	drop					duplicates Kindbett
+Zunft	keep	die	Zünfte	guild		
+Hochzeitszug	keep	der	Hochzeitszüge	wedding procession		
+Waldmeister	keep	der		woodruff		
+Steinwurf	keep	der	Steinwürfe	stone's throw		
+Aß	drop					tagger artifact (verb essen)
+Grundfest	drop					wrong lemma (Grundfeste)
+Obst	keep	das		fruit		
+Ripp	drop					wrong lemma (Rippe)
+Röhre	keep	die	Röhren	pipe		
+Namen	drop					wrong lemma (Name)
+Linnen	drop					obsolete form of Leinen
+Kinderspiel	keep	das	Kinderspiele	child's play		
+Altertum	keep	das	Altertümer	antiquity		
+Gutes	drop					tagger artifact (adjective, 'etwas Gutes')
+Verwahrung	keep	die		safekeeping		
+Ehrenplatz	keep	der	Ehrenplätze	place of honor		
+Bestürzt	drop					tagger artifact (adjective bestürzt)
+Nußschale	drop					wrong lemma (Nussschale)
+Strümpf	drop					wrong lemma (Strumpf)
+Geringeres	drop					tagger artifact (adjective, 'nichts Geringeres')
+Schlafstätte	drop					duplicates Schlafstelle
+Blutspur	keep	die	Blutspuren	trail of blood		
+Getrappel	keep	das		patter of feet		
+Gruft	keep	die	Grüfte	crypt		
+Volkslied	keep	das	Volkslieder	folk song		
+Knechte	drop					wrong lemma (Knecht)
+Einöde	keep	die	Einöden	wasteland		
+Seuche	keep	die	Seuchen	epidemic		
+Munde	drop					wrong lemma (Mund)
+Grundstück	keep	das	Grundstücke	plot of land		
+Jag	drop					tagger artifact (verb jagen)
+Flor	keep	der	Flore	gauze		
+Scheide	keep	die	Scheiden	scabbard		
+Becken	keep	das	Becken	basin		
+Ungetüm	drop					duplicates Ungeheuer
+Reis	drop					mixes das Reis (twig) and old Reis for Reise

@@ -210,6 +210,10 @@ def count(name, books):
                 elif token.pos_ in ("VERB", "AUX"):
                     particle = particles.get(token.i, "")
                     base = token.lemma_.lower()
+                    if token.tag_ == "VVIZU" and base == token.lower_:
+                        # A zu-infinitive the lemmatizer left alone (anzubringen):
+                        # drop the zu after the particle (anbringen; zuzunehmen -> zunehmen).
+                        base = re.sub(r"^(.+?)zu(?=..)", r"\1", base, count=1)
                     lemma = particle + spelling.get(base, base)
                     lemma = spelling.get(lemma, lemma)
                     # Infinitives end in -n (gehen, wandern, tun).

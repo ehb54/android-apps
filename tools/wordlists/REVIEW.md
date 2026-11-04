@@ -56,7 +56,9 @@ Header: `lemma	decision	article	plural	english	emoji	note`
   words cut short (`tagger artifact`); inflected or old-spelling forms
   (`wrong lemma (Tür)`); words that only occur in one tale or book, or only in
   one idiom (`book-specific`, `only in 'mein Lebtag'`); obsolete words no
-  learner needs (`obsolete coin`); Gutenberg markup (Footnote, Fußnote).
+  learner needs (`obsolete coin`); Gutenberg markup (Footnote, Fußnote);
+  words that are slurs or offensive today (Neger, Zigeuner, Mohr, Krüppel:
+  `offensive today`).
 
 ## Verbs
 

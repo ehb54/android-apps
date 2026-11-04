@@ -29,65 +29,191 @@
             ]
         },
         {
+            "file": "Children's books nouns.xlsx",
+            "bytes": 60468,
+            "sha256": "74ccf6e95da1eaf63b387e27864ff79beb6f321ab0797a0400a7ef95c4754699",
+            "quizzes": [
+                {
+                    "name": "Children's books nouns",
+                    "source": "Children's books nouns.xlsx#Children's books nouns",
+                    "version": "071794a04e13357165a6bd6f313364013352d01e9a3a913238fec8be53069c97",
+                    "cards": 1000,
+                    "tab": "Children's books nouns"
+                },
+                {
+                    "name": "Children's books articles",
+                    "source": "Children's books nouns.xlsx#Children's books articles",
+                    "version": "9f304ad098aa02da4fc053833c25ea68bcb39e173f0f1b98fe0ac05a8b71b8a6",
+                    "cards": 1000,
+                    "tab": "Children's books articles"
+                },
+                {
+                    "name": "Children's books plurals",
+                    "source": "Children's books nouns.xlsx#Children's books plurals",
+                    "version": "fb0f0241b6c552a549cbf47185bb2ab118c7dd04b82541c06ba80a418ff677a3",
+                    "cards": 824,
+                    "tab": "Children's books plurals"
+                }
+            ]
+        },
+        {
+            "file": "Children's books pictures.zip",
+            "bytes": 1932882,
+            "sha256": "3473aecb682699c982eea1bd7701f4abc95356435fa7937b97ccbf0981ef9f76",
+            "quizzes": [
+                {
+                    "name": "Children's books pictures",
+                    "source": "Children's books pictures.zip",
+                    "version": "3473aecb682699c982eea1bd7701f4abc95356435fa7937b97ccbf0981ef9f76",
+                    "cards": 67,
+                    "pictures": 67
+                }
+            ]
+        },
+        {
+            "file": "Children's books verbs.xlsx",
+            "bytes": 19090,
+            "sha256": "747caace3cd0e6fc507c28990a66d0c69ffba035e492e72306a8b860d3d2a79a",
+            "quizzes": [
+                {
+                    "name": "Children's books verbs",
+                    "source": "Children's books verbs.xlsx#Children's books verbs",
+                    "version": "0e1298e22780ba7f5b6f3cd32fb75680f59f2d72766df41a6d8a68369b8f1bf6",
+                    "cards": 300,
+                    "tab": "Children's books verbs"
+                },
+                {
+                    "name": "Children's books verb forms",
+                    "source": "Children's books verbs.xlsx#Children's books verb forms",
+                    "version": "d71ecfe54bd5d8952beedd102e62b164c1c8ca50085a3fcaf981f5d4237cb04a",
+                    "cards": 300,
+                    "tab": "Children's books verb forms"
+                }
+            ]
+        },
+        {
             "file": "Core nouns.xlsx",
-            "bytes": 151646,
-            "sha256": "d446b29db9c48e724301a52aa6e4f2b3aac382d3f1ad183e58f24b689a4037cf",
+            "bytes": 151663,
+            "sha256": "81b8681ec76394f683217108e6c4aa78ce52a6ec66018c7a8b85023245acca20",
             "quizzes": [
                 {
                     "name": "Core nouns",
                     "source": "Core nouns.xlsx#Core nouns",
-                    "version": "2fd4965739319ff6e0f7c8e4dcb2e5bd432ce388a9e12e040d4f24f1adbf5c2e",
+                    "version": "546824f547f1d53a8e0f633915bbb3f3ec9f20684e5f0d361e3b3cb31b666cfa",
                     "cards": 3000,
                     "tab": "Core nouns"
                 },
                 {
                     "name": "Core articles",
                     "source": "Core nouns.xlsx#Core articles",
-                    "version": "e5210d1438bdc3c8708e54b990dc51600d1441eeb1d6c09acb3ce3f541f4bd1c",
+                    "version": "6611a16828040d216105afb1d9edd49e2a5281a53594c6d82dd59cdcd863916f",
                     "cards": 3000,
                     "tab": "Core articles"
                 },
                 {
                     "name": "Core plurals",
                     "source": "Core nouns.xlsx#Core plurals",
-                    "version": "4abd251698e7605343ecca672654f788a71af2fe602ade44888a165828ac183e",
-                    "cards": 2362,
+                    "version": "c6e34369bd83a63493ebc79b7318ea3243048654875e993dbb517a9e6431b350",
+                    "cards": 2370,
                     "tab": "Core plurals"
                 }
             ]
         },
         {
             "file": "Core pictures.zip",
-            "bytes": 7662494,
-            "sha256": "52787e246c81526bc760b0c1824896270f99084bc83c8c0d6cd0cfdca149a78f",
+            "bytes": 7764784,
+            "sha256": "2353122f7cfcc40b97f2ff7e9dc38425e45f4fc598716d426b12a968915de135",
             "quizzes": [
                 {
                     "name": "Core pictures",
                     "source": "Core pictures.zip",
-                    "version": "52787e246c81526bc760b0c1824896270f99084bc83c8c0d6cd0cfdca149a78f",
-                    "cards": 303,
-                    "pictures": 303
+                    "version": "2353122f7cfcc40b97f2ff7e9dc38425e45f4fc598716d426b12a968915de135",
+                    "cards": 308,
+                    "pictures": 308
                 }
             ]
         },
         {
             "file": "Core verbs.xlsx",
-            "bytes": 46510,
-            "sha256": "4b7c3fdf6a9bd0531858606ed08417820e5528b313c2e123140b1d1fe41665da",
+            "bytes": 46574,
+            "sha256": "3cb5b9dd18435b4f1f5c095a081fa74596b30b474309d1c97acfbaf1c51cf773",
             "quizzes": [
                 {
                     "name": "Core verbs",
                     "source": "Core verbs.xlsx#Core verbs",
-                    "version": "51dc55df24561d76524a97a2a63eaa81075caebeb9e120f1de8b498497abfc4a",
+                    "version": "81a0c50114af7bb75adc3a93a3e86760dcd41a8c53fa63e1596b9d0f17514112",
                     "cards": 1000,
                     "tab": "Core verbs"
                 },
                 {
                     "name": "Core verb forms",
                     "source": "Core verbs.xlsx#Core verb forms",
-                    "version": "ee4f44d2184d223c44f1ffb858d116fc2d3989f44f5e707751d083e0914fbf59",
+                    "version": "59be42b5d29fce4202324f586a5e137bf950f86a5525f91109b979b8f3083fe3",
                     "cards": 1000,
                     "tab": "Core verb forms"
+                }
+            ]
+        },
+        {
+            "file": "Fairy tales nouns.xlsx",
+            "bytes": 59322,
+            "sha256": "9a70ab9f5c1dd044c1a8f2335e2be11de738b8c765344197659ff75a7ec70ea3",
+            "quizzes": [
+                {
+                    "name": "Fairy tales nouns",
+                    "source": "Fairy tales nouns.xlsx#Fairy tales nouns",
+                    "version": "4fd6cd51f7164a75c2c2e19318eddaab9980490f55827b0dafd6fa752f41f003",
+                    "cards": 1000,
+                    "tab": "Fairy tales nouns"
+                },
+                {
+                    "name": "Fairy tales articles",
+                    "source": "Fairy tales nouns.xlsx#Fairy tales articles",
+                    "version": "c59891cac5bd9eb4d35a153593aa731d3ba48247d50d9a2c52ab83140338b6b9",
+                    "cards": 1000,
+                    "tab": "Fairy tales articles"
+                },
+                {
+                    "name": "Fairy tales plurals",
+                    "source": "Fairy tales nouns.xlsx#Fairy tales plurals",
+                    "version": "2f76ca4c51634f3495d04aea357c1dd3a3772a39b9c5c3cdfd84b2f61df065d9",
+                    "cards": 826,
+                    "tab": "Fairy tales plurals"
+                }
+            ]
+        },
+        {
+            "file": "Fairy tales pictures.zip",
+            "bytes": 1766506,
+            "sha256": "eff10b48307507826e4bcf2e336bd4095256880234c76c5a4c5202a9d1fd242c",
+            "quizzes": [
+                {
+                    "name": "Fairy tales pictures",
+                    "source": "Fairy tales pictures.zip",
+                    "version": "eff10b48307507826e4bcf2e336bd4095256880234c76c5a4c5202a9d1fd242c",
+                    "cards": 57,
+                    "pictures": 57
+                }
+            ]
+        },
+        {
+            "file": "Fairy tales verbs.xlsx",
+            "bytes": 18730,
+            "sha256": "af23bab24bb5f0400934c530364fdd4cce40594d6045f4857a3ada3bc7f45c53",
+            "quizzes": [
+                {
+                    "name": "Fairy tales verbs",
+                    "source": "Fairy tales verbs.xlsx#Fairy tales verbs",
+                    "version": "13c6eafa3cb1cbfddca20633239b0c65fd384a3070725365da56a2734010ec1f",
+                    "cards": 300,
+                    "tab": "Fairy tales verbs"
+                },
+                {
+                    "name": "Fairy tales verb forms",
+                    "source": "Fairy tales verbs.xlsx#Fairy tales verb forms",
+                    "version": "847e605f4fd6e468c85c20c25076bf6d781a7fe991d33bdd620546c4ac872e89",
+                    "cards": 300,
+                    "tab": "Fairy tales verb forms"
                 }
             ]
         },
@@ -128,86 +254,128 @@
             ]
         },
         {
-            "file": "Grimm nouns.xlsx",
-            "bytes": 15408,
-            "sha256": "eeedc02053c30cdaa60e33a0766b648c528849f48bc29b2974970c1c493c325d",
+            "file": "Goethe nouns.xlsx",
+            "bytes": 56608,
+            "sha256": "03f389148a49a32258ded8960cb4d01a796555cc29312436f015f2447cb50f77",
             "quizzes": [
                 {
-                    "name": "Grimm nouns",
-                    "source": "Grimm nouns.xlsx#Grimm nouns",
-                    "version": "16f42343855e3e5a78887c135aed9970c73e4e722699b1f28f3311fa1510d146",
-                    "cards": 200,
-                    "tab": "Grimm nouns"
+                    "name": "Goethe nouns",
+                    "source": "Goethe nouns.xlsx#Goethe nouns",
+                    "version": "5b08f182f39231ee3d2e2902405f53a9fb680a5c5003d1a16b7bf1661d766ef1",
+                    "cards": 976,
+                    "tab": "Goethe nouns"
                 },
                 {
-                    "name": "Grimm articles",
-                    "source": "Grimm nouns.xlsx#Grimm articles",
-                    "version": "70421b72392a60767493b45af5bf4b15e606ef543a11c44e32ca0f3737863ef9",
-                    "cards": 200,
-                    "tab": "Grimm articles"
+                    "name": "Goethe articles",
+                    "source": "Goethe nouns.xlsx#Goethe articles",
+                    "version": "82f83e093c7542c37bfb1a9fdab1a291f3f8f968dd1af609371cb2b58fd473cc",
+                    "cards": 976,
+                    "tab": "Goethe articles"
                 },
                 {
-                    "name": "Grimm plurals",
-                    "source": "Grimm nouns.xlsx#Grimm plurals",
-                    "version": "3eecd6c02bbff7c8e3867392da2655a0de146abde3beab3efcde75682fa6a63a",
-                    "cards": 175,
-                    "tab": "Grimm plurals"
+                    "name": "Goethe plurals",
+                    "source": "Goethe nouns.xlsx#Goethe plurals",
+                    "version": "e5f04e4a0f37a2b69d4ea51bfc2aedd8ea3d4f90f26bde7ff0aa458ad71a940d",
+                    "cards": 737,
+                    "tab": "Goethe plurals"
                 }
             ]
         },
         {
-            "file": "Grimm pictures.zip",
-            "bytes": 1996268,
-            "sha256": "c425aa4cf74adc4bab36877277cb411879f5f4fc180b3228ca5e910bb961b6f4",
+            "file": "Goethe pictures.zip",
+            "bytes": 684046,
+            "sha256": "b7156c450d2e78edc81ab5d198a44898ff6afd5fa649a3941c9c3d6761c55d1a",
             "quizzes": [
                 {
-                    "name": "Grimm pictures",
-                    "source": "Grimm pictures.zip",
-                    "version": "c425aa4cf74adc4bab36877277cb411879f5f4fc180b3228ca5e910bb961b6f4",
-                    "cards": 81,
-                    "pictures": 81
+                    "name": "Goethe pictures",
+                    "source": "Goethe pictures.zip",
+                    "version": "b7156c450d2e78edc81ab5d198a44898ff6afd5fa649a3941c9c3d6761c55d1a",
+                    "cards": 26,
+                    "pictures": 26
+                }
+            ]
+        },
+        {
+            "file": "Goethe verbs.xlsx",
+            "bytes": 19189,
+            "sha256": "12160303364f6593268569b9aef3405c6822f3cab80615252b1b8ae491143355",
+            "quizzes": [
+                {
+                    "name": "Goethe verbs",
+                    "source": "Goethe verbs.xlsx#Goethe verbs",
+                    "version": "9cf16694bf673cff4035fab29425f4ad3be423958826b1c81cff13864c2b6fb2",
+                    "cards": 300,
+                    "tab": "Goethe verbs"
+                },
+                {
+                    "name": "Goethe verb forms",
+                    "source": "Goethe verbs.xlsx#Goethe verb forms",
+                    "version": "6cf941d5329d04d3ab6e49454930f3523d1d06f3d9acd535b184fbc975615ea7",
+                    "cards": 300,
+                    "tab": "Goethe verb forms"
                 }
             ]
         },
         {
             "file": "History nouns.xlsx",
-            "bytes": 16119,
-            "sha256": "90b4a0bc548ba5921423d85109efd7c160dfab3c824874997739a410872fa92c",
+            "bytes": 57222,
+            "sha256": "20936d6429ef9d7f61e153132f6325e97a63e28bbeb1f7c2f1d11e2d3e47b347",
             "quizzes": [
                 {
                     "name": "History nouns",
                     "source": "History nouns.xlsx#History nouns",
-                    "version": "f1c37dfa46cf5f646976bda196374290d9693f70c80eb03c4be34c2b85b66c92",
-                    "cards": 200,
+                    "version": "17adc28000d8a99a2cc62a992272479940e99436430b36fe78902ce0a7eb9c29",
+                    "cards": 1000,
                     "tab": "History nouns"
                 },
                 {
                     "name": "History articles",
                     "source": "History nouns.xlsx#History articles",
-                    "version": "08d1c4e402793af66be0c809355ae6f64ebb52e2165dc1e09759cd3d833ac3fb",
-                    "cards": 200,
+                    "version": "ecba82a75867056f52a4880d9235086978e7c21455ab1446af6fe4ab2f326d44",
+                    "cards": 1000,
                     "tab": "History articles"
                 },
                 {
                     "name": "History plurals",
                     "source": "History nouns.xlsx#History plurals",
-                    "version": "10b2dd2cea236dbc8fc16c1fd5c6e234ca5eeac0803450014a4f1d59913f6471",
-                    "cards": 173,
+                    "version": "256569a7ce7460a3dc7623ae40764a354acc30d6746775a9aa0db2ae289cc2d6",
+                    "cards": 755,
                     "tab": "History plurals"
                 }
             ]
         },
         {
             "file": "History pictures.zip",
-            "bytes": 321683,
-            "sha256": "d68d3c7be76f3dcc7e16ad98fc6b13cb557dc19ee3b000b572a5e19aed199e6b",
+            "bytes": 351522,
+            "sha256": "5fbad55e284078c3b85a9f0c74cc06c0d64c92db163c3e3ccd69613f997b383c",
             "quizzes": [
                 {
                     "name": "History pictures",
                     "source": "History pictures.zip",
-                    "version": "d68d3c7be76f3dcc7e16ad98fc6b13cb557dc19ee3b000b572a5e19aed199e6b",
-                    "cards": 13,
-                    "pictures": 13
+                    "version": "5fbad55e284078c3b85a9f0c74cc06c0d64c92db163c3e3ccd69613f997b383c",
+                    "cards": 16,
+                    "pictures": 16
+                }
+            ]
+        },
+        {
+            "file": "History verbs.xlsx",
+            "bytes": 18647,
+            "sha256": "5ad0bdcebc2292fd71a70d7128e1570ea1d9da4dc07f683badbdb57450423024",
+            "quizzes": [
+                {
+                    "name": "History verbs",
+                    "source": "History verbs.xlsx#History verbs",
+                    "version": "6b3ce4dc913fcd815028a6bbbc9842ea7898d929ab9d3fa32c6fc104066f932e",
+                    "cards": 300,
+                    "tab": "History verbs"
+                },
+                {
+                    "name": "History verb forms",
+                    "source": "History verbs.xlsx#History verb forms",
+                    "version": "c70c75a9ae6bd8412de11ac4e2ec823a83682767324c31787fbc033a6bd868f1",
+                    "cards": 300,
+                    "tab": "History verb forms"
                 }
             ]
         },

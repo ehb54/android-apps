@@ -38,8 +38,8 @@ tragen	tragen	carry	trägt, trug, hat getragen
 kennen	kennen	be familiar with	kennt, kannte, hat gekannt
 beginnen	beginnen	begin	beginnt, begann, hat begonnen
 legen	legen	lay	legt, legte, hat gelegt
-fallen	fallen	fall	fällt, fiel, ist gefallen
 lachen	lachen	laugh	lacht, lachte, hat gelacht
+fallen	fallen	fall	fällt, fiel, ist gefallen
 erzählen	erzählen	tell	erzählt, erzählte, hat erzählt
 ziehen	ziehen	pull	zieht, zog, hat gezogen
 verstehen	verstehen	understand	versteht, verstand, hat verstanden
@@ -65,17 +65,17 @@ reden	reden	talk	redet, redete, hat geredet
 antworten	antworten	answer	antwortet, antwortete, hat geantwortet
 geschehen	geschehen	happen	geschieht, geschah, ist geschehen
 spielen	spielen	play	spielt, spielte, hat gespielt
-lesen	lesen	read	liest, las, hat gelesen
 aussehen	aussehen	look like	sieht aus, sah aus, hat ausgesehen
+lesen	lesen	read	liest, las, hat gelesen
 nennen	nennen	name	nennt, nannte, hat genannt
+helfen	helfen	help	hilft, half, hat geholfen
 erheben	sich erheben	rise	erhebt sich, erhob sich, hat sich erhoben
 bitten	bitten	request	bittet, bat, hat gebeten
 verlassen	verlassen	leave	verlässt, verließ, hat verlassen
-helfen	helfen	help	hilft, half, hat geholfen
 verlieren	verlieren	lose	verliert, verlor, hat verloren
+vergessen	vergessen	forget	vergisst, vergaß, hat vergessen
 treffen	treffen	meet	trifft, traf, hat getroffen
 laufen	laufen	run	läuft, lief, ist gelaufen
-vergessen	vergessen	forget	vergisst, vergaß, hat vergessen
 öffnen	öffnen	open	öffnet, öffnete, hat geöffnet
 stellen	stellen	place	stellt, stellte, hat gestellt
 folgen	folgen	follow	folgt, folgte, ist gefolgt
@@ -90,10 +90,10 @@ freuen	sich freuen	be glad	freut sich, freute sich, hat sich gefreut
 merken	merken	notice	merkt, merkte, hat gemerkt
 klingen	klingen	sound	klingt, klang, hat geklungen
 wenden	wenden	turn	wendet, wandte, hat gewandt
+schreien	schreien	shout	schreit, schrie, hat geschrien
 bemerken	bemerken	remark	bemerkt, bemerkte, hat bemerkt
 erklären	erklären	explain	erklärt, erklärte, hat erklärt
 versuchen	versuchen	try	versucht, versuchte, hat versucht
-schreien	schreien	shout	schreit, schrie, hat geschrien
 schütteln	schütteln	shake	schüttelt, schüttelte, hat geschüttelt
 holen	holen	fetch	holt, holte, hat geholt
 erwidern	erwidern	reply	erwidert, erwiderte, hat erwidert
@@ -122,20 +122,20 @@ hängen	hängen	hang	hängt, hing, hat gehangen
 betrachten	betrachten	view	betrachtet, betrachtete, hat betrachtet
 leiden	leiden	suffer	leidet, litt, hat gelitten
 trinken	trinken	drink	trinkt, trank, hat getrunken
+schauen	schauen	look	schaut, schaute, hat geschaut
 einfallen	einfallen	come to mind	fällt ein, fiel ein, ist eingefallen
 erreichen	erreichen	reach	erreicht, erreichte, hat erreicht
 annehmen	annehmen	accept	nimmt an, nahm an, hat angenommen
 schlafen	schlafen	sleep	schläft, schlief, hat geschlafen
+vorkommen	vorkommen	occur	kommt vor, kam vor, ist vorgekommen
 besitzen	besitzen	possess	besitzt, besaß, hat besessen
 erinnern	sich erinnern	remember	erinnert sich, erinnerte sich, hat sich erinnert
 gelten	gelten	be valid	gilt, galt, hat gegolten
-vorkommen	vorkommen	occur	kommt vor, kam vor, ist vorgekommen
 greifen	greifen	reach for	greift, griff, hat gegriffen
 blicken	blicken	glance	blickt, blickte, hat geblickt
 verlangen	verlangen	demand	verlangt, verlangte, hat verlangt
 fortfahren	fortfahren	continue	fährt fort, fuhr fort, hat fortgefahren
 empfinden	empfinden	perceive	empfindet, empfand, hat empfunden
-schauen	schauen	look	schaut, schaute, hat geschaut
 nicken	nicken	nod	nickt, nickte, hat genickt
 zurückkehren	zurückkehren	return	kehrt zurück, kehrte zurück, ist zurückgekehrt
 vermögen	vermögen	be capable	vermag, vermochte, hat vermocht
@@ -164,6 +164,7 @@ ergreifen	ergreifen	seize	ergreift, ergriff, hat ergriffen
 spüren	spüren	sense	spürt, spürte, hat gespürt
 rühren	rühren	stir	rührt, rührte, hat gerührt
 stürzen	stürzen	plunge	stürzt, stürzte, ist gestürzt
+essen	essen	eat	isst, aß, hat gegessen
 tanzen	tanzen	dance	tanzt, tanzte, hat getanzt
 brennen	brennen	burn	brennt, brannte, hat gebrannt
 springen	springen	jump	springt, sprang, ist gesprungen
@@ -182,13 +183,12 @@ erleben	erleben	experience	erlebt, erlebte, hat erlebt
 empfangen	empfangen	receive guests	empfängt, empfing, hat empfangen
 bedeuten	bedeuten	signify	bedeutet, bedeutete, hat bedeutet
 zucken	zucken	twitch	zuckt, zuckte, hat gezuckt
-essen	essen	eat	isst, aß, hat gegessen
 heiraten	heiraten	marry	heiratet, heiratete, hat geheiratet
 leuchten	leuchten	glow	leuchtet, leuchtete, hat geleuchtet
 bieten	bieten	offer	bietet, bot, hat geboten
 gelingen	gelingen	succeed	gelingt, gelang, ist gelungen
-packen	packen	grab	packt, packte, hat gepackt
 versprechen	versprechen	promise	verspricht, versprach, hat versprochen
+packen	packen	grab	packt, packte, hat gepackt
 lösen	lösen	solve	löst, löste, hat gelöst
 schieben	schieben	push	schiebt, schob, hat geschoben
 verbergen	verbergen	conceal	verbirgt, verbarg, hat verborgen
@@ -196,8 +196,8 @@ wirken	wirken	have an effect	wirkt, wirkte, hat gewirkt
 unterbrechen	unterbrechen	interrupt	unterbricht, unterbrach, hat unterbrochen
 begleiten	begleiten	accompany	begleitet, begleitete, hat begleitet
 bilden	bilden	form	bildet, bildete, hat gebildet
-stören	stören	disturb	stört, störte, hat gestört
 besuchen	besuchen	visit	besucht, besuchte, hat besucht
+stören	stören	disturb	stört, störte, hat gestört
 erwachen	erwachen	awaken	erwacht, erwachte, ist erwacht
 ändern	ändern	change	ändert, änderte, hat geändert
 klopfen	klopfen	knock	klopft, klopfte, hat geklopft
@@ -215,12 +215,13 @@ neigen	neigen	incline	neigt, neigte, hat geneigt
 erlauben	erlauben	allow	erlaubt, erlaubte, hat erlaubt
 verraten	verraten	betray	verrät, verriet, hat verraten
 senken	senken	lower	senkt, senkte, hat gesenkt
+aufrichten	sich aufrichten	straighten up	richtet sich auf, richtete sich auf, hat sich aufgerichtet
 füllen	füllen	fill	füllt, füllte, hat gefüllt
 beugen	sich beugen	bend	beugt sich, beugte sich, hat sich gebeugt
 versetzen	versetzen	transfer	versetzt, versetzte, hat versetzt
-aufrichten	sich aufrichten	straighten up	richtet sich auf, richtete sich auf, hat sich aufgerichtet
 erregen	erregen	excite	erregt, erregte, hat erregt
 sorgen	sorgen	see to	sorgt, sorgte, hat gesorgt
+entgegnen	entgegnen	retort	entgegnet, entgegnete, hat entgegnet
 ruhen	ruhen	rest	ruht, ruhte, hat geruht
 begrüßen	begrüßen	welcome	begrüßt, begrüßte, hat begrüßt
 bestimmen	bestimmen	determine	bestimmt, bestimmte, hat bestimmt
@@ -230,18 +231,18 @@ vernehmen	vernehmen	discern	vernimmt, vernahm, hat vernommen
 zurückkommen	zurückkommen	come back	kommt zurück, kam zurück, ist zurückgekommen
 bauen	bauen	build	baut, baute, hat gebaut
 retten	retten	rescue	rettet, rettete, hat gerettet
-entgegnen	entgegnen	retort	entgegnet, entgegnete, hat entgegnet
 streichen	streichen	stroke	streicht, strich, hat gestrichen
 überzeugen	überzeugen	convince	überzeugt, überzeugte, hat überzeugt
+gefallen	gefallen	please	gefällt, gefiel, hat gefallen
 aufhören	aufhören	stop	hört auf, hörte auf, hat aufgehört
+aufgehen	aufgehen	come open	geht auf, ging auf, ist aufgegangen
 dauern	dauern	last	dauert, dauerte, hat gedauert
 festhalten	festhalten	hold tight	hält fest, hielt fest, hat festgehalten
 zurückziehen	zurückziehen	withdraw	zieht zurück, zog zurück, hat zurückgezogen
 kämpfen	kämpfen	fight	kämpft, kämpfte, hat gekämpft
 behaupten	behaupten	claim	behauptet, behauptete, hat behauptet
-aufgehen	aufgehen	come open	geht auf, ging auf, ist aufgegangen
-eilen	eilen	hasten	eilt, eilte, ist geeilt
 aufspringen	aufspringen	jump up	springt auf, sprang auf, ist aufgesprungen
+eilen	eilen	hasten	eilt, eilte, ist geeilt
 beobachten	beobachten	observe	beobachtet, beobachtete, hat beobachtet
 dringen	dringen	penetrate	dringt, drang, ist gedrungen
 beruhigen	beruhigen	calm	beruhigt, beruhigte, hat beruhigt
@@ -253,8 +254,10 @@ passen	passen	fit	passt, passte, hat gepasst
 ausgehen	ausgehen	go out	geht aus, ging aus, ist ausgegangen
 kosten	kosten	cost	kostet, kostete, hat gekostet
 mitteilen	mitteilen	inform	teilt mit, teilte mit, hat mitgeteilt
+anziehen	anziehen	put on	zieht an, zog an, hat angezogen
 wandern	wandern	hike	wandert, wanderte, ist gewandert
 schämen	sich schämen	be ashamed	schämt sich, schämte sich, hat sich geschämt
+vergehen	vergehen	elapse	vergeht, verging, ist vergangen
 erschrecken	erschrecken	frighten	erschreckt, erschreckte, hat erschreckt
 murmeln	murmeln	murmur	murmelt, murmelte, hat gemurmelt
 hinzufügen	hinzufügen	add	fügt hinzu, fügte hinzu, hat hinzugefügt
@@ -264,7 +267,6 @@ starren	starren	stare	starrt, starrte, hat gestarrt
 kümmern	sich kümmern	look after	kümmert sich, kümmerte sich, hat sich gekümmert
 mitnehmen	mitnehmen	take along	nimmt mit, nahm mit, hat mitgenommen
 leisten	leisten	accomplish	leistet, leistete, hat geleistet
-anziehen	anziehen	put on	zieht an, zog an, hat angezogen
 weisen	weisen	point	weist, wies, hat gewiesen
 entstehen	entstehen	arise	entsteht, entstand, ist entstanden
 pressen	pressen	squeeze	presst, presste, hat gepresst
@@ -275,47 +277,47 @@ zuhören	zuhören	listen	hört zu, hörte zu, hat zugehört
 auftauchen	auftauchen	emerge	taucht auf, tauchte auf, ist aufgetaucht
 beten	beten	pray	betet, betete, hat gebetet
 herrschen	herrschen	reign	herrscht, herrschte, hat geherrscht
+dastehen	dastehen	stand there	steht da, stand da, hat dagestanden
 berichten	berichten	report	berichtet, berichtete, hat berichtet
 ertragen	ertragen	endure	erträgt, ertrug, hat ertragen
 reisen	reisen	travel	reist, reiste, ist gereist
 quälen	quälen	torment	quält, quälte, hat gequält
-gefallen	gefallen	please	gefällt, gefiel, hat gefallen
 stützen	stützen	prop up	stützt, stützte, hat gestützt
 aufgeben	aufgeben	give up	gibt auf, gab auf, hat aufgegeben
 bereiten	bereiten	prepare	bereitet, bereitete, hat bereitet
+begeben	sich begeben	proceed	begibt sich, begab sich, hat sich begeben
 wecken	wecken	wake	weckt, weckte, hat geweckt
 malen	malen	paint	malt, malte, hat gemalt
 drohen	drohen	threaten	droht, drohte, hat gedroht
 binden	binden	tie	bindet, band, hat gebunden
 erblicken	erblicken	catch sight of	erblickt, erblickte, hat erblickt
+genießen	genießen	enjoy	genießt, genoss, hat genossen
+zusehen	zusehen	watch	sieht zu, sah zu, hat zugesehen
 verkaufen	verkaufen	sell	verkauft, verkaufte, hat verkauft
 gewöhnen	sich gewöhnen	get used to	gewöhnt sich, gewöhnte sich, hat sich gewöhnt
-zusehen	zusehen	watch	sieht zu, sah zu, hat zugesehen
+umsehen	sich umsehen	look around	sieht sich um, sah sich um, hat sich umgesehen
 wiederkommen	wiederkommen	come again	kommt wieder, kam wieder, ist wiedergekommen
-schießen	schießen	shoot	schießt, schoss, hat geschossen
 angehen	angehen	concern	geht an, ging an, hat angegangen
-begeben	sich begeben	proceed	begibt sich, begab sich, hat sich begeben
+schießen	schießen	shoot	schießt, schoss, hat geschossen
 nachdenken	nachdenken	reflect	denkt nach, dachte nach, hat nachgedacht
 wehren	sich wehren	resist	wehrt sich, wehrte sich, hat sich gewehrt
 behandeln	behandeln	treat	behandelt, behandelte, hat behandelt
 verfolgen	verfolgen	pursue	verfolgt, verfolgte, hat verfolgt
 gebären	gebären	give birth	gebiert, gebar, hat geboren
+abnehmen	abnehmen	take off	nimmt ab, nahm ab, hat abgenommen
 betreten	betreten	set foot in	betritt, betrat, hat betreten
 entscheiden	entscheiden	decide	entscheidet, entschied, hat entschieden
+trösten	trösten	comfort	tröstet, tröstete, hat getröstet
 stimmen	stimmen	be right	stimmt, stimmte, hat gestimmt
+mitbringen	mitbringen	bring along	bringt mit, brachte mit, hat mitgebracht
+hinausgehen	hinausgehen	go outside	geht hinaus, ging hinaus, ist hinausgegangen
 aufheben	aufheben	pick up	hebt auf, hob auf, hat aufgehoben
 töten	töten	kill	tötet, tötete, hat getötet
+herauskommen	herauskommen	come out	kommt heraus, kam heraus, ist herausgekommen
 wählen	wählen	choose	wählt, wählte, hat gewählt
-hinausgehen	hinausgehen	go outside	geht hinaus, ging hinaus, ist hinausgegangen
 sehnen	sich sehnen	yearn	sehnt sich, sehnte sich, hat sich gesehnt
 beweisen	beweisen	prove	beweist, bewies, hat bewiesen
-trösten	trösten	comfort	tröstet, tröstete, hat getröstet
-mitbringen	mitbringen	bring along	bringt mit, brachte mit, hat mitgebracht
-herauskommen	herauskommen	come out	kommt heraus, kam heraus, ist herausgekommen
 klagen	klagen	lament	klagt, klagte, hat geklagt
-abnehmen	abnehmen	take off	nimmt ab, nahm ab, hat abgenommen
-vergehen	vergehen	elapse	vergeht, verging, ist vergangen
-dastehen	dastehen	stand there	steht da, stand da, hat dagestanden
 einladen	einladen	invite	lädt ein, lud ein, hat eingeladen
 nähern	sich nähern	approach	nähert sich, näherte sich, hat sich genähert
 vornehmen	sich vornehmen	intend	nimmt sich vor, nahm sich vor, hat sich vorgenommen
@@ -323,6 +325,7 @@ verzeihen	verzeihen	forgive	verzeiht, verzieh, hat verziehen
 auffallen	auffallen	stand out	fällt auf, fiel auf, ist aufgefallen
 genügen	genügen	suffice	genügt, genügte, hat genügt
 seufzen	seufzen	sigh	seufzt, seufzte, hat geseufzt
+hingehen	hingehen	go there	geht hin, ging hin, ist hingegangen
 reißen	reißen	tear	reißt, riss, hat gerissen
 ärgern	sich ärgern	be annoyed	ärgert sich, ärgerte sich, hat sich geärgert
 verbinden	verbinden	connect	verbindet, verband, hat verbunden
@@ -331,25 +334,25 @@ streicheln	streicheln	caress	streichelt, streichelte, hat gestreichelt
 verstecken	verstecken	hide	versteckt, versteckte, hat versteckt
 atmen	atmen	breathe	atmet, atmete, hat geatmet
 erweisen	sich erweisen	prove to be	erweist sich, erwies sich, hat sich erwiesen
+einsehen	einsehen	realize	sieht ein, sah ein, hat eingesehen
 zählen	zählen	count	zählt, zählte, hat gezählt
 sammeln	sammeln	collect	sammelt, sammelte, hat gesammelt
-einsehen	einsehen	realize	sieht ein, sah ein, hat eingesehen
-umsehen	sich umsehen	look around	sieht sich um, sah sich um, hat sich umgesehen
+befehlen	befehlen	command	befiehlt, befahl, hat befohlen
 jagen	jagen	hunt	jagt, jagte, hat gejagt
 plaudern	plaudern	chat	plaudert, plauderte, hat geplaudert
 deuten	deuten	indicate	deutet, deutete, hat gedeutet
-rechnen	rechnen	calculate	rechnet, rechnete, hat gerechnet
 aufsuchen	aufsuchen	seek out	sucht auf, suchte auf, hat aufgesucht
+rechnen	rechnen	calculate	rechnet, rechnete, hat gerechnet
+aushalten	aushalten	bear	hält aus, hielt aus, hat ausgehalten
 hassen	hassen	hate	hasst, hasste, hat gehasst
-befehlen	befehlen	command	befiehlt, befahl, hat befohlen
 achten	achten	respect	achtet, achtete, hat geachtet
-hingehen	hingehen	go there	geht hin, ging hin, ist hingegangen
 versichern	versichern	assure	versichert, versicherte, hat versichert
 horchen	horchen	hark	horcht, horchte, hat gehorcht
 feiern	feiern	celebrate	feiert, feierte, hat gefeiert
 ausbrechen	ausbrechen	break out	bricht aus, brach aus, ist ausgebrochen
 aufsteigen	aufsteigen	ascend	steigt auf, stieg auf, ist aufgestiegen
 bewahren	bewahren	preserve	bewahrt, bewahrte, hat bewahrt
+aufschlagen	aufschlagen	open up	schlägt auf, schlug auf, hat aufgeschlagen
 schreiten	schreiten	stride	schreitet, schritt, ist geschritten
 winken	winken	wave	winkt, winkte, hat gewinkt
 glänzen	glänzen	gleam	glänzt, glänzte, hat geglänzt
@@ -360,31 +363,32 @@ studieren	studieren	study	studiert, studierte, hat studiert
 bemühen	sich bemühen	make an effort	bemüht sich, bemühte sich, hat sich bemüht
 ausstrecken	ausstrecken	stretch out	streckt aus, streckte aus, hat ausgestreckt
 übernehmen	übernehmen	take over	übernimmt, übernahm, hat übernommen
+zurufen	zurufen	call out to	ruft zu, rief zu, hat zugerufen
 schweben	schweben	hover	schwebt, schwebte, hat geschwebt
 anlegen	anlegen	lay out	legt an, legte an, hat angelegt
-aushalten	aushalten	bear	hält aus, hielt aus, hat ausgehalten
 lehren	lehren	teach	lehrt, lehrte, hat gelehrt
 besinnen	sich besinnen	recollect	besinnt sich, besann sich, hat sich besonnen
 überlassen	überlassen	leave to	überlässt, überließ, hat überlassen
 bestellen	bestellen	order	bestellt, bestellte, hat bestellt
-aufschlagen	aufschlagen	open up	schlägt auf, schlug auf, hat aufgeschlagen
-zurufen	zurufen	call out to	ruft zu, rief zu, hat zugerufen
 versinken	versinken	submerge	versinkt, versank, ist versunken
+bedürfen	bedürfen	require	bedarf, bedurfte, hat bedurft
 entfernen	entfernen	remove	entfernt, entfernte, hat entfernt
 rücken	rücken	shift	rückt, rückte, ist gerückt
 gleiten	gleiten	glide	gleitet, glitt, ist geglitten
+aufsehen	aufsehen	look up	sieht auf, sah auf, hat aufgesehen
 regen	sich regen	budge	regt sich, regte sich, hat sich geregt
 ergeben	ergeben	result in	ergibt, ergab, hat ergeben
 verwandeln	verwandeln	transform	verwandelt, verwandelte, hat verwandelt
-genießen	genießen	enjoy	genießt, genoss, hat genossen
 erfassen	erfassen	grip	erfasst, erfasste, hat erfasst
 wechseln	wechseln	exchange	wechselt, wechselte, hat gewechselt
 unterhalten	sich unterhalten	converse	unterhält sich, unterhielt sich, hat sich unterhalten
 überraschen	überraschen	surprise	überrascht, überraschte, hat überrascht
-aufsehen	aufsehen	look up	sieht auf, sah auf, hat aufgesehen
+anzünden	anzünden	light	zündet an, zündete an, hat angezündet
 beherrschen	beherrschen	dominate	beherrscht, beherrschte, hat beherrscht
 betreffen	betreffen	affect	betrifft, betraf, hat betroffen
+umgeben	umgeben	surround	umgibt, umgab, hat umgeben
 fließen	fließen	flow	fließt, floss, ist geflossen
+nachsehen	nachsehen	check	sieht nach, sah nach, hat nachgesehen
 verstummen	verstummen	fall silent	verstummt, verstummte, ist verstummt
 strecken	strecken	stretch	streckt, streckte, hat gestreckt
 befreien	befreien	free	befreit, befreite, hat befreit
@@ -393,25 +397,23 @@ fliehen	fliehen	flee	flieht, floh, ist geflohen
 entschuldigen	entschuldigen	excuse	entschuldigt, entschuldigte, hat entschuldigt
 schützen	schützen	protect	schützt, schützte, hat geschützt
 äußern	äußern	voice	äußert, äußerte, hat geäußert
+anhalten	anhalten	halt	hält an, hielt an, hat angehalten
 gedenken	gedenken	commemorate	gedenkt, gedachte, hat gedacht
 stammeln	stammeln	stammer	stammelt, stammelte, hat gestammelt
 enthalten	enthalten	contain	enthält, enthielt, hat enthalten
-anhalten	anhalten	halt	hält an, hielt an, hat angehalten
-anzünden	anzünden	light	zündet an, zündete an, hat angezündet
 zurückhalten	zurückhalten	hold back	hält zurück, hielt zurück, hat zurückgehalten
-nachsehen	nachsehen	check	sieht nach, sah nach, hat nachgesehen
 rollen	rollen	roll	rollt, rollte, ist gerollt
 besorgen	besorgen	get hold of	besorgt, besorgte, hat besorgt
 fangen	fangen	catch	fängt, fing, hat gefangen
-umgeben	umgeben	surround	umgibt, umgab, hat umgeben
 aufhalten	aufhalten	hold up	hält auf, hielt auf, hat aufgehalten
+verderben	verderben	spoil	verdirbt, verdarb, hat verdorben
 schmücken	schmücken	decorate	schmückt, schmückte, hat geschmückt
 umdrehen	sich umdrehen	turn around	dreht sich um, drehte sich um, hat sich umgedreht
 verbringen	verbringen	spend time	verbringt, verbrachte, hat verbracht
 verbieten	verbieten	forbid	verbietet, verbot, hat verboten
-bedürfen	bedürfen	require	bedarf, bedurfte, hat bedurft
-decken	decken	set the table	deckt, deckte, hat gedeckt
+weitergehen	weitergehen	go on	geht weiter, ging weiter, ist weitergegangen
 zuwenden	sich zuwenden	turn toward	wendet sich zu, wandte sich zu, hat sich zugewandt
+decken	decken	set the table	deckt, deckte, hat gedeckt
 ausbreiten	ausbreiten	spread out	breitet aus, breitete aus, hat ausgebreitet
 zugeben	zugeben	admit	gibt zu, gab zu, hat zugegeben
 benutzen	benutzen	use	benutzt, benutzte, hat benutzt
@@ -419,7 +421,6 @@ läuten	läuten	ring	läutet, läutete, hat geläutet
 streifen	streifen	brush against	streift, streifte, hat gestreift
 versagen	versagen	fail	versagt, versagte, hat versagt
 zögern	zögern	hesitate	zögert, zögerte, hat gezögert
-weitergehen	weitergehen	go on	geht weiter, ging weiter, ist weitergegangen
 begehen	begehen	commit	begeht, beging, hat begangen
 anbieten	anbieten	proffer	bietet an, bot an, hat angeboten
 dulden	dulden	tolerate	duldet, duldete, hat geduldet
@@ -433,13 +434,13 @@ locken	locken	lure	lockt, lockte, hat gelockt
 niederlassen	sich niederlassen	settle	lässt sich nieder, ließ sich nieder, hat sich niedergelassen
 verheiraten	verheiraten	marry off	verheiratet, verheiratete, hat verheiratet
 aufstellen	aufstellen	set up	stellt auf, stellte auf, hat aufgestellt
+auffahren	auffahren	start up	fährt auf, fuhr auf, ist aufgefahren
 vorbereiten	vorbereiten	get ready	bereitet vor, bereitete vor, hat vorbereitet
 strahlen	strahlen	beam	strahlt, strahlte, hat gestrahlt
 fortgehen	fortgehen	go away	geht fort, ging fort, ist fortgegangen
 schimmern	schimmern	shimmer	schimmert, schimmerte, hat geschimmert
-auffahren	auffahren	start up	fährt auf, fuhr auf, ist aufgefahren
-senden	senden	dispatch	sendet, sandte, hat gesandt
 abwenden	sich abwenden	turn away	wendet sich ab, wandte sich ab, hat sich abgewandt
+senden	senden	dispatch	sendet, sandte, hat gesandt
 beben	beben	quake	bebt, bebte, hat gebebt
 anstarren	anstarren	stare at	starrt an, starrte an, hat angestarrt
 ersticken	ersticken	suffocate	erstickt, erstickte, ist erstickt
@@ -450,25 +451,27 @@ gewähren	gewähren	grant	gewährt, gewährte, hat gewährt
 darstellen	darstellen	depict	stellt dar, stellte dar, hat dargestellt
 hüten	hüten	guard	hütet, hütete, hat gehütet
 interessieren	sich interessieren	be interested	interessiert sich, interessierte sich, hat sich interessiert
-brüllen	brüllen	roar	brüllt, brüllte, hat gebrüllt
 eingehen	eingehen	enter into	geht ein, ging ein, ist eingegangen
+brüllen	brüllen	roar	brüllt, brüllte, hat gebrüllt
+ausdrücken	ausdrücken	express	drückt aus, drückte aus, hat ausgedrückt
 bewundern	bewundern	admire	bewundert, bewunderte, hat bewundert
 einsetzen	einsetzen	set in	setzt ein, setzte ein, hat eingesetzt
-ausdrücken	ausdrücken	express	drückt aus, drückte aus, hat ausgedrückt
 einschlagen	einschlagen	smash in	schlägt ein, schlug ein, hat eingeschlagen
 täuschen	täuschen	deceive	täuscht, täuschte, hat getäuscht
 mischen	mischen	mix	mischt, mischte, hat gemischt
 einnehmen	einnehmen	take in	nimmt ein, nahm ein, hat eingenommen
 entwickeln	entwickeln	develop	entwickelt, entwickelte, hat entwickelt
+abwarten	abwarten	await	wartet ab, wartete ab, hat abgewartet
 bedenken	bedenken	bear in mind	bedenkt, bedachte, hat bedacht
 verschaffen	verschaffen	procure	verschafft, verschaffte, hat verschafft
 wiegen	wiegen	rock	wiegt, wiegte, hat gewiegt
 loben	loben	praise	lobt, lobte, hat gelobt
-abwarten	abwarten	await	wartet ab, wartete ab, hat abgewartet
+hereinkommen	hereinkommen	come in	kommt herein, kam herein, ist hereingekommen
 üben	üben	practice	übt, übte, hat geübt
 zurückbleiben	zurückbleiben	stay behind	bleibt zurück, blieb zurück, ist zurückgeblieben
-passieren	passieren	pass through	passiert, passierte, hat passiert
 auflachen	auflachen	give a laugh	lacht auf, lachte auf, hat aufgelacht
+passieren	passieren	pass through	passiert, passierte, hat passiert
+verbrennen	verbrennen	burn up	verbrennt, verbrannte, hat verbrannt
 verlegen	verlegen	relocate	verlegt, verlegte, hat verlegt
 raten	raten	advise	rät, riet, hat geraten
 verlieben	sich verlieben	fall in love	verliebt sich, verliebte sich, hat sich verliebt
@@ -476,15 +479,15 @@ abgeben	abgeben	hand in	gibt ab, gab ab, hat abgegeben
 zurückgeben	zurückgeben	give back	gibt zurück, gab zurück, hat zurückgegeben
 ablegen	ablegen	lay aside	legt ab, legte ab, hat abgelegt
 kleiden	kleiden	clothe	kleidet, kleidete, hat gekleidet
+zerbrechen	zerbrechen	shatter	zerbricht, zerbrach, ist zerbrochen
 gönnen	gönnen	not begrudge	gönnt, gönnte, hat gegönnt
 schleppen	schleppen	drag	schleppt, schleppte, hat geschleppt
+zurückgehen	zurückgehen	go back	geht zurück, ging zurück, ist zurückgegangen
 prüfen	prüfen	test	prüft, prüfte, hat geprüft
-hereinkommen	hereinkommen	come in	kommt herein, kam herein, ist hereingekommen
 wehen	wehen	waft	weht, wehte, hat geweht
 vermeiden	vermeiden	avoid	vermeidet, vermied, hat vermieden
 nachgeben	nachgeben	give in	gibt nach, gab nach, hat nachgegeben
 wandeln	wandeln	wander	wandelt, wandelte, ist gewandelt
-verbrennen	verbrennen	burn up	verbrennt, verbrannte, hat verbrannt
 recken	recken	crane	reckt, reckte, hat gereckt
 laden	laden	load	lädt, lud, hat geladen
 verabschieden	sich verabschieden	say goodbye	verabschiedet sich, verabschiedete sich, hat sich verabschiedet
@@ -494,50 +497,53 @@ zerstören	zerstören	destroy	zerstört, zerstörte, hat zerstört
 anhören	anhören	hear out	hört an, hörte an, hat angehört
 verkehren	verkehren	associate	verkehrt, verkehrte, hat verkehrt
 empfehlen	empfehlen	recommend	empfiehlt, empfahl, hat empfohlen
-schaden	schaden	harm	schadet, schadete, hat geschadet
 zunicken	zunicken	nod to	nickt zu, nickte zu, hat zugenickt
+schaden	schaden	harm	schadet, schadete, hat geschadet
 lauten	lauten	be worded	lautet, lautete, hat gelautet
 enden	enden	end	endet, endete, hat geendet
 irren	sich irren	be mistaken	irrt sich, irrte sich, hat sich geirrt
 verletzen	verletzen	injure	verletzt, verletzte, hat verletzt
-zurückgehen	zurückgehen	go back	geht zurück, ging zurück, ist zurückgegangen
 verteidigen	verteidigen	defend	verteidigt, verteidigte, hat verteidigt
 schluchzen	schluchzen	sob	schluchzt, schluchzte, hat geschluchzt
 bestätigen	bestätigen	confirm	bestätigt, bestätigte, hat bestätigt
 ausrufen	ausrufen	exclaim	ruft aus, rief aus, hat ausgerufen
+wiedersehen	wiedersehen	see again	sieht wieder, sah wieder, hat wiedergesehen
+herkommen	herkommen	come here	kommt her, kam her, ist hergekommen
 kochen	kochen	cook	kocht, kochte, hat gekocht
-zerbrechen	zerbrechen	shatter	zerbricht, zerbrach, ist zerbrochen
 brummen	brummen	grumble	brummt, brummte, hat gebrummt
 schwanken	schwanken	sway	schwankt, schwankte, hat geschwankt
 zukommen	zukommen	come toward	kommt zu, kam zu, ist zugekommen
 vertragen	vertragen	stomach	verträgt, vertrug, hat vertragen
 stattfinden	stattfinden	take place	findet statt, fand statt, hat stattgefunden
-herkommen	herkommen	come here	kommt her, kam her, ist hergekommen
 warnen	warnen	warn	warnt, warnte, hat gewarnt
+hindern	hindern	hinder	hindert, hinderte, hat gehindert
 stammen	stammen	stem from	stammt, stammte, hat gestammt
 antreten	antreten	embark on	tritt an, trat an, hat angetreten
 rauchen	rauchen	smoke	raucht, rauchte, hat geraucht
 lenken	lenken	steer	lenkt, lenkte, hat gelenkt
+fortsetzen	fortsetzen	carry on	setzt fort, setzte fort, hat fortgesetzt
 überkommen	überkommen	come over	überkommt, überkam, hat überkommen
+herantreten	herantreten	step closer	tritt heran, trat heran, ist herangetreten
 aufatmen	aufatmen	sigh with relief	atmet auf, atmete auf, hat aufgeatmet
-verderben	verderben	spoil	verdirbt, verdarb, hat verdorben
+antun	antun	inflict	tut an, tat an, hat angetan
 entziehen	sich entziehen	elude	entzieht sich, entzog sich, hat sich entzogen
 erledigen	erledigen	take care of	erledigt, erledigte, hat erledigt
 erkundigen	sich erkundigen	inquire	erkundigt sich, erkundigte sich, hat sich erkundigt
-herantreten	herantreten	step closer	tritt heran, trat heran, ist herangetreten
 blitzen	blitzen	flash	blitzt, blitzte, hat geblitzt
-vernichten	vernichten	annihilate	vernichtet, vernichtete, hat vernichtet
 ablehnen	ablehnen	reject	lehnt ab, lehnte ab, hat abgelehnt
+vernichten	vernichten	annihilate	vernichtet, vernichtete, hat vernichtet
 tönen	tönen	resound	tönt, tönte, hat getönt
-fortsetzen	fortsetzen	carry on	setzt fort, setzte fort, hat fortgesetzt
 schmecken	schmecken	taste	schmeckt, schmeckte, hat geschmeckt
+erziehen	erziehen	bring up	erzieht, erzog, hat erzogen
+übergehen	übergehen	pass into	geht über, ging über, ist übergegangen
 stehlen	stehlen	steal	stiehlt, stahl, hat gestohlen
+hinsehen	hinsehen	look toward	sieht hin, sah hin, hat hingesehen
 ordnen	ordnen	arrange	ordnet, ordnete, hat geordnet
-begraben	begraben	bury	begräbt, begrub, hat begraben
 zurücktreten	zurücktreten	step back	tritt zurück, trat zurück, ist zurückgetreten
+begraben	begraben	bury	begräbt, begrub, hat begraben
 anvertrauen	anvertrauen	entrust	vertraut an, vertraute an, hat anvertraut
-einstellen	sich einstellen	turn up	stellt sich ein, stellte sich ein, hat sich eingestellt
 ausführen	ausführen	carry out	führt aus, führte aus, hat ausgeführt
+einstellen	sich einstellen	turn up	stellt sich ein, stellte sich ein, hat sich eingestellt
 vorgehen	vorgehen	be going on	geht vor, ging vor, ist vorgegangen
 nützen	nützen	be useful	nützt, nützte, hat genützt
 loslassen	loslassen	let go	lässt los, ließ los, hat losgelassen
@@ -549,17 +555,16 @@ versammeln	sich versammeln	assemble	versammelt sich, versammelte sich, hat sich 
 befriedigen	befriedigen	satisfy	befriedigt, befriedigte, hat befriedigt
 verzichten	verzichten	renounce	verzichtet, verzichtete, hat verzichtet
 auffordern	auffordern	call upon	fordert auf, forderte auf, hat aufgefordert
-übergehen	übergehen	pass into	geht über, ging über, ist übergegangen
 gestatten	gestatten	permit	gestattet, gestattete, hat gestattet
+entgegenkommen	entgegenkommen	come to meet	kommt entgegen, kam entgegen, ist entgegengekommen
 entlassen	entlassen	dismiss	entlässt, entließ, hat entlassen
 ausziehen	ausziehen	undress	zieht aus, zog aus, hat ausgezogen
 ringen	ringen	wrestle	ringt, rang, hat gerungen
 bücken	sich bücken	stoop	bückt sich, bückte sich, hat sich gebückt
+hineingehen	hineingehen	go in	geht hinein, ging hinein, ist hineingegangen
 zweifeln	zweifeln	doubt	zweifelt, zweifelte, hat gezweifelt
 zeichnen	zeichnen	draw	zeichnet, zeichnete, hat gezeichnet
 schimpfen	schimpfen	scold	schimpft, schimpfte, hat geschimpft
-hinsehen	hinsehen	look toward	sieht hin, sah hin, hat hingesehen
-entgegenkommen	entgegenkommen	come to meet	kommt entgegen, kam entgegen, ist entgegengekommen
 umkehren	umkehren	turn back	kehrt um, kehrte um, ist umgekehrt
 schleudern	schleudern	hurl	schleudert, schleuderte, hat geschleudert
 hüllen	hüllen	wrap	hüllt, hüllte, hat gehüllt
@@ -572,70 +577,71 @@ unternehmen	unternehmen	undertake	unternimmt, unternahm, hat unternommen
 beschließen	beschließen	resolve	beschließt, beschloss, hat beschlossen
 stöhnen	stöhnen	groan	stöhnt, stöhnte, hat gestöhnt
 verhindern	verhindern	prevent	verhindert, verhinderte, hat verhindert
+anstellen	anstellen	hire	stellt an, stellte an, hat angestellt
 verfallen	verfallen	decay	verfällt, verfiel, ist verfallen
 schmiegen	sich schmiegen	nestle	schmiegt sich, schmiegte sich, hat sich geschmiegt
+auftreten	auftreten	make an appearance	tritt auf, trat auf, ist aufgetreten
 schätzen	schätzen	value	schätzt, schätzte, hat geschätzt
 scheiden	scheiden	part	scheidet, schied, ist geschieden
 waschen	waschen	wash	wäscht, wusch, hat gewaschen
-auftreten	auftreten	make an appearance	tritt auf, trat auf, ist aufgetreten
 blühen	blühen	bloom	blüht, blühte, hat geblüht
 aussetzen	aussetzen	expose	setzt aus, setzte aus, hat ausgesetzt
 ertönen	ertönen	ring out	ertönt, ertönte, ist ertönt
 falten	falten	fold	faltet, faltete, hat gefaltet
-hineingehen	hineingehen	go in	geht hinein, ging hinein, ist hineingegangen
+ausstoßen	ausstoßen	let out	stößt aus, stieß aus, hat ausgestoßen
+gucken	gucken	peek	guckt, guckte, hat geguckt
 aufbrechen	aufbrechen	set out	bricht auf, brach auf, ist aufgebrochen
 mahnen	mahnen	admonish	mahnt, mahnte, hat gemahnt
 aufblicken	aufblicken	glance up	blickt auf, blickte auf, hat aufgeblickt
 vorübergehen	vorübergehen	pass by	geht vorüber, ging vorüber, ist vorübergegangen
 zerreißen	zerreißen	tear apart	zerreißt, zerriss, hat zerrissen
 dehnen	dehnen	expand	dehnt, dehnte, hat gedehnt
+hergeben	hergeben	part with	gibt her, gab her, hat hergegeben
 verbeugen	sich verbeugen	bow	verbeugt sich, verbeugte sich, hat sich verbeugt
+einschlafen	einschlafen	fall asleep	schläft ein, schlief ein, ist eingeschlafen
 erwecken	erwecken	rouse	erweckt, erweckte, hat erweckt
 innehalten	innehalten	pause	hält inne, hielt inne, hat innegehalten
-antun	antun	inflict	tut an, tat an, hat angetan
+abholen	abholen	come for	holt ab, holte ab, hat abgeholt
+aufsetzen	aufsetzen	don	setzt auf, setzte auf, hat aufgesetzt
+aufwachen	aufwachen	wake up	wacht auf, wachte auf, ist aufgewacht
 verwundern	verwundern	astonish	verwundert, verwunderte, hat verwundert
 tauchen	tauchen	dive	taucht, tauchte, ist getaucht
 flüchten	sich flüchten	take refuge	flüchtet sich, flüchtete sich, hat sich geflüchtet
-aufwachen	aufwachen	wake up	wacht auf, wachte auf, ist aufgewacht
 lügen	lügen	tell a lie	lügt, log, hat gelogen
 erwerben	erwerben	acquire	erwirbt, erwarb, hat erworben
 opfern	opfern	sacrifice	opfert, opferte, hat geopfert
 einziehen	einziehen	move in	zieht ein, zog ein, ist eingezogen
-hindern	hindern	hinder	hindert, hinderte, hat gehindert
 angehören	angehören	be part of	gehört an, gehörte an, hat angehört
-stocken	stocken	falter	stockt, stockte, hat gestockt
 abwehren	abwehren	fend off	wehrt ab, wehrte ab, hat abgewehrt
+stocken	stocken	falter	stockt, stockte, hat gestockt
 verschlingen	verschlingen	devour	verschlingt, verschlang, hat verschlungen
 pochen	pochen	throb	pocht, pochte, hat gepocht
-versehen	versehen	equip	versieht, versah, hat versehen
-gucken	gucken	peek	guckt, guckte, hat geguckt
-steigern	steigern	intensify	steigert, steigerte, hat gesteigert
-einschlafen	einschlafen	fall asleep	schläft ein, schlief ein, ist eingeschlafen
 abhalten	abhalten	keep from	hält ab, hielt ab, hat abgehalten
+versehen	versehen	equip	versieht, versah, hat versehen
+steigern	steigern	intensify	steigert, steigerte, hat gesteigert
 beziehen	sich beziehen	refer	bezieht sich, bezog sich, hat sich bezogen
 verzehren	verzehren	consume	verzehrt, verzehrte, hat verzehrt
 herankommen	herankommen	come closer	kommt heran, kam heran, ist herangekommen
+beachten	beachten	heed	beachtet, beachtete, hat beachtet
 abschneiden	abschneiden	cut off	schneidet ab, schnitt ab, hat abgeschnitten
-anstellen	anstellen	hire	stellt an, stellte an, hat angestellt
+eindringen	eindringen	intrude	dringt ein, drang ein, ist eingedrungen
 anrufen	anrufen	phone	ruft an, rief an, hat angerufen
 entzücken	entzücken	delight	entzückt, entzückte, hat entzückt
-eindringen	eindringen	intrude	dringt ein, drang ein, ist eingedrungen
 ballen	ballen	clench	ballt, ballte, hat geballt
 streiten	sich streiten	quarrel	streitet sich, stritt sich, hat sich gestritten
 verachten	verachten	despise	verachtet, verachtete, hat verachtet
 segnen	segnen	bless	segnet, segnete, hat gesegnet
-beachten	beachten	heed	beachtet, beachtete, hat beachtet
+umarmen	umarmen	embrace	umarmt, umarmte, hat umarmt
 weilen	weilen	linger	weilt, weilte, hat geweilt
 rennen	rennen	race	rennt, rannte, ist gerannt
 erröten	erröten	blush	errötet, errötete, ist errötet
 wischen	wischen	wipe	wischt, wischte, hat gewischt
+heulen	heulen	howl	heult, heulte, hat geheult
 ersetzen	ersetzen	replace	ersetzt, ersetzte, hat ersetzt
 verschließen	verschließen	lock up	verschließt, verschloss, hat verschlossen
 vorschlagen	vorschlagen	suggest	schlägt vor, schlug vor, hat vorgeschlagen
 verloben	sich verloben	get engaged	verlobt sich, verlobte sich, hat sich verlobt
 gehorchen	gehorchen	obey	gehorcht, gehorchte, hat gehorcht
-umarmen	umarmen	embrace	umarmt, umarmte, hat umarmt
-hergeben	hergeben	part with	gibt her, gab her, hat hergegeben
 unterscheiden	unterscheiden	distinguish	unterscheidet, unterschied, hat unterschieden
 spannen	spannen	tighten	spannt, spannte, hat gespannt
 strömen	strömen	stream	strömt, strömte, ist geströmt
@@ -644,17 +650,17 @@ regnen	regnen	rain	regnet, regnete, hat geregnet
 versäumen	versäumen	neglect	versäumt, versäumte, hat versäumt
 vollenden	vollenden	complete	vollendet, vollendete, hat vollendet
 scherzen	scherzen	joke	scherzt, scherzte, hat gescherzt
-wiedersehen	wiedersehen	see again	sieht wieder, sah wieder, hat wiedergesehen
 verpflichten	verpflichten	oblige	verpflichtet, verpflichtete, hat verpflichtet
 wahrnehmen	wahrnehmen	become aware of	nimmt wahr, nahm wahr, hat wahrgenommen
+ausweichen	ausweichen	dodge	weicht aus, wich aus, ist ausgewichen
 fressen	fressen	gobble	frisst, fraß, hat gefressen
 übergeben	übergeben	hand over	übergibt, übergab, hat übergeben
+hinwerfen	hinwerfen	throw down	wirft hin, warf hin, hat hingeworfen
 betrügen	betrügen	cheat	betrügt, betrog, hat betrogen
 vermuten	vermuten	presume	vermutet, vermutete, hat vermutet
 mustern	mustern	scrutinize	mustert, musterte, hat gemustert
 auflösen	auflösen	dissolve	löst auf, löste auf, hat aufgelöst
 klatschen	klatschen	clap	klatscht, klatschte, hat geklatscht
-aufsetzen	aufsetzen	don	setzt auf, setzte auf, hat aufgesetzt
 schneiden	schneiden	cut	schneidet, schnitt, hat geschnitten
 absehen	absehen	disregard	sieht ab, sah ab, hat abgesehen
 rauben	rauben	rob	raubt, raubte, hat geraubt
@@ -662,85 +668,84 @@ begehren	begehren	covet	begehrt, begehrte, hat begehrt
 veranlassen	veranlassen	prompt	veranlasst, veranlasste, hat veranlasst
 dasitzen	dasitzen	sit there	sitzt da, saß da, hat dagesessen
 einlassen	einlassen	let in	lässt ein, ließ ein, hat eingelassen
+aufschreien	aufschreien	cry out	schreit auf, schrie auf, hat aufgeschrien
 besprechen	besprechen	discuss	bespricht, besprach, hat besprochen
 erteilen	erteilen	impart	erteilt, erteilte, hat erteilt
 bedauern	bedauern	regret	bedauert, bedauerte, hat bedauert
 leugnen	leugnen	deny	leugnet, leugnete, hat geleugnet
+hervorbringen	hervorbringen	bring forth	bringt hervor, brachte hervor, hat hervorgebracht
 betäuben	betäuben	stun	betäubt, betäubte, hat betäubt
-hinwerfen	hinwerfen	throw down	wirft hin, warf hin, hat hingeworfen
 anhaben	anhaben	have on	hat an, hatte an, hat angehabt
 siegen	siegen	triumph	siegt, siegte, hat gesiegt
 gewahren	gewahren	espy	gewahrt, gewahrte, hat gewahrt
+hinstellen	hinstellen	set down	stellt hin, stellte hin, hat hingestellt
 bergen	bergen	shelter	birgt, barg, hat geborgen
 flattern	flattern	flutter	flattert, flatterte, ist geflattert
 teilnehmen	teilnehmen	take part	nimmt teil, nahm teil, hat teilgenommen
 vergleichen	vergleichen	compare	vergleicht, verglich, hat verglichen
+abreisen	abreisen	depart	reist ab, reiste ab, ist abgereist
 verurteilen	verurteilen	condemn	verurteilt, verurteilte, hat verurteilt
-ausstoßen	ausstoßen	let out	stößt aus, stieß aus, hat ausgestoßen
-aufschreien	aufschreien	cry out	schreit auf, schrie auf, hat aufgeschrien
+jammern	jammern	wail	jammert, jammerte, hat gejammert
 gebrauchen	gebrauchen	make use of	gebraucht, gebrauchte, hat gebraucht
+daliegen	daliegen	lie there	liegt da, lag da, hat dagelegen
 erlösen	erlösen	redeem	erlöst, erlöste, hat erlöst
 bedecken	bedecken	cover	bedeckt, bedeckte, hat bedeckt
 auszeichnen	sich auszeichnen	excel	zeichnet sich aus, zeichnete sich aus, hat sich ausgezeichnet
-daliegen	daliegen	lie there	liegt da, lag da, hat dagelegen
 beschreiben	beschreiben	describe	beschreibt, beschrieb, hat beschrieben
 umgehen	umgehen	handle	geht um, ging um, ist umgegangen
 entgehen	entgehen	escape	entgeht, entging, ist entgangen
 widmen	widmen	dedicate	widmet, widmete, hat gewidmet
 besetzen	besetzen	take possession	besetzt, besetzte, hat besetzt
 fesseln	fesseln	shackle	fesselt, fesselte, hat gefesselt
+stillstehen	stillstehen	stand still	steht still, stand still, hat stillgestanden
+losgehen	losgehen	get going	geht los, ging los, ist losgegangen
 verdanken	verdanken	owe	verdankt, verdankte, hat verdankt
 klettern	klettern	clamber	klettert, kletterte, ist geklettert
-messen	messen	measure	misst, maß, hat gemessen
-stillstehen	stillstehen	stand still	steht still, stand still, hat stillgestanden
 einbilden	sich einbilden	fancy	bildet sich ein, bildete sich ein, hat sich eingebildet
+messen	messen	measure	misst, maß, hat gemessen
 einwerfen	einwerfen	interject	wirft ein, warf ein, hat eingeworfen
+heimkommen	heimkommen	come home	kommt heim, kam heim, ist heimgekommen
 bezeichnen	bezeichnen	designate	bezeichnet, bezeichnete, hat bezeichnet
 angreifen	angreifen	attack	greift an, griff an, hat angegriffen
-hinstellen	hinstellen	set down	stellt hin, stellte hin, hat hingestellt
-beleidigen	beleidigen	insult	beleidigt, beleidigte, hat beleidigt
 untergehen	untergehen	go under	geht unter, ging unter, ist untergegangen
+beleidigen	beleidigen	insult	beleidigt, beleidigte, hat beleidigt
 forschen	forschen	research	forscht, forschte, hat geforscht
 übrigbleiben	übrigbleiben	be left over	bleibt übrig, blieb übrig, ist übriggeblieben
-losgehen	losgehen	get going	geht los, ging los, ist losgegangen
+zuflüstern	zuflüstern	whisper to	flüstert zu, flüsterte zu, hat zugeflüstert
 beenden	beenden	finish	beendet, beendete, hat beendet
 vertiefen	sich vertiefen	become absorbed	vertieft sich, vertiefte sich, hat sich vertieft
-heimkommen	heimkommen	come home	kommt heim, kam heim, ist heimgekommen
 aufpassen	aufpassen	watch out	passt auf, passte auf, hat aufgepasst
-jammern	jammern	wail	jammert, jammerte, hat gejammert
+aufkommen	aufkommen	spring up	kommt auf, kam auf, ist aufgekommen
 beantworten	beantworten	respond to	beantwortet, beantwortete, hat beantwortet
 vorlesen	vorlesen	read aloud	liest vor, las vor, hat vorgelesen
-zuflüstern	zuflüstern	whisper to	flüstert zu, flüsterte zu, hat zugeflüstert
+hinlegen	hinlegen	put down	legt hin, legte hin, hat hingelegt
 vorziehen	vorziehen	prefer	zieht vor, zog vor, hat vorgezogen
 erfreuen	erfreuen	gladden	erfreut, erfreute, hat erfreut
 bekennen	bekennen	profess	bekennt, bekannte, hat bekannt
+mitmachen	mitmachen	join in	macht mit, machte mit, hat mitgemacht
 reiben	reiben	rub	reibt, rieb, hat gerieben
 frieren	frieren	freeze	friert, fror, hat gefroren
 aufbauen	aufbauen	build up	baut auf, baute auf, hat aufgebaut
 huschen	huschen	flit	huscht, huschte, ist gehuscht
 vertreten	vertreten	represent	vertritt, vertrat, hat vertreten
-mitmachen	mitmachen	join in	macht mit, machte mit, hat mitgemacht
 ausmachen	ausmachen	switch off	macht aus, machte aus, hat ausgemacht
 unterrichten	unterrichten	instruct	unterrichtet, unterrichtete, hat unterrichtet
 emporsteigen	emporsteigen	rise up	steigt empor, stieg empor, ist emporgestiegen
-aufkommen	aufkommen	spring up	kommt auf, kam auf, ist aufgekommen
 zuwerfen	zuwerfen	toss	wirft zu, warf zu, hat zugeworfen
 verleihen	verleihen	lend	verleiht, verlieh, hat verliehen
 hegen	hegen	harbor	hegt, hegte, hat gehegt
+niederlegen	niederlegen	lay down	legt nieder, legte nieder, hat niedergelegt
 hergehen	hergehen	walk alongside	geht her, ging her, ist hergegangen
 hingeben	sich hingeben	abandon oneself	gibt sich hin, gab sich hin, hat sich hingegeben
 beteiligen	sich beteiligen	get involved	beteiligt sich, beteiligte sich, hat sich beteiligt
-niederlegen	niederlegen	lay down	legt nieder, legte nieder, hat niedergelegt
 untersuchen	untersuchen	examine	untersucht, untersuchte, hat untersucht
 entbehren	entbehren	go without	entbehrt, entbehrte, hat entbehrt
 sperren	sperren	block	sperrt, sperrte, hat gesperrt
 ersparen	ersparen	spare	erspart, ersparte, hat erspart
-abholen	abholen	come for	holt ab, holte ab, hat abgeholt
 wachen	wachen	keep watch	wacht, wachte, hat gewacht
 erholen	sich erholen	recover	erholt sich, erholte sich, hat sich erholt
 hinterlassen	hinterlassen	leave behind	hinterlässt, hinterließ, hat hinterlassen
 kreuzen	kreuzen	cross	kreuzt, kreuzte, hat gekreuzt
-hinlegen	hinlegen	put down	legt hin, legte hin, hat hingelegt
 wühlen	wühlen	rummage	wühlt, wühlte, hat gewühlt
 wälzen	sich wälzen	wallow	wälzt sich, wälzte sich, hat sich gewälzt
 enttäuschen	enttäuschen	disappoint	enttäuscht, enttäuschte, hat enttäuscht
@@ -751,20 +756,20 @@ eröffnen	eröffnen	disclose	eröffnet, eröffnete, hat eröffnet
 erfinden	erfinden	invent	erfindet, erfand, hat erfunden
 toben	toben	rage	tobt, tobte, hat getobt
 befestigen	befestigen	fasten	befestigt, befestigte, hat befestigt
-abreisen	abreisen	depart	reist ab, reiste ab, ist abgereist
+abgehen	abgehen	exit	geht ab, ging ab, ist abgegangen
 entzünden	entzünden	ignite	entzündet, entzündete, hat entzündet
 angeben	angeben	specify	gibt an, gab an, hat angegeben
-abgehen	abgehen	exit	geht ab, ging ab, ist abgegangen
 schwören	schwören	swear	schwört, schwor, hat geschworen
 klirren	klirren	clink	klirrt, klirrte, hat geklirrt
 sichern	sichern	secure	sichert, sicherte, hat gesichert
 beleben	beleben	enliven	belebt, belebte, hat belebt
+eingestehen	eingestehen	concede	gesteht ein, gestand ein, hat eingestanden
+berufen	berufen	appoint	beruft, berief, hat berufen
 klammern	sich klammern	cling	klammert sich, klammerte sich, hat sich geklammert
 scheuen	scheuen	shun	scheut, scheute, hat gescheut
 putzen	putzen	clean	putzt, putzte, hat geputzt
 schwatzen	schwatzen	chatter	schwatzt, schwatzte, hat geschwatzt
 beschwören	beschwören	implore	beschwört, beschwor, hat beschworen
-eingestehen	eingestehen	concede	gesteht ein, gestand ein, hat eingestanden
 ducken	sich ducken	duck	duckt sich, duckte sich, hat sich geduckt
 entfalten	entfalten	unfold	entfaltet, entfaltete, hat entfaltet
 dämpfen	dämpfen	muffle	dämpft, dämpfte, hat gedämpft
@@ -773,72 +778,70 @@ nachgehen	nachgehen	go after	geht nach, ging nach, ist nachgegangen
 erlöschen	erlöschen	be extinguished	erlischt, erlosch, ist erloschen
 wehtun	wehtun	hurt	tut weh, tat weh, hat wehgetan
 heilen	heilen	heal	heilt, heilte, hat geheilt
-zusammenzucken	zusammenzucken	flinch	zuckt zusammen, zuckte zusammen, ist zusammengezuckt
+vorbeigehen	vorbeigehen	go past	geht vorbei, ging vorbei, ist vorbeigegangen
 beklagen	sich beklagen	complain	beklagt sich, beklagte sich, hat sich beklagt
 herumgehen	herumgehen	walk around	geht herum, ging herum, ist herumgegangen
-berufen	berufen	appoint	beruft, berief, hat berufen
 abziehen	abziehen	deduct	zieht ab, zog ab, hat abgezogen
+zusammenzucken	zusammenzucken	flinch	zuckt zusammen, zuckte zusammen, ist zusammengezuckt
 sparen	sparen	save money	spart, sparte, hat gespart
 beglücken	beglücken	make happy	beglückt, beglückte, hat beglückt
 tasten	tasten	grope	tastet, tastete, hat getastet
+übersehen	übersehen	overlook	übersieht, übersah, hat übersehen
 errichten	errichten	erect	errichtet, errichtete, hat errichtet
 anstecken	anstecken	infect	steckt an, steckte an, hat angesteckt
-übersehen	übersehen	overlook	übersieht, übersah, hat übersehen
+anreden	anreden	address	redet an, redete an, hat angeredet
 gestalten	gestalten	shape	gestaltet, gestaltete, hat gestaltet
-erziehen	erziehen	bring up	erzieht, erzog, hat erzogen
-vorbeigehen	vorbeigehen	go past	geht vorbei, ging vorbei, ist vorbeigegangen
 nachkommen	nachkommen	come after	kommt nach, kam nach, ist nachgekommen
+auslachen	auslachen	laugh at	lacht aus, lachte aus, hat ausgelacht
 erfolgen	erfolgen	ensue	erfolgt, erfolgte, ist erfolgt
 sausen	sausen	whiz	saust, sauste, ist gesaust
 hinnehmen	hinnehmen	put up with	nimmt hin, nahm hin, hat hingenommen
+anstoßen	anstoßen	nudge	stößt an, stieß an, hat angestoßen
 sträuben	sich sträuben	bristle	sträubt sich, sträubte sich, hat sich gesträubt
 entsprechen	entsprechen	correspond	entspricht, entsprach, hat entsprochen
 anschließen	sich anschließen	join	schließt sich an, schloss sich an, hat sich angeschlossen
 sprengen	sprengen	blast	sprengt, sprengte, hat gesprengt
 gründen	gründen	found	gründet, gründete, hat gegründet
+mitgehen	mitgehen	go along	geht mit, ging mit, ist mitgegangen
 bekümmern	bekümmern	distress	bekümmert, bekümmerte, hat bekümmert
-ausweichen	ausweichen	dodge	weicht aus, wich aus, ist ausgewichen
 schwimmen	schwimmen	swim	schwimmt, schwamm, ist geschwommen
 vollziehen	vollziehen	execute	vollzieht, vollzog, hat vollzogen
 verehren	verehren	revere	verehrt, verehrte, hat verehrt
 erstarren	erstarren	stiffen	erstarrt, erstarrte, ist erstarrt
+zusammenbrechen	zusammenbrechen	collapse	bricht zusammen, brach zusammen, ist zusammengebrochen
 vereinigen	vereinigen	unite	vereinigt, vereinigte, hat vereinigt
 ragen	ragen	jut	ragt, ragte, hat geragt
 benehmen	sich benehmen	behave	benimmt sich, benahm sich, hat sich benommen
 erwähnen	erwähnen	mention	erwähnt, erwähnte, hat erwähnt
-mitgehen	mitgehen	go along	geht mit, ging mit, ist mitgegangen
 liefern	liefern	deliver	liefert, lieferte, hat geliefert
 zutreten	zutreten	step toward	tritt zu, trat zu, ist zugetreten
 entgegentreten	entgegentreten	confront	tritt entgegen, trat entgegen, ist entgegengetreten
 heraufkommen	heraufkommen	come up	kommt herauf, kam herauf, ist heraufgekommen
+erraten	erraten	guess correctly	errät, erriet, hat erraten
 rächen	sich rächen	take revenge	rächt sich, rächte sich, hat sich gerächt
+abschließen	abschließen	conclude	schließt ab, schloss ab, hat abgeschlossen
 brausen	brausen	surge	braust, brauste, hat gebraust
 erobern	erobern	conquer	erobert, eroberte, hat erobert
-abschließen	abschließen	conclude	schließt ab, schloss ab, hat abgeschlossen
 stottern	stottern	stutter	stottert, stotterte, hat gestottert
 schlüpfen	schlüpfen	slip	schlüpft, schlüpfte, ist geschlüpft
 niederschlagen	niederschlagen	knock down	schlägt nieder, schlug nieder, hat niedergeschlagen
+wiedergeben	wiedergeben	render	gibt wieder, gab wieder, hat wiedergegeben
 bewohnen	bewohnen	inhabit	bewohnt, bewohnte, hat bewohnt
 predigen	predigen	preach	predigt, predigte, hat gepredigt
-zusammenbrechen	zusammenbrechen	collapse	bricht zusammen, brach zusammen, ist zusammengebrochen
 einführen	einführen	introduce	führt ein, führte ein, hat eingeführt
-wiedergeben	wiedergeben	render	gibt wieder, gab wieder, hat wiedergegeben
 gleichen	gleichen	resemble	gleicht, glich, hat geglichen
+zurücklegen	zurücklegen	put back	legt zurück, legte zurück, hat zurückgelegt
 anschlagen	anschlagen	strike up	schlägt an, schlug an, hat angeschlagen
 befallen	befallen	befall	befällt, befiel, hat befallen
-anstoßen	anstoßen	nudge	stößt an, stieß an, hat angestoßen
-hervorbringen	hervorbringen	bring forth	bringt hervor, brachte hervor, hat hervorgebracht
-auslachen	auslachen	laugh at	lacht aus, lachte aus, hat ausgelacht
 haften	haften	adhere	haftet, haftete, hat gehaftet
 staunen	staunen	marvel	staunt, staunte, hat gestaunt
+aufziehen	aufziehen	tease	zieht auf, zog auf, hat aufgezogen
 lauern	lauern	lurk	lauert, lauerte, hat gelauert
 kleben	kleben	glue	klebt, klebte, hat geklebt
 durchsetzen	durchsetzen	push through	setzt durch, setzte durch, hat durchgesetzt
 ausüben	ausüben	exert	übt aus, übte aus, hat ausgeübt
 verlaufen	verlaufen	run its course	verläuft, verlief, ist verlaufen
-zurücklegen	zurücklegen	put back	legt zurück, legte zurück, hat zurückgelegt
-aufziehen	aufziehen	tease	zieht auf, zog auf, hat aufgezogen
-erraten	erraten	guess correctly	errät, erriet, hat erraten
+vorbringen	vorbringen	put forward	bringt vor, brachte vor, hat vorgebracht
 beeilen	sich beeilen	hurry up	beeilt sich, beeilte sich, hat sich beeilt
 herstellen	herstellen	produce	stellt her, stellte her, hat hergestellt
 mitkommen	mitkommen	come along	kommt mit, kam mit, ist mitgekommen
@@ -848,6 +851,7 @@ rasen	rasen	speed	rast, raste, ist gerast
 beneiden	beneiden	envy	beneidet, beneidete, hat beneidet
 knurren	knurren	growl	knurrt, knurrte, hat geknurrt
 ergänzen	ergänzen	supplement	ergänzt, ergänzte, hat ergänzt
+herausbringen	herausbringen	bring out	bringt heraus, brachte heraus, hat herausgebracht
 begnügen	sich begnügen	make do	begnügt sich, begnügte sich, hat sich begnügt
 ausgeben	ausgeben	spend money	gibt aus, gab aus, hat ausgegeben
 betonen	betonen	emphasize	betont, betonte, hat betont
@@ -855,95 +859,96 @@ nötigen	nötigen	compel	nötigt, nötigte, hat genötigt
 ausruhen	sich ausruhen	take a rest	ruht sich aus, ruhte sich aus, hat sich ausgeruht
 blasen	blasen	blow	bläst, blies, hat geblasen
 einholen	einholen	catch up	holt ein, holte ein, hat eingeholt
+anwenden	anwenden	apply	wendet an, wandte an, hat angewandt
 erschießen	erschießen	shoot dead	erschießt, erschoss, hat erschossen
 vermissen	vermissen	miss	vermisst, vermisste, hat vermisst
+anstrengen	sich anstrengen	exert oneself	strengt sich an, strengte sich an, hat sich angestrengt
 verschweigen	verschweigen	keep secret	verschweigt, verschwieg, hat verschwiegen
 formen	formen	mold	formt, formte, hat geformt
-anwenden	anwenden	apply	wendet an, wandte an, hat angewandt
 verwenden	verwenden	utilize	verwendet, verwendete, hat verwendet
-verursachen	verursachen	cause	verursacht, verursachte, hat verursacht
 anerkennen	anerkennen	acknowledge	erkennt an, erkannte an, hat anerkannt
+erschlagen	erschlagen	slay	erschlägt, erschlug, hat erschlagen
+verursachen	verursachen	cause	verursacht, verursachte, hat verursacht
 funkeln	funkeln	sparkle	funkelt, funkelte, hat gefunkelt
 spotten	spotten	mock	spottet, spottete, hat gespottet
 zurücklehnen	sich zurücklehnen	lean back	lehnt sich zurück, lehnte sich zurück, hat sich zurückgelehnt
 bereuen	bereuen	repent	bereut, bereute, hat bereut
-ehren	ehren	honor	ehrt, ehrte, hat geehrt
 wiederfinden	wiederfinden	find again	findet wieder, fand wieder, hat wiedergefunden
+ehren	ehren	honor	ehrt, ehrte, hat geehrt
 verhalten	sich verhalten	conduct oneself	verhält sich, verhielt sich, hat sich verhalten
 stopfen	stopfen	stuff	stopft, stopfte, hat gestopft
 lohnen	sich lohnen	be worthwhile	lohnt sich, lohnte sich, hat sich gelohnt
+heimkehren	heimkehren	return home	kehrt heim, kehrte heim, ist heimgekehrt
 pfeifen	pfeifen	whistle	pfeift, pfiff, hat gepfiffen
 spähen	spähen	peer	späht, spähte, hat gespäht
 hinaufsteigen	hinaufsteigen	climb up	steigt hinauf, stieg hinauf, ist hinaufgestiegen
 erleichtern	erleichtern	ease	erleichtert, erleichterte, hat erleichtert
-erschlagen	erschlagen	slay	erschlägt, erschlug, hat erschlagen
 knien	knien	kneel	kniet, kniete, hat gekniet
 einschließen	einschließen	lock in	schließt ein, schloss ein, hat eingeschlossen
-anreden	anreden	address	redet an, redete an, hat angeredet
 fluchen	fluchen	curse	flucht, fluchte, hat geflucht
 betten	betten	bed down	bettet, bettete, hat gebettet
 gegenüberstehen	gegenüberstehen	face	steht gegenüber, stand gegenüber, hat gegenübergestanden
 hinziehen	sich hinziehen	drag on	zieht sich hin, zog sich hin, hat sich hingezogen
 anfahren	anfahren	snap at	fährt an, fuhr an, hat angefahren
+preisgeben	preisgeben	relinquish	gibt preis, gab preis, hat preisgegeben
+jubeln	jubeln	cheer	jubelt, jubelte, hat gejubelt
 schonen	schonen	go easy on	schont, schonte, hat geschont
 kriechen	kriechen	crawl	kriecht, kroch, ist gekrochen
+aussuchen	aussuchen	pick out	sucht aus, suchte aus, hat ausgesucht
+vertrauen	vertrauen	trust	vertraut, vertraute, hat vertraut
 belehren	belehren	lecture	belehrt, belehrte, hat belehrt
-anstrengen	sich anstrengen	exert oneself	strengt sich an, strengte sich an, hat sich angestrengt
+aufraffen	sich aufraffen	rouse oneself	rafft sich auf, raffte sich auf, hat sich aufgerafft
 schöpfen	schöpfen	scoop	schöpft, schöpfte, hat geschöpft
 hetzen	hetzen	hound	hetzt, hetzte, hat gehetzt
 trocknen	trocknen	dry	trocknet, trocknete, hat getrocknet
+hervorrufen	hervorrufen	evoke	ruft hervor, rief hervor, hat hervorgerufen
 streben	streben	strive	strebt, strebte, hat gestrebt
 nahen	nahen	draw near	naht, nahte, ist genaht
 offenbaren	offenbaren	reveal	offenbart, offenbarte, hat offenbart
 stutzen	stutzen	stop short	stutzt, stutzte, hat gestutzt
 sinnen	sinnen	muse	sinnt, sann, hat gesonnen
-hervorrufen	hervorrufen	evoke	ruft hervor, rief hervor, hat hervorgerufen
 verschieben	verschieben	postpone	verschiebt, verschob, hat verschoben
 rühmen	rühmen	extol	rühmt, rühmte, hat gerühmt
 einwenden	einwenden	object	wendet ein, wandte ein, hat eingewandt
 besehen	besehen	look over	besieht, besah, hat besehen
-preisgeben	preisgeben	relinquish	gibt preis, gab preis, hat preisgegeben
+zurückfahren	zurückfahren	drive back	fährt zurück, fuhr zurück, ist zurückgefahren
 stampfen	stampfen	stomp	stampft, stampfte, hat gestampft
 stemmen	stemmen	brace	stemmt, stemmte, hat gestemmt
-zurückfahren	zurückfahren	drive back	fährt zurück, fuhr zurück, ist zurückgefahren
 entgegenstrecken	entgegenstrecken	reach out	streckt entgegen, streckte entgegen, hat entgegengestreckt
 färben	färben	dye	färbt, färbte, hat gefärbt
-heulen	heulen	howl	heult, heulte, hat geheult
 graben	graben	dig	gräbt, grub, hat gegraben
 regieren	regieren	govern	regiert, regierte, hat regiert
-heimkehren	heimkehren	return home	kehrt heim, kehrte heim, ist heimgekehrt
-herausbringen	herausbringen	bring out	bringt heraus, brachte heraus, hat herausgebracht
 umklammern	umklammern	clutch	umklammert, umklammerte, hat umklammert
 weigern	sich weigern	refuse	weigert sich, weigerte sich, hat sich geweigert
 verwirren	verwirren	confuse	verwirrt, verwirrte, hat verwirrt
 herausziehen	herausziehen	pull out	zieht heraus, zog heraus, hat herausgezogen
+hinhalten	hinhalten	hold out	hält hin, hielt hin, hat hingehalten
 feststehen	feststehen	be certain	steht fest, stand fest, hat festgestanden
 krachen	krachen	crash	kracht, krachte, hat gekracht
-hinhalten	hinhalten	hold out	hält hin, hielt hin, hat hingehalten
 zusammenziehen	zusammenziehen	contract	zieht zusammen, zog zusammen, hat zusammengezogen
-vertrauen	vertrauen	trust	vertraut, vertraute, hat vertraut
 aufleuchten	aufleuchten	light up	leuchtet auf, leuchtete auf, hat aufgeleuchtet
 baden	baden	bathe	badet, badete, hat gebadet
+hervortreten	hervortreten	step forth	tritt hervor, trat hervor, ist hervorgetreten
+ablenken	ablenken	distract	lenkt ab, lenkte ab, hat abgelenkt
+hinaufgehen	hinaufgehen	go up	geht hinauf, ging hinauf, ist hinaufgegangen
 aufklären	aufklären	enlighten	klärt auf, klärte auf, hat aufgeklärt
 überwältigen	überwältigen	overwhelm	überwältigt, überwältigte, hat überwältigt
-hinaufgehen	hinaufgehen	go up	geht hinauf, ging hinauf, ist hinaufgegangen
-ausnehmen	ausnehmen	exempt	nimmt aus, nahm aus, hat ausgenommen
-aufraffen	sich aufraffen	rouse oneself	rafft sich auf, raffte sich auf, hat sich aufgerafft
-erwischen	erwischen	nab	erwischt, erwischte, hat erwischt
+zutrauen	zutrauen	credit with	traut zu, traute zu, hat zugetraut
 ausbleiben	ausbleiben	fail to appear	bleibt aus, blieb aus, ist ausgeblieben
+ausnehmen	ausnehmen	exempt	nimmt aus, nahm aus, hat ausgenommen
+hinuntergehen	hinuntergehen	go down	geht hinunter, ging hinunter, ist hinuntergegangen
+erwischen	erwischen	nab	erwischt, erwischte, hat erwischt
 verfügen	verfügen	have available	verfügt, verfügte, hat verfügt
 zupfen	zupfen	pluck	zupft, zupfte, hat gezupft
-ablenken	ablenken	distract	lenkt ab, lenkte ab, hat abgelenkt
 erhöhen	erhöhen	raise	erhöht, erhöhte, hat erhöht
 rüsten	sich rüsten	gear up	rüstet sich, rüstete sich, hat sich gerüstet
 beleuchten	beleuchten	illuminate	beleuchtet, beleuchtete, hat beleuchtet
 blenden	blenden	dazzle	blendet, blendete, hat geblendet
 besiegen	besiegen	defeat	besiegt, besiegte, hat besiegt
 riechen	riechen	smell	riecht, roch, hat gerochen
-plagen	plagen	plague	plagt, plagte, hat geplagt
-hervortreten	hervortreten	step forth	tritt hervor, trat hervor, ist hervorgetreten
 aussteigen	aussteigen	get off	steigt aus, stieg aus, ist ausgestiegen
-aussuchen	aussuchen	pick out	sucht aus, suchte aus, hat ausgesucht
+plagen	plagen	plague	plagt, plagte, hat geplagt
+auslöschen	auslöschen	extinguish	löscht aus, löschte aus, hat ausgelöscht
 schwenken	schwenken	swivel	schwenkt, schwenkte, hat geschwenkt
 taugen	taugen	be any good	taugt, taugte, hat getaugt
 erstehen	erstehen	purchase	ersteht, erstand, hat erstanden
@@ -951,51 +956,46 @@ vorbeugen	sich vorbeugen	lean forward	beugt sich vor, beugte sich vor, hat sich 
 knirschen	knirschen	crunch	knirscht, knirschte, hat geknirscht
 erlangen	erlangen	obtain	erlangt, erlangte, hat erlangt
 wahren	wahren	maintain	wahrt, wahrte, hat gewahrt
-hinuntergehen	hinuntergehen	go down	geht hinunter, ging hinunter, ist hinuntergegangen
 strafen	strafen	punish	straft, strafte, hat gestraft
 zusammennehmen	sich zusammennehmen	pull oneself together	nimmt sich zusammen, nahm sich zusammen, hat sich zusammengenommen
+weggehen	weggehen	walk away	geht weg, ging weg, ist weggegangen
 betreiben	betreiben	engage in	betreibt, betrieb, hat betrieben
+vortragen	vortragen	recite	trägt vor, trug vor, hat vorgetragen
 erklingen	erklingen	begin to sound	erklingt, erklang, ist erklungen
+andeuten	andeuten	hint at	deutet an, deutete an, hat angedeutet
+auffassen	auffassen	construe	fasst auf, fasste auf, hat aufgefasst
 ansetzen	ansetzen	schedule	setzt an, setzte an, hat angesetzt
 heften	heften	pin	heftet, heftete, hat geheftet
-andeuten	andeuten	hint at	deutet an, deutete an, hat angedeutet
 zusammenschlagen	zusammenschlagen	strike together	schlägt zusammen, schlug zusammen, hat zusammengeschlagen
+aufführen	aufführen	perform	führt auf, führte auf, hat aufgeführt
 überreichen	überreichen	present	überreicht, überreichte, hat überreicht
 zeugen	zeugen	bear witness	zeugt, zeugte, hat gezeugt
 vorhaben	vorhaben	have in mind	hat vor, hatte vor, hat vorgehabt
-auffassen	auffassen	construe	fasst auf, fasste auf, hat aufgefasst
 bemächtigen	sich bemächtigen	take hold of	bemächtigt sich, bemächtigte sich, hat sich bemächtigt
 summen	summen	hum	summt, summte, hat gesummt
+hinaussehen	hinaussehen	look outside	sieht hinaus, sah hinaus, hat hinausgesehen
 vorlegen	vorlegen	submit	legt vor, legte vor, hat vorgelegt
-aufführen	aufführen	perform	führt auf, führte auf, hat aufgeführt
 erringen	erringen	attain	erringt, errang, hat errungen
 entgegengehen	entgegengehen	go to meet	geht entgegen, ging entgegen, ist entgegengegangen
 erleiden	erleiden	sustain	erleidet, erlitt, hat erlitten
-vorbringen	vorbringen	put forward	bringt vor, brachte vor, hat vorgebracht
 abweisen	abweisen	turn down	weist ab, wies ab, hat abgewiesen
-hinaussehen	hinaussehen	look outside	sieht hinaus, sah hinaus, hat hinausgesehen
+hervorziehen	hervorziehen	draw out	zieht hervor, zog hervor, hat hervorgezogen
 vorliegen	vorliegen	be at hand	liegt vor, lag vor, hat vorgelegen
 bedrücken	bedrücken	weigh on	bedrückt, bedrückte, hat bedrückt
 verhandeln	verhandeln	negotiate	verhandelt, verhandelte, hat verhandelt
 schwärmen	schwärmen	enthuse	schwärmt, schwärmte, hat geschwärmt
-hervorziehen	hervorziehen	draw out	zieht hervor, zog hervor, hat hervorgezogen
+ausrichten	ausrichten	deliver a message	richtet aus, richtete aus, hat ausgerichtet
 ansprechen	ansprechen	speak to	spricht an, sprach an, hat angesprochen
 aufhorchen	aufhorchen	prick up ears	horcht auf, horchte auf, hat aufgehorcht
-ausrichten	ausrichten	deliver a message	richtet aus, richtete aus, hat ausgerichtet
 nähren	nähren	nourish	nährt, nährte, hat genährt
+füttern	füttern	feed	füttert, fütterte, hat gefüttert
 schwellen	schwellen	swell	schwillt, schwoll, ist geschwollen
 verdammen	verdammen	damn	verdammt, verdammte, hat verdammt
 verdecken	verdecken	cover up	verdeckt, verdeckte, hat verdeckt
 entreißen	entreißen	wrest from	entreißt, entriss, hat entrissen
 schlucken	schlucken	swallow	schluckt, schluckte, hat geschluckt
 preisen	preisen	laud	preist, pries, hat gepriesen
-weggehen	weggehen	walk away	geht weg, ging weg, ist weggegangen
 entnehmen	entnehmen	take from	entnimmt, entnahm, hat entnommen
-jubeln	jubeln	cheer	jubelt, jubelte, hat gejubelt
-zutrauen	zutrauen	credit with	traut zu, traute zu, hat zugetraut
-verweigern	verweigern	refuse to give	verweigert, verweigerte, hat verweigert
-bannen	bannen	banish	bannt, bannte, hat gebannt
-taumeln	taumeln	stagger	taumelt, taumelte, ist getaumelt
+anfassen	anfassen	lay hands on	fasst an, fasste an, hat angefasst
+wegnehmen	wegnehmen	take away	nimmt weg, nahm weg, hat weggenommen
 zulassen	zulassen	let happen	lässt zu, ließ zu, hat zugelassen
-kommandieren	kommandieren	give orders	kommandiert, kommandierte, hat kommandiert
-spiegeln	spiegeln	mirror	spiegelt, spiegelte, hat gespiegelt
