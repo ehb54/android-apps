@@ -25,7 +25,9 @@ Steps, each resumable (work already done is skipped). <list> is a word list
                                     (for a quick look, or review by an AI agent)
 
   pick   <list> <decisions>...      adds review decisions (lemma, kind, file, decision, note;
-                                    decision pick, retry or drop) to <list>/picks.tsv
+                                    decision pick, retry or drop; file <model>/<picture>, or
+                                    <model>:<seed> for a seed of the current prompt) to
+                                    <list>/picks.tsv
   restore <list>                    regenerates picked pictures missing from raw/, from
                                     picks.tsv (words.py build needs them)
 
@@ -375,6 +377,10 @@ def pick(name, files):
             elif row["decision"] not in DECISIONS:
                 problem = f"decision must be one of {', '.join(DECISIONS)}"
             elif row["decision"] == "pick":
+                if ":" in row["file"]:       # <model>:<seed>, a seed of the word's current prompt
+                    model, _, seed = row["file"].partition(":")
+                    row["file"] = entry["file"] = f"{model}/" + picture_name(
+                        row["kind"], row["lemma"], int(seed), full_prompt(plan[key]["prompt"]))
                 model, _, picture = row["file"].partition("/")
                 log = logs.setdefault(model, logged(name, model)).get(picture) if model in MODELS else None
                 if not log or not (HERE / name / "raw" / row["file"]).exists():
@@ -515,6 +521,14 @@ hover to enlarge). Every prompt ends with: <i>{h.escape(STYLE)}</i>.</p>
 </tbody></table></body></html>
 """, encoding="utf-8")
     print(f"{len(rows)} words x {len(cols)} columns -> {html}")
+
+
+def complete(name, model, seeds="1-4"):
+    """The planned words (in plan order) whose pictures for all `seeds` exist."""
+    out = HERE / name / "raw" / model
+    return [r for r in chosen_words(name, "all")
+            if all((out / picture_name(r["kind"], r["lemma"], s, full_prompt(r["prompt"]))).exists()
+                   for s in seed_range(seeds))]
 
 
 def mosaic(name, png, words, columns, tile=200, start=0, count=None):
