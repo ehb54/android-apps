@@ -11,9 +11,9 @@ Haus	noun	yes	a small detached house with a red pitched roof, a front door and t
 Wort	noun	no		abstract
 Zeit	noun	no		abstract
 Leben	noun	no		abstract
-Gesicht	noun	yes	a close-up of a human face seen from the front, eyes, nose and mouth, tightly cropped, neutral look	near: Kopf, Antlitz, Angesicht, Miene, Profil
+Gesicht	noun	yes	a close-up of the face of a woman with freckles and light-brown hair, seen from the front, eyes, nose and mouth, neutral look	near: Kopf, Antlitz, Angesicht, Miene, Profil
 Mutter	noun	no		relational
-Kopf	noun	yes	a whole human head with short hair, ears and neck in three-quarter view, cut off below the neck	near: Gesicht, Profil, Schädel
+Kopf	noun	yes	the whole head of a man with short blond hair, ears and neck in three-quarter view, cut off below the neck	near: Gesicht, Profil, Schädel
 Vater	noun	no		relational
 Herz	noun	yes	a simple glossy red heart shape	near: Herzschlag, Herzklopfen
 Jahr	noun	no		abstract (time word)
@@ -151,7 +151,7 @@ Stube	noun	no		duplicates Zimmer
 Blume	noun	yes	a single flower with five round pink petals, a yellow centre and a green stem with two leaves	near: Rose, Lilie, Nelke, Veilchen, Blüte, Pflanze, Knospe
 Graf	noun	no		a nobleman is not shown apart from Fürst, Herzog or Baron
 See	noun	scene	a calm blue lake with reeds along the near shore and wooded hills behind	near: Teich, Meer, Ozean, Gewässer
-Schatten	noun	scene	a long dark shadow of a person stretched across sunny ground, the person small at one end	near: Umriss, Halbdunkel, Dunkel
+Schatten	noun	scene	a woman with a blond ponytail standing in low evening sunlight, seen from the side, her long dark shadow stretching from her feet across the ground	near: Umriss, Halbdunkel, Dunkel
 Treppe	noun	yes	a straight wooden staircase with a banister, rising to the right	near: Stufe, Geländer, Schwelle
 Gespräch	noun	scene	a woman with grey hair and a young man with red hair sitting facing each other at a small table, talking with open hand gestures	near: Unterhaltung, Unterredung, Konversation, Geplauder, Besprechung
 Bein	noun	yes	a whole bare human leg from hip to foot, straight, side view	near: Knie, Fuß, Schenkel
@@ -315,7 +315,7 @@ Absicht	noun	no		abstract
 Befehl	noun	no		speech
 Nebel	noun	scene	a row of trees and a path fading away into thick grey-white fog	near: Dunst, Rauch, Wolke
 Mitte	noun	no		relational
-Prinz	noun	yes	a young beardless prince with a small golden circlet on his head, a short blue cape and a sword at his belt	near: König, Fürst, Erbprinz
+Prinz	noun	yes	a clean-shaven young prince of about eighteen with blond hair, a thin golden circlet on his head, a short blue cape and a sword at his belt	near: König, Fürst, Erbprinz
 Rock	noun	yes	a pleated knee-length red skirt with a waistband	near: Kleid, Schürze
 Nachricht	noun	no		abstract
 Ufer	noun	scene	a grassy riverbank sloping down to the water's edge with reeds and stones, the bank filling most of the picture	near: See, Fluss, Strand, Küste
@@ -340,7 +340,7 @@ Zweifel	noun	no		abstract
 Boot	noun	yes	a small wooden rowing boat with two oars, floating on calm water	near: Kahn, Schiff, Gondel
 Furcht	noun	no		emotion
 Krone	noun	yes	a golden royal crown with five points set with red and blue jewels	near: König, Kranz
-Flügel	noun	yes	a single white bird's wing spread open, showing its rows of long feathers	near: Feder, Vogel
+Flügel	noun	yes	one single white bird's wing on its own, detached, no head and no body, its long feathers fanned out, seen from the side	near: Feder, Vogel
 Wetter	noun	no		general term; shows as Regen, Sonne or Wolke
 Kaffee	noun	yes	a white cup of steaming black coffee on a saucer, a few roasted coffee beans beside it	near: Tee, Tasse
 Opfer	noun	no		relational
@@ -402,7 +402,7 @@ Freundschaft	noun	no		abstract
 Gatte	noun	no		relational
 Begriff	noun	no		abstract
 Theater	noun	scene	the inside of a theater: a stage framed by open red velvet curtains, rows of red seats and balcony boxes	near: Bühne, Oper, Vorhang
-Welle	noun	yes	a single blue ocean wave curling over with white foam on its crest	near: Woge, Brandung, Meer
+Welle	noun	yes	a single smooth rounded blue sea wave rolling over, a little white foam along its curling edge, simple soft shapes	near: Woge, Brandung, Meer
 Qual	noun	no		abstract
 Entschluss	noun	no		abstract
 Leutnant	noun	no		duplicates Offizier
@@ -443,7 +443,7 @@ Sicherheit	noun	no		abstract
 Last	noun	no		a carried load reads as Sack or Träger
 Student	noun	yes	a young man with short blond hair in a black graduation cap and gown, carrying books under his arm	near: Schüler
 Verzweiflung	noun	no		emotion
-Karte	noun	yes	a single playing card showing red heart shapes on its face	near: Billett
+Karte	noun	yes	a single playing card lying at a slight angle, five red hearts on its white face, small hearts in the corners instead of letters or numbers	near: Billett
 Dank	noun	no		abstract
 Lärm	noun	no		sound
 Sieg	noun	no		abstract
@@ -455,7 +455,7 @@ Wirt	noun	yes	a red-haired stout innkeeper in a white apron behind a wooden bar 
 Lauf	noun	no		abstract
 Mittag	noun	no		abstract (time)
 Güte	noun	no		abstract
-Tuch	noun	yes	a thin square piece of red cloth, loosely draped and folded	near: Decke, Stoff, Taschentuch, Tischtuch
+Tuch	noun	yes	a piece of thin yellow cloth hanging from a wall hook, falling in soft loose folds	near: Decke, Stoff, Taschentuch, Tischtuch
 Schreibtisch	noun	yes	a wooden writing desk with a row of drawers on one side and an inkwell on top	near: Tisch, Pult, Kommode
 Fleisch	noun	yes	a raw red beef steak with a white rim of fat on a wooden board	near: Braten, Schinken, Speck
 Schar	noun	no		a group word; reads as Schwarm, Herde or Menge
@@ -496,7 +496,7 @@ Aufgabe	noun	no		abstract
 Gegenteil	noun	no		abstract
 Jahrhundert	noun	no		abstract (time)
 Insel	noun	yes	a small sandy island with a single palm tree in the middle of a blue sea	near: Küste, Strand, Palme
-Feder	noun	yes	a single long white bird feather	near: Flügel
+Feder	noun	yes	a single long bird feather with brown and grey stripes and a thin white quill	near: Flügel
 Kuss	noun	scene	a man with red hair and a woman kissing on the lips, seen in profile	near: Umarmung, Liebkosung
 Dämmerung	noun	no		time of day; reads as Abend or Sonnenuntergang
 Sünde	noun	no		abstract
@@ -557,7 +557,7 @@ Aufmerksamkeit	noun	no		abstract
 Jäger	noun	yes	a curly-haired hunter in a green jacket and a feathered hat, a rifle over his shoulder and a hunting dog at his side	near: Förster, Schütze
 Kälte	noun	no		state
 Verkehr	noun	no		example is social contact (abstract); street traffic would read as Straße, Auto
-Flut	noun	scene	brown floodwater covering a village street up to the windows of the houses	near: Welle, Wasser
+Flut	noun	scene	brown floodwater filling a village street, the water reaching halfway up the doors and windows of the houses, a small rowing boat floating in it	near: Welle, Wasser
 Glut	noun	yes	a heap of glowing orange-red embers with no flames, a little grey ash at the edges	near: Feuer, Flamme, Kohle, Asche
 Märchen	noun	no		abstract
 Eifer	noun	no		abstract
@@ -617,7 +617,7 @@ Fieber	noun	no		state
 Scheibe	noun	no		duplicates Fenster
 Schüler	noun	scene	a boy at a school desk writing in an exercise book, a leather satchel hanging from his chair	near: Junge, Knabe, Kind, Schülerin, Student
 Geschenk	noun	yes	a gift box wrapped in bright patterned paper with a large ribbon bow on top	near: Paket, Gabe
-Quelle	noun	scene	a small spring of clear water bubbling up between mossy rocks and trickling away	near: Bach, Brunnen
+Quelle	noun	scene	clear water welling up out of the ground between mossy stones and running away as a tiny stream	near: Bach, Brunnen
 Blitz	noun	yes	a jagged yellow lightning bolt striking down from a dark grey storm cloud	near: Gewitter, Donner
 Heim	noun	no		relational; a building reads as Haus
 Bemerkung	noun	no		speech
@@ -640,7 +640,7 @@ Falte	noun	no		a fold reads as Stoff, Tuch, Stirn
 Gelächter	noun	no		emotion; a laughing face reads as Lächeln
 Tausend	noun	no		number
 Wunde	noun	no		sensitive
-Busch	noun	yes	a single round leafy green bush growing from the ground	near: Strauch, Gebüsch, Hecke
+Busch	noun	yes	a low round leafy green bush, many branches growing straight from the ground, no trunk, wider than it is tall	near: Strauch, Gebüsch, Hecke
 Schwäche	noun	no		abstract
 Fahne	noun	yes	a plain red cloth flag on a wooden pole, waving in the wind	near: Flagge
 Verbindung	noun	no		abstract
@@ -686,8 +686,8 @@ Heer	noun	no		a body of soldiers reads as Soldat
 Lehre	noun	no		abstract
 Trauer	noun	no		emotion
 Bord	noun	no		relational (an Bord)
-Kaufmann	noun	scene	a blond shopkeeper in a long apron behind a wooden counter, weighing goods on a balance scale, shelves of jars behind	near: Händler, Laden, Wirt
-Räuber	noun	yes	a red-haired robber in a black eye mask and dark clothes, carrying a bulging sack over his shoulder	near: Dieb
+Kaufmann	noun	scene	a blond man, a shopkeeper in a long apron behind a wooden counter, weighing goods on a balance scale, shelves of jars behind	near: Händler, Laden, Wirt
+Räuber	noun	yes	a red-haired robber in a wide-brimmed hat with a black scarf over his nose and mouth, holding up an old pistol	near: Dieb
 Bühne	noun	scene	an empty wooden theatre stage with red curtains drawn open at the sides and spotlights shining on it	near: Theater, Vorhang
 Villa	noun	yes	a large elegant white villa with columns, balconies and tall windows, set in a garden with a gravel drive	near: Haus, Landhaus, Schloss, Palast
 Tee	noun	yes	a white teapot pouring golden-brown tea into a cup on a saucer	near: Kaffee
@@ -735,7 +735,7 @@ Schwert	noun	yes	a straight double-edged medieval sword with a cross-shaped hilt
 Ewigkeit	noun	no		time
 Mönch	noun	yes	a brown-haired monk in a brown hooded habit tied with a white rope belt, hands tucked into his sleeves	near: Pater, Abt, Pfarrer, Priester, Kutte
 Witz	noun	no		speech
-Landstraße	noun	scene	a paved country road running between open fields, lined with tall trees on both sides	near: Straße, Weg, Pfad
+Landstraße	noun	scene	a paved country road running between open fields toward distant hills, no trees along it, a few wooden fence posts	near: Straße, Weg, Pfad
 Kavalier	noun	no		no plain dress; a figure reads as Herr, Mann
 Braue	noun	no		an eyebrow reads as Auge, Stirn
 Dummheit	noun	no		abstract
@@ -761,7 +761,7 @@ Salon	noun	no		duplicates Zimmer
 Melodie	noun	no		abstract
 Abgrund	noun	scene	the edge of a rocky cliff dropping straight down into a dark, bottomless chasm, seen from above	near: Schlucht, Kluft, Klippe, Tiefe, Abhang
 Mitteilung	noun	no		abstract
-Narr	noun	yes	a fair-haired court jester in a red and yellow costume with a three-pointed cap tipped with bells	drawn as a jester; near: Spielmann
+Narr	noun	yes	a clean-shaven young court jester with blond hair in a red and yellow costume, a three-pointed cap tipped with bells, juggling three balls	drawn as a jester; near: Spielmann
 Fleck	noun	yes	a close-up of white fabric with one large brown coffee stain in the middle	near: Schmutz, Dreck
 Geheimrat	noun	no		a title; a picture shows a man
 Zeug	noun	no		abstract
@@ -992,7 +992,7 @@ Rache	noun	no		abstract
 Verbrecher	noun	no		sensitive (needs a stereotype)
 Fläche	noun	no		abstract
 Frauenzimmer	noun	no		duplicates Frau
-Schnurrbart	noun	yes	a man's face close up with a thick, curled black mustache and no beard	near: Bart, Vollbart
+Schnurrbart	noun	yes	the face of a man with ginger hair and a thick, curled ginger mustache, no beard, close up	near: Bart, Vollbart
 Versprechen	noun	no		abstract
 Ideal	noun	no		abstract
 Mühle	noun	yes	an old windmill with four large sails on a green hill	
@@ -1045,11 +1045,11 @@ Wipfel	noun	no		duplicates Baum
 Vorsicht	noun	no		abstract
 Gipfel	noun	no		duplicates Berg
 Verlust	noun	no		abstract
-Silber	noun	yes	two gleaming bright silver ingots with a mirror-like shine	near: Gold, Metall, Eisen, Stahl, Blei
+Silber	noun	yes	two plain rectangular bars of shiny silver metal stacked crosswise	near: Gold, Metall, Eisen, Stahl, Blei
 Adresse	noun	no		abstract; made of writing
 Bräutigam	noun	no		a man in a suit; a groom is plain only beside the bride (Braut, Brautpaar)
 Lord	noun	no		title; looks like Herr or Edelmann
-Verbeugung	noun	yes	a man with short light-brown hair bowing deeply from the waist, one arm folded across the chest	near: Gruß, Begrüßung, Kompliment
+Verbeugung	noun	yes	a man with short light-brown hair seen from the side, bowing low from the waist with his upper body bent forward level, one hand on his chest	near: Gruß, Begrüßung, Kompliment
 Puppe	noun	yes	a classic doll with curly hair and a frilly pink dress, sitting upright	near: Spielzeug
 Eifersucht	noun	no		abstract (emotion)
 Palast	noun	yes	a grand wide palace with a long symmetrical facade, rows of tall windows, a central dome and a broad stone stairway	near: Schloss, Burg, Residenz, Festung, Villa, Herrenhaus
@@ -1071,7 +1071,7 @@ Station	noun	no		duplicates Bahnhof
 Magen	noun	yes	a simple outline of a human torso with the pink J-shaped stomach organ highlighted inside	near: Bauch, Organ, Lunge
 Verdienst	noun	no		abstract; money reads as Geld
 Schwein	noun	yes	a pink pig with a curly tail and a flat snout, standing	
-Locke	noun	yes	a single long springy ringlet of golden hair, close up	near: Haar, Zopf, Frisur
+Locke	noun	yes	one long corkscrew curl of golden hair hanging straight down on its own, close up, no head	near: Haar, Zopf, Frisur
 Humor	noun	no		abstract
 Fach	noun	no		a compartment reads as Schrank, Schublade or Kasten
 Abt	noun	no		duplicates Mönch
@@ -1090,7 +1090,7 @@ Geliebte	noun	no		relational
 Scheitel	noun	no		a parting reads as Haar, Kopf or Frisur
 Trennung	noun	no		abstract
 Titel	noun	no		abstract
-Bündel	noun	yes	a cloth bundle with its corners knotted together, tied to the end of a wooden stick	near: Sack, Beutel, Paket
+Bündel	noun	yes	a red-and-white checked cloth with its four corners knotted together on top, hanging from the end of a wooden stick	near: Sack, Beutel, Paket
 Meter	noun	no		abstract (measure)
 Partie	noun	no		abstract; a game reads as Spiel
 Funke	noun	yes	a shower of bright orange sparks flying out from a spinning grinding wheel	near: Feuer, Flamme, Glut, Feuerwerk
@@ -1130,7 +1130,7 @@ Aussehen	noun	no		abstract
 Minister	noun	no		role not plain by dress
 Betrachtung	noun	no		abstract
 Auskunft	noun	no		abstract
-Matrose	noun	yes	a curly-haired sailor in a white sailor cap and a navy blue uniform with a wide square collar	near: Seemann, Schiffer, Kapitän, Steuermann
+Matrose	noun	yes	a young man with curly brown hair, a sailor in a white sailor cap and a navy blue uniform with a wide square collar	near: Seemann, Schiffer, Kapitän, Steuermann
 Behagen	noun	no		abstract
 Maus	noun	yes	a small grey mouse with round pink ears and a long thin tail	near: Ratte, Fledermaus
 Gitter	noun	yes	a square metal grating made of a grid of crossed black iron bars	near: Zaun, Geländer, Käfig, Gefängnis
@@ -1264,7 +1264,7 @@ Eigentum	noun	no		abstract
 Schmetterling	noun	yes	a butterfly with open orange and black patterned wings, seen from above	near: Insekt
 Depesche	noun	no		duplicates Telegramm
 Unternehmen	noun	no		abstract
-Kuchen	noun	yes	a round golden sponge cake with one slice cut out	
+Kuchen	noun	yes	a round cake with dark chocolate icing and red cherries on top, one slice cut out showing the layers	
 Schmach	noun	no		abstract
 Abendessen	noun	no		duplicates Essen (a meal at a table; near: Mahlzeit, Mittagessen, Abendbrot)
 Prüfung	noun	no		abstract
@@ -1325,7 +1325,7 @@ Kohle	noun	yes	a small heap of shiny black lumps of coal	near: Stein
 Laube	noun	yes	a small wooden garden arbor with an arched lattice roof overgrown with green climbing vines and a bench inside	near: Veranda
 Traurigkeit	noun	no		emotion
 Hirt	noun	scene	a brown-haired shepherd in a cloak and hat holding a long crook staff, two sheep grazing beside him	near: Bauer, Herde
-Kartoffel	noun	yes	a single brown potato with small dark eyes	
+Kartoffel	noun	yes	a single brown potato with a few small dark spots on its knobbly skin	
 Klub	noun	no		abstract (near: Verein)
 Birke	noun	yes	a slender birch tree with a white trunk marked by black streaks and small light green leaves	near: Baum, Buche, Pappel
 Sieger	noun	scene	a red-haired athlete on the highest step of a three-step podium raising a gold trophy cup above the head	near: Sieg, Triumph, Meister
@@ -1453,7 +1453,7 @@ Ausland	noun	no		abstract
 Wehmut	noun	no		emotion
 Grundsatz	noun	no		abstract
 Träger	noun	no		role not plain (a person carrying something)
-Apotheker	noun	scene	a curly-haired pharmacist in a white coat at a counter grinding powder with a mortar and pestle, rows of glass jars on shelves behind	near: Arzt, Apotheke
+Apotheker	noun	scene	a man with curly grey hair, a pharmacist in a white coat at a counter grinding powder with a mortar and pestle, rows of glass jars on shelves behind	near: Arzt, Apotheke
 Darstellung	noun	no		abstract
 Juli	noun	no		time word
 Thron	noun	yes	a large ornate golden throne with red velvet cushions and a tall carved back	near: Sessel, Lehnstuhl
@@ -1631,7 +1631,7 @@ Bude	noun	no		duplicates Hütte
 Schornstein	noun	yes	a tall red brick chimney on a tiled roof, a thin wisp of grey smoke at its top	near: Kamin, Dach, Rauch
 Schnitt	noun	no		abstract
 Wollust	noun	no		abstract
-Gärtner	noun	yes	a grey-haired gardener in a green apron and straw hat watering a flower bed with a watering can	near: Bauer, Landwirt
+Gärtner	noun	yes	an older man with a grey beard, a gardener in a green apron and straw hat watering a flower bed with a watering can	near: Bauer, Landwirt
 Bleistift	noun	yes	a yellow wooden pencil with a sharpened grey point and a pink eraser on the end	near: Stift, Feder
 Deich	noun	scene	a long grassy dike along the sea, sheep grazing on its slope, flat farmland on the other side	near: Damm, Wall, Ufer, Küste
 Liste	noun	no		a list on paper reads as Zettel
@@ -1862,7 +1862,7 @@ Versteck	noun	no		abstract
 Wette	noun	no		abstract
 Loge	noun	scene	an ornate theatre box with red velvet curtains and a gilded railing, a couple inside watching through opera glasses	near: Theater, Balkon, Bühne, Galerie
 Autorität	noun	no		abstract
-Zeitschrift	noun	yes	a glossy magazine lying flat, its cover one big colourful photo of a smiling face, without lettering	near: Zeitung, Heft, Buch
+Zeitschrift	noun	yes	a fanned stack of three glossy magazines with colourful covers showing flowers and a landscape, no lettering	near: Zeitung, Heft, Buch
 Damm	noun	scene	a tall curved concrete dam across a river valley holding back a lake, a small stream flowing out below	near: Deich, Wall, Wasserfall
 Helm	noun	yes	a round steel soldier's helmet with a chin strap	near: Rüstung, Mütze
 Bereich	noun	no		abstract
@@ -1947,7 +1947,7 @@ Taumel	noun	no		abstract
 Feindschaft	noun	no		abstract
 Brieftasche	noun	yes	a folded brown leather wallet, slightly open, showing card slots inside	near: Börse, Portemonnaie, Beutel
 Drache	noun	yes	a green winged dragon with a long tail breathing a small flame	near: Ungeheuer
-Rohr	noun	yes	a short length of grey metal pipe, its hollow round end facing the viewer	near: Stange
+Rohr	noun	yes	a short length of grey metal pipe lying on its side, seen at an angle so its length and its hollow open end both show	near: Stange
 Huf	noun	yes	a horse's lower leg and hoof, lifted to show an iron horseshoe underneath	near: Pferd, Pfote
 Pflug	noun	yes	an old iron plough with wooden handles standing in a brown field	near: Acker
 Handschrift	noun	no		writing; reads as Brief, Schrift
@@ -1961,7 +1961,7 @@ Wappen	noun	yes	a coat of arms: a shield with a black eagle on gold, held by two
 Verfassung	noun	no		abstract
 Tischplatte	noun	no		duplicates Tisch
 Ohrfeige	noun	no		violence; reads as Schlag (near: Hieb)
-Ratte	noun	yes	a grey rat with a pointed snout and a long bare pink tail	near: Maus
+Ratte	noun	yes	a large brown rat with coarse fur, a long pointed snout and a long bare scaly tail, crouching on a cobblestone	near: Maus
 Unteroffizier	noun	no		duplicates Soldat (near: Feldwebel, Korporal)
 Anhöhe	noun	no		duplicates Hügel (near: Höhe)
 Dokument	noun	no		duplicates Schriftstück (near: Urkunde, Akte, Papier)
@@ -2041,7 +2041,7 @@ Vernichtung	noun	no		abstract
 Unmut	noun	no		emotion
 Praxis	noun	no		abstract
 Marquise	noun	no		title not shown plainly; a noblewoman looks like Herrin
-Haube	noun	yes	an old-fashioned white cotton bonnet with a frilled brim and two long ties hanging down	near: Mütze, Hut, Schleier
+Haube	noun	yes	an old-fashioned light-blue cotton bonnet with a frilled brim and two long ties hanging down, seen from the side	near: Mütze, Hut, Schleier
 Versöhnung	noun	no		abstract
 Feierabend	noun	no		time word
 Demütigung	noun	no		abstract
@@ -2096,7 +2096,7 @@ Pantoffel	noun	yes	a pair of soft open-backed felt house slippers	near: Schuh, S
 Möwe	noun	yes	a white seagull with grey wings and a yellow beak gliding above blue waves	near: Vogel
 Kutsche	noun	no		duplicates Wagen
 Bescheidenheit	noun	no		abstract
-Porträt	noun	yes	a gold-framed oil painting of a woman's head and shoulders against a plain dark background	near: Bild, Gemälde, Bildnis
+Porträt	noun	yes	a gold-framed oil painting of the head and shoulders of an older man with white side-whiskers and a dark coat, against a plain dark green background	near: Bild, Gemälde, Bildnis
 Pflegerin	noun	yes	a woman with curly brown hair in a white nurse's uniform and cap carrying a tray with a glass of water and pills	near: Arzt, Wärterin, Schwester
 Skizze	noun	no		duplicates Zeichnung
 Ratsherr	noun	no		role not shown by dress or tools
@@ -2165,7 +2165,7 @@ Notizbuch	noun	no		duplicates Heft
 Veilchen	noun	yes	a small clump of purple violets with heart-shaped green leaves	near: Blume, Nelke
 Brautpaar	noun	no		duplicates Hochzeit
 Befangenheit	noun	no		emotion
-Reh	noun	yes	a slender brown roe deer without antlers standing alert in grass, a white patch on its rump	near: Hirsch, Kalb
+Reh	noun	yes	a slender female roe deer, a doe with no antlers at all, smooth head and large ears, standing alert in grass, a white patch on its rump	near: Hirsch, Kalb
 Weinberg	noun	scene	rows of green grapevines with dark grape bunches running up a sunny hillside	near: Traube, Wein, Hügel
 Weihe	noun	no		abstract
 Verteidiger	noun	no		relational
@@ -2248,7 +2248,7 @@ Kabine	noun	no		duplicates Kajüte
 Heizer	noun	scene	a brown-haired sooty man in a vest shoveling coal into the glowing open firebox of a steam engine	near: Kohle, Ofen, Lokomotive
 Tadel	noun	no		speech
 Schokolade	noun	yes	a bar of milk chocolate partly unwrapped from silver foil, one square broken off	near: Süßigkeit
-Braten	noun	yes	a browned roast joint of meat on a platter, a few slices cut off, with a carving fork	near: Fleisch, Schinken
+Braten	noun	yes	a boneless brown roast of beef on a platter, cut into thick slices with brown gravy poured over, roast potatoes beside it	near: Fleisch, Schinken
 Knall	noun	no		abstract: a sound (near: Krach, Schuss, Lärm)
 Baumstamm	noun	yes	a long felled tree trunk lying on grass, rough brown bark, the sawn end showing growth rings, no branches or leaves	near: Baum, Holz, Balken
 Schinken	noun	yes	a whole cured ham leg with the bone end sticking out, a few thin pink slices cut beside it on a wooden board	near: Fleisch, Speck, Braten, Wurst
@@ -2348,7 +2348,7 @@ Kerker	noun	no		duplicates Gefängnis (near: Zelle, Zuchthaus)
 Eid	noun	no		abstract (near: Schwur)
 Auswahl	noun	no		abstract
 Zauberer	noun	yes	an old wizard with a long white beard, a tall pointed hat with stars and a long robe, holding a wand	near: Hexe
-Binde	noun	yes	a roll of white gauze bandage, partly unrolled with its loose end trailing	near: Verband
+Binde	noun	yes	a white gauze bandage wrapped several times around a person's forearm and wrist, the loose end held by a small metal clip	near: Verband
 Muschel	noun	yes	a fan-shaped ribbed scallop seashell in cream and soft pink	near: Schale
 Streichholz	noun	yes	a single wooden matchstick with a red head, a small flame just catching at its tip	near: Flamme, Kerze
 Podium	noun	no		duplicates Bühne (near: Pult)
@@ -2376,7 +2376,7 @@ Affäre	noun	no		abstract
 Intelligenz	noun	no		abstract
 Unterlippe	noun	no		duplicates Lippe
 Knöchel	noun	no		duplicates Fuß (near: Ferse, Gelenk)
-Briefträger	noun	yes	a curly-haired postman in a blue uniform and cap carrying a full leather shoulder bag with envelopes sticking out	near: Bote, Post, Postmeister
+Briefträger	noun	yes	a man with a curly brown beard, a postman in a blue uniform and cap carrying a full leather shoulder bag with envelopes sticking out	near: Bote, Post, Postmeister
 Gewimmel	noun	no		duplicates Schwarm (near: Gedränge, Gewühl)
 Kenner	noun	no		relational
 Voraussetzung	noun	no		abstract
@@ -2399,7 +2399,7 @@ Ausspruch	noun	no		abstract
 Pappel	noun	yes	a tall narrow column-shaped Lombardy poplar tree standing alone at the edge of a field	near: Baum, Birke
 Qualm	noun	no		duplicates Rauch (near: Rauchwolke, Dampf)
 Typus	noun	no		abstract
-Kittel	noun	yes	a plain white knee-length work smock with buttons down the front and two pockets, hanging on a hanger	near: Mantel, Schürze
+Kittel	noun	yes	a plain light-blue knee-length work smock with buttons down the front and two pockets, hanging on a hanger	near: Mantel, Schürze
 Mittelalter	noun	no		abstract: a time word
 Retter	noun	no		relational
 Bäcker	noun	yes	a white-haired baker in white clothes, apron and tall white hat holding a wooden tray of fresh bread loaves	near: Köchin
@@ -2418,7 +2418,7 @@ Klause	noun	no		duplicates Hütte (near: Einsiedler)
 Kuppel	noun	yes	a large round dome crowning a stone building, the dome filling most of the picture, with a small lantern on its top	near: Dach, Dom, Gewölbe
 Fensterbrett	noun	no		duplicates Fenster
 Ausstattung	noun	no		abstract
-Kanne	noun	yes	a tall white porcelain coffee pot with a long curved spout, a side handle and a domed lid	near: Krug, Kessel
+Kanne	noun	yes	a tall blue enamel coffee pot with a long curved spout, a side handle and a domed lid	near: Krug, Kessel
 Rabe	noun	no		duplicates Krähe
 Erbitterung	noun	no		abstract
 Nuss	noun	yes	a whole walnut in its wrinkled brown shell next to a cracked-open half showing the kernel	near: Kastanie, Kern
@@ -2582,7 +2582,7 @@ Kämpfer	noun	no		duplicates Krieger
 Präsidentin	noun	no		role not visible
 Taufe	noun	no		sensitive
 Stabsarzt	noun	no		duplicates Arzt
-Tischtuch	noun	scene	a table completely covered by a white tablecloth with an embroidered border, the cloth hanging in soft folds on every side	near: Tisch, Tuch, Decke
+Tischtuch	noun	scene	a table completely covered by a red and white checked tablecloth, the cloth hanging in soft folds on every side	near: Tisch, Tuch, Decke
 Maßnahme	noun	no		abstract
 Krampf	noun	no		a person in pain shows Schmerz
 Vorstadt	noun	no		looks like Stadt or Dorf
@@ -2843,7 +2843,7 @@ Starre	noun	no		abstract
 Ausgleich	noun	no		abstract
 Lotse	noun	no		duplicates Kapitän; near: Steuermann, Matrose
 Besen	noun	yes	an old-fashioned broom with a long wooden handle and a thick bundle of straw bristles bound with twine	
-Armband	noun	yes	a thin silver bracelet with a few small dangling charms, worn around a wrist	near: Ring, Kette, Schmuck
+Armband	noun	yes	a chunky gold link bracelet lying on its own in a loose circle, no hand or wrist	near: Ring, Kette, Schmuck
 Equipage	noun	no		duplicates Kutsche; near: Wagen
 Tagewerk	noun	no		abstract
 Enkelin	noun	no		relational
@@ -2896,7 +2896,7 @@ Rucksack	noun	yes	a green hiking backpack with two padded shoulder straps, a fro
 Schanze	noun	no		an earthwork reads as Wall or Festung
 Landrat	noun	no		role has no plain sign
 Apothekerin	noun	no		relational (pharmacist's wife)
-Läufer	noun	yes	a brown-haired runner in shorts and a vest, mid-stride with both feet off the ground, arms swinging	near: Athlet
+Läufer	noun	yes	a man with short brown hair, a runner in shorts and a vest, mid-stride with both feet off the ground, arms swinging	near: Athlet
 Weihnachtsabend	noun	no		time word; near: Weihnachten
 Beschützer	noun	no		relational
 Zipfel	noun	no		abstract (example: a region's tip)
@@ -3017,7 +3017,7 @@ lassen	verb	no		abstract
 geben	verb	scene	a man with dark hair handing a red apple to a blond girl who holds out an open hand	near: reichen, schenken, überreichen, anbieten
 denken	verb	no		thinking
 tun	verb	no		abstract
-liegen	verb	yes	a woman with chestnut hair in a ponytail lying on their back on the grass, eyes open, arms relaxed at the sides	near: ruhen, daliegen, schlafen
+liegen	verb	yes	a woman with chestnut hair in a ponytail lying flat on her back on a grassy meadow, seen from the side, her whole body horizontal, eyes open, arms relaxed	near: ruhen, daliegen, schlafen
 bleiben	verb	no		abstract
 sprechen	verb	no		speech; a talking figure fits reden, sagen and erzählen equally
 fragen	verb	no		speech
@@ -3029,7 +3029,7 @@ mögen	verb	no		abstract (liking)
 hören	verb	yes	an older man with grey hair cupping one hand behind an ear, listening carefully	near: zuhören, lauschen, horchen, anhören, vernehmen
 scheinen	verb	no		abstract (seem)
 glauben	verb	no		thinking
-rufen	verb	yes	a young woman with red hair calling out loudly with both hands cupped around the mouth	near: schreien, zurufen, brüllen, ausrufen
+rufen	verb	yes	a young woman with red hair seen from the side, calling out across a field to someone far away, both hands cupped around her open mouth like a funnel	near: schreien, zurufen, brüllen, ausrufen
 dürfen	verb	no		abstract (modal)
 fühlen	verb	no		abstract (feeling)
 bringen	verb	no		direction toward the speaker cannot be shown; a carrying figure reads as tragen
@@ -3068,7 +3068,7 @@ spielen	verb	yes	a fair-haired child sitting on the floor playing with a wooden 
 aussehen	verb	no		abstract
 lesen	verb	yes	a young man with blond hair sitting and reading an open book, eyes on the page	near: vorlesen, studieren, lernen
 nennen	verb	no		speech
-helfen	verb	scene	an older woman with white hair in a bun helping an elderly person up a step, holding their arm	near: stützen, unterstützen, retten
+helfen	verb	scene	a young man with red hair helping an old woman with a walking stick across a street, holding her arm to steady her	near: stützen, unterstützen, retten
 erheben	verb	no		duplicates aufstehen
 bitten	verb	no		pleading with clasped hands looks like beten
 verlassen	verb	no		abstract (abandon); leaving looks like weggehen
