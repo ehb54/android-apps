@@ -25,3 +25,8 @@ local.properties
 /tools/wordlists/cache/
 __pycache__/
 /tools/wordlists/work/
+
+# Picture pipeline (tools/pictures): venv, generated images, scratch
+/tools/pictures/.venv/
+/tools/pictures/*/raw/
+/tools/pictures/work/

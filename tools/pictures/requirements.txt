@@ -1,0 +1,3 @@
+# Image generation on Apple Silicon (MLX). Pinned so a picture can be regenerated.
+mflux==0.24.0
+pillow
