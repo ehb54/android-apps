@@ -1,11 +1,11 @@
 lemma	kind	picturable	prompt	note
 Herr	noun	no		duplicates Mann
 Hand	noun	yes	an open human hand, palm facing the viewer, all five fingers spread	near: Finger, Faust, Handgelenk
-Frau	noun	yes	an adult woman in a simple blue dress, standing, full figure	near: Dame, Weib, Fräulein, Frauenzimmer, Person
+Frau	noun	yes	an adult woman with long blond hair in a simple blue dress, standing, full figure	near: Dame, Weib, Fräulein, Frauenzimmer, Person
 Auge	noun	yes	a single open human eye with a brown iris and eyelashes, close up	near: Blick, Pupille, Lid, Wimper, Braue
-Mann	noun	yes	an adult man in a plain shirt and trousers, standing, full figure	near: Herr, Kerl, Bursche, Mensch, Person
+Mann	noun	yes	an adult man with short blond hair in a plain shirt and trousers, standing, full figure	near: Herr, Kerl, Bursche, Mensch, Person
 Tag	noun	no		abstract (time word)
-Kind	noun	yes	a small toddler of about three in a plain yellow T-shirt and shorts, standing	near: Junge, Mädchen, Baby, Säugling, Knabe, Schulkind
+Kind	noun	yes	a blond small toddler of about three in a plain yellow T-shirt and shorts, standing	near: Junge, Mädchen, Baby, Säugling, Knabe, Schulkind
 Mensch	noun	no		duplicates Mann
 Haus	noun	yes	a small detached house with a red pitched roof, a front door and two windows	near: Hütte, Villa, Gebäude, Wohnhaus, Landhaus, Heim
 Wort	noun	no		abstract
@@ -20,7 +20,7 @@ Jahr	noun	no		abstract (time word)
 Gott	noun	no		sensitive
 Blick	noun	no		abstract (an eye is Auge)
 Nacht	noun	scene	a quiet village at night under a dark blue sky with a crescent moon, stars and a few lit windows	near: Abend, Mitternacht, Dunkelheit, Finsternis, Mond, Stern
-Mädchen	noun	yes	a girl of about ten with two pigtails, in a simple dress, standing	near: Mädel, Kind, Tochter, Schülerin, Fräulein
+Mädchen	noun	yes	a girl of about ten with two blond pigtails, in a simple dress, standing	near: Mädel, Kind, Tochter, Schülerin, Fräulein
 Welt	noun	no		abstract (a globe would be read as Erde)
 Stimme	noun	no		abstract (a sound)
 Weg	noun	scene	a wide unpaved dirt track winding between green fields toward low hills	near: Pfad, Straße, Landstraße, Steig, Gasse, Allee
@@ -55,7 +55,7 @@ Sohn	noun	no		relational
 Name	noun	no		abstract
 Glück	noun	no		abstract (emotion)
 Arbeit	noun	no		abstract (a worker is Arbeiter)
-Junge	noun	yes	a boy of about ten with short hair, in a T-shirt and shorts, standing	near: Knabe, Bursche, Bube, Bengel, Kind, Sohn
+Junge	noun	yes	a boy of about ten with short red hair, in a T-shirt and shorts, standing	near: Knabe, Bursche, Bube, Bengel, Kind, Sohn
 Brief	noun	yes	a folded handwritten letter with wavy grey lines, half pulled out of a paper envelope	near: Umschlag, Post, Zettel, Schreiben, Telegramm, Depesche
 Weib	noun	no		duplicates Frau
 Dame	noun	no		duplicates Frau
@@ -81,7 +81,7 @@ Frage	noun	no		abstract
 Zug	noun	yes	a passenger train of three carriages pulled by a locomotive along rails	near: Eisenbahn, Bahn, Lokomotive, Wagen, Abteil; sense train per gloss
 Morgen	noun	no		abstract (time word; looks like Sonnenaufgang)
 Grund	noun	no		abstract
-Brust	noun	yes	the bare chest of a man seen from the front, from the collarbones to the waist	near: Oberkörper, Rumpf, Busen, Körper
+Brust	noun	yes	the bare chest of a man with light-brown hair seen from the front, from the collarbones to the waist	near: Oberkörper, Rumpf, Busen, Körper
 Schwester	noun	no		relational
 Blut	noun	no		sensitive (gory; a red drop would read as Tropfen)
 Sinn	noun	no		abstract
@@ -113,7 +113,7 @@ Kleid	noun	yes	a simple red knee-length summer dress with short sleeves, laid fl
 Traum	noun	no		abstract
 Träne	noun	yes	a single clear tear running down a cheek below an eye, close up	near: Tropfen, Weinen, Auge
 Stück	noun	no		abstract
-König	noun	yes	a king with a golden crown, a red robe trimmed with white fur and a sceptre	near: Kaiser, Fürst, Herzog, Prinz, Zar, Herrscher, Krone
+König	noun	yes	a blond king with a golden crown, a red robe trimmed with white fur and a sceptre	near: Kaiser, Fürst, Herzog, Prinz, Zar, Herrscher, Krone
 Volk	noun	no		abstract (a people as a whole)
 Weile	noun	no		abstract (time word)
 Tante	noun	no		relational
@@ -122,7 +122,7 @@ Wand	noun	scene	a plain light-green painted interior wall of a room, with a skir
 Schmerz	noun	no		abstract (a state)
 Hof	noun	scene	a small cobbled inner courtyard enclosed on all sides by tall building walls, entered through an archway	near: Platz, Bauernhof, Gehöft, Kirchhof
 Gast	noun	no		relational
-Bauer	noun	yes	a farmer in blue overalls and a straw hat, holding a pitchfork	near: Landmann, Landwirt, Bäuerin, Knecht, Pächter, Gärtner
+Bauer	noun	yes	a red-haired farmer in blue overalls and a straw hat, holding a pitchfork	near: Landmann, Landwirt, Bäuerin, Knecht, Pächter, Gärtner
 Höhe	noun	no		abstract
 Raum	noun	no		duplicates Zimmer
 Berg	noun	yes	a single tall rocky mountain with a snow-capped peak	near: Gebirge, Gipfel, Hügel, Anhöhe
@@ -139,7 +139,7 @@ Fall	noun	no		abstract
 Hund	noun	yes	a brown dog standing, side view, tail up	near: Wolf, Fuchs
 Kirche	noun	yes	a white village church with one tall pointed steeple, seen from outside	near: Kapelle, Dom, Kirchturm, Gotteshaus, Kloster, Tempel
 Wille	noun	no		abstract
-Familie	noun	scene	a man, a woman and two small children standing side by side, holding hands	near: Eltern, Geschwister, Ehepaar, Leute
+Familie	noun	scene	a man with red hair, a woman and two small children standing side by side, holding hands	near: Eltern, Geschwister, Ehepaar, Leute
 Natur	noun	no		abstract (a landscape is Landschaft)
 Eltern	noun	no		duplicates Familie
 Stein	noun	yes	a single smooth grey stone	near: Fels, Gestein, Brocken, Klumpen
@@ -163,7 +163,7 @@ Sehnsucht	noun	no		emotion
 Kampf	noun	no		abstract (struggle); a fight would be read as Streit, Schlacht or Duell
 Schicksal	noun	no		abstract
 Wange	noun	no		a cheek is not shown apart from Gesicht
-Rücken	noun	yes	the bare back of a man seen from behind, from the shoulders to the waist	near: Rückseite, Buckel, Brust
+Rücken	noun	yes	the bare back of a man with grey hair seen from behind, from the shoulders to the waist	near: Rückseite, Buckel, Brust
 Werk	noun	no		abstract
 Ausdruck	noun	no		abstract
 Blatt	noun	yes	a single blank cream sheet of paper, slightly tilted, with one corner curled up	near: Papier, Zettel, Seite, Laub; sense sheet per gloss
@@ -178,9 +178,9 @@ Roman	noun	no		duplicates Buch
 Sorge	noun	no		abstract
 Ecke	noun	no		relational (a corner is part of something else)
 Spiel	noun	yes	a board game: a square board with coloured paths, playing pieces and a dice	near: Spielzeug, Karte, Partie
-Arzt	noun	yes	a doctor in a white coat with a stethoscope around the neck	near: Doktor, Stabsarzt, Sanitätsrat, Pflegerin
+Arzt	noun	yes	a grey-haired doctor in a white coat with a stethoscope around the neck	near: Doktor, Stabsarzt, Sanitätsrat, Pflegerin
 Mark	noun	no		abstract (here a region, the Mark Brandenburg)
-Pfarrer	noun	yes	a priest in a long black cassock with a white clerical collar, standing	near: Pastor, Priester, Geistliche, Pater, Kaplan, Prediger
+Pfarrer	noun	yes	a brown-haired priest in a long black cassock with a white clerical collar, standing	near: Pastor, Priester, Geistliche, Pater, Kaplan, Prediger
 Macht	noun	no		abstract
 Professor	noun	no		duplicates Lehrer
 Hoffnung	noun	no		abstract
@@ -192,7 +192,7 @@ Knie	noun	yes	a close-up of a bent bare human knee seen from the side	near: Bein
 Schloss	noun	yes	a fairy-tale castle with white walls, slender towers with pointed blue roofs and a flag	near: Burg, Palast, Festung, Residenz
 Schönheit	noun	no		abstract
 Nähe	noun	no		abstract
-Lehrer	noun	yes	a male teacher standing at a blackboard with chalk shapes, holding a pointer	near: Lehrerin, Professor, Oberlehrer, Schulmeister, Schullehrer, Rektor
+Lehrer	noun	yes	a dark-haired male teacher standing at a blackboard with chalk shapes, holding a pointer	near: Lehrerin, Professor, Oberlehrer, Schulmeister, Schullehrer, Rektor
 Mama	noun	no		relational
 Schiff	noun	yes	a large three-masted sailing ship with white sails on blue waves	near: Boot, Dampfer, Kahn, Segel, Flotte
 Schnee	noun	scene	thick white snow covering the ground and a fence, with snowflakes falling from a grey sky	near: Winter, Flocke, Eis, Frost
@@ -209,7 +209,7 @@ Reihe	noun	no		abstract
 Kerl	noun	no		duplicates Mann
 Mut	noun	no		abstract
 Bursche	noun	no		duplicates Mann
-Soldat	noun	yes	a soldier in a plain green uniform and helmet, standing with a rifle on his shoulder	near: Offizier, Krieger, Hauptmann, Leutnant, Wache, Gewehr
+Soldat	noun	yes	a fair-haired soldier in a plain green uniform and helmet, standing with a rifle on his shoulder	near: Offizier, Krieger, Hauptmann, Leutnant, Wache, Gewehr
 Frieden	noun	no		abstract
 Monat	noun	no		abstract (time word)
 Schule	noun	scene	a school building with rows of windows and children with school bags walking to the entrance	near: Gymnasium, Universität, Hochschule, Klasse, Unterricht
@@ -247,7 +247,7 @@ Ziel	noun	no		abstract
 Ort	noun	no		abstract
 Pflicht	noun	no		abstract
 Miene	noun	no		abstract (a face is Gesicht)
-Diener	noun	yes	a male servant in old-fashioned livery and white gloves, holding a silver tray	near: Kellner, Kammerdiener, Lakai, Dienstbote, Portier
+Diener	noun	yes	a curly-haired male servant in old-fashioned livery and white gloves, holding a silver tray	near: Kellner, Kammerdiener, Lakai, Dienstbote, Portier
 Plan	noun	no		abstract (a map would read as Karte)
 Mühe	noun	no		abstract
 Glaube	noun	no		abstract
@@ -280,7 +280,7 @@ Herzog	noun	no		noble title with no plain look (near: Graf, Fürst, Baron)
 Gewalt	noun	no		abstract
 Ferne	noun	no		abstract
 Fremde	noun	no		relational
-Dichter	noun	yes	a man with a laurel wreath on his head writing with a quill pen at a small table	near: Schriftsteller, Verfasser, Schreiber
+Dichter	noun	yes	a white-haired man with a laurel wreath on his head writing with a quill pen at a small table	near: Schriftsteller, Verfasser, Schreiber
 Antlitz	noun	no		duplicates Gesicht
 Vogel	noun	yes	a small round songbird with blue feathers perched on a short branch	near: Spatz, Amsel, Taube
 Anfang	noun	no		abstract
@@ -329,7 +329,7 @@ Gruß	noun	no		gesture; a wave reads as Abschied too
 Hass	noun	no		emotion
 Fest	noun	scene	an outdoor village festival: colourful bunting strung overhead, long tables with food, people raising their glasses together	near: Feier, Hochzeit
 Beispiel	noun	no		abstract
-Braut	noun	yes	a bride in a long white wedding dress and veil, holding a bouquet of flowers	near: Hochzeit, Bräutigam, Schleier
+Braut	noun	yes	a brown-haired bride in a long white wedding dress and veil, holding a bouquet of flowers	near: Hochzeit, Bräutigam, Schleier
 Fahrt	noun	no		event; reads as Reise, Wagen or Zug
 Mond	noun	yes	a large pale yellow crescent moon in a dark blue night sky	near: Vollmond, Mondschein, Mondlicht, Stern
 Stolz	noun	no		emotion
@@ -346,7 +346,7 @@ Kaffee	noun	yes	a white cup of steaming black coffee on a saucer, a few roasted 
 Opfer	noun	no		relational
 Spur	noun	no		abstract
 Idee	noun	no		abstract
-Maler	noun	yes	a man in a smock painting at a wooden easel, holding a palette and a brush	near: Künstler, Künstlerin, Bildhauer
+Maler	noun	yes	a man with dark hair in a smock painting at a wooden easel, holding a palette and a brush	near: Künstler, Künstlerin, Bildhauer
 Glocke	noun	yes	a large bronze church bell hanging from a wooden beam	near: Klingel
 Gold	noun	yes	a small stack of shiny gold bars with a few gold nuggets in front	near: Schatz, Goldstück, Silber
 Großmutter	noun	no		relational
@@ -441,7 +441,7 @@ Reich	noun	no		abstract
 Bitte	noun	no		abstract
 Sicherheit	noun	no		abstract
 Last	noun	no		a carried load reads as Sack or Träger
-Student	noun	yes	a young man in a black graduation cap and gown, carrying books under his arm	near: Schüler
+Student	noun	yes	a young man with short blond hair in a black graduation cap and gown, carrying books under his arm	near: Schüler
 Verzweiflung	noun	no		emotion
 Karte	noun	yes	a single playing card showing red heart shapes on its face	near: Billett
 Dank	noun	no		abstract
@@ -451,7 +451,7 @@ Möglichkeit	noun	no		abstract
 Vorwurf	noun	no		abstract
 Hügel	noun	yes	a single round green grassy hill under a blue sky	near: Berg, Anhöhe
 Stand	noun	no		abstract
-Wirt	noun	yes	a stout innkeeper in a white apron behind a wooden bar counter, filling a beer mug from a barrel tap	near: Kellner, Wirtin
+Wirt	noun	yes	a red-haired stout innkeeper in a white apron behind a wooden bar counter, filling a beer mug from a barrel tap	near: Kellner, Wirtin
 Lauf	noun	no		abstract
 Mittag	noun	no		abstract (time)
 Güte	noun	no		abstract
@@ -475,20 +475,20 @@ Staub	noun	no		no plain picture; reads as Schmutz or Rauch
 Million	noun	no		abstract (a number)
 Magd	noun	no		role with no plain look; a farm woman reads as Bäuerin (near: Dienstmädchen)
 Verstand	noun	no		abstract
-Tanz	noun	scene	a man and a woman dancing a waltz together, her long skirt swirling	near: Walzer, Reigen, Tänzer, Tänzerin, Ball
+Tanz	noun	scene	a man with light-brown hair and a woman dancing a waltz together, her long skirt swirling	near: Walzer, Reigen, Tänzer, Tänzerin, Ball
 Park	noun	scene	a public park with a winding gravel path, lawns, round trees and a park bench	near: Garten, Allee
 Stamm	noun	no		sensitive (a people or tribe)
-Richter	noun	yes	a judge in a black robe holding a wooden gavel, seated at a high bench	near: Anwalt, Rechtsanwalt, Staatsanwalt, Gericht
+Richter	noun	yes	a grey-haired judge in a black robe holding a wooden gavel, seated at a high bench	near: Anwalt, Rechtsanwalt, Staatsanwalt, Gericht
 Gegenstand	noun	no		abstract
 Wirkung	noun	no		abstract
 Druck	noun	no		abstract
 Bart	noun	yes	a man's head with a big bushy brown beard, the beard filling most of the picture	near: Vollbart, Schnurrbart
 Fantasie	noun	no		abstract
-Arbeiter	noun	yes	a factory worker in blue overalls and a flat cap, holding a large wrench	near: Handwerker, Knecht
+Arbeiter	noun	yes	a brown-haired factory worker in blue overalls and a flat cap, holding a large wrench	near: Handwerker, Knecht
 Masse	noun	no		abstract
 Schatz	noun	yes	an open wooden treasure chest overflowing with gold coins, pearls and jewels	near: Truhe, Gold, Goldstück, Schmuck
 Geschlecht	noun	no		abstract
-Hochzeit	noun	scene	a bride in white and a groom in a black suit walking out of a church while guests throw petals	near: Braut, Bräutigam, Brautpaar, Trauung
+Hochzeit	noun	scene	a fair-haired bride in white and a groom in a black suit walking out of a church while guests throw petals	near: Braut, Bräutigam, Brautpaar, Trauung
 Kette	noun	yes	a length of heavy grey iron chain with large interlocking links	near: Fessel
 Blüte	noun	yes	close-up of two open pink cherry blossoms with yellow stamens on a short bit of dark twig	near: Blume, Knospe, Zweig, Frühling
 Tropfen	noun	yes	a single clear blue drop of water, round at the bottom and pointed at the top	near: Träne, Tau, Regen
@@ -497,7 +497,7 @@ Gegenteil	noun	no		abstract
 Jahrhundert	noun	no		abstract (time)
 Insel	noun	yes	a small sandy island with a single palm tree in the middle of a blue sea	near: Küste, Strand, Palme
 Feder	noun	yes	a single long white bird feather	near: Flügel
-Kuss	noun	scene	a man and a woman kissing on the lips, seen in profile	near: Umarmung, Liebkosung
+Kuss	noun	scene	a man with red hair and a woman kissing on the lips, seen in profile	near: Umarmung, Liebkosung
 Dämmerung	noun	no		time of day; reads as Abend or Sonnenuntergang
 Sünde	noun	no		abstract
 Vorhang	noun	yes	heavy dark red velvet curtains hanging closed from a curtain rod, falling in deep vertical folds	near: Gardine, Bühne
@@ -527,7 +527,7 @@ Kloster	noun	scene	a walled medieval monastery: stone buildings with a bell towe
 Urteil	noun	no		abstract
 Mütze	noun	yes	a knitted wool cap with a pompom on top	near: Hut, Haube
 Majestät	noun	no		abstract
-Ritter	noun	yes	a medieval knight in full shining armor and a plumed helmet, holding a sword and a shield	near: Reiter, Rüstung, Soldat
+Ritter	noun	yes	a dark-haired medieval knight in full shining armor and a plumed helmet, holding a sword and a shield	near: Reiter, Rüstung, Soldat
 Vetter	noun	no		relational
 Schutz	noun	no		abstract
 Anspruch	noun	no		abstract
@@ -541,7 +541,7 @@ Franzose	noun	no		sensitive
 Messer	noun	yes	a kitchen knife with a wooden handle and a pointed steel blade	near: Dolch, Klinge, Schwert
 Erfahrung	noun	no		abstract
 Vergnügen	noun	no		abstract
-Königin	noun	yes	a queen in a red robe trimmed with white ermine, wearing a large golden crown and holding a scepter	near: Kaiserin, Prinzessin, König, Krone
+Königin	noun	yes	a fair-haired queen in a red robe trimmed with white ermine, wearing a large golden crown and holding a scepter	near: Kaiserin, Prinzessin, König, Krone
 Herbst	noun	no		time word (season); an autumn scene reads as Laub or Baum
 Maß	noun	no		abstract
 Novelle	noun	no		abstract
@@ -554,7 +554,7 @@ Held	noun	no		abstract role, no plain dress
 Schrecken	noun	no		emotion
 Eis	noun	yes	a few clear glistening ice cubes with frosty edges	near: Schnee, Frost, Gletscher
 Aufmerksamkeit	noun	no		abstract
-Jäger	noun	yes	a hunter in a green jacket and a feathered hat, a rifle over his shoulder and a hunting dog at his side	near: Förster, Schütze
+Jäger	noun	yes	a curly-haired hunter in a green jacket and a feathered hat, a rifle over his shoulder and a hunting dog at his side	near: Förster, Schütze
 Kälte	noun	no		state
 Verkehr	noun	no		example is social contact (abstract); street traffic would read as Straße, Auto
 Flut	noun	scene	brown floodwater covering a village street up to the windows of the houses	near: Welle, Wasser
@@ -579,7 +579,7 @@ Auflage	noun	no		abstract
 Kehle	noun	no		duplicates Hals
 Zeuge	noun	no		abstract role, no plain dress
 Gedicht	noun	no		made of text
-Reiter	noun	yes	a rider in boots and a riding jacket sitting on a trotting brown horse	near: Ritter, Pferd
+Reiter	noun	yes	a white-haired rider in boots and a riding jacket sitting on a trotting brown horse	near: Ritter, Pferd
 Gattin	noun	no		relational
 Gruppe	noun	no		a group of people reads as Leute
 Regiment	noun	no		a body of soldiers reads as Soldat
@@ -593,13 +593,13 @@ Flucht	noun	no		abstract
 Partei	noun	no		abstract
 Kugel	noun	yes	a heavy polished steel sphere resting on the ground, reflecting the light	near: Ball
 Landschaft	noun	no		generic; any landscape reads as Gegend, Natur, Feld
-Gebet	noun	no		sensitive
+Gebet	noun	yes	close-up of two hands with the fingers folded together in prayer	near: Hand, Händedruck
 Tatsache	noun	no		abstract
-Engel	noun	yes	an angel with large white feathered wings, a long white robe and a golden halo	fairy-tale figure; near: Fee, Geist
+Engel	noun	yes	a curly-haired angel with large white feathered wings, a long white robe and a golden halo	fairy-tale figure; near: Fee, Geist
 Scham	noun	no		emotion
 Tafel	noun	yes	a blank dark green school blackboard in a wooden frame, a piece of chalk and a sponge on its ledge	near: Brett, Schild
 Gräfin	noun	no		noble title; a figure reads as Dame
-Sprung	noun	yes	a person in mid-leap high above the ground, legs stretched wide apart, arms raised	action noun
+Sprung	noun	yes	a woman with long blond hair in mid-leap high above the ground, legs stretched wide apart, arms raised	action noun
 Nerv	noun	no		not visible
 Amt	noun	no		abstract
 Zahl	noun	no		abstract; digits would be text
@@ -686,8 +686,8 @@ Heer	noun	no		a body of soldiers reads as Soldat
 Lehre	noun	no		abstract
 Trauer	noun	no		emotion
 Bord	noun	no		relational (an Bord)
-Kaufmann	noun	scene	a shopkeeper in a long apron behind a wooden counter, weighing goods on a balance scale, shelves of jars behind	near: Händler, Laden, Wirt
-Räuber	noun	yes	a robber in a black eye mask and dark clothes, carrying a bulging sack over his shoulder	near: Dieb
+Kaufmann	noun	scene	a blond shopkeeper in a long apron behind a wooden counter, weighing goods on a balance scale, shelves of jars behind	near: Händler, Laden, Wirt
+Räuber	noun	yes	a red-haired robber in a black eye mask and dark clothes, carrying a bulging sack over his shoulder	near: Dieb
 Bühne	noun	scene	an empty wooden theatre stage with red curtains drawn open at the sides and spotlights shining on it	near: Theater, Vorhang
 Villa	noun	yes	a large elegant white villa with columns, balconies and tall windows, set in a garden with a gravel drive	near: Haus, Landhaus, Schloss, Palast
 Tee	noun	yes	a white teapot pouring golden-brown tea into a cup on a saucer	near: Kaffee
@@ -720,7 +720,7 @@ Persönlichkeit	noun	no		abstract
 Ader	noun	no		a vein reads as Hand, Arm
 Teller	noun	yes	an empty round white dinner plate seen from slightly above	near: Schüssel, Schale
 Gebiet	noun	no		abstract
-Kutscher	noun	scene	a coachman in a top hat and caped greatcoat on the high driver's box, holding the reins and a long whip	near: Wagen, Kutsche
+Kutscher	noun	scene	a grey-haired coachman in a top hat and caped greatcoat on the high driver's box, holding the reins and a long whip	near: Wagen, Kutsche
 Ruck	noun	no		abstract
 Frühstück	noun	scene	a breakfast table with a boiled egg in an egg cup, bread rolls, butter, jam and a cup of coffee	near: Mahlzeit, Essen, Abendbrot, Abendessen
 Geduld	noun	no		abstract
@@ -733,7 +733,7 @@ Publikum	noun	no		a seated crowd reads as Leute, Zuschauer
 Schlacht	noun	no		violence; no plain difference from Krieg, Kampf
 Schwert	noun	yes	a straight double-edged medieval sword with a cross-shaped hilt and a leather-wrapped grip	near: Säbel, Degen, Dolch, Klinge
 Ewigkeit	noun	no		time
-Mönch	noun	yes	a monk in a brown hooded habit tied with a white rope belt, hands tucked into his sleeves	near: Pater, Abt, Pfarrer, Priester, Kutte
+Mönch	noun	yes	a brown-haired monk in a brown hooded habit tied with a white rope belt, hands tucked into his sleeves	near: Pater, Abt, Pfarrer, Priester, Kutte
 Witz	noun	no		speech
 Landstraße	noun	scene	a paved country road running between open fields, lined with tall trees on both sides	near: Straße, Weg, Pfad
 Kavalier	noun	no		no plain dress; a figure reads as Herr, Mann
@@ -755,13 +755,13 @@ Verbrechen	noun	no		abstract
 Kindheit	noun	no		abstract (a time of life)
 Segel	noun	yes	a white triangular sail billowing in the wind, close up, attached to part of a wooden mast	near: Boot, Mast, Schiff
 Vieh	noun	scene	several farm animals crowded together in a wooden farmyard pen: two cows, a pig and a goat	near: Herde, Kuh, Rind, Tier
-Bischof	noun	yes	a bishop in white and gold robes wearing a tall pointed mitre and holding a crook-topped staff	near: Erzbischof, Abt, Kardinal, Papst, Priester
+Bischof	noun	yes	a dark-haired bishop in white and gold robes wearing a tall pointed mitre and holding a crook-topped staff	near: Erzbischof, Abt, Kardinal, Papst, Priester
 Brett	noun	yes	a single long flat wooden plank with visible wood grain, lying diagonally	near: Balken, Diele, Platte
 Salon	noun	no		duplicates Zimmer
 Melodie	noun	no		abstract
 Abgrund	noun	scene	the edge of a rocky cliff dropping straight down into a dark, bottomless chasm, seen from above	near: Schlucht, Kluft, Klippe, Tiefe, Abhang
 Mitteilung	noun	no		abstract
-Narr	noun	yes	a court jester in a red and yellow costume with a three-pointed cap tipped with bells	drawn as a jester; near: Spielmann
+Narr	noun	yes	a fair-haired court jester in a red and yellow costume with a three-pointed cap tipped with bells	drawn as a jester; near: Spielmann
 Fleck	noun	yes	a close-up of white fabric with one large brown coffee stain in the middle	near: Schmutz, Dreck
 Geheimrat	noun	no		a title; a picture shows a man
 Zeug	noun	no		abstract
@@ -771,7 +771,7 @@ Gehirn	noun	yes	a pink human brain seen from the side, with folds and furrows
 Hemd	noun	yes	a white men's button-up shirt with a collar and long sleeves, laid flat	near: Bluse, Kittel
 Halle	noun	no		duplicates Saal
 Kranz	noun	yes	a round wreath of green leaves woven with small white flowers	near: Krone, Ring
-Kellner	noun	yes	a waiter in a black vest and long white apron carrying a tray of glasses, a towel over his arm	near: Kellnerin, Diener, Wirt
+Kellner	noun	yes	a curly-haired waiter in a black vest and long white apron carrying a tray of glasses, a towel over his arm	near: Kellnerin, Diener, Wirt
 Herrlichkeit	noun	no		abstract
 Gabe	noun	no		abstract; a wrapped gift is Geschenk
 Neugier	noun	no		abstract (emotion)
@@ -817,7 +817,7 @@ Auto	noun	yes	a small red car seen from the side	near: Wagen, Fahrzeug
 Altar	noun	yes	a stone church altar covered with a white cloth, two lit candles standing on it	near: Tisch, Kerze
 Korb	noun	yes	a woven wicker basket with a curved handle	near: Kasten, Kiste
 Zauber	noun	no		abstract
-Wirtin	noun	yes	a woman innkeeper in an apron behind a wooden inn counter, pouring beer from a tap	near: Wirt, Kellnerin
+Wirtin	noun	yes	a white-haired woman innkeeper in an apron behind a wooden inn counter, pouring beer from a tap	near: Wirt, Kellnerin
 Brand	noun	scene	a house on fire, bright flames and black smoke pouring from its windows and roof	near: Feuer, Flamme, Rauch
 Möbel	noun	scene	a group of furniture standing together: a wardrobe, a table, a chair and a small sofa	near: Einrichtung, Schrank, Stuhl, Sofa
 Christ	noun	no		sensitive
@@ -837,7 +837,7 @@ Weisheit	noun	no		abstract
 Keller	noun	scene	a dim stone cellar with a vaulted ceiling, wooden barrels and shelves of jars, steps leading down	near: Gewölbe, Kerker
 Spaziergang	noun	scene	two people strolling slowly arm in arm along a tree-lined park path	near: Wanderung, Ausflug, Gehen
 Hitze	noun	no		abstract; a hot sun reads as Sonne or Sommer
-Künstlerin	noun	yes	a woman painter holding a palette and brush, painting a canvas on an easel	near: Maler, Künstler
+Künstlerin	noun	yes	a blond woman painter holding a palette and brush, painting a canvas on an easel	near: Maler, Künstler
 Pater	noun	no		duplicates Pfarrer
 Rittmeister	noun	no		duplicates Offizier
 Markt	noun	scene	an open-air market with stalls of fruit and vegetables under striped awnings	near: Marktplatz, Laden, Messe
@@ -885,7 +885,7 @@ Ast	noun	yes	a thick bare branch growing sideways out of a tree trunk, shown clo
 Ungeduld	noun	no		abstract
 Vormittag	noun	no		abstract (time)
 Begegnung	noun	no		abstract
-Fischer	noun	yes	a fisherman in a yellow oilskin hat and rubber boots holding up a big fish, a rowboat behind him	near: Matrose, Seemann, Schiffer
+Fischer	noun	yes	a red-haired fisherman in a yellow oilskin hat and rubber boots holding up a big fish, a rowboat behind him	near: Matrose, Seemann, Schiffer
 Westen	noun	no		abstract (direction)
 Fluch	noun	no		abstract
 Mangel	noun	no		abstract
@@ -894,7 +894,7 @@ Klavier	noun	yes	an upright wooden piano with black and white keys and a small r
 Bär	noun	yes	a big brown bear standing on all four legs	
 Donner	noun	no		a sound; a storm picture is Blitz or Gewitter
 Horizont	noun	no		a horizon picture reads as Meer or Landschaft
-Beifall	noun	no		clapping hands read as Hand or Publikum
+Beifall	noun	yes	two hands clapping in applause, small motion lines around them, close up	near: Hand, Händedruck, Publikum
 Mai	noun	no		abstract (time)
 Hahn	noun	yes	a proud rooster with a tall red comb, wattles and a long arching tail of dark green feathers	near: Huhn
 Geschrei	noun	no		a sound
@@ -903,7 +903,7 @@ Schluchzen	noun	no		abstract (emotion)
 Heiterkeit	noun	no		abstract (emotion)
 Rauschen	noun	no		a sound
 Schrank	noun	yes	a tall wooden wardrobe with two closed doors and small round knobs	near: Kommode, Garderobe
-Lächeln	noun	no		a smiling face cannot tell Lächeln from Grinsen or Freude
+Lächeln	noun	yes	a close-up of the face of a woman with red hair and a warm closed-mouth smile	near: Gesicht, Grinsen, Mund
 Post	noun	no		mail reads as Brief
 Erlaubnis	noun	no		abstract
 Heft	noun	yes	a thin school exercise book with a soft blue cover, lying open on lined pages	near: Buch, Notizbuch, Tagebuch
@@ -911,7 +911,7 @@ Riese	noun	scene	a huge bearded giant striding past tiny houses and trees that r
 Gebäude	noun	yes	a large plain multi-storey stone building with many rows of identical windows	near: Haus, Bau, Wohnhaus, Palast
 Schmuck	noun	yes	an open jewelry box overflowing with necklaces, rings, earrings and a bracelet	near: Ring, Kette, Kleinod
 Mörder	noun	no		sensitive
-Lehrerin	noun	yes	a woman teacher standing at a blackboard, pointing at simple chalk shapes with a pointer	near: Lehrer, Schullehrer
+Lehrerin	noun	yes	a grey-haired woman teacher standing at a blackboard, pointing at simple chalk shapes with a pointer	near: Lehrer, Schullehrer
 Graben	noun	scene	a long narrow ditch dug along a grassy field, with muddy water at the bottom	near: Grube, Kanal, Furche
 Widerspruch	noun	no		abstract
 Mord	noun	no		sensitive
@@ -966,7 +966,7 @@ Verwirrung	noun	no		abstract
 Kragen	noun	yes	a white shirt seen from the front with its pointed collar highlighted in a contrasting color	near: Hemd, Hals
 Triumph	noun	no		abstract
 Pracht	noun	no		abstract
-Hüfte	noun	yes	a standing woman seen from the side, her hip highlighted in a warm color	near: Taille, Schenkel, Bauch
+Hüfte	noun	yes	a brown-haired standing woman seen from the side, her hip highlighted in a warm color	near: Taille, Schenkel, Bauch
 Probe	noun	no		abstract
 Zügel	noun	yes	leather reins held in a rider's two hands, running forward to a horse's bridle, close up	near: Leine, Riemen, Sattel
 Terrasse	noun	scene	a paved stone terrace beside a house, with a small table, two chairs and potted plants	near: Balkon, Veranda
@@ -1030,7 +1030,7 @@ Drang	noun	no		abstract
 Bitterkeit	noun	no		abstract
 Handschuh	noun	yes	a single grey knitted wool glove with a ribbed cuff	
 Bauch	noun	yes	a man's round bare belly seen from the side, close up, with the belly button	near: Magen, Körper, Oberkörper, Rumpf, Taille
-Bäuerin	noun	yes	a sturdy woman farmer in work clothes, headscarf and rubber boots, holding a pitchfork	near: Bauer, Magd, Landwirt, Dienstmädchen
+Bäuerin	noun	yes	a dark-haired sturdy woman farmer in work clothes, headscarf and rubber boots, holding a pitchfork	near: Bauer, Magd, Landwirt, Dienstmädchen
 Prozess	noun	no		abstract; a courtroom is Gericht
 Vernunft	noun	no		abstract
 Rahmen	noun	yes	an empty ornate gilded picture frame	near: Bild, Gemälde
@@ -1049,7 +1049,7 @@ Silber	noun	yes	two gleaming bright silver ingots with a mirror-like shine	near:
 Adresse	noun	no		abstract; made of writing
 Bräutigam	noun	no		a man in a suit; a groom is plain only beside the bride (Braut, Brautpaar)
 Lord	noun	no		title; looks like Herr or Edelmann
-Verbeugung	noun	yes	a person bowing deeply from the waist, one arm folded across the chest	near: Gruß, Begrüßung, Kompliment
+Verbeugung	noun	yes	a man with short light-brown hair bowing deeply from the waist, one arm folded across the chest	near: Gruß, Begrüßung, Kompliment
 Puppe	noun	yes	a classic doll with curly hair and a frilly pink dress, sitting upright	near: Spielzeug
 Eifersucht	noun	no		abstract (emotion)
 Palast	noun	yes	a grand wide palace with a long symmetrical facade, rows of tall windows, a central dome and a broad stone stairway	near: Schloss, Burg, Residenz, Festung, Villa, Herrenhaus
@@ -1076,7 +1076,7 @@ Humor	noun	no		abstract
 Fach	noun	no		a compartment reads as Schrank, Schublade or Kasten
 Abt	noun	no		duplicates Mönch
 Vorbereitung	noun	no		abstract
-Dieb	noun	yes	a masked thief in a dark cap and striped shirt tiptoeing away with a bulging sack over his shoulder	near: Räuber, Verbrecher, Gauner, Einbruch
+Dieb	noun	yes	a fair-haired masked thief in a dark cap and striped shirt tiptoeing away with a bulging sack over his shoulder	near: Räuber, Verbrecher, Gauner, Einbruch
 Unterredung	noun	no		abstract (speech; looks like Gespräch)
 Laub	noun	yes	a heap of fallen autumn leaves in orange, red and brown	near: Blatt, Herbst, Gebüsch
 Trieb	noun	no		abstract
@@ -1119,7 +1119,7 @@ Bann	noun	no		abstract
 Geburtstag	noun	scene	a round birthday cake with lit candles on top, two wrapped presents with ribbons and a few balloons beside it	near: Kuchen, Geschenk, Fest, Feier, Kerze
 Andacht	noun	no		abstract
 Höflichkeit	noun	no		abstract
-Verlobung	noun	scene	a man kneeling on one knee, holding up an open ring box to a smiling woman	near: Hochzeit, Heirat, Ring, Werbung, Antrag
+Verlobung	noun	scene	a man with grey hair kneeling on one knee, holding up an open ring box to a smiling woman	near: Hochzeit, Heirat, Ring, Werbung, Antrag
 Bewohner	noun	no		relational
 Lob	noun	no		abstract
 Nadel	noun	yes	a single long steel sewing needle with a short red thread through its eye	near: Faden, Stachel, Dorn
@@ -1130,7 +1130,7 @@ Aussehen	noun	no		abstract
 Minister	noun	no		role not plain by dress
 Betrachtung	noun	no		abstract
 Auskunft	noun	no		abstract
-Matrose	noun	yes	a sailor in a white sailor cap and a navy blue uniform with a wide square collar	near: Seemann, Schiffer, Kapitän, Steuermann
+Matrose	noun	yes	a curly-haired sailor in a white sailor cap and a navy blue uniform with a wide square collar	near: Seemann, Schiffer, Kapitän, Steuermann
 Behagen	noun	no		abstract
 Maus	noun	yes	a small grey mouse with round pink ears and a long thin tail	near: Ratte, Fledermaus
 Gitter	noun	yes	a square metal grating made of a grid of crossed black iron bars	near: Zaun, Geländer, Käfig, Gefängnis
@@ -1150,7 +1150,7 @@ Vortrag	noun	no		speech; a speaker at a lectern reads as Rede, Redner or Vorlesu
 Hohn	noun	no		abstract
 Standpunkt	noun	no		abstract
 Bock	noun	no		duplicates Ziege
-Pirat	noun	yes	a pirate with an eye patch, a black tricorn hat and a cutlass	near: Räuber, Matrose, Seemann
+Pirat	noun	yes	a white-haired pirate with an eye patch, a black tricorn hat and a cutlass	near: Räuber, Matrose, Seemann
 Schaf	noun	yes	a fluffy white sheep standing in short grass	near: Lamm, Herde
 Kahn	noun	no		duplicates Boot
 Notwendigkeit	noun	no		abstract
@@ -1211,7 +1211,7 @@ Streich	noun	no		abstract
 Genugtuung	noun	no		abstract
 Stange	noun	no		a plain pole looks like Stab, Stock, Pfahl or Rohr
 Studium	noun	no		abstract
-Bettler	noun	scene	a man in ragged patched clothes sitting on the pavement, holding out his cap for coins	near: Lump, Armut, Pilger
+Bettler	noun	scene	a man with dark hair in ragged patched clothes sitting on the pavement, holding out his cap for coins	near: Lump, Armut, Pilger
 Verwunderung	noun	no		abstract (emotion)
 Zar	noun	no		duplicates König
 Besucher	noun	no		relational
@@ -1225,7 +1225,7 @@ Runde	noun	no		abstract
 Ohnmacht	noun	no		a state; a fainting person reads as Schwindel or Schlaf
 Schirm	noun	yes	an open red umbrella with a curved wooden handle	near: Regen
 Donnerwetter	noun	no		abstract
-Wache	noun	scene	a soldier standing guard with a rifle beside a striped sentry box at a gate	near: Wächter, Posten, Soldat, Garde
+Wache	noun	scene	a blond soldier standing guard with a rifle beside a striped sentry box at a gate	near: Wächter, Posten, Soldat, Garde
 Horn	noun	yes	a single curved cream-coloured animal horn with a dark pointed tip	near: Trompete
 Predigt	noun	no		speech; a priest in a pulpit reads as Pfarrer or Prediger
 Major	noun	no		duplicates Offizier
@@ -1242,7 +1242,7 @@ Wiege	noun	yes	an empty wooden baby cradle on curved rockers	near: Bett
 Adler	noun	yes	a golden eagle with spread wings and a hooked yellow beak	near: Vogel
 Bund	noun	no		abstract
 Unheil	noun	no		abstract
-Dienstmädchen	noun	yes	a young housemaid in a black dress, white frilled apron and white cap, holding a feather duster	near: Magd, Dienerin, Zofe, Dienstbote, Mädchen
+Dienstmädchen	noun	yes	a red-haired young housemaid in a black dress, white frilled apron and white cap, holding a feather duster	near: Magd, Dienerin, Zofe, Dienstbote, Mädchen
 Sammlung	noun	no		abstract
 Ausflug	noun	no		abstract; an outing shows as Wanderung or Spaziergang
 Scheune	noun	yes	a large red wooden barn with open double doors and hay bales stacked inside	near: Stall, Speicher, Bauernhof, Gehöft
@@ -1270,11 +1270,11 @@ Abendessen	noun	no		duplicates Essen (a meal at a table; near: Mahlzeit, Mittage
 Prüfung	noun	no		abstract
 Ausbruch	noun	no		abstract (emotional outburst)
 Fußboden	noun	no		duplicates Boden (near: Diele, Parkett)
-Köchin	noun	yes	a woman cook in a white chef's jacket and tall white chef's hat stirring a steaming pot with a wooden spoon	near: Hausfrau, Haushälterin
+Köchin	noun	yes	a grey-haired woman cook in a white chef's jacket and tall white chef's hat stirring a steaming pot with a wooden spoon	near: Hausfrau, Haushälterin
 Becher	noun	yes	a tall straight-sided pewter drinking cup without a handle	near: Tasse, Glas, Kelch, Krug
 Weh	noun	no		abstract
 Hang	noun	no		abstract
-Sänger	noun	yes	a man in a dark suit singing with mouth wide open and eyes closed, holding an old-fashioned microphone	near: Sängerin, Gesang, Musiker
+Sänger	noun	yes	a man with short blond hair in a dark suit singing with mouth wide open and eyes closed, holding an old-fashioned microphone	near: Sängerin, Gesang, Musiker
 Literatur	noun	no		abstract
 Teich	noun	scene	a small round pond with green lily pads floating on it and reeds at its edge, grass around it	near: See, Pfütze, Gewässer
 Sitzung	noun	no		duplicates Versammlung (people around a table; near: Besprechung, Beratung)
@@ -1299,7 +1299,7 @@ Untersuchung	noun	no		abstract
 Gefährt	noun	no		generic: a picture shows a specific vehicle (near: Fahrzeug, Wagen)
 Nation	noun	no		abstract
 Durst	noun	no		state, not shown plainly
-Hexe	noun	yes	a fairy-tale witch in a black pointed hat and long dark cloak flying on a broomstick	near: Zauberer, Fee
+Hexe	noun	yes	a blond fairy-tale witch in a black pointed hat and long dark cloak flying on a broomstick	near: Zauberer, Fee
 Leistung	noun	no		abstract
 Feldwebel	noun	no		duplicates Soldat (a rank is not visible; near: Unteroffizier, Wachtmeister)
 Jacke	noun	yes	a short blue zip-up jacket reaching the hips, with a collar and two side pockets	near: Mantel, Anzug, Weste
@@ -1324,11 +1324,11 @@ Weinen	noun	no		duplicates Träne (a crying face; near: Schluchzen)
 Kohle	noun	yes	a small heap of shiny black lumps of coal	near: Stein
 Laube	noun	yes	a small wooden garden arbor with an arched lattice roof overgrown with green climbing vines and a bench inside	near: Veranda
 Traurigkeit	noun	no		emotion
-Hirt	noun	scene	a shepherd in a cloak and hat holding a long crook staff, two sheep grazing beside him	near: Bauer, Herde
+Hirt	noun	scene	a brown-haired shepherd in a cloak and hat holding a long crook staff, two sheep grazing beside him	near: Bauer, Herde
 Kartoffel	noun	yes	a single brown potato with small dark eyes	
 Klub	noun	no		abstract (near: Verein)
 Birke	noun	yes	a slender birch tree with a white trunk marked by black streaks and small light green leaves	near: Baum, Buche, Pappel
-Sieger	noun	scene	an athlete on the highest step of a three-step podium raising a gold trophy cup above the head	near: Sieg, Triumph, Meister
+Sieger	noun	scene	a red-haired athlete on the highest step of a three-step podium raising a gold trophy cup above the head	near: Sieg, Triumph, Meister
 Grau	noun	yes	a plain flat square of solid medium grey	near: Farbe
 Stab	noun	no		duplicates Stock (near: Stange, Rute)
 Schriftsteller	noun	no		duplicates Dichter (a person writing; near: Verfasser, Schreiber)
@@ -1338,7 +1338,7 @@ Fetzen	noun	no		a torn scrap is not plainly apart from Tuch, Stoff
 Saite	noun	yes	close-up of four taut metal strings stretched over the small wooden bridge of a violin, one string vibrating	near: Geige, Faden, Schnur
 Zeigefinger	noun	no		duplicates Finger (near: Daumen, Fingerspitze)
 Firma	noun	no		abstract
-Wanderer	noun	scene	a hiker with a backpack and walking stick striding along a mountain path	near: Wanderung, Spaziergang, Pilger
+Wanderer	noun	scene	a dark-haired hiker with a backpack and walking stick striding along a mountain path	near: Wanderung, Spaziergang, Pilger
 Vorwand	noun	no		abstract
 Besinnung	noun	no		abstract
 Wolf	noun	yes	a grey wolf with a bushy tail sitting with its head raised, howling	near: Hund, Fuchs
@@ -1380,7 +1380,7 @@ Hammer	noun	yes	a claw hammer with a wooden handle and a steel head
 Abendbrot	noun	no		duplicates Essen (near: Abendessen, Mahlzeit)
 Gehen	noun	no		duplicates Spaziergang (a walking figure; near: Schritt)
 Marsch	noun	no		action; marching soldiers show Soldat or Regiment
-Schülerin	noun	scene	a schoolgirl with a satchel on her back sitting at a school desk writing in an exercise book	near: Schüler, Mädchen, Schulkind
+Schülerin	noun	scene	a brown-haired schoolgirl with a satchel on her back sitting at a school desk writing in an exercise book	near: Schüler, Mädchen, Schulkind
 Busen	noun	no		duplicates Brust
 Los	noun	no		a lottery ticket needs printed numbers (near: Billett)
 Kompanie	noun	no		duplicates Regiment (near: Truppe, Bataillon)
@@ -1411,7 +1411,7 @@ Akt	noun	no		abstract
 Ausführung	noun	no		abstract
 Erbarmen	noun	no		abstract
 Vorsatz	noun	no		abstract
-Schauspieler	noun	scene	a male actor in a velvet doublet and ruff collar on a stage between red curtains, one arm raised dramatically	near: Schauspielerin, Sänger, Redner
+Schauspieler	noun	scene	a fair-haired male actor in a velvet doublet and ruff collar on a stage between red curtains, one arm raised dramatically	near: Schauspielerin, Sänger, Redner
 Überlegung	noun	no		abstract
 Kandidat	noun	no		abstract role, not visible
 Schwindel	noun	no		state
@@ -1453,7 +1453,7 @@ Ausland	noun	no		abstract
 Wehmut	noun	no		emotion
 Grundsatz	noun	no		abstract
 Träger	noun	no		role not plain (a person carrying something)
-Apotheker	noun	scene	a pharmacist in a white coat at a counter grinding powder with a mortar and pestle, rows of glass jars on shelves behind	near: Arzt, Apotheke
+Apotheker	noun	scene	a curly-haired pharmacist in a white coat at a counter grinding powder with a mortar and pestle, rows of glass jars on shelves behind	near: Arzt, Apotheke
 Darstellung	noun	no		abstract
 Juli	noun	no		time word
 Thron	noun	yes	a large ornate golden throne with red velvet cushions and a tall carved back	near: Sessel, Lehnstuhl
@@ -1536,12 +1536,12 @@ Prinzip	noun	no		abstract
 Behandlung	noun	no		abstract (a treatment scene reads as Arzt)
 Fingerspitze	noun	no		duplicates Finger
 Zittern	noun	no		abstract (state)
-Ingenieur	noun	yes	a man in shirt and tie wearing a white hard hat, studying a large rolled-out technical drawing	near: Architekt, Baumeister, Arbeiter
+Ingenieur	noun	yes	a man with light-brown hair in shirt and tie wearing a white hard hat, studying a large rolled-out technical drawing	near: Architekt, Baumeister, Arbeiter
 Italiener	noun	no		sensitive
 Degen	noun	yes	a rapier with a very thin straight needle-like blade and an ornate curved swept hilt	near: Schwert, Säbel, Dolch, Klinge
 Platte	noun	no		vague: a flat slab reads as Brett, Tafel or Stein
 Wohltat	noun	no		abstract
-Portier	noun	scene	a doorman in a long uniform coat with gold buttons and a peaked cap, holding open the glass door of a hotel	near: Diener, Wächter, Wärter
+Portier	noun	scene	a white-haired doorman in a long uniform coat with gold buttons and a peaked cap, holding open the glass door of a hotel	near: Diener, Wächter, Wärter
 Juni	noun	no		abstract (time word)
 Kommandant	noun	no		duplicates Offizier
 Wärter	noun	no		no plain costume; an attendant reads as Diener or Wächter
@@ -1562,7 +1562,7 @@ Antrag	noun	no		abstract
 Wissen	noun	no		abstract
 Mondschein	noun	no		duplicates Mondlicht
 Resultat	noun	no		abstract
-Tänzerin	noun	yes	a ballerina in a pink tutu standing on the tips of her toes, arms raised in an arc above her head	near: Tänzer, Tanz
+Tänzerin	noun	yes	a fair-haired ballerina in a pink tutu standing on the tips of her toes, arms raised in an arc above her head	near: Tänzer, Tanz
 Hausflur	noun	no		duplicates Flur
 Schild	noun	yes	a round wooden shield with a metal rim and a raised metal boss in the centre	near: Wappen, Rüstung
 Andeutung	noun	no		abstract
@@ -1572,7 +1572,7 @@ Kostüm	noun	no		a costume reads as Kleid, Tracht, Uniform or Kleidung
 Hirsch	noun	yes	a red deer stag with large branching antlers standing in profile	near: Reh, Wild
 Reinheit	noun	no		abstract
 Vermutung	noun	no		abstract
-Nonne	noun	yes	a nun in a long black habit and a black veil with a white band, hands folded	near: Oberin, Mönch
+Nonne	noun	yes	a blond nun in a long black habit and a black veil with a white band, hands folded	near: Oberin, Mönch
 Kanzler	noun	no		no plain costume; looks like a man in a suit (Herr, Minister)
 Daumen	noun	yes	a hand making a thumbs-up, the raised thumb at the centre	near: Finger, Hand, Faust, Zeigefinger
 Meldung	noun	no		abstract
@@ -1581,7 +1581,7 @@ Aufsatz	noun	no		a written page reads as Heft, Blatt or Brief
 Oberfläche	noun	no		abstract
 Schnabel	noun	yes	close-up of a bird's head in profile, its long bright orange beak filling most of the picture	part of Vogel shown close up
 Abteilung	noun	no		abstract
-Schmied	noun	yes	a blacksmith in a leather apron hammering a glowing horseshoe on an anvil	near: Schmiede, Handwerker
+Schmied	noun	yes	a red-haired blacksmith in a leather apron hammering a glowing horseshoe on an anvil	near: Schmiede, Handwerker
 Chor	noun	scene	a group of singers in matching robes standing in two rows, mouths open in song	near: Sänger, Gesang, Orchester
 Artikel	noun	no		a newspaper article reads as Zeitung
 Sünder	noun	no		abstract
@@ -1631,7 +1631,7 @@ Bude	noun	no		duplicates Hütte
 Schornstein	noun	yes	a tall red brick chimney on a tiled roof, a thin wisp of grey smoke at its top	near: Kamin, Dach, Rauch
 Schnitt	noun	no		abstract
 Wollust	noun	no		abstract
-Gärtner	noun	yes	a gardener in a green apron and straw hat watering a flower bed with a watering can	near: Bauer, Landwirt
+Gärtner	noun	yes	a grey-haired gardener in a green apron and straw hat watering a flower bed with a watering can	near: Bauer, Landwirt
 Bleistift	noun	yes	a yellow wooden pencil with a sharpened grey point and a pink eraser on the end	near: Stift, Feder
 Deich	noun	scene	a long grassy dike along the sea, sheep grazing on its slope, flat farmland on the other side	near: Damm, Wall, Ufer, Küste
 Liste	noun	no		a list on paper reads as Zettel
@@ -1703,7 +1703,7 @@ Gasthof	noun	no		duplicates Wirtshaus
 Zins	noun	no		abstract
 Kühle	noun	no		abstract
 Gefolge	noun	no		a group of attendants reads as Gruppe or Diener
-Kellnerin	noun	yes	a waitress in a black dress and white apron carrying a round tray with glasses	near: Kellner, Dienstmädchen, Wirtin
+Kellnerin	noun	yes	a brown-haired waitress in a black dress and white apron carrying a round tray with glasses	near: Kellner, Dienstmädchen, Wirtin
 Handwerk	noun	no		abstract
 Anfall	noun	no		abstract
 Christentum	noun	no		sensitive
@@ -1753,11 +1753,11 @@ Dekan	noun	no		role not visible (an academic looks like Professor, Rektor)
 Aussage	noun	no		abstract
 Gesindel	noun	no		abstract; a rough crowd reads as Pöbel, Bande
 Ernte	noun	scene	farm workers in a ripe golden wheat field cutting the grain with scythes and stacking sheaves onto a horse-drawn wagon	near: Korn, Feld, Acker, Heu, Saat, Bauer
-Patient	noun	yes	a person in a pale hospital gown and wristband standing beside a wheeled drip stand with a hanging bag	near: Krankheit, Krankenzimmer, Krankenhaus
+Patient	noun	yes	an older man with grey hair in a pale hospital gown and wristband standing beside a wheeled drip stand with a hanging bag	near: Krankheit, Krankenzimmer, Krankenhaus
 Preuße	noun	no		sensitive (nationality)
 Rechenschaft	noun	no		abstract
 Innere	noun	no		abstract
-Polizist	noun	yes	a policeman in a dark blue uniform and peaked cap with a badge, holding a truncheon	near: Schutzmann, Gendarm, Polizei
+Polizist	noun	yes	a fair-haired policeman in a dark blue uniform and peaked cap with a badge, holding a truncheon	near: Schutzmann, Gendarm, Polizei
 Kneipe	noun	no		duplicates Wirtshaus (near: Lokal, Schenke, Gaststube)
 Beleuchtung	noun	no		abstract; a lamp reads as Lampe, Licht
 Garderobe	noun	scene	a theatre dressing room with a long rail of colourful hanging stage costumes and a mirror framed by light bulbs	theatre wardrobe sense; near: Kostüm, Schrank, Spiegel
@@ -1807,17 +1807,17 @@ Umschlag	noun	yes	an empty paper envelope lying open, its pointed flap raised an
 Exemplar	noun	no		abstract
 Riss	noun	yes	a long jagged crack running across a white plaster wall	near: Spalte, Spalt, Bruch, Kluft, Sprung
 Bezug	noun	no		abstract (gloss: reference)
-Musikant	noun	yes	a cheerful village musician in a waistcoat and felt hat playing an accordion	near: Musiker, Spielmann, Sänger
+Musikant	noun	yes	a curly-haired cheerful village musician in a waistcoat and felt hat playing an accordion	near: Musiker, Spielmann, Sänger
 Passagier	noun	no		role not visible; a traveller reads as Reise, Koffer
 Provinz	noun	no		abstract
 Übersetzung	noun	no		abstract
 Bestie	noun	no		a savage animal reads as Tier, Raubtier, Ungeheuer
-Billett	noun	no		duplicates Karte (Karte's example is an admission ticket; near: Los, Zettel)
+Billett	noun	yes	a small paper train ticket with a punched hole and a torn perforated edge, plain with no printing	near: Karte (a playing card), Los
 Heiligtum	noun	no		abstract; a shrine reads as Tempel, Kapelle
 Zucht	noun	no		abstract
 Unterstützung	noun	no		abstract
 Eimer	noun	yes	a metal bucket with a curved wire handle, filled to the brim with water	near: Fass, Kanne
-Redner	noun	scene	a man in a suit speaking with one hand raised from a raised platform to a seated audience	near: Sprecher, Prediger, Pult, Podium, Vortrag
+Redner	noun	scene	a man with red hair in a suit speaking with one hand raised from a raised platform to a seated audience	near: Sprecher, Prediger, Pult, Podium, Vortrag
 Anwalt	noun	no		duplicates Rechtsanwalt (near: Advokat, Jurist)
 Zucker	noun	yes	a small bowl of white sugar cubes with a few loose cubes and silver tongs beside it	near: Süßigkeit
 Nachfolger	noun	no		relational
@@ -1883,7 +1883,7 @@ Huldigung	noun	no		abstract
 Gehilfe	noun	no		relational (near: Helfer, Assistent)
 Ahn	noun	no		relational (near: Vorfahre)
 Rathaus	noun	scene	an old gabled town hall with an arcaded ground floor and a clock tower, standing on a cobbled square	near: Gebäude, Kirche, Marktplatz, Turm
-Kardinal	noun	yes	a cardinal in scarlet robes, a short red cape and a small red skullcap	clergy by dress; near: Bischof, Papst, Prälat, Priester
+Kardinal	noun	yes	a white-haired cardinal in scarlet robes, a short red cape and a small red skullcap	clergy by dress; near: Bischof, Papst, Prälat, Priester
 Dicke	noun	no		measure
 Bankier	noun	no		role not visible (near: Kaufmann, Bankdirektor)
 Kontor	noun	no		duplicates Büro
@@ -1895,13 +1895,13 @@ Aufsehen	noun	no		abstract
 Pfahl	noun	yes	a thick wooden stake with a sharpened point driven upright into the ground	near: Stange, Pfeiler, Stock
 Gerät	noun	no		generic; reads as Werkzeug, Apparat
 Entschlossenheit	noun	no		abstract
-Tänzer	noun	yes	a male ballet dancer leaping high in mid-air, legs stretched apart, arms raised	near: Tänzerin (woman), Tanz
+Tänzer	noun	yes	a curly-haired male ballet dancer leaping high in mid-air, legs stretched apart, arms raised	near: Tänzerin (woman), Tanz
 Vorhaben	noun	no		abstract
 Gemahlin	noun	no		relational (near: Gattin)
 Händler	noun	no		duplicates Kaufmann
 Vorurteil	noun	no		abstract
 Scheidung	noun	no		abstract
-Sängerin	noun	yes	a woman in a long gown singing on a stage, mouth open, one hand raised	near: Sänger (man), Gesang, Lied
+Sängerin	noun	yes	a woman with red hair in a long gown singing on a stage, mouth open, one hand raised	near: Sänger (man), Gesang, Lied
 Amen	noun	no		speech; religious
 Gewölbe	noun	scene	looking up into a ribbed stone vaulted ceiling with pointed arches meeting overhead	near: Keller, Bogen, Kuppel, Decke
 Tinte	noun	yes	an open glass bottle of dark blue ink with a dip pen resting beside it	near: Feder, Stift
@@ -1966,7 +1966,7 @@ Unteroffizier	noun	no		duplicates Soldat (near: Feldwebel, Korporal)
 Anhöhe	noun	no		duplicates Hügel (near: Höhe)
 Dokument	noun	no		duplicates Schriftstück (near: Urkunde, Akte, Papier)
 Halm	noun	no		a single stalk reads as Gras, Korn (near: Stängel, Stiel)
-Schuster	noun	scene	a shoemaker in a leather apron hammering the sole of a boot on an iron last at his workbench	near: Handwerker, Schuh
+Schuster	noun	scene	a red-haired shoemaker in a leather apron hammering the sole of a boot on an iron last at his workbench	near: Handwerker, Schuh
 Furche	noun	no		duplicates Acker
 Bemühung	noun	no		abstract
 Denkmal	noun	no		duplicates Statue (near: Büste)
@@ -2058,7 +2058,7 @@ Gehöft	noun	no		duplicates Bauernhof
 Wahn	noun	no		abstract
 Oberförster	noun	no		duplicates Förster
 Admiral	noun	no		duplicates Kapitän
-Chauffeur	noun	scene	a uniformed chauffeur in a peaked cap and gloves holding open the rear door of a vintage black car	near: Kutscher, Diener
+Chauffeur	noun	scene	a grey-haired uniformed chauffeur in a peaked cap and gloves holding open the rear door of a vintage black car	near: Kutscher, Diener
 Raub	noun	no		abstract; violence
 Walzer	noun	no		duplicates Tanz
 Erbschaft	noun	no		abstract
@@ -2097,7 +2097,7 @@ Möwe	noun	yes	a white seagull with grey wings and a yellow beak gliding above b
 Kutsche	noun	no		duplicates Wagen
 Bescheidenheit	noun	no		abstract
 Porträt	noun	yes	a gold-framed oil painting of a woman's head and shoulders against a plain dark background	near: Bild, Gemälde, Bildnis
-Pflegerin	noun	yes	a woman in a white nurse's uniform and cap carrying a tray with a glass of water and pills	near: Arzt, Wärterin, Schwester
+Pflegerin	noun	yes	a woman with curly brown hair in a white nurse's uniform and cap carrying a tray with a glass of water and pills	near: Arzt, Wärterin, Schwester
 Skizze	noun	no		duplicates Zeichnung
 Ratsherr	noun	no		role not shown by dress or tools
 Unsicherheit	noun	no		abstract
@@ -2245,7 +2245,7 @@ Kajüte	noun	scene	a small wood-paneled ship's cabin with a round porthole, a na
 Bezirk	noun	no		abstract
 Untertan	noun	no		relational
 Kabine	noun	no		duplicates Kajüte
-Heizer	noun	scene	a sooty man in a vest shoveling coal into the glowing open firebox of a steam engine	near: Kohle, Ofen, Lokomotive
+Heizer	noun	scene	a brown-haired sooty man in a vest shoveling coal into the glowing open firebox of a steam engine	near: Kohle, Ofen, Lokomotive
 Tadel	noun	no		speech
 Schokolade	noun	yes	a bar of milk chocolate partly unwrapped from silver foil, one square broken off	near: Süßigkeit
 Braten	noun	yes	a browned roast joint of meat on a platter, a few slices cut off, with a carving fork	near: Fleisch, Schinken
@@ -2356,7 +2356,7 @@ Schwur	noun	no		abstract (near: Eid)
 Pathos	noun	no		abstract
 Pinsel	noun	yes	an artist's paintbrush with a long wooden handle, its bristle tip dipped in blue paint	near: Farbe, Maler
 Innerste	noun	no		abstract
-Bergmann	noun	yes	a coal miner in dirty work clothes and a helmet with a headlamp, a pickaxe over his shoulder, face smudged with soot	near: Arbeiter
+Bergmann	noun	yes	a dark-haired coal miner in dirty work clothes and a helmet with a headlamp, a pickaxe over his shoulder, face smudged with soot	near: Arbeiter
 Erzbischof	noun	no		duplicates Bischof (near: Kardinal, Prälat)
 Konsequenz	noun	no		abstract
 Schwüle	noun	no		abstract: a weather feeling
@@ -2368,7 +2368,7 @@ Französisch	noun	no		abstract: a language
 Träumer	noun	no		relational (a dreaming person shows Traum, Schlaf)
 Kinderauge	noun	no		duplicates Auge
 Brüstung	noun	no		duplicates Geländer (near: Balkon, Mauer)
-Musketier	noun	yes	a seventeenth-century musketeer with a wide feathered hat, a blue tabard with a cross, tall boots and a long musket	near: Soldat, Kavalier, Husar, Dragoner
+Musketier	noun	yes	a fair-haired seventeenth-century musketeer with a wide feathered hat, a blue tabard with a cross, tall boots and a long musket	near: Soldat, Kavalier, Husar, Dragoner
 Entsagung	noun	no		abstract
 Raubtier	noun	no		a category (a picture shows Löwe, Tiger, Wolf)
 Pest	noun	no		abstract: a disease
@@ -2376,7 +2376,7 @@ Affäre	noun	no		abstract
 Intelligenz	noun	no		abstract
 Unterlippe	noun	no		duplicates Lippe
 Knöchel	noun	no		duplicates Fuß (near: Ferse, Gelenk)
-Briefträger	noun	yes	a postman in a blue uniform and cap carrying a full leather shoulder bag with envelopes sticking out	near: Bote, Post, Postmeister
+Briefträger	noun	yes	a curly-haired postman in a blue uniform and cap carrying a full leather shoulder bag with envelopes sticking out	near: Bote, Post, Postmeister
 Gewimmel	noun	no		duplicates Schwarm (near: Gedränge, Gewühl)
 Kenner	noun	no		relational
 Voraussetzung	noun	no		abstract
@@ -2402,7 +2402,7 @@ Typus	noun	no		abstract
 Kittel	noun	yes	a plain white knee-length work smock with buttons down the front and two pockets, hanging on a hanger	near: Mantel, Schürze
 Mittelalter	noun	no		abstract: a time word
 Retter	noun	no		relational
-Bäcker	noun	yes	a baker in white clothes, apron and tall white hat holding a wooden tray of fresh bread loaves	near: Köchin
+Bäcker	noun	yes	a white-haired baker in white clothes, apron and tall white hat holding a wooden tray of fresh bread loaves	near: Köchin
 Mücke	noun	yes	a mosquito with a slim body, long thin legs, narrow clear wings and a long needle-like proboscis	near: Fliege, Insekt
 Sporn	noun	yes	a single metal riding spur with a spiked star-shaped rowel wheel and a leather strap	near: Stiefel
 Heiligkeit	noun	no		abstract
@@ -2518,7 +2518,7 @@ Schurke	noun	no		role not visible; would need a stereotype
 Großeltern	noun	no		relational
 Morgensonne	noun	no		duplicates Sonnenuntergang (a low sun at the horizon)
 Erdreich	noun	no		duplicates Erde
-Bad	noun	scene	a person relaxing in a white bathtub filled with foam bubbles, only head and shoulders above the water	near: Schwimmer, Wasser
+Bad	noun	scene	a young woman with red hair relaxing in a white bathtub filled with foam bubbles, only head and shoulders above the water	near: Schwimmer, Wasser
 Brandung	noun	no		duplicates Welle (surf on a shore cannot be told from Welle, Woge, Küste)
 Gleis	noun	yes	a straight railway track running into the distance: two steel rails on wooden sleepers laid in gravel	near: Schiene, Bahn, Eisenbahn, Strecke
 Verleger	noun	no		role not visible
@@ -2636,7 +2636,7 @@ Bergwerk	noun	scene	the timber-framed entrance of a mine tunnel cut into a rocky
 Pflanzung	noun	no		looks like Feld or Garten
 Bezeichnung	noun	no		abstract
 Kleinod	noun	no		duplicates Schmuck
-Operation	noun	scene	surgeons in green gowns, caps and masks bending over a patient covered by a green sheet on an operating table under a large round lamp	near: Arzt, Patient
+Operation	noun	scene	surgeons in green gowns, caps and masks bending over a blond patient covered by a green sheet on an operating table under a large round lamp	near: Arzt, Patient
 Alkohol	noun	no		category; a drink shown is Wein, Bier or Schnaps
 Tiger	noun	yes	a tiger standing in side view, orange coat with bold black stripes and a white muzzle	near: Löwe
 Kot	noun	no		duplicates Schmutz
@@ -2702,11 +2702,11 @@ Klatsch	noun	no		abstract (speech)
 Miete	noun	no		abstract
 Schullehrer	noun	no		duplicates Lehrer
 Sozialdemokrat	noun	no		abstract (a party member looks like any man)
-Schwimmer	noun	yes	a person swimming front crawl in blue water, one arm reaching forward, wearing a swim cap and goggles	near: Bad, Läufer, Athlet
+Schwimmer	noun	yes	a man with fair hair and a short beard swimming front crawl in blue water, one arm reaching forward, wearing a swim cap and goggles	near: Bad, Läufer, Athlet
 Speicher	noun	no		duplicates Scheune
 Kundschaft	noun	no		relational
 Gelassenheit	noun	no		abstract
-Baby	noun	yes	a newborn baby asleep, wrapped snugly in a soft pale blanket, only the small round face showing	near: Säugling, Kind
+Baby	noun	yes	a dark-haired newborn baby asleep, wrapped snugly in a soft pale blanket, only the small round face showing	near: Säugling, Kind
 Bedrängnis	noun	no		abstract
 Schwadron	noun	no		duplicates Reiter
 Laut	noun	no		sound
@@ -2720,8 +2720,8 @@ Vorsehung	noun	no		abstract
 Bankdirektor	noun	no		duplicates Direktor
 Lebensmittel	noun	no		category (Essen, Nahrung)
 Vorgänger	noun	no		relational
-Bildhauer	noun	scene	a sculptor in a dusty apron striking a chisel with a wooden mallet, carving a white marble figure on a stand	near: Künstler, Statue, Marmor
-Schütze	noun	scene	a man standing side-on aiming a rifle at a round target with red and white rings at a shooting range	near: Jäger, Soldat, Gewehr
+Bildhauer	noun	scene	a red-haired sculptor in a dusty apron striking a chisel with a wooden mallet, carving a white marble figure on a stand	near: Künstler, Statue, Marmor
+Schütze	noun	scene	a man with grey hair standing side-on aiming a rifle at a round target with red and white rings at a shooting range	near: Jäger, Soldat, Gewehr
 Ketzer	noun	no		sensitive
 Weltgeschichte	noun	no		abstract
 Todesangst	noun	no		emotion
@@ -2741,14 +2741,14 @@ Schraube	noun	yes	a metal screw lying on its side, with a slotted head and a sha
 Gelehrsamkeit	noun	no		abstract
 Großmama	noun	no		relational
 Mehrzahl	noun	no		abstract
-Fee	noun	yes	a tiny fairy with shimmering butterfly-like wings, a flowing pale dress and a star-tipped wand, hovering among sparkles	near: Engel, Hexe
+Fee	noun	yes	a blond tiny fairy with shimmering butterfly-like wings, a flowing pale dress and a star-tipped wand, hovering among sparkles	near: Engel, Hexe
 Eindringling	noun	no		relational
 Verwendung	noun	no		abstract
 Klirren	noun	no		sound
 Aufzug	noun	no		abstract (an outfit; looks like Kleidung)
 Blonde	noun	no		duplicates Frau
 Quell	noun	no		duplicates Quelle
-Athlet	noun	yes	a muscular athlete in a sleeveless sports top and shorts lifting a heavy barbell high above his head	near: Läufer, Schwimmer, Kämpfer
+Athlet	noun	yes	a red-haired muscular athlete in a sleeveless sports top and shorts lifting a heavy barbell high above his head	near: Läufer, Schwimmer, Kämpfer
 Feldzug	noun	no		abstract
 Klima	noun	no		abstract
 Strohhut	noun	yes	a woven yellow straw hat with a wide brim and a green ribbon band around the crown	near: Hut, Mütze, Zylinder, Stroh
@@ -2896,7 +2896,7 @@ Rucksack	noun	yes	a green hiking backpack with two padded shoulder straps, a fro
 Schanze	noun	no		an earthwork reads as Wall or Festung
 Landrat	noun	no		role has no plain sign
 Apothekerin	noun	no		relational (pharmacist's wife)
-Läufer	noun	yes	a runner in shorts and a vest, mid-stride with both feet off the ground, arms swinging	near: Athlet
+Läufer	noun	yes	a brown-haired runner in shorts and a vest, mid-stride with both feet off the ground, arms swinging	near: Athlet
 Weihnachtsabend	noun	no		time word; near: Weihnachten
 Beschützer	noun	no		relational
 Zipfel	noun	no		abstract (example: a region's tip)
@@ -3006,84 +3006,84 @@ können	verb	no		abstract (modal)
 sagen	verb	no		speech
 wollen	verb	no		abstract (modal)
 kommen	verb	no		direction toward the speaker cannot be shown; a walking figure reads as gehen
-sehen	verb	yes	a person with wide-open eyes looking at a colorful butterfly in the air	near: ansehen, betrachten, schauen, blicken, beobachten, erblicken
+sehen	verb	yes	a woman with curly brown hair with wide-open eyes looking at a colorful butterfly in the air	near: ansehen, betrachten, schauen, blicken, beobachten, erblicken
 müssen	verb	no		abstract (modal)
 wissen	verb	no		abstract (knowing)
-gehen	verb	yes	a person walking at an easy pace, side view, mid-step, arms swinging gently	near: laufen, spazieren, schreiten, wandern
+gehen	verb	yes	a young man with blond hair walking at an easy pace, side view, mid-step, arms swinging gently	near: laufen, spazieren, schreiten, wandern
 machen	verb	no		abstract
-stehen	verb	yes	a person standing upright and still, feet together, arms hanging at the sides	near: dastehen, stillstehen, warten
+stehen	verb	yes	an older woman with white hair in a bun standing upright and still, feet together, arms hanging at the sides	near: dastehen, stillstehen, warten
 sollen	verb	no		abstract (modal)
 lassen	verb	no		abstract
-geben	verb	scene	a person handing a red apple to another person who holds out an open hand	near: reichen, schenken, überreichen, anbieten
+geben	verb	scene	a man with dark hair handing a red apple to another person who holds out an open hand	near: reichen, schenken, überreichen, anbieten
 denken	verb	no		thinking
 tun	verb	no		abstract
-liegen	verb	yes	a person lying on their back on the grass, eyes open, arms relaxed at the sides	near: ruhen, daliegen, schlafen
+liegen	verb	yes	a woman with chestnut hair in a ponytail lying on their back on the grass, eyes open, arms relaxed at the sides	near: ruhen, daliegen, schlafen
 bleiben	verb	no		abstract
 sprechen	verb	no		speech; a talking figure fits reden, sagen and erzählen equally
 fragen	verb	no		speech
-nehmen	verb	scene	a person taking a red apple from a fruit bowl on a table	near: greifen, fassen, ergreifen, packen
+nehmen	verb	scene	a woman with long blond hair taking a red apple from a fruit bowl on a table	near: greifen, fassen, ergreifen, packen
 finden	verb	no		the moment of finding looks like aufheben, halten or sehen
 sitzen	verb	yes	a person sitting upright on a wooden chair, hands resting on the knees	near: sich setzen, dasitzen, hocken
-halten	verb	yes	a person standing still, holding a red balloon by its string	near: festhalten, tragen
+halten	verb	yes	a man with short light-brown hair standing still, holding a red balloon by its string	near: festhalten, tragen
 mögen	verb	no		abstract (liking)
-hören	verb	yes	a person cupping one hand behind an ear, listening carefully	near: zuhören, lauschen, horchen, anhören, vernehmen
+hören	verb	yes	an older man with grey hair cupping one hand behind an ear, listening carefully	near: zuhören, lauschen, horchen, anhören, vernehmen
 scheinen	verb	no		abstract (seem)
 glauben	verb	no		thinking
-rufen	verb	yes	a person calling out loudly with both hands cupped around the mouth	near: schreien, zurufen, brüllen, ausrufen
+rufen	verb	yes	a young woman with red hair calling out loudly with both hands cupped around the mouth	near: schreien, zurufen, brüllen, ausrufen
 dürfen	verb	no		abstract (modal)
 fühlen	verb	no		abstract (feeling)
 bringen	verb	no		direction toward the speaker cannot be shown; a carrying figure reads as tragen
 meinen	verb	no		thinking
-tragen	verb	yes	a person carrying a heavy cardboard box in both arms while walking	near: halten, schleppen, bringen
+tragen	verb	yes	a man with fair hair and a short beard carrying a heavy cardboard box in both arms while walking	near: halten, schleppen, bringen
 kennen	verb	no		abstract
 beginnen	verb	no		abstract
-legen	verb	scene	a person laying a closed book down flat on a table, one hand still on it	near: stellen, stecken, hängen, hinlegen, ablegen
-lachen	verb	yes	a person laughing heartily, head tilted back, mouth wide open, eyes squeezed shut	near: lächeln, auflachen
-fallen	verb	yes	a person tripping over a stone and falling forward, arms flung out	near: stürzen, sinken
+legen	verb	scene	a woman with curly brown hair laying a closed book down flat on a table, one hand still on it	near: stellen, stecken, hängen, hinlegen, ablegen
+lachen	verb	yes	a young man with blond hair laughing heartily, head tilted back, mouth wide open, eyes squeezed shut	near: lächeln, auflachen
+fallen	verb	yes	an older woman with white hair in a bun tripping over a stone and falling forward, arms flung out	near: stürzen, sinken
 erzählen	verb	no		speech; a storyteller looks like sprechen or vorlesen
-ziehen	verb	yes	a person pulling hard on a thick rope with both hands, leaning backward	near: zerren, schleppen, schieben
+ziehen	verb	yes	a man with dark hair pulling hard on a thick rope with both hands, leaning backward	near: zerren, schleppen, schieben
 verstehen	verb	no		thinking
 ansehen	verb	no		duplicates sehen
 leben	verb	no		abstract
-suchen	verb	scene	a person on hands and knees looking under a bed, searching for something lost	near: finden, nachsehen, untersuchen, wühlen
+suchen	verb	scene	a woman with chestnut hair in a ponytail on hands and knees looking under a bed, searching for something lost	near: finden, nachsehen, untersuchen, wühlen
 setzen	verb	no		duplicates sitzen
-führen	verb	scene	a person walking in front and leading a horse by its bridle along a path	near: begleiten, leiten, lenken
+führen	verb	scene	a woman with long blond hair walking in front and leading a horse by its bridle along a path	near: begleiten, leiten, lenken
 heißen	verb	no		abstract (be called)
 lieben	verb	no		emotion
 treten	verb	no		a step looks like gehen or eintreten
 brauchen	verb	no		abstract
-schreiben	verb	scene	a person at a desk writing a letter with a pen, wavy lines of handwriting on the paper	near: zeichnen, malen
-fahren	verb	scene	a person driving a small car along a road, both hands on the steering wheel	near: lenken, reisen, rasen
+schreiben	verb	scene	a man with short light-brown hair at a desk writing a letter with a pen, wavy lines of handwriting on the paper	near: zeichnen, malen
+fahren	verb	scene	an older man with grey hair driving a small car along a road, both hands on the steering wheel	near: lenken, reisen, rasen
 gehören	verb	no		relational
-zeigen	verb	yes	a person pointing with an outstretched arm and index finger at something far away	near: weisen, deuten
-schlagen	verb	scene	a boxer punching a hanging punching bag with a gloved fist	near: kämpfen, stoßen, klopfen
-warten	verb	scene	a person standing at a bus stop, impatiently checking a wristwatch	near: abwarten, erwarten, stehen
+zeigen	verb	yes	a young woman with red hair pointing with an outstretched arm and index finger at something far away	near: weisen, deuten
+schlagen	verb	scene	a grey-haired boxer punching a hanging punching bag with a gloved fist	near: kämpfen, stoßen, klopfen
+warten	verb	scene	a man with fair hair and a short beard standing at a bus stop, impatiently checking a wristwatch	near: abwarten, erwarten, stehen
 erscheinen	verb	no		abstract (appear)
-werfen	verb	yes	a person throwing a ball overhand, throwing arm stretched forward, ball leaving the hand	near: schleudern, zuwerfen, hinwerfen
+werfen	verb	yes	a woman with curly brown hair throwing a ball overhand, throwing arm stretched forward, ball leaving the hand	near: schleudern, zuwerfen, hinwerfen
 bekommen	verb	no		receiving looks like geben or nehmen
 reden	verb	no		speech; looks like sprechen
 antworten	verb	no		speech
 geschehen	verb	no		abstract
-spielen	verb	yes	a child sitting on the floor playing with a wooden toy train	
+spielen	verb	yes	a fair-haired child sitting on the floor playing with a wooden toy train	
 aussehen	verb	no		abstract
-lesen	verb	yes	a person sitting and reading an open book, eyes on the page	near: vorlesen, studieren, lernen
+lesen	verb	yes	a young man with blond hair sitting and reading an open book, eyes on the page	near: vorlesen, studieren, lernen
 nennen	verb	no		speech
-helfen	verb	scene	a person helping an elderly person up a step, holding their arm	near: stützen, unterstützen, retten
+helfen	verb	scene	an older woman with white hair in a bun helping an elderly person up a step, holding their arm	near: stützen, unterstützen, retten
 erheben	verb	no		duplicates aufstehen
 bitten	verb	no		pleading with clasped hands looks like beten
 verlassen	verb	no		abstract (abandon); leaving looks like weggehen
 verlieren	verb	no		abstract
 vergessen	verb	no		thinking
 treffen	verb	scene	two people meeting on a street, shaking hands and smiling	near: begegnen, begrüßen, empfangen, grüßen, wiedersehen
-laufen	verb	yes	a person running fast, mid-stride with both feet off the ground, arms pumping	near: rennen, eilen, rasen, gehen
-öffnen	verb	scene	a person lifting the lid of a wooden chest wide open with both hands	near: schließen, aufschlagen, aufgehen
-stellen	verb	scene	a person standing a tall bottle upright on a shelf, one hand still on it	near: legen, setzen, hinstellen, aufstellen
+laufen	verb	yes	a man with dark hair running fast, mid-stride with both feet off the ground, arms pumping	near: rennen, eilen, rasen, gehen
+öffnen	verb	scene	a woman with chestnut hair in a ponytail lifting the lid of a wooden chest wide open with both hands	near: schließen, aufschlagen, aufgehen
+stellen	verb	scene	a woman with long blond hair standing a tall bottle upright on a shelf, one hand still on it	near: legen, setzen, hinstellen, aufstellen
 folgen	verb	scene	a row of ducklings following their mother duck across a path	near: verfolgen, nachgehen, begleiten
 sterben	verb	no		sensitive
-lächeln	verb	yes	a person with a gentle closed-mouth smile and friendly eyes	near: lachen, strahlen
-heben	verb	yes	a weightlifter lifting a heavy barbell high above the head	near: aufheben, stemmen, erheben
+lächeln	verb	yes	a man with short light-brown hair with a gentle closed-mouth smile and friendly eyes	near: lachen, strahlen
+heben	verb	yes	a brown-haired weightlifter lifting a heavy barbell high above the head	near: aufheben, stemmen, erheben
 lernen	verb	no		studying at a desk looks like lesen or schreiben
-singen	verb	yes	a person singing with mouth open, a few musical notes floating up	near: summen, pfeifen
+singen	verb	yes	an older man with grey hair singing with mouth open, a few musical notes floating up	near: summen, pfeifen
 fassen	verb	no		duplicates nehmen
 erkennen	verb	no		thinking
 freuen	verb	no		emotion
@@ -3099,34 +3099,34 @@ holen	verb	no		fetching looks like tragen or bringen
 erwidern	verb	no		speech
 schweigen	verb	no		silence cannot be shown plainly
 wohnen	verb	no		abstract
-küssen	verb	scene	a person kissing another person gently on the cheek	near: umarmen
+küssen	verb	scene	a young woman with red hair kissing another person gently on the cheek	near: umarmen
 erwarten	verb	no		abstract; looks like warten
-weinen	verb	yes	a person crying, tears running down both cheeks	near: schluchzen, heulen, jammern
-steigen	verb	scene	a person climbing a steep staircase, one foot raised onto the next step	near: klettern, aufsteigen, hinaufsteigen, hinaufgehen
+weinen	verb	yes	a man with fair hair and a short beard crying, tears running down both cheeks	near: schluchzen, heulen, jammern
+steigen	verb	scene	a woman with curly brown hair climbing a steep staircase, one foot raised onto the next step	near: klettern, aufsteigen, hinaufsteigen, hinaufgehen
 treiben	verb	no		abstract
 erhalten	verb	no		abstract (receive); looks like bekommen
 fehlen	verb	no		abstract
-drücken	verb	yes	a person pressing a large round button firmly with one finger	near: pressen, stoßen
+drücken	verb	yes	a young man with blond hair pressing a large round button firmly with one finger	near: pressen, stoßen
 verschwinden	verb	no		abstract
 erfahren	verb	no		abstract
 aufstehen	verb	yes	a person getting up from an armchair, pushing up on the armrests, halfway to standing	near: sich erheben, aufspringen, sich aufrichten
 schaffen	verb	no		abstract
 fürchten	verb	no		emotion
 wagen	verb	no		abstract
-stecken	verb	scene	a person sliding a wallet into the back pocket of their trousers	near: legen, stellen, hängen, verstecken
+stecken	verb	scene	an older woman with white hair in a bun sliding a wallet into the back pocket of their trousers	near: legen, stellen, hängen, verstecken
 wünschen	verb	no		abstract (wishing)
 arbeiten	verb	no		work takes many forms; any picture shows a more specific verb
-eintreten	verb	scene	a person stepping in through an open doorway into a room, facing the viewer	near: hereinkommen, betreten, hineingehen, treten
+eintreten	verb	scene	a man with dark hair stepping in through an open doorway into a room, facing the viewer	near: hereinkommen, betreten, hineingehen, treten
 erfüllen	verb	no		abstract
-hängen	verb	scene	a person hanging a coat on a hook on the wall	near: legen, stellen, stecken
+hängen	verb	scene	a woman with chestnut hair in a ponytail hanging a coat on a hook on the wall	near: legen, stellen, stecken
 betrachten	verb	no		duplicates sehen
 leiden	verb	no		state
-trinken	verb	yes	a person drinking water from a glass, head tilted back slightly	near: schlucken
+trinken	verb	yes	a woman with long blond hair drinking water from a glass, head tilted back slightly	near: schlucken
 schauen	verb	no		duplicates sehen
 einfallen	verb	no		thinking
 erreichen	verb	no		abstract (reach a goal or place)
 annehmen	verb	no		abstract
-schlafen	verb	yes	a person sleeping in bed, eyes closed, head on the pillow, blanket pulled up	near: einschlafen, ruhen, liegen
+schlafen	verb	yes	a man with short light-brown hair sleeping in bed, eyes closed, head on the pillow, blanket pulled up	near: einschlafen, ruhen, liegen
 vorkommen	verb	no		abstract
 besitzen	verb	no		abstract
 erinnern	verb	no		thinking
@@ -3136,10 +3136,10 @@ blicken	verb	no		duplicates sehen
 verlangen	verb	no		abstract
 fortfahren	verb	no		abstract
 empfinden	verb	no		abstract (feeling)
-nicken	verb	yes	a person nodding, head tipped forward, small curved motion lines above the head	near: zunicken, senken
+nicken	verb	yes	an older man with grey hair nodding, head tipped forward, small curved motion lines above the head	near: zunicken, senken
 zurückkehren	verb	no		direction of return cannot be shown
 vermögen	verb	no		abstract
-schicken	verb	scene	a person dropping a letter into a yellow mailbox	near: senden, einwerfen
+schicken	verb	scene	a young woman with red hair dropping a letter into a yellow mailbox	near: senden, einwerfen
 schließen	verb	no		a still picture of closing looks like öffnen
 bewegen	verb	no		any movement shows a more specific verb
 reichen	verb	no		duplicates geben
@@ -3151,46 +3151,46 @@ pflegen	verb	no		tending looks like helfen; example sense is habitual
 wachsen	verb	yes	a green seedling sprouting from soil and growing taller, shown in three stages side by side	near: entstehen, blühen
 hoffen	verb	no		abstract
 handeln	verb	no		abstract
-gewinnen	verb	yes	a person holding a golden trophy high above their head, beaming	near: siegen, besiegen, jubeln
-zittern	verb	yes	a person trembling all over, knees shaking, small wavy lines around the body	near: frieren, beben, schütteln
+gewinnen	verb	yes	a man with fair hair and a short beard holding a golden trophy high above their head, beaming	near: siegen, besiegen, jubeln
+zittern	verb	yes	a woman with curly brown hair trembling all over, knees shaking, small wavy lines around the body	near: frieren, beben, schütteln
 begegnen	verb	no		duplicates treffen
 danken	verb	no		speech act
 drängen	verb	no		abstract
 ankommen	verb	no		arrival looks like kommen, aussteigen or reisen
-flüstern	verb	scene	a person whispering into another person's ear, one hand cupped beside the mouth	near: zuflüstern, murmeln
+flüstern	verb	scene	a young man with blond hair whispering into another person's ear, one hand cupped beside the mouth	near: zuflüstern, murmeln
 befinden	verb	no		abstract (location)
-brechen	verb	yes	a person snapping a wooden stick in two over one knee	near: zerbrechen, abbrechen, reißen
+brechen	verb	yes	an older woman with white hair in a bun snapping a wooden stick in two over one knee	near: zerbrechen, abbrechen, reißen
 ergreifen	verb	no		duplicates nehmen
 spüren	verb	no		abstract (sensing)
 rühren	verb	no		example sense is to budge (rührte sich nicht); not shown plainly
 stürzen	verb	no		duplicates fallen
-essen	verb	scene	a person sitting at a table eating soup with a spoon	near: fressen, verzehren, schlucken
-tanzen	verb	yes	a person dancing joyfully, arms raised and one foot lifted, mid-turn	
+essen	verb	scene	a man with dark hair sitting at a table eating soup with a spoon	near: fressen, verzehren, schlucken
+tanzen	verb	yes	a woman with chestnut hair in a ponytail dancing joyfully, arms raised and one foot lifted, mid-turn	
 brennen	verb	yes	a campfire burning with tall orange flames	near: verbrennen, leuchten, anzünden
-springen	verb	yes	a person jumping high in the air, knees bent, arms raised	near: aufspringen
+springen	verb	yes	a woman with long blond hair jumping high in the air, knees bent, arms raised	near: aufspringen
 zwingen	verb	no		abstract
 vorstellen	verb	no		thinking (imagine)
 sinken	verb	scene	a small rowing boat sinking into the sea, tilted, half under water	near: versinken, untergehen
 bestehen	verb	no		abstract
 wiederholen	verb	no		abstract
-kaufen	verb	scene	a customer at a market stall handing coins to the seller for a bag of apples	near: bezahlen, verkaufen, erstehen
+kaufen	verb	scene	a dark-haired customer at a market stall handing coins to the seller for a bag of apples	near: bezahlen, verkaufen, erstehen
 stoßen	verb	no		a sudden push or bump looks like schieben or schlagen
 ahnen	verb	no		thinking
-schenken	verb	scene	a person giving a wrapped present with a ribbon bow to another person	near: geben, überreichen
+schenken	verb	scene	a man with short light-brown hair giving a wrapped present with a ribbon bow to another person	near: geben, überreichen
 geraten	verb	no		abstract
 aufnehmen	verb	no		abstract
 erleben	verb	no		abstract
 empfangen	verb	no		duplicates treffen
 bedeuten	verb	no		abstract
-zucken	verb	yes	a person shrugging their shoulders, palms turned up	near: zusammenzucken
-heiraten	verb	scene	a bride in a white dress and a groom in a dark suit exchanging rings at their wedding	near: sich verloben, verheiraten
+zucken	verb	yes	an older man with grey hair shrugging their shoulders, palms turned up	near: zusammenzucken
+heiraten	verb	scene	a curly-haired bride in a white dress and a groom in a dark suit exchanging rings at their wedding	near: sich verloben, verheiraten
 leuchten	verb	yes	a street lamp glowing in the dark night, a soft circle of light around it	near: strahlen, glänzen, aufleuchten, brennen
 bieten	verb	no		offering looks like geben
 gelingen	verb	no		abstract
 versprechen	verb	no		speech
 packen	verb	no		duplicates nehmen
 lösen	verb	no		abstract
-schieben	verb	yes	a person pushing a heavy wooden crate across the floor with both hands, leaning forward	near: stoßen, drücken, ziehen
+schieben	verb	yes	a young woman with red hair pushing a heavy wooden crate across the floor with both hands, leaning forward	near: stoßen, drücken, ziehen
 verbergen	verb	no		duplicates verstecken
 wirken	verb	no		abstract
 unterbrechen	verb	no		abstract
@@ -3198,16 +3198,16 @@ begleiten	verb	no		two people walking together looks like gehen or führen
 bilden	verb	no		abstract
 besuchen	verb	no		a visit looks like klopfen or treffen
 stören	verb	no		abstract
-erwachen	verb	yes	a person lying in bed, just opening their eyes in the morning light	near: aufwachen, wecken, schlafen
+erwachen	verb	yes	a man with fair hair and a short beard lying in bed, just opening their eyes in the morning light	near: aufwachen, wecken, schlafen
 ändern	verb	no		abstract
-klopfen	verb	yes	a person knocking on a wooden door with their knuckles	near: pochen, schlagen
+klopfen	verb	yes	a woman with curly brown hair seen from the side, knocking on a closed wooden door, her raised fist touching the door	near: pochen, schlagen
 überlegen	verb	no		thinking
 verdienen	verb	no		abstract
 beschäftigen	verb	no		abstract
 träumen	verb	no		a dream needs a thought bubble; the figure reads as schlafen
 behalten	verb	no		abstract
-drehen	verb	yes	a person turning a large round valve wheel with both hands, curved arrows showing the rotation	near: wenden, sich umdrehen, schwenken, rollen
-lehnen	verb	yes	a person leaning with one shoulder against a wall, arms folded, ankles crossed	near: sich zurücklehnen, stützen
+drehen	verb	yes	a young man with blond hair turning a large round valve wheel with both hands, curved arrows showing the rotation	near: wenden, sich umdrehen, schwenken, rollen
+lehnen	verb	yes	an older woman with white hair in a bun leaning with one shoulder against a wall, arms folded, ankles crossed	near: sich zurücklehnen, stützen
 aussprechen	verb	no		speech
 dienen	verb	no		abstract
 trennen	verb	no		abstract
@@ -3216,8 +3216,8 @@ erlauben	verb	no		abstract
 verraten	verb	no		abstract
 senken	verb	no		lowering the head looks like nicken or sich beugen
 aufrichten	verb	no		straightening up looks like sich erheben or strecken
-füllen	verb	yes	a person filling a glass to the brim with water from a jug	near: schöpfen
-beugen	verb	scene	a tall person bending forward at the waist toward a small child	near: sich bücken, sich vorbeugen, neigen
+füllen	verb	yes	a man with dark hair filling a glass to the brim with water from a jug	near: schöpfen
+beugen	verb	scene	a tall person bending forward at the waist toward a dark-haired small child	near: sich bücken, sich vorbeugen, neigen
 versetzen	verb	no		abstract
 erregen	verb	no		abstract
 sorgen	verb	no		abstract
@@ -3229,8 +3229,8 @@ berühren	verb	yes	a person gently touching a flower petal with one fingertip	ne
 bezahlen	verb	no		duplicates kaufen
 vernehmen	verb	no		duplicates hören
 zurückkommen	verb	no		direction of return cannot be shown
-bauen	verb	scene	a person building a brick wall, setting a brick in place with a trowel	near: errichten, aufbauen, herstellen
-retten	verb	scene	a lifeguard pulling a struggling swimmer out of the water	near: helfen, befreien, bergen
+bauen	verb	scene	a woman with chestnut hair in a ponytail building a brick wall, setting a brick in place with a trowel	near: errichten, aufbauen, herstellen
+retten	verb	scene	a fair-haired lifeguard pulling a struggling swimmer out of the water	near: helfen, befreien, bergen
 streichen	verb	yes	a man stroking his pointed black beard with one hand	near: streicheln
 überzeugen	verb	no		abstract
 gefallen	verb	no		abstract
@@ -3254,8 +3254,8 @@ passen	verb	no		abstract
 ausgehen	verb	no		duplicates verlassen
 kosten	verb	no		abstract
 mitteilen	verb	no		abstract (speech)
-anziehen	verb	scene	a person putting on a winter coat, one arm already in a sleeve, reaching back for the other sleeve	near: kleiden, ausziehen, anhaben, aufsetzen
-wandern	verb	scene	a hiker with a backpack, sturdy boots and walking poles striding along a trail through green hills	near: gehen, spazieren, schreiten, wandeln, reisen
+anziehen	verb	scene	a woman with long blond hair putting on a winter coat, one arm already in a sleeve, reaching back for the other sleeve	near: kleiden, ausziehen, anhaben, aufsetzen
+wandern	verb	scene	a curly-haired hiker with a backpack, sturdy boots and walking poles striding along a trail through green hills	near: gehen, spazieren, schreiten, wandeln, reisen
 schämen	verb	no		emotion
 vergehen	verb	no		abstract (time)
 erschrecken	verb	no		emotion
@@ -3271,25 +3271,25 @@ weisen	verb	no		duplicates zeigen
 entstehen	verb	no		abstract
 pressen	verb	no		duplicates drücken
 gestehen	verb	no		abstract (speech)
-reiten	verb	scene	a person riding a brown horse at a trot, sitting upright in the saddle and holding the reins	
+reiten	verb	scene	a man with short light-brown hair riding a brown horse at a trot, sitting upright in the saddle and holding the reins	
 gelangen	verb	no		abstract
 zuhören	verb	no		duplicates hören
 auftauchen	verb	no		duplicates erscheinen
-beten	verb	scene	a person standing with eyes closed and head bowed, hands folded in prayer	near: bitten, knien
+beten	verb	scene	an older man with grey hair standing with eyes closed and head bowed, hands folded in prayer	near: bitten, knien
 herrschen	verb	no		abstract
 dastehen	verb	no		duplicates stehen
 berichten	verb	no		abstract (speech)
 ertragen	verb	no		abstract
-reisen	verb	scene	a tourist pulling a wheeled suitcase, a camera around the neck and an open map in one hand	near: abreisen, fahren, aufbrechen, ankommen, wandern
+reisen	verb	scene	a white-haired tourist pulling a wheeled suitcase, a camera around the neck and an open map in one hand	near: abreisen, fahren, aufbrechen, ankommen, wandern
 quälen	verb	no		abstract
 stützen	verb	no		duplicates halten
 aufgeben	verb	no		abstract
 bereiten	verb	no		abstract
 begeben	verb	no		duplicates gehen
 wecken	verb	scene	a person gently shaking the shoulder of someone asleep in bed to wake them	near: aufwachen, erwachen, erwecken, schütteln
-malen	verb	scene	a person at an easel painting a landscape on canvas with a brush, a colour palette in the other hand	near: zeichnen, streichen, färben
+malen	verb	scene	a young woman with red hair at an easel painting a landscape on canvas with a brush, a colour palette in the other hand	near: zeichnen, streichen, färben
 drohen	verb	no		abstract; a raised fist reads as schimpfen or ballen
-binden	verb	scene	a person with one foot up on a step, tying the laces of a sneaker into a bow	near: fesseln, befestigen, verbinden
+binden	verb	scene	a man with fair hair and a short beard with one foot up on a step, tying the laces of a sneaker into a bow	near: fesseln, befestigen, verbinden
 erblicken	verb	no		duplicates sehen
 genießen	verb	no		emotion
 zusehen	verb	no		duplicates sehen
@@ -3298,7 +3298,7 @@ gewöhnen	verb	no		abstract
 umsehen	verb	no		duplicates sehen
 wiederkommen	verb	no		duplicates zurückkehren
 angehen	verb	no		abstract
-schießen	verb	scene	an archer drawing a bow and shooting an arrow toward a round ringed target	near: jagen, erschießen, werfen
+schießen	verb	scene	a blond archer drawing a bow and shooting an arrow toward a round ringed target	near: jagen, erschießen, werfen
 nachdenken	verb	no		abstract (thinking)
 wehren	verb	no		abstract
 behandeln	verb	no		abstract
@@ -3311,7 +3311,7 @@ trösten	verb	no		duplicates beruhigen
 stimmen	verb	no		abstract
 mitbringen	verb	no		duplicates bringen
 hinausgehen	verb	no		duplicates verlassen
-aufheben	verb	scene	a person bending down to pick up a dropped glove from the floor	near: heben, sich bücken, aufnehmen, nehmen
+aufheben	verb	scene	a woman with curly brown hair bending down to pick up a dropped glove from the floor	near: heben, sich bücken, aufnehmen, nehmen
 töten	verb	no		sensitive
 herauskommen	verb	no		duplicates verlassen
 wählen	verb	no		abstract
@@ -3326,35 +3326,35 @@ auffallen	verb	no		abstract
 genügen	verb	no		abstract
 seufzen	verb	no		a sigh is not plainly visible; near: aufatmen, stöhnen
 hingehen	verb	no		duplicates gehen
-reißen	verb	scene	a person tearing a sheet of paper in two with both hands, the torn edges jagged	near: zerreißen, brechen, zerren
+reißen	verb	scene	a young man with blond hair tearing a sheet of paper in two with both hands, the torn edges jagged	near: zerreißen, brechen, zerren
 ärgern	verb	no		emotion
 verbinden	verb	no		abstract
 fordern	verb	no		abstract
 streicheln	verb	scene	a person sitting and petting a cat curled up on their lap	near: streichen, berühren
-verstecken	verb	scene	a person hiding behind a tree trunk, peeking out from one side	near: verbergen, sich ducken
+verstecken	verb	scene	an older woman with white hair in a bun hiding behind a tree trunk, peeking out from one side	near: verbergen, sich ducken
 atmen	verb	no		not plainly visible; reads as seufzen or riechen
 erweisen	verb	no		abstract
 einsehen	verb	no		abstract
-zählen	verb	scene	a person at a table counting coins, sliding them one by one into small stacks	near: rechnen, sparen
+zählen	verb	scene	a man with dark hair at a table counting coins, sliding them one by one into small stacks	near: rechnen, sparen
 sammeln	verb	no		no plain picture; reads as aufheben or suchen
 befehlen	verb	no		abstract (speech)
-jagen	verb	scene	a hunter in a green jacket with a rifle and a hound, stalking a deer at the edge of a forest	near: schießen, verfolgen, hetzen, fangen
+jagen	verb	scene	a red-haired hunter in a green jacket with a rifle and a hound, stalking a deer at the edge of a forest	near: schießen, verfolgen, hetzen, fangen
 plaudern	verb	no		duplicates sprechen
 deuten	verb	no		duplicates zeigen
 aufsuchen	verb	no		duplicates besuchen
-rechnen	verb	scene	a person at a desk pressing the buttons of a large pocket calculator, pencil and notepad beside it	near: zählen
+rechnen	verb	scene	a woman with chestnut hair in a ponytail at a desk pressing the buttons of a large pocket calculator, pencil and notepad beside it	near: zählen
 aushalten	verb	no		abstract
 hassen	verb	no		emotion
 achten	verb	no		abstract
 versichern	verb	no		abstract (speech)
 horchen	verb	no		duplicates hören
-feiern	verb	scene	a person in a paper party hat throwing confetti into the air, balloons and streamers all around	near: jubeln, tanzen
+feiern	verb	scene	a woman with long blond hair in a paper party hat throwing confetti into the air, balloons and streamers all around	near: jubeln, tanzen
 ausbrechen	verb	no		abstract
 aufsteigen	verb	no		duplicates steigen
 bewahren	verb	no		abstract
 aufschlagen	verb	no		duplicates öffnen
 schreiten	verb	no		duplicates gehen
-winken	verb	yes	a person waving one hand raised high above the head, smiling	near: grüßen, begrüßen, sich verabschieden, schwenken
+winken	verb	yes	a man with short light-brown hair waving one hand raised high above the head, smiling	near: grüßen, begrüßen, sich verabschieden, schwenken
 glänzen	verb	no		duplicates leuchten
 teilen	verb	no		no plain picture; reads as geben or schneiden
 reizen	verb	no		abstract
@@ -3366,10 +3366,10 @@ ausstrecken	verb	no		duplicates greifen
 zurufen	verb	no		duplicates rufen
 schweben	verb	no		duplicates fliegen
 anlegen	verb	no		abstract
-lehren	verb	scene	a teacher at a blackboard pointing to a chalk-drawn triangle, facing a few seated pupils	near: unterrichten, erklären, belehren, zeigen
+lehren	verb	scene	a grey-haired teacher at a blackboard pointing to a chalk-drawn triangle, facing a few seated pupils	near: unterrichten, erklären, belehren, zeigen
 besinnen	verb	no		abstract
 überlassen	verb	no		abstract
-bestellen	verb	scene	a person at a restaurant table pointing at an open menu while a waiter writes on a notepad	near: bedienen
+bestellen	verb	scene	an older man with grey hair at a restaurant table pointing at an open menu while a waiter writes on a notepad	near: bedienen
 versinken	verb	no		duplicates sinken
 bedürfen	verb	no		abstract
 entfernen	verb	no		abstract
@@ -3383,14 +3383,14 @@ erfassen	verb	no		duplicates fassen
 wechseln	verb	no		abstract
 unterhalten	verb	no		duplicates sprechen
 überraschen	verb	no		emotion
-anzünden	verb	scene	a person striking a match and lighting a candle, the small flame just catching the wick	near: entzünden, brennen, anstecken
+anzünden	verb	scene	a young woman with red hair striking a match and lighting a candle, the small flame just catching the wick	near: entzünden, brennen, anstecken
 beherrschen	verb	no		abstract
 betreffen	verb	no		abstract
 umgeben	verb	no		relational
 fließen	verb	no		no figure; flowing water reads as der Fluss; near: strömen
 nachsehen	verb	no		abstract
 verstummen	verb	no		abstract
-strecken	verb	yes	a person standing and stretching both arms high above the head, fingers interlaced, body elongated	near: recken, dehnen, ausstrecken, sich aufrichten
+strecken	verb	yes	a man with fair hair and a short beard standing and stretching both arms high above the head, fingers interlaced, body elongated	near: recken, dehnen, ausstrecken, sich aufrichten
 befreien	verb	no		abstract
 einrichten	verb	no		abstract
 fliehen	verb	no		duplicates laufen
@@ -3404,20 +3404,20 @@ enthalten	verb	no		abstract
 zurückhalten	verb	no		duplicates halten
 rollen	verb	scene	a laughing person rolling sideways down a grassy hill, arms stretched above the head, curved motion lines	near: wälzen, drehen, fallen, stürzen
 besorgen	verb	no		abstract
-fangen	verb	scene	a person catching a flying ball with both hands stretched out	near: werfen, greifen, erwischen, fassen
+fangen	verb	scene	a woman with curly brown hair catching a flying ball with both hands stretched out	near: werfen, greifen, erwischen, fassen
 aufhalten	verb	no		abstract
 verderben	verb	no		abstract
-schmücken	verb	scene	a person hanging a shiny bauble on a small fir tree already decorated with stars and garlands	near: hängen
+schmücken	verb	scene	a young man with blond hair hanging a shiny bauble on a small fir tree already decorated with stars and garlands	near: hängen
 umdrehen	verb	no		duplicates wenden
 verbringen	verb	no		abstract (time)
 verbieten	verb	no		abstract
 weitergehen	verb	no		duplicates gehen
 zuwenden	verb	no		duplicates wenden
-decken	verb	scene	a person setting a table, laying a fork beside a plate, glasses and napkins already in place	near: legen, stellen, bedecken
+decken	verb	scene	an older woman with white hair in a bun setting a table, laying a fork beside a plate, glasses and napkins already in place	near: legen, stellen, bedecken
 ausbreiten	verb	no		no plain picture; reads as legen or decken
 zugeben	verb	no		abstract
 benutzen	verb	no		abstract
-läuten	verb	scene	a person ringing a brass handbell, swinging it up and down, sound lines around the bell	near: klingen, tönen, ertönen, schwingen
+läuten	verb	scene	a man with dark hair ringing a brass handbell, swinging it up and down, sound lines around the bell	near: klingen, tönen, ertönen, schwingen
 streifen	verb	no		abstract
 versagen	verb	no		abstract
 zögern	verb	no		abstract
@@ -3444,12 +3444,12 @@ senden	verb	no		duplicates schicken
 beben	verb	no		duplicates zittern
 anstarren	verb	no		duplicates sehen
 ersticken	verb	no		sensitive
-hocken	verb	yes	a person squatting low on their heels, knees bent, forearms resting on the knees	near: sich bücken, knien, sich ducken, sitzen
+hocken	verb	yes	a woman with chestnut hair in a ponytail squatting low on their heels, knees bent, forearms resting on the knees	near: sich bücken, knien, sich ducken, sitzen
 leiten	verb	no		duplicates führen
 ergehen	verb	no		abstract
 gewähren	verb	no		abstract
 darstellen	verb	no		abstract
-hüten	verb	scene	a shepherd with a crook standing watch over a small flock of grazing sheep	near: wachen, schützen
+hüten	verb	scene	a brown-haired shepherd with a crook standing watch over a small flock of grazing sheep	near: wachen, schützen
 interessieren	verb	no		abstract
 eingehen	verb	no		abstract
 brüllen	verb	yes	a lion roaring with its mouth wide open, mane bristling	near: schreien, heulen, knurren, brummen
@@ -3458,13 +3458,13 @@ bewundern	verb	no		emotion
 einsetzen	verb	no		abstract
 einschlagen	verb	no		duplicates schlagen
 täuschen	verb	no		abstract
-mischen	verb	scene	a person shuffling a deck of playing cards between both hands, the cards arcing, only patterned backs showing	near: rühren, spielen
+mischen	verb	scene	a woman with long blond hair shuffling a deck of playing cards between both hands, the cards arcing, only patterned backs showing	near: rühren, spielen
 einnehmen	verb	no		abstract
 entwickeln	verb	no		abstract
 abwarten	verb	no		duplicates warten
 bedenken	verb	no		abstract
 verschaffen	verb	no		abstract
-wiegen	verb	scene	a person gently rocking a wooden cradle with one hand, a baby asleep inside	near: schwingen, schwanken; sense rock, not weigh
+wiegen	verb	scene	a person gently rocking a wooden cradle with one hand, a blond baby asleep inside	near: schwingen, schwanken; sense rock, not weigh
 loben	verb	no		abstract (speech)
 hereinkommen	verb	no		duplicates eintreten
 üben	verb	no		duplicates spielen
@@ -3509,7 +3509,7 @@ bestätigen	verb	no		abstract
 ausrufen	verb	no		duplicates rufen
 wiedersehen	verb	no		abstract; a reunion looks like umarmen, begrüßen
 herkommen	verb	no		duplicates kommen
-kochen	verb	scene	a person in an apron cooking at a kitchen stove, a pan sizzling and a pot steaming on the burners	near: rühren, bereiten
+kochen	verb	scene	a man with short light-brown hair in an apron cooking at a kitchen stove, a pan sizzling and a pot steaming on the burners	near: rühren, bereiten
 brummen	verb	no		speech; a face shows a mood, not this word
 schwanken	verb	no		a still cannot show swaying; looks like fallen, wiegen
 zukommen	verb	no		duplicates kommen
@@ -3536,7 +3536,7 @@ tönen	verb	no		a sound
 schmecken	verb	no		a still cannot show tasting; looks like essen
 erziehen	verb	no		abstract
 übergehen	verb	no		abstract
-stehlen	verb	scene	a sneaky thief on tiptoe lifting a wallet from the back pocket of an unaware man	near: rauben, wegnehmen
+stehlen	verb	scene	a dark-haired sneaky thief on tiptoe lifting a wallet from the back pocket of an unaware man	near: rauben, wegnehmen
 hinsehen	verb	no		duplicates sehen
 ordnen	verb	no		sorting things looks like legen, stellen, trennen
 zurücktreten	verb	no		duplicates treten
@@ -3563,7 +3563,7 @@ ringen	verb	no		duplicates kämpfen
 bücken	verb	no		duplicates beugen
 hineingehen	verb	no		duplicates eintreten
 zweifeln	verb	no		abstract
-zeichnen	verb	scene	a person sketching a simple house with a pencil on a sketch pad, only grey pencil lines	near: malen, schreiben
+zeichnen	verb	scene	an older man with grey hair sketching a simple house with a pencil on a sketch pad, only grey pencil lines	near: malen, schreiben
 schimpfen	verb	no		speech; looks like schreien, drohen
 umkehren	verb	no		direction not shown; looks like umdrehen, zurückkehren
 schleudern	verb	no		duplicates werfen
@@ -3572,7 +3572,7 @@ verbreiten	verb	no		abstract
 verkünden	verb	no		speech
 verziehen	verb	no		a face shows a mood, not this word
 unterdrücken	verb	no		abstract
-bedienen	verb	scene	a waiter with a cloth over one arm serving a plate of food to a guest seated at a table	near: dienen, bringen, reichen
+bedienen	verb	scene	a fair-haired waiter with a cloth over one arm serving a plate of food to a guest seated at a table	near: dienen, bringen, reichen
 unternehmen	verb	no		abstract
 beschließen	verb	no		abstract
 stöhnen	verb	no		a sound; a face does not show which word
@@ -3583,11 +3583,11 @@ schmiegen	verb	no		looks like umarmen, lehnen
 auftreten	verb	no		abstract here; a stage entrance looks like erscheinen
 schätzen	verb	no		abstract
 scheiden	verb	no		abstract
-waschen	verb	scene	a person washing their hands with soap under a running tap, white foam on the hands	near: putzen, baden, wischen
+waschen	verb	scene	a young woman with red hair washing their hands with soap under a running tap, white foam on the hands	near: putzen, baden, wischen
 blühen	verb	yes	a flowering plant in full bloom, many bright open blossoms with spread petals and fresh green leaves	near: wachsen
 aussetzen	verb	no		abstract
 ertönen	verb	no		a sound
-falten	verb	scene	a person folding a sheet of paper in half, pressing the crease flat with one finger	near: beten
+falten	verb	scene	a man with fair hair and a short beard folding a sheet of paper in half, pressing the crease flat with one finger	near: beten
 ausstoßen	verb	no		a sound
 gucken	verb	no		duplicates sehen
 aufbrechen	verb	no		abstract; leaving looks like losgehen, abreisen
@@ -3597,7 +3597,7 @@ vorübergehen	verb	no		duplicates gehen
 zerreißen	verb	no		duplicates reißen
 dehnen	verb	no		duplicates strecken
 hergeben	verb	no		duplicates geben
-verbeugen	verb	yes	a person bowing deeply from the waist, one hand on the chest, the other arm held out to the side	near: beugen, bücken, neigen, grüßen
+verbeugen	verb	yes	a woman with curly brown hair bowing deeply from the waist, one hand on the chest, the other arm held out to the side	near: beugen, bücken, neigen, grüßen
 einschlafen	verb	no		duplicates schlafen
 erwecken	verb	no		abstract
 innehalten	verb	no		abstract
@@ -3605,7 +3605,7 @@ abholen	verb	no		looks like holen, treffen
 aufsetzen	verb	no		putting on a hat looks like abnehmen, anziehen
 aufwachen	verb	no		duplicates erwachen
 verwundern	verb	no		emotion
-tauchen	verb	yes	a diver with mask and flippers swimming down deep underwater among rising bubbles	near: schwimmen, versinken, springen
+tauchen	verb	yes	a curly-haired diver with mask and flippers swimming down deep underwater among rising bubbles	near: schwimmen, versinken, springen
 flüchten	verb	no		duplicates fliehen
 lügen	verb	no		abstract
 erwerben	verb	no		abstract
@@ -3625,7 +3625,7 @@ herankommen	verb	no		duplicates kommen
 beachten	verb	no		abstract
 abschneiden	verb	no		looks like schneiden
 eindringen	verb	no		looks like eintreten
-anrufen	verb	scene	a person holding a telephone receiver to the ear while pressing plain buttons on a desk telephone	near: rufen, sprechen
+anrufen	verb	scene	a young man with blond hair holding a telephone receiver to the ear while pressing plain buttons on a desk telephone	near: rufen, sprechen
 entzücken	verb	no		emotion
 ballen	verb	no		a clenched fist looks like drohen, schlagen
 streiten	verb	scene	two people arguing face to face, angry faces, both pointing and shouting at each other	near: schimpfen, schreien, kämpfen
@@ -3635,12 +3635,12 @@ umarmen	verb	scene	two people hugging warmly, arms wrapped around each other's b
 weilen	verb	no		abstract
 rennen	verb	no		duplicates laufen
 erröten	verb	no		a face shows a mood; looks like schämen
-wischen	verb	scene	a person wiping a table clean with a cloth in a wide sweeping stroke	near: putzen, reiben, waschen
+wischen	verb	scene	an older woman with white hair in a bun wiping a table clean with a cloth in a wide sweeping stroke	near: putzen, reiben, waschen
 heulen	verb	yes	a wolf howling with its head raised high toward a full moon	near: brüllen, knurren, weinen
 ersetzen	verb	no		abstract
 verschließen	verb	no		duplicates schließen
 vorschlagen	verb	no		speech
-verloben	verb	scene	a man kneeling on one knee, holding out an open ring box to a delighted woman	near: heiraten, knien
+verloben	verb	scene	a man with dark hair kneeling on one knee, holding out an open ring box to a delighted woman	near: heiraten, knien
 gehorchen	verb	no		abstract
 unterscheiden	verb	no		abstract
 spannen	verb	no		looks like ziehen, schießen
@@ -3661,7 +3661,7 @@ vermuten	verb	no		abstract
 mustern	verb	no		duplicates sehen
 auflösen	verb	no		abstract here; dissolving looks like rühren, mischen
 klatschen	verb	yes	a smiling person clapping hands in applause, small motion lines around the hands	near: zusammenschlagen, jubeln
-schneiden	verb	scene	a person cutting a sheet of paper with scissors along a line	near: abschneiden
+schneiden	verb	scene	a man with dark hair cutting a sheet of paper with scissors along a line	near: abschneiden
 absehen	verb	no		abstract
 rauben	verb	no		duplicates stehlen
 begehren	verb	no		abstract
@@ -3700,9 +3700,9 @@ fesseln	verb	no		captivity; looks like binden
 stillstehen	verb	no		duplicates stehen
 losgehen	verb	no		duplicates gehen
 verdanken	verb	no		abstract
-klettern	verb	yes	a person climbing a steep rock face, hands and feet gripping small holds	near: steigen, hinaufsteigen, kriechen
+klettern	verb	yes	a woman with chestnut hair in a ponytail climbing a steep rock face, hands and feet gripping small holds	near: steigen, hinaufsteigen, kriechen
 einbilden	verb	no		abstract
-messen	verb	scene	a person measuring a wooden board with a yellow tape measure that has plain tick marks	near: prüfen
+messen	verb	scene	a woman with long blond hair measuring a wooden board with a yellow tape measure that has plain tick marks	near: prüfen
 einwerfen	verb	no		speech
 heimkommen	verb	no		looks like ankommen, zurückkehren
 bezeichnen	verb	no		abstract
@@ -3717,7 +3717,7 @@ vertiefen	verb	no		looks like lesen
 aufpassen	verb	no		abstract; looks like beobachten
 aufkommen	verb	no		abstract
 beantworten	verb	no		speech; near antworten
-vorlesen	verb	scene	an adult reading a picture book aloud to a child sitting close beside, the child listening	near: lesen, erzählen, vortragen
+vorlesen	verb	scene	a man with short light-brown hair reading a picture book aloud to a child sitting close beside, the child listening	near: lesen, erzählen, vortragen
 hinlegen	verb	no		duplicates legen
 vorziehen	verb	no		abstract
 erfreuen	verb	no		emotion
@@ -3738,7 +3738,7 @@ niederlegen	verb	no		duplicates legen
 hergehen	verb	no		duplicates gehen
 hingeben	verb	no		abstract
 beteiligen	verb	no		abstract
-untersuchen	verb	scene	a doctor in a white coat examining a seated patient, listening to the chest with a stethoscope	near: behandeln, prüfen, forschen
+untersuchen	verb	scene	a white-haired doctor in a white coat examining a seated patient, listening to the chest with a stethoscope	near: behandeln, prüfen, forschen
 entbehren	verb	no		abstract
 sperren	verb	no		looks like schließen
 ersparen	verb	no		abstract
@@ -3759,7 +3759,7 @@ befestigen	verb	no		too general; a picture shows binden, kleben or heften
 abgehen	verb	no		abstract in the list's sense (be lacking)
 entzünden	verb	no		duplicates anzünden
 angeben	verb	no		abstract
-schwören	verb	scene	a person standing upright taking an oath, right hand raised with palm forward, left hand resting flat on a thick closed book	near: versprechen, beschwören
+schwören	verb	scene	an older man with grey hair standing upright taking an oath, right hand raised with palm forward, left hand resting flat on a thick closed book	near: versprechen, beschwören
 klirren	verb	no		sound; no figure doing it
 sichern	verb	no		abstract
 beleben	verb	no		abstract
@@ -3767,10 +3767,10 @@ eingestehen	verb	no		abstract; near gestehen, zugeben
 berufen	verb	no		abstract
 klammern	verb	no		duplicates festhalten; near umklammern
 scheuen	verb	no		abstract
-putzen	verb	scene	a person sitting on a stool polishing a leather boot with a shoe brush until it shines	near: wischen, waschen, reiben
+putzen	verb	scene	a young woman with red hair sitting on a stool polishing a leather boot with a shoe brush until it shines	near: wischen, waschen, reiben
 schwatzen	verb	no		speech; near plaudern, reden
 beschwören	verb	no		speech (implore); near bitten
-ducken	verb	scene	a person ducking quickly, knees bent and head pulled down under both arms, as a ball flies just over their head	near: ausweichen, sich bücken, hocken
+ducken	verb	scene	a man with fair hair and a short beard ducking quickly, knees bent and head pulled down under both arms, as a ball flies just over their head	near: ausweichen, sich bücken, hocken
 entfalten	verb	no		duplicates ausbreiten; near falten, öffnen
 dämpfen	verb	no		abstract (sound)
 zerren	verb	no		duplicates ziehen; near reißen
@@ -3783,9 +3783,9 @@ beklagen	verb	no		speech; near klagen, jammern
 herumgehen	verb	no		duplicates gehen
 abziehen	verb	no		abstract (deduct)
 zusammenzucken	verb	no		duplicates zucken; near erschrecken
-sparen	verb	scene	a person dropping a coin into the slot of a pink piggy bank on a table	near: bezahlen, ausgeben
+sparen	verb	scene	a woman with curly brown hair dropping a coin into the slot of a pink piggy bank on a table	near: bezahlen, ausgeben
 beglücken	verb	no		abstract
-tasten	verb	scene	a person in a dark room with eyes closed, feeling their way along a wall with both hands outstretched	near: fühlen, berühren, suchen
+tasten	verb	scene	a young man with blond hair in a dark room with eyes closed, feeling their way along a wall with both hands outstretched	near: fühlen, berühren, suchen
 übersehen	verb	no		abstract
 errichten	verb	no		duplicates bauen; near aufbauen, aufstellen
 anstecken	verb	no		abstract (infection)
@@ -3800,11 +3800,11 @@ anstoßen	verb	no		duplicates stoßen
 sträuben	verb	no		abstract in the list's sense (resist); a bristling cat reads as fear
 entsprechen	verb	no		abstract
 anschließen	verb	no		abstract; near mitmachen, mitgehen
-sprengen	verb	scene	a quarry worker in a hard hat pushing down a detonator plunger while a rock face bursts apart in dust behind	near: zerstören, krachen
+sprengen	verb	scene	a blond quarry worker in a hard hat pushing down a detonator plunger while a rock face bursts apart in dust behind	near: zerstören, krachen
 gründen	verb	no		abstract
 mitgehen	verb	no		duplicates gehen; near begleiten, mitkommen
 bekümmern	verb	no		emotion
-schwimmen	verb	yes	a person swimming the front crawl in blue water, one arm reaching forward	near: baden, tauchen
+schwimmen	verb	yes	an older woman with white hair in a bun swimming the front crawl in blue water, one arm reaching forward	near: baden, tauchen
 vollziehen	verb	no		abstract
 verehren	verb	no		abstract
 erstarren	verb	no		state; reads as stillstehen
@@ -3837,7 +3837,7 @@ haften	verb	no		abstract; near kleben
 staunen	verb	no		emotion; near wundern, bewundern
 aufziehen	verb	no		abstract in the list's sense (tease)
 lauern	verb	no		a crouching animal reads as jagen or beobachten
-kleben	verb	scene	a person squeezing a tube of glue onto a sheet of paper and pressing a coloured paper cut-out onto it	near: heften, befestigen
+kleben	verb	scene	a man with dark hair squeezing a tube of glue onto a sheet of paper and pressing a coloured paper cut-out onto it	near: heften, befestigen
 durchsetzen	verb	no		abstract
 ausüben	verb	no		abstract
 verlaufen	verb	no		abstract
@@ -3857,14 +3857,14 @@ ausgeben	verb	no		duplicates bezahlen
 betonen	verb	no		speech
 nötigen	verb	no		abstract; near zwingen
 ausruhen	verb	no		duplicates ruhen; near erholen
-blasen	verb	scene	a person with puffed cheeks blowing on a dandelion clock, the seeds flying away	near: wehen, atmen, pfeifen
+blasen	verb	scene	a woman with chestnut hair in a ponytail with puffed cheeks blowing on a dandelion clock, the seeds flying away	near: wehen, atmen, pfeifen
 einholen	verb	no		relational; looks like laufen
 anwenden	verb	no		abstract
 erschießen	verb	no		sensitive (killing)
 vermissen	verb	no		emotion
 anstrengen	verb	no		abstract; a straining figure reads as heben
 verschweigen	verb	no		abstract
-formen	verb	scene	a person shaping a lump of grey clay into a small bowl with both hands on a table	near: bilden, gestalten
+formen	verb	scene	a woman with long blond hair shaping a lump of grey clay into a small bowl with both hands on a table	near: bilden, gestalten
 verwenden	verb	no		abstract; near benutzen, gebrauchen
 anerkennen	verb	no		abstract
 erschlagen	verb	no		sensitive (killing)
@@ -3879,11 +3879,11 @@ verhalten	verb	no		abstract
 stopfen	verb	no		looks like füllen, packen or essen
 lohnen	verb	no		abstract
 heimkehren	verb	no		duplicates zurückkehren; near heimkommen
-pfeifen	verb	yes	a person whistling a tune with pursed lips, hands in pockets, small musical notes floating from the mouth	near: singen, summen, blasen
+pfeifen	verb	yes	a man with short light-brown hair whistling a tune with pursed lips, hands in pockets, small musical notes floating from the mouth	near: singen, summen, blasen
 spähen	verb	no		duplicates sehen; near gucken, blicken
 hinaufsteigen	verb	no		duplicates steigen
 erleichtern	verb	no		abstract
-knien	verb	yes	a person kneeling upright on both knees on the floor, back straight, hands resting on the thighs	near: hocken, beten, sich bücken
+knien	verb	yes	an older man with grey hair kneeling upright on both knees on the floor, back straight, hands resting on the thighs	near: hocken, beten, sich bücken
 einschließen	verb	no		duplicates verschließen
 fluchen	verb	no		speech; near schimpfen
 betten	verb	no		duplicates legen; near hinlegen
@@ -3893,12 +3893,12 @@ anfahren	verb	no		speech (snap at)
 preisgeben	verb	no		abstract
 jubeln	verb	no		emotion; a cheering figure reads as sich freuen
 schonen	verb	no		abstract
-kriechen	verb	yes	a person crawling on hands and knees across the floor, head up	near: klettern, schlüpfen
+kriechen	verb	yes	a young woman with red hair crawling on hands and knees across the floor, head up	near: klettern, schlüpfen
 aussuchen	verb	no		duplicates wählen
 vertrauen	verb	no		abstract
 belehren	verb	no		speech; near lehren
 aufraffen	verb	no		abstract
-schöpfen	verb	scene	a person lifting soup with a ladle out of a large pot and pouring it into a bowl	near: füllen, kochen
+schöpfen	verb	scene	a man with fair hair and a short beard lifting soup with a ladle out of a large pot and pouring it into a bowl	near: füllen, kochen
 hetzen	verb	no		duplicates jagen
 trocknen	verb	scene	a person drying their wet hair with a hand-held hair dryer	near: wischen, reiben
 hervorrufen	verb	no		abstract
@@ -3912,11 +3912,11 @@ rühmen	verb	no		speech; near loben, preisen
 einwenden	verb	no		speech
 besehen	verb	no		duplicates sehen; near betrachten, ansehen
 zurückfahren	verb	no		duplicates fahren
-stampfen	verb	yes	a person stamping one foot down hard on the ground, knee raised high, a small cloud of dust at the boot	near: treten
+stampfen	verb	yes	a woman with curly brown hair stamping one foot down hard on the ground, knee raised high, a small cloud of dust at the boot	near: treten
 stemmen	verb	no		duplicates heben; near drücken
 entgegenstrecken	verb	no		duplicates ausstrecken; near reichen
-färben	verb	scene	a person dipping a white cloth into a tub of bright red dye, the dipped half already red	near: malen, streichen, tauchen
-graben	verb	scene	a person digging a hole in the ground with a spade, a pile of earth beside	near: wühlen, begraben
+färben	verb	scene	a young man with blond hair dipping a white cloth into a tub of bright red dye, the dipped half already red	near: malen, streichen, tauchen
+graben	verb	scene	an older woman with white hair in a bun digging a hole in the ground with a spade, a pile of earth beside	near: wühlen, begraben
 regieren	verb	no		abstract; near herrschen
 umklammern	verb	no		duplicates festhalten; near klammern
 weigern	verb	no		abstract
@@ -3927,7 +3927,7 @@ feststehen	verb	no		abstract
 krachen	verb	no		sound; no figure doing it
 zusammenziehen	verb	no		abstract
 aufleuchten	verb	no		no figure doing it; near leuchten
-baden	verb	scene	a person relaxing in a bathtub full of white foam bubbles	near: schwimmen, waschen
+baden	verb	scene	a man with dark hair relaxing in a bathtub full of white foam bubbles	near: schwimmen, waschen
 hervortreten	verb	no		duplicates treten
 ablenken	verb	no		abstract
 hinaufgehen	verb	no		duplicates steigen
@@ -3945,8 +3945,8 @@ rüsten	verb	no		abstract
 beleuchten	verb	no		duplicates leuchten
 blenden	verb	no		no figure doing it; a dazzled person reads as schauen
 besiegen	verb	no		duplicates gewinnen; near siegen
-riechen	verb	scene	a person holding a red rose up to the nose, eyes closed, smelling it	near: atmen, genießen
-aussteigen	verb	scene	a person stepping down from the open door of a bus onto the pavement	near: steigen, verlassen
+riechen	verb	scene	a woman with chestnut hair in a ponytail holding a red rose up to the nose, eyes closed, smelling it	near: atmen, genießen
+aussteigen	verb	scene	a woman with long blond hair stepping down from the open door of a bus onto the pavement	near: steigen, verlassen
 plagen	verb	no		abstract
 auslöschen	verb	no		abstract in the list's sense; near ausmachen, erlöschen
 schwenken	verb	no		duplicates schwingen; near winken
@@ -3965,7 +3965,7 @@ erklingen	verb	no		sound
 andeuten	verb	no		abstract
 auffassen	verb	no		abstract
 ansetzen	verb	no		abstract
-heften	verb	scene	a person stapling a few blank sheets of paper together with a desk stapler	near: kleben, befestigen (Hefter = stapler)
+heften	verb	scene	a man with short light-brown hair stapling a few blank sheets of paper together with a desk stapler	near: kleben, befestigen (Hefter = stapler)
 zusammenschlagen	verb	no		duplicates klatschen
 aufführen	verb	no		duplicates spielen; near darstellen
 überreichen	verb	no		duplicates geben; near reichen, schenken

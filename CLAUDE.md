@@ -18,6 +18,7 @@ A monorepo of small Android apps that share one framework, in a single Gradle bu
 | `lint.xml` | Lint settings shared by every module; each entry says why it is there. |
 | `docker/Dockerfile`, `tools/` | The build pipeline (below). |
 | `tools/wordlists/` | Noun frequency lists from public-domain texts (Gutenberg + spaCy + Wikidata + emoji), reviewed by hand, built into Quiz samples (online-only, in `apps/quiz/samples/`). Read its README before adding a list. |
+| `tools/pictures/` | Original pictures for the word lists' picture cards, generated locally on Apple Silicon (MLX/mflux, ERNIE-Image-Turbo). The plan and the pick per word are committed, the images are not. Read its README and `PLAN.md`. |
 | `.github/workflows/build.yml` | CI and the GitHub Pages download site. |
 | `keystore/debug.keystore` | Shared debug signing key (see Signing). |
 

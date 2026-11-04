@@ -12,7 +12,8 @@ Steps, each resumable (work already done is skipped). <list> is a word list
                                     each row
   generate <list> <model> <words> [seeds] [size]
                                     pictures of the planned words (yes and scene) into
-                                    <list>/raw/<model>/<kind>-<word>-<seed>.png, seeds `1-4`
+                                    <list>/raw/<model>/<kind>-<word>-<seed>-<hash>.png (hash of
+                                    the prompt, so a new prompt makes new pictures), seeds `1-4`
                                     by default, at the model's size; each picture's model,
                                     revision, settings, prompt and seed go to
                                     <list>/raw/<model>/log.tsv
@@ -36,6 +37,7 @@ README.md, and PLAN.md for writing the plan.
 """
 import base64
 import datetime
+import hashlib
 import io
 import sys
 import time
@@ -237,8 +239,10 @@ def slug(lemma):
     return "".join(c if c.isascii() and (c.isalnum() or c == "-") else "_" for c in lemma)
 
 
-def picture_name(kind, lemma, seed):
-    return f"{kind}-{slug(lemma)}-{seed}.png"
+def picture_name(kind, lemma, seed, prompt):
+    """<kind>-<word>-<seed>-<prompt hash>.png: a changed prompt makes new files,
+    so generate never mistakes an old picture for the new prompt's."""
+    return f"{kind}-{slug(lemma)}-{seed}-{hashlib.sha1(prompt.encode()).hexdigest()[:6]}.png"
 
 
 def seed_range(spec):
@@ -297,7 +301,7 @@ def save_picture(name, model, row, seed, size, prompt, image, seconds):
     m = MODELS[model]
     outdir = HERE / name / "raw" / model
     outdir.mkdir(parents=True, exist_ok=True)
-    file = picture_name(row["kind"], row["lemma"], seed)
+    file = picture_name(row["kind"], row["lemma"], seed, prompt)
     temporary = outdir / f"{file}.tmp"
     image.save(temporary, "PNG")
     temporary.replace(outdir / file)
@@ -320,7 +324,7 @@ def generate(name, model, words, seeds="1-4", size=None):
     size = size or m["size"]
     outdir = HERE / name / "raw" / model
     todo = [(row, seed) for row in chosen_words(name, words) for seed in seed_range(seeds)
-            if not (outdir / picture_name(row["kind"], row["lemma"], seed)).exists()]
+            if not (outdir / picture_name(row["kind"], row["lemma"], seed, full_prompt(row["prompt"]))).exists()]
     print(f"{m['name']}: {len(todo)} pictures to make -> {outdir}", flush=True)
     if not todo:
         return
@@ -481,7 +485,7 @@ def sheet(name, html, words, columns, title=None, intro=""):
         w = info[(row["kind"], row["lemma"])]
         cells = []
         for model, seed in cols:
-            path = HERE / name / "raw" / model / picture_name(row["kind"], row["lemma"], seed)
+            path = HERE / name / "raw" / model / picture_name(row["kind"], row["lemma"], seed, full_prompt(row["prompt"]))
             cells.append(f'<td><img src="{data_url(card_picture(path))}" width="{shown}" '
                          f'height="{shown}" alt="{h.escape(row["lemma"])} {seed}"></td>'
                          if path.exists() else "<td></td>")
@@ -535,7 +539,7 @@ def mosaic(name, png, words, columns, tile=200, start=0, count=None):
         draw.text((6, y * tile + 8), f"{start + y + 1}. {w['card']}".translate(ascii_label), fill="black", font=font)
         draw.text((6, y * tile + 28), w["english"][:22], fill="#555", font=font)
         for x, (model, seed) in enumerate(cols):
-            path = HERE / name / "raw" / model / picture_name(row["kind"], row["lemma"], seed)
+            path = HERE / name / "raw" / model / picture_name(row["kind"], row["lemma"], seed, full_prompt(row["prompt"]))
             if path.exists():
                 sheet.paste(card_picture(path, tile - 4), (label + x * tile + 2, y * tile + 2))
             draw.text((label + x * tile + 6, y * tile + 4), f"{model[0]}{seed}", fill="red", font=font)

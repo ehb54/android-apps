@@ -3,7 +3,8 @@
 Makes original pictures for the word lists' picture cards (picture → German),
 generated locally on a Mac with Apple Silicon, to replace the Noto Emoji
 pictures the lists use now. A picture is made for every noun and verb that one
-picture can show plainly; nouns without one keep their emoji, if any.
+picture can show plainly. A list with its own pictures uses only them: its
+nouns without one get no picture card (the emoji are not mixed in).
 
 Everything needed to remake or extend the pictures is kept: the plan (one
 prompt per word, or why a word gets none), every picture's model, settings,
@@ -32,9 +33,9 @@ must allow redistributing outputs; all three are Apache 2.0.
 
 | Model | Weights | Steps | Time per picture | Pilot |
 |---|---|---|---|---|
-| FLUX.2 [klein] 4B (Black Forest Labs) | `mflux-community/flux2-klein-4b-mflux-q8` | 4 | 3.3 s | nearly as good on objects and 5× faster than ERNIE; colourful, no lettering on Zeitung or Uhr; more anatomy slips (a sixth finger, two hands holding two pens) and less of the action in verbs |
+| FLUX.2 [klein] 4B (Black Forest Labs) | `mflux-community/flux2-klein-4b-mflux-q8` | 4 | 3.3 s | nearly as good on objects and 5× faster; colourful, no lettering on Zeitung or Uhr; more anatomy slips (a sixth finger, two hands holding two pens) and less of the action in verbs |
 | Z-Image-Turbo (Tongyi-MAI) | `mflux-community/z-image-turbo-mflux-q8` | 9 | 9.4 s | crisp icons, but some prompts turn into black silhouettes or line art, pseudo-text on Zeitung and digits on Uhr, and the four seeds look almost alike |
-| ERNIE-Image-Turbo (Baidu) | `mflux-community/ernie-image-turbo-mflux-q8` | 8 | 15.7 s | **recommended**: best on verbs and scenes (a whole person writing, eating at a table, getting up), no lettering; fails on stellen; 5× slower than klein |
+| ERNIE-Image-Turbo (Baidu) | `mflux-community/ernie-image-turbo-mflux-q8` | 8 | 15.7 s | **chosen**: best on verbs and scenes (a whole person writing, eating at a table, getting up), no lettering; fails on stellen; 5× slower than klein |
 
 Not compared: SDXL (OpenRAIL++-M: its use restrictions travel with the
 outputs, and mflux does not run it), FLUX.2 [klein] 9B (FLUX Non-Commercial
@@ -50,7 +51,7 @@ each picture's are also in its log row.
 |---|---|---|
 | `plan.tsv` | every noun and verb of the list: `picturable` (yes, scene, no), the prompt, and a note (why not, or which near-synonyms the prompt keeps apart) | by hand (`PLAN.md`), checked by `merge` |
 | `pilot.txt` | the 40 words of the model pilot | by hand |
-| `raw/<model>/` | generated pictures `<kind>-<word>-<seed>.png` and `log.tsv` (model, weights and revision, mflux version, steps, guidance, size, seed, full prompt, seconds) | `generate` (git-ignored) |
+| `raw/<model>/` | generated pictures `<kind>-<word>-<seed>-<hash>.png` (hash of the full prompt) and `log.tsv` (model, weights and revision, mflux version, steps, guidance, size, seed, full prompt, seconds) | `generate` (git-ignored) |
 | `picks.tsv` | **the decision per pictured word**: `pick` (the file on the card, with its full prompt and seed), `retry` or `drop`, and a note | by hand from contact sheets, through `pick` |
 
 ## Steps
@@ -83,14 +84,15 @@ again.
    TSV with the columns `lemma kind file decision note` (`file` is
    `<model>/<picture>` for a pick) and add them with
    `run.sh pick <list> <files>`, which fills in the prompt and seed from the
-   log. For a `retry`, rewrite the word's prompt in `plan.tsv`, generate it
-   with new seeds (`5-8`), and decide again.
+   log. For a `retry`, rewrite the word's prompt in `plan.tsv` and run
+   `generate` again: a new prompt has a new hash, so its pictures are made
+   afresh while the old ones stay (and stay in the log).
 5. `run.sh restore <list>` regenerates picked pictures that `raw/` does not
    have (on another Mac, or after `raw/` was cleared). Pictures come out the
    same with the same mflux and MLX versions; across versions they may differ
    slightly.
 6. `tools/wordlists/run.sh build <list> <Title> ../../apps/quiz/samples`
    (see `../wordlists/README.md`) puts the picked pictures into
-   `<Title> pictures.zip` (nouns, with emoji where a noun has no pick) and
-   `<Title> verb pictures.zip` (picture → infinitive): white margins trimmed,
-   256 px, WebP. The zips' `CREDITS.txt` names the model and its license.
+   `<Title> pictures.zip` (nouns) and `<Title> verb pictures.zip` (picture →
+   infinitive): white margins trimmed, 256 px, WebP. The zips' `CREDITS.txt`
+   names the model and its license.
