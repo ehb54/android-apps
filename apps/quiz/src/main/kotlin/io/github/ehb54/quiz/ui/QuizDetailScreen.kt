@@ -50,6 +50,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import io.github.ehb54.quiz.R
 import io.github.ehb54.quiz.engine.speedCards
+import io.github.ehb54.quiz.engine.speedContinues
 import io.github.ehb54.quiz.engine.speedStartLevel
 import io.github.ehb54.quiz.model.Card
 import io.github.ehb54.quiz.model.Direction
@@ -306,13 +307,17 @@ private fun SessionSettings(quiz: Quiz, onChange: (QuizSettings) -> Unit, onStar
     }
 }
 
-/** Speed mode's start button: the level a run starts at, and the cards below it ("Start level 3 (4 cards)"). */
+/**
+ * Speed mode's start button: the level a run starts at, and the cards below it
+ * ("Start level 1 (6 cards)", or "Continue level 8 (6 cards)" where the last run got to).
+ */
 @Composable
 private fun SpeedStart(quiz: Quiz, onStart: () -> Unit) {
     val level = quiz.speedStartLevel()
     val asked = quiz.speedCards().count { it.speedStats(quiz.settings.direction).level < level }
+    val label = if (quiz.speedContinues()) R.plurals.continue_speed else R.plurals.start_speed
     Button(onClick = onStart, enabled = asked > 0, modifier = Modifier.fillMaxWidth()) {
-        Text(pluralStringResource(R.plurals.start_speed, asked, asked, level))
+        Text(pluralStringResource(label, asked, asked, level))
     }
 }
 

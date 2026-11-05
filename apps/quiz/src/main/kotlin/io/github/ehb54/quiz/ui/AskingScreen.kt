@@ -25,7 +25,6 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -42,6 +41,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import io.github.ehb54.quiz.R
 import io.github.ehb54.quiz.engine.Session
+import io.github.ehb54.quiz.engine.Stopwatch
 import io.github.ehb54.quiz.model.Quiz
 import java.io.File
 
@@ -57,6 +57,7 @@ fun AskingScreen(
     session: Session,
     feedback: Feedback?,
     revealed: Boolean,
+    paused: Boolean,
     mediaDir: File,
     snackbar: SnackbarHostState,
     vm: QuizViewModel,
@@ -66,67 +67,78 @@ fun AskingScreen(
     val direction = session.direction
     val attempt = listOf(session.round, card.id, session.missesOnCurrent)
     var typed by rememberSaveable(attempt) { mutableStateOf("") }
-    // The timer starts when the card shows, or when its sound has played.
-    var shownAt by remember(attempt, revealed) { mutableLongStateOf(SystemClock.elapsedRealtime()) }
+    // The clock starts when the card shows, or when its sound has played, and stops while paused.
+    val clock = remember(attempt, revealed) { Stopwatch(SystemClock::elapsedRealtime, running = !paused) }
+    LaunchedEffect(clock, paused) { clock.running = !paused }
+    if (session.timed) WhenAway(vm::pause)
+    val player = LocalSoundPlayer.current
+    LaunchedEffect(paused) { if (paused) player.stop() }
     val focus = remember { FocusRequester() }
     fun submit() {
-        if (typed.isNotBlank()) vm.submit(typed, SystemClock.elapsedRealtime() - shownAt)
+        if (typed.isNotBlank()) vm.submit(typed, clock.millis)
     }
-    LaunchedEffect(attempt, revealed) {
-        if (!revealed) focus.requestFocus()
+    LaunchedEffect(attempt, revealed, paused) {
+        if (!revealed && !paused) focus.requestFocus()
     }
 
     Scaffold(
         topBar = {
             TopAppBar(
                 title = { Text(quiz.name, maxLines = 1, overflow = TextOverflow.Ellipsis) },
-                actions = { RoundCounter(session.round, session.remaining, vm::abandonSession) },
+                actions = {
+                    RoundCounter(session.round, session.remaining, vm::abandonSession)
+                    if (session.timed && !paused) PauseButton(vm::pause)
+                },
             )
         },
         snackbarHost = { SnackbarHost(snackbar) },
     ) { insets ->
-        Column(
-            Modifier
-                .fillMaxSize()
-                .padding(insets)
-                .padding(24.dp)
-                .verticalScroll(rememberScrollState()),
-            verticalArrangement = Arrangement.spacedBy(16.dp),
-        ) {
-            Prompt(card, direction, mediaDir, pictureHeight = 360.dp, playKey = listOf(session.round, card.id)) {
-                shownAt = SystemClock.elapsedRealtime()
-            }
-
-            if (revealed) {
-                Text(stringResource(R.string.answer_is), style = MaterialTheme.typography.labelLarge)
-                Text(card.answer(direction), style = MaterialTheme.typography.headlineSmall)
-                Button(onClick = vm::hideAnswer, modifier = Modifier.fillMaxWidth()) {
-                    Text(stringResource(R.string.hide_answer))
+        if (paused) {
+            PausedPane(vm::resume, Modifier.padding(insets))
+        } else {
+            Column(
+                Modifier
+                    .fillMaxSize()
+                    .padding(insets)
+                    .padding(24.dp)
+                    .verticalScroll(rememberScrollState()),
+                verticalArrangement = Arrangement.spacedBy(16.dp),
+            ) {
+                Prompt(card, direction, mediaDir, pictureHeight = 360.dp, playKey = listOf(session.round, card.id)) {
+                    clock.restart()
                 }
-            } else {
-                OutlinedTextField(
-                    value = typed,
-                    onValueChange = { typed = it },
-                    label = { Text(stringResource(R.string.answer)) },
-                    singleLine = true,
-                    isError = feedback != null,
-                    supportingText = feedback?.let {
-                        { Text(stringResource(if (it == Feedback.Wrong) R.string.wrong else R.string.too_slow)) }
-                    },
-                    keyboardOptions = KeyboardOptions(
-                        capitalization = KeyboardCapitalization.None,
-                        autoCorrectEnabled = false,
-                        keyboardType = KeyboardType.Text,
-                        imeAction = ImeAction.Done,
-                    ),
-                    keyboardActions = KeyboardActions(onDone = { submit() }),
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .focusRequester(focus),
-                )
-                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    Button(onClick = ::submit, enabled = typed.isNotBlank()) { Text(stringResource(R.string.check)) }
-                    TextButton(onClick = vm::reveal) { Text(stringResource(R.string.show_answer)) }
+
+                if (revealed) {
+                    Text(stringResource(R.string.answer_is), style = MaterialTheme.typography.labelLarge)
+                    Text(card.answer(direction), style = MaterialTheme.typography.headlineSmall)
+                    Button(onClick = vm::hideAnswer, modifier = Modifier.fillMaxWidth()) {
+                        Text(stringResource(R.string.hide_answer))
+                    }
+                } else {
+                    OutlinedTextField(
+                        value = typed,
+                        onValueChange = { typed = it },
+                        label = { Text(stringResource(R.string.answer)) },
+                        singleLine = true,
+                        isError = feedback != null,
+                        supportingText = feedback?.let {
+                            { Text(stringResource(if (it == Feedback.Wrong) R.string.wrong else R.string.too_slow)) }
+                        },
+                        keyboardOptions = KeyboardOptions(
+                            capitalization = KeyboardCapitalization.None,
+                            autoCorrectEnabled = false,
+                            keyboardType = KeyboardType.Text,
+                            imeAction = ImeAction.Done,
+                        ),
+                        keyboardActions = KeyboardActions(onDone = { submit() }),
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .focusRequester(focus),
+                    )
+                    Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        Button(onClick = ::submit, enabled = typed.isNotBlank()) { Text(stringResource(R.string.check)) }
+                        TextButton(onClick = vm::reveal) { Text(stringResource(R.string.show_answer)) }
+                    }
                 }
             }
         }

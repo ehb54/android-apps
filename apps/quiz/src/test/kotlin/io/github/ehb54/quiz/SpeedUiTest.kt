@@ -14,7 +14,8 @@ import org.junit.Test
 
 /**
  * Speed mode on Shapes: a level, its results, the next level, and stopping
- * there. Its levels are its own, so Pick's due counts are untouched.
+ * there; the next run continues at that level. Its levels are its own, so
+ * Pick's due counts are untouched.
  */
 class SpeedUiTest : QuizUiTest() {
     @Test
@@ -37,7 +38,7 @@ class SpeedUiTest : QuizUiTest() {
                 compose.waitForIdle()
             }
 
-            compose.waitForText("Level 1 done")
+            compose.waitForText("Finished level 1")
             compose.onNodeWithText("Right first time: 5 of 6").assertExists()
             compose.onNodeWithText("1 miss").assertExists()
             compose.onNodeWithText("Slowest cards:").assertExists()
@@ -50,13 +51,14 @@ class SpeedUiTest : QuizUiTest() {
             compose.waitForText("Level 2 · 5 left")
             scenario.onActivity { it.onBackPressedDispatcher.onBackPressed() }
             compose.waitForText("Stop speed practice?")
+            compose.onNodeWithText("Cards picked so far keep their speed levels, and the next run continues at level 2.").assertExists()
             compose.onNode(hasText("Stop") and hasAnyAncestor(isDialog())).performClick()
             compose.waitForText("Stopped in level 2")
             compose.onNodeWithText("Picked 1 of 6").assertExists()
             compose.onNodeWithText("Done").performClick()
 
-            // Only the card picked for circle is below level 1 now, so a new run starts there.
-            compose.waitForText("Start level 1 (1 card)")
+            // The run got to level 2, so the next one continues there, with every card below it.
+            compose.waitForText("Continue level 2 (6 cards)")
             compose.onNodeWithContentDescription("Back").performClick()
             compose.waitForText("6 cards · Type →6 · Pick →6 ←6 · Match 6")
         }

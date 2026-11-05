@@ -51,8 +51,8 @@ private fun CurrentScreen(state: UiState, vm: QuizViewModel, snackbar: SnackbarH
             when {
                 session == null || quiz == null -> Unit
                 shown != null -> SpeedLevelScreen(quiz, session, shown, vm)
-                session.picking -> PickScreen(quiz, session, state.feedback, vm.mediaDir, snackbar, vm)
-                else -> AskingScreen(quiz, session, state.feedback, state.revealed, vm.mediaDir, snackbar, vm)
+                session.picking -> PickScreen(quiz, session, state.feedback, state.paused, vm.mediaDir, snackbar, vm)
+                else -> AskingScreen(quiz, session, state.feedback, state.revealed, state.paused, vm.mediaDir, snackbar, vm)
             }
         }
         Screen.Matching -> {

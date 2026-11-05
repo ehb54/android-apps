@@ -4,6 +4,7 @@ import io.github.ehb54.quiz.model.Card
 import io.github.ehb54.quiz.model.Direction
 import io.github.ehb54.quiz.model.Quiz
 import io.github.ehb54.quiz.model.QuizMode
+import io.github.ehb54.quiz.model.SpeedPlace
 import kotlinx.serialization.Serializable
 import kotlin.math.ceil
 import kotlin.random.Random
@@ -13,8 +14,8 @@ import kotlin.random.Random
 // asks the cards whose speed level is below N, as a pick session would with
 // threshold N; when it is done (every card picked right first time), the
 // level's times are shown and level N + 1 follows. Each card keeps its own
-// speed record (Card.statsSpeedAToB/BToA), so a new run starts where the
-// last one stopped.
+// speed record (Card.statsSpeedAToB/BToA), and the quiz keeps the level a run
+// got to (Quiz.speedPlace), so a new run continues at that level.
 
 /** How much slower than the last level's median a pick may be when the time limit tightens. */
 private const val TIGHTEN_FACTOR = 1.5
@@ -52,7 +53,8 @@ data class LevelResult(
 /**
  * Where a speed run stands: the [level] being played, its fixed [cards], the
  * time limit for a pick ([limitMillis], 0 for none) and the level's [times] so
- * far. [previous] is the level before's result. While [shown] is set, its
+ * far. [previousAverageMillis] and [previousMedianMillis] are the level
+ * before's, 0 when there is none to compare with. While [shown] is set, its
  * results are on screen and the level waits for Go on (or the run has stopped).
  */
 @Serializable
@@ -61,7 +63,8 @@ data class SpeedLevel(
     val cards: List<Long>,
     val limitMillis: Long = 0,
     val times: Map<Long, Long> = emptyMap(),
-    val previous: LevelResult? = null,
+    val previousAverageMillis: Long = 0,
+    val previousMedianMillis: Long = 0,
     val shown: LevelResult? = null,
 )
 
@@ -71,17 +74,36 @@ fun Quiz.speedCards(): List<Card> {
     return if (settings.hasRange || settings.sessionSize <= 0) cards else cards.take(settings.sessionSize)
 }
 
-/** The level a new run starts at: one above the lowest speed level among its cards, and at least 1. */
+/**
+ * The level a new run starts at: the level the last run got to ([Quiz.speedPlace]),
+ * or when that asks no card (or there is none), one above the lowest speed level
+ * among the run's cards; at least 1.
+ */
 fun Quiz.speedStartLevel(): Int {
     val lowest = speedCards().minOfOrNull { it.speedStats(settings.direction).level } ?: 0
-    return maxOf(lowest + 1, 1)
+    return maxOf(lowest + 1, speedPlace(settings.direction)?.level ?: 0, 1)
 }
 
-/** Starts a speed run at [Quiz.speedStartLevel], or null when the quiz has nothing speed mode can ask. */
+/** Whether a new run continues at the level the last one got to. */
+fun Quiz.speedContinues(): Boolean = speedPlace(settings.direction)?.level == speedStartLevel()
+
+/**
+ * Starts a speed run at [Quiz.speedStartLevel], or null when the quiz has nothing
+ * speed mode can ask. A run that continues compares its first level with the
+ * one finished before, and with tightening, takes its time limit from it.
+ */
 fun startSpeedRun(quiz: Quiz, random: Random = Random.Default): Session? {
     val cards = quiz.speedCards()
     if (cards.isEmpty()) return null
-    val speed = SpeedLevel(quiz.speedStartLevel(), cards.map { it.id }, limitMillis = quiz.settings.timerSeconds * 1000L)
+    val level = quiz.speedStartLevel()
+    val place = quiz.speedPlace(quiz.settings.direction)?.takeIf { it.level == level }
+    val speed = SpeedLevel(
+        level = level,
+        cards = cards.map { it.id },
+        limitMillis = nextLimit(quiz, quiz.settings.timerSeconds * 1000L, place?.medianMillis ?: 0),
+        previousAverageMillis = place?.averageMillis ?: 0,
+        previousMedianMillis = place?.medianMillis ?: 0,
+    )
     return levelSession(quiz, quiz.settings.direction, speed, random)
 }
 
@@ -115,8 +137,8 @@ fun levelResult(session: Session, confused: List<Card> = emptyList(), stopped: B
         slowestMillis = times.lastOrNull() ?: 0,
         slowest = speed.times.entries.sortedByDescending { it.value }.take(3).map { CardTime(it.key, it.value) },
         confused = confused.map { it.id },
-        previousAverageMillis = speed.previous?.averageMillis ?: 0,
-        previousMedianMillis = speed.previous?.medianMillis ?: 0,
+        previousAverageMillis = speed.previousAverageMillis,
+        previousMedianMillis = speed.previousMedianMillis,
         stopped = stopped,
     )
 }
@@ -130,31 +152,35 @@ internal fun median(sorted: List<Long>): Long = when {
 
 /**
  * The level after [done]'s, waiting on the results screen: the run's cards
- * below the next level, with the time limit for it.
+ * below the next level, with the time limit for it. The quiz remembers the
+ * new level as its place, so a run stopped from here on continues there.
  */
-internal fun nextLevel(quiz: Quiz, done: Session, confused: List<Card>, random: Random): Session {
+internal fun nextLevel(quiz: Quiz, done: Session, confused: List<Card>, random: Random): Pair<Quiz, Session> {
     val speed = requireNotNull(done.speed)
     val result = levelResult(done, confused)
     val next = SpeedLevel(
         level = speed.level + 1,
         cards = speed.cards,
-        limitMillis = nextLimit(quiz, speed.limitMillis, result),
-        previous = result,
+        limitMillis = nextLimit(quiz, speed.limitMillis, result.medianMillis),
+        previousAverageMillis = result.averageMillis,
+        previousMedianMillis = result.medianMillis,
         shown = result,
     )
-    return levelSession(quiz, done.direction, next, random)
+    val placed = quiz.withSpeedPlace(done.direction, SpeedPlace(next.level, result.averageMillis, result.medianMillis))
+    return placed to levelSession(placed, done.direction, next, random)
 }
 
 /**
- * The time limit for the level after [result]: the timer's, or when the quiz
- * tightens it, [TIGHTEN_FACTOR] times the level's median, rounded up to a
- * tenth of a second and never above the timer. A level with no times keeps [current].
+ * The time limit for the level after one whose median time was [medianMillis]:
+ * the timer's, or when the quiz tightens it, [TIGHTEN_FACTOR] times that median,
+ * rounded up to a tenth of a second and never above the timer. A level with no
+ * times (median 0) keeps [current].
  */
-internal fun nextLimit(quiz: Quiz, current: Long, result: LevelResult): Long {
+internal fun nextLimit(quiz: Quiz, current: Long, medianMillis: Long): Long {
     val timer = quiz.settings.timerSeconds * 1000L
     if (!quiz.settings.tighten) return timer
-    if (result.medianMillis == 0L) return current
-    val tightened = ceil(result.medianMillis * TIGHTEN_FACTOR / 100).toLong() * 100
+    if (medianMillis == 0L) return current
+    val tightened = ceil(medianMillis * TIGHTEN_FACTOR / 100).toLong() * 100
     return if (timer > 0) minOf(timer, tightened) else tightened
 }
 

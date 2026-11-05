@@ -26,8 +26,8 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -43,6 +43,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import io.github.ehb54.quiz.R
 import io.github.ehb54.quiz.engine.Session
+import io.github.ehb54.quiz.engine.Stopwatch
 import io.github.ehb54.quiz.model.Quiz
 import io.github.ehb54.quiz.model.isSound
 import java.io.File
@@ -63,6 +64,7 @@ fun PickScreen(
     quiz: Quiz,
     session: Session,
     feedback: Feedback?,
+    paused: Boolean,
     mediaDir: File,
     snackbar: SnackbarHostState,
     vm: QuizViewModel,
@@ -74,7 +76,7 @@ fun PickScreen(
         AlertDialog(
             onDismissRequest = { confirmStop = false },
             title = { Text(stringResource(R.string.stop_title)) },
-            text = { Text(stringResource(R.string.stop_text)) },
+            text = { Text(stringResource(R.string.stop_text, speed?.level ?: 1)) },
             confirmButton = {
                 TextButton(onClick = {
                     confirmStop = false
@@ -86,10 +88,16 @@ fun PickScreen(
     }
     val card = session.current?.let(quiz::card) ?: return
     val direction = session.direction
-    // The timer starts when the card shows, or when its sound has played.
-    var shownAt by remember(session.round, card.id, session.missesOnCurrent) {
-        mutableLongStateOf(SystemClock.elapsedRealtime())
+    // The clock starts when the card shows, or when its sound has played, and
+    // stops while paused (or while asked whether to stop).
+    val clockStopped = paused || confirmStop
+    val clock = remember(session.round, card.id, session.missesOnCurrent) {
+        Stopwatch(SystemClock::elapsedRealtime, running = !clockStopped)
     }
+    LaunchedEffect(clock, clockStopped) { clock.running = !clockStopped }
+    if (session.timed) WhenAway(vm::pause)
+    val player = LocalSoundPlayer.current
+    LaunchedEffect(paused) { if (paused) player.stop() }
     val colors = MaterialTheme.colorScheme
 
     Scaffold(
@@ -98,50 +106,55 @@ fun PickScreen(
                 title = { Text(quiz.name, maxLines = 1, overflow = TextOverflow.Ellipsis) },
                 actions = {
                     RoundCounter(session.round, session.remaining, vm::abandonSession, level = speed?.level)
+                    if (session.timed && !paused) PauseButton(vm::pause)
                     if (speed != null) TextButton(onClick = vm::stopSpeed) { Text(stringResource(R.string.stop)) }
                 },
             )
         },
         snackbarHost = { SnackbarHost(snackbar) },
     ) { insets ->
-        Column(
-            Modifier
-                .fillMaxSize()
-                .padding(insets)
-                .padding(24.dp)
-                .verticalScroll(rememberScrollState()),
-            verticalArrangement = Arrangement.spacedBy(12.dp),
-        ) {
-            Prompt(card, direction, mediaDir, pictureHeight = 280.dp, playKey = listOf(session.round, card.id)) {
-                shownAt = SystemClock.elapsedRealtime()
-            }
-            Text(
-                stringResource(
-                    when (feedback) {
-                        Feedback.Wrong -> R.string.not_that_one
-                        Feedback.TooSlow -> R.string.too_slow
-                        null -> R.string.pick_hint
-                    },
-                ),
-                color = if (feedback != null) colors.error else colors.onSurfaceVariant,
-                style = MaterialTheme.typography.bodyMedium,
-            )
-            val choices = session.choices.mapNotNull(quiz::card)
-            // Many pictures or sounds sit two to a row; text keeps the whole width.
-            val columns = if (choices.size > TILE_ABOVE && choices.all { it.answerMedia(direction) != null }) 2 else 1
-            choices.chunked(columns).forEachIndexed { row, cells ->
-                Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-                    cells.forEachIndexed { column, choice ->
-                        Choice(
-                            text = choice.answer(direction),
-                            media = choice.answerMedia(direction),
-                            mediaDir = mediaDir,
-                            number = row * columns + column + 1,
-                            ruledOut = choice.id in session.ruledOut,
-                            modifier = Modifier.weight(1f).testTag(choiceTag(choice.id)),
-                        ) { vm.pick(choice.id, SystemClock.elapsedRealtime() - shownAt) }
+        if (paused) {
+            PausedPane(vm::resume, Modifier.padding(insets))
+        } else {
+            Column(
+                Modifier
+                    .fillMaxSize()
+                    .padding(insets)
+                    .padding(24.dp)
+                    .verticalScroll(rememberScrollState()),
+                verticalArrangement = Arrangement.spacedBy(12.dp),
+            ) {
+                Prompt(card, direction, mediaDir, pictureHeight = 280.dp, playKey = listOf(session.round, card.id)) {
+                    clock.restart()
+                }
+                Text(
+                    stringResource(
+                        when (feedback) {
+                            Feedback.Wrong -> R.string.not_that_one
+                            Feedback.TooSlow -> R.string.too_slow
+                            null -> R.string.pick_hint
+                        },
+                    ),
+                    color = if (feedback != null) colors.error else colors.onSurfaceVariant,
+                    style = MaterialTheme.typography.bodyMedium,
+                )
+                val choices = session.choices.mapNotNull(quiz::card)
+                // Many pictures or sounds sit two to a row; text keeps the whole width.
+                val columns = if (choices.size > TILE_ABOVE && choices.all { it.answerMedia(direction) != null }) 2 else 1
+                choices.chunked(columns).forEachIndexed { row, cells ->
+                    Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                        cells.forEachIndexed { column, choice ->
+                            Choice(
+                                text = choice.answer(direction),
+                                media = choice.answerMedia(direction),
+                                mediaDir = mediaDir,
+                                number = row * columns + column + 1,
+                                ruledOut = choice.id in session.ruledOut,
+                                modifier = Modifier.weight(1f).testTag(choiceTag(choice.id)),
+                            ) { vm.pick(choice.id, clock.millis) }
+                        }
+                        repeat(columns - cells.size) { Spacer(Modifier.weight(1f)) }
                     }
-                    repeat(columns - cells.size) { Spacer(Modifier.weight(1f)) }
                 }
             }
         }

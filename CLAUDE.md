@@ -135,7 +135,7 @@ app's own code, so the Android app is never edited for it and screens exist once
   names in `core/desktop` (`AndroidCompat.kt`, `Resources.kt`, `Back.kt`). A file
   in `desktop/<name>/src/main/kotlin` replaces the Android file at the same path
   (Quiz: `data/Images.kt`, pictures with Skia; `ui/SoundPlayer.kt`, sound with
-  Java Sound); `*Activity.kt` is left out, and the desktop app has its own `Main.kt`.
+  Java Sound; `ui/Away.kt`, the window losing focus); `*Activity.kt` is left out, and the desktop app has its own `Main.kt`.
 - **Resources.** `generateAndroidResources` turns the Android app's res folder
   (strings, plurals, colors, vector drawables) and assets into an `R` with Android
   style ids in the app's package, so `R.string.x` code compiles unchanged.

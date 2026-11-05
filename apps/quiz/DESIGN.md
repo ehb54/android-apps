@@ -43,6 +43,7 @@ miss, and hides it again before you type it.
 
 **Timer.** With a timer set, an answer slower than the limit is a miss even
 when right. Response times (shortest, average, longest) are reported at the end.
+On the phone, a timed session can be paused (see Speed mode, Pausing).
 
 **Confusion penalty.** At the end of a session, any card whose answer you typed
 for a different card also gets a miss, since you confused the two.
@@ -182,8 +183,18 @@ Decisions made with eb:
   `statsSpeedBToA`), since its levels rise many times in one sitting, plus
   each card's latest time to a right first pick (`speedMillisAToB/BToA`). The
   card list shows both ("level 3 · 1.2 s"), and the quiz page names the three
-  slowest cards. A new run starts one level above the lowest card, so it picks
-  up where the last one stopped. Pick's own levels are untouched.
+  slowest cards. Pick's own levels are untouched.
+- **A run continues where the last one got to** (eb, 2026-11-05: "one always
+  wants to get to higher levels"). The quiz keeps the level being played, per
+  direction (`Quiz.speedAToB/BToA`, a `SpeedPlace`), from a level's first
+  right pick and at each level's end, so there is no Save: *Stop* keeps it.
+  The quiz page then offers *Continue level N*, which plays level N from its
+  start, asking every card below N: a missed card drops below level 0, and
+  without this a new run would start at level 1 with only the missed cards,
+  one *Go on* per level until they caught up. Without a place yet (or when no
+  card is below it), a run starts one level above the lowest card. The place
+  also keeps that level's previous average and median, for the comparison
+  and the tightened time limit. *Reset statistics* forgets it.
 - **Between levels, a results screen**, so reading it is not timed: right first
   time, misses, average and median time (with the level before's), fastest and
   slowest, the three slowest cards, and cards marked missed by confusion. Times
@@ -198,6 +209,19 @@ Decisions made with eb:
   never above the timer.
 - No due counts: the quiz list line leaves Speed out, and its chips show no
   numbers.
+- **Pausing** (eb, 2026-11-05: "does the timing stop if another app (e.g. a
+  call) gets focus? is there some way to pause?"). The clock is a `Stopwatch`
+  (`engine/Stopwatch.kt`) that counts only while running. In any timed session
+  (Speed, or Pick and Type with the timer on) the top bar has a pause button,
+  and the app pauses by itself when it leaves the screen (`ui/Away.kt`: a call
+  answered, Home, the app switcher, the screen turning off; on the desktop,
+  the window losing focus). While paused, the card is hidden behind *Resume*
+  (`ui/Paused.kt`), so a pause is no time to study it; time before the pause
+  still counts, time paused does not, and a sound prompt plays again on
+  Resume, its clock starting after it. A timed session opened again after the
+  app was closed waits for Resume too. The clock also stops while the Stop
+  question is up. A call that only shows as a banner does not take the app off
+  the screen, so it does not pause it; the button is for that.
 
 ## Sounds
 
@@ -271,6 +295,8 @@ it rather than replacing it.
   closing the window keeps it for next time, as on the phone.
 - Wording that speaks of tapping has desktop text in `desktop/quiz/src/main/res`.
 - Only WAV sounds play on the desktop (see Sounds).
+- A timed session pauses when the window loses focus, as the phone's does when
+  the app leaves the screen (see Speed mode, Pausing).
 
 ## Several fields per card: studied, not chosen
 
@@ -317,7 +343,8 @@ them unchanged (see CLAUDE.md, Desktop apps).
 | `shared/quiz`: `model/Model.kt` | `Card`, `Stats`, `Quiz`, `QuizSettings`: data and the level/due rules |
 | `shared/quiz`: `engine/Session.kt` | Session state machine: start, answer, show answer, rounds, confusion penalty; also pick mode |
 | `shared/quiz`: `engine/Match.kt` | Match sessions: blocks of tile pairs, rounds, scoring, fillers |
-| `shared/quiz`: `engine/Speed.kt` | Speed runs: levels, their results, the tightening time limit |
+| `shared/quiz`: `engine/Speed.kt` | Speed runs: levels, their results, the tightening time limit, continuing |
+| `shared/quiz`: `engine/Stopwatch.kt` | The answer clock, which stops while paused |
 | `shared/quiz`: `engine/Answers.kt` | Forgiving answer comparison |
 | `shared/quiz`: `engine/QuizFiles.kt` | `.qzx` and `.zip` reading and writing |
 | `shared/quiz`: `engine/Spreadsheet.kt` | `.xlsx` reading |
@@ -328,6 +355,7 @@ them unchanged (see CLAUDE.md, Desktop apps).
 | `shared/quiz`: `data/SampleLibrary.kt` | Fetching the catalog and sample files from the download site, with an offline cache |
 | `apps/quiz`: `data/Images.kt` | Storing and loading pictures (Android's BitmapFactory; `desktop/quiz` has its own, with Skia) |
 | `apps/quiz`: `ui/SoundPlayer.kt` | Playing sounds (Android's media classes live here only; `desktop/quiz` has its own, with Java Sound) |
+| `apps/quiz`: `ui/Paused.kt`, `ui/Away.kt` | Pausing a timed session; noticing the app has left the screen (`desktop/quiz` has its own `ui/Away.kt`: the window losing focus) |
 | `apps/quiz`: `ui/QuizViewModel.kt` | Screen state; every change is saved on one disk thread, in order |
 | `apps/quiz`: `ui/*Screen.kt`, `ui/CardEditor.kt` | Compose screens (`ui/SpeedScreen.kt`: Speed mode's results between levels) |
 | `desktop/quiz`: `Main.kt` | The desktop window; Escape is Back |

@@ -3,6 +3,7 @@ package io.github.ehb54.quiz.engine
 import io.github.ehb54.quiz.model.Card
 import io.github.ehb54.quiz.model.Direction
 import io.github.ehb54.quiz.model.Quiz
+import io.github.ehb54.quiz.model.SpeedPlace
 import io.github.ehb54.quiz.model.Stats
 import kotlinx.serialization.Serializable
 import kotlin.random.Random
@@ -75,6 +76,9 @@ data class Session(
 
     /** The time limit for an answer, 0 for none: the timer, or in speed mode the level's limit. */
     val limitMillis: Long get() = speed?.limitMillis ?: (timerSeconds * 1000L)
+
+    /** Answers are timed, so the clock stops while the app is away or paused: speed mode, or a timer. */
+    val timed: Boolean get() = speed != null || timerSeconds > 0
 }
 
 /** [Ignored]: a pick of a choice that is not on screen, or already ruled out. */
@@ -167,7 +171,17 @@ fun pickAnswer(quiz: Quiz, session: Session, picked: Long, elapsedMillis: Long, 
         answered = answered.withSpeedMillis(session.direction, elapsedMillis)
         counted = counted.copy(speed = speed.copy(times = speed.times + (id to elapsedMillis)))
     }
-    return advance(quiz.replaceCard(answered), counted.copy(missesOnCurrent = 0), id, missed, random)
+    return advance(quiz.replaceCard(answered).placedAt(session), counted.copy(missesOnCurrent = 0), id, missed, random)
+}
+
+/**
+ * Speed mode: the quiz keeps the level being played as its place (see
+ * [Quiz.speedPlace]), so a run stopped in the middle of it continues there.
+ */
+private fun Quiz.placedAt(session: Session): Quiz {
+    val speed = session.speed ?: return this
+    if ((speedPlace(session.direction)?.level ?: 0) >= speed.level) return this
+    return withSpeedPlace(session.direction, SpeedPlace(speed.level, speed.previousAverageMillis, speed.previousMedianMillis))
 }
 
 /** The record a pick goes to: speed mode's or pick mode's, in the session's direction. */
@@ -225,6 +239,9 @@ private fun advance(quiz: Quiz, session: Session, id: Long, missed: Boolean, ran
         }
     }
     // Speed mode never ends here: the next level follows.
-    if (next.speed != null) return Step(penalized, nextLevel(penalized, next, confused, random), Outcome.Right, confused)
+    if (next.speed != null) {
+        val (placed, level) = nextLevel(penalized, next, confused, random)
+        return Step(placed, level, Outcome.Right, confused)
+    }
     return Step(penalized, next, Outcome.Right, confused)
 }

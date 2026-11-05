@@ -168,6 +168,14 @@ data class QuizSettings(
 data class Progress(val cards: Int, val due: Int, val lowest: Int?)
 
 /**
+ * Where speed mode has got to in one direction: the [level] the next run
+ * continues at, and the average and median of the level finished before it,
+ * which the next level is compared with and its time limit follows (see engine/Speed.kt).
+ */
+@Serializable
+data class SpeedPlace(val level: Int, val averageMillis: Long = 0, val medianMillis: Long = 0)
+
+/**
  * A quiz. [source] and [sourceVersion] are set for quizzes added from the
  * app's samples: which sample (file, and tab for workbooks) and a fingerprint
  * of its contents, so samples are not added twice and updates can be offered.
@@ -181,8 +189,16 @@ data class Quiz(
     val settings: QuizSettings = QuizSettings(),
     val source: String? = null,
     val sourceVersion: String? = null,
+    /** Speed mode: where runs have got to, per direction; null before a run's first right pick. */
+    val speedAToB: SpeedPlace? = null,
+    val speedBToA: SpeedPlace? = null,
 ) {
     fun card(id: Long) = cards.find { it.id == id }
+
+    fun speedPlace(direction: Direction) = if (direction == Direction.AToB) speedAToB else speedBToA
+
+    fun withSpeedPlace(direction: Direction, place: SpeedPlace?) =
+        if (direction == Direction.AToB) copy(speedAToB = place) else copy(speedBToA = place)
 
     fun addCard(a: String, b: String, mediaA: String? = null, mediaB: String? = null) = copy(
         cards = cards + Card(nextCardId, a, b, mediaA, mediaB),
@@ -193,7 +209,7 @@ data class Quiz(
 
     fun removeCard(id: Long) = copy(cards = cards.filterNot { it.id == id })
 
-    fun resetStats() = copy(cards = cards.map { it.withoutStats() })
+    fun resetStats() = copy(cards = cards.map { it.withoutStats() }, speedAToB = null, speedBToA = null)
 
     /** The cards a session draws from: the settings' range, by position in the list. */
     fun cardsInRange(): List<Card> {

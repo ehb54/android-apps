@@ -119,6 +119,11 @@
         <item quantity="one">Start level %2$d (%1$d card)</item>
         <item quantity="other">Start level %2$d (%1$d cards)</item>
     </plurals>
+    <!-- The same where the last run got to: a new run goes on from that level. -->
+    <plurals name="continue_speed">
+        <item quantity="one">Continue level %2$d (%1$d card)</item>
+        <item quantity="other">Continue level %2$d (%1$d cards)</item>
+    </plurals>
     <!-- A card's speed level and its latest time, in the card list. -->
     <string name="speed_level_time">level %1$d · %2$.1f s</string>
     <!-- The slowest cards on the quiz page in Speed mode: "Slowest: Q: 2.1 s · Y: 1.9 s". -->
@@ -170,13 +175,18 @@
         <item quantity="other">Finish the quiz first: %d cards to go.</item>
     </plurals>
 
+    <!-- Pausing a timed session: the clock stops and the card is hidden. -->
+    <string name="pause">Pause</string>
+    <string name="paused">Paused</string>
+    <string name="paused_text">The clock is stopped and the card is hidden. Time before the pause still counts.</string>
+    <string name="resume">Resume</string>
     <!-- Speed mode -->
     <string name="level_counter">Level %1$d</string>
     <string name="stop">Stop</string>
     <string name="stop_title">Stop speed practice?</string>
-    <string name="stop_text">Cards picked so far keep their speed levels, and starting again picks up where you stopped.</string>
+    <string name="stop_text">Cards picked so far keep their speed levels, and the next run continues at level %1$d.</string>
     <string name="keep_going">Keep going</string>
-    <string name="level_done">Level %1$d done</string>
+    <string name="level_done">Finished level %1$d</string>
     <string name="level_stopped">Stopped in level %1$d</string>
     <string name="level_answered">Picked %1$d of %2$d</string>
     <string name="speed_average">Average %1$.1f s</string>

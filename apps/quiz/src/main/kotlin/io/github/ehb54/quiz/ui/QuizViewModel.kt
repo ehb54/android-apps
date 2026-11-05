@@ -117,6 +117,8 @@ data class UiState(
     val session: Session? = null,
     val feedback: Feedback? = null,
     val revealed: Boolean = false,
+    /** A timed session's clock is stopped and its card hidden until Resume. */
+    val paused: Boolean = false,
     val match: MatchSession? = null,
     /** The last pair tried in match mode, when it was wrong: (side A card, side B card). */
     val mismatch: Pair<Long, Long>? = null,
@@ -168,6 +170,8 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
         _state.value = UiState(
             quizzes = loaded.quizzes,
             session = active,
+            // A timed session waits for Resume when the app comes back to it.
+            paused = active?.timed == true,
             match = activeMatch.takeIf { active == null },
             screen = when {
                 active != null -> Screen.Asking
@@ -257,7 +261,7 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
             message(text(R.string.nothing_due))
             return
         }
-        _state.update { it.copy(session = session, screen = Screen.Asking, feedback = null, revealed = false) }
+        _state.update { it.copy(session = session, screen = Screen.Asking, feedback = null, revealed = false, paused = false) }
         persist { store.saveSession(session) }
     }
 
@@ -335,10 +339,20 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
 
     fun hideAnswer() = _state.update { it.copy(revealed = false) }
 
+    /** Stops a timed session's clock and hides its card, by hand or when the app goes away. */
+    fun pause() {
+        if (_state.value.session?.timed == true) _state.update { it.copy(paused = true) }
+    }
+
+    fun resume() = _state.update { it.copy(paused = false) }
+
     // Speed mode
 
     /** From the results between levels to the next level. */
-    fun continueSpeed() = changeSession(::goOn)
+    fun continueSpeed() {
+        _state.update { it.copy(paused = false) }
+        changeSession(::goOn)
+    }
 
     /**
      * Stop in the middle of a level shows that level so far (Done then ends
@@ -352,7 +366,7 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
     /** Ends a speed run. Picks made are already saved, with no confusion penalty for a level left unfinished. */
     fun endSpeed() {
         val quizId = _state.value.session?.quizId ?: return
-        _state.update { it.copy(session = null, feedback = null, screen = Screen.QuizDetail(quizId)) }
+        _state.update { it.copy(session = null, feedback = null, paused = false, screen = Screen.QuizDetail(quizId)) }
         persist { store.saveSession(null) }
     }
 
@@ -433,6 +447,7 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
                 match = null,
                 feedback = null,
                 revealed = false,
+                paused = false,
                 mismatch = null,
                 screen = Screen.QuizDetail(quizId),
             )
