@@ -82,11 +82,15 @@ again.
    card, gloss and prompt, one column per model and seed, the pictures as the
    card will show them (white margins trimmed, 256 px). Record decisions in a
    TSV with the columns `lemma kind file decision note` (`file` is
-   `<model>/<picture>` for a pick) and add them with
-   `run.sh pick <list> <files>`, which fills in the prompt and seed from the
-   log. For a `retry`, rewrite the word's prompt in `plan.tsv` and run
-   `generate` again: a new prompt has a new hash, so its pictures are made
-   afresh while the old ones stay (and stay in the log).
+   `<model>/<picture>`, or `<model>:<seed>` for a seed of the word's current
+   prompt) and add them with `run.sh pick <list> <files>`, which fills in the
+   prompt and seed from the log. Start a note with `unsure:` to have the word
+   checked first. For a `retry`, rewrite the word's prompt in `plan.tsv` and
+   run `generate` again: a new prompt has a new hash, so its pictures are made
+   afresh while the old ones stay (and stay in the log). When every word is
+   decided, `run.sh review <list> <dir>` writes the picks as HTML pages of 200
+   words for a person to check, the unsure ones first, each with its other
+   seeds so a pick can be swapped.
 5. `run.sh restore <list>` regenerates picked pictures that `raw/` does not
    have (on another Mac, or after `raw/` was cleared). Pictures come out the
    same with the same mflux and MLX versions; across versions they may differ
@@ -96,3 +100,20 @@ again.
    `<Title> pictures.zip` (nouns) and `<Title> verb pictures.zip` (picture →
    infinitive): white margins trimmed, 256 px, WebP. The zips' `CREDITS.txt`
    names the model and its license.
+
+## The core list (November 2026)
+
+ERNIE-Image-Turbo, 4 seeds per word at 768 px: about 3,700 pictures in 15 h
+on an M5 Max (14–16 s each), first pass and retries. Of the 912 planned words
+(754 nouns, 158 verbs), 878 have a pick and 34 (20 nouns, 14 verbs) were
+dropped because no seed showed the word plainly: verbs like legen, stellen
+and hängen, whose still picture cannot say which verb it is, and parts drawn
+as the whole (Ellbogen, Saite, Kralle). 47 words needed a rewritten prompt; the commonest
+fixes were naming the person's look (left alone the model drew the same
+dark-haired young man, and some masculine roles came out as women: Kaufmann,
+Matrose, Apotheker), giving white objects a colour, and asking for the part
+without the whole (one wing, not a bird).
+
+`Core pictures.zip` has 734 noun pictures (3.4 MB) and `Core verb
+pictures.zip` 144 verb pictures (0.7 MB), both well under the app's 256 MB
+import limit, so no split is needed. The cards are about 4.6 KB each.

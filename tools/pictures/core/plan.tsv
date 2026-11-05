@@ -557,7 +557,7 @@ Aufmerksamkeit	noun	no		abstract
 Jäger	noun	yes	a curly-haired hunter in a green jacket and a feathered hat, a rifle over his shoulder and a hunting dog at his side	near: Förster, Schütze
 Kälte	noun	no		state
 Verkehr	noun	no		example is social contact (abstract); street traffic would read as Straße, Auto
-Flut	noun	scene	brown floodwater filling a village street, the water reaching halfway up the doors and windows of the houses, a small rowing boat floating in it	near: Welle, Wasser
+Flut	noun	scene	blue-grey floodwater filling a village street like a river, the houses standing in water up to their windows, a small rowing boat floating between them	near: Welle, Wasser
 Glut	noun	yes	a heap of glowing orange-red embers with no flames, a little grey ash at the edges	near: Feuer, Flamme, Kohle, Asche
 Märchen	noun	no		abstract
 Eifer	noun	no		abstract
@@ -3159,7 +3159,7 @@ drängen	verb	no		abstract
 ankommen	verb	no		arrival looks like kommen, aussteigen or reisen
 flüstern	verb	scene	a young man with blond hair whispering into the ear of a woman with brown curls, one hand cupped beside the mouth	near: zuflüstern, murmeln
 befinden	verb	no		abstract (location)
-brechen	verb	yes	an older woman with white hair in a bun snapping a wooden stick in two over one knee	near: zerbrechen, abbrechen, reißen
+brechen	verb	yes	an older woman with white hair standing and snapping a thick dry stick in two with both hands, the stick splintering in the middle, small splinters flying	near: zerbrechen, abbrechen, reißen
 ergreifen	verb	no		duplicates nehmen
 spüren	verb	no		abstract (sensing)
 rühren	verb	no		example sense is to budge (rührte sich nicht); not shown plainly
@@ -3231,7 +3231,7 @@ vernehmen	verb	no		duplicates hören
 zurückkommen	verb	no		direction of return cannot be shown
 bauen	verb	scene	a woman with chestnut hair in a ponytail building a brick wall, setting a brick in place with a trowel	near: errichten, aufbauen, herstellen
 retten	verb	scene	a fair-haired lifeguard pulling a struggling swimmer out of the water	near: helfen, befreien, bergen
-streichen	verb	yes	a man stroking his pointed black beard with one hand	near: streicheln
+streichen	verb	yes	an older man with a long grey beard thoughtfully stroking his beard downward with one hand	near: streicheln
 überzeugen	verb	no		abstract
 gefallen	verb	no		abstract
 aufhören	verb	no		abstract
@@ -3597,7 +3597,7 @@ vorübergehen	verb	no		duplicates gehen
 zerreißen	verb	no		duplicates reißen
 dehnen	verb	no		duplicates strecken
 hergeben	verb	no		duplicates geben
-verbeugen	verb	yes	a woman with curly brown hair bowing deeply from the waist, one hand on the chest, the other arm held out to the side	near: beugen, bücken, neigen, grüßen
+verbeugen	verb	yes	a woman with curly brown hair seen from the side, bowing low from the waist with her upper body bent forward level, one hand on her chest, the other arm held out to the side	near: beugen, bücken, neigen, grüßen
 einschlafen	verb	no		duplicates schlafen
 erwecken	verb	no		abstract
 innehalten	verb	no		abstract
@@ -3724,7 +3724,7 @@ erfreuen	verb	no		emotion
 bekennen	verb	no		abstract
 mitmachen	verb	no		abstract
 reiben	verb	yes	a young man with red hair briskly rubbing the palms of both hands together, small motion lines	near: frieren, waschen
-frieren	verb	scene	a cold person in falling snow, hugging the body with both arms, shoulders hunched, red nose	near: zittern
+frieren	verb	scene	a woman with blond curly hair under a red knitted hat, shivering in falling snow, hugging her body with both arms, shoulders hunched, red nose	near: zittern
 aufbauen	verb	no		duplicates bauen
 huschen	verb	no		looks like laufen
 vertreten	verb	no		abstract
