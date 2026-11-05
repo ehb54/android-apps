@@ -28,6 +28,8 @@ Steps, each resumable (work already done is skipped). <list> is a word list
                                     decision pick, retry or drop; file <model>/<picture>, or
                                     <model>:<seed> for a seed of the current prompt) to
                                     <list>/picks.tsv
+  review <list> <dir>               the picks as HTML pages of 200 words for a person to check,
+                                    the ones noted `unsure` first, with each word's other seeds
   restore <list>                    regenerates picked pictures missing from raw/, from
                                     picks.tsv (words.py build needs them)
 
@@ -446,6 +448,77 @@ def card_files(name):
     return cards, credits
 
 
+def review_pages(name, outdir, per_page=200):
+    """Writes the picks for review as self-contained HTML pages of `per_page`
+    words: the words noted `unsure` first, then the rest in plan order. Each
+    row shows the picked picture at card size, the word's other seeds of the
+    same prompt small (to swap a pick), and the note. The last page also lists
+    the words dropped or still to retry."""
+    import html as h
+    picks = read_picks(name)
+    plan = {(r["kind"], r["lemma"]): r for r in read_plan(name)}
+    info = {(w["kind"], w["lemma"]): w for w in list_words(name)}
+    chosen = [r for r in picks if r["decision"] == "pick"]
+    chosen.sort(key=lambda r: not r["note"].startswith("unsure"))
+    pages = [chosen[i:i + per_page] for i in range(0, len(chosen), per_page)]
+    Path(outdir).mkdir(parents=True, exist_ok=True)
+    for number, page in enumerate(pages, 1):
+        rows = []
+        for r in page:
+            w, model = info[(r["kind"], r["lemma"])], r["file"].split("/")[0]
+            others = []
+            for seed in seed_range("1-4"):
+                if str(seed) == r["seed"]:
+                    continue
+                path = HERE / name / "raw" / model / picture_name(r["kind"], r["lemma"], seed, r["prompt"])
+                if path.exists():
+                    others.append(f'<figure><img src="{data_url(card_picture(path, 96))}" width="96" height="96" '
+                                  f'alt=""><figcaption>seed {seed}</figcaption></figure>')
+            rows.append(f'<tr><td class="pick"><img src="{data_url(card_picture(HERE / name / "raw" / r["file"]))}" '
+                        f'width="{CARD_SIZE}" height="{CARD_SIZE}" alt="{h.escape(r["lemma"])}"></td>'
+                        f'<td class="word"><b>{h.escape(w["card"])}</b><br>{h.escape(w["english"])}'
+                        f'<br><small>{r["kind"]} {w["rank"]} · seed {r["seed"]}</small>'
+                        f'{"<p class=note>" + h.escape(r["note"]) + "</p>" if r["note"] else ""}'
+                        f'<p class="prompt">{h.escape(plan[(r["kind"], r["lemma"])]["prompt"])}</p>'
+                        f'<div class="others">{"".join(others)}</div></td></tr>')
+        extra = ""
+        if number == len(pages):
+            for decision, title in (("retry", "Still to retry"), ("drop", "Dropped (no picture card)")):
+                items = [r for r in picks if r["decision"] == decision]
+                if items:
+                    extra += f"<h2>{title} ({len(items)})</h2><ul>" + "".join(
+                        f"<li><b>{h.escape(info[(r['kind'], r['lemma'])]['card'])}</b>: {h.escape(r['note'])}</li>"
+                        for r in items) + "</ul>"
+        unsure = sum(r["note"].startswith("unsure") for r in page)
+        file = Path(outdir) / f"{name}-picks-{number}.html"
+        file.write_text(f"""<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{h.escape(name.title())} picks {number}</title>
+<style>
+body {{ font: 14px system-ui, sans-serif; margin: 16px; background: #f4f4f4; color: #222; }}
+table {{ border-collapse: collapse; }}
+td {{ border: 1px solid #ccc; padding: 6px; vertical-align: top; background: #fff; }}
+td.word {{ width: 460px; }}
+td.word b {{ font-size: 18px; }}
+p.note {{ color: #a33; margin: 6px 0 0; }}
+p.prompt {{ color: #666; font-size: 12px; margin: 6px 0; }}
+.others {{ display: flex; gap: 6px; }}
+figure {{ margin: 0; font-size: 11px; color: #777; text-align: center; }}
+img {{ display: block; }}
+</style></head><body>
+<h1>{h.escape(name.title())} pictures: picks, page {number} of {len(pages)}</h1>
+<p>{len(page)} words{f", the {unsure} I was unsure about first" if unsure else ""}. The pick at card size
+(white margins trimmed, {CARD_SIZE} px) and the other seeds of the same prompt small. Every prompt ends with:
+<i>{h.escape(STYLE)}</i>.</p>
+<table><tbody>
+{chr(10).join(rows)}
+</tbody></table>
+{extra}
+</body></html>
+""", encoding="utf-8")
+        print(f"{len(page)} picks ({unsure} unsure) -> {file}")
+
+
 # --- contact sheets ----------------------------------------------------------
 
 def card_picture(path, size=CARD_SIZE, margin=0.06):
@@ -577,6 +650,8 @@ if __name__ == "__main__":
                  int(args[4]) if len(args) > 4 else None)
     elif command == "pick" and len(args) >= 2:
         pick(args[0], args[1:])
+    elif command == "review" and len(args) == 2:
+        review_pages(args[0], args[1])
     elif command == "restore" and len(args) == 1:
         restore(args[0])
     elif command == "sheet" and len(args) >= 4:
