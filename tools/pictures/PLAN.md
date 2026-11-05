@@ -107,6 +107,32 @@ picture makes the difference plain).
   blond hair", "an older man with grey hair", "a red-haired farmer". Left to
   itself a model draws the same dark-haired young man every time. Vary hair,
   age and, where the word allows, gender from one word to the next.
+- What the core list's review taught (ERNIE-Image-Turbo; 47 of 912 words
+  needed a second prompt):
+  - A masculine role noun must say "a man" and a feminine one "a woman"
+    (`a man with a grey beard, a gardener …`): with only a hair colour the
+    model often drew a woman for Kaufmann, Matrose, Apotheker or Gärtner.
+  - Nothing white on a white background (a white feather, veil, bonnet,
+    coffee pot or tablecloth vanishes on the card): give it a colour or a
+    pattern.
+  - A part of something is drawn as the whole (Ellbogen as an arm, Saite as a
+    violin, Kralle as a bird, Schuppe as a fish, Knopfloch as a coat). Write
+    `on its own, no …` (`one single bird's wing on its own, no head and no
+    body`), or give it `no` when the part cannot be shown apart.
+  - A thing whose look is a pattern rather than a shape (a plain wall, a
+    colour field, a chasm, a whirlpool) tends to come out as an abstract
+    square: show it in its setting.
+  - Avoid English words with a second sense the model may take (`spring` drew
+    a coil spring; a potato's `eyes` drew a face), and famous pictures (`a
+    curling ocean wave` drew Hokusai's): describe plainly.
+  - Verbs whose still picture shows only the result or a pose (legen,
+    stellen, hängen, stecken, anziehen, mischen, rollen, nicken) failed in
+    every seed: give a verb a picture only if its moment of action is
+    unmistakable (snapping a stick, knocking with a raised fist).
+  - Two words drawn the same (Busch and Baum, Ratte and Maus, Braten and
+    Schinken, Reh and Hirsch) need a difference stated in the prompt (`no
+    trunk`, `large and brown`, `boneless, sliced`, `no antlers`), or one gets
+    `no`.
 - `sensitive` (`no`): nationalities and peoples (Franzose, Jude), God, saints
   and religious rites (Gott, Heilige, Taufe), death, killing, executions,
   wounds and anything gory, and anything that would need a stereotype to be
