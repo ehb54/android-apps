@@ -7,6 +7,8 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -40,6 +42,9 @@ import io.github.ehb54.quiz.engine.Session
 import io.github.ehb54.quiz.model.Quiz
 import io.github.ehb54.quiz.model.isSound
 import java.io.File
+
+/** More choices than this, all pictures or sounds, are tiled two to a row. */
+private const val TILE_ABOVE = 4
 
 /**
  * Pick mode: one card's prompt (text, picture or sound) and a few choices from
@@ -97,16 +102,23 @@ fun PickScreen(
                 color = if (feedback != null) colors.error else colors.onSurfaceVariant,
                 style = MaterialTheme.typography.bodyMedium,
             )
-            session.choices.forEachIndexed { index, id ->
-                val choice = quiz.card(id) ?: return@forEachIndexed
-                Choice(
-                    text = choice.answer(direction),
-                    media = choice.answerMedia(direction),
-                    mediaDir = mediaDir,
-                    number = index + 1,
-                    ruledOut = id in session.ruledOut,
-                    modifier = Modifier.testTag(choiceTag(id)),
-                ) { vm.pick(id, SystemClock.elapsedRealtime() - shownAt) }
+            val choices = session.choices.mapNotNull(quiz::card)
+            // Many pictures or sounds sit two to a row; text keeps the whole width.
+            val columns = if (choices.size > TILE_ABOVE && choices.all { it.answerMedia(direction) != null }) 2 else 1
+            choices.chunked(columns).forEachIndexed { row, cells ->
+                Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                    cells.forEachIndexed { column, choice ->
+                        Choice(
+                            text = choice.answer(direction),
+                            media = choice.answerMedia(direction),
+                            mediaDir = mediaDir,
+                            number = row * columns + column + 1,
+                            ruledOut = choice.id in session.ruledOut,
+                            modifier = Modifier.weight(1f).testTag(choiceTag(choice.id)),
+                        ) { vm.pick(choice.id, SystemClock.elapsedRealtime() - shownAt) }
+                    }
+                    repeat(columns - cells.size) { Spacer(Modifier.weight(1f)) }
+                }
             }
         }
     }

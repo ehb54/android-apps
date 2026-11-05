@@ -160,6 +160,10 @@ both, and `ui/PickScreen.kt`). Decisions made with eb:
 - **Pictures and sounds** can be prompts and choices; a card whose answer is a
   picture or a sound is asked in Pick mode but not in typed mode. A sound
   choice plays from its button and is picked by a tap elsewhere on it.
+- **Tiles for many pictures** (eb, 2026-11-05): more than four choices that
+  are all pictures or sounds sit two to a row, at the same picture size, so
+  eight take four rows. Text choices keep the whole width, since long answers
+  would wrap at half of it.
 
 ## Sounds
 
