@@ -3,8 +3,9 @@
 Makes original pictures for the word lists' picture cards (picture → German),
 generated locally on a Mac with Apple Silicon, to replace the Noto Emoji
 pictures the lists use now. A picture is made for every noun and verb that one
-picture can show plainly. A list with its own pictures uses only them: its
-nouns without one get no picture card (the emoji are not mixed in).
+picture can show plainly. They become quizzes of their own next to the emoji
+one ("Core pictures ERNIE" beside "Core pictures"), so nobody's emoji quiz
+changes; the two are not mixed.
 
 Everything needed to remake or extend the pictures is kept: the plan (one
 prompt per word, or why a word gets none), every picture's model, settings,
@@ -97,9 +98,10 @@ again.
    slightly.
 6. `tools/wordlists/run.sh build <list> <Title> ../../apps/quiz/samples`
    (see `../wordlists/README.md`) puts the picked pictures into
-   `<Title> pictures.zip` (nouns) and `<Title> verb pictures.zip` (picture →
-   infinitive): white margins trimmed, 256 px, WebP. The zips' `CREDITS.txt`
-   names the model and its license.
+   `<Title> pictures <label>.zip` (nouns) and `<Title> verb pictures
+   <label>.zip` (picture → infinitive), `<label>` being the model's (`ERNIE`):
+   white margins trimmed, 256 px, WebP. The zips' `CREDITS.txt` names the
+   model and its license. The emoji `<Title> pictures.zip` is still built.
 
 ## The core list (November 2026)
 
@@ -114,6 +116,10 @@ dark-haired young man, and some masculine roles came out as women: Kaufmann,
 Matrose, Apotheker), giving white objects a colour, and asking for the part
 without the whole (one wing, not a bird).
 
-`Core pictures.zip` has 734 noun pictures (3.4 MB) and `Core verb
-pictures.zip` 144 verb pictures (0.7 MB), both well under the app's 256 MB
-import limit, so no split is needed. The cards are about 4.6 KB each.
+`Core pictures ERNIE.zip` has 734 noun pictures (3.4 MB) and `Core verb
+pictures ERNIE.zip` 144 verb pictures (0.7 MB), both well under the app's
+256 MB import limit, so no split is needed. The cards are about 4.6 KB each.
+Most of the list has no picture by design: of the 3000 nouns, about 1400 are
+abstract (time, feelings, speech), about 380 are near-synonyms of a pictured
+word and about 135 are relations (Vater, Freund); of the 1000 verbs, about 500
+are thinking, saying or being and about 220 look like a neighbour.
