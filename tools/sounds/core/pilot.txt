@@ -1,0 +1,58 @@
+# Pilot: words to compare voice models before a full run.
+# The 40 words of the picture pilot (tools/pictures/core/pilot.txt), so the
+# sounds can be heard next to their pictures.
+noun Haus
+noun Hund
+noun Apfel
+noun Schlüssel
+noun Stuhl
+noun Pferd
+noun Katze
+noun Kerze
+noun Brot
+noun Glocke
+noun Schiff
+noun Baum
+noun See
+noun Schloss
+noun Weg
+noun Pfad
+noun Gasse
+noun Ufer
+noun Bahnhof
+noun Hochzeit
+noun Zeitung
+noun Brief
+noun Arzt
+noun König
+noun Wald
+noun Hand
+noun Uhr
+noun Nacht
+verb laufen
+verb gehen
+verb schlafen
+verb essen
+verb schreiben
+verb lesen
+verb schwimmen
+verb weinen
+verb legen
+verb stellen
+verb fliegen
+verb aufstehen
+# Pronunciation traps: ß, ä, ch after i and l, French loanwords (stress on the
+# last syllable, nasal vowels), ch as k, stress on the second syllable, and
+# separable or unstressed prefixes.
+noun Straße
+noun Mädchen
+noun Kirche
+noun Milch
+noun Restaurant
+noun Büro
+noun Ingenieur
+noun Orchester
+noun Theater
+noun Gesicht
+verb anfangen
+verb verstehen

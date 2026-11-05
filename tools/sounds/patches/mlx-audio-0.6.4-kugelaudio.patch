@@ -1,0 +1,155 @@
+--- a/mlx_audio/tts/models/kugelaudio/kugelaudio.py
++++ b/mlx_audio/tts/models/kugelaudio/kugelaudio.py
+@@ -128,7 +128,9 @@
+             speech = mx.random.normal((condition.shape[0], vae_dim)).astype(mx.float32)
+             prev_x0 = None
+             for t in self.noise_scheduler.timesteps:
+-                t_batch = mx.broadcast_to(t, (speech.shape[0],))
++                # Float timesteps: the embedding is cast to t's dtype, and
++                # int32 turns every cos/sin value into 0
++                t_batch = mx.broadcast_to(t.astype(mx.float32), (speech.shape[0],))
+                 eps = self.prediction_head(speech, t_batch, condition=condition)
+                 eps = eps.astype(mx.float32)
+                 result = self.noise_scheduler.step(eps, t, speech, prev_x0=prev_x0)
+@@ -149,7 +151,9 @@
+             # Duplicate speech for both cond/uncond branches through prediction head
+             combined_speech = mx.concatenate([speech, speech], axis=0)
+ 
+-            t_batch = mx.broadcast_to(t, (combined_speech.shape[0],))
++            t_batch = mx.broadcast_to(
++                t.astype(mx.float32), (combined_speech.shape[0],)
++            )
+             eps = self.prediction_head(
+                 combined_speech, t_batch, condition=combined_condition
+             )
+@@ -166,24 +170,78 @@
+ 
+         return speech
+ 
+-    def _build_prompt_tokens(self, text: str) -> list[int]:
+-        """Build the token sequence for generation."""
++    def _build_prompt_tokens(
++        self, text: str, num_voice_tokens: int = 0
++    ) -> tuple[list[int], int]:
++        """Build the token sequence for generation.
++
++        Matches upstream KugelAudioProcessor: each section is encoded on its
++        own, and a voice adds a " Voice input:" section of num_voice_tokens
++        placeholders. Returns (tokens, index of the first placeholder or -1).
++        """
+         formatted_text = text.strip()
+         if not formatted_text.startswith("Speaker"):
+             formatted_text = f"Speaker 0: {formatted_text}"
+ 
+-        system_prompt = " Transform the text provided by various speakers into speech output, utilizing the distinct voice of each respective speaker.\n"
+-        text_section = f" Text input:\n {formatted_text}\n Speech output:\n"
++        def enc(s):
++            return self.tokenizer.encode(s, add_special_tokens=False)
+ 
+-        full_text = system_prompt + text_section
+-        tokens = self.tokenizer.encode(full_text, add_special_tokens=False)
++        system_prompt = " Transform the text provided by various speakers into speech output, utilizing the distinct voice of each respective speaker.\n"
++        tokens = enc(system_prompt)
++        voice_start = -1
++        if num_voice_tokens > 0:
++            tokens += enc(" Voice input:\n") + enc(" Speaker 0:")
++            voice_start = len(tokens)
++            tokens += [SPEECH_DIFFUSION_ID] * num_voice_tokens
++            tokens += enc("\n")
++        tokens += enc(" Text input:\n")
++        tokens += enc(f" {formatted_text}\n")
++        tokens += enc(" Speech output:\n")
+         tokens.append(SPEECH_START_ID)
+-        return tokens
++        return tokens, voice_start
++
++    def _load_voice(self, voice: str) -> dict:
++        """Load a pre-encoded upstream voice (.pt with "acoustic_mean").
++
++        voice is a name from the model's voices/ folder ("default", "clear",
++        ...) or a path to a .pt file. Reading .pt files needs torch.
++        """
++        path = Path(voice)
++        if not path.is_file():
++            path = Path(self.model_path) / "voices" / f"{voice}.pt"
++        if not path.is_file():
++            raise FileNotFoundError(
++                f"voice {voice!r}: no {path}; download voices/{voice}.pt from "
++                "the model repo first"
++            )
++        import torch
+ 
++        cache = torch.load(path, map_location="cpu", weights_only=True)
++        if "acoustic_mean" not in cache:
++            raise ValueError(f"{path}: no acoustic_mean (keys {list(cache)})")
++        mean = cache["acoustic_mean"].float().numpy()
++        if mean.ndim == 2:
++            mean = mean[None]
++        std = cache.get("acoustic_std")
++        std = float(std) if std is not None else self.acoustic_tokenizer.fix_std
++        return {"acoustic_mean": mx.array(mean), "acoustic_std": std}
++
++    def _voice_embeds(self, voice_cache: dict) -> mx.array:
++        """Voice frames as LM input embeddings, (1, N, hidden), as upstream's
++        _process_speech_inputs: sample around the mean, scale, connect."""
++        mean = voice_cache["acoustic_mean"]
++        features = mean + voice_cache["acoustic_std"] * mx.random.normal(mean.shape)
++        if not mx.isnan(self.speech_scaling_factor).item():
++            features = (
++                features + self.speech_bias_factor
++            ) * self.speech_scaling_factor
++        dtype = self.language_model.embed_tokens.weight.dtype
++        return self.acoustic_connector(features.astype(dtype)).astype(dtype)
++
+     def generate(
+         self,
+         text: str,
+-        voice: Optional[str] = None,  # pylint: disable=unused-argument
++        voice: Optional[str] = None,
+         cfg_scale: float = 3.0,
+         max_tokens: int = 2048,
+         ddpm_steps: Optional[int] = None,
+@@ -199,8 +257,11 @@
+         if ddpm_steps is not None:
+             self.ddpm_inference_steps = ddpm_steps
+ 
++        voice_cache = self._load_voice(voice) if voice else None
+         try:
+-            yield from self._generate_impl(text, cfg_scale, max_tokens, verbose)
++            yield from self._generate_impl(
++                text, cfg_scale, max_tokens, verbose, voice_cache
++            )
+         finally:
+             self.ddpm_inference_steps = prev_steps
+ 
+@@ -210,15 +271,28 @@
+         cfg_scale: float,
+         max_tokens: int,
+         verbose: bool,
++        voice_cache: Optional[dict] = None,
+     ) -> Generator[GenerationResult, None, None]:
+         start_time = time.perf_counter()
+ 
+         # Build prompt
+-        prompt_tokens = self._build_prompt_tokens(text)
++        num_voice = voice_cache["acoustic_mean"].shape[1] if voice_cache else 0
++        prompt_tokens, voice_start = self._build_prompt_tokens(text, num_voice)
+         input_ids = mx.array([prompt_tokens], dtype=mx.int32)
++        inputs_embeds = self.language_model.embed_tokens(input_ids)
++        if voice_cache is not None:
++            # Voice frames replace their placeholder tokens
++            inputs_embeds = mx.concatenate(
++                [
++                    inputs_embeds[:, :voice_start],
++                    self._voice_embeds(voice_cache),
++                    inputs_embeds[:, voice_start + num_voice :],
++                ],
++                axis=1,
++            )
+ 
+         # Initial forward pass through language model (full prompt)
+-        hidden_states, cache = self.language_model(input_ids=input_ids)
++        hidden_states, cache = self.language_model(inputs_embeds=inputs_embeds)
+         mx.eval(hidden_states)
+ 
+         # Initialize negative branch for CFG

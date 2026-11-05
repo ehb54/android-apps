@@ -1,0 +1,5 @@
+# Speech generation for the word lists. Pinned so a sound can be made again.
+# piper-tts: small voices on the CPU (ONNX). mlx-audio: larger models on
+# Apple Silicon (MLX): Qwen3-TTS, Chatterbox, OmniVoice, KugelAudio.
+piper-tts==1.8.0
+mlx-audio==0.6.4
