@@ -44,9 +44,9 @@ clarity, not how pleasant a voice is.
 | `piper-kerstin`: Piper `de_DE-kerstin-low` | voice trained on Kerstin (CC0) | 0.05 s | 12 | 10% | — | 16 kHz "low" quality: not usable |
 | `qwen3-design`: Qwen3-TTS 1.7B VoiceDesign, bf16 | Apache 2.0 | 0.9 s | 50 | 83% | 30 | voice described in words (`instruct`); missed Nacht and Büro |
 | `chatterbox`: Chatterbox Multilingual, fp16 | MIT | 1.7 s | 35 | 38% | 2 | default voice is English: an English accent comes through (Apfel as "Upflow") |
-| `omnivoice`: OmniVoice, bf16 | Apache 2.0 | 1.8 s | 45 | 56% | 4 | several misses are near-silence |
-| `kugelaudio`: KugelAudio 7B, bf16, voice `clear` | MIT | 8.4 s (M5 Max) | 26 | 30% | 1 | made on the M5 Max (17 GB of memory); needs the patch below; good at sentences, weak on single words: often a stray sound before the word ("jeder Apfel") or a verb heard as "den"; but the only clear Gasse (90%) |
-| `kugelaudio-cfg8`: the same at CFG 8 | MIT | 8.7 s (M5 Max) | 23 | 23% | — | stronger text guidance; no better; not picked |
+| `omnivoice`: OmniVoice, bf16 | Apache 2.0 | 1.8 s | 45 | 56% | 5 | several misses are near-silence |
+| `kugelaudio`: KugelAudio 7B, bf16, voice `clear` | MIT | 8.4 s (M5 Max) | 26 | 30% | — | dropped (see below); made on the M5 Max (17 GB of memory); needs the patch below; good at sentences, weak on single words: often a stray sound before the word ("jeder Apfel") or a verb heard as "den"; but the only clear Gasse (90%) |
+| `kugelaudio-cfg8`: the same at CFG 8 | MIT | 8.7 s (M5 Max) | 23 | 23% | — | stronger text guidance; to the ear always worse or odd, music in some |
 
 ### Whisper's chance and pick
 
@@ -57,7 +57,7 @@ Whisper's own token probabilities, by feeding it the expected text. A word said
 unclearly or wrongly, or followed by more sound, scores low. The chance compares
 sounds of the same word, so `pick` takes, for each word, the source with the
 highest chance. It leaves out `NOT_PICKED` in `sounds.py`: Wikimedia (bare
-words, credits), Kerstin and the second KugelAudio setting. A pick below 50% needs an ear. Scoring takes about
+words, credits), Kerstin and KugelAudio. A pick below 50% needs an ear. Scoring takes about
 0.7 s per sound on the M1 Pro.
 
 In the pilot, about 10 of the 52 picks win by under two points, which is noise: on
@@ -95,6 +95,19 @@ The first version used ffmpeg's `silenceremove` and one-pass `loudnorm`. On
 these short sounds `loudnorm` left some words 30 dB too quiet (down to -51
 LUFS), and `silenceremove` (ffmpeg 5.0) dropped a whole recording that starts
 loud. ffmpeg now only decodes and measures.
+
+### KugelAudio is dropped
+
+eb listened to the pilot and agreed with Whisper: KugelAudio's stray sounds
+before words are obvious, and CFG 8 changes the sound, very much on some
+words, but always for the worse or oddly (music in some). KugelAudio says Gasse
+best, but it is the pick for 1 word in 52. For the full list of about 4,000
+words that would be about 9 hours on the M5 Max, plus the patch and torch,
+for roughly 80 better words. So `pick` leaves it out (`NOT_PICKED`); its
+sounds stay on the listening page. Without it, two pilot words have a best
+pick under 80%: Gasse (OmniVoice, 43%) and aufstehen (Thorsten, 72%). More
+takes of such words on the laptop (other seeds, keep the one Whisper is
+surest of) are the cheaper fix.
 
 ### KugelAudio needs a patch
 

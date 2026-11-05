@@ -100,7 +100,9 @@ NOUN, VERB = "Q1084", "Q24905"  # Wikidata lexical categories
 NOT_PICKED = {
     WIKIMEDIA: "says the bare word, without the article, and each speaker needs a credit",
     "piper-kerstin": "16 kHz 'low' voice: poor in the pilot",
-    "kugelaudio-cfg8": "a second KugelAudio setting, to listen to",
+    "kugelaudio": "dropped after the pilot: best for 1 word of 52, stray sounds before "
+                  "words, and it needs a 17 GB Mac and a patched mlx-audio",
+    "kugelaudio-cfg8": "worse than CFG 3 to the ear: odd sounds, music in some",
 }
 
 
