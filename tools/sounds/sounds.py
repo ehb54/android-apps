@@ -11,6 +11,8 @@ writes a page to listen to them side by side.
                                             score.tsv: its chance of writing the word
   pick <list> <words> [sources]             raw/picks.tsv: per word, the source
                                             Whisper is surest of
+  retake <list> <words> [engines] [takes]   more takes of the words picked below
+                                            RETAKE_BELOW; the best take stays
   page <list> <words> [sources]             raw/listen/: trimmed, evened copies
                                             and pilot.html
 
@@ -21,10 +23,12 @@ infinitive ("gehen."). Every step skips files already made.
 
 import argparse
 import csv
+import gc
 import html
 import importlib.metadata
 import json
 import re
+import shutil
 import subprocess
 import sys
 import time
@@ -233,13 +237,20 @@ def generate(args):
         seconds = time.time() - start
         length = wav_seconds(path)
         print(f"  {i}/{len(todo)} {text:<24} {seconds:5.1f} s to make, {length:4.2f} s long")
-        append_log(out / "log.tsv", {
-            "file": path.name, "kind": kind, "lemma": lemma, "text": text,
-            "engine": args.engine, "model": model, "version": version,
-            "settings": json.dumps({k: v for k, v in cfg.items() if k not in ("runner", "license")},
-                                   ensure_ascii=False),
-            "seed": args.seed, "seconds": f"{seconds:.2f}", "length": f"{length:.2f}",
-        })
+        append_log(out / "log.tsv", made_row(path, kind, lemma, text, args.engine, model, version,
+                                             args.seed, seconds, length))
+
+
+def made_row(path, kind, lemma, text, engine, model, version, seed, seconds, length):
+    """A log.tsv row: what made a sound, so it can be made again."""
+    cfg = ENGINES[engine]
+    return {
+        "file": path.name, "kind": kind, "lemma": lemma, "text": text,
+        "engine": engine, "model": model, "version": version,
+        "settings": json.dumps({k: v for k, v in cfg.items() if k not in ("runner", "license")},
+                               ensure_ascii=False),
+        "seed": seed, "seconds": f"{seconds:.2f}", "length": f"{length:.2f}",
+    }
 
 
 def http_json(url, data=None):
@@ -604,6 +615,110 @@ DOUBT = 0.5  # a pick Whisper gives less than this chance needs an ear
 LISTEN_LIMITED = 4.0  # dB: the page flags sounds limited this much, to check by ear
 
 
+RETAKE_BELOW = 0.8  # a word whose pick has less chance gets more takes (`retake`)
+RETAKE_ENGINES = "qwen3-design,omnivoice"  # seeded (MLX), so each take differs
+
+
+def retake(args):
+    """For each word whose pick Whisper gives less than RETAKE_BELOW, makes
+    more takes (seeds 1 to 1 + takes) with each engine named, into
+    raw/<engine>/takes/<kind>-<lemma>~<seed>.wav (with log.tsv and
+    score.tsv there), and makes the take Whisper is surest of that engine's
+    sound for the word: raw/<engine>/<kind>-<lemma>.wav, its log.tsv row
+    then giving that seed. Then picks again."""
+    from mlx_audio.stt.utils import load_model
+
+    raw = HERE / args.list / "raw"
+    engines = args.engines.split(",")
+    for e in engines:
+        if ENGINES[e]["runner"] != "mlx":
+            sys.exit(f"{e}: only MLX engines take a seed, so only they make different takes")
+    args.sources = None
+    args.sources = ",".join(candidates(raw, args))
+    hear(args)
+    words = read_words(args.list, args.words)
+    ranked = whisper_picks(raw, words, args.sources.split(","))
+    weak = [(k, l, t) for k, l, t, _ in words
+            if not ranked[f"{k}-{l}"] or ranked[f"{k}-{l}"][0][0] < RETAKE_BELOW]
+    print(f"{len(weak)} words picked below {RETAKE_BELOW:.0%}: "
+          + (", ".join(f"{t.rstrip('.')} ({ranked[f'{k}-{l}'][0][0]:.0%})" for k, l, t in weak) or "none"))
+    if not weak:
+        return
+
+    def main_seed(e, stem):
+        log = raw / e / "log.tsv"
+        rows = {r["file"]: r for r in read_tsv(log)} if log.exists() else {}
+        return int(rows.get(f"{stem}.wav", {}).get("seed") or 1)
+
+    # Make the takes, one engine at a time (the models are large).
+    for e in engines:
+        takes = raw / e / "takes"
+        takes.mkdir(parents=True, exist_ok=True)
+        log = raw / e / "log.tsv"
+        rows = {r["file"]: r for r in read_tsv(log)} if log.exists() else {}
+        todo = []
+        for k, l, t in weak:
+            stem = f"{k}-{l}"
+            main, seed = raw / e / f"{stem}.wav", main_seed(e, stem)
+            first = takes / f"{stem}~{seed}.wav"
+            if main.exists() and not first.exists():  # the take made first, as it was
+                shutil.copy2(main, first)
+                if f"{stem}.wav" in rows:
+                    append_log(takes / "log.tsv", {**rows[f"{stem}.wav"], "file": first.name})
+            todo += [(k, l, t, s) for s in range(1, args.takes + 2)
+                     if not (takes / f"{stem}~{s}.wav").exists()]
+        if not todo:
+            continue
+        print(f"{e}: {len(todo)} takes to make")
+        synth, model, version = mlx_synth(ENGINES[e])
+        for k, l, t, s in todo:
+            path = takes / f"{k}-{l}~{s}.wav"
+            start = time.time()
+            synth(t, path, s)
+            seconds, length = time.time() - start, wav_seconds(path)
+            print(f"  {t:<24} seed {s}: {seconds:4.1f} s to make, {length:4.2f} s long")
+            append_log(takes / "log.tsv", made_row(path, k, l, t, e, model, version, s, seconds, length))
+        del synth
+        gc.collect()
+
+    # Score every take, evened like the rest, and keep the best per engine.
+    chance = whisper_chance(load_model(HEAR_MODEL))
+    for e in engines:
+        takes, listen = raw / e / "takes", raw / "listen" / e / "takes"
+        listen.mkdir(parents=True, exist_ok=True)
+        score_tsv = takes / "score.tsv"
+        got = {r["file"]: float(r["chance"]) for r in read_tsv(score_tsv)} if score_tsv.exists() else {}
+        made = {r["file"]: r for r in read_tsv(takes / "log.tsv")} if (takes / "log.tsv").exists() else {}
+        for k, l, t in weak:
+            stem = f"{k}-{l}"
+            for path in sorted(takes.glob(f"{stem}~*.wav")):
+                if path.stem not in got:
+                    even(path, listen / path.name)
+                    got[path.stem] = chance(listen / path.name, said_by(e, k, l, t))
+                    append_log(score_tsv, {"file": path.stem, "said": t, "chance": f"{got[path.stem]:.4f}",
+                                           "model": HEAR_MODEL})
+            mine = sorted(((c, int(f.rsplit("~", 1)[1])) for f, c in got.items() if f.startswith(stem + "~")),
+                          reverse=True)
+            if not mine:
+                continue
+            (best, seed), was = mine[0], main_seed(e, stem)
+            had = dict((s_, c_) for c_, s_ in mine).get(was, 0.0)
+            if seed == was:
+                print(f"  {e} {l}: take {seed} stays ({best:.0%}); best of {len(mine)}")
+                continue
+            # A fresh copy (new time), so it is evened and scored again as the main sound.
+            shutil.copyfile(takes / f"{stem}~{seed}.wav", raw / e / f"{stem}.wav")
+            log = raw / e / "log.tsv"
+            rows = read_tsv(log)
+            rows = [({**made[f"{stem}~{seed}.wav"], "file": f"{stem}.wav"}
+                     if r["file"] == f"{stem}.wav" and f"{stem}~{seed}.wav" in made else r) for r in rows]
+            log.unlink()
+            for r in rows:
+                append_log(log, r)
+            print(f"  {e} {l}: take {seed} ({best:.0%}) replaces take {was} ({had:.0%}); best of {len(mine)}")
+    pick(args)
+
+
 def pick(args):
     """Scores what is missing, then writes raw/picks.tsv: for each word, the
     source Whisper is surest says it, and the runner-up."""
@@ -642,7 +757,14 @@ def page(args):
         chance = scores(raw, src)
         evlog = raw / "listen" / src / "evened.tsv"
         limited = {r["file"]: float(r["limited"]) for r in read_tsv(evlog)} if evlog.exists() else {}
-        have = {stem: (f"{src}/{p.name}", heard.get(stem), chance.get(stem), limited.get(stem, 0.0))
+        seeds = {r["file"].rsplit(".", 1)[0]: r.get("seed", "") for r in log}
+        takes_tsv = raw / src / "takes" / "score.tsv"
+        ntakes = {}
+        for r in read_tsv(takes_tsv) if takes_tsv.exists() else []:
+            stem_ = r["file"].rsplit("~", 1)[0]
+            ntakes[stem_] = ntakes.get(stem_, 0) + 1
+        have = {stem: (f"{src}/{p.name}", heard.get(stem), chance.get(stem), limited.get(stem, 0.0),
+                       (seeds.get(stem), ntakes.get(stem, 0)))
                 for stem, p in files.items()}
         note = ENGINES[src]["license"] if src in ENGINES else "recordings; " + ", ".join(licenses)
         if made:
@@ -673,12 +795,14 @@ def page(args):
         cells = []
         for src, _, have in columns:
             if stem in have:
-                path, h, p, lim = have[stem]
+                path, h, p, lim, (seed, n) = have[stem]
                 heard = ""
                 if h:
                     heard = f'<small class="heard{"" if h["same"] == "yes" else " miss"}">heard: {e(h["heard"])}</small>'
                 if p is not None:
                     heard += f'<small class="heard{" miss" if p < DOUBT else ""}">Whisper\'s chance: {p:.0%}</small>'
+                if n > 1:
+                    heard += f'<small class="heard">take {e(str(seed))}, the best of {n}</small>'
                 if lim >= LISTEN_LIMITED:
                     heard += f'<small class="heard miss">peaks limited {lim:.1f} dB</small>'
                 mark = '<small class="wtag">Whisper\'s pick</small>' if src == best else ""
@@ -807,8 +931,14 @@ def main():
         p.add_argument("list")
         p.add_argument("words")
         p.add_argument("sources", nargs="?", help="comma-separated; default: every source made")
+    r = sub.add_parser("retake")
+    r.add_argument("list")
+    r.add_argument("words")
+    r.add_argument("engines", nargs="?", default=RETAKE_ENGINES, help="comma-separated MLX engines")
+    r.add_argument("takes", nargs="?", type=int, default=4, help="takes beyond the first (default 4)")
     args = ap.parse_args()
-    {"generate": generate, "wikimedia": wikimedia, "hear": hear, "pick": pick, "page": page}[args.cmd](args)
+    {"generate": generate, "wikimedia": wikimedia, "hear": hear, "pick": pick, "retake": retake,
+     "page": page}[args.cmd](args)
 
 
 if __name__ == "__main__":

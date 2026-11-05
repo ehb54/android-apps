@@ -40,11 +40,11 @@ clarity, not how pleasant a voice is.
 | Source | License | Time per word | Heard | Chance | Picked | Notes |
 |---|---|---|---|---|---|---|
 | `wikimedia`: recordings Wikidata links (P443), else `File:De-<lemma>.ogg` | CC BY-SA 3.0/4.0, one CC BY 3.0: credit each speaker | download | 46 | 67% | — | all 52 found; two speakers made 42 of them; bare words, no article; one says Restaurant twice |
-| `piper-thorsten`: Piper `de_DE-thorsten-high` | voice trained on Thorsten-Voice (CC0) | 0.2 s (CPU) | 46 | 74% | 15 | one male voice; Gasse heard as Kasse, Mädchen as Mietchen |
+| `piper-thorsten`: Piper `de_DE-thorsten-high` | voice trained on Thorsten-Voice (CC0) | 0.2 s (CPU) | 46 | 74% | 14 | one male voice; Gasse heard as Kasse, Mädchen as Mietchen |
 | `piper-kerstin`: Piper `de_DE-kerstin-low` | voice trained on Kerstin (CC0) | 0.05 s | 12 | 10% | — | 16 kHz "low" quality: not usable |
-| `qwen3-design`: Qwen3-TTS 1.7B VoiceDesign, bf16 | Apache 2.0 | 0.9 s | 50 | 83% | 30 | voice described in words (`instruct`); missed Nacht and Büro |
+| `qwen3-design`: Qwen3-TTS 1.7B VoiceDesign, bf16 | Apache 2.0 | 0.9 s | 50 | 85% | 31 | voice described in words (`instruct`); missed Nacht and Büro; Gasse and aufstehen are retakes |
 | `chatterbox`: Chatterbox Multilingual, fp16 | MIT | 1.7 s | 35 | 38% | 2 | default voice is English: an English accent comes through (Apfel as "Upflow") |
-| `omnivoice`: OmniVoice, bf16 | Apache 2.0 | 1.8 s | 45 | 56% | 5 | several misses are near-silence |
+| `omnivoice`: OmniVoice, bf16 | Apache 2.0 | 1.8 s | 45 | 57% | 5 | several misses are near-silence; Gasse and aufstehen are retakes |
 | `kugelaudio`: KugelAudio 7B, bf16, voice `clear` | MIT | 8.4 s (M5 Max) | 26 | 30% | — | dropped (see below); made on the M5 Max (17 GB of memory); needs the patch below; good at sentences, weak on single words: often a stray sound before the word ("jeder Apfel") or a verb heard as "den"; but the only clear Gasse (90%) |
 | `kugelaudio-cfg8`: the same at CFG 8 | MIT | 8.7 s (M5 Max) | 23 | 23% | — | stronger text guidance; to the ear always worse or odd, music in some |
 
@@ -106,8 +106,25 @@ words that would be about 9 hours on the M5 Max, plus the patch and torch,
 for roughly 80 better words. So `pick` leaves it out (`NOT_PICKED`); its
 sounds stay on the listening page. Without it, two pilot words have a best
 pick under 80%: Gasse (OmniVoice, 43%) and aufstehen (Thorsten, 72%). More
-takes of such words on the laptop (other seeds, keep the one Whisper is
-surest of) are the cheaper fix.
+takes of such words on the laptop are the cheaper fix (`retake`, below).
+
+### More takes of weak words
+
+An MLX model makes a different take of a word with each seed. `retake` finds
+the words whose pick Whisper gives less than 80% (`RETAKE_BELOW`). For each,
+it makes takes with seeds 1 to 5 with Qwen3-TTS and OmniVoice
+(`RETAKE_ENGINES`; Piper takes no seed). It scores every take, evened like
+the rest, and makes the best take that engine's sound for the word. The
+engine's `log.tsv` then gives that take's seed, so it can be made again. All
+takes stay in `raw/<engine>/takes/` (`<kind>-<lemma>~<seed>.wav`, with their
+own `log.tsv` and `score.tsv`), and the page says which take a sound is. Then
+it picks again.
+
+In the pilot it took under a minute and fixed both words: Gasse went to
+95% with Qwen3-TTS take 2 (its first take had 14%), and aufstehen to 85% with
+OmniVoice take 2 (Qwen3-TTS take 3 had 85% too). A best take of five is
+Whisper's choice, so listen to the retakes: one could suit Whisper better than
+an ear.
 
 ### KugelAudio needs a patch
 
@@ -136,6 +153,7 @@ remove Chatterbox's accent.
 | `pilot.txt` | the words of the pilot (`noun Haus`, `verb gehen`) | by hand |
 | `raw/<source>/` | the sounds `<kind>-<lemma>.wav` (Wikimedia: `.ogg`), `log.tsv` (model, settings, seed, text, time; Wikimedia: file, license, speaker, page), `heard.tsv` and `score.tsv` | `generate`, `wikimedia`, `hear` (git-ignored) |
 | `raw/picks.tsv` | per word, the source Whisper is surest of, and the runner-up | `pick` (git-ignored) |
+| `raw/<engine>/takes/` | every take of a weak word, `<kind>-<lemma>~<seed>.wav`, with `log.tsv` and `score.tsv` | `retake` (git-ignored) |
 | `raw/listen/` | every sound evened (see Evening), and `pilot.html` to compare them | `hear`, `pick`, `page` (git-ignored) |
 
 ## Steps
@@ -150,7 +168,9 @@ Every step skips work already done.
    one download a second (Wikimedia answers faster ones with HTTP 429).
 3. `run.sh hear <list> <words>` has Whisper write down each sound and score
    its chance. `run.sh pick <list> <words>` does the same, then writes
-   `raw/picks.tsv` and lists the picks below 50%.
+   `raw/picks.tsv` and lists the picks below 50%. `run.sh retake <list>
+   <words> [engines] [takes]` makes more takes of the words picked below 80%
+   (see above), keeps the best and picks again.
 4. `run.sh page <list> <words>` writes `raw/listen/pilot.html`. Open it
    through a local web server, e.g.
    `python3 -m http.server 8765 --directory tools/sounds/core/raw/listen`,
