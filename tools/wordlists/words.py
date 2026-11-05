@@ -566,6 +566,14 @@ def noto_picture(emoji):
     return f"emoji_u{code}.png", out.getvalue()
 
 
+def zip_add(z, name, data):
+    """Adds a file to a zip with a fixed date, so the same pictures make the same
+    zip (and the app does not see an update when nothing changed)."""
+    info = zipfile.ZipInfo(name, date_time=(1980, 1, 1, 0, 0, 0))
+    info.compress_type = zipfile.ZIP_DEFLATED
+    z.writestr(info, data)
+
+
 def workbook(path, tabs):
     from openpyxl import Workbook
     book = Workbook()
@@ -616,11 +624,11 @@ def build_nouns(name, title, outdir):
         return
     with zipfile.ZipFile(Path(outdir) / f"{title} pictures.zip", "w", zipfile.ZIP_DEFLATED) as z:
         for _, (file, data) in pictured:
-            z.writestr(file, data)
-        z.writestr(f"{title} pictures.qzx", "".join(f"!{file}\n{n['word']}\n" for n, (file, _) in pictured))
-        z.writestr("CREDITS.txt", credits)
+            zip_add(z, file, data)
+        zip_add(z, f"{title} pictures.qzx", "".join(f"!{file}\n{n['word']}\n" for n, (file, _) in pictured))
+        zip_add(z, "CREDITS.txt", credits)
         if license:
-            z.write(license, "LICENSE-Noto-Emoji.txt")
+            zip_add(z, "LICENSE-Noto-Emoji.txt", Path(license).read_bytes())
     print(f"{len(nouns)} nouns, {sum(len(rows) for _, rows in tabs)} cards in 3 tabs, "
           f"{len(pictured)} pictures ({'own' if picked else 'emoji'}) -> {outdir}")
 
@@ -658,9 +666,9 @@ def build_verbs(name, title, outdir):
         return
     with zipfile.ZipFile(Path(outdir) / f"{title} verb pictures.zip", "w", zipfile.ZIP_DEFLATED) as z:
         for _, (file, data) in own:
-            z.writestr(file, data)
-        z.writestr(f"{title} verb pictures.qzx", "".join(f"!{file}\n{v['infinitive']}\n" for v, (file, _) in own))
-        z.writestr("CREDITS.txt", credits)
+            zip_add(z, file, data)
+        zip_add(z, f"{title} verb pictures.qzx", "".join(f"!{file}\n{v['infinitive']}\n" for v, (file, _) in own))
+        zip_add(z, "CREDITS.txt", credits)
     print(f"{len(own)} verb pictures -> {outdir}")
 
 

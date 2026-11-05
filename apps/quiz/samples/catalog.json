@@ -121,15 +121,29 @@
         },
         {
             "file": "Core pictures.zip",
-            "bytes": 7764784,
-            "sha256": "2353122f7cfcc40b97f2ff7e9dc38425e45f4fc598716d426b12a968915de135",
+            "bytes": 3354030,
+            "sha256": "02cd8ed8e4ceec24894682802399980a5b901ecf8eaf3dea96ea27d7f4c58ab3",
             "quizzes": [
                 {
                     "name": "Core pictures",
                     "source": "Core pictures.zip",
-                    "version": "2353122f7cfcc40b97f2ff7e9dc38425e45f4fc598716d426b12a968915de135",
-                    "cards": 308,
-                    "pictures": 308
+                    "version": "02cd8ed8e4ceec24894682802399980a5b901ecf8eaf3dea96ea27d7f4c58ab3",
+                    "cards": 734,
+                    "pictures": 734
+                }
+            ]
+        },
+        {
+            "file": "Core verb pictures.zip",
+            "bytes": 685620,
+            "sha256": "d240d955cba1c76f3d698ad1a6e40174f695a64fc6de91b1e60a0dae81929369",
+            "quizzes": [
+                {
+                    "name": "Core verb pictures",
+                    "source": "Core verb pictures.zip",
+                    "version": "d240d955cba1c76f3d698ad1a6e40174f695a64fc6de91b1e60a0dae81929369",
+                    "cards": 144,
+                    "pictures": 144
                 }
             ]
         },
