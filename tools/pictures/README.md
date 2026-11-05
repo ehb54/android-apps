@@ -123,3 +123,19 @@ Most of the list has no picture by design: of the 3000 nouns, about 1400 are
 abstract (time, feelings, speech), about 380 are near-synonyms of a pictured
 word and about 135 are relations (Vater, Freund); of the 1000 verbs, about 500
 are thinking, saying or being and about 220 look like a neighbour.
+
+## The domain lists (November 2026)
+
+The four domain lists exclude the core words, so most of their picturable
+words are kinds of things the core list names in general (Zypresse,
+Pomeranze, Reitknecht). Their plans dropped verbs whose prefix only gives a
+direction (wegfliegen, fortreiten, hereintreten): one rider looks the same
+riding off or riding up. Same model, settings and review as the core list.
+
+| List | Planned | Picked | Dropped | Zips |
+|---|---|---|---|---|
+| History | 85 | 83 (66 nouns, 17 verbs) | 2 | 0.37 + 0.10 MB |
+| Goethe | 243 | 236 (204 nouns, 32 verbs) | 7 | 1.1 + 0.18 MB |
+
+Each list gets `<Title> pictures ERNIE.zip` and `<Title> verb pictures
+ERNIE.zip` as new quizzes; its emoji `<Title> pictures.zip` is unchanged.
