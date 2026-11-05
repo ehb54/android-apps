@@ -320,15 +320,15 @@ What we found:
   both fields, and typing also needs a text answer. That is the rule already
   used for pictures.
 - **Pairings was dropped.** Four choices before a session starts, up to 24
-  level records per card (5 today), due counts that can't all be shown, and
-  every engine keyed by field pair instead of direction.
+  level records per card (5 then; 7 since Speed mode), due counts that can't
+  all be shown, and every engine keyed by field pair instead of direction.
 - **Separate or Views turns on dataset upkeep.** Generated lists are fixed
   once in the generator and rebuilt, so duplicate quizzes cost little.
   Hand-built picture and sound datasets drift across sibling quizzes, which
   Views avoids by keeping one record per item.
 - **Views can come later without loss:** a two-sided quiz is a two-field deck
   with one view. Keeping levels in a map keyed by mode and direction, instead
-  of five named fields, would make that step (and any new mode) cheaper.
+  of seven named fields, would make that step (and any new mode) cheaper.
 
 ## Code map
 
