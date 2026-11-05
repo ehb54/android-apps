@@ -74,6 +74,15 @@ object Resources {
         return stream.use { loadVector(it, color(background)) }
     }
 
+    /**
+     * The app's own launcher icon, from the names every Android app's adaptive
+     * icon uses: drawable `ic_launcher_foreground` over color `ic_launcher_background`.
+     */
+    fun launcherIcon(): ImageVector = launcherIcon(
+        id(APP_PACKAGE, DRAWABLE, "ic_launcher_foreground"),
+        id(APP_PACKAGE, COLOR, "ic_launcher_background"),
+    )
+
     @Synchronized
     fun vector(@DrawableRes id: Int): ImageVector = vectors.getOrPut(id) {
         val loaded = table(id)
@@ -86,19 +95,32 @@ object Resources {
 
     private fun table(id: Int) = tables[id ushr 24] ?: missing(id)
 
-    private fun name(id: Int): String {
-        val table = table(id).table
-        val names = when ((id ushr 16) and 0xff) {
-            1 -> table.strings
-            2 -> table.plurals
-            3 -> table.drawables
-            4 -> table.colors
-            else -> missing(id)
-        }
-        return names.getOrNull(id and 0xffff) ?: missing(id)
+    private fun name(id: Int): String =
+        names(table(id).table, (id ushr 16) and 0xff)?.getOrNull(id and 0xffff) ?: missing(id)
+
+    /** The names of one type of resource, in id order; the type is the id's third byte. */
+    private fun names(table: ResourceTable, type: Int) = when (type) {
+        STRING -> table.strings
+        PLURALS -> table.plurals
+        DRAWABLE -> table.drawables
+        COLOR -> table.colors
+        else -> null
+    }
+
+    /** The id GenerateAndroidResources gave a resource: package, type and index, a byte, a byte and two bytes. */
+    private fun id(packageId: Int, type: Int, name: String): Int {
+        val table = tables[packageId]?.table ?: error("No resources in package 0x%02x".format(packageId))
+        val index = names(table, type)?.indexOf(name)?.takeIf { it >= 0 } ?: error("No resource $name")
+        return (packageId shl 24) or (type shl 16) or index
     }
 
     private fun missing(id: Int): Nothing = error("No resource 0x%08x".format(id))
+
+    private const val APP_PACKAGE = 0x7f
+    private const val STRING = 1
+    private const val PLURALS = 2
+    private const val DRAWABLE = 3
+    private const val COLOR = 4
 
     /** Android's "one" for English and most European languages; French counts 0 as one. */
     private fun quantity(count: Int): String {

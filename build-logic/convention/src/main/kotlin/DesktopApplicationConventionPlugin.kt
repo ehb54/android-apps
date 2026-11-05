@@ -5,7 +5,10 @@ import io.github.ehb54.buildlogic.registerBuildConfig
 import io.github.ehb54.buildlogic.stringProperty
 import org.gradle.api.Plugin
 import org.gradle.api.Project
+import org.gradle.api.tasks.JavaExec
+import org.gradle.api.tasks.SourceSetContainer
 import org.gradle.kotlin.dsl.dependencies
+import org.gradle.kotlin.dsl.get
 import org.gradle.kotlin.dsl.getByType
 import org.gradle.kotlin.dsl.project
 import org.gradle.kotlin.dsl.register
@@ -26,7 +29,8 @@ import org.jetbrains.kotlin.gradle.dsl.KotlinJvmProjectExtension
  *    in package `io.github.ehb54.<name>`;
  *  - `BuildConfig` with the same version numbers as the Android build;
  *  - installers: .dmg (macOS), .msi (Windows) and .deb (Linux), each built on
- *    its own OS (`packageDistributionForCurrentOS`).
+ *    its own OS (`packageDistributionForCurrentOS`), with icons drawn from the
+ *    Android app's launcher icon (`generateInstallerIcons`).
  * The app's build file sets mainClass, the installer name (`packageName`) and,
  * for Windows, a fixed `upgradeUuid`.
  */
@@ -59,6 +63,19 @@ class DesktopApplicationConventionPlugin : Plugin<Project> {
                 }
             }
 
+            // The installers' icons, drawn from the launcher icon by core/desktop's InstallerIcons.kt.
+            val iconsDir = layout.buildDirectory.dir("generated/installerIcons")
+            val runtimeClasspath = extensions.getByType<SourceSetContainer>()["main"].runtimeClasspath
+            val icons = tasks.register<JavaExec>("generateInstallerIcons") {
+                description = "Draws $app.icns, $app.ico and $app.png from the launcher icon."
+                classpath = runtimeClasspath
+                mainClass.set("io.github.ehb54.core.desktop.InstallerIconsKt")
+                args(iconsDir.get().asFile.absolutePath, app)
+                jvmArgs("-Djava.awt.headless=true")
+                outputs.dir(iconsDir)
+            }
+            fun icon(extension: String) = icons.map { iconsDir.get().file("$app.$extension") }
+
             val versionCode = stringProperty("appVersionCode", "1")
             extensions.getByType<ComposeExtension>().extensions.getByType<DesktopExtension>().application {
                 nativeDistributions {
@@ -73,15 +90,18 @@ class DesktopApplicationConventionPlugin : Plugin<Project> {
                     macOS {
                         bundleID = appPackage
                         minimumSystemVersion = "14.0"
+                        iconFile.set(icon("icns"))
                     }
                     windows {
                         // Installs for the current user, so no administrator is needed.
                         perUserInstall = true
                         menu = true
                         shortcut = true
+                        iconFile.set(icon("ico"))
                     }
                     linux {
                         packageName = app
+                        iconFile.set(icon("png"))
                         shortcut = true
                         debMaintainer = "ehb54@users.noreply.github.com"
                     }

@@ -153,6 +153,12 @@ app's own code, so the Android app is never edited for it and screens exist once
   More info, Run anyway. Signing (Apple Developer ID and notarization, a Windows
   code-signing certificate) is eb's decision. Each app's build file sets a fixed
   Windows `upgradeUuid`; never change it.
+- **Icons.** The window and installer icons are the Android launcher icon
+  (`ic_launcher_foreground` over the `ic_launcher_background` color), shown as
+  Android launchers show it: the middle 72 of 108 dp on a rounded square.
+  `generateInstallerIcons` runs core/desktop's `InstallerIcons.kt` to draw
+  `.icns` (macOS, inside Apple's 824-of-1024 grid), `.ico` (Windows, 16 to 256 px)
+  and `.png` (Linux) into `build/generated/installerIcons`; nothing is drawn by hand.
 - **Running one from a checkout:** `./gradlew :desktop:quiz:run` on a computer
   with a screen (not on the build hosts).
 - **Tests:** `src/test/` with Compose's desktop test rule (`createComposeRule`),
@@ -213,7 +219,8 @@ page says how to get past the unsigned-app warnings.
 `tools/new-app.sh <name> "<App label>"` copies `apps/starter` to `apps/<name>`,
 renames the package and sets the applicationId to `io.github.ehb54.<name>` (it is
 permanent once the app is on Play, so pick the name carefully). Then change its
-icon colors in `res/values/colors.xml` and `res/drawable/ic_launcher_foreground.xml`,
+icon colors in `res/values/colors.xml` and `res/drawable/ic_launcher_foreground.xml`
+(its desktop version, if it gets one, draws its icons from the same two),
 build, and commit. CI builds it and the download site lists it automatically.
 
 ## Play-readiness rules

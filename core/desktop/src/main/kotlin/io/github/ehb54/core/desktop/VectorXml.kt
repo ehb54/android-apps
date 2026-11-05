@@ -17,35 +17,54 @@ private const val ANDROID = "http://schemas.android.com/apk/res/android"
 
 /**
  * An Android vector drawable (`<vector>` with paths and groups, fill and stroke
- * colors as literals) as an ImageVector. [background], when set, is painted
- * first as a rounded square: an adaptive icon's background color plus its
- * foreground drawable then make the launcher icon.
+ * colors as literals) as an ImageVector.
+ *
+ * With [background], the drawable is an adaptive icon's foreground and the result
+ * is the launcher icon, shown as Android launchers show it: the middle two thirds
+ * of the drawable (72 of its 108 dp) on a rounded square of that color.
  */
 fun loadVector(stream: InputStream, background: Color? = null): ImageVector {
     val factory = DocumentBuilderFactory.newInstance().apply { isNamespaceAware = true }
     val root = factory.newDocumentBuilder().parse(stream).documentElement
     val width = root.float("viewportWidth") ?: 24f
     val height = root.float("viewportHeight") ?: 24f
-    val builder = ImageVector.Builder(
-        defaultWidth = (root.dp("width") ?: width).dp,
-        defaultHeight = (root.dp("height") ?: height).dp,
-        viewportWidth = width,
-        viewportHeight = height,
-        autoMirror = root.attr("autoMirrored") == "true",
-    )
-    if (background != null) {
-        val r = minOf(width, height) * 0.2f
-        builder.addPath(
-            addPathNodes(
-                "M$r,0h${width - 2 * r}a$r,$r 0 0 1 $r,${r}v${height - 2 * r}a$r,$r 0 0 1 -$r,${r}" +
-                    "h${-(width - 2 * r)}a$r,$r 0 0 1 -$r,-${r}v${-(height - 2 * r)}a$r,$r 0 0 1 $r,-${r}z",
-            ),
-            fill = SolidColor(background),
+    if (background == null) {
+        val builder = ImageVector.Builder(
+            defaultWidth = (root.dp("width") ?: width).dp,
+            defaultHeight = (root.dp("height") ?: height).dp,
+            viewportWidth = width,
+            viewportHeight = height,
+            autoMirror = root.attr("autoMirrored") == "true",
         )
+        addChildren(builder, root)
+        return builder.build()
     }
+    val side = minOf(width, height) * 2 / 3
+    val builder = ImageVector.Builder(
+        defaultWidth = side.dp,
+        defaultHeight = side.dp,
+        viewportWidth = side,
+        viewportHeight = side,
+    )
+    val tile = roundedSquare(side)
+    builder.addPath(tile, fill = SolidColor(background))
+    // Clipped to the tile, as the launcher's mask clips it.
+    builder.addGroup(clipPathData = tile)
+    builder.addGroup(translationX = (side - width) / 2, translationY = (side - height) / 2)
     addChildren(builder, root)
+    builder.clearGroup()
+    builder.clearGroup()
     return builder.build()
 }
+
+/** A square of [side] with corners rounded by a fifth of it. */
+private fun roundedSquare(side: Float) = addPathNodes(
+    (side * 0.2f).let { r ->
+        val edge = side - 2 * r
+        "M$r,0h${edge}a$r,$r 0 0 1 $r,${r}v${edge}a$r,$r 0 0 1 -$r,${r}" +
+            "h${-edge}a$r,$r 0 0 1 -$r,-${r}v${-edge}a$r,$r 0 0 1 $r,-${r}z"
+    },
+)
 
 private fun addChildren(builder: ImageVector.Builder, parent: Element) {
     val nodes = parent.childNodes
