@@ -104,7 +104,7 @@ Staatssekretär	noun	no		office not shown by dress
 Aufhebung	noun	no		abstract
 Fort	noun	yes	a frontier fort with a square wall of sharpened upright logs, a wooden lookout tower at each corner and a red flag on a pole	near: Befestigung, Stützpunkt
 Phalanx	noun	no		a body of soldiers reads as soldiers or Hellene (near: Legion, Kolonne)
-Halbinsel	noun	scene	seen from above, a long narrow strip of green land with sandy edges reaching out into a blue sea, joined to a larger land mass at one end	near: Festland, Vorgebirge, Kontinent
+Halbinsel	noun	scene	a map seen from above: a wide green mainland filling the whole bottom edge, and one narrow green peninsula joined to it, reaching up into the blue sea	near: Festland, Vorgebirge, Kontinent
 Schaffung	noun	no		abstract
 Ausfuhr	noun	no		abstract
 Vorstand	noun	no		relational (an office or a board)
@@ -374,7 +374,7 @@ Kulturgeschichte	noun	no		abstract
 Bürgerkrieg	noun	no		abstract
 Berufung	noun	no		abstract
 Täufer	noun	no		sensitive
-Golf	noun	scene	a wide curved bay of blue sea reaching deep into green land, seen from high above, open sea at its mouth	near: Meerenge, Halbinsel, Vorgebirge, Reede, Mündung
+Golf	noun	scene	a map seen from above: open blue sea along the whole top edge, and one large rounded bay of that sea cutting deep down into green land	near: Meerenge, Halbinsel, Vorgebirge, Reede, Mündung
 Verfall	noun	no		abstract
 Etat	noun	no		abstract
 Übertragung	noun	no		abstract
@@ -466,7 +466,7 @@ Pressefreiheit	noun	no		abstract
 Beiname	noun	no		abstract (a name)
 Briefwechsel	noun	no		abstract
 Gliederung	noun	no		abstract
-Meerenge	noun	scene	a narrow channel of blue sea between two large green coasts, seen from high above, the sea opening wide at both ends	near: Golf, Durchfahrt, Mündung, Halbinsel
+Meerenge	noun	scene	a map seen from above: wide blue sea at the top and wide blue sea at the bottom, joined only by one narrow strait of water between two big green land masses	near: Golf, Durchfahrt, Mündung, Halbinsel
 Imperium	noun	no		abstract
 Abnahme	noun	no		abstract
 Feststellung	noun	no		abstract
@@ -615,7 +615,7 @@ Durchfahrt	noun	no		abstract
 Instanz	noun	no		abstract
 Geschichtswerk	noun	no		abstract
 Landesteil	noun	no		abstract
-Kurbel	noun	yes	an old iron hand crank on its own: a bent metal arm with a turned wooden handle at one end	near: Hebel, Vorrichtung
+Kurbel	noun	yes	a hand crank on its own: one Z-shaped bent iron rod with a small turned wooden handle at its far end, lying flat, no base and no machine	near: Hebel, Vorrichtung
 Stellvertreter	noun	no		relational
 Volksvertretung	noun	no		abstract
 Fortdauer	noun	no		abstract
@@ -624,7 +624,7 @@ Diktatur	noun	no		abstract
 Geograph	noun	no		role has no plain sign
 Erteilung	noun	no		abstract
 Fortführung	noun	no		abstract
-Bombe	noun	yes	a single dark olive-green aerial bomb with a rounded nose and four tail fins, pointing downward, on its own	near: Torpedo, Handgranate, Geschoss, Bombardement
+Bombe	noun	yes	a single old-fashioned dark olive-green aerial bomb shaped like a fat teardrop, nose pointing straight down, a small square box of fins at its top end, no wings	near: Torpedo, Handgranate, Geschoss, Bombardement
 Verbrauch	noun	no		abstract
 Schädigung	noun	no		abstract
 Sachse	noun	no		sensitive
@@ -1075,7 +1075,7 @@ beitreten	verb	no		abstract
 berücksichtigen	verb	no		abstract
 anordnen	verb	no		speech
 eingreifen	verb	no		abstract
-marschieren	verb	yes	a young man with short red hair, a soldier in a blue uniform and peaked cap, marching in step, one knee raised high, arms swinging stiffly	near: einrücken, vorrücken, vordringen
+marschieren	verb	yes	a young soldier with short red hair in a blue uniform marching stiffly in step, side view, a rifle upright on his shoulder, one knee lifted high, back straight	near: einrücken, vorrücken, vordringen
 verwerfen	verb	no		abstract
 beauftragen	verb	no		abstract
 unterstellen	verb	no		abstract
