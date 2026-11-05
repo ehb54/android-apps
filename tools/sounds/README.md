@@ -106,8 +106,11 @@ both in `patches/mlx-audio-0.6.4-kugelaudio.patch`, against the venv's
 `voices/<voice>.pt`, which needs `torch` to read. To make KugelAudio sounds
 again, apply it (`patch -p1 -d .venv/lib/python3.*/site-packages <
 patches/mlx-audio-0.6.4-kugelaudio.patch`) and `pip install torch` in the venv.
-The other engines don't need either. The timestep fix is worth reporting to
-mlx-audio.
+The other engines don't need either. `requirements.txt` stays without torch
+for now; it needs the patch anyway. The timestep bug is filed upstream as
+[mlx-audio issue 1129](https://github.com/Neywa-Labs/mlx-audio/issues/1129)
+(mlx-audio moved from Blaizzy/mlx-audio to Neywa-Labs/mlx-audio). Until a
+fixed release is out, KugelAudio needs the patch.
 
 Not tried yet: a German reference voice for the cloning models (Qwen3-TTS
 Base, Chatterbox), for example a Thorsten-Voice recording (CC0), which may
