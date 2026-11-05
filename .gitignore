@@ -30,3 +30,9 @@ __pycache__/
 /tools/pictures/.venv/
 /tools/pictures/*/raw/
 /tools/pictures/work/
+
+# Sound pipeline (tools/sounds): venv, voices, generated sounds, scratch
+/tools/sounds/.venv/
+/tools/sounds/voices/
+/tools/sounds/*/raw/
+/tools/sounds/work/
