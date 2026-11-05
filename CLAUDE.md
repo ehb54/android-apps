@@ -87,6 +87,11 @@ The `android` CLI that replaced `sdkmanager` reports usage to Google unless it g
   it names.
 - From API 37 the SDK platform packages carry a minor version (`android-37.0`);
   `tools/docker-build.sh` adds the `.0` itself.
+- On an arm64 Docker host (Apple Silicon), the image's SDK tools are x86-64
+  only and the arm64 image fails to install them ("rosetta error: failed to
+  open elf at /lib64/ld-linux-x86-64.so.2"). Run
+  `DOCKER_DEFAULT_PLATFORM=linux/amd64 tools/docker-build.sh` to build and run
+  the amd64 image under Rosetta (slower; the Quiz unit tests take minutes).
 
 ## Tests
 
