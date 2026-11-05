@@ -1,14 +1,17 @@
-# Sounds for the word lists
+# Sounds for the quizzes
 
-Makes a sound for each word of the word lists (`../wordlists/`): the German
-word spoken, so a quiz can ask sound → word (hear it, type it), word → sound,
-or sound ↔ picture with the lists' pictures (`../pictures/`). A noun is
-spoken with its article ("das Haus."), so the sound also teaches the gender;
-a verb as its infinitive.
+Makes a sound for every text on the sample quizzes' cards in a language:
+each German text spoken, once, however many quizzes it is on. What the
+sounds become is open: sound → word or sound ↔ picture quizzes, or a sound
+to play beside a card's text. A noun card says "der Hund", so its sound also
+teaches the gender.
 
-**Stage: pilot.** 52 core words (the 40 of the picture pilot plus 12
-pronunciation traps, `core/pilot.txt`) made with each candidate and set
-beside the recordings Wikimedia has, to choose a source before a full run.
+**Stage: German.** `de/` holds the German texts of all sample quizzes
+(21,364 texts on 39,922 card sides) and makes their sounds; see *A
+language's sounds*. The voices were chosen in a pilot first: 52 core words
+(`core/pilot.txt`) made with each candidate voice and set beside the
+recordings Wikimedia has (the sections from *Sources* to *KugelAudio needs a
+patch*).
 
 `sounds.py` does the work. It runs in a Python venv in this folder (`.venv/`,
 git-ignored, made by `setup.sh` from `requirements.txt`) through `run.sh`,
@@ -21,6 +24,75 @@ which reads `tools/local.env` for the machine's settings:
 | `TMPDIR`, `PIP_CACHE_DIR`, `XDG_CACHE_HOME` | optional: where temp files and caches go |
 
 `ffmpeg` must be on the PATH: it decodes every sound and measures its loudness for evening.
+
+## A language's sounds
+
+```
+tools/sounds/run.sh texts de          # de/texts.tsv: every German text, once
+tools/sounds/run.sh make de all       # a sound for each text without one
+tools/sounds/run.sh collect de all    # (make ends with it) de/raw/sounds/ + sounds.tsv
+```
+
+- **Texts.** `texts de` reads every quiz in the app's built-in samples and
+  the online ones (`DECKS`). `QUIZ_SIDES` in `sounds.py` gives the language
+  of each side of each quiz by its name: a noun quiz is German then English,
+  an articles quiz is German on both sides ("Hund" = "der"), a picture quiz
+  is a picture then German. A quiz no rule matches stops the step, so a new
+  quiz is never left out unnoticed. Each text is written once into
+  `de/texts.tsv` (committed), with its key and the quizzes it is on.
+- **Keys.** A text's file name is its key: the text made safe for a file name,
+  plus 8 characters of its SHA-1 (`der_Hund-1a2b3c4d`). The key comes from
+  the text alone, so it never changes, and a file system that ignores case
+  still keeps "Essen" and "essen" apart. Sound files are `de-<key>.wav`.
+- **Updating.** When quizzes change, run `texts de`, then `make de all`.
+  Texts that already have a sound are skipped, so only new texts are made.
+  Texts no longer on any quiz keep their sounds.
+- **Another language** needs voices for it in `ENGINES` (Piper and Qwen3-TTS
+  have many languages), a `LANGUAGES` entry (its voices in order, and
+  Whisper's language code), its sides in `QUIZ_SIDES`, and then `texts <lang>`
+  and `make <lang> all`.
+
+### How `make` picks a voice
+
+Every voice makes every text, and the sound Whisper is surest of wins
+(eb: a voice that is the best for any text belongs in, and don't stop at a
+good-enough sound):
+
+1. Qwen3-TTS, Thorsten (Piper), OmniVoice and Chatterbox (`LANGUAGES`),
+   one after another, each making and scoring every text. After each voice,
+   `pick` and `collect` run, so after the first voice every text already has
+   a sound in `de/raw/sounds/`, and each later voice can only improve it.
+2. `retake` makes four more takes, with other seeds, with the MLX voices
+   (Qwen3-TTS, OmniVoice, Chatterbox; Piper takes no seed) of each text whose
+   pick is below the bar, and keeps each voice's best take.
+3. `pick` takes each text's surest sound; `collect` copies it, evened, to
+   `de/raw/sounds/` and writes `de/raw/sounds.tsv`: the file, the text, what
+   was said, voice, seed, Whisper's chance and sureness, license, quizzes.
+
+KugelAudio is not among them: its 7B model needs a Mac with more than 16 GB.
+
+**The bar** is Whisper's sureness: its chance per piece of the text (the
+geometric mean over the tokens it writes the text in), at least 90%
+(`SURE`). The chance itself can't be the bar here. A long text spreads it
+over more pieces: Whisper wrote "führt hinauf, führte hinauf, hat
+hinaufgeführt" exactly, with a chance of 41%, but 95% a piece. Real errors
+score low either way: "Feld" heard as "Failed" (0%), "Formel" as "Fahne"
+(0%), "streckt" as "strickt" (0%), "Doktor" written "Dr." (15% a piece).
+
+**Time.** Whisper takes 0.7 s per sound on an M1 Pro, however short the word:
+its encoder always reads 30 s, and neither a shorter window (its scores
+change completely) nor batching (no faster) helps. With making, a text takes
+about 2 s with Qwen3-TTS, 1 s with Thorsten and 2.5 s each with OmniVoice and
+Chatterbox, so about 2 days for the 21,364 German texts on the M1 Pro, plus
+the retakes. `make` can be stopped and run again; it carries on.
+
+A trial on 120 random German texts showed why every voice is worth trying.
+Qwen3-TTS failed outright on some easy words ("die Stellung", "Doktor": 0%,
+where another voice had over 90%). Thorsten beat it on 33 of the 60 texts it
+did badly, OmniVoice beat both on 19 of 44, and Chatterbox was best for 2 of
+36. The quizzes' texts are harder than the pilot's common words: rare words
+("Sold", "Bückling"), bare nouns with no article, and verb-form lists.
+Qwen3-TTS's average chance was 63% on them, against 85% in the pilot.
 
 ## Sources
 
@@ -146,15 +218,17 @@ Not tried yet: a German reference voice for the cloning models (Qwen3-TTS
 Base, Chatterbox), for example a Thorsten-Voice recording (CC0), which may
 remove Chatterbox's accent.
 
-## A list's folder
+## A list's or a language's folder
 
 | File | What | Made by |
 |---|---|---|
 | `pilot.txt` | the words of the pilot (`noun Haus`, `verb gehen`) | by hand |
+| `texts.tsv` | a language's texts: key, text, quizzes | `texts` |
 | `raw/<source>/` | the sounds `<kind>-<lemma>.wav` (Wikimedia: `.ogg`), `log.tsv` (model, settings, seed, text, time; Wikimedia: file, license, speaker, page), `heard.tsv` and `score.tsv` | `generate`, `wikimedia`, `hear` (git-ignored) |
 | `raw/picks.tsv` | per word, the source Whisper is surest of, and the runner-up | `pick` (git-ignored) |
 | `raw/<engine>/takes/` | every take of a weak word, `<kind>-<lemma>~<seed>.wav`, with `log.tsv` and `score.tsv` | `retake` (git-ignored) |
 | `raw/listen/` | every sound evened (see Evening), and `pilot.html` to compare them | `hear`, `pick`, `page` (git-ignored) |
+| `raw/sounds/`, `raw/sounds.tsv` | the picked sound per text, and what it is | `collect` (git-ignored) |
 
 ## Steps
 

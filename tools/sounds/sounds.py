@@ -1,9 +1,15 @@
 #!/usr/bin/env python3
-"""Sounds for the word lists' cards: each German word, spoken.
+"""Sounds for the quizzes' cards: each text, spoken (see README.md).
 
-Pilot stage (see README.md): makes the words of a list's pilot with several
-voice models, fetches the recordings Wikidata links for comparison, and
-writes a page to listen to them side by side.
+A language's sounds (`de`): `texts de` collects every German text on the
+sample quizzes, once; `make de all` makes a sound for each text not made yet,
+trying voices in turn until Whisper is sure of one; `collect de all` puts the
+picked sounds in de/raw/sounds/ with de/raw/sounds.tsv. The pilot (`core`)
+compared the voices on 52 words of a word list.
+
+  texts <lang>                              <lang>/texts.tsv: the texts and their keys
+  make <lang> <words> [takes]               generate, hear, retake and pick, in turn
+  collect <lang> <words>                    raw/sounds/: the picked sound per text
 
   generate <list> <engine> <words> [seed]   raw/<engine>/<kind>-<lemma>.wav, log.tsv
   wikimedia <list> <words>                  raw/wikimedia/: recordings via Wikidata
@@ -12,34 +18,44 @@ writes a page to listen to them side by side.
   pick <list> <words> [sources]             raw/picks.tsv: per word, the source
                                             Whisper is surest of
   retake <list> <words> [engines] [takes]   more takes of the words picked below
-                                            RETAKE_BELOW; the best take stays
+                                            SURE a piece; the best take stays
   page <list> <words> [sources]             raw/listen/: trimmed, evened copies
                                             and pilot.html
 
-<words> is a file of "noun Haus" / "verb gehen" lines (core/pilot.txt) or
-"all". A noun is spoken with its article ("das Haus."), a verb as its
-infinitive ("gehen."). Every step skips files already made.
+<words> is "all" or a file of lines: "<lang> <key>" for a language's texts,
+"noun Haus" / "verb gehen" for a word list (core/pilot.txt: a noun is spoken
+with its article, "das Haus."). Every step skips work already done.
 """
 
 import argparse
+import contextlib
 import csv
+import functools
 import gc
+import hashlib
 import html
 import importlib.metadata
+import io
 import json
 import re
 import shutil
 import subprocess
 import sys
 import time
+import unicodedata
 import urllib.error
 import urllib.parse
 import urllib.request
 import wave
+import xml.etree.ElementTree as ET
+import zipfile
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 WORDLISTS = HERE.parent / "wordlists"
+REPO = HERE.parent.parent
+# Where the quizzes are whose texts get sounds (`texts`): built in, and online.
+DECKS = [REPO / "apps/quiz/src/main/assets/samples", REPO / "apps/quiz/samples"]
 VOICES = HERE / "voices"
 USER_AGENT = "android-apps-sounds/0.1 (https://github.com/ehb54/android-apps)"
 
@@ -100,6 +116,25 @@ ENGINES = {
 }
 WIKIMEDIA = "wikimedia"
 NOUN, VERB = "Q1084", "Q24905"  # Wikidata lexical categories
+# Per language: the voices `make` makes every text with (any voice that is the
+# surest for some texts belongs here: eb, after the trial); the seeded voices
+# `retake` makes more takes with; and Whisper's language. Another language
+# needs its own voices in ENGINES (Piper and Qwen3-TTS have many) and a line here.
+LANGUAGES = {
+    "de": {
+        "whisper": "de",
+        "engines": ["qwen3-design", "piper-thorsten", "omnivoice", "chatterbox"],
+        "retake": ["qwen3-design", "omnivoice", "chatterbox"],
+    },
+}
+
+
+def lang_of(list_name):
+    """A list's language: a language's own folder (with texts.tsv) is named
+    after it; the word lists are German."""
+    return list_name if (HERE / list_name / "texts.tsv").exists() else "de"
+
+
 # Sources `pick` leaves out unless named.
 NOT_PICKED = {
     WIKIMEDIA: "says the bare word, without the article, and each speaker needs a credit",
@@ -110,13 +145,147 @@ NOT_PICKED = {
 }
 
 
+# The language of each side of each quiz in DECKS, by quiz name (first match
+# wins): "de" German, "en" English, "fr" French, "" neither (a picture, a
+# sound, a symbol). `texts <lang>` collects the sides in that language, and a
+# quiz no rule matches stops it, so a new quiz is never left out unnoticed.
+QUIZ_SIDES = [
+    (r" verb forms$", ("de", "de")),  # sein = ist, war, ist gewesen
+    (r" articles$", ("de", "de")),  # Hund = der
+    (r" plurals$", ("de", "de")),  # der Hund = die Hunde
+    (r" nouns$", ("de", "en")),
+    (r" verbs$", ("de", "en")),
+    (r" pictures( ERNIE)?$", ("", "de")),  # also "Core verb pictures ERNIE"
+    (r"^(Numbers|Colors)$", ("de", "en")),  # German starter
+    (r"^French words$", ("en", "fr")),
+    (r"^(Amino acids|Chemical symbols)$", ("en", "")),
+    (r"^Morse code$", ("", "")),
+    (r"^Shapes$", ("", "en")),
+]
+
+
 def read_tsv(path):
     with open(path, newline="", encoding="utf-8") as f:
         return list(csv.DictReader(f, delimiter="\t", quoting=csv.QUOTE_NONE))
 
 
+def text_key(text):
+    """A text's file name: readable, and unique however a file system treats
+    case or accents ("Essen" and "essen" are different texts)."""
+    slug = re.sub(r"\W+", "_", text).strip("_")[:40] or "_"
+    return f"{slug}-{hashlib.sha1(text.encode('utf-8')).hexdigest()[:8]}"
+
+
+def spoken(text):
+    """What a model is given to say: the text, ending in a full stop."""
+    return text if text[-1:] in ".!?" else text + "."
+
+
+def xlsx_tabs(path):
+    """[(tab name, [(side A, side B), ...])] of a workbook, as the app reads
+    it (`engine/Spreadsheet.kt`): the first two columns, rows with both."""
+    m = "{http://schemas.openxmlformats.org/spreadsheetml/2006/main}"
+    r_id = "{http://schemas.openxmlformats.org/officeDocument/2006/relationships}id"
+    z = zipfile.ZipFile(path)
+    shared = []
+    if "xl/sharedStrings.xml" in z.namelist():
+        for si in ET.fromstring(z.read("xl/sharedStrings.xml")).findall(m + "si"):
+            shared.append("".join(t.text or "" for t in si.iter(m + "t")))
+    rels = {r.get("Id"): r.get("Target")
+            for r in ET.fromstring(z.read("xl/_rels/workbook.xml.rels"))}
+    tabs = []
+    for sheet in ET.fromstring(z.read("xl/workbook.xml")).find(m + "sheets"):
+        target = rels[sheet.get(r_id)].lstrip("/")
+        target = target if target.startswith("xl/") else "xl/" + target
+        cards = []
+        for row in ET.fromstring(z.read(target)).iter(m + "row"):
+            cells = {}
+            for c in row.findall(m + "c"):
+                v = c.find(m + "v")
+                if c.get("t") == "s" and v is not None:
+                    value = shared[int(v.text)]
+                elif c.get("t") == "inlineStr":
+                    value = "".join(t.text or "" for t in c.iter(m + "t"))
+                else:
+                    value = v.text if v is not None else ""
+                letters = re.match(r"[A-Z]+", c.get("r")).group(0)
+                cells[sum((ord(ch) - 64) * 26 ** i for i, ch in enumerate(reversed(letters))) - 1] = value
+            a, b = cells.get(0, "").strip(), cells.get(1, "").strip()
+            if a and b:
+                cards.append((a, b))
+        tabs.append((sheet.get("name"), cards))
+    return tabs
+
+
+def qzx_cards(text):
+    lines = [line.strip() for line in text.splitlines()]
+    return [(lines[i], lines[i + 1]) for i in range(0, len(lines) - 1, 2)]
+
+
+def quizzes():
+    """(file, quiz name, cards) for every quiz in DECKS."""
+    for folder in DECKS:
+        for path in sorted(folder.iterdir()):
+            if path.suffix == ".xlsx":
+                for name, cards in xlsx_tabs(path):
+                    yield path.name, name, cards
+            elif path.suffix == ".qzx":
+                yield path.name, path.stem, qzx_cards(path.read_text(encoding="utf-8"))
+            elif path.suffix == ".zip":
+                z = zipfile.ZipFile(path)
+                inner = [n for n in z.namelist() if n.endswith(".qzx")]
+                if inner:
+                    yield path.name, path.stem, qzx_cards(z.read(inner[0]).decode("utf-8"))
+
+
+def texts(args):
+    """Writes <lang>/texts.tsv: every text in that language on a side of a
+    quiz in DECKS, once, with its key (file name) and the quizzes it is in.
+    Run it again when quizzes change: the sounds of texts already made are
+    kept, so only new texts are made."""
+    found = {}
+    for file, name, cards in quizzes():
+        sides = next((langs for pattern, langs in QUIZ_SIDES if re.search(pattern, name)), None)
+        if sides is None:
+            sys.exit(f"{file}: no QUIZ_SIDES rule for the quiz {name!r}; add one")
+        for side, lang in enumerate(sides):
+            if lang != args.lang:
+                continue
+            for card in cards:
+                text = unicodedata.normalize("NFC", " ".join(card[side].split()))
+                if text and not text.startswith("!"):  # "!name.png" is a file
+                    found.setdefault(text, []).append(name)
+    folder = HERE / args.lang
+    folder.mkdir(exist_ok=True)
+    out = folder / "texts.tsv"
+    old = {r["text"] for r in read_tsv(out)} if out.exists() else set()
+    with open(out, "w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f, delimiter="\t", lineterminator="\n", quoting=csv.QUOTE_NONE, escapechar="\\")
+        w.writerow(["key", "text", "quizzes"])
+        for text in sorted(found, key=str.casefold):
+            w.writerow([text_key(text), text, "; ".join(sorted(set(found[text])))])
+    cards = sum(len(q) for q in found.values())
+    print(f"{args.lang}: {len(found)} texts on {cards} card sides; "
+          f"{len(set(found) - old)} new, {len(old - set(found))} no longer in a quiz; wrote {out}")
+
+
 def read_words(list_name, words_arg):
-    """(kind, lemma, text, english) for each word, in the order given."""
+    """(kind, lemma, text, english) for each word, in the order given: from a
+    language's texts.tsv (kind = the language, lemma = the text's key,
+    english = its quizzes), or from a word list's nouns and verbs. words_arg
+    is "all", a file of "<kind> <lemma>" lines, or such a list already read."""
+    if isinstance(words_arg, list):
+        return words_arg
+    texts_tsv = HERE / list_name / "texts.tsv"
+    if texts_tsv.exists():
+        rows = {r["key"]: r for r in read_tsv(texts_tsv)}
+        if words_arg == "all":
+            keys = list(rows)
+        else:
+            keys = [line.split("#", 1)[0].split()[-1]
+                    for line in Path(words_arg).read_text(encoding="utf-8").splitlines()
+                    if line.split("#", 1)[0].strip()]
+        return [(list_name, k, spoken(rows[k]["text"]), rows[k]["quizzes"]) for k in keys]
     folder = WORDLISTS / list_name
     nouns = {r["lemma"]: r for r in read_tsv(folder / "nouns.tsv")}
     verbs = {r["lemma"]: r for r in read_tsv(folder / "verbs.tsv")}
@@ -206,16 +375,17 @@ def mlx_synth(cfg):
             kwargs["voice"] = voice
         if "cfg_scale" in cfg:
             kwargs["cfg_scale"] = cfg["cfg_scale"]
-        generate_audio(
-            text=text,
-            model=model,
-            lang_code=cfg["lang_code"],
-            file_prefix=str(path.with_suffix("")),
-            audio_format="wav",
-            join_audio=True,
-            verbose=False,
-            **kwargs,
-        )
+        with contextlib.redirect_stdout(io.StringIO()):  # it prints its settings per call
+            generate_audio(
+                text=text,
+                model=model,
+                lang_code=cfg["lang_code"],
+                file_prefix=str(path.with_suffix("")),
+                audio_format="wav",
+                join_audio=True,
+                verbose=False,
+                **kwargs,
+            )
 
     return synth, cfg["model"], version
 
@@ -499,21 +669,23 @@ def said_by(src, kind, lemma, text):
     return f"{lemma}." if src == WIKIMEDIA else text
 
 
-def whisper_chance(model):
+def whisper_chance(model, lang="de"):
     """chance(path, text): the probability that Whisper, transcribing the
-    sound as German, writes exactly the text and stops (summed over the
-    spellings it may use: capital or not, full stop or not). Sounds of the
+    sound in the language, writes exactly the text and stops (summed over the
+    spellings it may use: capital or not, full stop or not, commas or not). Sounds of the
     same word compare directly; a word said unclearly, or wrongly, or with
     more after it scores low."""
     import mlx.core as mx
     from mlx_audio.stt.models.whisper.audio import N_FRAMES, pad_or_trim
 
-    tok = model.get_tokenizer(language="de", task="transcribe")
+    tok = model.get_tokenizer(language=lang, task="transcribe")
     prefix = list(tok.sot_sequence_including_notimestamps)
 
     def spellings(text):
         t = text.rstrip(".")
-        return sorted({f + p for f in (t, t[:1].upper() + t[1:]) for p in (".", "")})
+        forms = {t, t[:1].upper() + t[1:]}
+        forms |= {f.replace(",", "") for f in forms}
+        return sorted({f + p for f in forms for p in (".", "")})
 
     def chance(path, text):
         mel, _ = model._prepare_audio(str(path))
@@ -552,10 +724,14 @@ def hear(args):
     from mlx_audio.stt.utils import load_model
 
     words, raw, sounds = evened(args)
+    lang = LANGUAGES[lang_of(args.list)]["whisper"]
+    transcribe = getattr(args, "heard", True)  # `make` only scores, which is what picks use
     model = chance = None
     for src, have in sounds.items():
         heard_tsv, score_tsv = raw / src / "heard.tsv", raw / src / "score.tsv"
         heard_done, score_done = still_good(heard_tsv, have), still_good(score_tsv, have)
+        if not transcribe:
+            heard_done = set(have)
         right, heard_now, chances = 0, 0, []
         for kind, lemma, text, _ in words:
             stem = f"{kind}-{lemma}"
@@ -564,7 +740,7 @@ def hear(args):
             model = model or load_model(HEAR_MODEL)
             said = said_by(src, kind, lemma, text)
             if stem not in heard_done:
-                r = model.generate(str(have[stem]), language="de", verbose=None)  # None: no progress bar
+                r = model.generate(str(have[stem]), language=lang, verbose=None)  # None: no progress bar
                 heard = (r.text if hasattr(r, "text") else str(r)).strip()
                 same = bare(heard) == bare(said)
                 right += same
@@ -572,7 +748,7 @@ def hear(args):
                 append_log(heard_tsv, {"file": stem, "said": said, "heard": heard,
                                        "same": "yes" if same else "no", "model": HEAR_MODEL})
             if stem not in score_done:
-                chance = chance or whisper_chance(model)
+                chance = chance or whisper_chance(model, lang)
                 p = chance(have[stem], said)
                 chances.append(p)
                 append_log(score_tsv, {"file": stem, "said": said, "chance": f"{p:.4f}",
@@ -611,16 +787,51 @@ def whisper_picks(raw, words, sources):
     return ranked
 
 
-DOUBT = 0.5  # a pick Whisper gives less than this chance needs an ear
+DOUBT = 0.5  # the page marks a chance below this
+DOUBT_SURE = 0.8  # a pick less sure than this a piece needs an ear (`pick`)
 LISTEN_LIMITED = 4.0  # dB: the page flags sounds limited this much, to check by ear
 
 
-RETAKE_BELOW = 0.8  # a word whose pick has less chance gets more takes (`retake`)
 RETAKE_ENGINES = "qwen3-design,omnivoice"  # seeded (MLX), so each take differs
 
 
+def best_chance(ranked, stem):
+    return ranked[stem][0][0] if ranked.get(stem) else 0.0
+
+
+SURE = 0.9  # per piece (`sureness`): a text's best sound below this gets more work
+
+
+@functools.lru_cache(maxsize=None)
+def pieces(text):
+    """How many pieces (tokens) Whisper writes the text in, with its end."""
+    return len(whisper_tokenizer().encode(" " + text, add_special_tokens=False)) + 1
+
+
+@functools.lru_cache(maxsize=1)
+def whisper_tokenizer():
+    from huggingface_hub import snapshot_download
+    from transformers import AutoTokenizer
+
+    return AutoTokenizer.from_pretrained(snapshot_download(HEAR_MODEL, allow_patterns=["*.json", "*.txt"]))
+
+
+def sureness(chance, text):
+    """Whisper's chance per piece of the text (the geometric mean). A long
+    text's chance is spread over more pieces: a verb's three forms heard
+    exactly score about 45%, but 95% a piece. So gates compare this with
+    SURE; picks compare sounds of one text, where chance ranks the same."""
+    return chance ** (1 / pieces(text)) if chance > 0 else 0.0
+
+
+def some(items, n=20):
+    """At most n items for a message, and how many more there are."""
+    items = list(items)
+    return ", ".join(items[:n]) + (f" and {len(items) - n} more" if len(items) > n else "") or "none"
+
+
 def retake(args):
-    """For each word whose pick Whisper gives less than RETAKE_BELOW, makes
+    """For each text whose pick Whisper is less SURE of, makes
     more takes (seeds 1 to 1 + takes) with each engine named, into
     raw/<engine>/takes/<kind>-<lemma>~<seed>.wav (with log.tsv and
     score.tsv there), and makes the take Whisper is surest of that engine's
@@ -629,6 +840,7 @@ def retake(args):
     from mlx_audio.stt.utils import load_model
 
     raw = HERE / args.list / "raw"
+    lang = LANGUAGES[lang_of(args.list)]["whisper"]
     engines = args.engines.split(",")
     for e in engines:
         if ENGINES[e]["runner"] != "mlx":
@@ -638,24 +850,28 @@ def retake(args):
     hear(args)
     words = read_words(args.list, args.words)
     ranked = whisper_picks(raw, words, args.sources.split(","))
-    weak = [(k, l, t) for k, l, t, _ in words
-            if not ranked[f"{k}-{l}"] or ranked[f"{k}-{l}"][0][0] < RETAKE_BELOW]
-    print(f"{len(weak)} words picked below {RETAKE_BELOW:.0%}: "
-          + (", ".join(f"{t.rstrip('.')} ({ranked[f'{k}-{l}'][0][0]:.0%})" for k, l, t in weak) or "none"))
+    weak = [(k, l, t) for k, l, t, _ in words if sureness(best_chance(ranked, f"{k}-{l}"), t) < SURE]
+    print(f"{len(weak)} texts picked below {SURE:.0%} a piece: "
+          + some(f"{t.rstrip('.')} ({sureness(best_chance(ranked, f'{k}-{l}'), t):.0%})" for k, l, t in weak))
     if not weak:
         return
 
+    logs = {}  # engine: {main file name: log.tsv row}
+
+    def log_rows(e):
+        if e not in logs:
+            log = raw / e / "log.tsv"
+            logs[e] = {r["file"]: r for r in read_tsv(log)} if log.exists() else {}
+        return logs[e]
+
     def main_seed(e, stem):
-        log = raw / e / "log.tsv"
-        rows = {r["file"]: r for r in read_tsv(log)} if log.exists() else {}
-        return int(rows.get(f"{stem}.wav", {}).get("seed") or 1)
+        return int(log_rows(e).get(f"{stem}.wav", {}).get("seed") or 1)
 
     # Make the takes, one engine at a time (the models are large).
     for e in engines:
         takes = raw / e / "takes"
         takes.mkdir(parents=True, exist_ok=True)
-        log = raw / e / "log.tsv"
-        rows = {r["file"]: r for r in read_tsv(log)} if log.exists() else {}
+        rows = log_rows(e)
         todo = []
         for k, l, t in weak:
             stem = f"{k}-{l}"
@@ -671,52 +887,61 @@ def retake(args):
             continue
         print(f"{e}: {len(todo)} takes to make")
         synth, model, version = mlx_synth(ENGINES[e])
-        for k, l, t, s in todo:
+        for i, (k, l, t, s) in enumerate(todo, 1):
             path = takes / f"{k}-{l}~{s}.wav"
             start = time.time()
             synth(t, path, s)
             seconds, length = time.time() - start, wav_seconds(path)
-            print(f"  {t:<24} seed {s}: {seconds:4.1f} s to make, {length:4.2f} s long")
+            print(f"  {i}/{len(todo)} {t:<24} seed {s}: {seconds:4.1f} s to make, {length:4.2f} s long")
             append_log(takes / "log.tsv", made_row(path, k, l, t, e, model, version, s, seconds, length))
         del synth
         gc.collect()
 
     # Score every take, evened like the rest, and keep the best per engine.
-    chance = whisper_chance(load_model(HEAR_MODEL))
+    chance = whisper_chance(load_model(HEAR_MODEL), lang)
     for e in engines:
         takes, listen = raw / e / "takes", raw / "listen" / e / "takes"
         listen.mkdir(parents=True, exist_ok=True)
         score_tsv = takes / "score.tsv"
         got = {r["file"]: float(r["chance"]) for r in read_tsv(score_tsv)} if score_tsv.exists() else {}
         made = {r["file"]: r for r in read_tsv(takes / "log.tsv")} if (takes / "log.tsv").exists() else {}
+        promoted = {}
         for k, l, t in weak:
             stem = f"{k}-{l}"
-            for path in sorted(takes.glob(f"{stem}~*.wav")):
+            for path in sorted(takes.glob(f"{glob_escape(stem)}~*.wav")):
                 if path.stem not in got:
                     even(path, listen / path.name)
                     got[path.stem] = chance(listen / path.name, said_by(e, k, l, t))
                     append_log(score_tsv, {"file": path.stem, "said": t, "chance": f"{got[path.stem]:.4f}",
                                            "model": HEAR_MODEL})
-            mine = sorted(((c, int(f.rsplit("~", 1)[1])) for f, c in got.items() if f.startswith(stem + "~")),
-                          reverse=True)
+            mine = sorted(((got[f"{stem}~{s}"], s) for s in range(1, args.takes + 2)
+                           if f"{stem}~{s}" in got), reverse=True)
             if not mine:
                 continue
             (best, seed), was = mine[0], main_seed(e, stem)
             had = dict((s_, c_) for c_, s_ in mine).get(was, 0.0)
             if seed == was:
-                print(f"  {e} {l}: take {seed} stays ({best:.0%}); best of {len(mine)}")
+                print(f"  {e} {t.rstrip('.')}: take {seed} stays ({best:.0%}); best of {len(mine)}")
                 continue
             # A fresh copy (new time), so it is evened and scored again as the main sound.
             shutil.copyfile(takes / f"{stem}~{seed}.wav", raw / e / f"{stem}.wav")
+            if f"{stem}~{seed}.wav" in made:
+                promoted[f"{stem}.wav"] = {**made[f"{stem}~{seed}.wav"], "file": f"{stem}.wav"}
+            print(f"  {e} {t.rstrip('.')}: take {seed} ({best:.0%}) replaces take {was} ({had:.0%}); "
+                  f"best of {len(mine)}")
+        if promoted:  # the main sounds' log.tsv rows now give the seeds kept
             log = raw / e / "log.tsv"
-            rows = read_tsv(log)
-            rows = [({**made[f"{stem}~{seed}.wav"], "file": f"{stem}.wav"}
-                     if r["file"] == f"{stem}.wav" and f"{stem}~{seed}.wav" in made else r) for r in rows]
+            rows = [promoted.get(r["file"], r) for r in read_tsv(log)]
             log.unlink()
             for r in rows:
                 append_log(log, r)
-            print(f"  {e} {l}: take {seed} ({best:.0%}) replaces take {was} ({had:.0%}); best of {len(mine)}")
+            logs.pop(e, None)
     pick(args)
+
+
+def glob_escape(text):
+    """A file name as a glob pattern that matches only itself."""
+    return re.sub(r"([*?[])", r"[\1]", text)
 
 
 def pick(args):
@@ -733,16 +958,89 @@ def pick(args):
     for kind, lemma, text, _ in words:
         r = ranked[f"{kind}-{lemma}"] + [(0.0, "")] * 2
         (p, src), (p2, src2) = r[0], r[1]
+        sure = sureness(p, text)
         append_log(out, {"kind": kind, "lemma": lemma, "text": text, "source": src,
-                         "chance": f"{p:.4f}", "next": src2, "next chance": f"{p2:.4f}"})
+                         "chance": f"{p:.4f}", "sure": f"{sure:.4f}",
+                         "next": src2, "next chance": f"{p2:.4f}"})
         counts[src] = counts.get(src, 0) + 1
-        if p < DOUBT:
-            doubtful.append(f"{text.rstrip('.')} ({src} {p:.0%})")
+        if sure < DOUBT_SURE:
+            doubtful.append(f"{text.rstrip('.')} ({src} {sure:.0%} a piece)")
     print(f"from {args.sources}:")
     for src, n in sorted(counts.items(), key=lambda x: -x[1]):
         print(f"  {src or 'none'}: {n}")
-    print(f"{len(doubtful)} below {DOUBT:.0%}, to listen to: {', '.join(doubtful) or 'none'}")
+    print(f"{len(doubtful)} below {DOUBT_SURE:.0%} a piece, to listen to: {some(doubtful)}")
     print(f"wrote {out}")
+
+
+def make(args):
+    """A sound for every text of a language that has none yet. Each of the
+    language's voices (LANGUAGES) makes and scores every text, one voice
+    after another, and after each the picks and de/raw/sounds/ are brought up
+    to date, so the first voice's pass already gives every text a sound. Then
+    the texts whose pick Whisper is less SURE of get more takes. Stop it any
+    time; run it again and it carries on where it stopped."""
+    lang = args.list
+    if lang not in LANGUAGES or not (HERE / lang / "texts.tsv").exists():
+        sys.exit(f"{lang}: run `texts {lang}` first, and give it a LANGUAGES entry")
+    conf = LANGUAGES[lang]
+    words = read_words(lang, args.words)
+    started = time.time()
+
+    def pick_and_collect(sources):
+        pick(argparse.Namespace(list=lang, words=words, sources=",".join(sources), heard=False))
+        collect(argparse.Namespace(list=lang, words=words))
+
+    for i, engine in enumerate(conf["engines"]):
+        print(f"== {engine}: {len(words)} texts ({time.time() - started:.0f} s so far)", flush=True)
+        generate(argparse.Namespace(list=lang, engine=engine, words=words, seed=1))
+        gc.collect()  # let the voice model go before Whisper loads
+        hear(argparse.Namespace(list=lang, words=words, sources=engine, heard=False))
+        pick_and_collect(conf["engines"][:i + 1])
+    print(f"== retakes ({time.time() - started:.0f} s so far)", flush=True)
+    retake(argparse.Namespace(list=lang, words=words, engines=",".join(conf["retake"]),
+                              takes=args.takes, heard=False))
+    collect(argparse.Namespace(list=lang, words=words))
+    print(f"== done in {time.time() - started:.0f} s", flush=True)
+
+
+def collect(args):
+    """Copies each text's picked sound, evened, to raw/sounds/<stem>.wav and
+    writes raw/sounds.tsv: the file, the text as on the cards, what was said,
+    which voice and take, Whisper's chance, the license, and the quizzes."""
+    import filecmp
+
+    raw = HERE / args.list / "raw"
+    words = read_words(args.list, args.words)
+    texts_tsv = HERE / args.list / "texts.tsv"
+    original = {r["key"]: r["text"] for r in read_tsv(texts_tsv)} if texts_tsv.exists() else {}
+    picks = {f"{r['kind']}-{r['lemma']}": r for r in read_tsv(raw / "picks.tsv")}
+    seeds = {}
+    out = raw / "sounds"
+    out.mkdir(exist_ok=True)
+    rows, copied, missing = [], 0, []
+    for kind, lemma, text, quizzes in words:
+        stem = f"{kind}-{lemma}"
+        p = picks.get(stem)
+        if not p or not p["source"]:
+            missing.append(text.rstrip("."))
+            continue
+        src = raw / "listen" / p["source"] / f"{stem}.wav"
+        dst = out / f"{stem}.wav"
+        if not dst.exists() or not filecmp.cmp(src, dst, shallow=True):
+            shutil.copy2(src, dst)
+            copied += 1
+        if p["source"] not in seeds:
+            log = raw / p["source"] / "log.tsv"
+            seeds[p["source"]] = {r["file"]: r.get("seed", "") for r in read_tsv(log)} if log.exists() else {}
+        rows.append([dst.name, original.get(lemma, text.rstrip(".")), text, p["source"],
+                     seeds[p["source"]].get(f"{stem}.wav", ""), p["chance"], p.get("sure", ""),
+                     ENGINES.get(p["source"], {}).get("license", ""), quizzes])
+    with open(raw / "sounds.tsv", "w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f, delimiter="\t", lineterminator="\n")
+        w.writerow(["file", "text", "said", "voice", "seed", "chance", "sure", "license", "quizzes"])
+        w.writerows(rows)
+    print(f"{len(rows)} sounds in {out} ({copied} copied now); {len(missing)} texts without one: "
+          f"{some(missing)}")
 
 
 def page(args):
@@ -923,6 +1221,8 @@ def main():
     g.add_argument("engine", choices=ENGINES)
     g.add_argument("words")
     g.add_argument("seed", nargs="?", type=int, default=1)
+    t = sub.add_parser("texts")
+    t.add_argument("lang")
     w = sub.add_parser("wikimedia")
     w.add_argument("list")
     w.add_argument("words")
@@ -931,13 +1231,20 @@ def main():
         p.add_argument("list")
         p.add_argument("words")
         p.add_argument("sources", nargs="?", help="comma-separated; default: every source made")
+    m = sub.add_parser("make")
+    m.add_argument("list", help="a language with texts.tsv, e.g. de")
+    m.add_argument("words", nargs="?", default="all")
+    m.add_argument("takes", nargs="?", type=int, default=4, help="retakes beyond the first (default 4)")
+    c = sub.add_parser("collect")
+    c.add_argument("list")
+    c.add_argument("words", nargs="?", default="all")
     r = sub.add_parser("retake")
     r.add_argument("list")
     r.add_argument("words")
     r.add_argument("engines", nargs="?", default=RETAKE_ENGINES, help="comma-separated MLX engines")
     r.add_argument("takes", nargs="?", type=int, default=4, help="takes beyond the first (default 4)")
     args = ap.parse_args()
-    {"generate": generate, "wikimedia": wikimedia, "hear": hear, "pick": pick, "retake": retake,
+    {"generate": generate, "texts": texts, "wikimedia": wikimedia, "hear": hear, "pick": pick, "retake": retake, "make": make, "collect": collect,
      "page": page}[args.cmd](args)
 
 
