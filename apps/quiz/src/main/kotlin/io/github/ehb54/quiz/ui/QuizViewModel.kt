@@ -28,6 +28,7 @@ import io.github.ehb54.quiz.engine.Step
 import io.github.ehb54.quiz.engine.buildCatalog
 import io.github.ehb54.quiz.engine.cardsFromSheet
 import io.github.ehb54.quiz.engine.formatQzx
+import io.github.ehb54.quiz.engine.goOn
 import io.github.ehb54.quiz.engine.isXlsx
 import io.github.ehb54.quiz.engine.isZip
 import io.github.ehb54.quiz.engine.pairTiles
@@ -43,6 +44,8 @@ import io.github.ehb54.quiz.engine.sha256
 import io.github.ehb54.quiz.engine.startMatch
 import io.github.ehb54.quiz.engine.startPickSession
 import io.github.ehb54.quiz.engine.startSession
+import io.github.ehb54.quiz.engine.startSpeedRun
+import io.github.ehb54.quiz.engine.stopLevel
 import io.github.ehb54.quiz.engine.submitAnswer
 import io.github.ehb54.quiz.engine.unzip
 import io.github.ehb54.quiz.engine.writeZip
@@ -244,6 +247,7 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
         val session = when (quiz.settings.mode) {
             QuizMode.Typed -> startSession(quiz)
             QuizMode.Pick -> startPickSession(quiz)
+            QuizMode.Speed -> startSpeedRun(quiz)
             QuizMode.Match -> {
                 startMatching(quiz)
                 return
@@ -274,7 +278,12 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
         if (step.outcome == Outcome.Ignored) return
         val quizzes = state.quizzes.map { if (it.id == quiz.id) step.quiz else it }
         val next = step.session
-        if (next.finished) {
+        if (next.finished && next.speed != null) {
+            // Speed mode only ends here when its cards are gone.
+            _state.value = state.copy(quizzes = quizzes)
+            persist { store.saveQuiz(step.quiz) }
+            endSpeed()
+        } else if (next.finished) {
             val summary = Summary(
                 quizId = quiz.id,
                 total = next.total,
@@ -325,6 +334,34 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     fun hideAnswer() = _state.update { it.copy(revealed = false) }
+
+    // Speed mode
+
+    /** From the results between levels to the next level. */
+    fun continueSpeed() = changeSession(::goOn)
+
+    /**
+     * Stop in the middle of a level shows that level so far (Done then ends
+     * the run); on the results between levels, it ends the run at once.
+     */
+    fun stopSpeed() {
+        val speed = _state.value.session?.speed ?: return
+        if (speed.shown != null) endSpeed() else changeSession(::stopLevel)
+    }
+
+    /** Ends a speed run. Picks made are already saved, with no confusion penalty for a level left unfinished. */
+    fun endSpeed() {
+        val quizId = _state.value.session?.quizId ?: return
+        _state.update { it.copy(session = null, feedback = null, screen = Screen.QuizDetail(quizId)) }
+        persist { store.saveSession(null) }
+    }
+
+    private fun changeSession(change: (Session) -> Session) {
+        val session = _state.value.session ?: return
+        val next = change(session)
+        _state.update { it.copy(session = next, feedback = null) }
+        persist { store.saveSession(next) }
+    }
 
     // Matching
 

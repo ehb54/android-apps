@@ -144,12 +144,13 @@ fun CardImage(file: File, modifier: Modifier = Modifier, maxSide: Int = 1600) {
     }
 }
 
-/** "Type", "Pick" or "Match". */
+/** "Type", "Pick", "Match" or "Speed". */
 @StringRes
 fun modeLabel(mode: QuizMode) = when (mode) {
     QuizMode.Typed -> R.string.mode_type
     QuizMode.Pick -> R.string.mode_pick
     QuizMode.Match -> R.string.mode_match
+    QuizMode.Speed -> R.string.mode_speed
 }
 
 /**
@@ -222,5 +223,16 @@ fun SoundTileContent(file: File, number: Int) {
     Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
         SoundButton(file)
         Text(stringResource(R.string.sound_number, number), style = MaterialTheme.typography.titleMedium)
+    }
+}
+
+/** A card in a list of names: its prompt's text, else its answer's, else "Picture" or "Sound". */
+@Composable
+fun cardName(card: Card, direction: Direction): String {
+    val prompt = card.promptMedia(direction)
+    return when {
+        prompt == null && card.prompt(direction).isNotBlank() -> card.prompt(direction)
+        card.answerMedia(direction) == null && card.answer(direction).isNotBlank() -> card.answer(direction)
+        else -> stringResource(if (isSound(prompt)) R.string.sound else R.string.picture)
     }
 }

@@ -91,6 +91,7 @@
     <string name="mode_type">Type</string>
     <string name="mode_pick">Pick</string>
     <string name="mode_match">Match</string>
+    <string name="mode_speed">Speed</string>
     <string name="threshold">Threshold</string>
     <string name="timer">Timer</string>
     <string name="block_size">Pairs per block</string>
@@ -98,6 +99,7 @@
     <string name="timer_off">off</string>
     <string name="seconds">%1$d s</string>
     <string name="shuffle">Shuffle</string>
+    <string name="tighten">Tighten the time limit</string>
     <string name="range">Cards</string>
     <string name="range_from">from</string>
     <string name="range_to">to</string>
@@ -112,6 +114,16 @@
         <item quantity="one">Start (%d card due)</item>
         <item quantity="other">Start (%d cards due)</item>
     </plurals>
+    <!-- Speed mode's start button: the level a run starts at, and how many cards it asks there. -->
+    <plurals name="start_speed">
+        <item quantity="one">Start level %2$d (%1$d card)</item>
+        <item quantity="other">Start level %2$d (%1$d cards)</item>
+    </plurals>
+    <!-- A card's speed level and its latest time, in the card list. -->
+    <string name="speed_level_time">level %1$d · %2$.1f s</string>
+    <!-- The slowest cards on the quiz page in Speed mode: "Slowest: Q: 2.1 s · Y: 1.9 s". -->
+    <string name="slowest_line">Slowest: %1$s</string>
+    <string name="card_time">%1$s: %2$.1f s</string>
     <string name="nothing_due">No cards are due at this threshold.</string>
 
     <!-- Card editor -->
@@ -157,6 +169,25 @@
         <item quantity="one">Finish the quiz first: %d card to go.</item>
         <item quantity="other">Finish the quiz first: %d cards to go.</item>
     </plurals>
+
+    <!-- Speed mode -->
+    <string name="level_counter">Level %1$d</string>
+    <string name="stop">Stop</string>
+    <string name="stop_title">Stop speed practice?</string>
+    <string name="stop_text">Cards picked so far keep their speed levels, and starting again picks up where you stopped.</string>
+    <string name="keep_going">Keep going</string>
+    <string name="level_done">Level %1$d done</string>
+    <string name="level_stopped">Stopped in level %1$d</string>
+    <string name="level_answered">Picked %1$d of %2$d</string>
+    <string name="speed_average">Average %1$.1f s</string>
+    <string name="speed_average_was">Average %1$.1f s (level %2$d: %3$.1f s)</string>
+    <string name="speed_median">Median %1$.1f s</string>
+    <string name="speed_median_was">Median %1$.1f s (level %2$d: %3$.1f s)</string>
+    <string name="speed_range">Fastest %1$.1f s · slowest %2$.1f s</string>
+    <string name="speed_slowest">Slowest cards:</string>
+    <string name="speed_confused">Also marked missed, because you picked their answers for other cards:</string>
+    <string name="speed_limit">Time limit in level %1$d: %2$.1f s</string>
+    <string name="go_on">Go on to level %1$d</string>
 
     <!-- Done -->
     <string name="done_title">Done</string>

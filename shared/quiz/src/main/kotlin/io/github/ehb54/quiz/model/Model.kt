@@ -10,9 +10,10 @@ enum class Direction { AToB, BToA }
 /**
  * Typed: one card at a time, type the other side. Pick: one card at a time,
  * pick the other side from a few choices. Match: pair up tiles of side A and side B.
+ * Speed: picking without end, a level at a time, for speed of recognition.
  */
 @Serializable
-enum class QuizMode { Typed, Pick, Match }
+enum class QuizMode { Typed, Pick, Match, Speed }
 
 /**
  * One card's record for one direction, as in the original quiz program.
@@ -61,6 +62,12 @@ data class Card(
     /** Pick mode's own records, one per direction, kept apart for the same reason. */
     val statsPickAToB: Stats = Stats(),
     val statsPickBToA: Stats = Stats(),
+    /** Speed mode's own records, one per direction, kept apart since its levels rise in one sitting. */
+    val statsSpeedAToB: Stats = Stats(),
+    val statsSpeedBToA: Stats = Stats(),
+    /** Speed mode: the card's latest time to a right first pick, per direction; 0 before the first. */
+    val speedMillisAToB: Long = 0,
+    val speedMillisBToA: Long = 0,
 ) {
     fun prompt(direction: Direction) = if (direction == Direction.AToB) a else b
 
@@ -85,9 +92,19 @@ data class Card(
     fun withPickStats(direction: Direction, stats: Stats) =
         if (direction == Direction.AToB) copy(statsPickAToB = stats) else copy(statsPickBToA = stats)
 
+    fun speedStats(direction: Direction) = if (direction == Direction.AToB) statsSpeedAToB else statsSpeedBToA
+
+    fun withSpeedStats(direction: Direction, stats: Stats) =
+        if (direction == Direction.AToB) copy(statsSpeedAToB = stats) else copy(statsSpeedBToA = stats)
+
+    fun speedMillis(direction: Direction) = if (direction == Direction.AToB) speedMillisAToB else speedMillisBToA
+
+    fun withSpeedMillis(direction: Direction, millis: Long) =
+        if (direction == Direction.AToB) copy(speedMillisAToB = millis) else copy(speedMillisBToA = millis)
+
     /**
      * Whether [mode] can ask this card in [direction]. Typing needs a text answer. Picking
-     * and matching need both sides, but the answer can be a picture or a sound, since it is not typed.
+     * (Pick and Speed) and matching need both sides, but the answer can be a picture or a sound, since it is not typed.
      */
     fun canAsk(mode: QuizMode, direction: Direction) =
         if (mode == QuizMode.Typed) askable(direction) else matchable()
@@ -97,6 +114,7 @@ data class Card(
         QuizMode.Typed -> stats(direction).level
         QuizMode.Pick -> pickStats(direction).level
         QuizMode.Match -> statsMatch.level
+        QuizMode.Speed -> speedStats(direction).level
     }
 
     fun withoutStats() = copy(
@@ -105,6 +123,10 @@ data class Card(
         statsMatch = Stats(),
         statsPickAToB = Stats(),
         statsPickBToA = Stats(),
+        statsSpeedAToB = Stats(),
+        statsSpeedBToA = Stats(),
+        speedMillisAToB = 0,
+        speedMillisBToA = 0,
     )
 }
 
@@ -125,8 +147,10 @@ data class QuizSettings(
     val mode: QuizMode = QuizMode.Typed,
     /** Match mode: pairs on screen at a time. */
     val blockSize: Int = DEFAULT_BLOCK_SIZE,
-    /** Pick mode: choices per card, the right one included. */
+    /** Pick and Speed modes: choices per card, the right one included. */
     val choices: Int = DEFAULT_CHOICES,
+    /** Speed mode: each level's time limit follows the level before (see engine/Speed.kt). */
+    val tighten: Boolean = false,
 ) {
     val hasRange: Boolean get() = rangeFrom != null || rangeTo != null
 
@@ -232,6 +256,10 @@ data class Quiz(
                 statsMatch = old?.statsMatch ?: Stats(),
                 statsPickAToB = old?.statsPickAToB ?: Stats(),
                 statsPickBToA = old?.statsPickBToA ?: Stats(),
+                statsSpeedAToB = old?.statsSpeedAToB ?: Stats(),
+                statsSpeedBToA = old?.statsSpeedBToA ?: Stats(),
+                speedMillisAToB = old?.speedMillisAToB ?: 0,
+                speedMillisBToA = old?.speedMillisBToA ?: 0,
             )
         }
         return copy(

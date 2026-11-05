@@ -3,6 +3,7 @@ package io.github.ehb54.quiz.engine
 import io.github.ehb54.quiz.model.Card
 import io.github.ehb54.quiz.model.Direction
 import io.github.ehb54.quiz.model.Quiz
+import io.github.ehb54.quiz.model.Stats
 import kotlinx.serialization.Serializable
 import kotlin.random.Random
 
@@ -34,6 +35,9 @@ data class AnswerTimes(
  * [choices] instead of typed, a wrong choice is ruled out until the card is
  * answered, and the cards whose answers were picked wrongly get the confusion
  * penalty. Pick mode keeps its own statistics ([Card.pickStats]).
+ *
+ * In speed mode ([speed]) a session is one level of a run that does not end:
+ * when it is done, the next level starts (see engine/Speed.kt).
  */
 @Serializable
 data class Session(
@@ -61,11 +65,16 @@ data class Session(
     val ruledOut: Set<Long> = emptySet(),
     /** Pick mode: cards whose answer was picked for a different card, for the confusion penalty. */
     val wrongPicks: Set<Long> = emptySet(),
+    /** Speed mode: the run this session is a level of; null in other modes. */
+    val speed: SpeedLevel? = null,
 ) {
     val current: Long? get() = queue.firstOrNull()
     val finished: Boolean get() = queue.isEmpty()
     val remaining: Int get() = queue.size + retry.size
     val picking: Boolean get() = choiceCount > 0
+
+    /** The time limit for an answer, 0 for none: the timer, or in speed mode the level's limit. */
+    val limitMillis: Long get() = speed?.limitMillis ?: (timerSeconds * 1000L)
 }
 
 /** [Ignored]: a pick of a choice that is not on screen, or already ruled out. */
@@ -106,7 +115,7 @@ fun submitAnswer(quiz: Quiz, session: Session, typed: String, elapsedMillis: Lon
     val card = quiz.card(id) ?: return advance(quiz, session.copy(missesOnCurrent = 0), id, missed = false)
     val timed = session.copy(times = session.times.plus(elapsedMillis))
 
-    if (session.timerSeconds > 0 && elapsedMillis > session.timerSeconds * 1000L) {
+    if (session.limitMillis > 0 && elapsedMillis > session.limitMillis) {
         return Step(quiz, timed.missedOnce(), Outcome.TooSlow)
     }
     val direction = session.direction
@@ -140,7 +149,7 @@ fun pickAnswer(quiz: Quiz, session: Session, picked: Long, elapsedMillis: Long, 
     val card = quiz.card(id) ?: return advance(quiz, session.copy(missesOnCurrent = 0), id, missed = false, random)
     val timed = session.copy(times = session.times.plus(elapsedMillis))
 
-    if (session.timerSeconds > 0 && elapsedMillis > session.timerSeconds * 1000L) {
+    if (session.limitMillis > 0 && elapsedMillis > session.limitMillis) {
         return Step(quiz, timed.missedOnce(), Outcome.TooSlow)
     }
     if (picked != id) {
@@ -148,13 +157,25 @@ fun pickAnswer(quiz: Quiz, session: Session, picked: Long, elapsedMillis: Long, 
         return Step(quiz, wrong, Outcome.Wrong)
     }
 
-    val direction = session.direction
     val missed = session.missesOnCurrent > 0
-    val stats = card.pickStats(direction).let { if (missed) it.answeredAfterMiss() else it.answeredFirstTry() }
-    val updated = quiz.replaceCard(card.withPickStats(direction, stats))
-    val counted = if (!missed && session.round == 1) timed.copy(firstTry = timed.firstTry + 1) else timed
-    return advance(updated, counted.copy(missesOnCurrent = 0), id, missed, random)
+    val stats = card.picked(session).let { if (missed) it.answeredAfterMiss() else it.answeredFirstTry() }
+    var answered = card.withPicked(session, stats)
+    var counted = if (!missed && session.round == 1) timed.copy(firstTry = timed.firstTry + 1) else timed
+    // Speed mode times right first picks of the level's first round: the card's latest, and the level's.
+    val speed = session.speed
+    if (speed != null && !missed && session.round == 1) {
+        answered = answered.withSpeedMillis(session.direction, elapsedMillis)
+        counted = counted.copy(speed = speed.copy(times = speed.times + (id to elapsedMillis)))
+    }
+    return advance(quiz.replaceCard(answered), counted.copy(missesOnCurrent = 0), id, missed, random)
 }
+
+/** The record a pick goes to: speed mode's or pick mode's, in the session's direction. */
+private fun Card.picked(session: Session) =
+    if (session.speed != null) speedStats(session.direction) else pickStats(session.direction)
+
+private fun Card.withPicked(session: Session, stats: Stats) =
+    if (session.speed != null) withSpeedStats(session.direction, stats) else withPickStats(session.direction, stats)
 
 /**
  * The choices for [card]: its own answer and up to [count] - 1 other cards'
@@ -172,7 +193,7 @@ internal fun pickChoices(quiz: Quiz, card: Card, direction: Direction, count: In
 private fun answerKey(card: Card, direction: Direction) =
     card.answerMedia(direction)?.let { "file:$it" } ?: normalizeAnswer(card.answer(direction))
 
-private fun Session.withChoices(quiz: Quiz, random: Random): Session {
+internal fun Session.withChoices(quiz: Quiz, random: Random): Session {
     val card = current?.let(quiz::card) ?: return copy(choices = emptyList(), ruledOut = emptySet())
     return copy(choices = pickChoices(quiz, card, direction, choiceCount, random), ruledOut = emptySet())
 }
@@ -198,10 +219,12 @@ private fun advance(quiz: Quiz, session: Session, id: Long, missed: Boolean, ran
     }
     val penalized = confused.fold(quiz) { q, card ->
         if (next.picking) {
-            q.replaceCard(card.withPickStats(direction, card.pickStats(direction).confused()))
+            q.replaceCard(card.withPicked(next, card.picked(next).confused()))
         } else {
             q.replaceCard(card.withStats(direction, card.stats(direction).confused()))
         }
     }
+    // Speed mode never ends here: the next level follows.
+    if (next.speed != null) return Step(penalized, nextLevel(penalized, next, confused, random), Outcome.Right, confused)
     return Step(penalized, next, Outcome.Right, confused)
 }

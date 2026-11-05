@@ -26,9 +26,9 @@ import io.github.ehb54.quiz.R
  */
 private val ESCAPE_HATCH = BuildConfig.DEBUG
 
-/** "Round 2 · 5 left" in a running session's top bar (typed or match). */
+/** "Round 2 · 5 left" in a running session's top bar; in speed mode, "Level 3 · 5 left". */
 @Composable
-fun RoundCounter(round: Int, remaining: Int, onLeave: () -> Unit) {
+fun RoundCounter(round: Int, remaining: Int, onLeave: () -> Unit, level: Int? = null) {
     var confirmLeave by rememberSaveable { mutableStateOf(false) }
     if (confirmLeave) {
         AlertDialog(
@@ -52,7 +52,7 @@ fun RoundCounter(round: Int, remaining: Int, onLeave: () -> Unit) {
     Text(
         stringResource(
             R.string.two_parts,
-            stringResource(R.string.round, round),
+            if (level != null) stringResource(R.string.level_counter, level) else stringResource(R.string.round, round),
             pluralStringResource(R.plurals.cards_left, remaining, remaining),
         ),
         escape.padding(end = 16.dp),

@@ -123,9 +123,10 @@ fun QuizListScreen(
 fun cardsAndDue(quiz: Quiz): String {
     // What is due in each mode, Type and Pick both ways (→ A to B, ← B to A):
     // "14 cards · Type →14 ←3 · Pick →2 ←✓1 · Match ✓2". A mode or direction
-    // that no card can be asked in is left out.
+    // that no card can be asked in is left out. Speed has no due counts: its
+    // levels go up by themselves.
     val cards = pluralStringResource(R.plurals.card_count, quiz.cards.size, quiz.cards.size)
-    return QuizMode.entries.fold(cards) { line, mode ->
+    return QuizMode.entries.filter { it != QuizMode.Speed }.fold(cards) { line, mode ->
         val counts = if (mode == QuizMode.Match) {
             listOfNotNull(dueText(quiz.progress(mode)))
         } else {

@@ -47,8 +47,10 @@ private fun CurrentScreen(state: UiState, vm: QuizViewModel, snackbar: SnackbarH
         Screen.Asking -> {
             val session = state.session
             val quiz = state.quiz(session?.quizId)
+            val shown = session?.speed?.shown
             when {
                 session == null || quiz == null -> Unit
+                shown != null -> SpeedLevelScreen(quiz, session, shown, vm)
                 session.picking -> PickScreen(quiz, session, state.feedback, vm.mediaDir, snackbar, vm)
                 else -> AskingScreen(quiz, session, state.feedback, state.revealed, vm.mediaDir, snackbar, vm)
             }

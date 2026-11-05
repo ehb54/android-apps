@@ -49,6 +49,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import io.github.ehb54.quiz.R
+import io.github.ehb54.quiz.engine.speedCards
+import io.github.ehb54.quiz.engine.speedStartLevel
 import io.github.ehb54.quiz.model.Card
 import io.github.ehb54.quiz.model.Direction
 import io.github.ehb54.quiz.model.Quiz
@@ -126,8 +128,10 @@ fun QuizDetailScreen(quiz: Quiz, vm: QuizViewModel, snackbar: SnackbarHostState)
                 SessionSettings(quiz, onChange = { vm.updateSettings(quiz.id, it) }, onStart = { vm.startQuiz(quiz.id) })
                 HorizontalDivider()
             }
+            val speed = quiz.settings.mode == QuizMode.Speed
             itemsIndexed(quiz.cards, key = { _, card -> card.id }) { index, card ->
-                CardRow(index + 1, card, quiz.level(card), vm.mediaDir) { editing = card.id }
+                val millis = if (speed) card.speedMillis(quiz.settings.direction) else 0
+                CardRow(index + 1, card, quiz.level(card), millis, vm.mediaDir) { editing = card.id }
             }
             // Room to scroll the last card out from under the + button.
             item { Spacer(Modifier.height(88.dp)) }
@@ -187,11 +191,13 @@ private fun SessionSettings(quiz: Quiz, onChange: (QuizSettings) -> Unit, onStar
         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             // Each chip says how many cards are due for it (Type and Pick in the current
             // direction), or with none due, the level every card has reached ("✓2").
+            // Speed has no due count: its levels go up by themselves.
             QuizMode.entries.forEach { mode ->
+                val label = stringResource(modeLabel(mode))
                 FilterChip(
                     selected = settings.mode == mode,
                     onClick = { onChange(settings.copy(mode = mode)) },
-                    label = { Text(dueLabel(stringResource(modeLabel(mode)), quiz.progress(mode))) },
+                    label = { Text(if (mode == QuizMode.Speed) label else dueLabel(label, quiz.progress(mode))) },
                 )
             }
         }
@@ -205,7 +211,15 @@ private fun SessionSettings(quiz: Quiz, onChange: (QuizSettings) -> Unit, onStar
                     FilterChip(
                         selected = settings.direction == direction,
                         onClick = { onChange(settings.copy(direction = direction)) },
-                        label = { Text(dueLabel(label, quiz.progress(settings.mode, direction))) },
+                        label = {
+                            Text(
+                                if (settings.mode == QuizMode.Speed) {
+                                    label
+                                } else {
+                                    dueLabel(label, quiz.progress(settings.mode, direction))
+                                },
+                            )
+                        },
                     )
                 }
             }
@@ -218,12 +232,16 @@ private fun SessionSettings(quiz: Quiz, onChange: (QuizSettings) -> Unit, onStar
                 .reduce { line, part -> stringResource(R.string.two_parts, line, part) }
             Text(stringResource(R.string.levels_line, counts), style = MaterialTheme.typography.bodyMedium)
         }
-        Stepper(
-            stringResource(R.string.threshold),
-            settings.threshold,
-            thresholds,
-            settings.threshold.toString(),
-        ) { onChange(settings.copy(threshold = it)) }
+        if (settings.mode == QuizMode.Speed) {
+            SlowestCards(quiz)
+        } else {
+            Stepper(
+                stringResource(R.string.threshold),
+                settings.threshold,
+                thresholds,
+                settings.threshold.toString(),
+            ) { onChange(settings.copy(threshold = it)) }
+        }
         if (settings.mode == QuizMode.Match) {
             Stepper(
                 stringResource(R.string.block_size),
@@ -232,7 +250,7 @@ private fun SessionSettings(quiz: Quiz, onChange: (QuizSettings) -> Unit, onStar
                 settings.blockSize.toString(),
             ) { onChange(settings.copy(blockSize = it)) }
         } else {
-            if (settings.mode == QuizMode.Pick) {
+            if (settings.mode == QuizMode.Pick || settings.mode == QuizMode.Speed) {
                 Stepper(
                     stringResource(R.string.choices),
                     settings.choices,
@@ -251,17 +269,10 @@ private fun SessionSettings(quiz: Quiz, onChange: (QuizSettings) -> Unit, onStar
                 },
             ) { onChange(settings.copy(timerSeconds = it)) }
         }
-        Row(
-            Modifier.toggleable(
-                value = settings.shuffle,
-                role = Role.Switch,
-                onValueChange = { onChange(settings.copy(shuffle = it)) },
-            ),
-            verticalAlignment = Alignment.CenterVertically,
-        ) {
-            Text(stringResource(R.string.shuffle), Modifier.weight(1f))
-            Switch(checked = settings.shuffle, onCheckedChange = null)
+        if (settings.mode == QuizMode.Speed) {
+            Toggle(stringResource(R.string.tighten), settings.tighten) { onChange(settings.copy(tighten = it)) }
         }
+        Toggle(stringResource(R.string.shuffle), settings.shuffle) { onChange(settings.copy(shuffle = it)) }
         Stepper(
             stringResource(R.string.session_size),
             settings.sessionSize,
@@ -275,20 +286,59 @@ private fun SessionSettings(quiz: Quiz, onChange: (QuizSettings) -> Unit, onStar
                 onChange(settings.copy(rangeTo = it))
             }
         }
-        val asked = quiz.sessionCards().size
-        val due = quiz.due().size
-        Button(onClick = onStart, enabled = asked > 0, modifier = Modifier.fillMaxWidth()) {
-            Text(pluralStringResource(R.plurals.start_due, asked, asked))
-        }
-        if (asked < due) {
-            Text(
-                pluralStringResource(R.plurals.due_in_all, due, due),
-                Modifier.fillMaxWidth(),
-                style = MaterialTheme.typography.bodySmall,
-                textAlign = TextAlign.Center,
-            )
+        if (settings.mode == QuizMode.Speed) {
+            SpeedStart(quiz, onStart)
+        } else {
+            val asked = quiz.sessionCards().size
+            val due = quiz.due().size
+            Button(onClick = onStart, enabled = asked > 0, modifier = Modifier.fillMaxWidth()) {
+                Text(pluralStringResource(R.plurals.start_due, asked, asked))
+            }
+            if (asked < due) {
+                Text(
+                    pluralStringResource(R.plurals.due_in_all, due, due),
+                    Modifier.fillMaxWidth(),
+                    style = MaterialTheme.typography.bodySmall,
+                    textAlign = TextAlign.Center,
+                )
+            }
         }
     }
+}
+
+/** Speed mode's start button: the level a run starts at, and the cards below it ("Start level 3 (4 cards)"). */
+@Composable
+private fun SpeedStart(quiz: Quiz, onStart: () -> Unit) {
+    val level = quiz.speedStartLevel()
+    val asked = quiz.speedCards().count { it.speedStats(quiz.settings.direction).level < level }
+    Button(onClick = onStart, enabled = asked > 0, modifier = Modifier.fillMaxWidth()) {
+        Text(pluralStringResource(R.plurals.start_speed, asked, asked, level))
+    }
+}
+
+/** A setting that is on or off: its label, and a switch. */
+@Composable
+private fun Toggle(label: String, value: Boolean, onChange: (Boolean) -> Unit) {
+    Row(
+        Modifier.toggleable(value = value, role = Role.Switch, onValueChange = onChange),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Text(label, Modifier.weight(1f))
+        Switch(checked = value, onCheckedChange = null)
+    }
+}
+
+/** Speed mode: the run's three slowest cards by their latest times ("Slowest: Q: 2.1 s · Y: 1.9 s"). */
+@Composable
+private fun SlowestCards(quiz: Quiz) {
+    val direction = quiz.settings.direction
+    val slowest = quiz.speedCards().filter { it.speedMillis(direction) > 0 }
+        .sortedByDescending { it.speedMillis(direction) }
+        .take(3)
+    if (slowest.isEmpty()) return
+    val names = slowest.map { stringResource(R.string.card_time, cardName(it, direction), it.speedMillis(direction) / 1000.0) }
+        .reduce { line, part -> stringResource(R.string.two_parts, line, part) }
+    Text(stringResource(R.string.slowest_line, names), style = MaterialTheme.typography.bodyMedium)
 }
 
 @Composable
@@ -304,13 +354,22 @@ private fun NumberField(value: Int?, placeholder: String, @StringRes label: Int,
     )
 }
 
+/** One card in the list, with its level; in speed mode, also its latest time ([millis], 0 for none). */
 @Composable
-private fun CardRow(number: Int, card: Card, level: Int, mediaDir: File, onClick: () -> Unit) {
+private fun CardRow(number: Int, card: Card, level: Int, millis: Long, mediaDir: File, onClick: () -> Unit) {
     ListItem(
         leadingContent = { Text(number.toString(), style = MaterialTheme.typography.labelMedium) },
         headlineContent = { Side(card.a, card.mediaA, mediaDir) },
         supportingContent = { Side(card.b, card.mediaB, mediaDir) },
-        trailingContent = { Text(stringResource(R.string.level, level)) },
+        trailingContent = {
+            Text(
+                if (millis > 0) {
+                    stringResource(R.string.speed_level_time, level, millis / 1000.0)
+                } else {
+                    stringResource(R.string.level, level)
+                },
+            )
+        },
         modifier = Modifier.clickable(onClick = onClick),
     )
 }

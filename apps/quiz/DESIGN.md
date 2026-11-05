@@ -165,6 +165,40 @@ both, and `ui/PickScreen.kt`). Decisions made with eb:
   eight take four rows. Text choices keep the whole width, since long answers
   would wrap at half of it.
 
+## Speed mode
+
+The **Speed** chip (eb, 2026-11-05: "a pick mode that goes on forever until
+quit ... the goal here is speed of recognition"): picking as in Pick mode, a
+level at a time, until you stop (`engine/Speed.kt`, `ui/SpeedScreen.kt`).
+Decisions made with eb:
+
+- **Levels go up by themselves.** A run takes a fixed set of cards: the range,
+  or else the first *cards per session* cards. Level N asks those whose speed
+  level is below N, as Pick would with threshold N, with the same rules (a
+  wrong choice is ruled out, missed cards come back in rounds, confusion
+  penalty at the level's end). When a level is done, level N + 1 follows,
+  asking every card again. There is no threshold setting in this mode.
+- **Its own level per card**, one per direction (`statsSpeedAToB`,
+  `statsSpeedBToA`), since its levels rise many times in one sitting, plus
+  each card's latest time to a right first pick (`speedMillisAToB/BToA`). The
+  card list shows both ("level 3 · 1.2 s"), and the quiz page names the three
+  slowest cards. A new run starts one level above the lowest card, so it picks
+  up where the last one stopped. Pick's own levels are untouched.
+- **Between levels, a results screen**, so reading it is not timed: right first
+  time, misses, average and median time (with the level before's), fastest and
+  slowest, the three slowest cards, and cards marked missed by confusion. Times
+  are of right first picks in the level's first round. Then *Go on to level N*
+  or *Stop*.
+- **An exit**, unlike the other modes: *Stop* in the top bar shows the level
+  so far, and *Done* ends the run. Back asks first. Picks are saved as they
+  happen; a level left unfinished gets no confusion penalty.
+- **Speed is measured; pressure is optional.** The *Timer* setting limits
+  every level (too slow is a miss). *Tighten the time limit* makes each level's
+  limit 1.5 times the level before's median, rounded up to a tenth of a second,
+  never above the timer.
+- No due counts: the quiz list line leaves Speed out, and its chips show no
+  numbers.
+
 ## Sounds
 
 Added 2026-11-04 (eb: "keep separate for now. add support for sound"; see the
@@ -283,6 +317,7 @@ them unchanged (see CLAUDE.md, Desktop apps).
 | `shared/quiz`: `model/Model.kt` | `Card`, `Stats`, `Quiz`, `QuizSettings`: data and the level/due rules |
 | `shared/quiz`: `engine/Session.kt` | Session state machine: start, answer, show answer, rounds, confusion penalty; also pick mode |
 | `shared/quiz`: `engine/Match.kt` | Match sessions: blocks of tile pairs, rounds, scoring, fillers |
+| `shared/quiz`: `engine/Speed.kt` | Speed runs: levels, their results, the tightening time limit |
 | `shared/quiz`: `engine/Answers.kt` | Forgiving answer comparison |
 | `shared/quiz`: `engine/QuizFiles.kt` | `.qzx` and `.zip` reading and writing |
 | `shared/quiz`: `engine/Spreadsheet.kt` | `.xlsx` reading |
@@ -294,7 +329,7 @@ them unchanged (see CLAUDE.md, Desktop apps).
 | `apps/quiz`: `data/Images.kt` | Storing and loading pictures (Android's BitmapFactory; `desktop/quiz` has its own, with Skia) |
 | `apps/quiz`: `ui/SoundPlayer.kt` | Playing sounds (Android's media classes live here only; `desktop/quiz` has its own, with Java Sound) |
 | `apps/quiz`: `ui/QuizViewModel.kt` | Screen state; every change is saved on one disk thread, in order |
-| `apps/quiz`: `ui/*Screen.kt`, `ui/CardEditor.kt` | Compose screens |
+| `apps/quiz`: `ui/*Screen.kt`, `ui/CardEditor.kt` | Compose screens (`ui/SpeedScreen.kt`: Speed mode's results between levels) |
 | `desktop/quiz`: `Main.kt` | The desktop window; Escape is Back |
 | `apps/quiz/src/main/assets/samples/` | Samples built into the app (small; they work offline) |
 | `apps/quiz/samples/` | Online-only samples and `catalog.json`, which lists both kinds; published to the download site |

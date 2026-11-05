@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -22,11 +23,14 @@ import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableLongStateOf
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -50,7 +54,8 @@ private const val TILE_ABOVE = 4
  * Pick mode: one card's prompt (text, picture or sound) and a few choices from
  * the other side. A wrong choice is marked and can't be picked again; the card
  * stays until the right one is picked. A sound choice has a button to play it;
- * a tap elsewhere on it picks it. Back does not leave.
+ * a tap elsewhere on it picks it. Back does not leave, except in speed mode,
+ * which goes on until stopped: there Back asks whether to stop.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -62,7 +67,23 @@ fun PickScreen(
     snackbar: SnackbarHostState,
     vm: QuizViewModel,
 ) {
-    BackHandler(onBack = vm::backDuringQuiz)
+    val speed = session.speed
+    var confirmStop by rememberSaveable { mutableStateOf(false) }
+    BackHandler { if (speed != null) confirmStop = true else vm.backDuringQuiz() }
+    if (confirmStop) {
+        AlertDialog(
+            onDismissRequest = { confirmStop = false },
+            title = { Text(stringResource(R.string.stop_title)) },
+            text = { Text(stringResource(R.string.stop_text)) },
+            confirmButton = {
+                TextButton(onClick = {
+                    confirmStop = false
+                    vm.stopSpeed()
+                }) { Text(stringResource(R.string.stop)) }
+            },
+            dismissButton = { TextButton(onClick = { confirmStop = false }) { Text(stringResource(R.string.keep_going)) } },
+        )
+    }
     val card = session.current?.let(quiz::card) ?: return
     val direction = session.direction
     // The timer starts when the card shows, or when its sound has played.
@@ -75,7 +96,10 @@ fun PickScreen(
         topBar = {
             TopAppBar(
                 title = { Text(quiz.name, maxLines = 1, overflow = TextOverflow.Ellipsis) },
-                actions = { RoundCounter(session.round, session.remaining, vm::abandonSession) },
+                actions = {
+                    RoundCounter(session.round, session.remaining, vm::abandonSession, level = speed?.level)
+                    if (speed != null) TextButton(onClick = vm::stopSpeed) { Text(stringResource(R.string.stop)) }
+                },
             )
         },
         snackbarHost = { SnackbarHost(snackbar) },
