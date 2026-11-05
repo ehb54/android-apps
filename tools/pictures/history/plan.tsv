@@ -1,0 +1,1301 @@
+lemma	kind	picturable	prompt	note
+Armenier	noun	no		sensitive
+Gefecht	noun	no		violence; an event (near: Zusammenstoß, Seeschlacht)
+Geschwader	noun	no		duplicates Kriegsflotte
+Expedition	noun	no		abstract (an undertaking)
+Linienschiff	noun	no		duplicates Segelschiff
+Marine	noun	no		abstract (an institution)
+Einführung	noun	no		abstract
+Kongress	noun	no		a meeting; a room of people cannot be told from Konferenz, Komitee, Ausschuss
+Abbildung	noun	yes	an open book with cream pages, the right page filled by a large coloured drawing of a bird on a branch, the left page grey lines	near: Holzschnitt, Abbild, Nachbildung
+Kriegsschiff	noun	yes	a long grey steel warship with two big gun turrets on its deck and one funnel, cutting through blue waves	near: Kreuzer, Fregatte, Linienschiff, Handelsschiff
+Senat	noun	no		institution; men in togas in a hall read as Römer (near: Bundestag)
+Anzahl	noun	no		abstract (a quantity)
+Anwendung	noun	no		abstract
+Maßregel	noun	no		abstract
+Herstellung	noun	no		abstract (a process)
+Beitrag	noun	no		abstract
+Abschnitt	noun	no		abstract (part of a text)
+Reichskanzler	noun	no		office not shown by dress; a man in a suit reads as Staatsmann, Politiker
+Gründung	noun	no		abstract
+Periode	noun	no		time word
+Fregatte	noun	no		duplicates Segelschiff (a three-masted sailing ship either way)
+Altertum	noun	no		time word
+Ausdehnung	noun	no		abstract
+Eroberung	noun	no		abstract (an event)
+Division	noun	no		a military unit; a body of soldiers reads as soldiers
+Zivilisation	noun	no		abstract
+Gesetzgebung	noun	no		abstract
+Gewerkschaft	noun	no		abstract (an organisation)
+Verbesserung	noun	no		abstract
+Belagerung	noun	no		an event of war; soldiers before walls cannot be told from Blockade, Erstürmung
+Durchführung	noun	no		abstract
+Verstärkung	noun	no		abstract
+Buchdrucker	noun	no		duplicates Drucker
+Befestigung	noun	no		duplicates Fort
+Errichtung	noun	no		abstract
+Wirksamkeit	noun	no		abstract
+Patent	noun	no		abstract (a right; a document shows no content)
+Landung	noun	no		an event; boats at a beach cannot be told from Einschiffung
+Portugiese	noun	no		sensitive
+Islam	noun	no		sensitive
+Entstehung	noun	no		abstract
+Epoche	noun	no		time word
+Archiv	noun	scene	rows of tall grey metal shelves packed with brown cardboard boxes and thick dark-blue bound files, a wooden ladder leaning against them	near: Staatsarchiv, Magazin, Verzeichnis
+Missionar	noun	no		role not plain: a priest reads as Diakon or Jesuit; preaching to locals would need a stereotype
+Reform	noun	no		abstract
+Kriegführung	noun	no		abstract
+Unternehmer	noun	no		role not shown by dress (near: Arbeitgeber, Inhaber)
+Seemacht	noun	no		abstract
+Staatsmann	noun	no		role not shown by dress (near: Politiker)
+Arbeiterin	noun	yes	a young woman with dark hair under a red headscarf, a factory worker in blue overalls, holding a large wrench beside a machine	near: Techniker, Arbeitskraft, Arbeiterschaft
+Verbreitung	noun	no		abstract
+Artillerie	noun	no		collective (the gunnery arm); a gun alone reads as Kanone (near: Batterie)
+Botschafter	noun	no		role not shown by dress (near: Gesandte)
+Batterie	noun	no		a row of guns reads as cannons; the word reads as an electric battery
+Tendenz	noun	no		abstract
+Arbeitgeber	noun	no		relational
+Bundesgenosse	noun	no		relational
+Patrouille	noun	no		a few soldiers read as soldiers; cannot be told from Vorhut, Detachement
+Streitkraft	noun	no		abstract (armed forces)
+Konsulat	noun	no		an office; the building shows no plain difference
+Zeitgenosse	noun	no		relational
+Römer	noun	no		sensitive
+Gesetzbuch	noun	no		a book; its content cannot be shown
+Hellene	noun	no		sensitive
+Perser	noun	no		sensitive
+Munition	noun	no		general term; shows as Patrone
+Statut	noun	no		abstract
+Legion	noun	no		a body of soldiers reads as soldiers or Römer (near: Phalanx, Kolonne)
+Abhandlung	noun	no		writing; content cannot be shown
+Überlieferung	noun	no		abstract
+Agitation	noun	no		abstract
+Oberbefehl	noun	no		abstract
+Förderung	noun	no		abstract
+Generalversammlung	noun	no		a meeting; a hall of people cannot be told from Kongress, Konferenz
+Mongole	noun	no		sensitive
+Dynastie	noun	no		abstract
+Mehrheit	noun	no		abstract
+Regelung	noun	no		abstract
+Streik	noun	no		a picket with placards reads as Demonstration
+Heeresleitung	noun	no		abstract
+Reformation	noun	no		abstract (a religious movement)
+Niederlassung	noun	no		abstract (the act of settling, or a trading post); a few houses read as a village
+Krise	noun	no		abstract
+Abgabe	noun	no		abstract
+Annalen	noun	no		writing; content cannot be shown
+Buchhandel	noun	no		abstract (a trade); a bookshop reads as Buchhändler
+Seekrieg	noun	no		abstract (a war); a sea battle reads as Seeschlacht
+Schifffahrt	noun	no		abstract; a ship reads as Handelsschiff
+Bearbeitung	noun	no		abstract
+Erweiterung	noun	no		abstract
+Geschichtsschreiber	noun	no		role not plain: a man writing reads as Autor, Historiker, Chronist
+Zensur	noun	no		abstract
+Statthalter	noun	no		office not shown by dress
+Erzeugnis	noun	no		general term
+Nachteil	noun	no		abstract
+Arbeitszeit	noun	no		time word
+Privileg	noun	no		abstract
+Erhaltung	noun	no		abstract
+Produktion	noun	no		abstract
+Handelsschiff	noun	yes	a large cargo ship with a red hull stacked high with colourful shipping containers, sailing on a calm blue sea	near: Transportschiff, Seeschiff, Kriegsschiff
+Eingeborene	noun	no		sensitive
+Staatssekretär	noun	no		office not shown by dress
+Aufhebung	noun	no		abstract
+Fort	noun	yes	a frontier fort with a square wall of sharpened upright logs, a wooden lookout tower at each corner and a red flag on a pole	near: Befestigung, Stützpunkt
+Phalanx	noun	no		a body of soldiers reads as soldiers or Hellene (near: Legion, Kolonne)
+Halbinsel	noun	scene	seen from above, a long narrow strip of green land with sandy edges reaching out into a blue sea, joined to a larger land mass at one end	near: Festland, Vorgebirge, Kontinent
+Schaffung	noun	no		abstract
+Ausfuhr	noun	no		abstract
+Vorstand	noun	no		relational (an office or a board)
+Vertretung	noun	no		abstract
+Streitigkeit	noun	no		abstract; a quarrel shows as faces only
+Statistik	noun	no		abstract; a chart would be forced
+Holzschnitt	noun	no		a carved block reads as Stempel, a print as Abbildung
+Gesichtspunkt	noun	no		abstract
+Monarchie	noun	no		abstract
+Verteilung	noun	no		abstract
+Vermittlung	noun	no		abstract
+Physik	noun	no		abstract (a science)
+Auszug	noun	no		abstract (part of a text)
+Forschung	noun	no		abstract; a scientist reads as Forscher
+Offensive	noun	no		abstract
+Einfuhr	noun	no		abstract
+Einigung	noun	no		abstract
+Gouvernement	noun	no		abstract (an administrative area)
+Unterwerfung	noun	no		abstract
+Brauerei	noun	scene	inside a brewery: two huge shiny copper brewing kettles joined by pipes, with a stack of wooden beer barrels beside them	
+Begründung	noun	no		abstract
+Transport	noun	no		abstract; vehicles read as Verkehrsmittel
+Bündnis	noun	no		abstract
+Erfinder	noun	no		role not plain: a man with a gadget reads as Techniker, Physiker, Forscher
+Beseitigung	noun	no		abstract
+Einwirkung	noun	no		abstract
+Nationalversammlung	noun	no		institution; a chamber cannot be told from Bundestag, Landtag
+Zensor	noun	no		office not shown by dress
+Buchdruckerkunst	noun	no		abstract (an art); a press reads as Drucker
+Besetzung	noun	no		abstract
+Geistlichkeit	noun	no		collective; a priest reads as Diakon, Priesterschaft
+Konstruktion	noun	no		abstract
+Verordnung	noun	no		abstract
+Festland	noun	no		relational (land as opposed to islands); a coast reads as Halbinsel, Kontinent
+Kommune	noun	no		abstract
+Zollverein	noun	no		abstract
+Zunahme	noun	no		abstract
+Landgraf	noun	no		rank not shown by dress (near: Marquis, Erzherzog)
+Beteiligung	noun	no		abstract
+Seeherrschaft	noun	no		abstract
+Komitee	noun	no		a meeting; people around a table cannot be told from Konferenz, Ausschuss
+Dampfmaschine	noun	yes	an old stationary steam engine: a black iron boiler, a brass cylinder with a piston rod and a large spoked flywheel, a puff of grey steam	near: Motor, Dampfkraft
+Verständigung	noun	no		abstract
+Entwurf	noun	no		abstract (a draft text)
+Beschränkung	noun	no		abstract
+Ermordung	noun	no		sensitive
+Gestaltung	noun	no		abstract
+Übergabe	noun	no		abstract (an event)
+Denkschrift	noun	no		writing; content cannot be shown
+Seemeile	noun	no		measure
+Kaiserzeit	noun	no		time word
+Übersicht	noun	no		abstract
+Befehlshaber	noun	no		rank not shown by dress (near: Oberbefehlshaber)
+Zentrum	noun	no		relational
+Mitwirkung	noun	no		abstract
+Bundestag	noun	no		institution; a chamber cannot be told from Landtag, Nationalversammlung
+Stützpunkt	noun	no		abstract (a role of a place); a fort reads as Fort
+Aufschwung	noun	no		abstract
+Vermehrung	noun	no		abstract
+Vorhut	noun	no		relational (the front part of an army)
+Druckerei	noun	no		a print shop reads as Drucker (the press, or the man at it)
+Drucker	noun	scene	a middle-aged man with a bushy brown beard and a leather apron pulling the long lever of an old wooden printing press	near: Buchdrucker, Druckerei
+Wahlrecht	noun	no		abstract
+Buchhändler	noun	scene	an older man with grey hair and round glasses, a bookseller behind a shop counter, handing a book to a young woman with a red ponytail, full bookshelves behind	near: Buchhandel, Verlagshandlung
+Gesamtheit	noun	no		abstract
+Taktik	noun	no		abstract
+Verpflegung	noun	no		abstract (the feeding of troops); food reads as Nahrungsmittel, Proviant
+Abschaffung	noun	no		abstract
+Erwerbung	noun	no		abstract
+Sicherung	noun	no		abstract
+Sklavenhandel	noun	no		sensitive
+Gesandtschaft	noun	no		abstract
+Abendland	noun	no		abstract (a cultural region)
+Hebung	noun	no		abstract (a levy)
+Opposition	noun	no		abstract
+Denker	noun	no		role not plain; a pondering pose shows a state, and recalls a famous statue
+Distrikt	noun	no		abstract (an area)
+Tonne	noun	no		measure
+Abstimmung	noun	scene	a grey-haired old man, a young woman with a blond bob and a bald middle-aged man seated in a row, all raising their right hands high	near: Stimmrecht, Wahlrecht, Mehrheit
+Zusammenstoß	noun	no		violence; an event (near: Gefecht, Nahkampf)
+Hauptquartier	noun	no		abstract (a role of a place)
+Anschluss	noun	no		abstract
+Zusatz	noun	no		abstract
+Demokratie	noun	no		abstract
+Unabhängigkeit	noun	no		abstract
+Anhang	noun	no		abstract
+Serie	noun	no		abstract
+Ausnutzung	noun	no		abstract
+Hilfsmittel	noun	no		general term
+Ausrüstung	noun	no		general term; shows only the single items
+Waffenstillstand	noun	no		abstract
+Kolonne	noun	no		a body of soldiers reads as soldiers; cannot be told from Vormarsch, Kriegszug
+Jahrbuch	noun	no		a book; content cannot be shown
+Aktion	noun	no		abstract
+Kelte	noun	no		sensitive
+Athener	noun	no		sensitive
+Germane	noun	no		sensitive
+Antike	noun	no		time word
+Zusammensetzung	noun	no		abstract
+Friedensverhandlung	noun	no		abstract; people at a table cannot be told from Konferenz
+Beurteilung	noun	no		abstract
+Befugnis	noun	no		abstract
+Historiker	noun	no		role not plain: a man writing reads as Autor, Chronist
+Handbuch	noun	no		a book; content cannot be shown
+Leistungsfähigkeit	noun	no		abstract
+Theologie	noun	no		abstract
+Ableitung	noun	no		abstract
+Genehmigung	noun	no		abstract (a document shows no content)
+Teilung	noun	no		abstract
+Ergänzung	noun	no		abstract
+Bekämpfung	noun	no		abstract
+Ausschuss	noun	no		a meeting; people around a table cannot be told from Komitee, Konferenz
+Übernahme	noun	no		abstract
+Aufstellung	noun	no		abstract
+Orient	noun	no		abstract (a region); would need a stereotype
+Einwanderung	noun	no		abstract (an event)
+Übereinstimmung	noun	no		abstract
+Subsidie	noun	no		abstract
+Mündung	noun	scene	seen from above, a winding blue river widening between green banks and sandy shores as it flows out into the open sea	near: Golf, Meerenge
+Kodex	noun	no		an old book cannot be told from Band, Handbuch
+Aufrechterhaltung	noun	no		abstract
+Geschoss	noun	no		general term; a bullet reads as Patrone
+Vorrede	noun	no		abstract (part of a text)
+Gesamtzahl	noun	no		abstract
+Genossenschaft	noun	no		abstract
+Faktor	noun	no		abstract
+Herausgeber	noun	no		role not shown
+Zufuhr	noun	no		abstract
+Zusammenstellung	noun	no		abstract
+Mutterland	noun	no		relational
+Tabelle	noun	yes	a pale yellow sheet of paper with a ruled grid of rows and columns, the top row shaded blue, every cell holding a short grey dash	near: Statistik, Verzeichnis
+Inder	noun	no		sensitive
+Kriegsmaterial	noun	no		general term
+Kontingent	noun	no		abstract
+Handelspolitik	noun	no		abstract
+Gallier	noun	no		sensitive
+Bourgeoisie	noun	no		abstract (a class); would need a stereotype
+Herausgabe	noun	no		abstract
+Sozialist	noun	no		abstract (a conviction); would need a stereotype
+Königtum	noun	no		abstract
+Wiederherstellung	noun	no		abstract
+Plebejer	noun	no		class not shown; a man in a tunic reads as Römer
+Maschinengewehr	noun	yes	an old heavy machine gun on a low tripod, a long belt of brass cartridges feeding into its side	near: Patrone, Artillerie
+Thronbesteigung	noun	no		an event; a crowned man on a throne reads as Monarch
+Zauberei	noun	no		an activity; a wizard reads as Zauberer, a wand as Zauberstab
+Ackerbau	noun	no		abstract (a branch of farming); a ploughing man reads as Ackerbauer
+Vormarsch	noun	no		abstract (a movement)
+Landrecht	noun	no		abstract
+Zeitraum	noun	no		time word
+Miliz	noun	no		a body of armed men reads as soldiers
+Beschießung	noun	no		violence; an event (near: Bombardement, Artilleriefeuer)
+Umgestaltung	noun	no		abstract
+Festsetzung	noun	no		abstract
+Instruktion	noun	no		abstract
+Barbar	noun	no		sensitive
+Unterhandlung	noun	no		abstract
+Kabel	noun	yes	a thick black cable wound in several loose loops, one cut end showing shiny copper wires	near: Röhre, Telegraf
+Verwirklichung	noun	no		abstract
+Arbeitskraft	noun	no		abstract
+Veröffentlichung	noun	no		abstract
+Seehandel	noun	no		abstract
+Einteilung	noun	no		abstract
+Reliquie	noun	no		sensitive
+Hinrichtung	noun	no		sensitive
+Blockade	noun	no		an event; ships in a line read as Kriegsflotte
+Synode	noun	no		institution; bishops in session cannot be told from Konzil
+Entdecker	noun	no		role not plain: an explorer reads as Forscher, Kolonist
+Übergewicht	noun	no		abstract
+Rechtswissenschaft	noun	no		abstract
+Geschichtsschreibung	noun	no		abstract
+Einstellung	noun	no		abstract
+Biographie	noun	no		writing; content cannot be shown
+Jahresbericht	noun	no		writing; content cannot be shown
+Schwerpunkt	noun	no		abstract
+Abmarsch	noun	no		abstract (a movement)
+Missbrauch	noun	no		abstract
+Achse	noun	no		abstract (a line of rotation)
+Autor	noun	no		role not plain: a man writing reads as Historiker, Poet, Übersetzer
+Kriegsschauplatz	noun	no		abstract
+Konferenz	noun	no		a meeting; people around a table cannot be told from Kongress, Komitee, Ausschuss
+Oberbefehlshaber	noun	no		rank not shown by dress (near: Befehlshaber)
+Beilage	noun	no		abstract
+Gros	noun	no		abstract
+Kaliber	noun	no		measure
+Ansiedlung	noun	no		abstract (the act of settling; near: Niederlassung)
+Abkommen	noun	no		abstract
+Verzeichnis	noun	no		writing; content cannot be shown
+Steigerung	noun	no		abstract
+Benennung	noun	no		abstract
+Erhöhung	noun	no		abstract
+Bedarf	noun	no		abstract
+Broschüre	noun	yes	a thin stapled booklet with a soft bright blue paper cover patterned with orange circles, lying slightly open	near: Journal, Rundschreiben, Band
+Augenzeuge	noun	no		relational
+Urheber	noun	no		relational
+Durchmesser	noun	no		measure
+Beförderung	noun	no		abstract
+Landtag	noun	no		institution; a chamber cannot be told from Bundestag, Nationalversammlung
+Reibung	noun	no		abstract
+Gesandte	noun	no		role not shown by dress (near: Botschafter)
+Entschädigung	noun	no		abstract
+Kolonisation	noun	no		abstract
+Beendigung	noun	no		abstract
+Erlass	noun	no		abstract (a document shows no content)
+Vorrichtung	noun	no		general term
+Ortsname	noun	no		abstract
+Arbeiterbewegung	noun	no		abstract
+Ostküste	noun	no		relational (a direction)
+Unterdrückung	noun	no		abstract
+Kreuzzug	noun	no		an event (a war); a knight with a cross reads as Kreuzfahrer
+Einsetzung	noun	no		abstract
+Vereinbarung	noun	no		abstract
+Gemeinwesen	noun	no		abstract
+Ultimatum	noun	no		abstract
+Berücksichtigung	noun	no		abstract
+Westküste	noun	no		relational (a direction)
+Vorwort	noun	no		abstract (part of a text)
+Zulassung	noun	no		abstract
+Marquis	noun	no		rank not shown by dress
+Nationalität	noun	no		abstract
+Neutralität	noun	no		abstract
+Abzug	noun	no		abstract (a movement)
+Bestandteil	noun	no		abstract
+Rohstoff	noun	no		general term
+Zusammenfassung	noun	no		abstract
+Vorstoß	noun	no		abstract (a movement)
+Hegemonie	noun	no		abstract
+Ausbau	noun	no		abstract
+Vorläufer	noun	no		relational
+Erreichung	noun	no		abstract
+Stimmrecht	noun	no		abstract
+Verminderung	noun	no		abstract
+Finanzen	noun	no		abstract
+Propaganda	noun	no		abstract
+Kriegserklärung	noun	no		abstract
+Typ	noun	no		abstract
+Journal	noun	no		abstract (a periodical; the kind of publication is not visible)
+Zeitabschnitt	noun	no		time word
+Beitritt	noun	no		abstract
+Seeschlacht	noun	scene	two old wooden warships with brown hulls and cream sails firing cannons at each other on a blue sea, grey smoke between them	near: Seekrieg, Gefecht, Kriegsschiff, Kriegsflotte
+Brigade	noun	no		abstract (military unit)
+Beschaffung	noun	no		abstract
+Vertreibung	noun	no		abstract
+Minderheit	noun	no		abstract
+Vorzeit	noun	no		time word
+Einschränkung	noun	no		abstract
+Deckung	noun	no		abstract
+Bundesrat	noun	no		abstract (institution)
+Bewaffnung	noun	no		abstract
+Erbfolgekrieg	noun	no		abstract
+Ansiedler	noun	no		role has no plain sign (a settler looks like Farmer)
+Ausübung	noun	no		abstract
+Ertrag	noun	no		abstract
+Verschiedenheit	noun	no		abstract
+Monopol	noun	no		abstract
+Koalition	noun	no		abstract
+Verlagshandlung	noun	no		abstract (a business)
+Initiative	noun	no		abstract
+Lieferung	noun	no		abstract
+Bauart	noun	no		abstract
+Handgranate	noun	yes	a single old stick hand grenade on its own: a dark green metal cylinder on a long brown wooden handle	near: Bombe, Geschoss, Munition, Patrone, Torpedo
+Beschaffenheit	noun	no		abstract
+Petition	noun	no		abstract (a document)
+Renaissance	noun	no		time word
+Grundgedanke	noun	no		abstract
+Gewinnung	noun	no		abstract
+Kulturgeschichte	noun	no		abstract
+Bürgerkrieg	noun	no		abstract
+Berufung	noun	no		abstract
+Täufer	noun	no		sensitive
+Golf	noun	scene	a wide curved bay of blue sea reaching deep into green land, seen from high above, open sea at its mouth	near: Meerenge, Halbinsel, Vorgebirge, Reede, Mündung
+Verfall	noun	no		abstract
+Etat	noun	no		abstract
+Übertragung	noun	no		abstract
+Hauptwerk	noun	no		abstract
+Disziplin	noun	no		abstract
+Ernennung	noun	no		abstract
+Unzucht	noun	no		sensitive
+Söldner	noun	no		role has no plain sign (a paid soldier looks like any soldier)
+Erforschung	noun	no		abstract
+Handelsverkehr	noun	no		abstract
+Admiralität	noun	no		abstract (institution)
+Flugzeug	noun	yes	an old green propeller airplane with one engine and two wings flying, side view	near: Flieger, Motor
+Auslieferung	noun	no		abstract
+Neuzeit	noun	no		time word
+Symbolik	noun	no		abstract
+Patrizier	noun	no		role has no plain sign
+Kommunismus	noun	no		abstract
+Südosten	noun	no		abstract (direction)
+Abdruck	noun	no		abstract (a printed copy)
+Dominikaner	noun	no		role has no plain sign (the order is not plain; looks like any monk)
+Herabsetzung	noun	no		abstract
+Kolonist	noun	no		role has no plain sign (a colonist looks like Farmer)
+Schiedsgericht	noun	no		abstract
+Nachweis	noun	no		abstract
+Abtretung	noun	no		abstract
+Funktion	noun	no		abstract
+Erkundung	noun	no		abstract
+Gründer	noun	no		relational
+Astronomie	noun	no		duplicates Astronom
+Physiker	noun	no		role has no plain sign
+Ausbeutung	noun	no		abstract
+Welthandel	noun	no		abstract
+Jesuit	noun	no		role has no plain sign (looks like any priest)
+Oberhoheit	noun	no		abstract
+Vordergrund	noun	no		relational
+Sultan	noun	no		sensitive (needs a stereotype to be recognized)
+Schützengraben	noun	scene	a deep zigzag trench dug into brown muddy ground, its walls lined with sandbags and wooden planks, barbed wire along the top edge	near: Unterstand, Westfront, Verteidigungslinie, Befestigung
+Alphabet	noun	no		needs letters
+Arbeiterschaft	noun	no		abstract
+Phase	noun	no		abstract
+Räumung	noun	no		abstract
+Denkwürdigkeit	noun	no		abstract
+Analogie	noun	no		abstract
+Grundbesitz	noun	no		abstract
+Jahrgang	noun	no		abstract
+Ausgleichung	noun	no		abstract
+Erzherzog	noun	no		role has no plain sign
+Abweichung	noun	no		abstract
+Anleihe	noun	no		abstract
+Laie	noun	no		relational
+Nachahmung	noun	no		abstract
+Erwähnung	noun	no		abstract (speech)
+Zählung	noun	no		abstract
+Farmer	noun	yes	a man with sandy hair and a sunburnt face, a farmer in a wide straw hat, checked shirt and blue dungarees, holding a pitchfork	near: Ackerbauer, Ansiedler, Kolonist, Viehzucht
+Kriegsminister	noun	no		role has no plain sign
+Hebel	noun	scene	a man with short black hair pressing down on one end of a long wooden pole resting on a small stone, lifting a heavy grey boulder at the other end	near: Kurbel, Vorrichtung; sense lever per gloss
+Abschrift	noun	no		abstract (a copied text)
+Friedensvertrag	noun	no		abstract
+Südwesten	noun	no		abstract (direction)
+Bundesstaat	noun	no		abstract
+Rechtspflege	noun	no		abstract
+Hinterland	noun	no		relational
+Ethik	noun	no		abstract
+Vervollkommnung	noun	no		abstract
+Generalgouverneur	noun	no		role has no plain sign
+Milliarde	noun	no		measure
+Nordosten	noun	no		abstract (direction)
+Farm	noun	scene	a farm seen from outside: a farmhouse, a large red barn and a tall silo among fenced green fields, no people and no animals	near: Grundstück, Grundbesitz, Viehzucht
+Ausgangspunkt	noun	no		abstract
+Erzeugung	noun	no		abstract
+Anarchie	noun	no		abstract
+Geldmittel	noun	no		abstract
+Kategorie	noun	no		abstract
+Personal	noun	no		relational
+Rückgang	noun	no		abstract
+Kultus	noun	no		sensitive
+Sold	noun	no		abstract (pay; a picture shows only money)
+Entsendung	noun	no		abstract
+Deserteur	noun	no		role has no plain sign
+Umwälzung	noun	no		abstract
+Abhängigkeit	noun	no		abstract
+Invasion	noun	no		abstract
+Nordwesten	noun	no		abstract (direction)
+Unterstand	noun	no		duplicates Schützengraben
+Niederwerfung	noun	no		abstract
+Auslegung	noun	no		abstract
+Seeverkehr	noun	no		abstract
+Pressefreiheit	noun	no		abstract
+Beiname	noun	no		abstract (a name)
+Briefwechsel	noun	no		abstract
+Gliederung	noun	no		abstract
+Meerenge	noun	scene	a narrow channel of blue sea between two large green coasts, seen from high above, the sea opening wide at both ends	near: Golf, Durchfahrt, Mündung, Halbinsel
+Imperium	noun	no		abstract
+Abnahme	noun	no		abstract
+Feststellung	noun	no		abstract
+Plastik	noun	yes	a dark bronze sculpture of a standing young man with curly hair in a draped robe, on a square grey stone pedestal	near: Abbild, Nachbildung, Ornament; sense sculpture per gloss
+Zersplitterung	noun	no		abstract
+Sklaverei	noun	no		sensitive
+Vorarbeit	noun	no		abstract
+Plünderung	noun	no		abstract
+Wegnahme	noun	no		abstract
+Kontrolle	noun	no		abstract
+Substanz	noun	no		abstract
+Unterscheidung	noun	no		abstract
+Ritterschaft	noun	no		abstract
+Stifter	noun	no		relational
+Südküste	noun	no		abstract (direction; any coast)
+Unterhaus	noun	no		abstract (institution)
+Fabrikat	noun	no		abstract
+Sektion	noun	no		abstract
+Abendmahl	noun	no		sensitive
+Mechanismus	noun	no		abstract
+Kriegsflotte	noun	scene	a fleet of many grey steel warships with gun turrets and funnels sailing in a long line across a blue sea	near: Geschwader, Marine, Kriegsschiff, Seemacht
+Volksgeist	noun	no		abstract
+Defensive	noun	no		abstract
+Rekrut	noun	no		role has no plain sign
+Verschmelzung	noun	no		abstract
+Verschiebung	noun	no		abstract
+Getreide	noun	yes	a bundle of ripe golden wheat and barley stalks with full grain heads, beside a small heap of loose golden grain	near: Nahrungsmittel, Proviant, Ackerbau, Ertrag
+Vorkehrung	noun	no		abstract
+Formation	noun	no		abstract
+Architektur	noun	no		abstract
+Einzelstaat	noun	no		abstract
+Fakultät	noun	no		abstract
+Mannigfaltigkeit	noun	no		abstract
+Machtstellung	noun	no		abstract
+Herbeiführung	noun	no		abstract
+Abgang	noun	no		abstract
+Intervention	noun	no		abstract
+Ausschreitung	noun	no		abstract
+Abfall	noun	no		abstract
+Bedrohung	noun	no		abstract
+Attentat	noun	no		sensitive
+Eigentümlichkeit	noun	no		abstract
+Auswanderung	noun	no		abstract (not told apart from Einwanderung)
+Wirtschaftsleben	noun	no		abstract
+Hauptteil	noun	no		abstract
+Patriarch	noun	no		sensitive
+Epos	noun	no		abstract
+Abmessung	noun	no		measure
+Liberalismus	noun	no		abstract
+Korporation	noun	no		abstract
+Ausleger	noun	no		role has no plain sign
+Kriegszustand	noun	no		abstract
+Reaktion	noun	no		abstract
+Nachtrag	noun	no		abstract
+Terrain	noun	no		abstract (any landscape)
+Sekte	noun	no		abstract
+Baumwolle	noun	yes	a branch of a cotton plant with dark green leaves and several open brown seed pods full of fluffy cream-coloured cotton	near: Rohstoff, Weberei
+Kronprinz	noun	no		role has no plain sign (looks like Monarch)
+Rückblick	noun	no		abstract
+Völkerrecht	noun	no		abstract
+Gerichtsbarkeit	noun	no		abstract
+Erbrecht	noun	no		abstract
+Telegraf	noun	yes	an old brass Morse telegraph apparatus on a polished wooden base, with a tapping arm and black knob, a coil and trailing wires	near: Telegraphie, Kabel
+Dampfkraft	noun	no		duplicates Dampfmaschine
+Detachement	noun	no		abstract (military unit)
+Vorsitz	noun	no		abstract
+Metaphysik	noun	no		abstract
+Konzil	noun	no		abstract
+Eroberer	noun	no		role has no plain sign
+Wettbewerb	noun	no		abstract
+Verlegung	noun	no		abstract
+Friedensbedingung	noun	no		abstract
+Transportschiff	noun	no		duplicates Handelsschiff
+Abfassung	noun	no		abstract
+Naturwissenschaft	noun	no		abstract
+Beschlagnahme	noun	no		abstract
+Abänderung	noun	no		abstract
+Zahlung	noun	no		abstract
+Flieger	noun	yes	a man with a brown moustache, an early aviator in a brown leather flying cap with goggles pushed up, leather jacket and red scarf, no aircraft	near: Flugzeug, Kapitänleutnant; sense aviator per gloss
+Aristokratie	noun	no		abstract
+Fragment	noun	no		abstract
+Kapitänleutnant	noun	no		role has no plain sign (a rank)
+Berichtigung	noun	no		abstract
+Handelsvertrag	noun	no		abstract
+Großindustrie	noun	no		abstract
+Hauptsitz	noun	no		abstract
+Protestantismus	noun	no		abstract
+Oberherrschaft	noun	no		abstract
+Einschiffung	noun	no		abstract
+Grundzug	noun	no		abstract
+Vollmacht	noun	no		abstract
+Diakon	noun	no		role has no plain sign
+Kreuzer	noun	no		duplicates Kriegsschiff (the example uses the coin)
+Gattung	noun	no		abstract
+Vorgeschichte	noun	no		time word
+Verletzung	noun	no		abstract (violation, not a wound)
+Volksstamm	noun	no		sensitive
+Handhabung	noun	no		abstract
+Umwandlung	noun	no		abstract
+Proviant	noun	no		duplicates Nahrungsmittel
+Grafschaft	noun	no		abstract
+Konfession	noun	no		abstract
+Messias	noun	no		sensitive
+Fehde	noun	no		abstract
+Barbarei	noun	no		abstract
+Rückmarsch	noun	no		abstract
+Beleg	noun	no		abstract
+Vorbedingung	noun	no		abstract
+Papsttum	noun	no		abstract
+Stempel	noun	yes	a wooden rubber stamp with a round knob handle standing beside an open red ink pad	near: Abdruck; sense rubber stamp per gloss
+Normanne	noun	no		sensitive
+Proletariat	noun	no		abstract
+Bergbau	noun	scene	a miner, a man with a black beard in a helmet with a lamp, pushing a cart of dark ore along rails in a timber-propped mine tunnel	near: Tunnel, Kupfer, Rohstoff
+Kaisertum	noun	no		abstract
+Konzeption	noun	no		abstract
+Verschwörung	noun	no		abstract
+Zugeständnis	noun	no		abstract
+Bestrafung	noun	no		abstract
+Aktie	noun	no		abstract
+Kilogramm	noun	no		measure
+Besitzergreifung	noun	no		abstract
+Entsatz	noun	no		abstract
+Anwerbung	noun	no		abstract
+Reichsverfassung	noun	no		abstract
+Repressalie	noun	no		abstract
+Torpedo	noun	yes	a long grey metal torpedo on its own, a cylinder with a rounded nose, small fins and a propeller at the tail, side view	near: Bombe, Geschoss, Handgranate
+Todesstrafe	noun	no		sensitive
+Protestant	noun	no		sensitive
+Verkehrsmittel	noun	no		abstract (a category)
+Bürgerrecht	noun	no		abstract
+Kriegsministerium	noun	no		abstract (institution)
+Wahrscheinlichkeit	noun	no		abstract
+Geisel	noun	no		sensitive
+Manifest	noun	no		abstract
+Astronom	noun	yes	a man with curly grey hair and a short beard in a dark blue robe looking through a long brass telescope on a wooden tripod	near: Astronomie, Astrologie, Physiker, Forscher
+Band	noun	no		a plain book; a volume of a series is not visible
+Konsument	noun	no		relational
+Mobilmachung	noun	no		abstract
+Tagesordnung	noun	no		abstract
+Staatsarchiv	noun	no		duplicates Archiv
+Reiterei	noun	scene	a troop of soldiers, young men with moustaches in blue uniforms and tall hats, riding brown and black horses side by side	near: Fußvolk, Kolonne, Patrouille
+Parallele	noun	no		abstract
+Großmacht	noun	no		abstract
+Segelschiff	noun	yes	a wooden three-masted sailing ship with full cream sails and a brown hull on blue waves, no cannons and no gun ports	near: Linienschiff, Fregatte, Handelsschiff, Seeschiff, Transportschiff
+Durchfahrt	noun	no		abstract
+Instanz	noun	no		abstract
+Geschichtswerk	noun	no		abstract
+Landesteil	noun	no		abstract
+Kurbel	noun	yes	an old iron hand crank on its own: a bent metal arm with a turned wooden handle at one end	near: Hebel, Vorrichtung
+Stellvertreter	noun	no		relational
+Volksvertretung	noun	no		abstract
+Fortdauer	noun	no		abstract
+Magazin	noun	scene	the inside of a large old wooden storehouse stacked high with grain sacks, barrels and crates, no people	near: Depot, Arsenal, Archiv; sense storehouse per gloss
+Diktatur	noun	no		abstract
+Geograph	noun	no		role has no plain sign
+Erteilung	noun	no		abstract
+Fortführung	noun	no		abstract
+Bombe	noun	yes	a single dark olive-green aerial bomb with a rounded nose and four tail fins, pointing downward, on its own	near: Torpedo, Handgranate, Geschoss, Bombardement
+Verbrauch	noun	no		abstract
+Schädigung	noun	no		abstract
+Sachse	noun	no		sensitive
+Reichsregierung	noun	no		abstract
+Mechanik	noun	no		abstract
+Beschädigung	noun	no		abstract
+Dividende	noun	no		abstract
+Fußvolk	noun	scene	a row of foot soldiers, young men with short brown hair in grey coats and helmets, standing with muskets on their shoulders, no horses	near: Reiterei, Kolonne, Miliz, Legion, Phalanx
+Rechtsgelehrte	noun	no		role has no plain sign
+Vertrieb	noun	no		abstract
+Vollständigkeit	noun	no		abstract
+Republikaner	noun	no		abstract (a political view)
+Kriegsrat	noun	no		abstract
+Ornament	noun	yes	a single gilded baroque ornament of symmetrical curling leaves and scrolls, carved in wood, mounted on a dark red wall panel	near: Plastik
+Vasall	noun	no		relational
+Finanzminister	noun	no		role has no plain sign
+Belastung	noun	no		abstract
+Debatte	noun	no		abstract (speech)
+Motor	noun	yes	a grey metal motor on its own: a block with a row of cylinders, pipes, cables and a belt wheel, no vehicle	near: Dampfmaschine, Mechanismus
+Mathematiker	noun	no		role has no plain sign
+Rücktritt	noun	no		abstract
+Viehzucht	noun	scene	a herd of brown cows and a few sheep grazing in a fenced pasture, watched by an older man with grey hair holding a herding stick	near: Farm, Farmer, Ackerbau
+Religiosität	noun	no		abstract
+Fund	noun	no		abstract (any found object; see Ausgrabung)
+Großbetrieb	noun	no		abstract
+Fortbildung	noun	no		abstract
+Mäßigung	noun	no		abstract
+Kriegsgericht	noun	no		abstract
+Differenz	noun	no		abstract
+Nationalökonom	noun	no		role has no plain sign
+Ausfall	noun	no		abstract
+Willkür	noun	no		abstract
+Völkerwanderung	noun	no		abstract
+Machtmittel	noun	no		abstract
+Nahrungsmittel	noun	yes	an assortment of foods together: a loaf of brown bread, a wedge of yellow cheese, red apples, potatoes, carrots and a sausage	near: Proviant, Verpflegung, Getreide
+Nationalökonomie	noun	no		abstract
+Merkmal	noun	no		abstract
+Tunnel	noun	scene	the arched stone entrance of a railway tunnel in a green hillside, rails leading into the dark opening	near: Röhre, Bahnlinie, Bergbau
+Ausgrabung	noun	scene	an archaeological dig: a woman with a brown ponytail kneeling in a square pit marked out with string, brushing soil off a half-buried clay pot	near: Fund, Altertum
+Amnestie	noun	no		abstract
+Belagerungszustand	noun	no		abstract
+Monatsschrift	noun	no		abstract (a periodical; the kind of publication is not visible)
+Hauptmacht	noun	no		abstract
+Volkswirtschaft	noun	no		abstract
+Wortlaut	noun	no		abstract (speech)
+Charakteristik	noun	no		abstract
+Gewährung	noun	no		abstract
+Versorgung	noun	no		abstract
+Ökonomie	noun	no		abstract
+Artilleriefeuer	noun	no		an event of war; guns firing read as Kanone
+Stellungnahme	noun	no		abstract (speech)
+Telegraphie	noun	no		duplicates Telegraf
+Bombardement	noun	no		an event of war; guns firing read as Kanone
+Folgezeit	noun	no		time word
+Anhalt	noun	no		abstract
+Zentralisation	noun	no		abstract
+Zertrümmerung	noun	no		abstract (an act; the result is only rubble)
+Rechtsverhältnis	noun	no		abstract
+Römerzeit	noun	no		abstract (time word)
+Nachwelt	noun	no		abstract
+Friedensschluss	noun	no		abstract (an act; a signed treaty would be Friedensvertrag)
+Luftdruck	noun	no		abstract (invisible)
+Kanton	noun	no		abstract (an administrative region)
+Schauplatz	noun	no		abstract
+Hunne	noun	no		sensitive (a people)
+Bürgertum	noun	no		abstract (a social class)
+Hospital	noun	yes	a large hospital building of pale yellow brick with many rows of windows and a big red cross above the glass entrance doors	
+Nahkampf	noun	no		abstract (a kind of fighting; reads as Gefecht or Zusammenstoß)
+Aufruf	noun	no		abstract (speech)
+Hauptmasse	noun	no		abstract
+Wegfall	noun	no		abstract
+Rundschreiben	noun	no		abstract (a document; its kind does not show)
+Astrologie	noun	no		abstract
+Tiefgang	noun	no		abstract (a measure)
+Neuerung	noun	no		abstract
+Demonstration	noun	scene	a crowd marching down a town street, a young woman with a red ponytail and an older bald man in front, holding up blank coloured placards and a long banner	near: Streik, Volksversammlung, Agitation
+Bekanntmachung	noun	no		abstract (a notice; its kind does not show)
+Gegenstoß	noun	no		abstract (a movement)
+Biograph	noun	no		role not plain (a person writing)
+Landstrich	noun	no		abstract (an area of land)
+Ausschluss	noun	no		abstract
+Route	noun	yes	a folded paper map of green land and blue rivers with a dashed red line winding from a start dot to a small red flag	near: Seeweg, Handelsweg, Verkehrsweg
+Westfront	noun	no		abstract (a place in a war)
+Entfaltung	noun	no		abstract
+Vergrößerung	noun	no		abstract
+Reformator	noun	no		abstract role (no dress shows it)
+Judentum	noun	no		sensitive (religion)
+Phänomen	noun	no		abstract
+Anziehung	noun	no		abstract
+Hauptpunkt	noun	no		abstract
+Slawe	noun	no		sensitive (a people)
+Etablissement	noun	no		abstract (any kind of business)
+Kleinstaat	noun	no		abstract
+Dogmatik	noun	no		abstract
+Sittenlosigkeit	noun	no		abstract
+Verkehrsweg	noun	no		duplicates Route
+Quantität	noun	no		abstract (a measure)
+Besteuerung	noun	no		abstract
+Zeitrechnung	noun	no		abstract
+Struktur	noun	no		abstract
+Inhaber	noun	no		relational
+Einkünfte	noun	no		abstract (money in general; banknotes are Papiergeld)
+Staatskasse	noun	no		abstract (state funds; banknotes are Papiergeld)
+Nachbarstaat	noun	no		relational
+Staatsverwaltung	noun	no		abstract
+Besiegung	noun	no		abstract
+Verwaltungsbeamte	noun	no		abstract role (a man at a desk shows no office)
+Restauration	noun	no		abstract
+Ablass	noun	no		abstract (a church practice)
+Sittlichkeit	noun	no		abstract
+Seeweg	noun	no		duplicates Route
+Monarch	noun	yes	an older man with grey hair and a grey beard, a monarch seated on a golden throne, wearing a jewelled crown and a purple robe trimmed with spotted ermine, holding a sceptre	near: Kronprinz, Sultan, Machthaber, Thronfolger
+Gutachten	noun	no		abstract (a document)
+Spaltung	noun	no		abstract
+Proklamation	noun	no		abstract (speech or document)
+Maure	noun	no		sensitive (a people)
+Gesetzgeber	noun	no		abstract role
+Friedenszeit	noun	no		abstract (time word)
+Kapitulation	noun	no		abstract (an act; a white flag is a symbol)
+Würdigung	noun	no		abstract
+Heranziehung	noun	no		abstract
+Seeschiff	noun	no		duplicates Handelsschiff (an ordinary ship at sea)
+Departement	noun	no		abstract (an administrative region)
+Einigkeit	noun	no		abstract
+Vorlage	noun	no		abstract (a bill)
+Wörterbuch	noun	yes	a thick closed dictionary with a dark blue cover, a row of small half-moon thumb-index notches cut into its cream page edge, the notches blank	near: Band, Handbuch, Gesetzbuch, Jahrbuch
+Machthaber	noun	no		duplicates Monarch
+Vermeidung	noun	no		abstract
+Demokrat	noun	no		abstract (a political view)
+Erneuerung	noun	no		abstract
+Ausgestaltung	noun	no		abstract
+Staatswesen	noun	no		abstract
+Freilassung	noun	no		abstract (an act)
+Kredit	noun	no		abstract
+Unterlage	noun	no		abstract (a document)
+Handelsgesellschaft	noun	no		abstract
+Beilegung	noun	no		abstract
+Verwerfung	noun	no		abstract
+Lokalität	noun	no		abstract
+Reede	noun	no		water off a coast; ships at anchor read as Golf or Geschwader
+Waffengewalt	noun	no		abstract
+Syrer	noun	no		sensitive (a nationality)
+Regentschaft	noun	no		abstract
+Mitarbeit	noun	no		abstract
+Teilnehmer	noun	no		relational
+Grundstück	noun	scene	an empty plot of green grass marked out by four wooden corner stakes joined with red string, between two houses on a village street	near: Grundbesitz, Terrain, Farm
+Denkweise	noun	no		abstract
+Atheismus	noun	no		abstract
+Durchbildung	noun	no		abstract
+Dogma	noun	no		abstract
+Staatsrecht	noun	no		abstract
+Grundform	noun	no		abstract
+Regierungsbezirk	noun	no		abstract (an administrative region)
+Revue	noun	no		abstract (a journal; its kind does not show)
+Zuzug	noun	no		abstract
+Minimum	noun	no		abstract (a measure)
+Politiker	noun	no		abstract role (no dress or tool shows it; near: Staatsmann)
+Inquisition	noun	no		sensitive (persecution and executions)
+Beihilfe	noun	no		abstract
+Abdankung	noun	no		abstract
+Fertigstellung	noun	no		abstract
+Vorgebirge	noun	no		duplicates Halbinsel (a headland reads as a peninsula)
+Beschlussfassung	noun	no		abstract
+Basis	noun	no		abstract
+Übertritt	noun	no		abstract
+Besoldung	noun	no		abstract (money in general; banknotes are Papiergeld)
+Erstürmung	noun	no		an event of war; soldiers before walls are not told apart from Belagerung
+Nordgrenze	noun	no		abstract (a direction)
+Partikularismus	noun	no		abstract
+Heerwesen	noun	no		abstract
+Zuziehung	noun	no		abstract
+Privatrecht	noun	no		abstract
+Festschrift	noun	no		abstract (a book whose kind does not show)
+Weberei	noun	scene	a woman in her forties with a long dark braid weaving striped red and blue cloth on a large wooden hand loom, many threads stretched taut	sense weaving per gloss; near: Baumwolle
+Magistrat	noun	no		abstract role
+Anlehnung	noun	no		abstract
+Hauptaufgabe	noun	no		abstract
+Einmarsch	noun	no		abstract (a movement; marching troops read as Kolonne or Vormarsch)
+Koran	noun	no		a holy book told apart only by its script, and the picture has no text
+Frühjahr	noun	no		time word (season)
+Generalstab	noun	no		abstract (a body of officers)
+Zusammenschluss	noun	no		abstract
+Sprachgebrauch	noun	no		abstract
+Abbild	noun	no		abstract (a likeness; a picture reads as Abbildung)
+Tribunal	noun	no		abstract (a court; judges at a bench look the same for Kriegsgericht, Schiedsgericht)
+Patrone	noun	yes	a single brass rifle cartridge on its own, lying on its side, with a pointed dark grey bullet tip, close up	near: Munition, Geschoss
+Vorrecht	noun	no		abstract
+Anklang	noun	no		abstract
+Bewilligung	noun	no		abstract
+Autonomie	noun	no		abstract
+Arbeitslosigkeit	noun	no		abstract
+Blütezeit	noun	no		abstract (time word)
+Stadtrat	noun	no		abstract (a body; a meeting reads as Ausschuss or Konferenz)
+Überführung	noun	no		abstract
+Wiederaufnahme	noun	no		abstract
+Souveränität	noun	no		abstract
+Verringerung	noun	no		abstract
+Landbau	noun	no		abstract (a branch of farming)
+Pflanzenwelt	noun	no		abstract (all the plants of a region)
+Thronfolger	noun	no		role has no plain sign (looks like Monarch)
+Entwaffnung	noun	no		abstract
+Diplomatie	noun	no		abstract
+Korrespondenz	noun	no		abstract
+Wohnsitz	noun	no		abstract (a house shows no residence)
+Verwundete	noun	no		sensitive (wounds)
+Fürstentum	noun	no		abstract
+Gültigkeit	noun	no		abstract
+Hilfstruppe	noun	no		abstract (soldiers show no auxiliary role)
+Billigkeit	noun	no		abstract
+Uneinigkeit	noun	no		abstract
+Objekt	noun	no		abstract
+Gleichstellung	noun	no		abstract
+Endpunkt	noun	no		abstract
+Definition	noun	no		abstract
+Ausrottung	noun	no		sensitive (killing)
+Verurteilung	noun	no		abstract
+Spielraum	noun	no		abstract
+Gleichheit	noun	no		abstract
+Verbannung	noun	no		abstract
+Gegengewicht	noun	no		figurative in the books; a weight alone shows no counterweight
+Maximum	noun	no		abstract (a measure)
+Konzession	noun	no		abstract
+Parteiung	noun	no		abstract
+Kommentar	noun	no		abstract
+Missstand	noun	no		abstract
+Zone	noun	no		abstract
+Regenzeit	noun	no		time word (season; rain alone is Regen)
+Nachbildung	noun	no		abstract (a copy looks like the original)
+Chronist	noun	no		role not plain (a person writing)
+Vollkommenheit	noun	no		abstract
+Konvent	noun	no		abstract (an assembly)
+Verlängerung	noun	no		abstract
+Erwerb	noun	no		abstract
+Fonds	noun	no		abstract (money in general; banknotes are Papiergeld)
+Streitfrage	noun	no		abstract
+Gefangennahme	noun	no		abstract (an act)
+Handelsbeziehung	noun	no		abstract
+Kriegsmacht	noun	no		abstract
+Lesung	noun	no		abstract (a reading of a text)
+Ritus	noun	no		sensitive (a rite)
+Folgerung	noun	no		abstract
+Ägypter	noun	no		sensitive (a nationality)
+Mandat	noun	no		abstract
+Mystik	noun	no		abstract
+Stadium	noun	no		abstract (a stage, not a sports ground)
+Spekulation	noun	no		abstract
+Festlegung	noun	no		abstract
+Priesterschaft	noun	no		abstract (a body of priests)
+Kriegsdienst	noun	no		abstract
+Verleihung	noun	no		abstract
+Rückwirkung	noun	no		abstract
+Volksleben	noun	no		abstract
+Kriegskunst	noun	no		abstract
+Selbstverwaltung	noun	no		abstract
+Bayer	noun	no		sensitive (would need a stereotype)
+Geographie	noun	no		abstract (a subject)
+Einziehung	noun	no		abstract
+Handelskammer	noun	no		abstract
+Neuordnung	noun	no		abstract
+Bekehrung	noun	no		sensitive (religious conversion)
+Ungunst	noun	no		abstract
+Revision	noun	no		abstract
+Einseitigkeit	noun	no		abstract
+Kulturvolk	noun	no		abstract
+Nordküste	noun	no		abstract (a direction; a coast alone shows no north)
+Abmachung	noun	no		abstract (a handshake is a symbol)
+Erläuterung	noun	no		abstract
+Emanzipation	noun	no		abstract
+Zeitbestimmung	noun	no		abstract
+Zwischenhandel	noun	no		abstract
+Priorität	noun	no		abstract
+Bürokratie	noun	no		abstract
+Verwaltungsbehörde	noun	no		abstract
+Zurückführung	noun	no		abstract
+Ausschweifung	noun	no		abstract
+Ungleichheit	noun	no		abstract
+Lebenshaltung	noun	no		abstract
+Verantwortlichkeit	noun	no		abstract
+Kirchenvater	noun	no		sensitive (saints)
+Erlangung	noun	no		abstract
+Regierungsantritt	noun	no		abstract
+Begünstigung	noun	no		abstract
+Freigelassene	noun	no		relational (a legal status)
+Glaubwürdigkeit	noun	no		abstract
+Lebensdauer	noun	no		abstract (time word)
+Forscher	noun	yes	a man in his thirties with curly red hair and glasses, a researcher in a light blue lab coat, looking into a microscope at a lab bench	near: Physiker, Erfinder, Geschichtsforscher, Entdecker
+Zeichner	noun	yes	a young man with a brown ponytail and a short beard, a draftsman at a tilted drawing board, sketching the outline of a house with a pencil and a ruler	near: Holzschnitt, Abbildung
+Oberleitung	noun	no		abstract (overall direction, not an overhead wire)
+Anfertigung	noun	no		abstract
+Depot	noun	no		duplicates Magazin
+Kommunist	noun	no		abstract (a political view)
+Gleichberechtigung	noun	no		abstract
+Geschichtsforscher	noun	no		role not plain (a person writing)
+Waffenruhe	noun	no		abstract
+Sonderinteresse	noun	no		abstract
+Handelsweg	noun	no		duplicates Route
+Polemik	noun	no		abstract
+Poet	noun	no		role not plain (a person writing)
+Moschee	noun	yes	a sand-coloured mosque with a large green dome and two slender minarets with pointed tops	
+Gote	noun	no		sensitive (a people)
+Ausweisung	noun	no		abstract
+Techniker	noun	yes	an older man with short grey hair, a technician in blue overalls, tightening a bolt on a large grey machine with a wrench, a red toolbox at his feet	near: Erfinder, Forscher
+Sperre	noun	scene	a country road closed off by a row of red-and-white striped barrier boards on wooden trestles	near: Blockade
+Volksversammlung	noun	no		abstract (a body; a crowd reads as Demonstration)
+Kurie	noun	no		abstract
+Mittelstand	noun	no		abstract (a social class)
+Seitenstück	noun	no		abstract
+Seeräuber	noun	yes	a middle-aged man with long black hair, a black beard and a gold earring, a pirate with a red headscarf, an eye patch and a curved sabre, standing	
+Völkerschaft	noun	no		sensitive (a people)
+Einmischung	noun	no		abstract
+Bedeckung	noun	no		abstract (an escort is a relation, riders look like riders)
+Strafgesetzbuch	noun	no		a book; its content cannot be shown
+Regulierung	noun	no		abstract
+Zusammenarbeit	noun	no		abstract
+Röhre	noun	yes	a long dark grey metal tube on its own, lying on its side, seen at an angle so its length and its round hollow opening both show	sense tube per gloss; near: Kabel, Tunnel
+Kombination	noun	no		abstract
+Belgier	noun	no		sensitive (a nationality)
+Streitschrift	noun	no		abstract (a document; its kind does not show)
+Genauigkeit	noun	no		abstract
+Regierungsgewalt	noun	no		abstract
+Umarbeitung	noun	no		abstract
+Sonderung	noun	no		abstract
+Byzantiner	noun	no		sensitive (a people)
+Wiedereroberung	noun	no		abstract
+Fabel	noun	no		abstract (a story)
+Hoflager	noun	no		abstract
+Karawane	noun	scene	a line of five camels loaded with bundles and bags walking in single file across golden sand dunes, led on foot by an older man with grey hair and a grey beard in a brown cloak	near: Kolonne, Expedition
+Vorhandensein	noun	no		abstract
+Unternehmungsgeist	noun	no		abstract
+Kriegszug	noun	no		abstract (a campaign; marching troops read as Kolonne or Vormarsch)
+Kontinent	noun	no		abstract (a land mass on a map reads as a particular place or Festland)
+Nationalgefühl	noun	no		abstract
+Gewehrfeuer	noun	no		abstract (gunfire; flashes read as Artilleriefeuer)
+Einheitlichkeit	noun	no		abstract
+Tribut	noun	no		abstract
+Ankauf	noun	no		abstract
+Hypothese	noun	no		abstract
+Fühlung	noun	no		abstract
+Schätzung	noun	no		abstract
+Ablösung	noun	no		abstract
+Sprengel	noun	no		abstract (a church district)
+Kupfer	noun	yes	a stack of shiny reddish-orange copper bars with a few rough copper nuggets in front	
+Absetzung	noun	no		abstract
+Abstellung	noun	no		abstract
+Notstand	noun	no		abstract
+Nachschub	noun	no		abstract (supplies on the way read as Transport or Proviant)
+Kreuzfahrer	noun	yes	a young man with short brown hair and a short brown beard, a medieval crusader knight in grey chain mail and a long pale grey tunic with a large red cross, holding a sword and a kite-shaped shield	near: Kreuzzug, Söldner, Ritterschaft
+Reorganisation	noun	no		abstract
+Bauernkrieg	noun	no		abstract (an event)
+Despotismus	noun	no		abstract
+Durchschnitt	noun	no		abstract (a measure)
+Chemie	noun	no		abstract (a subject; glassware is a symbol)
+Bulletin	noun	no		abstract (a report)
+Einkommen	noun	no		abstract (money in general; banknotes are Papiergeld)
+Edikt	noun	no		abstract (a document; its kind does not show)
+Verkürzung	noun	no		abstract
+Anführung	noun	no		abstract
+Arbeitsgebiet	noun	no		abstract
+Klassiker	noun	no		abstract
+Papiergeld	noun	yes	a small fanned stack of green and blue paper banknotes printed with plain wavy patterns, no numbers	near: Geldmittel, Aktie, Milliarde
+Vorkommen	noun	no		abstract
+Bahnlinie	noun	scene	a railway line crossing green countryside, two steel rails on wooden sleepers curving away past fields toward low hills, no train	near: Verkehrsweg, Tunnel
+Elektrizität	noun	no		abstract (invisible; a lightning bolt is a symbol)
+Bulle	noun	no		abstract (a document; its kind does not show)
+Arsenal	noun	no		duplicates Magazin (a store; racks of weapons read as Bewaffnung)
+Verteidigungslinie	noun	no		abstract (a line of positions; trenches read as Schützengraben)
+Hauptgegenstand	noun	no		abstract
+Regierungsform	noun	no		abstract
+Lobredner	noun	no		abstract role (a speaker)
+Aktiengesellschaft	noun	no		abstract
+Index	noun	no		abstract
+Gesuch	noun	no		abstract (a document; its kind does not show)
+Ackerbauer	noun	no		duplicates Farmer
+Übersetzer	noun	no		role not plain (a person writing)
+betragen	verb	no		abstract
+beschränken	verb	no		abstract
+hervorgehen	verb	no		abstract
+unterwerfen	verb	no		sensitive
+beruhen	verb	no		abstract
+herausgeben	verb	no		abstract
+herbeiführen	verb	no		abstract
+drucken	verb	scene	a middle-aged man with grey hair and a leather apron, a printer, pulling the long lever of an old wooden printing press, a fresh sheet with grey lines beside it	near: abdrucken
+ernennen	verb	no		abstract
+hinweisen	verb	no		abstract
+übertragen	verb	no		abstract
+nachweisen	verb	no		abstract
+begründen	verb	no		abstract
+durchführen	verb	no		abstract
+beseitigen	verb	no		abstract
+veröffentlichen	verb	no		abstract
+eintreffen	verb	no		arrival is not plain in a still picture
+beitragen	verb	no		abstract
+erlassen	verb	no		abstract
+zuschreiben	verb	no		abstract
+vordringen	verb	no		duplicates marschieren
+hervorheben	verb	no		abstract
+erzielen	verb	no		abstract
+fördern	verb	no		abstract
+voraussetzen	verb	no		abstract
+anführen	verb	no		abstract
+ausdehnen	verb	no		abstract
+ermöglichen	verb	no		abstract
+bewirken	verb	no		abstract
+erfordern	verb	no		abstract
+erweitern	verb	no		abstract
+ausbilden	verb	no		abstract
+bekämpfen	verb	no		abstract
+scheitern	verb	no		abstract
+landen	verb	scene	a young man with shaggy red hair and a red beard jumping from a wooden rowing boat onto a sandy beach, the boat's bow just touching the shore, waves behind	near: segeln, eintreffen
+verstärken	verb	no		abstract
+festsetzen	verb	no		abstract
+organisieren	verb	no		abstract
+bedrohen	verb	no		a raised fist shows only anger
+segeln	verb	scene	a young woman with a long blond braid sailing a small wooden boat on the open sea, one hand on the tiller, the red sail full of wind	near: auslaufen, einlaufen, steuern, landen
+erzeugen	verb	no		abstract
+hinrichten	verb	no		sensitive
+erstrecken	verb	no		abstract
+begünstigen	verb	no		abstract
+entsenden	verb	no		abstract
+zurückführen	verb	no		abstract
+verwirklichen	verb	no		abstract
+räumen	verb	no		abstract
+erschweren	verb	no		abstract
+verteilen	verb	scene	a middle-aged woman with a brown braid handing out bread loaves from a basket to a blond boy, a dark-haired girl and a red-haired boy, all holding out their hands	near: zuteilen
+berechnen	verb	scene	an older balding man with grey hair, round glasses and a grey beard calculating on a wooden abacus, pushing coloured beads with one finger, frowning in concentration	near: veranschlagen, ermitteln
+umfassen	verb	no		abstract
+befördern	verb	no		abstract
+belaufen	verb	no		abstract
+verfassen	verb	scene	a woman in her forties with dark hair in a bun writing a letter with a brown quill pen at a wooden desk, finished pages of grey lines beside her	near: unterzeichnen, aufzeichnen, eintragen, verzeichnen
+bewilligen	verb	no		abstract
+steuern	verb	scene	a bald older man with a grey beard, a sailor, gripping and turning a large wooden ship's wheel with both hands, seen close up, sea and sky behind	near: segeln
+überschreiten	verb	no		abstract
+ausnutzen	verb	no		abstract
+verwunden	verb	no		sensitive
+ermorden	verb	no		sensitive
+beabsichtigen	verb	no		abstract
+rechtfertigen	verb	no		abstract
+ausrüsten	verb	no		result only: an equipped figure is a pose
+bewähren	verb	no		abstract
+übereinstimmen	verb	no		abstract
+regeln	verb	no		abstract
+beschießen	verb	no		duplicates feuern
+belagern	verb	no		needs an army; no single figure shows it
+aufweisen	verb	no		abstract
+entwerfen	verb	no		abstract; drafting looks like drawing
+befehligen	verb	no		pose only: an officer pointing
+beitreten	verb	no		abstract
+berücksichtigen	verb	no		abstract
+anordnen	verb	no		speech
+eingreifen	verb	no		abstract
+marschieren	verb	yes	a young man with short red hair, a soldier in a blue uniform and peaked cap, marching in step, one knee raised high, arms swinging stiffly	near: einrücken, vorrücken, vordringen
+verwerfen	verb	no		abstract
+beauftragen	verb	no		abstract
+unterstellen	verb	no		abstract
+vermehren	verb	no		abstract
+erbauen	verb	scene	a middle-aged man with curly black hair and a bushy black beard, a builder, laying a brick on a half-built house wall, a trowel in his other hand	near: konstruieren
+vermindern	verb	no		abstract
+schwächen	verb	no		abstract
+zusammenfassen	verb	no		abstract
+übersetzen	verb	no		abstract
+bestrafen	verb	no		abstract
+ableiten	verb	no		abstract
+widerlegen	verb	no		abstract
+zunehmen	verb	no		abstract
+zahlen	verb	scene	an older woman with short grey curls paying at a market stall, counting coins into the open palm of a young man with curly black hair behind the stall	near: überweisen
+darlegen	verb	no		speech
+zuführen	verb	no		abstract
+einleiten	verb	no		abstract
+bezwecken	verb	no		abstract
+ersehen	verb	no		abstract
+bezeugen	verb	no		speech
+einwirken	verb	no		abstract
+einräumen	verb	no		abstract
+bestreiten	verb	no		speech
+überliefern	verb	no		abstract
+heranziehen	verb	no		abstract
+beilegen	verb	no		abstract
+übertreffen	verb	no		abstract
+beantragen	verb	no		abstract
+auslaufen	verb	no		duplicates segeln
+wiederherstellen	verb	no		abstract
+kennzeichnen	verb	no		abstract
+verzeichnen	verb	no		duplicates verfassen
+taufen	verb	no		sensitive
+zusammenstellen	verb	no		abstract
+zusammensetzen	verb	no		abstract
+beibehalten	verb	no		abstract
+datieren	verb	no		abstract
+vereiteln	verb	no		abstract
+unterliegen	verb	no		abstract
+plündern	verb	no		sensitive
+ermitteln	verb	no		abstract
+anstreben	verb	no		abstract
+verweisen	verb	no		abstract
+verdrängen	verb	no		abstract
+zurückweisen	verb	no		abstract
+verfahren	verb	no		abstract
+berechtigen	verb	no		abstract
+fechten	verb	yes	a man in his thirties with long black hair and a moustache, in a red doublet, lunging forward with a thin rapier, his free arm raised behind him	near: bekämpfen
+anzeigen	verb	no		abstract
+erneuern	verb	no		abstract
+abtreten	verb	no		abstract
+abdrucken	verb	no		duplicates drucken
+verbessern	verb	no		abstract
+vorbehalten	verb	no		abstract
+ausbeuten	verb	no		abstract
+zugestehen	verb	no		abstract
+abweichen	verb	no		abstract
+bearbeiten	verb	no		abstract
+gefährden	verb	no		abstract
+erachten	verb	no		abstract
+beurteilen	verb	no		abstract
+schädigen	verb	no		abstract
+beschädigen	verb	no		result only
+bezweifeln	verb	no		abstract
+genehmigen	verb	no		abstract
+vorschreiben	verb	no		abstract
+anfertigen	verb	no		abstract: making looks like any craft
+beeinflussen	verb	no		abstract
+untersagen	verb	no		abstract
+erliegen	verb	no		abstract
+repräsentieren	verb	no		abstract
+einverleiben	verb	no		abstract
+verbleiben	verb	no		abstract
+fortdauern	verb	no		abstract
+vorfinden	verb	no		abstract
+darbieten	verb	no		abstract
+erstürmen	verb	no		needs an army; no single figure shows it
+abhängen	verb	no		abstract
+beeinträchtigen	verb	no		abstract
+einlaufen	verb	no		duplicates segeln
+billigen	verb	no		abstract
+niedermachen	verb	no		sensitive
+eignen	verb	no		abstract
+befürchten	verb	no		emotion
+vermitteln	verb	no		abstract
+verhaften	verb	scene	a woman in her thirties with a blond ponytail, a police officer in a dark blue uniform, putting handcuffs on the wrists of a bald middle-aged man in a grey jacket	near: festsetzen
+sicherstellen	verb	no		abstract
+einigen	verb	no		abstract
+mitwirken	verb	no		abstract
+zusichern	verb	no		speech
+herrühren	verb	no		abstract
+ausreichen	verb	no		abstract
+verringern	verb	no		abstract
+zusammentreten	verb	no		abstract
+verkennen	verb	no		abstract
+abbilden	verb	no		abstract
+naheliegen	verb	no		abstract
+vereinbaren	verb	no		a handshake reads as greeting
+entlehnen	verb	no		abstract
+herausstellen	verb	no		abstract
+veranstalten	verb	no		abstract
+ausarbeiten	verb	no		abstract
+berauben	verb	no		abstract
+überweisen	verb	no		abstract
+ansiedeln	verb	no		abstract
+ausgleichen	verb	no		abstract
+einschränken	verb	no		abstract
+erbeuten	verb	no		abstract
+feuern	verb	scene	an old bronze cannon on wooden wheels firing, flame and grey smoke bursting from its muzzle, a middle-aged man with a black moustache, a gunner in a blue coat, stepping back	near: beschießen
+vorherrschen	verb	no		abstract
+verwalten	verb	no		abstract
+ausliefern	verb	no		abstract
+unterzeichnen	verb	no		duplicates verfassen
+knüpfen	verb	yes	a woman in her twenties with short red hair tying a knot in a thick brown rope, pulling both ends tight with her hands	near: anknüpfen
+benennen	verb	no		abstract
+umwandeln	verb	no		abstract
+vorrücken	verb	no		duplicates marschieren
+aneignen	verb	no		abstract
+festlegen	verb	no		abstract
+beschaffen	verb	no		abstract
+durchziehen	verb	no		abstract
+ausstatten	verb	no		abstract
+anknüpfen	verb	no		abstract
+charakterisieren	verb	no		abstract
+beanspruchen	verb	no		abstract
+zuteilen	verb	no		duplicates verteilen
+verfertigen	verb	no		abstract: making looks like any craft
+existieren	verb	no		abstract
+mehren	verb	no		abstract
+verbünden	verb	no		a handshake reads as greeting
+überwiegen	verb	no		abstract
+ermächtigen	verb	no		abstract
+zerfallen	verb	no		result only
+aufbringen	verb	no		abstract
+ausscheiden	verb	no		abstract
+herabsetzen	verb	no		abstract
+verbürgen	verb	no		abstract
+abschaffen	verb	no		abstract
+einberufen	verb	no		abstract
+vorführen	verb	no		abstract
+konstruieren	verb	no		duplicates erbauen
+verzögern	verb	no		abstract
+beschuldigen	verb	no		pose only: a pointing finger
+würdigen	verb	no		abstract
+hinzukommen	verb	no		abstract
+hemmen	verb	no		abstract
+erwirken	verb	no		abstract
+zustehen	verb	no		abstract
+vermählen	verb	scene	a young man with short brown hair in a dark blue suit slipping a gold ring onto the finger of a bride with black hair, a pink gown and a flower wreath	
+überführen	verb	no		abstract
+verweigern	verb	no		abstract
+entspringen	verb	no		abstract
+bedingen	verb	no		abstract
+aufrechterhalten	verb	no		abstract
+übersteigen	verb	no		abstract
+obliegen	verb	no		abstract
+anbringen	verb	no		pose or result only
+anweisen	verb	no		speech
+betrauen	verb	no		abstract
+befolgen	verb	no		abstract
+verwickeln	verb	no		abstract
+unterziehen	verb	no		abstract
+einreichen	verb	no		abstract
+erschöpfen	verb	no		abstract
+fortführen	verb	no		abstract
+veranschaulichen	verb	no		abstract
+anlangen	verb	no		abstract
+beendigen	verb	no		abstract
+transportieren	verb	scene	a brown horse pulling a wooden cart loaded with crates and barrels along a dirt road, driven by an older man with grey hair and a ginger beard holding the reins	near: befördern
+vervollkommnen	verb	no		abstract
+verherrlichen	verb	no		abstract
+entkommen	verb	scene	a young man with messy blond hair climbing down from a high stone tower window on a rope of knotted striped bedsheets, looking back over his shoulder	near: entspringen
+fortbestehen	verb	no		abstract
+verwüsten	verb	no		result only
+beigeben	verb	no		abstract
+besagen	verb	no		abstract
+einbringen	verb	no		abstract
+gegenüberstellen	verb	no		abstract
+unterbringen	verb	no		abstract
+belassen	verb	no		abstract
+gewährleisten	verb	no		abstract
+entgegenstehen	verb	no		abstract
+freisprechen	verb	no		abstract
+gebühren	verb	no		abstract
+umgestalten	verb	no		abstract
+stiften	verb	no		abstract
+ausstellen	verb	no		abstract
+erörtern	verb	no		speech
+erwachsen	verb	no		abstract
+verlorengehen	verb	no		abstract
+aufzeichnen	verb	no		duplicates verfassen
+zusammenhängen	verb	no		abstract
+erbringen	verb	no		abstract
+bestatten	verb	no		sensitive
+abhelfen	verb	no		abstract
+abspielen	verb	no		abstract
+einrücken	verb	no		duplicates marschieren
+auferlegen	verb	no		abstract
+belegen	verb	no		abstract
+bewerkstelligen	verb	no		abstract
+übermitteln	verb	no		abstract
+einteilen	verb	no		abstract
+verschärfen	verb	no		abstract
+erwählen	verb	no		abstract
+vorsehen	verb	no		abstract
+weihen	verb	no		sensitive
+untergraben	verb	no		abstract
+umkommen	verb	no		sensitive
+berichtigen	verb	no		abstract
+aufbewahren	verb	no		result only
+entgegenwirken	verb	no		abstract
+ankündigen	verb	no		speech
+erstreben	verb	no		abstract
+absprechen	verb	no		abstract
+veranschlagen	verb	no		abstract
+widersetzen	verb	no		abstract
+bereichern	verb	no		abstract
+wegfallen	verb	no		abstract
+ersuchen	verb	no		speech
+eintragen	verb	no		duplicates verfassen
+betätigen	verb	no		abstract
+anregen	verb	no		abstract
+entgegensetzen	verb	no		abstract
