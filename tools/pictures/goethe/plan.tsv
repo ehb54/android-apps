@@ -31,7 +31,7 @@ Gefälligkeit	noun	no		abstract
 Lebensart	noun	no		abstract
 Phänomen	noun	no		abstract
 Korrespondenz	noun	no		abstract (letters in general; a pile of letters is not told from Briefwechsel)
-Amphitheater	noun	scene	an ancient open-air stone theatre built into a hillside, semicircular rows of stone seats rising in tiers around a flat round stage	near: Arena, Schauspielhaus
+Amphitheater	noun	scene	an ancient Greek theatre, only a half circle: tiers of pale stone seats climbing a green hillside around a small flat stage with a row of broken columns behind it, seen from the front	near: Arena, Schauspielhaus
 Gemahl	noun	no		relational
 Harfner	noun	no		duplicates Harfenspieler
 Komposition	noun	no		abstract
@@ -70,12 +70,12 @@ Gönner	noun	no		relational
 Einstimmung	noun	no		abstract
 Saumross	noun	yes	a brown horse with bulging packs and bundles strapped on both sides of its back, no rider, on a stony mountain path	near: Treiber
 Lokalität	noun	no		abstract
-Landschaftsmaler	noun	scene	a young man with a brown ponytail and a straw hat painting at an easel outdoors, the canvas showing the green hills in front of him	near: Zeichner, Kunstgenosse
+Landschaftsmaler	noun	scene	a man with a short brown beard and a straw hat, a landscape painter, painting at an easel outdoors, the canvas showing green hills and a blue sky	near: Zeichner, Kunstgenosse
 Unart	noun	no		abstract
 Fußpfad	noun	scene	a narrow footpath of trodden earth winding through a green meadow full of wild flowers	near: Stieg, Seitenweg, Chaussee
 Vorsorge	noun	no		abstract
 Kalkstein	noun	no		a kind of stone not plain at a glance (a pale rock reads as any stone)
-Reitknecht	noun	yes	a young man with curly ginger hair in a green livery jacket and riding boots, holding a saddled brown horse by the bridle	near: Stallmeister, Postillon
+Reitknecht	noun	yes	a young man with curly ginger hair in a blue livery jacket, a groom, standing on the ground beside a saddled brown horse and holding its bridle, nobody on the horse	near: Stallmeister, Postillon
 Haushaltung	noun	no		abstract
 Chirurg	noun	yes	a man with short dark hair in green surgical scrubs, cap and face mask, holding up a scalpel in a gloved hand	near: Wundarzt
 Vorsaal	noun	no		a room not told apart from Seitenzimmer or Gartensaal
@@ -215,7 +215,7 @@ Weltteil	noun	no		abstract (a map shape)
 Amtshaus	noun	no		a building is not plain as an office
 Hauptfigur	noun	no		abstract
 Karwoche	noun	no		abstract (time word; religious)
-Portefeuille	noun	yes	a large flat dark-green artist's portfolio folder tied shut with ribbons, corners of drawings showing at its edge	near: Pappe
+Portefeuille	noun	yes	a large flat dark-green cardboard artist's portfolio lying open, its two covers spread flat, loose pencil drawings of trees and faces inside, no bow	near: Pappe
 Einschränkung	noun	no		abstract
 Abrede	noun	no		abstract
 Diskurs	noun	no		speech
@@ -231,7 +231,7 @@ Hauptzug	noun	no		abstract
 Titelkupfer	noun	no		duplicates Kupferstich
 Seitenzimmer	noun	no		a room; side is relational
 Selbstigkeit	noun	no		abstract
-Haupttür	noun	scene	the large main front door of a grand stone house, a heavy double-panelled wooden door at the top of a short flight of steps	near: Hintertür, Flügeltür, Tapetentür
+Haupttür	noun	scene	the front of a grand stone house: one large single wooden front door at the top of wide stone steps, a lantern on each side	near: Hintertür, Flügeltür, Tapetentür
 Parkanlage	noun	scene	a landscaped park with wide lawns, a winding gravel path, a pond and clumps of tall trees	near: Hausgarten, Baumgruppe, Promenade
 Kriegsglück	noun	no		abstract
 Reißfeder	noun	no		a ruling pen is drawn as an ordinary pen; not plain
@@ -308,7 +308,7 @@ Wissbegierde	noun	no		abstract
 Altvater	noun	no		relational
 Wohltäterin	noun	no		relational
 Nachtisch	noun	yes	a glass dish of caramel pudding with a swirl of cream and a spoon beside it	near: Zuckerwerk
-Linse	noun	yes	a small heap of dry brown lentils with a wooden spoon	
+Linse	noun	yes	a small heap of tiny flat round lentils, each a thin orange-brown disc, close up, no spoon and no beans	
 Übereinkunft	noun	no		abstract
 Vorposten	noun	no		a position; a sentry reads as any soldier
 Eigenliebe	noun	no		abstract
@@ -435,7 +435,7 @@ Vermischung	noun	no		abstract
 Soldatenstand	noun	no		abstract (a profession; soldiers read as Armee)
 Grundbegriff	noun	no		abstract
 Blasinstrument	noun	no		category word; any one drawn reads as Posthorn
-Bückling	noun	yes	a middle-aged man with a powdered grey wig in an 18th-century blue coat making a deep bow from the waist, one hand on his chest	near: Beugung, Positur
+Bückling	noun	yes	side view: a man in a grey wig and blue 18th-century coat bowing very deeply from the waist, back almost level, sweeping a tricorn hat aside	near: Beugung, Positur
 Litanei	noun	no		abstract (speech)
 Wöchnerin	noun	scene	a tired young woman with long black hair sitting up in bed, holding her newborn baby wrapped in a yellow blanket	near: Niederkunft, Schwangerschaft, Krankenlager
 Komplex	noun	no		abstract
@@ -448,7 +448,7 @@ Familienkreis	noun	no		relational (a group of people)
 Illumination	noun	scene	a palace front at night lit up by hundreds of small oil lamps along every window, ledge and roofline	near: Fackelschein, Himmelslicht
 Abweichung	noun	no		abstract
 Intention	noun	no		abstract
-Felsenwand	noun	scene	a sheer grey rock face rising straight up from a narrow valley floor, a tiny pine tree at its foot for scale	near: Kalkfels, Felsschlucht
+Felsenwand	noun	scene	a long sheer grey cliff wall stretching from edge to edge, rising straight up from a green meadow, one tiny pine tree at its foot	near: Kalkfels, Felsschlucht
 Irrung	noun	no		abstract
 Quecksilber	noun	yes	several shiny silver drops of liquid mercury beading on a dark wooden tabletop	near: Thermometer
 Halbgott	noun	no		sensitive (mythic god)
@@ -481,7 +481,7 @@ Transport	noun	no		abstract
 Matratze	noun	yes	a thick blue-and-white striped mattress lying flat on the floor, no bed frame	near: Krankenlager
 Vorspiel	noun	no		abstract
 Missmut	noun	no		abstract (emotion)
-Rennbahn	noun	scene	an oval horse-racing track of brown earth with wooden railings, two jockeys in bright silks galloping on horses	near: Arena, Amphitheater
+Rennbahn	noun	scene	a long oval horse-racing track with a white rail fence, two jockeys in bright silks galloping past a small roofed grandstand, side view	near: Arena, Amphitheater
 Grundriss	noun	yes	a blueprint floor plan of a house: thin white lines on a deep blue sheet showing walls, doors and rooms from above, no labels	near: Entwurf, Abbildung
 Baulichkeit	noun	no		category word (any building)
 Völkerschaft	noun	no		sensitive
@@ -526,7 +526,7 @@ Ankauf	noun	no		abstract
 Vorbedeutung	noun	no		abstract
 Metier	noun	no		abstract
 Symptom	noun	no		abstract
-Posthorn	noun	yes	a brass post horn coiled in one round loop with a flared bell and a red tasselled cord	near: Blasinstrument, Postillon, Trompeter
+Posthorn	noun	yes	a simple brass post horn with no valves: one plain round coil of tube ending in a flared bell, a red tasselled cord	near: Blasinstrument, Postillon, Trompeter
 Vermittlung	noun	no		abstract
 Mauerwerk	noun	yes	a freestanding section of red brick wall with neat grey mortar joints, standing on grass	near: Gemäuer, Ziegelstein, Maurer
 Günstling	noun	no		relational
@@ -545,7 +545,7 @@ Bergtal	noun	scene	a wide green valley between high snow-capped mountains, a riv
 Gemäuer	noun	scene	the crumbling ivy-covered stone walls of an old roofless castle, empty window arches, grass growing on top	near: Mauerwerk, Verfall, Überrest
 Expedition	noun	no		abstract
 Empfindlichkeit	noun	no		abstract
-Verkleidung	noun	yes	a young woman with short black hair disguised with a big stuck-on grey beard, round dark glasses and a wide floppy hat	near: Maskerade, Karneval
+Verkleidung	noun	yes	a young woman with long black hair holding a fake bushy grey beard up to her chin by its string, a false nose and glasses on her face	near: Maskerade, Karneval
 Nachlässigkeit	noun	no		abstract
 Widerwärtigkeit	noun	no		abstract
 Verzierung	noun	no		abstract (general word for any ornament)
@@ -822,13 +822,13 @@ Postwagen	noun	no		duplicates Reisewagen
 Page	noun	yes	a boy of about twelve with short blond hair in a colourful medieval page costume, puffed sleeves, two-coloured tights and a feathered cap, carrying a small silver tray	near: Königssohn, Bediente
 Urbild	noun	no		abstract
 Gebein	noun	no		sensitive
-Schärpe	noun	yes	a young man with curly brown hair wearing a wide red silk sash across his chest from one shoulder to the opposite hip, over a dark blue coat	near: Band
+Schärpe	noun	yes	an older woman with grey hair in a bun wearing a wide blue silk sash from one shoulder to the opposite hip over a white dress	near: Band
 Furie	noun	no		abstract (used as an insult)
 Gehäuse	noun	no		vague: any case or housing
 Kombination	noun	no		abstract
 Anerbieten	noun	no		abstract
 Erzieher	noun	no		role not shown by dress
-Arena	noun	scene	a round open arena with a sand floor in the middle, surrounded by rising rows of wooden spectator stands, seen from above at an angle	near: Amphitheater, Rennbahn
+Arena	noun	scene	a big round open-air arena seen from a low angle: a sandy ring in the middle, curved tiers of wooden benches full of tiny spectators, flags on poles	near: Amphitheater, Rennbahn
 Entschädigung	noun	no		abstract
 Lehrmeister	noun	no		relational
 Unglaube	noun	no		abstract
@@ -853,7 +853,7 @@ Wanderschaft	noun	no		abstract
 Gesichtsfarbe	noun	no		abstract
 Scharfsinn	noun	no		abstract
 Erzeugnis	noun	no		abstract: farm produce reads as Obst
-Magazin	noun	scene	the inside of a large storehouse with high wooden beams, stacked wooden crates, sacks and barrels	
+Magazin	noun	scene	the inside of a big old warehouse: a long dim hall under a high timber roof, stacks of wooden crates, barrels and grain sacks along the walls	
 Pate	noun	no		relational
 Folgerung	noun	no		abstract
 Abkunft	noun	no		abstract
@@ -876,7 +876,7 @@ Bedeckung	noun	no		generic: any covering
 Leichnam	noun	no		sensitive
 Dose	noun	yes	a small round gold snuffbox with an engraved lid, the hinged lid slightly open	near: Behältnis, Gehäuse
 Staatsmann	noun	no		role not shown by dress
-Viereck	noun	yes	a thick orange outline of an oblong rectangle, a flat four-sided shape with four corners	near: Halbkreis
+Viereck	noun	yes	a thick orange outline of a long rectangle with four sharp right-angled corners and four straight sides	near: Halbkreis
 Latte	noun	yes	one single long thin narrow wooden slat on its own, light brown, straight and flat	near: Planke, Spalier
 Brennholz	noun	yes	a neat stack of split firewood logs with pale cut ends	near: Reisig, Span, Kaminfeuer
 Dolmetscher	noun	no		role not shown by dress
@@ -1086,7 +1086,7 @@ bequemen	verb	no		abstract
 beistehen	verb	no		abstract in the example; a helping picture fits wohltun too
 bewirten	verb	no		duplicates auftragen
 ausstatten	verb	no		abstract
-schärfen	verb	scene	an elderly man with a bushy grey beard and a bald head sharpening an axe on a spinning grindstone, orange sparks flying	near: abstumpfen
+schärfen	verb	scene	an elderly bald man with a grey beard pressing an axe blade against a round grey grindstone wheel that he turns with a crank, sparks flying	near: abstumpfen
 wegreiten	verb	scene	a young man with long dark hair on a brown horse seen from behind, galloping away down a country road toward distant hills	near: hereinreiten
 durchdenken	verb	no		thinking
 verdrießen	verb	no		emotion
@@ -1259,7 +1259,7 @@ vorspiegeln	verb	no		abstract
 auseinanderhalten	verb	no		thinking
 mitfühlen	verb	no		emotion
 behorchen	verb	scene	a teenage girl with a long brown ponytail pressing her ear to a closed wooden door, eavesdropping, eyes wide	the only listening verb in the list
-entwenden	verb	scene	a young man with ginger hair in a flat cap snatching an apple from a market stall behind the back of a grey-haired older woman selling fruit	near: hinwegnehmen, wegschleichen, aneignen
+entwenden	verb	scene	a young man in a flat cap secretly slipping an apple from a market stall into his coat pocket while the stallholder looks away	near: hinwegnehmen, wegschleichen, aneignen
 heraufsteigen	verb	no		duplicates ersteigen
 überreden	verb	no		speech
 missfallen	verb	no		emotion
@@ -1271,7 +1271,7 @@ statthaben	verb	no		abstract
 voreilen	verb	no		duplicates entgegeneilen
 verbessern	verb	no		abstract in the example; correcting looks like writing
 durchführen	verb	no		abstract
-niederstürzen	verb	yes	a middle-aged woman with a brown ponytail tripping on a tree root and falling headlong forward, arms flung out	near: zusammenstürzen
+niederstürzen	verb	yes	side view: a middle-aged woman with a brown ponytail who tripped on a tree root, falling forward headlong toward the ground, arms thrown out	near: zusammenstürzen
 ausbitten	verb	no		speech
 übereinstimmen	verb	no		abstract
 absprechen	verb	no		speech
