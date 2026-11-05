@@ -120,28 +120,42 @@
             ]
         },
         {
-            "file": "Core pictures.zip",
-            "bytes": 3354030,
-            "sha256": "02cd8ed8e4ceec24894682802399980a5b901ecf8eaf3dea96ea27d7f4c58ab3",
+            "file": "Core pictures ERNIE.zip",
+            "bytes": 3354042,
+            "sha256": "fd209d1531e8be0a80c506a84650c8a1ec33e69bab72e2fed7fcf57d0bfb2f34",
             "quizzes": [
                 {
-                    "name": "Core pictures",
-                    "source": "Core pictures.zip",
-                    "version": "02cd8ed8e4ceec24894682802399980a5b901ecf8eaf3dea96ea27d7f4c58ab3",
+                    "name": "Core pictures ERNIE",
+                    "source": "Core pictures ERNIE.zip",
+                    "version": "fd209d1531e8be0a80c506a84650c8a1ec33e69bab72e2fed7fcf57d0bfb2f34",
                     "cards": 734,
                     "pictures": 734
                 }
             ]
         },
         {
-            "file": "Core verb pictures.zip",
-            "bytes": 685620,
-            "sha256": "d240d955cba1c76f3d698ad1a6e40174f695a64fc6de91b1e60a0dae81929369",
+            "file": "Core pictures.zip",
+            "bytes": 7764784,
+            "sha256": "2353122f7cfcc40b97f2ff7e9dc38425e45f4fc598716d426b12a968915de135",
             "quizzes": [
                 {
-                    "name": "Core verb pictures",
-                    "source": "Core verb pictures.zip",
-                    "version": "d240d955cba1c76f3d698ad1a6e40174f695a64fc6de91b1e60a0dae81929369",
+                    "name": "Core pictures",
+                    "source": "Core pictures.zip",
+                    "version": "2353122f7cfcc40b97f2ff7e9dc38425e45f4fc598716d426b12a968915de135",
+                    "cards": 308,
+                    "pictures": 308
+                }
+            ]
+        },
+        {
+            "file": "Core verb pictures ERNIE.zip",
+            "bytes": 685632,
+            "sha256": "5562a94b7fd540e80dd526326ab2715fec2078720c1d9750fa6dd9f2b0363517",
+            "quizzes": [
+                {
+                    "name": "Core verb pictures ERNIE",
+                    "source": "Core verb pictures ERNIE.zip",
+                    "version": "5562a94b7fd540e80dd526326ab2715fec2078720c1d9750fa6dd9f2b0363517",
                     "cards": 144,
                     "pictures": 144
                 }

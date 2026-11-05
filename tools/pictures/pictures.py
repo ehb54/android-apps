@@ -68,24 +68,25 @@ KINDS = {
 # weights used here (`weights` at `revision`): mflux-community's 8-bit conversions,
 # which keep the original license. `mflux` is the mflux model name; steps and
 # guidance are each model's fast settings (its distilled default); size is the
-# pixel size generated (square), which the cards trim and scale to CARD_SIZE.
+# pixel size generated (square), which the cards trim and scale to CARD_SIZE;
+# label names the model in the quiz built from its pictures ("Core pictures ERNIE").
 MODELS = {
     "klein": {
-        "name": "FLUX.2 [klein] 4B", "mflux": "flux2-klein-4b",
+        "name": "FLUX.2 [klein] 4B", "label": "FLUX", "mflux": "flux2-klein-4b",
         "repo": "black-forest-labs/FLUX.2-klein-4B", "license": "Apache-2.0",
         "weights": "mflux-community/flux2-klein-4b-mflux-q8",
         "revision": "755dc213d6767d4a4eae9291dd3f6e829454177e",
         "steps": 4, "guidance": 1.0, "size": 768,
     },
     "zimage": {
-        "name": "Z-Image-Turbo", "mflux": "z-image-turbo",
+        "name": "Z-Image-Turbo", "label": "Z-Image", "mflux": "z-image-turbo",
         "repo": "Tongyi-MAI/Z-Image-Turbo", "license": "Apache-2.0",
         "weights": "mflux-community/z-image-turbo-mflux-q8",
         "revision": "4ccff28917346aa9daae49cd3c477cf5260a242c",
         "steps": 9, "guidance": None, "size": 768,
     },
     "ernie": {
-        "name": "ERNIE-Image-Turbo", "mflux": "ernie-image-turbo",
+        "name": "ERNIE-Image-Turbo", "label": "ERNIE", "mflux": "ernie-image-turbo",
         "repo": "baidu/ERNIE-Image-Turbo", "license": "Apache-2.0",
         "weights": "mflux-community/ernie-image-turbo-mflux-q8",
         "revision": "1bf0886002924e3b2af5febac79726728a1d4657",
@@ -426,8 +427,8 @@ def restore(name):
 
 def card_files(name):
     """The picked pictures as the quiz zips carry them: {kind: {lemma: (file
-    name, bytes)}}, WebP at CARD_SIZE, and the credits text for them. Used by
-    tools/wordlists/words.py build."""
+    name, bytes)}}, WebP at CARD_SIZE, the credits text for them, and the
+    model's label for the quiz name. Used by tools/wordlists/words.py build."""
     cards, models = {kind: {} for kind in KINDS}, set()
     for r in read_picks(name):
         if r["decision"] != "pick":
@@ -445,7 +446,7 @@ def card_files(name):
         f"{MODELS[m]['revision'][:10]}) using mflux, from prompts written for this list. Prompts, "
         f"seeds and the pick per word: tools/pictures/{name}/ in https://github.com/ehb54/android-apps.\n"
         for m in sorted(models))
-    return cards, credits
+    return cards, credits, "+".join(MODELS[m]["label"] for m in sorted(models))
 
 
 def review_pages(name, outdir, per_page=200):
