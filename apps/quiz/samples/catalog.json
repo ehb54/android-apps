@@ -57,6 +57,20 @@
             ]
         },
         {
+            "file": "Children's books pictures ERNIE.zip",
+            "bytes": 1992100,
+            "sha256": "be166fba0b45aec89e8064e5223d57722bc981f78e758c6fc8b8f58a8e4fe913",
+            "quizzes": [
+                {
+                    "name": "Children's books pictures ERNIE",
+                    "source": "Children's books pictures ERNIE.zip",
+                    "version": "be166fba0b45aec89e8064e5223d57722bc981f78e758c6fc8b8f58a8e4fe913",
+                    "cards": 380,
+                    "pictures": 380
+                }
+            ]
+        },
+        {
             "file": "Children's books pictures.zip",
             "bytes": 1932882,
             "sha256": "3473aecb682699c982eea1bd7701f4abc95356435fa7937b97ccbf0981ef9f76",
@@ -67,6 +81,20 @@
                     "version": "3473aecb682699c982eea1bd7701f4abc95356435fa7937b97ccbf0981ef9f76",
                     "cards": 67,
                     "pictures": 67
+                }
+            ]
+        },
+        {
+            "file": "Children's books verb pictures ERNIE.zip",
+            "bytes": 445386,
+            "sha256": "05eaefb79ff95391eed8004d8c57252adfe890097ed48662d4c96075ce800adf",
+            "quizzes": [
+                {
+                    "name": "Children's books verb pictures ERNIE",
+                    "source": "Children's books verb pictures ERNIE.zip",
+                    "version": "05eaefb79ff95391eed8004d8c57252adfe890097ed48662d4c96075ce800adf",
+                    "cards": 83,
+                    "pictures": 83
                 }
             ]
         },
