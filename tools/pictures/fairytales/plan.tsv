@@ -40,13 +40,13 @@ Muhme	noun	no		relational
 Köhler	noun	scene	a soot-blackened man with short grey hair, a charcoal burner with a shovel beside a smoking dome-shaped pile of earth-covered logs in a forest clearing	
 Hexenmeister	noun	yes	an old man with a long grey beard, a wizard in a dark blue robe and a pointed hat with stars, holding a wooden staff	near: Schwarzkünstler, Zauberin
 Zauberei	noun	no		abstract
-Königsstadt	noun	scene	a large walled city of many houses seen from a distance, a grand palace with golden roofs rising in its middle	near: Flecken, Königsschloss
+Königsstadt	noun	scene	a medieval European town inside a ring of grey stone walls with round towers, red-roofed houses crowded together and a palace with blue spires in the middle, seen from a hill	near: Flecken, Königsschloss
 Mulde	noun	no		duplicates Trog
 Schwan	noun	yes	a white swan with an orange beak gliding on a patch of blue water	
 Henne	noun	yes	a brown hen with a small red comb, standing	near: Rebhuhn, Puter, Auerhahn
 Menschenfresser	noun	no		duplicates Troll
 Ranzen	noun	yes	a brown leather backpack with two shoulder straps and a buckled flap, on its own	near: Schnappsack, Felleisen, Tornister, Jagdtasche
-Riesin	noun	scene	a giant woman with two long brown braids and a green dress, so tall that the fir trees around her reach only to her knees	near: Troll
+Riesin	noun	scene	a giant woman with two long brown braids and a green dress striding through a valley, a whole village of tiny houses reaching only to her ankles	near: Troll
 Becken	noun	no		vague (a basin of water reads as Springbrunnen or Waschbecken)
 Entstehung	noun	no		abstract
 Spindel	noun	yes	a slim pointed wooden spindle with a bulge of spun beige wool wound around its middle, on its own	near: Spule, Spinnrocken
@@ -108,7 +108,7 @@ Poet	noun	yes	a man with long dark wavy hair and a laurel wreath, a poet writing
 Fuhrmann	noun	scene	a stocky man with sandy hair and a broad hat, a carter on a wooden cart loaded with sacks, driving one horse with a whip	near: Postillon
 Tote	noun	no		sensitive
 Hochzeitsfest	noun	scene	a bride with brown hair in a pale pink veil and a blond groom at the head of a long festive table, guests raising cups	near: Gastmahl, Hochzeitssaal, Vermählung, Brautleute
-Drescher	noun	scene	a muscular man with short red hair, a thresher swinging a wooden flail over sheaves of grain on a barn floor	near: Dreschflegel, Tenne
+Drescher	noun	scene	a man with short red hair in a linen shirt beating grain on a barn floor with a flail: a long pole with a short stick swinging from its end	near: Dreschflegel, Tenne
 Geheiß	noun	no		abstract
 Falke	noun	yes	a falcon with a hooked beak, a blue-grey back and a spotted pale breast, perched on a falconer's leather glove	near: Habicht, Raubvogel
 Hochgericht	noun	no		sensitive
@@ -179,7 +179,7 @@ Silbergeld	noun	no		duplicates Geldstück
 Füllen	noun	yes	a young brown foal with long thin legs and a short fluffy mane, standing	near: Stute
 Lachs	noun	scene	a silver salmon with a pink sheen leaping up out of a small waterfall	near: Hecht, Karpfen
 Hofstaat	noun	no		abstract (a group of people at court)
-Felsenwand	noun	scene	a tall steep grey rock face rising above a green meadow, with cracks and a few small bushes	near: Steinwand, Felsblock
+Felsenwand	noun	scene	a long sheer grey cliff wall stretching from edge to edge, rising straight up from a green meadow, one tiny pine tree at its foot	near: Steinwand, Felsblock
 Stallmeister	noun	no		duplicates Stallknecht
 Vertiefung	noun	no		abstract
 Eichhörnchen	noun	yes	a red squirrel with a bushy tail and tufted ears, holding a nut	near: Marder
@@ -315,8 +315,8 @@ Badestube	noun	no		no plain look (reads as Zuber)
 Zauberbuch	noun	yes	a thick old leather-bound book with a silver moon and stars on its cover, glowing with a faint purple light	near: Bilderbuch
 Nachtwächter	noun	scene	an older man with a grey moustache, a night watchman in a long dark coat, holding up a lantern and a horn on a village street at night	near: Ausrufer
 Dorfbewohner	noun	no		role has no plain sign
-Ziegenbock	noun	yes	a shaggy billy goat with large swept-back horns and a long beard	near: Geiß, Zicklein, Widder
-Esse	noun	scene	a blacksmith's open brick hearth with glowing red coals, bellows beside it and tongs in the fire	near: Amboss, Kohlenbecken, Backofen
+Ziegenbock	noun	yes	a shaggy billy goat with two long backward-sweeping straight horns and a long pointed goat beard, side view	near: Geiß, Zicklein, Widder
+Esse	noun	scene	a blacksmith's open forge: a waist-high brick hearth with glowing coals under a wide hood and chimney, a big leather bellows beside it, an anvil in front	near: Amboss, Kohlenbecken, Backofen
 Zank	noun	no		abstract
 Wallfahrt	noun	no		sensitive (religion)
 Feige	noun	yes	a purple fig, one whole and one cut open showing its pink seedy inside	
@@ -342,7 +342,7 @@ Strohmann	noun	yes	a life-size figure stuffed with straw, dressed in old clothes
 Ergötzlichkeit	noun	no		abstract
 Pavillon	noun	yes	an open round garden pavilion with slender columns and a green domed roof, standing on a lawn	near: Lusthaus, Gartenhaus
 Wohlleben	noun	no		abstract
-Donnerbüchse	noun	yes	an old flintlock blunderbuss gun with a wide flared trumpet-shaped muzzle and a dark wooden stock, lying on its own	
+Donnerbüchse	noun	yes	an old blunderbuss gun lying sideways, its short brass barrel opening into a wide flared bell-shaped mouth like a trumpet	
 Trommelschläger	noun	yes	a young man with curly red hair in a blue uniform jacket beating a drum that hangs at his hip, a drumstick in each hand	near: Pauke
 Abmahnung	noun	no		abstract
 Bierkanne	noun	yes	a tall grey pewter beer jug with a hinged lid and a handle, light brown foam spilling over the rim	near: Weinfass, Pokal
@@ -357,8 +357,8 @@ Hebamme	noun	no		not plain by dress (a woman with a baby reads as Wöchnerin)
 Groschen	noun	no		duplicates Geldstück
 Gewächs	noun	yes	a leafy green plant with broad leaves growing in a brown clay flowerpot, no flowers	near: Spross, Gesträuch
 Gitterfenster	noun	yes	a small window in a grey stone wall with thick black iron bars across it	near: Eisengitter
-Brosame	noun	yes	a scattering of small golden-brown bread crumbs on a dark wooden table, no loaf and no slice	near: Bissen
-Katzenauge	noun	yes	the single glowing yellow-green eye of a cat with a narrow black slit pupil, close up, on its own, no face	
+Brosame	noun	yes	a small scatter of golden bread crumbs on a dark wooden table, close up, no loaf and no slice anywhere	near: Bissen
+Katzenauge	noun	yes	an extreme close-up of one cat's eye filling the picture: a yellow-green iris with a narrow black slit pupil, ringed by grey fur	
 Schweinefleisch	noun	yes	a raw pink pork chop with a rim of fat and a small bone, lying on a wooden cutting board	near: Wildbret
 Trog	noun	yes	a long open wooden trough on two short legs, half full of water, standing in a farmyard	near: Mulde, Backtrog, Krippe, Zuber
 Bürde	noun	no		abstract (a load; a bundle on the back reads as Reisig)
@@ -599,7 +599,7 @@ Felsstück	noun	no		duplicates Felsblock
 Galgenvogel	noun	no		a character, not a look
 Schwedenkönig	noun	no		sensitive (nationality)
 Labetrunk	noun	no		vague (any drink)
-Pauke	noun	yes	a large copper kettledrum with a round skin top, standing on three legs, two padded mallets on top	near: Trommelschläger
+Pauke	noun	yes	a big copper kettledrum shaped like a huge round bowl with a tight pale skin across its top, on three short legs, two soft mallets resting on it	near: Trommelschläger
 Morgenland	noun	no		abstract (a region)
 Schlossberg	noun	no		duplicates Königsschloss (a hill with a castle reads as the castle)
 Teilung	noun	no		abstract
@@ -639,7 +639,7 @@ Gefieder	noun	no		part (drawn as a bird)
 Morast	noun	scene	a swampy mire of deep sticky brown mud and puddles with clumps of reeds	near: Irrlicht
 Glockenstrang	noun	no		duplicates Seil
 Hohlweg	noun	scene	a narrow dirt lane cut deep between steep earth banks overgrown with roots and bushes	near: Fußsteig, Bergschlucht
-Irrlicht	noun	scene	a small glowing pale-green ball of light floating over a dark marsh at night	near: Morast
+Irrlicht	noun	scene	a few small flickering pale-green flames of light hovering low among dark marsh reeds at night, no moon in the sky	near: Morast
 Wehr	noun	no		abstract
 Nachen	noun	yes	a small narrow wooden rowing boat with two oars, floating empty on a calm river	near: Floß
 Abendmahl	noun	no		sensitive (religious rite)
@@ -654,7 +654,7 @@ Grotte	noun	no		duplicates Felsenhöhle
 Hochzeitstag	noun	no		abstract (time word)
 Armbrust	noun	yes	a medieval wooden crossbow with a steel bow and a bolt loaded, on its own	near: Köcher
 Fingerhut	noun	yes	a single silver metal thimble with a dimpled surface, on its own	
-Gewitterwolke	noun	yes	a huge towering dark grey thundercloud with a flat base and a billowing top rising high over a green field, no lightning and no rain	near: Blitzstrahl, Regenwetter, Ungewitter
+Gewitterwolke	noun	yes	a huge dark grey thundercloud high in a blue sky, its top spreading out flat like an anvil, a tiny distant green field far below	near: Blitzstrahl, Regenwetter, Ungewitter
 Bekümmernis	noun	no		emotion
 Nachstellung	noun	no		abstract
 Vorderteil	noun	no		relational (the front of anything)
@@ -672,7 +672,7 @@ Schuldner	noun	no		relational
 Urgroßvater	noun	no		relational
 Getümmel	noun	no		vague (a crowd)
 Specht	noun	yes	a black-and-white woodpecker with a red cap clinging to a tree trunk, pecking the bark	
-Seidenstoff	noun	yes	a length of shiny red silk fabric draped in soft gleaming folds	
+Seidenstoff	noun	yes	a rolled bolt of shiny red silk cloth lying on a table, one loose end unrolled across it in soft gleaming folds	
 Habicht	noun	no		duplicates Falke
 Haarlocke	noun	yes	a single curled lock of chestnut-brown hair tied with a thin red ribbon, on its own	near: Barthaar
 Vorgebirge	noun	no		gloss (foothills) and example (a headland) disagree; reads as hills or Halbinsel
@@ -730,7 +730,7 @@ Spötter	noun	no		a character, not a look
 Kornfeld	noun	scene	a wide field of ripe golden grain under a blue sky, a few red poppies at its edge	near: Ackerland, Getreide, Ähre
 Hacke	noun	no		part of a foot; drawn as a foot (also means hoe)
 Laken	noun	no		a sheet looks like a towel or blanket (Handtuch)
-Ähre	noun	yes	a single golden head of grain with plump kernels in neat rows, on a short stalk, close up, on its own	near: Weizen, Gerste, Hafer, Getreide
+Ähre	noun	yes	one single slim ear of wheat on a thin straw stalk: a narrow golden spike of plump kernels with long fine bristles, close up, no maize	near: Weizen, Gerste, Hafer, Getreide
 Gemütsart	noun	no		abstract
 Führerin	noun	no		a role not shown by dress
 Brautbett	noun	no		a bed; bridal not visible
@@ -842,10 +842,10 @@ Imbiss	noun	no		any small meal; not plain
 Bilderbuch	noun	yes	an open children's picture book showing big colourful pictures of animals on both pages, no writing	near: Zauberbuch
 Festland	noun	no		relational
 Lebensart	noun	no		abstract
-Halbinsel	noun	scene	a green peninsula reaching out into a blue sea, joined to the land on one side, seen from above	near: Meeresstrand, Mündung
+Halbinsel	noun	scene	a map seen from above: a wide green mainland filling the whole bottom edge, and one narrow green peninsula joined to it, reaching up into the blue sea	near: Meeresstrand, Mündung
 Rosenhecke	noun	scene	a long, dense hedge of thorny branches covered with red roses, standing like a wall beside a path	near: Rosenstrauch
 Überbleibsel	noun	no		abstract
-Hagelwetter	noun	scene	ice-blue hailstones falling from a dark grey cloud and bouncing on green grass	near: Regenwetter, Ungewitter
+Hagelwetter	noun	scene	round white hailstones like small balls of ice falling from a dark grey cloud and lying scattered on green grass	near: Regenwetter, Ungewitter
 Plage	noun	no		abstract
 Sachse	noun	no		sensitive
 Verrichtung	noun	no		abstract
@@ -859,7 +859,7 @@ Ausschmückung	noun	no		abstract
 Ameisenhaufen	noun	yes	a large mound of brown pine needles on a forest floor with many ants crawling over it	
 Hirschfänger	noun	yes	a short straight hunting sword with a stag-antler grip and a brass guard, beside its brown leather sheath	
 Gottseibeiuns	noun	yes	a fairy-tale devil with red skin, two small horns, a pointed tail, a goat beard and one hoof, grinning	near: Unhold, Teufelskerl
-Rennbahn	noun	scene	an oval horse racetrack with a brown wooden rail fence, two jockeys on horses galloping round the bend	near: Wettlauf
+Rennbahn	noun	scene	a long oval horse-racing track with a white rail fence, two jockeys in bright silks galloping past a small roofed grandstand, side view	near: Wettlauf
 Höfling	noun	no		a man in court dress; not plain apart from Edle, Landesherr
 Schnupftuch	noun	yes	an older man with grey hair holding a large blue checked handkerchief to his nose	near: Halstuch, Handtuch
 Häscher	noun	no		not plain apart from Scherge, Schildwache
@@ -978,7 +978,7 @@ Schlachtordnung	noun	no		abstract
 Scheideweg	noun	no		duplicates Kreuzweg
 Schall	noun	no		a sound
 Zutritt	noun	no		abstract
-Keule	noun	yes	a heavy wooden cudgel, thick and knobbly at one end with a narrow handle, on its own	near: Haselstock, Wanderstab
+Keule	noun	yes	a big wooden club on its own, a thin handle widening into a thick, knobbly round head, like a giant's club	near: Haselstock, Wanderstab
 Felsblock	noun	yes	a huge grey boulder lying on its own in a green meadow	near: Felsstück, Kieselstein
 Landesherr	noun	no		a ruler; not plain apart from Edle, Höfling
 Tornister	noun	no		duplicates Ranzen
@@ -1025,10 +1025,10 @@ belohnen	verb	no		duplicates beschenken
 beschenken	verb	scene	an older woman with grey curls handing a wrapped present with a red ribbon bow to a smiling little boy with blond hair	near: belohnen, bescheren
 hereintreten	verb	no		direction not shown
 erlustigen	verb	no		abstract (make merry)
-mähen	verb	scene	a middle-aged man with a ginger beard and a straw hat mowing tall grass with a long scythe, cut grass lying in a row beside him	
+mähen	verb	scene	a middle-aged man with a ginger beard swinging a long scythe, its long curved blade low through tall grass, cut grass lying in a row	
 abschlagen	verb	no		abstract (turn down)
 unterweisen	verb	no		speech (instruct)
-besteigen	verb	scene	a young man with black hair mounting a brown horse, one foot in the stirrup, swinging his other leg up over the saddle	near: absteigen, ersteigen
+besteigen	verb	scene	a young man standing beside a brown horse, his left foot in the stirrup, pulling himself up into the saddle, his right foot still on the ground	near: absteigen, ersteigen
 ergrimmen	verb	no		emotion
 hüpfen	verb	yes	a little girl with blond pigtails hopping on one foot, the other leg bent up behind her, arms out for balance	near: umherspringen, herausspringen
 verrichten	verb	no		abstract (perform)
