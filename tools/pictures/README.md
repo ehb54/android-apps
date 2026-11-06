@@ -136,6 +136,7 @@ riding off or riding up. Same model, settings and review as the core list.
 |---|---|---|---|---|
 | History | 85 | 83 (66 nouns, 17 verbs) | 2 | 0.37 + 0.10 MB |
 | Goethe | 243 | 236 (204 nouns, 32 verbs) | 7 | 1.1 + 0.18 MB |
+| Children's books | 474 | 463 (380 nouns, 83 verbs) | 11 | 2.0 + 0.45 MB |
 
 Each list gets `<Title> pictures ERNIE.zip` and `<Title> verb pictures
 ERNIE.zip` as new quizzes; its emoji `<Title> pictures.zip` is unchanged.
