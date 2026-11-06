@@ -239,6 +239,20 @@
             ]
         },
         {
+            "file": "Fairy tales pictures ERNIE.zip",
+            "bytes": 2026986,
+            "sha256": "50a44dc1d407c71b28dfa9479076b425423b168920d1b39628c04cf8d914a84f",
+            "quizzes": [
+                {
+                    "name": "Fairy tales pictures ERNIE",
+                    "source": "Fairy tales pictures ERNIE.zip",
+                    "version": "50a44dc1d407c71b28dfa9479076b425423b168920d1b39628c04cf8d914a84f",
+                    "cards": 382,
+                    "pictures": 382
+                }
+            ]
+        },
+        {
             "file": "Fairy tales pictures.zip",
             "bytes": 1766506,
             "sha256": "eff10b48307507826e4bcf2e336bd4095256880234c76c5a4c5202a9d1fd242c",
@@ -249,6 +263,20 @@
                     "version": "eff10b48307507826e4bcf2e336bd4095256880234c76c5a4c5202a9d1fd242c",
                     "cards": 57,
                     "pictures": 57
+                }
+            ]
+        },
+        {
+            "file": "Fairy tales verb pictures ERNIE.zip",
+            "bytes": 399071,
+            "sha256": "36f7faa72ff0051115373f45bed29b03ccea4e2134e4240fcce7f3b886c5aaa6",
+            "quizzes": [
+                {
+                    "name": "Fairy tales verb pictures ERNIE",
+                    "source": "Fairy tales verb pictures ERNIE.zip",
+                    "version": "36f7faa72ff0051115373f45bed29b03ccea4e2134e4240fcce7f3b886c5aaa6",
+                    "cards": 71,
+                    "pictures": 71
                 }
             ]
         },
