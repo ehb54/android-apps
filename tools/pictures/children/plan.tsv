@@ -36,7 +36,7 @@ Brötchen	noun	yes	a crusty golden-brown bread roll with a single cut along the 
 Bergrücken	noun	no		duplicates Bergspitze
 Hosenboden	noun	no		a part; drawn as the whole trousers
 Igel	noun	yes	a hedgehog with brown spines, a pointed snout and small black eyes, walking on the ground	
-Stalltür	noun	scene	a wooden stable door split into an upper and a lower half, set in a red timber barn wall, straw at its foot	near: Scheunentor, Zimmertür
+Stalltür	noun	scene	a stable door split across the middle, its top half open and a brown horse's head looking out over the closed bottom half, in a white stone wall	near: Scheunentor, Zimmertür
 Dohle	noun	yes	a jackdaw, a small black crow with a silver-grey nape and pale whitish eyes, perched on a branch	near: Star, Elster
 Halfter	noun	no		a part of tack; drawn on a horse's head it reads as the horse
 Schultag	noun	no		abstract (time word)
@@ -180,9 +180,9 @@ Nachtquartier	noun	no		abstract (a function of a place)
 Wildnis	noun	no		abstract (any untouched landscape)
 Überrest	noun	no		abstract
 Lehnsessel	noun	yes	a high-backed armchair upholstered in green fabric, with curved wooden armrests	
-Baumwurzel	noun	yes	a tangle of thick, twisting brown tree roots on its own, pulled out of the ground with clumps of earth, no trunk	near: Baumstumpf
+Baumwurzel	noun	yes	a close-up of thick gnarled brown tree roots snaking across a forest path, no trunk and no stump in view	near: Baumstumpf
 Weiß	noun	no		abstract (a colour)
-Hacke	noun	yes	a garden hoe: a long wooden handle with a flat metal blade fixed at a right angle at its end	near: Spaten
+Hacke	noun	yes	a garden hoe on its own: a long wooden handle ending in a flat steel blade bent at a right angle to it, like the letter L	near: Spaten
 Pfirsich	noun	yes	a round peach with a soft orange-and-red blush and a single green leaf on its stem	near: Pflaume
 Menagerie	noun	scene	a travelling animal show: a row of painted wooden wagons with barred cages holding a lion, a bear and a monkey	near: Zirkus, Gehege
 Kundschafter	noun	no		a role not shown (looks like any man)
@@ -257,7 +257,7 @@ Kupfer	noun	no		a material; a copper thing reads as that thing
 Hergang	noun	no		abstract
 Ansiedler	noun	no		a role not shown plainly (looks like a farmer or woodcutter)
 Lineal	noun	yes	a long straight wooden measuring ruler with fine black tick marks along one edge, no numbers	
-Überschwemmung	noun	scene	a flooded village street, houses and trees standing in wide brown floodwater up to their windows	near: Sintflut
+Überschwemmung	noun	scene	a flooded village street: houses and trees standing in wide rippling muddy water up to their windows, a small rowing boat floating between them	near: Sintflut
 Reisekoffer	noun	yes	a brown leather suitcase with a handle, two buckled straps and metal corners	near: Reisetasche
 Küchenschürze	noun	yes	a blue-and-white checked kitchen apron with a bib, long ties and a front pocket, on its own	
 Flussufer	noun	scene	a grassy bank sloping down to a wide, slow river, a willow tree leaning over the water	near: Bachrand
@@ -313,7 +313,7 @@ Floß	noun	yes	a raft of logs lashed together with rope, floating on a river	nea
 Schneefeld	noun	no		reads as a snowy mountain (Bergspitze); white on white
 Lockenhaar	noun	no		a part; curly hair is drawn as a curly-haired person (Lockenkopf)
 Morgengruß	noun	no		abstract (speech)
-Tischgebet	noun	scene	a grey-haired father, a mother with a brown bun, a red-haired boy and a small blond girl at a dinner table, heads bowed and hands folded before the meal	near: Abendgebet, Dankgebet
+Tischgebet	noun	scene	a family at a set dinner table, all four with heads bowed, eyes closed and hands folded in prayer, the food not yet touched	near: Abendgebet, Dankgebet
 Verschlag	noun	no		duplicates Bodenkammer
 Pferdestall	noun	scene	the inside of a horse stable: two brown horses in wooden box stalls with straw on the floor and bridles hanging on the wall	near: Kuhstall, Stalltür
 Hintertreppe	noun	no		relational (back stairs look like any stairs)
@@ -409,7 +409,7 @@ Schreckensschrei	noun	no		a sound
 Sodawasser	noun	yes	an old-fashioned blue glass soda siphon bottle with a metal lever top beside a tumbler of fizzing, bubbly water	near: Regenwasser
 Redekunst	noun	no		abstract
 Geographie	noun	no		abstract (school subject)
-Knüppel	noun	yes	a short thick rough wooden cudgel, a cut length of knotty branch with the bark still on it	near: Keule, Stecken, Gerte
+Knüppel	noun	no		duplicates Keule (a short cudgel is drawn as a log or as a club)
 Regenwasser	noun	no		water has no shape of its own; reads as rain or a puddle (near: Regenschauer)
 Lehrgeld	noun	no		abstract
 Elfe	noun	yes	a tiny slender young elf woman with long pale-green hair, pointed ears and see-through dragonfly wings, dancing barefoot on a flower	fairy-tale figure; near: Kobold, Schutzengel, Christkind
@@ -651,7 +651,7 @@ Anerbieten	noun	no		abstract
 Gesangbuch	noun	yes	a small black leather-bound hymnbook with a golden cross on its cover and a red ribbon bookmark	near: Lesebuch, Märchenbuch
 Weizen	noun	no		duplicates Getreide (wheat looks like grain in general)
 Nachtzeit	noun	no		abstract (time word)
-Aal	noun	yes	a long slippery dark olive-green eel swimming in an S-curve, a thin fin running along its back	near: Barsch, Regenwurm
+Aal	noun	yes	a long slippery olive-green eel swimming through blue water among green water plants, a thin fin along its back, two tiny fish nearby	near: Barsch, Regenwurm
 Hinrichtung	noun	no		sensitive (execution)
 Hohngelächter	noun	no		a sound
 Truthahn	noun	yes	a turkey cock with a fanned tail of bronze feathers, a bare red head and a dangling red wattle	near: Pfau
@@ -833,7 +833,7 @@ Schneemasse	noun	no		a heap of snow reads as Schneefeld
 Talglicht	noun	yes	a short, thick, yellowish candle burning in a simple tin candleholder with a finger loop	near: Lichtschimmer
 Rüge	noun	no		abstract: speech
 Lichtstrahl	noun	scene	a single bright beam of sunlight falling through a small high window into a dark stone room	near: Lichtschimmer
-Staubwolke	noun	scene	a thick billowing cloud of grey-brown dust rising from a dry dirt road	near: Rauchsäule
+Staubwolke	noun	scene	a low wide cloud of grey-brown dust billowing up behind a horse-drawn cart driving along a dry dirt road	near: Rauchsäule
 Hochzeitstag	noun	no		a date; time
 Zank	noun	no		a quarrel; speech, reads as Balgerei
 Würdenträger	noun	no		rank not visible
@@ -863,7 +863,7 @@ Aufdringlichkeit	noun	no		abstract
 Regenschirm	noun	yes	an open red umbrella with a curved wooden handle	
 Neujahr	noun	no		time
 Sonntagnachmittag	noun	no		time
-Verneigung	noun	yes	a young man with slicked black hair in a dark tailcoat, bending deeply forward from the waist in a polite greeting, one hand on his chest	near: Knicks
+Verneigung	noun	yes	side view: a young man with slicked black hair in a dark tailcoat bowing very deeply from the waist, back almost level, one hand on his chest	near: Knicks
 Treppenstufe	noun	no		a single step reads as stairs; near Kellertreppe, Freitreppe
 Regentropfen	noun	no		duplicates Wassertropfen
 Lebensglück	noun	no		abstract
