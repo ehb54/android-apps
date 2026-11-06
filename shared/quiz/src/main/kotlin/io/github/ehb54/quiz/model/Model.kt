@@ -158,6 +158,19 @@ data class QuizSettings(
         const val DEFAULT_SESSION_SIZE = 20
         const val DEFAULT_BLOCK_SIZE = 6
         const val DEFAULT_CHOICES = 4
+
+        /**
+         * The choices of [sessionSize] for a quiz of [cards] cards: 5 to 100 in small
+         * steps, then 250 doubling (500, 1000, 2000, ...), as far as they stay below the
+         * quiz's size, then 0 (all). A list of any length gets steps all the way up.
+         */
+        fun sessionSizeSteps(cards: Int): List<Int> {
+            val doubling = generateSequence(FIRST_DOUBLING_SIZE) { if (it <= Int.MAX_VALUE / 2) it * 2 else null }
+            return (SMALL_SESSION_SIZES.asSequence() + doubling).takeWhile { it < cards }.toList() + 0
+        }
+
+        private val SMALL_SESSION_SIZES = listOf(5, 10, 15, 20, 25, 30, 40, 50, 75, 100)
+        private const val FIRST_DOUBLING_SIZE = 250
     }
 }
 

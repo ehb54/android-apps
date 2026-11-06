@@ -72,9 +72,6 @@ private val blockSizes = (3..10).toList()
 /** Pick mode: choices per card. */
 private val choiceCounts = (2..8).toList()
 
-/** Cards per session when no range is set; 0 means all. */
-private val sessionSizes = listOf(5, 10, 15, 20, 25, 30, 40, 50, 75, 100, 0)
-
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun QuizDetailScreen(quiz: Quiz, vm: QuizViewModel, snackbar: SnackbarHostState) {
@@ -274,11 +271,14 @@ private fun SessionSettings(quiz: Quiz, onChange: (QuizSettings) -> Unit, onStar
             Toggle(stringResource(R.string.tighten), settings.tighten) { onChange(settings.copy(tighten = it)) }
         }
         Toggle(stringResource(R.string.shuffle), settings.shuffle) { onChange(settings.copy(shuffle = it)) }
+        // Cards per session when no range is set. Steps go up to the quiz's size;
+        // a size at or above it takes every due card, so it reads "all".
+        val sessionSize = settings.sessionSize.takeIf { it < quiz.cards.size } ?: 0
         Stepper(
             stringResource(R.string.session_size),
-            settings.sessionSize,
-            sessionSizes,
-            if (settings.sessionSize <= 0) stringResource(R.string.all_cards) else settings.sessionSize.toString(),
+            sessionSize,
+            QuizSettings.sessionSizeSteps(quiz.cards.size),
+            if (sessionSize <= 0) stringResource(R.string.all_cards) else sessionSize.toString(),
         ) { onChange(settings.copy(sessionSize = it)) }
         Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             Text(stringResource(R.string.range), Modifier.weight(1f))
