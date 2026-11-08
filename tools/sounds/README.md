@@ -62,9 +62,9 @@ good-enough sound):
    one after another, each making and scoring every text. After each voice,
    `pick` and `collect` run, so after the first voice every text already has
    a sound in `de/raw/sounds/`, and each later voice can only improve it.
-2. `retake` makes four more takes, with other seeds, with the MLX voices
-   (Qwen3-TTS, OmniVoice, Chatterbox; Piper takes no seed) of each text whose
-   pick is below the bar, and keeps each voice's best take.
+2. `retake` makes four more takes, with other seeds, with each voice of
+   each text whose pick is below the bar, and keeps each voice's best take.
+   (The German run's retakes left out Thorsten, which was not seeded then.)
 3. `pick` takes each text's surest sound; `collect` copies it, evened, to
    `de/raw/sounds/` and writes `de/raw/sounds.tsv`: the file, the text, what
    was said, voice, seed, Whisper's chance and sureness, license, quizzes.
@@ -182,15 +182,28 @@ takes of such words on the laptop are the cheaper fix (`retake`, below).
 
 ### More takes of weak words
 
-An MLX model makes a different take of a word with each seed. `retake` finds
-the words whose pick Whisper gives less than 80% (`RETAKE_BELOW`). For each,
-it makes takes with seeds 1 to 5 with Qwen3-TTS and OmniVoice
-(`RETAKE_ENGINES`; Piper takes no seed). It scores every take, evened like
-the rest, and makes the best take that engine's sound for the word. The
-engine's `log.tsv` then gives that take's seed, so it can be made again. All
-takes stay in `raw/<engine>/takes/` (`<kind>-<lemma>~<seed>.wav`, with their
-own `log.tsv` and `score.tsv`), and the page says which take a sound is. Then
-it picks again.
+Every voice makes a different take of a word with each seed. (Piper's
+randomness comes from onnxruntime, which takes its seed when a model loads,
+so Piper loads its voice afresh for each sound, about 1 s; Thorsten's first
+German sounds were made before that and have no seed in `log.tsv`.) `retake`
+finds the words whose pick is below the bar (`SURE` a piece, or `--below`).
+For each, it makes takes with seeds 1 to 1 + takes with each voice named
+(`RETAKE_ENGINES`). It scores every take, evened like the rest, and makes the
+best take that engine's sound for the word, with the take's evened copy and
+score, so nothing is evened or scored twice. The engine's `log.tsv` then
+gives that take's seed, so it can be made again. All takes stay in
+`raw/<engine>/takes/` (`<kind>-<lemma>~<seed>.wav`, with their own `log.tsv`
+and `score.tsv`), and the page says which take a sound is. Then it picks
+again. Run it again with more takes and only the texts still below get them;
+the takes made already are kept:
+
+```bash
+tools/sounds/run.sh retake de all qwen3-design,piper-thorsten,omnivoice,chatterbox 9 --below 0.8
+```
+
+Each further seed helps less. Of the German texts still below 80% a piece,
+the second take of every voice lifted 43% over it, the third 24%, the fourth
+14% and the fifth 9%.
 
 In the pilot it took under a minute and fixed both words: Gasse went to
 95% with Qwen3-TTS take 2 (its first take had 14%), and aufstehen to 85% with
@@ -242,9 +255,9 @@ Every step skips work already done.
    one download a second (Wikimedia answers faster ones with HTTP 429).
 3. `run.sh hear <list> <words>` has Whisper write down each sound and score
    its chance. `run.sh pick <list> <words>` does the same, then writes
-   `raw/picks.tsv` and lists the picks below 50%. `run.sh retake <list>
-   <words> [engines] [takes]` makes more takes of the words picked below 80%
-   (see above), keeps the best and picks again.
+   `raw/picks.tsv` and lists the picks below 80% a piece. `run.sh retake
+   <list> <words> [engines] [takes] [--below N]` makes more takes of the words
+   picked below the bar (see above), keeps the best and picks again.
 4. `run.sh page <list> <words>` writes `raw/listen/pilot.html`. Open it
    through a local web server, e.g.
    `python3 -m http.server 8765 --directory tools/sounds/core/raw/listen`,

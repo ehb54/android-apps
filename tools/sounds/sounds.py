@@ -117,14 +117,15 @@ ENGINES = {
 WIKIMEDIA = "wikimedia"
 NOUN, VERB = "Q1084", "Q24905"  # Wikidata lexical categories
 # Per language: the voices `make` makes every text with (any voice that is the
-# surest for some texts belongs here: eb, after the trial); the seeded voices
-# `retake` makes more takes with; and Whisper's language. Another language
-# needs its own voices in ENGINES (Piper and Qwen3-TTS have many) and a line here.
+# surest for some texts belongs here: eb, after the trial); the voices
+# `retake` makes more takes with (every voice is seeded, Piper too); and
+# Whisper's language. Another language needs its own voices in ENGINES (Piper
+# and Qwen3-TTS have many) and a line here.
 LANGUAGES = {
     "de": {
         "whisper": "de",
         "engines": ["qwen3-design", "piper-thorsten", "omnivoice", "chatterbox"],
-        "retake": ["qwen3-design", "omnivoice", "chatterbox"],
+        "retake": ["qwen3-design", "piper-thorsten", "omnivoice", "chatterbox"],
     },
 }
 
@@ -330,6 +331,7 @@ def append_log(path, row):
 
 
 def piper_synth(cfg):
+    import onnxruntime
     from piper import PiperVoice
 
     voice = cfg["voice"]
@@ -340,10 +342,16 @@ def piper_synth(cfg):
             [sys.executable, "-m", "piper.download_voices", voice, "--download-dir", str(VOICES)],
             check=True,
         )
-    pv = PiperVoice.load(str(onnx))
-    version = "piper-tts " + importlib.metadata.version("piper-tts")
+    version = "piper-tts {} onnxruntime {}".format(
+        importlib.metadata.version("piper-tts"), importlib.metadata.version("onnxruntime")
+    )
 
     def synth(text, path, seed):
+        # Piper's noise comes from onnxruntime, which seeds it when a model
+        # loads, so a fresh load per sound (about 1 s) makes a text and seed
+        # give the same sound every time. (Sounds made before this were unseeded.)
+        onnxruntime.set_seed(seed)
+        pv = PiperVoice.load(str(onnx))
         with wave.open(str(path), "wb") as wf:
             pv.synthesize_wav(text, wf)
 
@@ -792,7 +800,7 @@ DOUBT_SURE = 0.8  # a pick less sure than this a piece needs an ear (`pick`)
 LISTEN_LIMITED = 4.0  # dB: the page flags sounds limited this much, to check by ear
 
 
-RETAKE_ENGINES = "qwen3-design,omnivoice"  # seeded (MLX), so each take differs
+RETAKE_ENGINES = "qwen3-design,piper-thorsten,omnivoice,chatterbox"  # each seed makes another take
 
 
 def best_chance(ranked, stem):
@@ -831,27 +839,26 @@ def some(items, n=20):
 
 
 def retake(args):
-    """For each text whose pick Whisper is less SURE of, makes
-    more takes (seeds 1 to 1 + takes) with each engine named, into
-    raw/<engine>/takes/<kind>-<lemma>~<seed>.wav (with log.tsv and
-    score.tsv there), and makes the take Whisper is surest of that engine's
-    sound for the word: raw/<engine>/<kind>-<lemma>.wav, its log.tsv row
-    then giving that seed. Then picks again."""
+    """For each text whose pick Whisper is less sure of than `below` a piece
+    (default SURE), makes more takes (seeds 1 to 1 + takes) with each engine
+    named, into raw/<engine>/takes/<kind>-<lemma>~<seed>.wav (with log.tsv
+    and score.tsv there), and makes the take Whisper is surest of that
+    engine's sound for the word: raw/<engine>/<kind>-<lemma>.wav, its log.tsv
+    row then giving that seed. Then picks again. Run it again with more takes
+    for the texts still below: the takes made already are kept."""
     from mlx_audio.stt.utils import load_model
 
     raw = HERE / args.list / "raw"
     lang = LANGUAGES[lang_of(args.list)]["whisper"]
     engines = args.engines.split(",")
-    for e in engines:
-        if ENGINES[e]["runner"] != "mlx":
-            sys.exit(f"{e}: only MLX engines take a seed, so only they make different takes")
+    below = getattr(args, "below", None) or SURE
     args.sources = None
     args.sources = ",".join(candidates(raw, args))
     hear(args)
     words = read_words(args.list, args.words)
     ranked = whisper_picks(raw, words, args.sources.split(","))
-    weak = [(k, l, t) for k, l, t, _ in words if sureness(best_chance(ranked, f"{k}-{l}"), t) < SURE]
-    print(f"{len(weak)} texts picked below {SURE:.0%} a piece: "
+    weak = [(k, l, t) for k, l, t, _ in words if sureness(best_chance(ranked, f"{k}-{l}"), t) < below]
+    print(f"{len(weak)} texts picked below {below:.0%} a piece: "
           + some(f"{t.rstrip('.')} ({sureness(best_chance(ranked, f'{k}-{l}'), t):.0%})" for k, l, t in weak))
     if not weak:
         return
@@ -886,7 +893,8 @@ def retake(args):
         if not todo:
             continue
         print(f"{e}: {len(todo)} takes to make")
-        synth, model, version = mlx_synth(ENGINES[e])
+        cfg = ENGINES[e]
+        synth, model, version = (piper_synth if cfg["runner"] == "piper" else mlx_synth)(cfg)
         for i, (k, l, t, s) in enumerate(todo, 1):
             path = takes / f"{k}-{l}~{s}.wav"
             start = time.time()
@@ -905,7 +913,7 @@ def retake(args):
         score_tsv = takes / "score.tsv"
         got = {r["file"]: float(r["chance"]) for r in read_tsv(score_tsv)} if score_tsv.exists() else {}
         made = {r["file"]: r for r in read_tsv(takes / "log.tsv")} if (takes / "log.tsv").exists() else {}
-        promoted = {}
+        promoted, rescored = {}, {}
         for k, l, t in weak:
             stem = f"{k}-{l}"
             for path in sorted(takes.glob(f"{glob_escape(stem)}~*.wav")):
@@ -921,22 +929,43 @@ def retake(args):
             (best, seed), was = mine[0], main_seed(e, stem)
             had = dict((s_, c_) for c_, s_ in mine).get(was, 0.0)
             if seed == was:
-                print(f"  {e} {t.rstrip('.')}: take {seed} stays ({best:.0%}); best of {len(mine)}")
+                print(f"  {e} {t.rstrip('.')}: take {seed} stays ({sureness(best, t):.0%} a piece); best of {len(mine)}")
                 continue
-            # A fresh copy (new time), so it is evened and scored again as the main sound.
+            # The take becomes the main sound, and its evened copy (made after
+            # it, so not made again) the main one; its score follows below.
             shutil.copyfile(takes / f"{stem}~{seed}.wav", raw / e / f"{stem}.wav")
+            lufs, gain, limited = even(takes / f"{stem}~{seed}.wav", raw / "listen" / e / f"{stem}.wav")
+            append_log(raw / "listen" / e / "evened.tsv", {"file": stem, "lufs before": f"{lufs:.1f}",
+                                                           "gain": f"{gain:+.1f}", "limited": f"{limited:.1f}"})
+            rescored[stem] = {"file": stem, "said": said_by(e, k, l, t), "chance": f"{best:.4f}",
+                              "model": HEAR_MODEL}
             if f"{stem}~{seed}.wav" in made:
                 promoted[f"{stem}.wav"] = {**made[f"{stem}~{seed}.wav"], "file": f"{stem}.wav"}
-            print(f"  {e} {t.rstrip('.')}: take {seed} ({best:.0%}) replaces take {was} ({had:.0%}); "
+            print(f"  {e} {t.rstrip('.')}: take {seed} ({sureness(best, t):.0%} a piece) replaces take {was} ({sureness(had, t):.0%}); "
                   f"best of {len(mine)}")
         if promoted:  # the main sounds' log.tsv rows now give the seeds kept
             log = raw / e / "log.tsv"
-            rows = [promoted.get(r["file"], r) for r in read_tsv(log)]
-            log.unlink()
-            for r in rows:
-                append_log(log, r)
+            rewrite_tsv(log, [promoted.get(r["file"], r) for r in read_tsv(log)])
             logs.pop(e, None)
+        if rescored:  # written after the evened copies, so `hear` keeps these scores
+            tsv = raw / e / "score.tsv"
+            rows = read_tsv(tsv) if tsv.exists() else []
+            have = {r["file"] for r in rows}
+            rewrite_tsv(tsv, [rescored.get(r["file"], r) for r in rows]
+                        + [r for s, r in rescored.items() if s not in have])
     pick(args)
+
+
+def rewrite_tsv(path, rows):
+    """Writes the rows anew, in one go (`append_log` opens the file per row)."""
+    path.unlink(missing_ok=True)
+    if not rows:
+        return
+    with open(path, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=list(dict.fromkeys(k for r in rows for k in r)),
+                                delimiter="\t", restval="")
+        writer.writeheader()
+        writer.writerows(rows)
 
 
 def glob_escape(text):
@@ -1241,8 +1270,11 @@ def main():
     r = sub.add_parser("retake")
     r.add_argument("list")
     r.add_argument("words")
-    r.add_argument("engines", nargs="?", default=RETAKE_ENGINES, help="comma-separated MLX engines")
+    r.add_argument("engines", nargs="?", default=RETAKE_ENGINES, help="comma-separated engines")
     r.add_argument("takes", nargs="?", type=int, default=4, help="takes beyond the first (default 4)")
+    r.add_argument("--below", type=float, default=SURE,
+                   help=f"retake texts picked less sure than this a piece (default {SURE})")
+    r.set_defaults(heard=False)  # picks need only the scores; writing down every sound is slow
     args = ap.parse_args()
     {"generate": generate, "texts": texts, "wikimedia": wikimedia, "hear": hear, "pick": pick, "retake": retake, "make": make, "collect": collect,
      "page": page}[args.cmd](args)
