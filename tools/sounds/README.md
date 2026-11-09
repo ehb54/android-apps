@@ -203,7 +203,14 @@ tools/sounds/run.sh retake de all qwen3-design,piper-thorsten,omnivoice,chatterb
 
 Each further seed helps less. Of the German texts still below 80% a piece,
 the second take of every voice lifted 43% over it, the third 24%, the fourth
-14% and the fifth 9%.
+14% and the fifth 9%. Three rounds of five more seeds with all four voices
+(up to 20, Thorsten seeded from its second; 16 hours on the M1 Pro) took the
+texts below 80% from 497 to 378, 328 and 291: 425 of the 497 improved, 206
+crossed 80%. Whisper writes 75 of the 291 left exactly, only unsure; 29 apart
+or together, or in digits ("Gott sei bei uns", "4"); and 187 as other words.
+Many of those are words that sound alike (Waise as Weise, Laib as Leib, Saite
+as Seite), which no take can win; others look said wrong or heard as English
+(Kuh as "Cool", Zehe as "See ya") and need an ear.
 
 In the pilot it took under a minute and fixed both words: Gasse went to
 95% with Qwen3-TTS take 2 (its first take had 14%), and aufstehen to 85% with
@@ -258,7 +265,8 @@ Every step skips work already done.
    `raw/picks.tsv` and lists the picks below 80% a piece. `run.sh retake
    <list> <words> [engines] [takes] [--below N]` makes more takes of the words
    picked below the bar (see above), keeps the best and picks again.
-4. `run.sh page <list> <words>` writes `raw/listen/pilot.html`. Open it
+4. `run.sh page <list> <words>` writes `raw/listen/<words>.html`, named after
+   the word file (`core/pilot.txt`: `pilot.html`). Open it
    through a local web server, e.g.
    `python3 -m http.server 8765 --directory tools/sounds/core/raw/listen`,
    then `http://127.0.0.1:8765/pilot.html`. ▶ plays a row. Each sound shows

@@ -1127,7 +1127,9 @@ def page(args):
                 if h:
                     heard = f'<small class="heard{"" if h["same"] == "yes" else " miss"}">heard: {e(h["heard"])}</small>'
                 if p is not None:
-                    heard += f'<small class="heard{" miss" if p < DOUBT else ""}">Whisper\'s chance: {p:.0%}</small>'
+                    su = sureness(p, text)
+                    heard += (f'<small class="heard{" miss" if su < DOUBT_SURE else ""}">'
+                              f'Whisper: {su:.0%} a piece (chance {p:.0%})</small>')
                 if n > 1:
                     heard += f'<small class="heard">take {e(str(seed))}, the best of {n}</small>'
                 if lim >= LISTEN_LIMITED:
@@ -1143,10 +1145,13 @@ def page(args):
             f'<tr data-word="{e(stem)}" data-whisper="{e(best)}"><th scope="row">'
             f'<button class="play" title="Play the row">▶</button>'
             f' {e(text.rstrip("."))}<small>{e(kind)} · {e(english)}</small></th>{"".join(cells)}</tr>')
-    out = listen / "pilot.html"
+    # Named after the word file (core/pilot.txt: pilot.html), each with its own marks.
+    name = Path(args.words).stem if isinstance(args.words, str) and args.words != "all" else "all"
+    out = listen / f"{name}.html"
+    key = "sound-pilot-picks" if name == "pilot" else f"sound-picks-{args.list}-{name}"
     out.write_text(PAGE.format(
-        title=e(f"Sound pilot: {args.list}"), count=len(words), head=head,
-        rows="\n".join(rows)), encoding="utf-8")
+        title=e(f"Sounds: {args.list}, {name}"), count=len(words), head=head,
+        rows="\n".join(rows), key=json.dumps(key)), encoding="utf-8")
     print(f"wrote {out} ({len(words)} words × {len(columns)} sources)")
 
 
@@ -1184,8 +1189,9 @@ button {{ font: inherit; cursor: pointer; }}
 <p>{count} words. Every sound is trimmed and evened to the same loudness. ▶ plays a row
 from left to right. Mark the best per word, then copy the picks as TSV.
 Sounds whose peaks the limiter turned down by 4 dB or more are flagged: listen for a squashed sound.
-"Whisper's chance" is how likely Whisper (speech recognition) is to write exactly the word
-for that sound; the source it is surest of is marked "Whisper's pick".</p>
+"Whisper" is how sure Whisper (speech recognition) is of writing exactly the word for that
+sound, per piece of the text (the bar is 90%; red below 80%), with its chance for the whole
+text; "heard" is what it writes down. The source it is surest of is marked "Whisper's pick".</p>
 <div class="bar"><button id="copy">Copy picks</button><span id="tally"></span></div>
 <div class="wrap"><table>
 <thead><tr><th scope="col">word</th>{head}</tr></thead>
@@ -1193,7 +1199,7 @@ for that sound; the source it is surest of is marked "Whisper's pick".</p>
 {rows}
 </tbody></table></div>
 <script>
-const KEY = "sound-pilot-picks";
+const KEY = {key};
 let picks = {{}};
 try {{ picks = JSON.parse(localStorage.getItem(KEY) || "{{}}"); }} catch (e) {{}}
 function save() {{ try {{ localStorage.setItem(KEY, JSON.stringify(picks)); }} catch (e) {{}} }}
