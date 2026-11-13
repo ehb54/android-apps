@@ -19,6 +19,8 @@ compared the voices on 52 words of a word list.
                                             Whisper is surest of
   retake <list> <words> [engines] [takes]   more takes of the words picked below
                                             SURE a piece; the best take stays
+  choose <list> <picks.tsv>                 <list>/chosen.tsv: sounds chosen by ear
+                                            (a page's picks) over Whisper's
   page <list> <words> [sources]             raw/listen/: trimmed, evened copies
                                             and pilot.html
 
@@ -807,6 +809,15 @@ def best_chance(ranked, stem):
     return ranked[stem][0][0] if ranked.get(stem) else 0.0
 
 
+def read_chosen(list_name):
+    """{stem: row} from <list>/chosen.tsv: the sounds chosen over the one
+    Whisper is surest of, by ear ("ear": a listening page's picks) or from
+    what Whisper wrote down for each sound ("transcript"). `pick` follows
+    them and `retake` leaves those texts alone; `choose` adds to it."""
+    path = HERE / list_name / "chosen.tsv"
+    return {f"{r['kind']}-{r['lemma']}": r for r in read_tsv(path)} if path.exists() else {}
+
+
 SURE = 0.9  # per piece (`sureness`): a text's best sound below this gets more work
 
 
@@ -858,6 +869,10 @@ def retake(args):
     words = read_words(args.list, args.words)
     ranked = whisper_picks(raw, words, args.sources.split(","))
     weak = [(k, l, t) for k, l, t, _ in words if sureness(best_chance(ranked, f"{k}-{l}"), t) < below]
+    chosen = read_chosen(args.list)
+    if any(f"{k}-{l}" in chosen for k, l, _ in weak):
+        print(f"leaving alone {sum(f'{k}-{l}' in chosen for k, l, _ in weak)} texts in chosen.tsv")
+        weak = [(k, l, t) for k, l, t in weak if f"{k}-{l}" not in chosen]
     print(f"{len(weak)} texts picked below {below:.0%} a piece: "
           + some(f"{t.rstrip('.')} ({sureness(best_chance(ranked, f'{k}-{l}'), t):.0%})" for k, l, t in weak))
     if not weak:
@@ -963,7 +978,7 @@ def rewrite_tsv(path, rows):
         return
     with open(path, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=list(dict.fromkeys(k for r in rows for k in r)),
-                                delimiter="\t", restval="")
+                                delimiter="\t", restval="", lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
 
@@ -975,7 +990,8 @@ def glob_escape(text):
 
 def pick(args):
     """Scores what is missing, then writes raw/picks.tsv: for each word, the
-    source Whisper is surest says it, and the runner-up."""
+    source Whisper is surest says it (or the one in chosen.tsv), and the
+    runner-up."""
     raw = HERE / args.list / "raw"
     args.sources = ",".join(candidates(raw, args))
     hear(args)
@@ -983,22 +999,70 @@ def pick(args):
     ranked = whisper_picks(raw, words, args.sources.split(","))
     out = raw / "picks.tsv"
     out.unlink(missing_ok=True)
-    counts, doubtful = {}, []
+    chosen = read_chosen(args.list)
+    counts, doubtful, followed, unmade = {}, [], {}, []
     for kind, lemma, text, _ in words:
-        r = ranked[f"{kind}-{lemma}"] + [(0.0, "")] * 2
+        r, by, c = ranked[f"{kind}-{lemma}"], "", chosen.get(f"{kind}-{lemma}")
+        if c and any(src == c["voice"] for _, src in r):
+            r, by = sorted(r, key=lambda x: x[1] != c["voice"]), c["by"]  # the chosen first
+            followed[by] = followed.get(by, 0) + 1
+        elif c:
+            unmade.append(f"{text.rstrip('.')} ({c['voice']})")
+        r = r + [(0.0, "")] * 2
         (p, src), (p2, src2) = r[0], r[1]
         sure = sureness(p, text)
         append_log(out, {"kind": kind, "lemma": lemma, "text": text, "source": src,
                          "chance": f"{p:.4f}", "sure": f"{sure:.4f}",
-                         "next": src2, "next chance": f"{p2:.4f}"})
+                         "next": src2, "next chance": f"{p2:.4f}", "chosen": by})
         counts[src] = counts.get(src, 0) + 1
-        if sure < DOUBT_SURE:
+        if sure < DOUBT_SURE and by != "ear":
             doubtful.append(f"{text.rstrip('.')} ({src} {sure:.0%} a piece)")
     print(f"from {args.sources}:")
     for src, n in sorted(counts.items(), key=lambda x: -x[1]):
         print(f"  {src or 'none'}: {n}")
+    if followed:
+        print("as chosen in chosen.tsv: " + ", ".join(f"{n} by {b}" for b, n in sorted(followed.items())))
+    if unmade:
+        print(f"chosen, but no such sound to pick: {some(unmade)}")
     print(f"{len(doubtful)} below {DOUBT_SURE:.0%} a piece, to listen to: {some(doubtful)}")
     print(f"wrote {out}")
+
+
+def choose(args):
+    """Adds the picks in a TSV with the columns kind, lemma and best (a
+    listening page's "Copy picks") to <list>/chosen.tsv, with by "ear" unless
+    the TSV has a by column (and why). Rows without a best are skipped; a text
+    chosen again takes the new choice, except that one chosen by ear keeps it
+    over any other kind. The choice notes the take (seed) it was made of.
+    Then picks and collects again (for a language)."""
+    raw = HERE / args.list / "raw"
+    texts = {f"{k}-{l}": t for k, l, t, _ in read_words(args.list, "all")}
+    old, new, seeds = read_chosen(args.list), {}, {}
+    for r in read_tsv(Path(args.picks)):
+        if not r.get("best"):
+            continue
+        stem, voice = f"{r['kind']}-{r['lemma']}", r["best"]
+        if stem not in texts:
+            sys.exit(f"{stem}: not a text of {args.list}")
+        if not (raw / voice / f"{stem}.wav").exists():
+            sys.exit(f"{stem}: {voice} has no sound for it")
+        if voice not in seeds:
+            log = raw / voice / "log.tsv"
+            seeds[voice] = {x["file"]: x.get("seed", "") for x in read_tsv(log)} if log.exists() else {}
+        by = r.get("by") or "ear"
+        if old.get(stem, {}).get("by") == "ear" and by != "ear":
+            continue
+        new[stem] = {"kind": r["kind"], "lemma": r["lemma"], "text": texts[stem], "voice": voice,
+                     "seed": seeds[voice].get(f"{stem}.wav", ""), "by": by, "why": r.get("why", "")}
+    changed = sum(1 for s, r in new.items() if old.get(s, {}).get("voice") != r["voice"] or s not in old)
+    rewrite_tsv(HERE / args.list / "chosen.tsv",
+                [new.pop(s, r) for s, r in old.items()] + list(new.values()))
+    print(f"{len(read_chosen(args.list))} texts in {args.list}/chosen.tsv ({changed} new or changed)")
+    if (HERE / args.list / "texts.tsv").exists():
+        pick(argparse.Namespace(list=args.list, words="all", sources=None, heard=False))
+        collect(argparse.Namespace(list=args.list, words="all"))
+    else:
+        print(f"then: pick {args.list} <words>, collect {args.list} <words>")
 
 
 def make(args):
@@ -1043,7 +1107,8 @@ def collect(args):
     texts_tsv = HERE / args.list / "texts.tsv"
     original = {r["key"]: r["text"] for r in read_tsv(texts_tsv)} if texts_tsv.exists() else {}
     picks = {f"{r['kind']}-{r['lemma']}": r for r in read_tsv(raw / "picks.tsv")}
-    seeds = {}
+    chosen = read_chosen(args.list)
+    seeds, retaken = {}, []
     out = raw / "sounds"
     out.mkdir(exist_ok=True)
     rows, copied, missing = [], 0, []
@@ -1061,15 +1126,21 @@ def collect(args):
         if p["source"] not in seeds:
             log = raw / p["source"] / "log.tsv"
             seeds[p["source"]] = {r["file"]: r.get("seed", "") for r in read_tsv(log)} if log.exists() else {}
-        rows.append([dst.name, original.get(lemma, text.rstrip(".")), text, p["source"],
-                     seeds[p["source"]].get(f"{stem}.wav", ""), p["chance"], p.get("sure", ""),
+        seed = seeds[p["source"]].get(f"{stem}.wav", "")
+        c = chosen.get(stem, {})
+        if c.get("voice") == p["source"] and c.get("seed", "") != seed:
+            retaken.append(f"{text.rstrip('.')} ({p['source']} take {c.get('seed') or 1}, now {seed or 1})")
+        rows.append([dst.name, original.get(lemma, text.rstrip(".")), text, p["source"], seed,
+                     p["chance"], p.get("sure", ""), p.get("chosen", ""),
                      ENGINES.get(p["source"], {}).get("license", ""), quizzes])
     with open(raw / "sounds.tsv", "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f, delimiter="\t", lineterminator="\n")
-        w.writerow(["file", "text", "said", "voice", "seed", "chance", "sure", "license", "quizzes"])
+        w.writerow(["file", "text", "said", "voice", "seed", "chance", "sure", "chosen", "license", "quizzes"])
         w.writerows(rows)
     print(f"{len(rows)} sounds in {out} ({copied} copied now); {len(missing)} texts without one: "
           f"{some(missing)}")
+    if retaken:
+        print(f"chosen, but that voice's sound is another take now (check by ear): {some(retaken)}")
 
 
 def page(args):
@@ -1103,6 +1174,7 @@ def page(args):
             note += f", average chance {average(list(chance.values())):.0%}"
         columns.append((src, note, have))
     picked_from = [src for src in sounds if src not in NOT_PICKED]
+    chosen = read_chosen(args.list)
     ranked = whisper_picks(raw, words, picked_from)
     wins = {}
     for r in ranked.values():
@@ -1135,6 +1207,8 @@ def page(args):
                 if lim >= LISTEN_LIMITED:
                     heard += f'<small class="heard miss">peaks limited {lim:.1f} dB</small>'
                 mark = '<small class="wtag">Whisper\'s pick</small>' if src == best else ""
+                if chosen.get(stem, {}).get("voice") == src:
+                    mark += f'<small class="wtag">chosen ({e(chosen[stem]["by"])})</small>'
                 cells.append(
                     f'<td{" class=wpick" if src == best else ""}>'
                     f'<audio controls preload="none" src="{e(path)}"></audio>{heard}{mark}'
@@ -1191,7 +1265,8 @@ from left to right. Mark the best per word, then copy the picks as TSV.
 Sounds whose peaks the limiter turned down by 4 dB or more are flagged: listen for a squashed sound.
 "Whisper" is how sure Whisper (speech recognition) is of writing exactly the word for that
 sound, per piece of the text (the bar is 90%; red below 80%), with its chance for the whole
-text; "heard" is what it writes down. The source it is surest of is marked "Whisper's pick".</p>
+text; "heard" is what it writes down. The source it is surest of is marked "Whisper's pick",
+and a sound chosen over it (chosen.tsv) "chosen", by ear or from what Whisper wrote down.</p>
 <div class="bar"><button id="copy">Copy picks</button><span id="tally"></span></div>
 <div class="wrap"><table>
 <thead><tr><th scope="col">word</th>{head}</tr></thead>
@@ -1281,9 +1356,12 @@ def main():
     r.add_argument("--below", type=float, default=SURE,
                    help=f"retake texts picked less sure than this a piece (default {SURE})")
     r.set_defaults(heard=False)  # picks need only the scores; writing down every sound is slow
+    ch = sub.add_parser("choose")
+    ch.add_argument("list")
+    ch.add_argument("picks", help="TSV with kind, lemma, best (and by, why): a page's Copy picks")
     args = ap.parse_args()
     {"generate": generate, "texts": texts, "wikimedia": wikimedia, "hear": hear, "pick": pick, "retake": retake, "make": make, "collect": collect,
-     "page": page}[args.cmd](args)
+     "choose": choose, "page": page}[args.cmd](args)
 
 
 if __name__ == "__main__":
