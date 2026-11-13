@@ -46,6 +46,29 @@ class QuizFilesTest {
         assertArrayEquals(byteArrayOf(4, 5), bundle.files.getValue("say.mp3"))
     }
 
+    @Test
+    fun sidesCarryWhatShowsAfterTheAnswer() {
+        val files = setOf("hand.webp", "hand.mp3", "my dog.png", "dog.mp3")
+        // A file alone, a file with its text, text with a sound, a picture with both.
+        assertEquals(QzxSide("", "hand.webp"), parseSide("!hand.webp", files))
+        assertEquals(QzxSide("die Hand", "hand.mp3"), parseSide("!hand.mp3 die Hand", files))
+        assertEquals(QzxSide("die Hand", sound = "hand.mp3"), parseSide("die Hand !hand.mp3", files))
+        assertEquals(QzxSide("die Hand", "hand.webp", "hand.mp3"), parseSide("!hand.webp die Hand !hand.mp3", files))
+        assertEquals(QzxSide("", "hand.webp", "hand.mp3"), parseSide("!hand.webp !hand.mp3", files))
+        // Names may hold spaces; a name the zip lacks, or a picture at the end, stays text.
+        assertEquals(QzxSide("der Hund", "my dog.png", "dog.mp3"), parseSide("!my dog.png der Hund !dog.mp3", files))
+        assertEquals(QzxSide("!cat.png"), parseSide("!cat.png", files))
+        assertEquals(QzxSide("Hi !there"), parseSide("Hi !there", files))
+        assertEquals(QzxSide("see !hand.webp"), parseSide("see !hand.webp", files))
+        // A sound side needs no sound for after the answer: a second one stays its text.
+        assertEquals(QzxSide("die Hand !dog.mp3", "hand.mp3"), parseSide("!hand.mp3 die Hand !dog.mp3", files))
+
+        val sides = listOf("!hand.webp", "!hand.mp3 die Hand", "die Hand !hand.mp3", "!my dog.png der Hund !dog.mp3")
+        for (side in sides) assertEquals(side, formatSide(parseSide(side, files)))
+        assertEquals("plain text", formatSide(QzxSide("plain text")))
+        assertEquals("!hand.mp3", formatSide(QzxSide("", "hand.mp3", "dog.mp3")))
+    }
+
     @Test(expected = java.io.IOException::class)
     fun zipLargerThanTheLimitIsRefused() {
         val picture = folder.newFile("big.png").apply { writeBytes(ByteArray(10_000)) }

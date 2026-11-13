@@ -25,6 +25,14 @@ fun QuizApp(info: BuildInfo, vm: QuizViewModel = viewModel()) {
 
 @Composable
 private fun CurrentScreen(state: UiState, vm: QuizViewModel, snackbar: SnackbarHostState, info: BuildInfo) {
+    // A card answered right that shows more once answered comes first, even before a session's summary.
+    val after = state.after
+    val afterQuiz = state.quiz(after?.quizId)
+    val afterCard = after?.let { afterQuiz?.card(it.cardId) }
+    if (after != null && afterQuiz != null && afterCard != null) {
+        AfterAnswerScreen(afterQuiz.name, afterCard, after.direction, vm.mediaDir, vm::next)
+        return
+    }
     when (val screen = state.screen) {
         Screen.Loading -> Unit
         Screen.QuizList -> QuizListScreen(
@@ -59,7 +67,7 @@ private fun CurrentScreen(state: UiState, vm: QuizViewModel, snackbar: SnackbarH
             val match = state.match
             val quiz = state.quiz(match?.quizId)
             if (match != null && quiz != null) {
-                MatchScreen(quiz, match, state.mismatch, vm.mediaDir, snackbar, vm)
+                MatchScreen(quiz, match, state.mismatch, state.paired, vm.mediaDir, snackbar, vm)
             }
         }
         Screen.Samples -> SamplesScreen(state, vm, snackbar)

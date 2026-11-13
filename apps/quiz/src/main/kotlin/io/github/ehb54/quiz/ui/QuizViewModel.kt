@@ -14,11 +14,11 @@ import io.github.ehb54.quiz.data.SampleLibrary
 import io.github.ehb54.quiz.data.storeImage
 import io.github.ehb54.quiz.data.storeSound
 import io.github.ehb54.quiz.engine.AnswerTimes
-import io.github.ehb54.quiz.engine.MEDIA_MARK
 import io.github.ehb54.quiz.engine.MatchSession
 import io.github.ehb54.quiz.engine.Outcome
 import io.github.ehb54.quiz.engine.PairOutcome
 import io.github.ehb54.quiz.engine.QzxCard
+import io.github.ehb54.quiz.engine.QzxSide
 import io.github.ehb54.quiz.engine.SampleCatalog
 import io.github.ehb54.quiz.engine.SampleEntry
 import io.github.ehb54.quiz.engine.SampleFile
@@ -28,11 +28,13 @@ import io.github.ehb54.quiz.engine.Step
 import io.github.ehb54.quiz.engine.buildCatalog
 import io.github.ehb54.quiz.engine.cardsFromSheet
 import io.github.ehb54.quiz.engine.formatQzx
+import io.github.ehb54.quiz.engine.formatSide
 import io.github.ehb54.quiz.engine.goOn
 import io.github.ehb54.quiz.engine.isXlsx
 import io.github.ehb54.quiz.engine.isZip
 import io.github.ehb54.quiz.engine.pairTiles
 import io.github.ehb54.quiz.engine.parseQzx
+import io.github.ehb54.quiz.engine.parseSide
 import io.github.ehb54.quiz.engine.pickAnswer
 import io.github.ehb54.quiz.engine.quizBundle
 import io.github.ehb54.quiz.engine.readLimited
@@ -50,6 +52,7 @@ import io.github.ehb54.quiz.engine.submitAnswer
 import io.github.ehb54.quiz.engine.unzip
 import io.github.ehb54.quiz.engine.writeZip
 import io.github.ehb54.quiz.model.Card
+import io.github.ehb54.quiz.model.Direction
 import io.github.ehb54.quiz.model.MediaKind
 import io.github.ehb54.quiz.model.Quiz
 import io.github.ehb54.quiz.model.QuizMode
@@ -84,6 +87,9 @@ sealed interface Screen {
 }
 
 enum class Feedback { Wrong, TooSlow }
+
+/** A card just answered right whose sides carry more for after the answer (see [Card.hasAfter]). */
+data class After(val quizId: String, val cardId: Long, val direction: Direction)
 
 /** Folder in assets with the built-in sample files. */
 private const val SAMPLES = "samples"
@@ -122,6 +128,10 @@ data class UiState(
     val match: MatchSession? = null,
     /** The last pair tried in match mode, when it was wrong: (side A card, side B card). */
     val mismatch: Pair<Long, Long>? = null,
+    /** The card shown whole after a right answer, before the next card. */
+    val after: After? = null,
+    /** Match mode: the last pair made, when its card shows more once paired (its side A card). */
+    val paired: Long? = null,
     val summary: Summary? = null,
     val library: LibraryState = LibraryState(),
 ) {
@@ -261,7 +271,16 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
             message(text(R.string.nothing_due))
             return
         }
-        _state.update { it.copy(session = session, screen = Screen.Asking, feedback = null, revealed = false, paused = false) }
+        _state.update {
+            it.copy(
+                session = session,
+                screen = Screen.Asking,
+                feedback = null,
+                revealed = false,
+                paused = false,
+                after = null,
+            )
+        }
         persist { store.saveSession(session) }
     }
 
@@ -282,6 +301,10 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
         if (step.outcome == Outcome.Ignored) return
         val quizzes = state.quizzes.map { if (it.id == quiz.id) step.quiz else it }
         val next = step.session
+        // Speed mode is about recognizing fast, so it goes straight on.
+        val answered = session.current?.takeIf { step.outcome == Outcome.Right && session.speed == null }
+        val after = answered?.takeIf { step.quiz.card(it)?.hasAfter() == true }
+            ?.let { After(quiz.id, it, session.direction) }
         if (next.finished && next.speed != null) {
             // Speed mode only ends here when its cards are gone.
             _state.value = state.copy(quizzes = quizzes)
@@ -298,7 +321,7 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
                 confused = step.confused.map { card ->
                     val media = card.answerMedia(next.direction)
                     when {
-                        media == null -> card.answer(next.direction)
+                        card.answer(next.direction).isNotBlank() -> card.answer(next.direction)
                         isSound(media) -> text(R.string.sound)
                         else -> text(R.string.picture)
                     }
@@ -311,6 +334,7 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
                 screen = Screen.Done,
                 feedback = null,
                 revealed = false,
+                after = after,
             )
             persist {
                 store.saveQuiz(step.quiz)
@@ -322,7 +346,7 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
                 Outcome.TooSlow -> Feedback.TooSlow
                 Outcome.Right, Outcome.Ignored -> null
             }
-            _state.value = state.copy(quizzes = quizzes, session = next, feedback = feedback)
+            _state.value = state.copy(quizzes = quizzes, session = next, feedback = feedback, after = after)
             persist {
                 if (step.quiz !== quiz) store.saveQuiz(step.quiz)
                 store.saveSession(next)
@@ -338,6 +362,9 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     fun hideAnswer() = _state.update { it.copy(revealed = false) }
+
+    /** From the card shown whole after an answer to the next card (or the summary). */
+    fun next() = _state.update { it.copy(after = null) }
 
     /** Stops a timed session's clock and hides its card, by hand or when the app goes away. */
     fun pause() {
@@ -385,7 +412,7 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
             message(text(R.string.nothing_due))
             return
         }
-        _state.update { it.copy(match = match, mismatch = null, screen = Screen.Matching) }
+        _state.update { it.copy(match = match, mismatch = null, paired = null, screen = Screen.Matching) }
         persist { store.saveMatch(match) }
     }
 
@@ -421,7 +448,8 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
             }
         } else {
             val mismatch = if (step.outcome == PairOutcome.Wrong) left to right else null
-            _state.value = state.copy(quizzes = quizzes, match = next, mismatch = mismatch)
+            val paired = if (mismatch == null && quiz.card(left)?.hasAfter() == true) left else null
+            _state.value = state.copy(quizzes = quizzes, match = next, mismatch = mismatch, paired = paired)
             persist {
                 if (step.quiz !== quiz) store.saveQuiz(step.quiz)
                 store.saveMatch(next)
@@ -449,6 +477,8 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
                 revealed = false,
                 paused = false,
                 mismatch = null,
+                after = null,
+                paired = null,
                 screen = Screen.QuizDetail(quizId),
             )
         }
@@ -663,10 +693,8 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
         val bundle = quizBundle(entries)
         // A side "!name" is the zip's picture or sound of that name, stored once however many cards use it.
         val stored = mutableMapOf<String, String?>()
-        fun media(side: String): String? {
-            if (!side.startsWith(MEDIA_MARK)) return null
-            val entry = side.removePrefix(MEDIA_MARK)
-            val data = bundle.files[entry] ?: return null
+        fun media(entry: String?): String? {
+            val data = bundle.files[entry ?: return null] ?: return null
             return stored.getOrPut(entry) {
                 when (mediaKind(entry)) {
                     MediaKind.Picture -> storeImage(store.mediaDir, data)
@@ -676,9 +704,9 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
             }
         }
         for (card in parseQzx(bundle.qzx)) {
-            val mediaA = media(card.a)
-            val mediaB = media(card.b)
-            quiz = quiz.addCard(if (mediaA != null) "" else card.a, if (mediaB != null) "" else card.b, mediaA, mediaB)
+            val a = parseSide(card.a, bundle.files.keys)
+            val b = parseSide(card.b, bundle.files.keys)
+            quiz = quiz.addCard(a.text, b.text, media(a.file), media(b.file), media(a.sound), media(b.sound))
         }
         return listOf(quiz)
     }
@@ -688,8 +716,10 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
 
     /** Plain .qzx when the quiz has no pictures or sounds; otherwise a zip with them. */
     private fun writeQuiz(quiz: Quiz, out: OutputStream) {
-        fun side(text: String, media: String?) = if (media != null) MEDIA_MARK + media else text
-        val qzx = formatQzx(quiz.cards.map { QzxCard(side(it.a, it.mediaA), side(it.b, it.mediaB)) })
+        fun side(text: String, media: String?, sound: String?) = formatSide(QzxSide(text, media, sound))
+        val qzx = formatQzx(
+            quiz.cards.map { QzxCard(side(it.a, it.mediaA, it.soundA), side(it.b, it.mediaB, it.soundB)) },
+        )
         val files = quiz.mediaFiles()
         if (files.isEmpty()) {
             out.write(qzx.toByteArray(Charsets.UTF_8))

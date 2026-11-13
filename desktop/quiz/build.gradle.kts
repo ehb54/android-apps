@@ -1,7 +1,7 @@
 // Quiz for macOS, Windows and Linux: the Android app's screens and rules
 // (apps/quiz, shared/quiz) compiled for the desktop. Only the window (Main.kt),
-// picture decoding (data/Images.kt), sound playing (ui/SoundPlayer.kt) and
-// noticing the app is away (ui/Away.kt) are the desktop's own.
+// picture decoding (data/Images.kt), sound playing (ui/SoundPlayer.kt, with an
+// MP3 decoder) and noticing the app is away (ui/Away.kt) are the desktop's own.
 plugins {
     alias(libs.plugins.ehb54.desktop.application)
 }
@@ -18,6 +18,12 @@ compose.desktop {
             }
         }
     }
+}
+
+dependencies {
+    // MP3 sounds: Java Sound plays only uncompressed sound (see ui/SoundPlayer.kt). LGPL 2.1,
+    // so it ships unchanged as its own jar.
+    implementation(libs.jlayer)
 }
 
 tasks.withType<Test>().configureEach {

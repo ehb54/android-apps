@@ -186,9 +186,10 @@ fun SoundButton(file: File, modifier: Modifier = Modifier, large: Boolean = fals
 }
 
 /**
- * A card's prompt in a session: its picture or its sound, then its text. A sound
- * plays by itself when [playKey] changes (a new card or round); [onListened]
- * runs when that playing ends, so an answer timer can start from there.
+ * A card's prompt in a session: its picture, its sound or its text. A picture's
+ * or a sound's own text waits until the card is answered (AfterAnswerScreen).
+ * A sound plays by itself when [playKey] changes (a new card or round);
+ * [onListened] runs when that playing ends, so an answer timer can start from there.
  */
 @Composable
 fun Prompt(card: Card, direction: Direction, mediaDir: File, pictureHeight: Dp, playKey: Any, onListened: () -> Unit) {
@@ -208,7 +209,7 @@ fun Prompt(card: Card, direction: Direction, mediaDir: File, pictureHeight: Dp, 
         )
     }
     val prompt = card.prompt(direction)
-    if (prompt.isNotBlank()) Text(prompt, style = MaterialTheme.typography.headlineMedium)
+    if (media == null && prompt.isNotBlank()) Text(prompt, style = MaterialTheme.typography.headlineMedium)
 }
 
 /** Tags a Pick choice with its card, so tests can find sounds, which look alike. */
@@ -226,13 +227,16 @@ fun SoundTileContent(file: File, number: Int) {
     }
 }
 
-/** A card in a list of names: its prompt's text, else its answer's, else "Picture" or "Sound". */
+/**
+ * A card in a list of names (after a session, so a file's own text may show):
+ * its prompt's text, else its answer's, else "Picture" or "Sound".
+ */
 @Composable
 fun cardName(card: Card, direction: Direction): String {
     val prompt = card.promptMedia(direction)
     return when {
-        prompt == null && card.prompt(direction).isNotBlank() -> card.prompt(direction)
-        card.answerMedia(direction) == null && card.answer(direction).isNotBlank() -> card.answer(direction)
+        card.prompt(direction).isNotBlank() -> card.prompt(direction)
+        card.answer(direction).isNotBlank() -> card.answer(direction)
         else -> stringResource(if (isSound(prompt)) R.string.sound else R.string.picture)
     }
 }

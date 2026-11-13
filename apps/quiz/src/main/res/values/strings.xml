@@ -149,6 +149,11 @@
     <string name="stop_sound">Stop sound</string>
     <string name="sound_failed">That sound could not be used. MP3, AAC (M4A), Ogg Vorbis, WAV and FLAC work.</string>
     <string name="play_failed">The sound could not be played.</string>
+    <!-- A picture's or a sound's own text (the word it says), shown only after the answer. -->
+    <string name="file_text">Its text, shown after the answer</string>
+    <!-- A sound that plays after the answer, for a side shown as text or a picture (the word spoken). -->
+    <string name="after_sound">Sound after the answer</string>
+    <string name="add_after_sound">Add a sound for after the answer</string>
 
     <!-- Asking -->
     <string name="round">Round %1$d</string>
@@ -167,6 +172,9 @@
     <string name="hide_answer">Hide it and answer</string>
     <string name="wrong">Not quite. Try again.</string>
     <string name="too_slow">Too slow. Try again.</string>
+    <!-- The whole card, shown after a right answer when it holds more than the question showed. -->
+    <string name="right_answer">Right.</string>
+    <string name="next_card">Next</string>
     <string name="leave_title">Leave this session?</string>
     <string name="leave_text">Testing escape hatch: the session ends now. Cards already answered keep their results; the rest are not asked.</string>
     <string name="leave">Leave</string>

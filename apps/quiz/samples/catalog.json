@@ -58,15 +58,16 @@
         },
         {
             "file": "Children's books pictures.zip",
-            "bytes": 1932882,
-            "sha256": "3473aecb682699c982eea1bd7701f4abc95356435fa7937b97ccbf0981ef9f76",
+            "bytes": 2266154,
+            "sha256": "cf43e2660ffa479f908df14d9dcfc3b9217d6fa344852fb539149f3b9f9bf890",
             "quizzes": [
                 {
                     "name": "Children's books pictures",
                     "source": "Children's books pictures.zip",
-                    "version": "3473aecb682699c982eea1bd7701f4abc95356435fa7937b97ccbf0981ef9f76",
+                    "version": "cf43e2660ffa479f908df14d9dcfc3b9217d6fa344852fb539149f3b9f9bf890",
                     "cards": 67,
-                    "pictures": 67
+                    "pictures": 67,
+                    "sounds": 67
                 }
             ]
         },
@@ -88,6 +89,35 @@
                     "version": "d71ecfe54bd5d8952beedd102e62b164c1c8ca50085a3fcaf981f5d4237cb04a",
                     "cards": 300,
                     "tab": "Children's books verb forms"
+                }
+            ]
+        },
+        {
+            "file": "Core dictation.zip",
+            "bytes": 2971831,
+            "sha256": "31bceedbe7fde6acf155e3628c181917b125954778c5f584fdd3195237555ce4",
+            "quizzes": [
+                {
+                    "name": "Core dictation",
+                    "source": "Core dictation.zip",
+                    "version": "31bceedbe7fde6acf155e3628c181917b125954778c5f584fdd3195237555ce4",
+                    "cards": 734,
+                    "sounds": 734
+                }
+            ]
+        },
+        {
+            "file": "Core listening ERNIE.zip",
+            "bytes": 6323176,
+            "sha256": "c03b81492158b3185081ffd440476cb0d96f8e2115a774278bd79fa9d8684a14",
+            "quizzes": [
+                {
+                    "name": "Core listening ERNIE",
+                    "source": "Core listening ERNIE.zip",
+                    "version": "c03b81492158b3185081ffd440476cb0d96f8e2115a774278bd79fa9d8684a14",
+                    "cards": 734,
+                    "pictures": 734,
+                    "sounds": 734
                 }
             ]
         },
@@ -121,43 +151,75 @@
         },
         {
             "file": "Core pictures ERNIE.zip",
-            "bytes": 3354042,
-            "sha256": "fd209d1531e8be0a80c506a84650c8a1ec33e69bab72e2fed7fcf57d0bfb2f34",
+            "bytes": 6322381,
+            "sha256": "5dd2b81f76ab9874a366082cae3c53b22c6c18d1a12def8929c951bc98cd3f7e",
             "quizzes": [
                 {
                     "name": "Core pictures ERNIE",
                     "source": "Core pictures ERNIE.zip",
-                    "version": "fd209d1531e8be0a80c506a84650c8a1ec33e69bab72e2fed7fcf57d0bfb2f34",
+                    "version": "5dd2b81f76ab9874a366082cae3c53b22c6c18d1a12def8929c951bc98cd3f7e",
                     "cards": 734,
-                    "pictures": 734
+                    "pictures": 734,
+                    "sounds": 734
                 }
             ]
         },
         {
             "file": "Core pictures.zip",
-            "bytes": 7764784,
-            "sha256": "2353122f7cfcc40b97f2ff7e9dc38425e45f4fc598716d426b12a968915de135",
+            "bytes": 8987503,
+            "sha256": "21ca511ff7086104e9a16e7faea41d47ec54bd57afc1837e1704409454393ffe",
             "quizzes": [
                 {
                     "name": "Core pictures",
                     "source": "Core pictures.zip",
-                    "version": "2353122f7cfcc40b97f2ff7e9dc38425e45f4fc598716d426b12a968915de135",
+                    "version": "21ca511ff7086104e9a16e7faea41d47ec54bd57afc1837e1704409454393ffe",
                     "cards": 308,
-                    "pictures": 308
+                    "pictures": 308,
+                    "sounds": 308
+                }
+            ]
+        },
+        {
+            "file": "Core verb dictation.zip",
+            "bytes": 506954,
+            "sha256": "62fef8e473d89d3f1c49ed510271e84bfffd1a51199cb0ec42905df33c3048e6",
+            "quizzes": [
+                {
+                    "name": "Core verb dictation",
+                    "source": "Core verb dictation.zip",
+                    "version": "62fef8e473d89d3f1c49ed510271e84bfffd1a51199cb0ec42905df33c3048e6",
+                    "cards": 144,
+                    "sounds": 144
+                }
+            ]
+        },
+        {
+            "file": "Core verb listening ERNIE.zip",
+            "bytes": 1191887,
+            "sha256": "2239ccd0e2833d6b99dd411f984b5b9aa7d3f415e4e2f749d60c506e63366b85",
+            "quizzes": [
+                {
+                    "name": "Core verb listening ERNIE",
+                    "source": "Core verb listening ERNIE.zip",
+                    "version": "2239ccd0e2833d6b99dd411f984b5b9aa7d3f415e4e2f749d60c506e63366b85",
+                    "cards": 144,
+                    "pictures": 144,
+                    "sounds": 144
                 }
             ]
         },
         {
             "file": "Core verb pictures ERNIE.zip",
-            "bytes": 685632,
-            "sha256": "5562a94b7fd540e80dd526326ab2715fec2078720c1d9750fa6dd9f2b0363517",
+            "bytes": 1191793,
+            "sha256": "6d609af58fbc472e1cbc750158df367d0e3ac200c45b4978163e251a3705b83f",
             "quizzes": [
                 {
                     "name": "Core verb pictures ERNIE",
                     "source": "Core verb pictures ERNIE.zip",
-                    "version": "5562a94b7fd540e80dd526326ab2715fec2078720c1d9750fa6dd9f2b0363517",
+                    "version": "6d609af58fbc472e1cbc750158df367d0e3ac200c45b4978163e251a3705b83f",
                     "cards": 144,
-                    "pictures": 144
+                    "pictures": 144,
+                    "sounds": 144
                 }
             ]
         },
@@ -212,15 +274,16 @@
         },
         {
             "file": "Fairy tales pictures.zip",
-            "bytes": 1766506,
-            "sha256": "eff10b48307507826e4bcf2e336bd4095256880234c76c5a4c5202a9d1fd242c",
+            "bytes": 2042433,
+            "sha256": "9f60c6cdf557d9b337de95db58c64a8be606d1e9f670c3648a879300faf666ff",
             "quizzes": [
                 {
                     "name": "Fairy tales pictures",
                     "source": "Fairy tales pictures.zip",
-                    "version": "eff10b48307507826e4bcf2e336bd4095256880234c76c5a4c5202a9d1fd242c",
+                    "version": "9f60c6cdf557d9b337de95db58c64a8be606d1e9f670c3648a879300faf666ff",
                     "cards": 57,
-                    "pictures": 57
+                    "pictures": 57,
+                    "sounds": 57
                 }
             ]
         },
@@ -311,15 +374,16 @@
         },
         {
             "file": "Goethe pictures.zip",
-            "bytes": 684046,
-            "sha256": "b7156c450d2e78edc81ab5d198a44898ff6afd5fa649a3941c9c3d6761c55d1a",
+            "bytes": 808148,
+            "sha256": "e51ce5fa347d535e538bd53bbac7f83894a0f9326002834d22478a7935a10fa6",
             "quizzes": [
                 {
                     "name": "Goethe pictures",
                     "source": "Goethe pictures.zip",
-                    "version": "b7156c450d2e78edc81ab5d198a44898ff6afd5fa649a3941c9c3d6761c55d1a",
+                    "version": "e51ce5fa347d535e538bd53bbac7f83894a0f9326002834d22478a7935a10fa6",
                     "cards": 26,
-                    "pictures": 26
+                    "pictures": 26,
+                    "sounds": 26
                 }
             ]
         },
@@ -374,15 +438,16 @@
         },
         {
             "file": "History pictures.zip",
-            "bytes": 351522,
-            "sha256": "5fbad55e284078c3b85a9f0c74cc06c0d64c92db163c3e3ccd69613f997b383c",
+            "bytes": 427346,
+            "sha256": "0698b5772d04c46a1c9d77ea7078ad13de200cb4b0dfae95ef9d9360bb7dd048",
             "quizzes": [
                 {
                     "name": "History pictures",
                     "source": "History pictures.zip",
-                    "version": "5fbad55e284078c3b85a9f0c74cc06c0d64c92db163c3e3ccd69613f997b383c",
+                    "version": "0698b5772d04c46a1c9d77ea7078ad13de200cb4b0dfae95ef9d9360bb7dd048",
                     "cards": 16,
-                    "pictures": 16
+                    "pictures": 16,
+                    "sounds": 16
                 }
             ]
         },

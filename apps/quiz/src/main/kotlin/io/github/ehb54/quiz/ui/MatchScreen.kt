@@ -23,6 +23,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -60,11 +61,19 @@ fun MatchScreen(
     quiz: Quiz,
     session: MatchSession,
     mismatch: Pair<Long, Long>?,
+    paired: Long?,
     mediaDir: File,
     snackbar: SnackbarHostState,
     vm: QuizViewModel,
 ) {
     BackHandler(onBack = vm::backDuringQuiz)
+    // A pair just made whose card shows more once answered: its words in the hint line, its sound played.
+    val pairedCard = paired?.let(quiz::card)
+    val player = LocalSoundPlayer.current
+    LaunchedEffect(paired) {
+        val sound = pairedCard?.let { it.sound(sideA = true) ?: it.sound(sideA = false) }
+        if (sound != null) player.play(File(mediaDir, sound))
+    }
     // A half-made pair belongs to its block.
     var pickedLeft by rememberSaveable(session.round, session.left) { mutableStateOf<Long?>(null) }
     var pickedRight by rememberSaveable(session.round, session.left) { mutableStateOf<Long?>(null) }
@@ -100,8 +109,17 @@ fun MatchScreen(
             verticalArrangement = Arrangement.spacedBy(12.dp),
         ) {
             Text(
-                stringResource(if (mismatch != null) R.string.not_a_pair else R.string.match_hint),
-                color = if (mismatch != null) MaterialTheme.colorScheme.error else Color.Unspecified,
+                when {
+                    mismatch != null -> stringResource(R.string.not_a_pair)
+                    pairedCard != null ->
+                        listOf(pairedCard.a, pairedCard.b).filter { it.isNotBlank() }.joinToString(" · ")
+                    else -> stringResource(R.string.match_hint)
+                },
+                color = when {
+                    mismatch != null -> MaterialTheme.colorScheme.error
+                    pairedCard != null -> MaterialTheme.colorScheme.primary
+                    else -> Color.Unspecified
+                },
                 style = MaterialTheme.typography.bodyMedium,
             )
             Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {

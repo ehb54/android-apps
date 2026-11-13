@@ -12,10 +12,15 @@ fi
 : "${BUILD_HOST:?set BUILD_HOST in tools/local.env (see CLAUDE.md)}"
 REMOTE_DIR=${REMOTE_DIR:-claude/android-apps}   # relative to the remote home
 
+# The tools' venvs, downloads and generated pictures and sounds (git-ignored,
+# many GB) stay here: the build needs none of them.
 rsync -a --delete \
     --exclude build/ --exclude .gradle/ --exclude .kotlin/ \
     --exclude /out/ --exclude /site/ --exclude local.properties --exclude /tools/local.env \
-    --exclude /tools/wordlists/cache/ \
+    --exclude /tools/wordlists/cache/ --exclude /tools/wordlists/work/ --exclude __pycache__/ \
+    --exclude /tools/pictures/.venv/ --exclude '/tools/pictures/*/raw/' --exclude /tools/pictures/work/ \
+    --exclude /tools/sounds/.venv/ --exclude /tools/sounds/voices/ --exclude '/tools/sounds/*/raw/' \
+    --exclude /tools/sounds/work/ \
     ./ "$BUILD_HOST:$REMOTE_DIR/"
 
 ssh "$BUILD_HOST" "$REMOTE_DIR/tools/docker-build.sh" "$@"

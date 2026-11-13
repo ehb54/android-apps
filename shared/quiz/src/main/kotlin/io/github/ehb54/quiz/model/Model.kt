@@ -46,6 +46,11 @@ data class Stats(
  * app's media folder: a picture or a sound ([mediaKind]). A file can only be
  * shown or played, never typed, so typing asks a card only in directions whose
  * answer is text.
+ *
+ * A side can also carry something shown only once the card is answered, so it
+ * never gives the answer away: a side that is a file its text ([a], [b]: the
+ * word a sound says or a picture shows), and a side shown as text or a picture
+ * a sound ([soundA], [soundB]: the word spoken).
  */
 @Serializable
 data class Card(
@@ -55,6 +60,10 @@ data class Card(
     // Saved as "imageA" and "imageB": sides held only pictures before sounds came.
     @SerialName("imageA") val mediaA: String? = null,
     @SerialName("imageB") val mediaB: String? = null,
+    /** A sound for side A that plays after the answer, when side A is text or a picture. */
+    val soundA: String? = null,
+    /** The same for side B. */
+    val soundB: String? = null,
     val statsAToB: Stats = Stats(),
     val statsBToA: Stats = Stats(),
     /** Match mode's own record: recognizing a pair is easier than typing, so it is kept apart. */
@@ -78,6 +87,22 @@ data class Card(
     fun answerMedia(direction: Direction) = if (direction == Direction.AToB) mediaB else mediaA
 
     fun askable(direction: Direction) = answerMedia(direction) == null && answer(direction).isNotBlank()
+
+    /** A side's sound: the side itself, or the one that plays after the answer. */
+    fun sound(sideA: Boolean): String? {
+        val media = if (sideA) mediaA else mediaB
+        return if (isSound(media)) media else if (sideA) soundA else soundB
+    }
+
+    /** Whether the card shows more once answered: a file side's text, or a sound for after the answer. */
+    fun hasAfter() = (mediaA != null && a.isNotBlank()) || (mediaB != null && b.isNotBlank()) ||
+        soundA != null || soundB != null
+
+    /** The sound to play once the card is answered: the answer side's, else the prompt side's. */
+    fun afterSound(direction: Direction): String? {
+        val answerIsA = direction == Direction.BToA
+        return sound(answerIsA) ?: sound(!answerIsA)
+    }
 
     fun stats(direction: Direction) = if (direction == Direction.AToB) statsAToB else statsBToA
 
@@ -200,8 +225,15 @@ data class Quiz(
     fun withSpeedPlace(direction: Direction, place: SpeedPlace?) =
         if (direction == Direction.AToB) copy(speedAToB = place) else copy(speedBToA = place)
 
-    fun addCard(a: String, b: String, mediaA: String? = null, mediaB: String? = null) = copy(
-        cards = cards + Card(nextCardId, a, b, mediaA, mediaB),
+    fun addCard(
+        a: String,
+        b: String,
+        mediaA: String? = null,
+        mediaB: String? = null,
+        soundA: String? = null,
+        soundB: String? = null,
+    ) = copy(
+        cards = cards + Card(nextCardId, a, b, mediaA, mediaB, soundA, soundB),
         nextCardId = nextCardId + 1,
     )
 
@@ -255,7 +287,7 @@ data class Quiz(
         return if (settings.hasRange || settings.sessionSize <= 0) due else due.take(settings.sessionSize)
     }
 
-    fun mediaFiles(): Set<String> = cards.flatMap { listOfNotNull(it.mediaA, it.mediaB) }.toSet()
+    fun mediaFiles(): Set<String> = cards.flatMap { listOfNotNull(it.mediaA, it.mediaB, it.soundA, it.soundB) }.toSet()
 
     /**
      * This quiz with [fresh]'s cards, e.g. a newer version of a sample. Keeps

@@ -1,10 +1,11 @@
 # Sounds for the quizzes
 
 Makes a sound for every text on the sample quizzes' cards in a language:
-each German text spoken, once, however many quizzes it is on. What the
-sounds become is open: sound → word or sound ↔ picture quizzes, or a sound
-to play beside a card's text. A noun card says "der Hund", so its sound also
-teaches the gender.
+each German text spoken, once, however many quizzes it is on, and puts them
+on the sample quizzes (see *Sounds on the sample quizzes*): every picture
+quiz speaks the word after the answer, and Core's own pictures give
+listening (sound → picture) and dictation (sound → word) quizzes. A noun card
+says "der Hund", so its sound also teaches the gender.
 
 **Stage: German.** `de/` holds the German texts of all sample quizzes
 (21,364 texts on 39,922 card sides) and makes their sounds; see *A
@@ -23,7 +24,8 @@ which reads `tools/local.env` for the machine's settings:
 | `HF_HOME` | Hugging Face cache for the model weights (1–5 GB per model; KugelAudio 15 GB) |
 | `TMPDIR`, `PIP_CACHE_DIR`, `XDG_CACHE_HOME` | optional: where temp files and caches go |
 
-`ffmpeg` must be on the PATH: it decodes every sound and measures its loudness for evening.
+`ffmpeg` must be on the PATH, with its MP3 encoder (libmp3lame): it decodes
+every sound, measures its loudness for evening, and makes the quizzes' MP3s.
 
 ## A language's sounds
 
@@ -274,6 +276,43 @@ Not tried yet: a German reference voice for the cloning models (Qwen3-TTS
 Base, Chatterbox), for example a Thorsten-Voice recording (CC0), which may
 remove Chatterbox's accent.
 
+## Sounds on the sample quizzes
+
+```bash
+tools/sounds/run.sh samples de ../../apps/quiz/samples
+```
+
+Run it after `tools/wordlists/run.sh build` (which writes the picture zips
+without sounds), then regenerate the app's sample catalog (see
+`apps/quiz/DESIGN.md`). It needs `raw/sounds/` (`make`), so it runs on the
+machine that made the sounds; the picture zips it reads are the published
+ones, so it does not need the pictures' sources.
+
+- **Every picture quiz** whose answers are German (`QUIZ_SIDES`) gets each
+  answer's sound, played after the answer: the side `die Hand` becomes
+  `die Hand !de-die_Hand-20826d6a.mp3` (Quiz's side syntax; see
+  `apps/quiz/DESIGN.md`, Sounds: After the answer). Pictures stay as they
+  are, byte for byte, and sounds added before are replaced, so the step can
+  run again: the same sounds give the same zip.
+- **The quizzes in `HEARD`** (Core's own pictures) also give a listening quiz,
+  `!<sound> die Hand` → `!<picture>` (hear the word, pick the picture; the
+  word shows after the answer), and a dictation quiz, `!<sound>` → `die Hand`
+  (hear it, type it): *Core listening ERNIE* and *Core dictation*, 734 nouns;
+  *Core verb listening ERNIE* and *Core verb dictation*, 144 verbs.
+- **The sounds** are made by `cards` (which `samples` runs for what it needs):
+  `raw/cards/<stem>.mp3`, the picked sound resampled to 32 kHz mono and
+  encoded at 40 kbit/s, about 4 KB a word (32 kbit/s dulled German s, sch
+  and z), with no tags, so the same sound gives the same bytes. Phones play
+  them with Android's own decoder, the desktop app with JLayer (see
+  `apps/quiz/DESIGN.md`, Sounds). `raw/cards/made.tsv` notes the SHA-1 of
+  the sound each was made from, so a sound picked anew (`choose`) is made
+  again; changing the settings remakes them all.
+- **Credits:** each zip's `CREDITS.txt` gains a paragraph naming the voices
+  and how many words each said, with their licenses.
+- **Size:** 1,050 sounds (the seven picture quizzes) are 4.4 MB. Each zip
+  carries its own copy, as the app downloads one zip per quiz, so the
+  sample zips grew from 16.5 MB to 33 MB (the listening quizzes repeat their pictures).
+
 ## A list's or a language's folder
 
 | File | What | Made by |
@@ -286,6 +325,7 @@ remove Chatterbox's accent.
 | `raw/<engine>/takes/` | every take of a weak word, `<kind>-<lemma>~<seed>.wav`, with `log.tsv` and `score.tsv` | `retake` (git-ignored) |
 | `raw/listen/` | every sound evened (see Evening), and `pilot.html` to compare them | `hear`, `pick`, `page` (git-ignored) |
 | `raw/sounds/`, `raw/sounds.tsv` | the picked sound per text, and what it is | `collect` (git-ignored) |
+| `raw/cards/` | those sounds as the quizzes carry them (MP3), `made.tsv` (the sound each was made from) and `made.txt` (the settings) | `cards`, `samples` (git-ignored) |
 
 ## Steps
 
@@ -313,3 +353,6 @@ Every step skips work already done.
    for that address (`127.0.0.1` and `localhost` keep separate ones).
 5. `run.sh choose <list> <picks.tsv>` adds those picks to `chosen.tsv` (see
    Choices over Whisper's).
+6. `run.sh cards <lang> <words>` makes the quizzes' MP3s of the picked sounds,
+   and `run.sh samples <lang> <dir>` puts them on the sample quizzes (see
+   Sounds on the sample quizzes).

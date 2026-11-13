@@ -34,6 +34,9 @@ composeMultiplatformMaterial3 = "1.12.0-alpha03"
 coroutines = "1.11.0"
 # @StringRes and friends, so screens copied from an Android app compile unchanged.
 androidxAnnotation = "1.11.0"
+# Quiz's MP3 sounds on the desktop, where Java Sound reads only uncompressed sound: JLayer, a
+# pure-Java decoder (LGPL 2.1, shipped as its own jar). See desktop/quiz's ui/SoundPlayer.kt.
+jlayer = "1.0.1"
 
 [libraries]
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
@@ -58,6 +61,7 @@ jetbrains-compose-resources = { module = "org.jetbrains.compose.components:compo
 jetbrains-compose-ui-test-junit4 = { module = "org.jetbrains.compose.ui:ui-test-junit4", version.ref = "composeMultiplatform" }
 kotlinx-coroutines-swing = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-swing", version.ref = "coroutines" }
 androidx-annotation = { module = "androidx.annotation:annotation", version.ref = "androidxAnnotation" }
+jlayer = { module = "javazoom:jlayer", version.ref = "jlayer" }
 
 # build-logic only
 android-gradlePlugin = { module = "com.android.tools.build:gradle", version.ref = "agp" }

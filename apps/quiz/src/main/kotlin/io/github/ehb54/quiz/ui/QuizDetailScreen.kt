@@ -364,8 +364,8 @@ private fun NumberField(value: Int?, placeholder: String, @StringRes label: Int,
 private fun CardRow(number: Int, card: Card, level: Int, millis: Long, mediaDir: File, onClick: () -> Unit) {
     ListItem(
         leadingContent = { Text(number.toString(), style = MaterialTheme.typography.labelMedium) },
-        headlineContent = { Side(card.a, card.mediaA, mediaDir) },
-        supportingContent = { Side(card.b, card.mediaB, mediaDir) },
+        headlineContent = { Side(card.a, card.mediaA, card.soundA, mediaDir) },
+        supportingContent = { Side(card.b, card.mediaB, card.soundB, mediaDir) },
         trailingContent = {
             Text(
                 if (millis > 0) {
@@ -379,16 +379,19 @@ private fun CardRow(number: Int, card: Card, level: Int, millis: Long, mediaDir:
     )
 }
 
+/** A side in the card list: its picture or sound, its text (a file's own too), and a sound for after the answer. */
 @Composable
-private fun Side(text: String, media: String?, mediaDir: File) {
-    if (media != null && isSound(media)) {
-        Row(verticalAlignment = Alignment.CenterVertically) {
+private fun Side(text: String, media: String?, afterSound: String?, mediaDir: File) {
+    Row(verticalAlignment = Alignment.CenterVertically) {
+        if (media != null && isSound(media)) {
             SoundButton(File(mediaDir, media))
-            Text(stringResource(R.string.sound))
+            if (text.isBlank()) Text(stringResource(R.string.sound))
+        } else if (media != null) {
+            CardImage(File(mediaDir, media), Modifier.height(48.dp), maxSide = 192)
         }
-    } else if (media != null) {
-        CardImage(File(mediaDir, media), Modifier.height(48.dp), maxSide = 192)
-    } else {
-        Text(text, maxLines = 2, overflow = TextOverflow.Ellipsis)
+        if (text.isNotBlank()) {
+            Text(text, Modifier.weight(1f, fill = false), maxLines = 2, overflow = TextOverflow.Ellipsis)
+        }
+        if (afterSound != null && !isSound(media)) SoundButton(File(mediaDir, afterSound))
     }
 }
