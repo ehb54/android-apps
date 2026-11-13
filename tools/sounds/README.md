@@ -246,8 +246,13 @@ against a short one does not (All, Herr for Heer). Ten were judged by reading
 the transcripts, such as Hieb heard as "Heap" rather than "Piep". Each row
 says why. The other 243 keep Whisper's pick, because its pick was heard as
 the word or a word said the same, or every voice was heard as another word,
-so the transcripts cannot tell the voices apart. Listening to them on the
-page and adding the picks with `choose` overrides any of this.
+so the transcripts cannot tell the voices apart.
+
+eb then picked 23 of the worst texts by ear. Those picks replace six of
+Claude's choices; eb chose Whisper's pick in all six. In all, eb's picks
+agree with Whisper's for 19 of the 23. So `chosen.tsv` now holds 23 picks by
+ear and 42 by transcript. More picks by ear can be added at any time with
+`choose`.
 
 ### KugelAudio needs a patch
 
