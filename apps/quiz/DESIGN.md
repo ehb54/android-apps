@@ -135,8 +135,11 @@ Decisions made with eb:
 - **Same content, either way.** Two cards showing the same thing (two side Bs
   reading "time") may be paired either way round.
 - **Pictures and sounds** are tiles like text, on either side, since nothing
-  is typed. A sound tile has a button that plays it; a tap elsewhere on the
-  tile picks it, so listening never makes a pair.
+  is typed. A sound tile is its own play button: a tap anywhere on it plays it
+  and picks it, and a tap on it once picked plays it again. Changed 2026-11-13
+  (eb: pressing play "should select" the tile); it used to have a button that
+  only played, so listening never made a pair. Now a sound tapped while a tile
+  on the other side is picked makes a pair: listen first, then pick its match.
 - **No leaving**, as in typed sessions: Back only says how many cards are left,
   and the session (block, pairs made, misses) is saved after every pair and
   resumes on the next launch. The debug-only long press on the round counter
@@ -282,8 +285,14 @@ what shows only once the card is answered, so it never gives the answer away:
   before the next card, and its sound plays once: the answer side's, else
   the prompt side's. Next, Back or Enter goes on, and the next card's clock
   starts then. A card with neither goes straight on, as before. Speed mode
-  never stops for it (it is about recognizing fast). In Match, a pair made
-  shows its words in the hint line and plays its sound.
+  never stops for it (it is about recognizing fast). In Match, a right pair
+  shows it on its two tiles (a sound's word, a picture's text) and plays its
+  sound, for half a second before the tiles go (`PAIR_SHOWN_MS`); another
+  pair made meanwhile ends that early. (At first the words went in the
+  hint line, where eb found they stayed on into the next block.)
+- **Once only:** a sound that plays by itself (a prompt's, the whole card's,
+  a pair's) plays once per card. Turning the phone rebuilds the screen, and
+  used to play it again each time (`PlayOnce` remembers it across that).
 - **In a zip:** text after a file's name is its text, and a sound's name
   last on a side is the sound for after the answer: `!hand.mp3 die Hand`
   (hear it, its word after), `die Hand !hand.mp3` (the word, spoken after),

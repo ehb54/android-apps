@@ -185,10 +185,40 @@ fun SoundButton(file: File, modifier: Modifier = Modifier, large: Boolean = fals
     }
 }
 
+/** The play sign, or the stop sign while [file] plays: [SoundButton]'s look, on a tile that is itself the button. */
+@Composable
+fun SoundIcon(file: File, modifier: Modifier = Modifier) {
+    val playing = LocalSoundPlayer.current.playing == file
+    Box(modifier.size(48.dp), contentAlignment = Alignment.Center) {
+        Icon(
+            painterResource(if (playing) R.drawable.ic_stop else R.drawable.ic_sound),
+            stringResource(if (playing) R.string.stop_sound else R.string.play_sound),
+        )
+    }
+}
+
+/**
+ * Plays [file] by itself once for [key], and again only for a new [key]: not
+ * when the screen is built anew, as turning the phone does. [onDone] runs when
+ * that playing ends.
+ */
+@Composable
+fun PlayOnce(key: String, file: File, onDone: () -> Unit = {}) {
+    val player = LocalSoundPlayer.current
+    var played by rememberSaveable { mutableStateOf<String?>(null) }
+    val done by rememberUpdatedState(onDone)
+    LaunchedEffect(key) {
+        if (played != key) {
+            played = key
+            player.play(file) { done() }
+        }
+    }
+}
+
 /**
  * A card's prompt in a session: its picture, its sound or its text. A picture's
  * or a sound's own text waits until the card is answered (AfterAnswerScreen).
- * A sound plays by itself when [playKey] changes (a new card or round);
+ * A sound plays by itself once per [playKey] (a new card or round);
  * [onListened] runs when that playing ends, so an answer timer can start from there.
  */
 @Composable
@@ -196,9 +226,7 @@ fun Prompt(card: Card, direction: Direction, mediaDir: File, pictureHeight: Dp, 
     val media = card.promptMedia(direction)
     if (media != null && isSound(media)) {
         val file = File(mediaDir, media)
-        val player = LocalSoundPlayer.current
-        val listened by rememberUpdatedState(onListened)
-        LaunchedEffect(playKey) { player.play(file) { listened() } }
+        PlayOnce(playKey.toString(), file, onListened)
         Box(Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) { SoundButton(file, large = true) }
     } else if (media != null) {
         CardImage(
@@ -218,11 +246,14 @@ fun choiceTag(id: Long) = "choice:$id"
 /** Tags a Match tile with its card and column, for the same reason. */
 fun tileTag(id: Long, sideA: Boolean) = if (sideA) "tile:a:$id" else "tile:b:$id"
 
-/** A sound among Pick choices or Match tiles: its play button, with "Sound 2" beside it. */
+/**
+ * A sound among Pick choices or Match tiles: its play button, with "Sound 2"
+ * beside it. Without [button], the play sign only, for a tile that plays when tapped.
+ */
 @Composable
-fun SoundTileContent(file: File, number: Int) {
+fun SoundTileContent(file: File, number: Int, button: Boolean = true) {
     Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
-        SoundButton(file)
+        if (button) SoundButton(file) else SoundIcon(file)
         Text(stringResource(R.string.sound_number, number), style = MaterialTheme.typography.titleMedium)
     }
 }

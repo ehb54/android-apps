@@ -1,6 +1,7 @@
 package io.github.ehb54.quiz
 
 import android.content.Context
+import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
@@ -17,11 +18,13 @@ import java.io.File
 
 /**
  * Hear a word, pick its meaning: the word's spelling (its sound's text) waits
- * until the card is answered, then the whole card shows, before the next one.
+ * until the card is answered, then the whole card shows, before the next one;
+ * its sound plays once, not again when the phone is turned.
  */
 class AfterAnswerUiTest : QuizUiTest() {
     init {
-        ShadowMediaPlayer.setMediaInfoProvider { ShadowMediaPlayer.MediaInfo(1_000, 0) }
+        // Long enough to be playing still when the phone is turned.
+        ShadowMediaPlayer.setMediaInfoProvider { ShadowMediaPlayer.MediaInfo(60_000, 0) }
     }
 
     @Test
@@ -38,7 +41,7 @@ class AfterAnswerUiTest : QuizUiTest() {
         }
         store.saveQuiz(quiz)
 
-        ActivityScenario.launch(MainActivity::class.java).use {
+        ActivityScenario.launch(MainActivity::class.java).use { scenario ->
             compose.waitForText("Listening")
             compose.onNodeWithText("Listening").performClick()
             compose.waitForText("Start (3 cards due)")
@@ -53,6 +56,15 @@ class AfterAnswerUiTest : QuizUiTest() {
                 compose.waitForText("Right.")
                 compose.onNodeWithText(german).assertExists()
                 compose.onNodeWithText(english).assertExists()
+                if (id == 0) {
+                    // Its sound plays once: turning the phone shows the card again, silent.
+                    compose.onNodeWithContentDescription("Stop sound").assertExists()
+                    scenario.recreate()
+                    compose.waitForText("Right.")
+                    compose.onNodeWithText(german).assertExists()
+                    compose.onNodeWithContentDescription("Play sound").assertExists()
+                    compose.onNodeWithContentDescription("Stop sound").assertDoesNotExist()
+                }
                 compose.onNodeWithText("Next").performClick()
             }
             compose.waitForText("Done")

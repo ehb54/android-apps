@@ -43,17 +43,23 @@ import io.github.ehb54.quiz.engine.MatchSession
 import io.github.ehb54.quiz.model.Card
 import io.github.ehb54.quiz.model.Quiz
 import io.github.ehb54.quiz.model.isSound
+import kotlinx.coroutines.delay
 import java.io.File
 
 private val TEXT_TILE = 80.dp
 private val PICTURE_TILE = 112.dp
 
+/** How long a pair just made shows what its card shows once paired, before its tiles go. */
+private const val PAIR_SHOWN_MS = 500L
+
 /**
  * A block of tiles in two columns, side A on the left and side B on the right,
  * each shuffled: tap one on each side to pair them. Paired tiles leave a gap,
  * so the others stay put; a wrong pair is marked until the next tap. When the
- * block is cleared the next one appears. A sound tile has a button to play
- * it; a tap elsewhere on it picks it. Back does not leave.
+ * block is cleared the next one appears. A sound tile plays when tapped, and is
+ * picked; tapped again once picked, it only plays again. A right pair whose
+ * card shows more once paired (a file's text, a sound) shows it on its tiles,
+ * and plays the sound, for a moment before they go. Back does not leave.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -61,18 +67,22 @@ fun MatchScreen(
     quiz: Quiz,
     session: MatchSession,
     mismatch: Pair<Long, Long>?,
-    paired: Long?,
+    paired: Pair<Long, Long>?,
     mediaDir: File,
     snackbar: SnackbarHostState,
     vm: QuizViewModel,
 ) {
     BackHandler(onBack = vm::backDuringQuiz)
-    // A pair just made whose card shows more once answered: its words in the hint line, its sound played.
-    val pairedCard = paired?.let(quiz::card)
     val player = LocalSoundPlayer.current
-    LaunchedEffect(paired) {
-        val sound = pairedCard?.let { it.sound(sideA = true) ?: it.sound(sideA = false) }
-        if (sound != null) player.play(File(mediaDir, sound))
+    if (paired != null) {
+        val (left, right) = paired
+        val card = quiz.card(left)
+        val sound = card?.sound(sideA = true) ?: card?.sound(sideA = false)
+        if (sound != null) PlayOnce("$left:$right", File(mediaDir, sound))
+        LaunchedEffect(paired) {
+            delay(PAIR_SHOWN_MS)
+            vm.showedPair()
+        }
     }
     // A half-made pair belongs to its block.
     var pickedLeft by rememberSaveable(session.round, session.left) { mutableStateOf<Long?>(null) }
@@ -88,6 +98,19 @@ fun MatchScreen(
         } else {
             pickedLeft = l
             pickedRight = r
+        }
+    }
+    fun tap(id: Long, sideA: Boolean) {
+        val card = quiz.card(id) ?: return
+        val sound = (if (sideA) card.mediaA else card.mediaB)?.takeIf(::isSound)
+        if (sound != null) player.play(File(mediaDir, sound))
+        val picked = if (sideA) pickedLeft else pickedRight
+        when {
+            id != picked -> if (sideA) pick(id, null) else pick(null, id)
+            // A picked sound tile only plays again; any other picked tile is let go.
+            sound != null -> Unit
+            sideA -> pickedLeft = null
+            else -> pickedRight = null
         }
     }
 
@@ -109,17 +132,8 @@ fun MatchScreen(
             verticalArrangement = Arrangement.spacedBy(12.dp),
         ) {
             Text(
-                when {
-                    mismatch != null -> stringResource(R.string.not_a_pair)
-                    pairedCard != null ->
-                        listOf(pairedCard.a, pairedCard.b).filter { it.isNotBlank() }.joinToString(" · ")
-                    else -> stringResource(R.string.match_hint)
-                },
-                color = when {
-                    mismatch != null -> MaterialTheme.colorScheme.error
-                    pairedCard != null -> MaterialTheme.colorScheme.primary
-                    else -> Color.Unspecified
-                },
+                stringResource(if (mismatch != null) R.string.not_a_pair else R.string.match_hint),
+                color = if (mismatch != null) MaterialTheme.colorScheme.error else Color.Unspecified,
                 style = MaterialTheme.typography.bodyMedium,
             )
             Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
@@ -128,10 +142,11 @@ fun MatchScreen(
                     matched = session.matchedLeft,
                     picked = pickedLeft,
                     wrong = mismatch?.first,
+                    shown = paired?.first,
                     quiz = quiz,
                     sideA = true,
                     mediaDir = mediaDir,
-                    onPick = { id -> if (id == pickedLeft) pickedLeft = null else pick(id, null) },
+                    onTap = { id -> tap(id, sideA = true) },
                     modifier = Modifier.weight(1f),
                 )
                 TileColumn(
@@ -139,10 +154,11 @@ fun MatchScreen(
                     matched = session.matchedRight,
                     picked = pickedRight,
                     wrong = mismatch?.second,
+                    shown = paired?.second,
                     quiz = quiz,
                     sideA = false,
                     mediaDir = mediaDir,
-                    onPick = { id -> if (id == pickedRight) pickedRight = null else pick(null, id) },
+                    onTap = { id -> tap(id, sideA = false) },
                     modifier = Modifier.weight(1f),
                 )
             }
@@ -156,13 +172,13 @@ private fun TileColumn(
     matched: Set<Long>,
     picked: Long?,
     wrong: Long?,
+    shown: Long?,
     quiz: Quiz,
     sideA: Boolean,
     mediaDir: File,
-    onPick: (Long) -> Unit,
+    onTap: (Long) -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    fun Card.text() = if (sideA) a else b
     fun Card.media() = if (sideA) mediaA else mediaB
     val pictures = tiles.any { id -> quiz.card(id)?.media()?.let { !isSound(it) } == true }
     val height = if (pictures) PICTURE_TILE else TEXT_TILE
@@ -177,67 +193,108 @@ private fun TileColumn(
                 )
             } else {
                 Tile(
-                    text = card.text(),
-                    media = card.media(),
+                    card = card,
+                    sideA = sideA,
                     mediaDir = mediaDir,
                     number = index + 1,
                     selected = id == picked,
                     wrong = id == wrong,
+                    shown = id == shown,
                     height = height,
                     modifier = Modifier.testTag(tileTag(id, sideA)),
-                ) { onPick(id) }
+                ) { onTap(id) }
+            }
+        }
+    }
+}
+
+/** One side of [card] as a tile; [shown], with what it shows once paired (a file's text, a sound's sign). */
+@Composable
+private fun Tile(
+    card: Card,
+    sideA: Boolean,
+    mediaDir: File,
+    number: Int,
+    selected: Boolean,
+    wrong: Boolean,
+    shown: Boolean,
+    height: Dp,
+    modifier: Modifier = Modifier,
+    onClick: () -> Unit,
+) {
+    val colors = MaterialTheme.colorScheme
+    val text = if (sideA) card.a else card.b
+    val media = if (sideA) card.mediaA else card.mediaB
+    val marked = selected || shown
+    Surface(
+        modifier = modifier
+            .fillMaxWidth()
+            .height(height)
+            .selectable(selected = marked, enabled = !shown, role = Role.Button, onClick = onClick),
+        shape = MaterialTheme.shapes.medium,
+        color = when {
+            wrong -> colors.errorContainer
+            marked -> colors.primaryContainer
+            else -> colors.surfaceVariant
+        },
+        border = BorderStroke(
+            if (marked || wrong) 2.dp else 1.dp,
+            when {
+                wrong -> colors.error
+                marked -> colors.primary
+                else -> colors.outlineVariant
+            },
+        ),
+    ) {
+        Box(Modifier.padding(8.dp), contentAlignment = Alignment.Center) {
+            when {
+                shown -> ShownSide(card, sideA, mediaDir, number)
+                media != null && isSound(media) -> SoundTileContent(File(mediaDir, media), number, button = false)
+                media != null -> CardImage(File(mediaDir, media), Modifier.fillMaxSize(), maxSide = 512)
+                else -> TileText(text)
+            }
+        }
+    }
+}
+
+/** A side of a pair just made, whole: its picture, then its sound's sign and its text. */
+@Composable
+private fun ShownSide(card: Card, sideA: Boolean, mediaDir: File, number: Int) {
+    val text = if (sideA) card.a else card.b
+    val media = if (sideA) card.mediaA else card.mediaB
+    val sound = card.sound(sideA)
+    Column(
+        Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally,
+    ) {
+        if (media != null && !isSound(media)) {
+            CardImage(
+                File(mediaDir, media),
+                Modifier
+                    .fillMaxWidth()
+                    .weight(1f),
+                maxSide = 512,
+            )
+        }
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            if (sound != null) SoundIcon(File(mediaDir, sound))
+            when {
+                text.isNotBlank() -> TileText(text)
+                media != null && isSound(media) ->
+                    Text(stringResource(R.string.sound_number, number), style = MaterialTheme.typography.titleMedium)
             }
         }
     }
 }
 
 @Composable
-private fun Tile(
-    text: String,
-    media: String?,
-    mediaDir: File,
-    number: Int,
-    selected: Boolean,
-    wrong: Boolean,
-    height: Dp,
-    modifier: Modifier = Modifier,
-    onClick: () -> Unit,
-) {
-    val colors = MaterialTheme.colorScheme
-    Surface(
-        modifier = modifier
-            .fillMaxWidth()
-            .height(height)
-            .selectable(selected = selected, role = Role.Button, onClick = onClick),
-        shape = MaterialTheme.shapes.medium,
-        color = when {
-            wrong -> colors.errorContainer
-            selected -> colors.primaryContainer
-            else -> colors.surfaceVariant
-        },
-        border = BorderStroke(
-            if (selected || wrong) 2.dp else 1.dp,
-            when {
-                wrong -> colors.error
-                selected -> colors.primary
-                else -> colors.outlineVariant
-            },
-        ),
-    ) {
-        Box(Modifier.padding(8.dp), contentAlignment = Alignment.Center) {
-            if (media != null && isSound(media)) {
-                SoundTileContent(File(mediaDir, media), number)
-            } else if (media != null) {
-                CardImage(File(mediaDir, media), Modifier.fillMaxSize(), maxSide = 512)
-            } else {
-                Text(
-                    text,
-                    style = MaterialTheme.typography.bodyMedium,
-                    textAlign = TextAlign.Center,
-                    maxLines = 3,
-                    overflow = TextOverflow.Ellipsis,
-                )
-            }
-        }
-    }
+private fun TileText(text: String) {
+    Text(
+        text,
+        style = MaterialTheme.typography.bodyMedium,
+        textAlign = TextAlign.Center,
+        maxLines = 3,
+        overflow = TextOverflow.Ellipsis,
+    )
 }

@@ -15,6 +15,7 @@ import io.github.ehb54.quiz.data.storeImage
 import io.github.ehb54.quiz.data.storeSound
 import io.github.ehb54.quiz.engine.AnswerTimes
 import io.github.ehb54.quiz.engine.MatchSession
+import io.github.ehb54.quiz.engine.MatchStep
 import io.github.ehb54.quiz.engine.Outcome
 import io.github.ehb54.quiz.engine.PairOutcome
 import io.github.ehb54.quiz.engine.QzxCard
@@ -130,8 +131,11 @@ data class UiState(
     val mismatch: Pair<Long, Long>? = null,
     /** The card shown whole after a right answer, before the next card. */
     val after: After? = null,
-    /** Match mode: the last pair made, when its card shows more once paired (its side A card). */
-    val paired: Long? = null,
+    /**
+     * Match mode: a right pair whose card shows more once paired (side A card,
+     * side B card), on show on its tiles until [QuizViewModel.showedPair].
+     */
+    val paired: Pair<Long, Long>? = null,
     val summary: Summary? = null,
     val library: LibraryState = LibraryState(),
 ) {
@@ -406,7 +410,11 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
 
     // Matching
 
+    /** The step a pair on show (UiState.paired) takes once it has been shown. */
+    private var shownStep: MatchStep? = null
+
     private fun startMatching(quiz: Quiz) {
+        shownStep = null
         val match = startMatch(quiz)
         if (match == null) {
             message(text(R.string.nothing_due))
@@ -416,13 +424,37 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
         persist { store.saveMatch(match) }
     }
 
-    /** Pairs the side A tile of card [left] with the side B tile of card [right]. */
+    /**
+     * Pairs the side A tile of card [left] with the side B tile of card [right].
+     * A right pair whose card shows more once paired stays on show first (see
+     * [showedPair]); a pair still on show goes before the new one is made.
+     */
     fun pair(left: Long, right: Long) {
+        showedPair()
         val state = _state.value
         val match = state.match ?: return
         val quiz = state.quiz(match.quizId) ?: return
         val step = pairTiles(quiz, match, left, right)
         if (step.outcome == PairOutcome.Ignored) return
+        if (step.outcome != PairOutcome.Wrong && quiz.card(left)?.hasAfter() == true) {
+            shownStep = step
+            _state.value = state.copy(mismatch = null, paired = left to right)
+            return
+        }
+        takeStep(state, quiz, step, left, right)
+    }
+
+    /** Ends the show of the pair just made (MatchScreen, after a moment): its tiles go, and the next block may come. */
+    fun showedPair() {
+        val step = shownStep ?: return
+        shownStep = null
+        val state = _state.value
+        val (left, right) = state.paired ?: return
+        val quiz = state.quiz(state.match?.quizId) ?: return
+        takeStep(state.copy(paired = null), quiz, step, left, right)
+    }
+
+    private fun takeStep(state: UiState, quiz: Quiz, step: MatchStep, left: Long, right: Long) {
         val quizzes = state.quizzes.map { if (it.id == quiz.id) step.quiz else it }
         val next = step.session
         if (next.finished) {
@@ -448,8 +480,7 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
             }
         } else {
             val mismatch = if (step.outcome == PairOutcome.Wrong) left to right else null
-            val paired = if (mismatch == null && quiz.card(left)?.hasAfter() == true) left else null
-            _state.value = state.copy(quizzes = quizzes, match = next, mismatch = mismatch, paired = paired)
+            _state.value = state.copy(quizzes = quizzes, match = next, mismatch = mismatch)
             persist {
                 if (step.quiz !== quiz) store.saveQuiz(step.quiz)
                 store.saveMatch(next)
@@ -467,6 +498,7 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
      * penalty is applied, and a match block in progress is not scored.
      */
     fun abandonSession() {
+        shownStep = null
         val state = _state.value
         val quizId = state.session?.quizId ?: state.match?.quizId ?: return
         _state.update {

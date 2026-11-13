@@ -36,16 +36,15 @@ import java.io.File
 /**
  * After a card is answered right in Type or Pick: the whole card, prompt side
  * first, with what its sides carry for after the answer, a file's text (the word
- * a sound says) and the word spoken. Its sound plays once by itself; Next (or
- * Back, or Enter on a keyboard) goes on to the next card, whose clock starts then.
+ * a sound says) and the word spoken. Its sound plays once by itself (not again
+ * when the phone is turned); Next (or Back, or Enter on a keyboard) goes on to
+ * the next card, whose clock starts then.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AfterAnswerScreen(quizName: String, card: Card, direction: Direction, mediaDir: File, onNext: () -> Unit) {
     BackHandler(onBack = onNext)
-    val player = LocalSoundPlayer.current
-    val sound = card.afterSound(direction)
-    LaunchedEffect(card.id, direction) { if (sound != null) player.play(File(mediaDir, sound)) }
+    card.afterSound(direction)?.let { PlayOnce("${card.id}:$direction", File(mediaDir, it)) }
     val focus = remember { FocusRequester() }
     LaunchedEffect(Unit) { focus.requestFocus() }
     Scaffold(
