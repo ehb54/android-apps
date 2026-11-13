@@ -65,9 +65,10 @@ good-enough sound):
 2. `retake` makes four more takes, with other seeds, with each voice of
    each text whose pick is below the bar, and keeps each voice's best take.
    (The German run's retakes left out Thorsten, which was not seeded then.)
-3. `pick` takes each text's surest sound; `collect` copies it, evened, to
-   `de/raw/sounds/` and writes `de/raw/sounds.tsv`: the file, the text, what
-   was said, voice, seed, Whisper's chance and sureness, license, quizzes.
+3. `pick` takes each text's surest sound, or the one chosen over it (see
+   Choices over Whisper's); `collect` copies it, evened, to `de/raw/sounds/`
+   and writes `de/raw/sounds.tsv`: the file, the text, what was said, voice,
+   seed, Whisper's chance and sureness, who chose it, license, quizzes.
 
 KugelAudio is not among them: its 7B model needs a Mac with more than 16 GB.
 
@@ -218,6 +219,36 @@ OmniVoice take 2 (Qwen3-TTS take 3 had 85% too). A best take of five is
 Whisper's choice, so listen to the retakes: one could suit Whisper better than
 an ear.
 
+### Choices over Whisper's
+
+`<lang>/chosen.tsv` (committed) holds the sounds chosen over the one Whisper
+is surest of: the text, the voice, the take's seed, who chose it and why.
+`by` is `ear` for picks made on a listening page and `transcript` for picks
+made from what Whisper wrote down for each voice. `pick` follows them,
+`collect` notes them in `sounds.tsv` (and warns when a chosen voice's sound
+has become another take), and `retake` leaves those texts alone. To add a
+page's picks, *Copy picks* into a file and run:
+
+```bash
+tools/sounds/run.sh choose de picks.tsv
+```
+
+Each row with a pick goes in with `by` `ear` (a TSV can give its own `by` and
+`why` columns); a text picked again takes the new pick, but no other kind of
+pick replaces one made by ear. Then it picks and collects again.
+
+German: Claude chose 48 of the 291 texts below 80% from the transcripts.
+Where Whisper wrote its pick down as another word and another voice as the
+word, that voice was chosen: Wal as "Val" but "Wahl", Kamm as "Come" but
+"Kamm", Aal as "All" but "Aal". "Wahl" counts as the word, because German
+spelling says them the same (Weise for Waise, Leib for Laib); a long vowel
+against a short one does not (All, Herr for Heer). Ten were judged by reading
+the transcripts, such as Hieb heard as "Heap" rather than "Piep". Each row
+says why. The other 243 keep Whisper's pick, because its pick was heard as
+the word or a word said the same, or every voice was heard as another word,
+so the transcripts cannot tell the voices apart. Listening to them on the
+page and adding the picks with `choose` overrides any of this.
+
 ### KugelAudio needs a patch
 
 mlx-audio 0.6.4's KugelAudio port turns every word into seconds of made-up
@@ -245,7 +276,8 @@ remove Chatterbox's accent.
 | `pilot.txt` | the words of the pilot (`noun Haus`, `verb gehen`) | by hand |
 | `texts.tsv` | a language's texts: key, text, quizzes | `texts` |
 | `raw/<source>/` | the sounds `<kind>-<lemma>.wav` (Wikimedia: `.ogg`), `log.tsv` (model, settings, seed, text, time; Wikimedia: file, license, speaker, page), `heard.tsv` and `score.tsv` | `generate`, `wikimedia`, `hear` (git-ignored) |
-| `raw/picks.tsv` | per word, the source Whisper is surest of, and the runner-up | `pick` (git-ignored) |
+| `chosen.tsv` | sounds chosen over Whisper's pick: text, voice, seed, by (`ear`, `transcript`), why | `choose` |
+| `raw/picks.tsv` | per word, the source Whisper is surest of (or the chosen one), and the runner-up | `pick` (git-ignored) |
 | `raw/<engine>/takes/` | every take of a weak word, `<kind>-<lemma>~<seed>.wav`, with `log.tsv` and `score.tsv` | `retake` (git-ignored) |
 | `raw/listen/` | every sound evened (see Evening), and `pilot.html` to compare them | `hear`, `pick`, `page` (git-ignored) |
 | `raw/sounds/`, `raw/sounds.tsv` | the picked sound per text, and what it is | `collect` (git-ignored) |
@@ -270,5 +302,9 @@ Every step skips work already done.
    through a local web server, e.g.
    `python3 -m http.server 8765 --directory tools/sounds/core/raw/listen`,
    then `http://127.0.0.1:8765/pilot.html`. ▶ plays a row. Each sound shows
-   what Whisper heard and its chance, and Whisper's pick has a blue stripe.
-   Mark the best per word; *Copy picks* gives yours beside Whisper's as TSV.
+   what Whisper heard and its chance, and Whisper's pick has a blue stripe;
+   a sound in `chosen.tsv` is marked "chosen". Mark the best per word; *Copy
+   picks* gives yours beside Whisper's as TSV. Marks are kept by the browser
+   for that address (`127.0.0.1` and `localhost` keep separate ones).
+5. `run.sh choose <list> <picks.tsv>` adds those picks to `chosen.tsv` (see
+   Choices over Whisper's).
