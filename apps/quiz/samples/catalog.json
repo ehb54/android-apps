@@ -57,6 +57,20 @@
             ]
         },
         {
+            "file": "Children's books pictures ERNIE.zip",
+            "bytes": 1992100,
+            "sha256": "be166fba0b45aec89e8064e5223d57722bc981f78e758c6fc8b8f58a8e4fe913",
+            "quizzes": [
+                {
+                    "name": "Children's books pictures ERNIE",
+                    "source": "Children's books pictures ERNIE.zip",
+                    "version": "be166fba0b45aec89e8064e5223d57722bc981f78e758c6fc8b8f58a8e4fe913",
+                    "cards": 380,
+                    "pictures": 380
+                }
+            ]
+        },
+        {
             "file": "Children's books pictures.zip",
             "bytes": 2266154,
             "sha256": "cf43e2660ffa479f908df14d9dcfc3b9217d6fa344852fb539149f3b9f9bf890",
@@ -68,6 +82,20 @@
                     "cards": 67,
                     "pictures": 67,
                     "sounds": 67
+                }
+            ]
+        },
+        {
+            "file": "Children's books verb pictures ERNIE.zip",
+            "bytes": 445386,
+            "sha256": "05eaefb79ff95391eed8004d8c57252adfe890097ed48662d4c96075ce800adf",
+            "quizzes": [
+                {
+                    "name": "Children's books verb pictures ERNIE",
+                    "source": "Children's books verb pictures ERNIE.zip",
+                    "version": "05eaefb79ff95391eed8004d8c57252adfe890097ed48662d4c96075ce800adf",
+                    "cards": 83,
+                    "pictures": 83
                 }
             ]
         },
@@ -273,6 +301,20 @@
             ]
         },
         {
+            "file": "Fairy tales pictures ERNIE.zip",
+            "bytes": 2026986,
+            "sha256": "50a44dc1d407c71b28dfa9479076b425423b168920d1b39628c04cf8d914a84f",
+            "quizzes": [
+                {
+                    "name": "Fairy tales pictures ERNIE",
+                    "source": "Fairy tales pictures ERNIE.zip",
+                    "version": "50a44dc1d407c71b28dfa9479076b425423b168920d1b39628c04cf8d914a84f",
+                    "cards": 382,
+                    "pictures": 382
+                }
+            ]
+        },
+        {
             "file": "Fairy tales pictures.zip",
             "bytes": 2042433,
             "sha256": "9f60c6cdf557d9b337de95db58c64a8be606d1e9f670c3648a879300faf666ff",
@@ -284,6 +326,20 @@
                     "cards": 57,
                     "pictures": 57,
                     "sounds": 57
+                }
+            ]
+        },
+        {
+            "file": "Fairy tales verb pictures ERNIE.zip",
+            "bytes": 399071,
+            "sha256": "36f7faa72ff0051115373f45bed29b03ccea4e2134e4240fcce7f3b886c5aaa6",
+            "quizzes": [
+                {
+                    "name": "Fairy tales verb pictures ERNIE",
+                    "source": "Fairy tales verb pictures ERNIE.zip",
+                    "version": "36f7faa72ff0051115373f45bed29b03ccea4e2134e4240fcce7f3b886c5aaa6",
+                    "cards": 71,
+                    "pictures": 71
                 }
             ]
         },
@@ -373,6 +429,20 @@
             ]
         },
         {
+            "file": "Goethe pictures ERNIE.zip",
+            "bytes": 1093352,
+            "sha256": "0cd8158cc26a0eabe54d2bd513fc07b1ea34a66bcbff514626fc0b413d766a6e",
+            "quizzes": [
+                {
+                    "name": "Goethe pictures ERNIE",
+                    "source": "Goethe pictures ERNIE.zip",
+                    "version": "0cd8158cc26a0eabe54d2bd513fc07b1ea34a66bcbff514626fc0b413d766a6e",
+                    "cards": 204,
+                    "pictures": 204
+                }
+            ]
+        },
+        {
             "file": "Goethe pictures.zip",
             "bytes": 808148,
             "sha256": "e51ce5fa347d535e538bd53bbac7f83894a0f9326002834d22478a7935a10fa6",
@@ -384,6 +454,20 @@
                     "cards": 26,
                     "pictures": 26,
                     "sounds": 26
+                }
+            ]
+        },
+        {
+            "file": "Goethe verb pictures ERNIE.zip",
+            "bytes": 183127,
+            "sha256": "e1904c4537b6437dec69d43c72b4c23339a2e0e162344c46b036feba5285596f",
+            "quizzes": [
+                {
+                    "name": "Goethe verb pictures ERNIE",
+                    "source": "Goethe verb pictures ERNIE.zip",
+                    "version": "e1904c4537b6437dec69d43c72b4c23339a2e0e162344c46b036feba5285596f",
+                    "cards": 32,
+                    "pictures": 32
                 }
             ]
         },
@@ -437,6 +521,20 @@
             ]
         },
         {
+            "file": "History pictures ERNIE.zip",
+            "bytes": 366838,
+            "sha256": "75b41836139f788c7d7a3d6ffee91b890a12ffda76281750fcdf8a1a89723517",
+            "quizzes": [
+                {
+                    "name": "History pictures ERNIE",
+                    "source": "History pictures ERNIE.zip",
+                    "version": "75b41836139f788c7d7a3d6ffee91b890a12ffda76281750fcdf8a1a89723517",
+                    "cards": 66,
+                    "pictures": 66
+                }
+            ]
+        },
+        {
             "file": "History pictures.zip",
             "bytes": 427346,
             "sha256": "0698b5772d04c46a1c9d77ea7078ad13de200cb4b0dfae95ef9d9360bb7dd048",
@@ -448,6 +546,20 @@
                     "cards": 16,
                     "pictures": 16,
                     "sounds": 16
+                }
+            ]
+        },
+        {
+            "file": "History verb pictures ERNIE.zip",
+            "bytes": 104145,
+            "sha256": "17d329466ae7c6509631b2cee382af66d640662ef4b0d614465a9dd0dba0a8f5",
+            "quizzes": [
+                {
+                    "name": "History verb pictures ERNIE",
+                    "source": "History verb pictures ERNIE.zip",
+                    "version": "17d329466ae7c6509631b2cee382af66d640662ef4b0d614465a9dd0dba0a8f5",
+                    "cards": 17,
+                    "pictures": 17
                 }
             ]
         },

@@ -61,14 +61,14 @@ class ContentResolver internal constructor() {
     /** Mode "w" (truncate) or "wa" (append). */
     fun openOutputStream(uri: Uri, mode: String = "w"): OutputStream? = FileOutputStream(uri.file, mode.contains('a'))
 
-    @Suppress("UNUSED_PARAMETER")
+    /** Nullable as on Android, where a provider can fail to answer; a file always answers. */
     fun query(
         uri: Uri,
         projection: Array<String>,
         selection: String?,
         selectionArgs: Array<String>?,
         sortOrder: String?,
-    ): Cursor = Cursor(
+    ): Cursor? = Cursor(
         projection.map {
             when (it) {
                 OpenableColumns.DISPLAY_NAME -> uri.file.name
@@ -134,11 +134,13 @@ open class Application(name: String, dataDir: File? = null) : Context(name, data
 val LocalContext = staticCompositionLocalOf<Context> { Application.current }
 
 /** Android's AndroidViewModel: the app, and a scope on the UI thread. */
-open class AndroidViewModel(private val application: Application) {
+open class AndroidViewModel(application: Application) {
+    @PublishedApi internal val app = application
+
     internal val scope = CoroutineScope(SupervisorJob() + Dispatchers.Main.immediate)
 
-    @Suppress("UNCHECKED_CAST")
-    fun <T : Application> getApplication(): T = application as T
+    /** Reified, so the cast is checked (Android's is unchecked). */
+    inline fun <reified T : Application> getApplication(): T = app as T
 }
 
 val AndroidViewModel.viewModelScope: CoroutineScope get() = scope
@@ -154,7 +156,6 @@ fun <T> StateFlow<T>.collectAsStateWithLifecycle(): State<T> = collectAsState()
 
 object Formatter {
     /** "870 B", "1.2 kB", "45 MB": decimal units, as Android uses. */
-    @Suppress("UNUSED_PARAMETER")
     fun formatShortFileSize(context: Context?, sizeBytes: Long): String {
         val units = listOf("B", "kB", "MB", "GB", "TB")
         var value = sizeBytes.toDouble()
@@ -189,8 +190,8 @@ object ActivityResultContracts {
             openFileDialog(parent, Resources.string(R.string.core_desktop_open))?.let(::Uri)
     }
 
-    /** Input: the suggested file name. */
-    class CreateDocument(@Suppress("unused") private val mimeType: String) : ActivityResultContract<String, Uri?>() {
+    /** Input: the suggested file name. The MIME type is Android's; the Save dialog has no use for it. */
+    class CreateDocument(mimeType: String) : ActivityResultContract<String, Uri?>() {
         override fun run(parent: Frame?, input: String): Uri? =
             saveFileDialog(parent, Resources.string(R.string.core_desktop_save), input)?.let(::Uri)
     }

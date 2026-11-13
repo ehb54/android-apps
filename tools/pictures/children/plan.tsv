@@ -1,0 +1,1301 @@
+lemma	kind	picturable	prompt	note
+Waldhaus	noun	scene	a small timber house with a steep roof standing alone in a clearing among tall forest trees	near: Sennhütte, Bauernhaus, Nachbarhaus
+Geiß	noun	yes	an adult nanny goat, brown and white, with small curved horns, a short beard and a full pink udder, standing on grass	near: Ziegenbock, Zicklein
+Patin	noun	no		relational
+Vorsteherin	noun	no		a role not shown by dress (looks like any woman)
+Base	noun	no		relational
+Raupe	noun	yes	a green caterpillar with small black dots and many tiny legs crawling along a leaf	
+Pfarrfrau	noun	no		relational
+Schildkröte	noun	yes	a tortoise with a high domed brown-and-yellow patterned shell, walking on short scaly legs	
+Eichhörnchen	noun	yes	a red squirrel with a big bushy tail and tufted ears, sitting up and holding a nut in its front paws	
+Marder	noun	yes	a pine marten, a slender dark brown animal with a creamy-yellow throat patch, round ears and a long bushy tail, on a branch	near: Wiesel
+Urgroßmutter	noun	no		relational
+Knirps	noun	no		a character word (a small boy shows no more than Junge)
+Cent	noun	no		abstract (a unit of money; a coin shows no value without numbers, Geldstück)
+Kaninchen	noun	yes	a small brown rabbit with long upright ears and a white fluffy tail, sitting in short grass	
+Purzelbaum	noun	yes	a boy of about eight with short red hair rolling head over heels in a forward somersault on the grass, upside down mid-roll	near: Luftsprung
+Kuhstall	noun	scene	the inside of a wooden cowshed: brown-and-white cows standing in a row of stalls on straw, a hay rack above them	near: Pferdestall, Schweinestall, Hühnerstall
+Wespe	noun	yes	a wasp with a slim yellow-and-black striped body, a narrow waist and clear wings, seen from above	near: Hummel
+Schulhaus	noun	no		duplicates Schulgebäude
+Ranzen	noun	no		duplicates Schulranzen
+Krippe	noun	yes	a wooden manger: a feeding trough on crossed wooden legs filled with golden hay, standing on straw	near: Trog
+Hinterbein	noun	no		a part; a leg on its own cannot show front or hind
+Fühler	noun	no		a part; antennae are drawn on a whole insect
+Sennerin	noun	scene	a young woman with blond braids, an alpine dairymaid in a dirndl and apron, carrying a wooden milk pail on a mountain pasture	near: Wäscherin
+Zirkus	noun	scene	a big red-and-yellow striped circus tent with pointed peaks and small flags on top	near: Menagerie, Jahrmarkt
+Gänseblümchen	noun	yes	a single small daisy with white petals tipped pink and a yellow centre, on a short stem among green leaves	near: Wiesenblume, Anemone, Aster
+Sonntagsschule	noun	no		an institution; looks like a classroom (Klassenzimmer)
+Schwan	noun	yes	a white swan with an orange beak and a curved neck gliding on a patch of blue water	
+Wickelkind	noun	yes	a newborn baby with a tuft of dark hair, tightly wrapped in a pale blue swaddling cloth, only the small face showing	near: Kinderwagen
+Libelle	noun	yes	a dragonfly with a long thin blue body and four clear veined wings spread out flat	
+Spielplatz	noun	scene	a children's playground on grass with a slide, a seesaw and a sandpit with a red bucket and spade	near: Schaukel, Schulhof
+Griffel	noun	no		looks like a pencil; on a slate it reads as Schiefertafel
+Schulzimmer	noun	no		duplicates Klassenzimmer
+Vorderbein	noun	no		a part; a leg on its own cannot show front or hind
+Brötchen	noun	yes	a crusty golden-brown bread roll with a single cut along the top	near: Brezel
+Bergrücken	noun	no		duplicates Bergspitze
+Hosenboden	noun	no		a part; drawn as the whole trousers
+Igel	noun	yes	a hedgehog with brown spines, a pointed snout and small black eyes, walking on the ground	
+Stalltür	noun	scene	a stable door split across the middle, its top half open and a brown horse's head looking out over the closed bottom half, in a white stone wall	near: Scheunentor, Zimmertür
+Dohle	noun	yes	a jackdaw, a small black crow with a silver-grey nape and pale whitish eyes, perched on a branch	near: Star, Elster
+Halfter	noun	no		a part of tack; drawn on a horse's head it reads as the horse
+Schultag	noun	no		abstract (time word)
+Ausreißer	noun	no		a role not shown (looks like a running child)
+Esszimmer	noun	scene	a dining room with a long polished table and six chairs around it, a sideboard with plates and a lamp hanging above	near: Abendtafel, Mittagstafel, Mittagstisch
+Himbeere	noun	yes	a few red raspberries made of tiny round beads, with a green leaf	near: Erdbeere, Heidelbeere
+Stecken	noun	yes	a long, straight, rough wooden stick cut from a branch, with a few knots along it	near: Knüppel, Gerte, Besenstiel
+Mähne	noun	no		a part; a mane is drawn on a whole horse or lion
+Vorderfuß	noun	no		a part; a foot on its own cannot show front or hind
+Klaue	noun	no		a part; claws are drawn on a paw (Tatze) or a whole animal
+Elster	noun	yes	a magpie with black-and-white plumage, a blue-green sheen on its wings and a long black tail	near: Dohle, Star
+Strickzeug	noun	yes	two knitting needles stuck through a half-finished piece of red knitting, a strand of wool trailing from it	near: Strickstrumpf, Garn, Nähzeug
+Zapfen	noun	no		duplicates Tannenzapfen
+Lesebuch	noun	no		looks like any book (Bilderbuch)
+Scharlachfieber	noun	no		abstract (an illness)
+Weihnachtsgeschenk	noun	yes	a present wrapped in red paper with gold stars, tied with a green ribbon bow and a sprig of fir and holly	near: Geburtstagsgeschenk
+Erzieherin	noun	no		a role not shown by dress (looks like any woman)
+Polizeidiener	noun	yes	a man of about fifty with a black moustache, an old-fashioned town constable in a dark blue uniform with brass buttons and a spiked helmet	near: Schildwache, Wachtposten
+Eremit	noun	scene	a very old bald man with a long grey beard, a hermit in a patched brown hooded robe with a rope belt, at the mouth of a small cave	near: Wandersmann, Landstreicher
+Felsblock	noun	yes	a single huge rounded grey boulder lying in green grass	near: Felsstück, Steinhaufen, Kieselstein
+Seeräuber	noun	yes	a man with a black beard, a pirate with an eyepatch, a red headscarf, a striped shirt and a curved sword	near: Räuberhauptmann
+Schlittschuh	noun	yes	a single brown leather lace-up ice skate boot with a shiny steel blade	near: Eisbahn
+Halstuch	noun	yes	a red neckerchief with white dots, tied in a loose knot at the front as if worn, on its own with no person	near: Schnupftuch
+Erdhaufen	noun	yes	a small mound of loose brown earth on green grass	near: Steinhaufen
+Pflegemutter	noun	no		relational
+Weihnachtslied	noun	no		abstract (a song; singers show singing, not which song)
+Ziegenbock	noun	no		duplicates Geiß
+Sennhütte	noun	scene	a low wooden alpine hut with a stone-weighted shingle roof on a green mountain pasture, snowy peaks behind	near: Waldhaus
+Gummi	noun	no		a material; a rubber thing reads as that thing
+Torte	noun	yes	a tall round layer cake with pink frosting, layers of cream and strawberries on top, one slice cut out	near: Backwerk
+Holzschuh	noun	yes	a single carved wooden clog of honey-brown wood with a rounded, slightly upturned toe	
+Leckerbissen	noun	no		abstract (any tasty food)
+Kinderfrau	noun	no		a role not shown by dress (a woman with a pram reads as Kinderwagen)
+Schweif	noun	no		a part; a tail is drawn on a whole animal
+Hirtenbube	noun	scene	a boy of about ten with tousled brown hair, barefoot, a shepherd boy holding a wooden staff among a few goats on an alpine pasture	near: Schäfer
+Geheule	noun	no		abstract (a sound)
+Schulglocke	noun	yes	a brass handbell with a long turned wooden handle	near: Schelle, Hausglocke, Kirchenglocke
+Pilz	noun	yes	a mushroom with a broad brown cap and a thick pale beige stem, standing in a little moss	
+Schulranzen	noun	yes	a brown leather school satchel with two shoulder straps, a buckled front flap and a small handle on top	near: Ranzen, Felleisen
+Henne	noun	yes	a brown hen with a small red comb standing on straw	near: Küchlein, Rebhuhn, Truthahn
+Erdboden	noun	no		abstract (the ground; a surface with no shape)
+Baumstumpf	noun	yes	a short tree stump with a flat sawn top showing growth rings, its roots spreading into the grass	near: Baumwurzel
+Zehe	noun	no		a part; drawn as a whole foot
+Verdeck	noun	no		a part; a ship's deck is drawn as the whole ship (Dampfschiff)
+Neckerei	noun	no		abstract
+Mittagsmahl	noun	no		abstract (a meal; the time of day cannot be shown)
+Bescherung	noun	no		an event; reads as the presents or the tree (Weihnachtsgeschenk, Weihnachtsbaum)
+Grashalm	noun	yes	one single long thin green grass stalk on its own, slightly bent at the tip	near: Rasenplatz
+Führerin	noun	no		a role not shown (looks like any woman)
+Puppenstube	noun	yes	an open-fronted wooden dollhouse with tiny furnished rooms on two floors, little beds, a table and chairs	near: Kinderzimmer
+Kater	noun	yes	a large orange striped tomcat with a broad head and long whiskers, sitting upright	near: Katzenkopf
+Grammatik	noun	no		abstract
+Pudding	noun	yes	a wobbly dome of chocolate pudding turned out of a mould onto a blue plate, a spoon beside it	near: Brei
+Zicklein	noun	yes	a tiny newborn kid goat, light brown and white, with long wobbly legs and no horns	near: Geiß, Ziegenbock
+Rechenbuch	noun	no		looks like any book; sums would be text
+Röhricht	noun	scene	a dense bed of tall green reeds with brown feathery tops growing in the shallow water at the edge of a pond	
+Warze	noun	no		a small mark; drawn on a hand or nose it reads as that part
+Studierzimmer	noun	scene	a scholar's study with a large wooden desk piled with books and papers, a reading lamp, a globe and tall bookshelves	near: Kinderzimmer, Esszimmer
+Pensionat	noun	no		an institution; the building looks like any school (Schulgebäude)
+Verheerung	noun	no		abstract
+Schafherde	noun	scene	a large flock of woolly cream-coloured sheep grazing close together on a green hillside	near: Schäfer, Weideplatz
+Bodenkammer	noun	scene	a small attic room under a steep sloping wooden roof with a little window, a narrow bed and an old wooden chest	near: Verschlag, Heuboden
+Küchlein	noun	yes	a fluffy yellow baby chick with a small orange beak, standing	near: Henne
+Tannenwipfel	noun	no		a part; the top of a fir is drawn as a whole fir (Tannenbaum)
+Holzhauer	noun	yes	a strong man of about forty with a red beard and a checked shirt, a woodcutter swinging an axe into a tree trunk	near: Zimmermann, Tischler
+Pappschachtel	noun	yes	an open brown cardboard box with its four flaps folded up	
+Füllen	noun	yes	a young brown foal with long thin wobbly legs, a short fuzzy mane and a brush-like tail	near: Braune
+Pflegekind	noun	no		relational
+Jugendschrift	noun	no		looks like any book (Bilderbuch)
+Hauslehrer	noun	no		a role not shown by dress (looks like any man)
+Neuling	noun	no		relational
+Akazie	noun	yes	a flat-topped acacia tree with a thin crooked trunk and a wide umbrella-shaped crown, alone on dry savanna grass	near: Waldbaum
+Heuboden	noun	scene	the upper floor of a barn under the roof beams, piled high with golden hay, a wooden ladder leading up to it	near: Heuhaufen, Bodenkammer
+Wäscherin	noun	scene	a stout woman of about fifty with grey hair under a red headscarf, sleeves rolled up, scrubbing laundry on a washboard in a wooden tub	near: Sennerin, Arbeiterin
+Wildfang	noun	no		a character word (looks like any child)
+Milchbrei	noun	no		duplicates Brei
+Gelaufe	noun	no		abstract
+Heidekraut	noun	yes	a low bushy clump of heather covered in tiny pink-purple bell-shaped flowers	near: Glockenblume
+Schelle	noun	no		duplicates Schulglocke
+Halsband	noun	yes	a red leather dog collar with a metal buckle and a round metal tag, on its own with no dog	near: Hofhund
+Zetergeschrei	noun	no		abstract (a sound)
+Kinderfreund	noun	no		relational
+Kirchspiel	noun	no		abstract
+Zufluchtsort	noun	no		abstract (a function of a place)
+Fund	noun	no		abstract
+Tannenzweig	noun	yes	a single green fir branch with short flat needles on its own, no tree	near: Tannennadel, Tannenbaum
+Schiefertafel	noun	yes	a small dark grey writing slate in a light wooden frame with a sponge hanging from a string, held in a child's two hands	near: Wandtafel, Griffel
+Konfirmation	noun	no		sensitive
+Ulme	noun	no		a tree kind not plain at a glance (looks like any tree, Waldbaum)
+Raubvogel	noun	yes	a brown bird of prey with a hooked yellow beak and sharp curved talons, perched on a branch with wings folded	near: Habicht, Falke
+Grille	noun	yes	a field cricket insect, shiny black-brown, with long feelers and strong folded hind legs, sitting on a stone	
+Spötterei	noun	no		abstract
+Bösewicht	noun	no		a character word (looks like any man)
+Kreide	noun	yes	three round sticks of school chalk in pale yellow, pink and light blue, lying side by side	near: Wandtafel
+Holzstoß	noun	yes	a tall neat stack of split firewood logs piled in rows outdoors	near: Holzschuppen, Reisig, Stapel
+Katheder	noun	yes	an old-fashioned wooden teacher's desk with a sloping top, standing on a low wooden platform	near: Klassenzimmer
+Waldboden	noun	no		a surface; a picture reads as moss, leaves or cones
+Teig	noun	yes	a round ball of pale yellow bread dough on a floured wooden board, a rolling pin beside it	
+Geiger	noun	yes	a man of about forty with curly black hair playing a violin, the violin under his chin and the bow raised	near: Musikkapelle
+Tannenzapfen	noun	yes	a single long brown fir cone with overlapping woody scales, lying on its side	near: Zapfen, Tannenzweig
+Anzahl	noun	no		abstract
+Waisenkind	noun	no		relational
+Löwin	noun	yes	a lioness, a tawny big cat with no mane, standing in profile	
+Flügelschlag	noun	no		abstract (a movement)
+Speisekammer	noun	scene	a small pantry with wooden shelves of preserving jars, a loaf of bread, a wheel of cheese and sausages hanging from a hook	near: Vorratskammer
+Schäfer	noun	yes	a weathered man of about sixty with a short grey beard, a shepherd in a wide-brimmed hat and long brown cloak, leaning on a crook beside two sheep	near: Hirtenbube, Schafherde
+Schreckensruf	noun	no		abstract (a sound)
+Faulpelz	noun	no		a character word
+Dorfkind	noun	no		relational (looks like any child)
+Leserin	noun	yes	a young woman with a long dark-brown braid sitting in a chair, absorbed in reading an open book	near: Vorleser, Zuhörerin
+Frühstückszeit	noun	no		abstract (time word)
+Obdach	noun	no		abstract
+Einöde	noun	no		abstract (an empty landscape; reads as a moor or a desert)
+Glaskugel	noun	yes	a shiny round red glass Christmas bauble with a small silver cap and a hanging loop	near: Weihnachtsbaum
+Heidelbeere	noun	yes	a small cluster of round dark blue blueberries with a frosty bloom, on a sprig with green leaves	near: Himbeere, Erdbeere
+Zuckerwerk	noun	no		duplicates Bonbon
+Dickkopf	noun	no		a character word
+Luftsprung	noun	yes	a girl of about ten with black curly hair leaping high in the air for joy, arms flung up and heels kicked back	near: Purzelbaum
+Erquickung	noun	no		abstract
+Bilderbuch	noun	yes	an open children's picture book with big colourful pictures of animals filling both pages, no writing	near: Lesebuch, Märchenbuch, Rechenbuch
+Rebhuhn	noun	yes	a grey partridge, a plump round ground bird with speckled grey-brown feathers and an orange face, standing in grass	near: Henne, Truthahn
+Haustier	noun	no		a category; a pet picture reads as that animal
+Schulhof	noun	no		a place; reads as the school (Schulgebäude) or a playground (Spielplatz)
+Milchtopf	noun	yes	a small blue enamel pot with a long handle, filled to the brim with milk	near: Kochtopf, Wasserkrug
+Flügeldecke	noun	no		a part; wing cases are drawn as the whole beetle
+Zange	noun	yes	a pair of metal pincers with curved gripping jaws and red handles	
+Weideplatz	noun	scene	a green fenced pasture with brown cows grazing on the grass	near: Schafherde, Waldwiese, Wiesengrund
+Schlüsselblume	noun	yes	a cowslip: a cluster of small drooping yellow tubular flowers on top of one upright stem, with wrinkled leaves at its base	near: Butterblume
+Schnitzmesser	noun	yes	a small whittling knife with a short curved blade and a wooden handle, lying on curly wood shavings	near: Taschenmesser, Schnitzwerk
+Staatsmann	noun	no		a role not shown by dress (looks like any man)
+Schlosshof	noun	scene	a cobbled courtyard enclosed by castle walls and towers, with a well in the middle and an arched gateway	near: Hofraum
+Steinhaufen	noun	yes	a heap of grey fieldstones of different sizes piled up at the edge of a field	near: Felsblock, Erdhaufen
+Waldwiese	noun	scene	a sunny grassy clearing full of wildflowers, surrounded on all sides by dark forest trees	near: Wiesengrund, Weideplatz
+Familienglied	noun	no		relational
+Verfasserin	noun	no		a role not shown plainly (looks like a woman writing)
+Hummel	noun	yes	a big round fuzzy bumblebee with black and yellow bands, sitting on a purple clover flower	near: Wespe
+Wicht	noun	no		a character word
+Blumenbeet	noun	scene	a rectangular garden bed of dark soil with rows of red and yellow tulips, edged with small stones	near: Blumentopf, Gartenanlage
+Ferienzeit	noun	no		abstract (time word)
+Nachtquartier	noun	no		abstract (a function of a place)
+Wildnis	noun	no		abstract (any untouched landscape)
+Überrest	noun	no		abstract
+Lehnsessel	noun	yes	a high-backed armchair upholstered in green fabric, with curved wooden armrests	
+Baumwurzel	noun	yes	a close-up of thick gnarled brown tree roots snaking across a forest path, no trunk and no stump in view	near: Baumstumpf
+Weiß	noun	no		abstract (a colour)
+Hacke	noun	yes	a garden hoe on its own: a long wooden handle ending in a flat steel blade bent at a right angle to it, like the letter L	near: Spaten
+Pfirsich	noun	yes	a round peach with a soft orange-and-red blush and a single green leaf on its stem	near: Pflaume
+Menagerie	noun	scene	a travelling animal show: a row of painted wooden wagons with barred cages holding a lion, a bear and a monkey	near: Zirkus, Gehege
+Kundschafter	noun	no		a role not shown (looks like any man)
+Wasserkrug	noun	yes	a brown earthenware water jug with a round belly, one handle and a spout	near: Milchtopf, Kaffeekanne
+Brezel	noun	yes	a soft brown pretzel twisted into a knot, sprinkled with coarse salt	near: Brötchen
+Familienkreis	noun	no		relational
+Weiterreise	noun	no		abstract
+Blumenkranz	noun	yes	a round wreath woven of colourful meadow flowers, red, yellow and blue, on its own	near: Girlande, Blumenstrauß
+Katzenkopf	noun	no		a part; a cat's head reads as the cat (Kater)
+Christkind	noun	no		sensitive
+Trübsal	noun	no		abstract
+Freudenschrei	noun	no		abstract (a sound)
+Betrübnis	noun	no		abstract
+Taugenichts	noun	no		a character word
+Weibchen	noun	no		relational
+Hinterhalt	noun	no		abstract
+Dorfbewohner	noun	no		relational (looks like any man or woman)
+Klassenzimmer	noun	scene	an old classroom seen from the back: rows of wooden school desks facing a blackboard and a teacher's desk	near: Schulzimmer, Wandtafel, Katheder
+Stecknadel	noun	yes	a single straight steel sewing pin with a round red glass head	near: Tannennadel
+Anfangsbuchstabe	noun	no		abstract (a letter; no text in pictures)
+Missgeschick	noun	no		abstract
+Fabel	noun	no		abstract
+Weltteil	noun	no		abstract
+Reisegefährte	noun	no		relational
+Jackenärmel	noun	no		a part; a sleeve is drawn as the whole jacket
+Landgut	noun	scene	a large country manor house with farm buildings around a courtyard, fields and an avenue of trees in front	near: Gutshof, Bauernhaus
+Holzschuppen	noun	scene	a small wooden shed with a sloping plank roof and an open front, split firewood stacked inside	near: Holzstoß
+Brautjungfer	noun	no		relational (needs the bride; looks like a girl in a party dress)
+Mittagsruhe	noun	no		abstract (a rest; shows as someone sleeping)
+Naturgeschichte	noun	no		abstract
+Waffel	noun	yes	a golden heart-shaped waffle with a grid pattern	
+Frühjahr	noun	no		abstract (season)
+Schlingel	noun	no		a character word
+Schabernack	noun	no		abstract
+Bachrand	noun	scene	the stony edge of a narrow, shallow brook rippling over pebbles, with ferns and grasses along it	near: Flussufer
+Stillleben	noun	yes	a gilt-framed painting of a still life: a bowl of apples and grapes beside a jug on a table	near: Obst, Meisterstück
+Mittagszeit	noun	no		abstract (time word)
+Spaten	noun	yes	a garden spade with a flat rectangular metal blade and a wooden T-shaped handle	near: Hacke, Spatenstich
+Abendgebet	noun	scene	a little girl of about six with blond braids kneeling beside her bed with folded hands, a candle on the bedside table	near: Nachtgebet, Dankgebet, Tischgebet
+Kopfkissen	noun	yes	a plump rectangular pillow in a pale blue pillowcase	near: Federbett, Matratze
+Jahrmarkt	noun	scene	a village fair with a small merry-go-round, market stalls under striped awnings and bunches of balloons	near: Zirkus
+Regenwetter	noun	scene	heavy grey clouds and slanting rain falling on wet rooftops and a street with puddles	near: Regenschauer, Platzregen, Regentag
+Wandtafel	noun	yes	a large dark green blackboard in a wooden frame mounted on a wall, blank with faint chalk smudges, a chalk ledge below	near: Schiefertafel, Klassenzimmer
+Obst	noun	yes	a basket of mixed fruit: red apples, yellow pears, purple plums, a bunch of grapes and a peach	near: Pfirsich, Pflaume, Obstgarten
+Kronprinz	noun	yes	a young man of about twenty with short fair hair, a prince wearing a small gold crown, a blue velvet coat and a red cape	near: Schlossherr
+Leintuch	noun	no		a sheet is drawn as a bed or a folded cloth
+Pflaumenbaum	noun	yes	a small fruit tree with green leaves, hung with many dark purple plums	near: Pflaume, Obstgarten
+Dogge	noun	yes	a huge Great Dane dog, very tall and lean with long legs, a short smooth grey coat and a long square muzzle	near: Spitz, Pudel, Hofhund
+Nordwind	noun	no		abstract (a wind's direction cannot be shown)
+Fingerhut	noun	yes	a small brass sewing thimble with a dimpled surface, on its own	
+Nussknacker	noun	yes	a wooden nutcracker figure painted as a soldier with a tall black hat, a red coat and a big jaw with teeth	
+Schlupfwinkel	noun	no		abstract
+Hilferuf	noun	no		abstract (a sound)
+Weihnachtsfreude	noun	no		abstract
+Laubfrosch	noun	yes	a small bright green tree frog with round sticky toe pads, clinging to a leaf	
+Tatze	noun	yes	one big brown bear's paw on its own, seen from below with black pads and short claws, no leg and no body	near: Klaue, Hinterfuß
+Schopf	noun	no		a part; a shock of hair is drawn as a person
+Meisterstück	noun	no		abstract
+Trosteswort	noun	no		abstract (speech)
+Wagengerassel	noun	no		abstract (a sound)
+Wunderkind	noun	no		a character word (looks like any child)
+Abschiedsschmerz	noun	no		abstract
+Gerätschaft	noun	no		abstract (a collective)
+Unterweisung	noun	no		abstract
+Specht	noun	yes	a woodpecker with black-and-white feathers and a red patch on its head, clinging to a tree trunk and pecking	
+Naseweis	noun	no		a character word
+Fensterhöhle	noun	scene	an empty window opening in a crumbling stone wall of a ruin, no glass and no frame, blue sky seen through it	near: Kammerfenster
+Unart	noun	no		abstract
+Aufenthaltsort	noun	no		abstract
+Sahne	noun	yes	a blue bowl heaped with fluffy whipped cream, a whisk resting beside it	
+Kupfer	noun	no		a material; a copper thing reads as that thing
+Hergang	noun	no		abstract
+Ansiedler	noun	no		a role not shown plainly (looks like a farmer or woodcutter)
+Lineal	noun	yes	a long straight wooden measuring ruler with fine black tick marks along one edge, no numbers	
+Überschwemmung	noun	scene	a flooded village street: houses and trees standing in wide rippling muddy water up to their windows, a small rowing boat floating between them	near: Sintflut
+Reisekoffer	noun	yes	a brown leather suitcase with a handle, two buckled straps and metal corners	near: Reisetasche
+Küchenschürze	noun	yes	a blue-and-white checked kitchen apron with a bib, long ties and a front pocket, on its own	
+Flussufer	noun	scene	a grassy bank sloping down to a wide, slow river, a willow tree leaning over the water	near: Bachrand
+Stiefmütterchen	noun	yes	a single pansy flower with velvety purple and yellow petals and a dark face-like centre, with green leaves	
+Gehege	noun	no		an enclosure reads as a fence or a pasture (Weideplatz)
+Strickstrumpf	noun	no		duplicates Strickzeug
+Reinlichkeit	noun	no		abstract
+Spitz	noun	yes	a small fluffy orange spitz dog with a pointed fox-like face, pricked ears and a bushy tail curled over its back	near: Dogge, Pudel, Hofhund
+Seife	noun	yes	a bar of pink soap with a few soap bubbles floating above it	near: Seifenschaum
+Star	noun	yes	a starling, a small bird with glossy black feathers shimmering purple and green, speckled with white dots, and a pointed yellow beak	near: Dohle, Elster
+Gouvernante	noun	no		a role not shown by dress (looks like any woman)
+Prahlhans	noun	no		a character word
+Abendlied	noun	no		abstract (a song)
+Spektakel	noun	no		abstract (a sound)
+Schuljahr	noun	no		abstract (time word)
+Baumrinde	noun	yes	a single curved slab of rough, deeply furrowed brown tree bark on its own, peeled off a trunk	near: Baumstumpf
+Dummkopf	noun	no		a character word
+Herzeleid	noun	no		abstract
+Schnupftuch	noun	yes	a small square cotton handkerchief with a blue checked border, neatly folded	near: Halstuch, Staubtuch, Handtuch
+Felleisen	noun	no		duplicates Schulranzen
+Freundschaftsbund	noun	no		abstract
+Vorplatz	noun	no		a landing reads as stairs or a hall
+Erdbeere	noun	yes	a single red strawberry with tiny yellow seeds and a green leafy top	near: Himbeere, Heidelbeere
+Kinderzimmer	noun	scene	a child's bedroom with a small bed, a rocking horse, a shelf of toys and a rug on the floor	near: Spielzimmer, Puppenstube
+Vorübergehende	noun	no		relational (looks like any person walking)
+Pfau	noun	yes	a peacock with its long tail fanned out in a wide circle of blue-green eye feathers	
+Blütenstaub	noun	no		too fine; drawn on a bee or flower it reads as them
+Schlingpflanze	noun	scene	a green climbing vine with heart-shaped leaves winding up a wooden pole	near: Ranke
+Seereise	noun	no		abstract
+Kanone	noun	yes	an old black iron cannon on a wooden carriage with two large spoked wheels	
+Tannenwald	noun	scene	a dark green forest of tall pointed fir trees seen from outside, at the edge of a meadow	near: Waldung, Urwald, Tannenbaum
+Butterblume	noun	yes	a single glossy yellow buttercup flower with five round petals on a slender green stem	near: Schlüsselblume
+Unbesonnenheit	noun	no		abstract
+Zipfelmütze	noun	yes	a long red knitted stocking cap with a pompom at its drooping tip	near: Kopfbedeckung
+Ferkel	noun	yes	a small pink piglet with floppy ears and a curly tail	
+Habicht	noun	no		duplicates Raubvogel
+Kleiderschrank	noun	yes	a tall two-door wooden wardrobe with one door open, showing clothes hanging inside	
+Reisegeld	noun	no		abstract
+Postkutsche	noun	yes	a yellow horse-drawn stagecoach with large wheels and luggage on the roof, pulled by two brown horses	near: Postwagen, Reisewagen
+Hasenfuß	noun	no		a character word
+Schulgebäude	noun	scene	a large two-storey school building with rows of tall windows and a small bell turret, a girl of about seven with brown pigtails and a satchel walking up its steps	near: Schulhaus, Volksschule, Pensionat
+Felsstück	noun	no		duplicates Felsblock
+Kriegsgeschrei	noun	no		abstract (a sound)
+Felsvorsprung	noun	scene	a narrow flat rock ledge jutting out from a steep grey cliff face	near: Felsblock
+Ritze	noun	no		a gap; drawn as a line it shows nothing plain
+Lektion	noun	no		abstract
+Vergissmeinnicht	noun	yes	a small cluster of tiny sky-blue forget-me-not flowers with yellow centres on thin green stems	
+Sommermorgen	noun	no		abstract (time word)
+Vogelnest	noun	yes	a round bird's nest woven of twigs and grass with three pale blue eggs inside	near: Brut, Eierschale
+Waldung	noun	no		duplicates Tannenwald
+Seifenschaum	noun	no		duplicates Seife
+Floß	noun	yes	a raft of logs lashed together with rope, floating on a river	near: Barke
+Schneefeld	noun	no		reads as a snowy mountain (Bergspitze); white on white
+Lockenhaar	noun	no		a part; curly hair is drawn as a curly-haired person (Lockenkopf)
+Morgengruß	noun	no		abstract (speech)
+Tischgebet	noun	scene	a family at a set dinner table, all four with heads bowed, eyes closed and hands folded in prayer, the food not yet touched	near: Abendgebet, Dankgebet
+Verschlag	noun	no		duplicates Bodenkammer
+Pferdestall	noun	scene	the inside of a horse stable: two brown horses in wooden box stalls with straw on the floor and bridles hanging on the wall	near: Kuhstall, Stalltür
+Hintertreppe	noun	no		relational (back stairs look like any stairs)
+Wandersmann	noun	yes	a middle-aged man with a brown beard, a wayfarer in a felt hat and sturdy boots with a walking stick and a knapsack, walking along a country path	near: Landstreicher, Reisende, Fußgänger
+Schneider	noun	yes	an older man with grey hair and round spectacles, a tailor with a tape measure around his neck, sewing a jacket by hand	near: Näharbeit
+Spinnrad	noun	yes	an old wooden spinning wheel with a large spoked wheel, a foot treadle and a spindle	
+Regenschauer	noun	no		duplicates Regenwetter
+Pflaume	noun	yes	a dark purple oval plum with a dusty bloom and a short stem	near: Pfirsich, Pflaumenbaum
+Freudenträne	noun	no		abstract (a face shows a feeling, not which)
+Mutwille	noun	no		abstract
+Hausglocke	noun	scene	a small brass bell on a curled iron bracket beside a house's front door, a pull chain hanging down from it	near: Schulglocke
+Haupteingang	noun	no		relational (the main one of the entrances; looks like a door)
+Musikstunde	noun	no		abstract (a lesson; reads as piano playing)
+Indianergeschichte	noun	no		sensitive
+Angelhaken	noun	yes	a single dark steel fishhook with a curved barbed point and a small eye at the top, on its own	near: Angelrute
+Weihnachtsbaum	noun	yes	a decorated Christmas fir tree with red baubles, lit candles and a gold star on top	near: Tannenbaum, Glaskugel
+Missetat	noun	no		abstract
+Strauß	noun	yes	an ostrich, a huge flightless bird with a long bare neck, long strong legs and fluffy black-and-white feathers	
+Barke	noun	yes	a small light wooden rowing boat with two oars resting in it, floating on calm water	near: Floß, Dampfschiff
+Baumwipfel	noun	no		a part; a treetop is drawn as a whole tree
+Wolldecke	noun	yes	a folded red-and-green tartan wool blanket with fringed edges	near: Federbett
+Besenstiel	noun	no		a part; the handle alone is a stick (Stecken), with the head a broom
+Ruheplatz	noun	no		abstract (a function of a place)
+Vertiefung	noun	no		a dip in the ground shows nothing plain
+Getier	noun	no		abstract (a collective)
+Regenwurm	noun	yes	a long pink earthworm with ringed segments wriggling across a patch of dark brown soil	near: Raupe, Gewürm
+Dachrinne	noun	scene	close-up of the lower edge of a red tiled roof with a grey half-round metal rain gutter running along it, water spilling from its open end	near: Strohdach
+Unterrichtsstunde	noun	no		abstract (time word; near: Lektion, Schulunterricht, Musikstunde)
+Küchentisch	noun	yes	a plain scrubbed wooden kitchen table with a cutting board, a knife, carrots and a mixing bowl on top	near: Mittagstisch, Abendtafel, Nähtisch
+Haushaltung	noun	no		abstract (running a household; near: Hausarbeit)
+Verwundete	noun	no		sensitive (wounds)
+Lichtschimmer	noun	no		abstract (a faint light; near: Lichtstrahl, Abendschein)
+Scheunentor	noun	scene	the front of a red wooden barn almost filled by its tall double doors, one wing standing open on hay inside	near: Stalltür, Hoftor
+Mitschüler	noun	no		relational
+Schulaufgabe	noun	scene	a girl of about nine with short dark curly hair writing in an exercise book at a small desk at home by lamplight, schoolbooks and a satchel beside her	near: Schularbeit, Nachhilfe
+Schildwache	noun	no		duplicates Wachtposten
+Schneeball	noun	yes	a round packed snowball with bluish shading, held up in a hand wearing a red knitted mitten	near: Schneeflocke, Schneemasse
+Liebesgabe	noun	no		abstract (a gift of charity; near: Spende)
+Umzäunung	noun	no		duplicates Gartenzaun
+Dampfschiff	noun	yes	an old steamship with a tall black-and-red funnel puffing smoke and a large paddle wheel at its side, on blue water	near: Barke, Floß
+Missbilligung	noun	no		abstract (emotion)
+Festfreude	noun	no		abstract (emotion)
+Kinderwagen	noun	yes	an old-fashioned empty navy-blue baby pram with a folding hood, four large spoked wheels and a curved push handle	near: Leiterwagen, Wickelkind
+Nachtlager	noun	no		abstract (a place to sleep; near: Nachtquartier, Unterkunft)
+Spielsache	noun	yes	a wooden toy train, a brown teddy bear and a stack of colourful wooden building blocks together	near: Kreisel, Reifen, Puppenstube
+Tagesgrauen	noun	no		abstract (time of day)
+Flachland	noun	no		a flat plain reads as a meadow or field (near: Niederung, Wiesengrund)
+Sonntagmorgen	noun	no		abstract (time word)
+Stadtkind	noun	no		relational (a child; the city is not shown on the child; near: Dorfkind)
+Liebesdienst	noun	no		abstract
+Geweih	noun	yes	a pair of large branching brown stag antlers on their own, no head and no body	
+Tannennadel	noun	yes	three loose single dark-green fir needles lying on their own, close up, no twig and no branch	near: Tannenzweig, Tannenzapfen
+Sommerfrischler	noun	no		a holidaymaker; role not plain (reads as Badegast)
+Himmelszelt	noun	scene	a dark blue night sky full of bright stars arching overhead like a dome above a dark hilltop, no moon	near: Abendhimmel, Mondenschein
+Eisbahn	noun	scene	an ice rink on a frozen pond, a girl of about ten with blond braids in a red scarf and an older man with a grey beard skating on it	near: Schlittschuh, Glatteis
+Schneeglöckchen	noun	yes	a small clump of snowdrops, nodding white bell-shaped flowers with green tips on thin green stems, growing from a patch of brown earth	near: Glockenblume
+Sonntagskleid	noun	yes	a girl's fancy dark-blue velvet dress with a lace collar and a pink sash, laid flat	near: Nachtgewand, Morgenrock
+Jubelruf	noun	no		a sound
+Pflegling	noun	no		relational
+Tausch	noun	no		abstract
+Ode	noun	no		abstract
+Dämpfer	noun	no		abstract (figurative in the example)
+Schreihals	noun	yes	a bald baby boy of a few months with a bright red face screaming, mouth wide open and fists clenched, in a yellow romper	near: Wickelkind
+Freudenfest	noun	no		abstract (figurative in the example; near: Festlichkeit, Kindergesellschaft)
+Morgenluft	noun	no		abstract (air is invisible)
+Türschwelle	noun	no		part of a doorway; reads as Haupteingang or a door
+Zündholz	noun	yes	a single wooden matchstick with a red head, struck and burning with a small flame	near: Talglicht
+Lehrmeister	noun	no		a role with no plain dress or tool
+Anemone	noun	yes	a single deep violet anemone flower with broad rounded petals around a black centre, on a slender stem with a frill of cut green leaves	near: Aster, Wiesenblume
+Närrin	noun	no		a trait, not a look
+Wohlbehagen	noun	no		abstract (state)
+Rasenplatz	noun	scene	a neatly mowed flat green lawn with light and dark mowing stripes, edged by a gravel path	near: Wiesengrund, Waldwiese, Weideplatz
+Gewächs	noun	no		any plant; reads as Blumentopf or Schößling
+Pate	noun	no		relational
+Geck	noun	yes	a young man with slicked black hair and a waxed curled moustache, a dandy in a tight striped tailcoat, top hat, monocle and cane, nose in the air	near: Prahlhans
+Umstehende	noun	no		people in general (a role by position only)
+Einbrecher	noun	scene	a thin young man with short black hair, a black eye mask and a striped shirt climbing in through an open window at night, a crowbar in his hand	near: Spitzbube, Missetäter, Räuberhauptmann
+Unwohlsein	noun	no		abstract (state)
+Spielgefährte	noun	no		relational
+Portion	noun	no		abstract (a measure)
+Matratze	noun	yes	a thick mattress with blue-and-white striped ticking lying flat on its own, no bed frame	near: Federbett, Wolldecke, Leintuch
+Geschäftigkeit	noun	no		abstract
+Mädchengestalt	noun	no		a girl reads as Mädchen
+Vorratskammer	noun	no		duplicates Speisekammer
+Zurechtweisung	noun	no		abstract (speech)
+Jubelschrei	noun	no		a sound
+Badegast	noun	scene	a stout middle-aged man with a bald head and a curled grey moustache in an old-fashioned red-and-white striped one-piece bathing costume, standing on a sandy beach by the sea	near: Sommerfrischler, Seebad
+Baumwolle	noun	yes	a cotton plant stem with green leaves and open brown seed pods bursting with fluffy white cotton	near: Garn, Wolldecke
+Erdhöhle	noun	scene	the round dark entrance of an animal burrow dug into a grassy earth bank, loose soil heaped in front, no animal	near: Höhlung, Vertiefung, Erdhaufen
+Bratpfanne	noun	yes	an empty black cast-iron frying pan with a long handle, seen from slightly above	near: Kochtopf
+Kindergesellschaft	noun	scene	a children's party: a girl with blond pigtails, a red-haired boy and a dark-haired girl, all about six, in paper party hats around a table with a cake	near: Kinderschar, Freudenfest, Festlichkeit
+Schreckensschrei	noun	no		a sound
+Sodawasser	noun	yes	an old-fashioned blue glass soda siphon bottle with a metal lever top beside a tumbler of fizzing, bubbly water	near: Regenwasser
+Redekunst	noun	no		abstract
+Geographie	noun	no		abstract (school subject)
+Knüppel	noun	no		duplicates Keule (a short cudgel is drawn as a log or as a club)
+Regenwasser	noun	no		water has no shape of its own; reads as rain or a puddle (near: Regenschauer)
+Lehrgeld	noun	no		abstract
+Elfe	noun	yes	a tiny slender young elf woman with long pale-green hair, pointed ears and see-through dragonfly wings, dancing barefoot on a flower	fairy-tale figure; near: Kobold, Schutzengel, Christkind
+Stacheldraht	noun	yes	close-up of a strand of rusty barbed wire with sharp twisted spikes every few inches, no posts	near: Draht, Zaunpfahl
+Quälgeist	noun	no		a trait, not a look
+Erstaunen	noun	no		abstract (emotion)
+Fußweg	noun	scene	a narrow dirt footpath winding down a grassy hillside, just wide enough for one walker, no trees and no houses	near: Waldweg, Bürgersteig, Schulweg, Kreuzweg
+Mitreisende	noun	no		relational
+Kieselstein	noun	yes	one small smooth rounded grey river pebble with a pale band around it	near: Felsstück, Steinhaufen, Felsblock
+Ackerbau	noun	no		abstract (an occupation)
+Nachtgebet	noun	no		duplicates Abendgebet
+Bergspitze	noun	yes	a single sharp pointed rocky mountain peak with snow on its tip against a blue sky	near: Bergrücken, Berghang, Felsvorsprung
+Hinterfuß	noun	no		a part; a foot on its own cannot show front or hind
+Dankgebet	noun	no		duplicates Abendgebet
+Brei	noun	yes	a brown earthenware bowl filled with thick creamy oat porridge, a wooden spoon standing in it	near: Milchbrei, Pudding
+Tischler	noun	scene	an older man with short grey hair and a beard, a joiner in a leather apron planing a plank at a wooden workbench, a half-made chair beside him	near: Zimmermann
+Weihnachtsfest	noun	no		time word (a festival; near: Weihnachtsbaum, Bescherung)
+Herstellung	noun	no		abstract
+Schlachthaus	noun	no		sensitive (killing)
+Ungeschick	noun	no		abstract
+Schnecke	noun	yes	a garden snail with a brown spiral shell and two long eye stalks, crawling	near: Regenwurm
+Unkenntnis	noun	no		abstract
+Heuhaufen	noun	yes	a tall rounded haystack standing in a freshly mown meadow	near: Heuboden, Streu
+Pflegebefohlene	noun	no		relational
+Hundegebell	noun	no		a sound (a barking dog reads as Hofhund)
+Zuckerdose	noun	yes	a round porcelain sugar bowl with a lid and two handles, painted with blue flowers, two sugar cubes beside it	near: Sparbüchse, Milchtopf
+Rosenknospe	noun	yes	a single closed red rosebud on a short thorny green stem with two leaves	near: Rosenstrauch
+Pille	noun	yes	three small round pink pills lying together, close up	near: Arznei
+Redlichkeit	noun	no		abstract
+Flurtür	noun	no		duplicates Zimmertür
+Rosenstrauch	noun	yes	a rosebush covered with open pink roses, many thorny branches growing straight from the ground	near: Rosenknospe, Gesträuch
+Bindfaden	noun	no		duplicates Garn (a ball of string is not plainly apart from yarn; near: Seil, Strang)
+Schrot	noun	yes	a small heap of tiny round dull-grey lead pellets beside a red shotgun cartridge	near: Pfeffer, Geschoss
+Ausschmückung	noun	no		abstract
+Todesschweiß	noun	no		sensitive (death)
+Friedenspfeife	noun	no		sensitive (sacred object of a people; needs a stereotype)
+Speiserest	noun	scene	a dinner plate with leftovers on it: a gnawed chicken bone, a bread crust and a smear of gravy, a fork lying across it	near: Krume, Überrest
+Postbote	noun	yes	a middle-aged red-haired man with a moustache, a postman in a blue uniform and peaked cap, a leather shoulder bag full of envelopes	near: Postwagen
+Dreistigkeit	noun	no		abstract
+Ballspiel	noun	scene	a boy of about eight with a brown fringe and a girl of about seven with blond pigtails throwing a big red ball to each other on a lawn	near: Wettlauf, Kartenspiel
+Verkäufer	noun	scene	a middle-aged man with sandy hair and a broad moustache, a market seller in a green apron behind a wooden stall of apples and cabbages, handing over a paper bag	near: Metzger
+Schößling	noun	yes	a young green shoot with a few tender leaves sprouting from a patch of brown soil	near: Gewächs, Ranke, Grashalm
+Kupfermünze	noun	no		duplicates Geldstück
+Windsbraut	noun	no		duplicates Orkan
+Zubereitung	noun	no		abstract
+Landaufenthalt	noun	no		abstract
+Lügner	noun	no		a trait, not a look
+Einwilligung	noun	no		abstract
+Verwandlung	noun	no		abstract
+Bürste	noun	yes	a wooden scrubbing brush with stiff yellow bristles, seen from the side	near: Staubtuch, Besenstiel
+Lebensgeister	noun	no		abstract
+Kopfbedeckung	noun	no		a category: any hat drawn is its own word (Hut, Zipfelmütze)
+Küchentür	noun	no		duplicates Zimmertür
+Unterholz	noun	no		reads as a forest (Waldung, Urwald) or as Gesträuch
+Bleigewicht	noun	no		figurative in the example (a heavy burden)
+Schiefer	noun	yes	a few thin flat pieces of dark blue-grey slate stone with rough layered edges, piled loosely	near: Schiefertafel, Felsstück
+Kinderherz	noun	no		abstract (figurative)
+Bonbon	noun	yes	a round red boiled sweet in a shiny yellow wrapper twisted at both ends	near: Zuckerwerk, Leckerbissen
+Fürsprache	noun	no		abstract
+Schuljugend	noun	scene	a group of schoolchildren of about nine, blond, red-haired and dark-haired boys and girls with satchels on their backs, walking together along a village road	near: Kinderschar, Mitschüler
+Blätterdach	noun	scene	looking straight up from the forest floor at a dense green canopy of leaves overhead, sunlight glinting through, tree trunks rising at the edges	near: Laubwerk, Baumwipfel
+Schatzkammer	noun	scene	a stone vault filled with open treasure chests overflowing with gold coins, a jewelled crown and golden goblets	near: Besitztum
+Zahnweh	noun	scene	a young man with tousled brown hair holding his swollen cheek, a cloth tied around his jaw with a knot on top of his head, looking miserable	near: Unwohlsein, Kränklichkeit
+Lehrmeisterin	noun	no		a role with no plain dress or tool
+Küchenjunge	noun	scene	a boy of about thirteen with short black hair in a blue apron and cap, peeling potatoes over a pot in a kitchen	near: Hirtenbube, Zimmermädchen
+Schultheiß	noun	no		a role with no plain dress or tool
+Pfingsten	noun	no		sensitive (religious feast; time word)
+Hausgerät	noun	no		a collective (household things; near: Gerätschaft)
+Wassertropfen	noun	yes	a single clear blue drop of water, round at the bottom and pointed at the top	near: Regentropfen, Tautropfen, Schweißtropfen
+Anleitung	noun	no		abstract
+Stillschweigen	noun	no		abstract
+Wasserspiegel	noun	no		a surface, not a thing (near: Wasserfläche)
+Nahrungsmittel	noun	no		a collective (food in general)
+Teetasse	noun	yes	a delicate porcelain teacup on a saucer, painted with small blue flowers, filled with amber tea	near: Kaffeekanne, Milchtopf
+Kammerfenster	noun	yes	a small window with four panes and open green wooden shutters, set in a yellow plaster wall	near: Fensterflügel, Fensterhöhle, Fenstersims
+Hosenträger	noun	yes	a pair of red elastic trouser braces on their own, two straps joined in a Y at the back, leather button tabs at the ends	near: Hosenboden
+Gespenstergeschichte	noun	no		abstract (a story)
+Nachhilfe	noun	no		an activity; a tutor with a pupil reads as Hauslehrer
+Geburtstagsgeschenk	noun	scene	a gift box wrapped in yellow paper with a big red ribbon bow, a small birthday cake with lit candles beside it	near: Weihnachtsgeschenk, Torte
+Rachen	noun	no		an animal's open jaws read as the animal (near: Schlund, Kinnbacke)
+Landstreicher	noun	yes	a middle-aged man with a stubbly beard and shaggy brown hair in a battered hat and patched ragged coat, a bundle on a stick over his shoulder	near: Wandersmann, Taugenichts
+Erbse	noun	yes	an open green pea pod with a row of round green peas inside	near: Bohne
+Flüsterton	noun	no		a sound
+Wohltäterin	noun	no		relational
+Spielzimmer	noun	no		duplicates Kinderzimmer
+Anwesende	noun	no		people in general (a role by position only)
+Girlande	noun	yes	a long garland of green leaves and colourful paper flowers hanging in two swooping loops	near: Blumenkranz
+Wohltäter	noun	no		relational
+Reisig	noun	yes	a bundle of thin dry brown twigs tied together with a cord	near: Holzstoß, Tannenzweig
+Rosine	noun	yes	a few dark-brown wrinkled raisins, close up	near: Feige, Pflaume
+Erlöser	noun	no		sensitive (religious)
+Abendschein	noun	no		abstract (light at a time of day)
+Nebelschleier	noun	scene	thin bands of pale grey mist drifting low across a green valley in front of distant blue hills	near: Staubwolke, Rauchsäule
+Morgenrock	noun	yes	a long dark-red quilted dressing gown with a shawl collar and a tied belt, hanging on a hook	near: Nachtgewand
+Kinnbacke	noun	no		body part not shown on its own (a jaw reads as a face; near: Rachen)
+Spatenstich	noun	no		an action; a spade in the soil reads as Spaten
+Zaunpfahl	noun	yes	a single thick round weathered wooden fence post with a pointed top, standing upright on its own in a tuft of grass	near: Gartenzaun, Latte
+Schulunterricht	noun	no		abstract (near: Lektion, Unterrichtsstunde)
+Abendtafel	noun	no		abstract (a meal; the time of day cannot be shown)
+Pumpe	noun	yes	an old cast-iron hand water pump with a long curved handle and spout, water pouring into a bucket below	near: Springbrunnen, Trog
+Getreide	noun	yes	a bundle of ripe golden grain stalks with full ears, tied in the middle with a band of straw	near: Weizen, Gerste, Hafer, Wintersaat
+Kobold	noun	yes	a small mischievous goblin with pointed ears, a big nose, a red pointed cap and a green tunic, grinning	fairy-tale figure; near: Elfe, Wicht
+Biss	noun	yes	a red apple with one big bite taken out of its side, showing the pale flesh and tooth marks	
+Geistesgegenwart	noun	no		abstract
+Ungehorsam	noun	no		abstract
+Bauart	noun	no		abstract
+Reisegesellschaft	noun	no		a group of people (near: Reisende, Mitreisende)
+Schweinestall	noun	scene	a low wooden pigsty with a muddy fenced pen in front, two big pink pigs wallowing in the mud	near: Kuhstall, Pferdestall, Hühnerstall, Ferkel
+Mittagsrast	noun	no		abstract (a pause; near: Mittagsruhe, Mittagspause)
+Morgenlied	noun	no		abstract (a song)
+Erziehungsanstalt	noun	no		an institution; its building is not told apart (near: Pensionat, Armenhaus)
+Nüster	noun	yes	close-up of a brown horse's soft muzzle showing its two large flared nostrils, the eyes out of frame	part of Braune shown close up; near: Mähne
+Heimreise	noun	no		abstract (a journey; near: Heimfahrt, Weiterreise)
+Lebensart	noun	no		abstract
+Wehklage	noun	no		a sound (emotion)
+Festmahl	noun	scene	a long banquet table laden with a roast goose, a ham, bowls of fruit, cakes, lit candles and goblets	near: Mittagsmahl, Abendtafel, Festlichkeit
+Schulweg	noun	no		abstract (a route)
+Dienstag	noun	no		abstract (time word)
+Erfrischung	noun	no		abstract (near: Stärkung, Erquickung)
+Höhlung	noun	no		a hollow in general (near: Vertiefung, Erdhöhle)
+Backfisch	noun	no		a girl reads as Mädchen
+Sklaverei	noun	no		sensitive
+Primaner	noun	no		a pupil; the school year is not visible (near: Mitschüler)
+Freudengeschrei	noun	no		a sound
+Gefangennahme	noun	no		abstract (an event)
+Unterhalt	noun	no		abstract
+Taschenmesser	noun	yes	a red folding pocketknife with its steel blade half open	near: Schnitzmesser
+Störenfried	noun	no		a trait, not a look
+Hausarbeit	noun	no		abstract (many chores; a scrubbing or sweeping figure reads as Bürste or Besenstiel; near: Haushaltung)
+Gartenanlage	noun	scene	a formal landscaped garden with geometric flowerbeds, clipped low hedges and straight gravel paths, seen from a slight height	near: Blumenbeet, Rasenplatz, Obstgarten
+Hemdkragen	noun	yes	a detachable stiff pale-blue shirt collar on its own with a brass collar stud, no shirt	near: Hemdsärmel, Halsband
+Spritzer	noun	no		a pattern, not a shape (near: Wassertropfen)
+Beschützerin	noun	no		relational
+Besitztum	noun	no		abstract
+Strang	noun	no		duplicates Seil
+Fenstersims	noun	no		part of a window; reads as Kammerfenster
+Gerste	noun	no		duplicates Getreide (barley is not plainly apart from other grain)
+Zuhörerin	noun	no		a role shown only by listening (near: Leserin)
+Behändigkeit	noun	no		abstract
+Brillenglas	noun	no		part of spectacles; a lens alone is a plain glass disc
+Leiterwagen	noun	yes	a small wooden handcart with ladder-like slatted side rails, four spoked wheels and a long pull handle	near: Kinderwagen, Postkutsche, Reisewagen
+Pfeffer	noun	yes	a small heap of round black peppercorns spilling from a tipped wooden pepper grinder	near: Schrot, Petersilie
+Widerrede	noun	no		abstract (speech)
+Geläute	noun	no		a sound (bells read as Kirchenglocke)
+Abkunft	noun	no		abstract
+Gekicher	noun	no		a sound
+Lockenkopf	noun	no		a person's look; every figure has some hair style
+Glasscherbe	noun	yes	a single jagged shard of broken green bottle glass with sharp edges	
+Residenzstadt	noun	no		a kind of town not shown plainly (near: Handelsstadt, Weiler)
+Ansteckung	noun	no		abstract
+Zielscheibe	noun	yes	a round archery target with red, blue and yellow rings and an arrow stuck in its centre	near: Geschoss
+Neugierde	noun	no		abstract (emotion)
+Verbannung	noun	no		abstract
+Gesträuch	noun	scene	a dense clump of many tangled leafy green shrubs growing together on open ground, no trees	near: Unterholz, Rosenstrauch, Heidekraut
+Genauigkeit	noun	no		abstract
+Weltmeer	noun	scene	the open ocean with rolling blue waves stretching to a straight horizon in every direction, no land and no ships	near: Seereise, Eiland
+Postwagen	noun	no		duplicates Postkutsche
+Hauptperson	noun	no		abstract
+Hinterteil	noun	no		body part not shown on its own (near: Hosenboden)
+Handelsstadt	noun	no		a kind of town not shown plainly (near: Residenzstadt, Weiler)
+Strafrede	noun	no		abstract (speech)
+Tollkühnheit	noun	no		abstract
+Angelrute	noun	yes	a long bamboo fishing rod with a reel and a thin line ending in a hook	near: Angelhaken, Köder
+Oberhand	noun	no		abstract
+Unterkommen	noun	no		abstract (near: Unterkunft, Obdach)
+Krume	noun	yes	a small scatter of golden bread crumbs on a dark wooden table, close up, no bread	near: Speiserest
+Gittertor	noun	yes	a tall ornate black wrought-iron gate with curling scrollwork, closed between two stone pillars	near: Eisengitter, Hoftor, Gartentür
+Arbeitstag	noun	no		abstract (time word)
+Gruft	noun	no		sensitive (burial)
+Großmut	noun	no		abstract
+Hofstaat	noun	no		a collective (near: Hofdame, Würdenträger)
+Handgriff	noun	no		abstract (a knack; also a handle)
+Apfelsine	noun	yes	a whole round orange fruit with dimpled peel and a small green leaf at its stem	near: Pfirsich
+Weiler	noun	scene	a hamlet of four small farmhouses with red roofs clustered together on a green hillside, no church	near: Bauernhaus, Gutshof, Landgut
+Berghang	noun	no		part of a mountain; reads as Bergspitze
+Eierschale	noun	yes	two halves of a cracked empty brown eggshell lying side by side	
+Nessel	noun	yes	a stinging nettle plant with jagged-edged green leaves covered in fine hairs	near: Distel, Petersilie
+Gefieder	noun	no		plumage is drawn as the whole bird (near: Pfau, Flügeldecke)
+Stärkung	noun	no		abstract (near: Erfrischung)
+Lebenszeichen	noun	no		abstract
+Zimmermann	noun	scene	a young man with dark curly hair, a carpenter in traditional black corduroy clothes and a wide black hat, hammering a beam on a wooden roof frame	near: Tischler
+Patientin	noun	scene	a young woman with long red hair lying in bed under a blue-checked quilt, a thermometer in her mouth and a cold cloth on her forehead	near: Hausarzt
+Esser	noun	no		a trait (a good eater)
+Waldbaum	noun	yes	a single tall leafy tree with a straight brown trunk and a round green crown	near: Eichbaum, Baumgruppe, Ulme, Esche, Erle
+Lobpreisung	noun	no		abstract
+Hochgenuss	noun	no		abstract
+Wintersaat	noun	scene	a brown field in winter with straight rows of short green grain shoots poking up through patches of snow	near: Getreide, Schneefeld, Schößling
+Gewandtheit	noun	no		abstract
+Garn	noun	yes	a ball of thick red wool yarn with a loose end trailing away	near: Bindfaden, Strickzeug, Strang
+Orkan	noun	scene	a hurricane: tall trees bent far over, branches and roof tiles flying through the air under black swirling clouds, no rain	near: Windsbraut, Nordwind, Westwind
+Trog	noun	yes	a long wooden trough carved from a hollowed tree trunk, filled with water	near: Napf, Becken
+Näharbeit	noun	scene	an older woman with grey hair in a bun sitting in a chair sewing a patch onto blue trousers with needle and thread	near: Nähzeug, Nähtisch, Naht
+Geber	noun	no		relational
+Ziehharmonika	noun	yes	a red accordion with a keyboard on one side and its pleated bellows pulled open	
+Zehenspitze	noun	no		a pose; a foot on tiptoe reads as Zehe
+Sommerabend	noun	no		abstract (time word)
+Reifen	noun	yes	a large wooden toy hoop with a short wooden stick for rolling it along	near: Spielsache, Kreisel
+Gutshof	noun	no		duplicates Landgut
+Schweißtropfen	noun	no		a drop on a face; reads as Freudenträne or Wassertropfen
+Album	noun	yes	an open photo album with old sepia photographs held by corner mounts on dark pages	near: Bilderbuch
+Wasserfläche	noun	no		a surface, not a thing (near: Wasserspiegel)
+Kinderjahre	noun	no		abstract (time word)
+Arbeiterin	noun	no		a role with no plain dress or tool (the example means a hard worker)
+Napf	noun	yes	a low wide red pet bowl filled with milk, standing on a wooden floor	near: Trog, Becken, Brei
+Wiederherstellung	noun	no		abstract
+Ängstlichkeit	noun	no		abstract (emotion)
+Gesumm	noun	no		a sound
+Nachbarhaus	noun	no		relational (a house; the neighbour relation is not visible)
+Eisengitter	noun	yes	a square grating of thick crossed black iron bars set into a grey stone wall	near: Gittertor, Kammerfenster
+Lieblingsplatz	noun	no		abstract
+Einmaleins	noun	no		abstract (would need numbers)
+Wettlauf	noun	scene	a boy of about ten with black hair and a girl of about ten with red braids running side by side in a race across a meadow	near: Gelaufe, Ballspiel
+Brandgeruch	noun	no		a smell
+Platzregen	noun	no		duplicates Regenwetter
+Auflauf	noun	no		abstract (a crowd gathering)
+Kränklichkeit	noun	no		abstract (state)
+Stelze	noun	scene	a boy of about ten with curly brown hair walking high up on a pair of tall wooden stilts	near: Seiltänzer
+Abmarsch	noun	no		abstract (an event)
+Kleeblatt	noun	yes	a single green three-leaf clover with heart-shaped leaflets on a short stem	
+Bohne	noun	yes	three shiny reddish-brown kidney-shaped beans, close up	near: Erbse
+Unwissenheit	noun	no		abstract
+Gepolter	noun	no		a sound
+Zierde	noun	no		abstract
+Totenstille	noun	no		abstract
+Umsicht	noun	no		abstract
+Kauz	noun	no		a trait (gloss oddball, not the owl)
+Besonnenheit	noun	no		abstract
+Gliedmaße	noun	no		a limb in general; an arm or leg is not told apart (near: Vorderbein, Hinterbein)
+Knicks	noun	yes	a girl of about eight with blond braids in a blue dress making a curtsy, one foot behind the other, knees bent, holding out her skirt	near: Verneigung
+Nachlässigkeit	noun	no		abstract
+Plunder	noun	scene	a heap of old worn-out junk: a broken chair, a dented pot, a torn boot, rags and a cracked jug	near: Überrest, Hausgerät
+Rain	noun	no		a strip between fields; reads as Wiesengrund
+Blumenduft	noun	no		a smell
+Blumentopf	noun	yes	a terracotta flowerpot holding a small plant with red flowers	near: Gewächs, Blumenbeet
+Tannenduft	noun	no		a smell
+Einwohnerschaft	noun	no		a collective
+Kriegspfad	noun	no		sensitive (needs a stereotype of a people)
+Anerbieten	noun	no		abstract
+Gesangbuch	noun	yes	a small black leather-bound hymnbook with a golden cross on its cover and a red ribbon bookmark	near: Lesebuch, Märchenbuch
+Weizen	noun	no		duplicates Getreide (wheat looks like grain in general)
+Nachtzeit	noun	no		abstract (time word)
+Aal	noun	yes	a long slippery olive-green eel swimming through blue water among green water plants, a thin fin along its back, two tiny fish nearby	near: Barsch, Regenwurm
+Hinrichtung	noun	no		sensitive (execution)
+Hohngelächter	noun	no		a sound
+Truthahn	noun	yes	a turkey cock with a fanned tail of bronze feathers, a bare red head and a dangling red wattle	near: Pfau
+Abgabe	noun	no		abstract
+Dienstpersonal	noun	no		a collective (near: Bediente, Zimmermädchen)
+Vorleser	noun	scene	an older man with grey hair and a beard reading aloud from an open book to a blond boy and a dark-haired girl of about six sitting at his feet	near: Leserin, Zuhörerin
+Bekümmernis	noun	no		abstract (emotion)
+Kriegsdienst	noun	no		abstract
+Sparbüchse	noun	yes	a small round tin money box with a coin slot in its lid, a coin halfway into the slot	near: Zuckerdose, Geldstück
+Steinpflaster	noun	yes	close-up of a stretch of rounded grey cobblestones laid in curved rows	near: Steinboden, Bürgersteig
+Tropf	noun	no		a trait (poor wretch)
+Spende	noun	no		abstract (a gift of money; near: Liebesgabe, Sparbüchse)
+Wiesengrund	noun	scene	a wide green meadow of tall grass dotted with wildflowers in a gentle valley, low hills on both sides, no animals	near: Waldwiese, Weideplatz, Rasenplatz, Wiesenblume
+Gegenliebe	noun	no		abstract
+Ehrerbietung	noun	no		abstract (a bow reads as Verneigung)
+Blumenstrauß	noun	yes	a bouquet of red tulips, yellow daffodils and blue cornflowers tied with a ribbon	near: Blumenkranz, Girlande
+Gartentür	noun	scene	a small low wooden garden gate with a latch, standing ajar between two green hedges	near: Gartenzaun, Gittertor, Hoftor
+Nachteil	noun	no		abstract
+Hausarzt	noun	yes	an older man with grey side-whiskers, a family doctor in a dark suit with a stethoscope around his neck, carrying a black leather doctor's bag	near: Tierarzt, Patientin
+Rechnen	noun	no		abstract (school subject; would need numbers)
+Rauchsäule	noun	yes	a tall straight column of grey smoke rising from a small campfire into a clear blue sky	near: Staubwolke, Nebelschleier
+Urgroßvater	noun	no		relational
+Streifzug	noun	no		abstract (an outing)
+Westwind	noun	no		a wind's direction cannot be shown (near: Nordwind, Orkan)
+Zutraulichkeit	noun	no		abstract
+Mittelding	noun	no		abstract
+Staubtuch	noun	yes	a crumpled yellow dust cloth wiping a clean stripe through grey dust on a wooden shelf	near: Handtuch, Schnupftuch, Bürste
+Männchen	noun	no		relational: the male of any animal
+Plage	noun	no		abstract
+Verschwörung	noun	no		abstract
+Großknecht	noun	no		rank not visible; a farmhand reads as a farmer
+Faxe	noun	no		abstract
+Sintflut	noun	no		duplicates Überschwemmung
+Reisewagen	noun	no		duplicates Postkutsche
+Hofraum	noun	no		an empty yard reads as Schlosshof or Gutshof
+Glatteis	noun	scene	an older woman with short grey hair in a red winter coat slipping, arms flung out, on a shiny glassy patch of ice on a village sidewalk	near: Eisbahn
+Tonne	noun	yes	a large upright wooden barrel with dark iron hoops around it, standing on the ground	
+Ranke	noun	yes	one thin green plant tendril curling in tight spirals around a wooden stick, close up, on its own, no flowers and no whole plant	near: Schlingpflanze
+Tannenbaum	noun	yes	a single tall green fir tree with a pointed top and drooping branches, undecorated, standing in a meadow	near: Weihnachtsbaum, Tannenwald, Waldbaum
+Schlund	noun	no		an animal's open jaws read as the animal
+Bediente	noun	yes	an older man with neat grey hair, a manservant in a dark green livery coat with gold buttons, carrying a silver tray with a teapot	near: Dienstpersonal
+Ungemach	noun	no		abstract
+Feuerwehr	noun	scene	a red fire engine with a ladder on top, beside it a bearded middle-aged man and a young blond woman in yellow helmets spraying water from a hose	near: Feuersbrunst
+Abendmahlzeit	noun	no		time of the meal not visible; near Mittagsmahl, Abendtafel
+Fahrkarte	noun	yes	a small pale orange cardboard train ticket with a punched hole and thin grey lines instead of print	
+Gartenzaun	noun	yes	a low green wooden picket fence without a gate, running in front of a garden full of flowers	near: Umzäunung, Zaunpfahl, Gartentür
+Morgenrot	noun	no		sunrise glow looks like a sunset; near Abendhimmel, Abendschein
+Umhüllung	noun	no		a wrapped thing reads as a parcel
+Ungezogenheit	noun	no		abstract
+Petersilie	noun	yes	a small bunch of fresh green curly-leaved parsley with long stems	
+Laubwerk	noun	no		a mass of foliage; reads as Blätterdach or Eichenlaub
+Zwischenraum	noun	no		abstract
+Neider	noun	no		a person by feeling; abstract
+Schreibzeug	noun	yes	a writing set on a small wooden tray: a glass inkwell with dark blue ink, a quill pen and two pencils	near: Griffel, Lineal
+Vermerk	noun	no		abstract: writing
+Spinngewebe	noun	yes	a dusty grey cobweb strung across the corner between two dark wooden beams	
+Botanik	noun	no		abstract: a science
+Mittagstafel	noun	no		time of the meal not visible; near Mittagsmahl, Mittagstisch
+Triumphgefühl	noun	no		emotion
+Wiesenblume	noun	yes	several different wild flowers, pink, yellow and violet, growing together in a patch of tall meadow grass	near: Butterblume, Blumenbeet, Blumenstrauß
+Unterfangen	noun	no		abstract
+Stummel	noun	no		a stub reads as the whole thing (candle, pencil)
+Eichenlaub	noun	yes	a sprig of green oak leaves with wavy lobed edges and two acorns, on its own, no tree	near: Eichbaum, Laubwerk
+Benennung	noun	no		abstract
+Schreier	noun	no		duplicates Schreihals
+Pudel	noun	yes	a grey poodle with curly clipped fur and pompoms on its legs and tail, standing in profile	near: Spitz, Dogge, Hofhund
+Abendhimmel	noun	no		time-of-day sky; looks like Morgenrot
+Festlichkeit	noun	no		abstract: any celebration; near Freudenfest
+Geschoss	noun	no		generic projectile; reads as a stone or Kanone
+Anbruch	noun	no		abstract: time
+Wohlgeruch	noun	no		a smell; near Blumenduft
+Morgenfrühe	noun	no		time of day
+Aster	noun	yes	a purple aster flower with many narrow petals around a yellow centre, on a leafy green stem	near: Gänseblümchen, Anemone
+Verwicklung	noun	no		abstract
+Verweis	noun	no		abstract: speech; near Zurechtweisung, Rüge
+Schlafengehen	noun	no		an action at a time of day; reads as a bed
+Schauplatz	noun	no		abstract
+Unterkunft	noun	no		abstract: any lodging; near Obdach, Unterkommen
+Spitzbube	noun	no		character: a rogue looks like anyone
+Eigentümlichkeit	noun	no		abstract
+Lebensgefahr	noun	no		abstract
+Frühlingsluft	noun	no		air and season; abstract
+Gesellschafter	noun	no		relational
+Handschlag	noun	yes	two right hands clasped in a firm handshake, close up, one in a blue sleeve and one in a brown sleeve	near: Handreichung
+Stapel	noun	no		a stack reads as the stacked things; near Holzstoß
+Hausbewohner	noun	no		relational
+Kniff	noun	no		abstract
+Baumgruppe	noun	scene	a small cluster of four leafy green trees standing close together in the middle of an open field	near: Waldung, Urwald
+Bewohnerin	noun	no		relational
+Rheinwein	noun	no		Rhine origin not visible; reads as plain wine
+Wohlfahrt	noun	no		abstract
+Herzensfreude	noun	no		emotion
+Seiltänzer	noun	yes	a young man with a black moustache in a striped circus costume balancing on a high tightrope, holding a long balancing pole	
+Fingerzeig	noun	no		abstract: a hint
+Bearbeitung	noun	no		abstract
+Kellertreppe	noun	scene	steep narrow stone steps leading down through an open wooden hatch into a dark cellar, a lantern on the top step	near: Hintertreppe, Freitreppe, Treppenstufe
+Verschluss	noun	no		generic fastening (lid, clasp or buckle)
+Urwald	noun	scene	a dense, dark primeval forest with huge moss-covered trunks, fallen logs, ferns and hanging vines	near: Wildnis, Tannenwald, Waldung
+Gestell	noun	no		a generic frame or rack; reads as a shelf
+Erhöhung	noun	no		abstract: any raised spot; near Erdhaufen
+Keule	noun	yes	a big wooden club on its own, a thin handle widening into a thick, knobbly round head, like a giant's club	near: Knüppel, Stecken
+Unglücksfall	noun	no		abstract
+Verheiratung	noun	no		an event; reads as a wedding
+Reisende	noun	no		a person by situation; near Wandersmann, Mitreisende
+Missetäter	noun	no		character
+Metzger	noun	yes	a middle-aged man with a round face and short brown beard, a butcher in a red-and-white striped apron, holding a cleaver beside hanging sausages	
+Kinderstimme	noun	no		a sound
+Volksschule	noun	no		duplicates Schulgebäude
+Ballsaal	noun	scene	a grand ballroom with crystal chandeliers and a shiny parquet floor, a young man with dark curls and a young red-haired woman in a gown waltzing	near: Tanzstunde
+Volksschullehrer	noun	scene	a middle-aged man with spectacles and a brown moustache, a teacher, at a blackboard before three small pupils: a blond girl, a dark-haired boy, a red-haired girl	near: Hauslehrer, Lehrmeister, Klassenzimmer
+Regenmantel	noun	yes	a bright yellow raincoat with a hood and big buttons, on its own	near: Morgenrock
+Seil	noun	yes	a thick coiled brown rope with a frayed end	near: Strang, Bindfaden, Draht
+Geldstück	noun	yes	a single shiny silver coin with a raised rim and an embossed oak leaf, no numbers	near: Kupfermünze, Cent
+Anweisung	noun	no		abstract: speech
+Draht	noun	yes	a coil of thin grey metal wire with one loose end, no barbs	near: Stacheldraht, Seil
+Erkundigung	noun	no		abstract
+Latein	noun	no		a language
+Türklinke	noun	yes	a brass lever door handle with its round plate on a wooden door, close up	near: Zimmertür
+Wegweiser	noun	yes	a wooden signpost with three blank arrow-shaped boards pointing in different directions, standing in grass	near: Kreuzweg
+Kühlung	noun	no		abstract
+Eigentümer	noun	no		relational
+Lache	noun	no		a sound (a laugh)
+Tautropfen	noun	yes	small round dewdrops sparkling on a green blade of grass, close up	near: Wassertropfen, Regentropfen
+Schnitzwerk	noun	yes	a light brown wooden panel carved in relief with oak leaves and a leaping deer, knife marks visible	near: Schnitzmesser
+Armenhaus	noun	no		purpose not visible; reads as a house
+Kinderschar	noun	no		a group of children reads as Kind
+Sonntagabend	noun	no		time
+Herzenswunsch	noun	no		abstract
+Konfirmand	noun	no		sensitive
+Dorfleute	noun	no		people collective; near Dorfbewohner
+Kunstgriff	noun	no		abstract
+Loblied	noun	no		a song
+Duett	noun	no		a performance; two singers read as singing
+Denkzettel	noun	no		abstract
+Musikkapelle	noun	scene	a small brass band in matching blue uniforms: a grey-haired old man with a tuba, a young red-haired woman with a trumpet, a bald man with a big drum	near: Geiger, Ziehharmonika
+Unebenheit	noun	no		abstract
+Naturforscher	noun	yes	an older man with a white beard and round glasses, a naturalist, studying a beetle through a magnifying glass, a butterfly net under his arm	
+Krebs	noun	yes	a dark reddish-brown freshwater crayfish with two big pincers and long feelers, seen from above	
+Gebrechen	noun	no		abstract
+Prise	noun	no		an amount; reads as salt or snuff
+Einquartierung	noun	no		abstract
+Esche	noun	no		duplicates Waldbaum
+Hofhund	noun	scene	a big shaggy brown farm dog on a chain, sitting in front of its wooden kennel in a farmyard	near: Spitz, Dogge, Pudel
+Köder	noun	no		bait on a hook reads as Angelhaken or Regenwurm
+Luchs	noun	yes	a lynx with black tufted ear tips, spotted tawny fur, side whiskers and a short stubby tail	
+Blitzstrahl	noun	yes	a single jagged yellow lightning bolt striking down from a dark grey storm cloud	near: Donnerschlag
+Räuberhauptmann	noun	scene	a robber chief, a burly man with a bushy black beard and wide black feathered hat, pointing ahead, two young robbers behind him, one red-haired, one bald	near: Seeräuber, Einbrecher
+Hautfarbe	noun	no		sensitive
+Ausfall	noun	no		abstract
+Gesichtszug	noun	no		a feature reads as a face
+Anhänglichkeit	noun	no		emotion
+Reisetasche	noun	yes	a soft brown leather travel bag with two carrying handles, a shoulder strap and a brass clasp	near: Reisekoffer, Felleisen
+Falter	noun	yes	a butterfly with orange and black patterned wings spread open, seen from above	
+Falke	noun	no		duplicates Raubvogel
+Schutzengel	noun	scene	a young female angel with golden curls, a light blue robe and big feathered wings, watching over a small brown-haired boy crossing a narrow bridge	
+Wurf	noun	no		an action; reads as throwing
+Waschtisch	noun	yes	an old wooden washstand with a marble top holding a blue china washbowl and matching water jug, a towel on the side rail	near: Becken, Handtuch
+Streu	noun	no		reads as straw (Stroh)
+Muttersprache	noun	no		abstract
+Schafskopf	noun	no		an insult; abstract
+Zimmermädchen	noun	scene	a young woman with a dark bun, a chambermaid in a black dress with light blue apron and cap, smoothing the blue cover of a hotel bed	near: Kinderfrau, Wäscherin
+Kochtopf	noun	yes	a large steel cooking pot with two side handles and a lid, steam rising, on a stove burner	near: Milchtopf, Bratpfanne
+Märchenbuch	noun	no		duplicates Bilderbuch
+Kaffeekanne	noun	yes	a tall blue enamel coffeepot with a long curved spout, a handle and a lid	near: Wasserkrug, Milchtopf
+Brandstätte	noun	scene	the blackened, burnt-out ruins of a small house, charred beams and a fallen roof, thin smoke still rising	near: Feuersbrunst, Rauchsäule
+Erkenntlichkeit	noun	no		abstract
+Balgerei	noun	scene	two boys of about eight, one red-haired and one black-haired, wrestling and tumbling playfully on the grass	near: Zank, Gefecht
+Mondscheibe	noun	yes	a big round full moon, pale yellow with soft grey craters, on a small patch of dark blue night sky	near: Mondenschein, Himmelszelt
+Säge	noun	yes	a handsaw with a wooden handle and a long toothed steel blade	
+Schaukel	noun	yes	an empty wooden swing seat hanging on two ropes from a thick tree branch	near: Spielplatz
+Kastanienbaum	noun	yes	a large horse chestnut tree with big hand-shaped leaves and spiky green fruit, some burst open showing shiny brown chestnuts	near: Eichbaum, Waldbaum
+Anfänger	noun	no		a person by status; abstract
+Hausgenossin	noun	no		relational
+Angewohnheit	noun	no		abstract
+Gerte	noun	no		a thin rod reads as Stecken or Angelrute
+Zusicherung	noun	no		abstract
+Zugluft	noun	no		moving air
+Schneemasse	noun	no		a heap of snow reads as Schneefeld
+Talglicht	noun	yes	a short, thick, yellowish candle burning in a simple tin candleholder with a finger loop	near: Lichtschimmer
+Rüge	noun	no		abstract: speech
+Lichtstrahl	noun	scene	a single bright beam of sunlight falling through a small high window into a dark stone room	near: Lichtschimmer
+Staubwolke	noun	scene	a low wide cloud of grey-brown dust billowing up behind a horse-drawn cart driving along a dry dirt road	near: Rauchsäule
+Hochzeitstag	noun	no		a date; time
+Zank	noun	no		a quarrel; speech, reads as Balgerei
+Würdenträger	noun	no		rank not visible
+Erle	noun	no		duplicates Waldbaum
+Nichte	noun	no		relational
+Eiland	noun	yes	a small green island with a few trees and a sandy rim in the middle of a calm blue sea	near: Weltmeer
+Hofdame	noun	no		role not plain; a court lady reads as a princess
+Einbildungskraft	noun	no		abstract
+Schularbeit	noun	no		duplicates Schulaufgabe
+Notfall	noun	no		abstract
+Ungeziefer	noun	no		collective; reads as one insect
+Wirkungskreis	noun	no		abstract
+Schmähung	noun	no		abstract: speech
+Gewürm	noun	no		collective; reads as Regenwurm
+Niedergeschlagenheit	noun	no		emotion
+Ansinnen	noun	no		abstract
+Mittagspause	noun	no		time
+Schwinge	noun	no		a wing on its own reads as Flügel; near Flügelschlag
+Klagelaut	noun	no		a sound
+Ausbund	noun	no		abstract
+Steinboden	noun	no		duplicates Steinpflaster
+Seebad	noun	scene	a sandy beach with striped wicker beach chairs, small bathing huts and a long wooden pier reaching into the sea	near: Badegast, Weltmeer
+Selbstzufriedenheit	noun	no		emotion
+Söller	noun	yes	a small stone balcony with a carved balustrade jutting out high on the wall of an old tower	
+Waldwinkel	noun	no		a corner of a forest reads as forest; near Waldwiese
+Aufdringlichkeit	noun	no		abstract
+Regenschirm	noun	yes	an open red umbrella with a curved wooden handle	
+Neujahr	noun	no		time
+Sonntagnachmittag	noun	no		time
+Verneigung	noun	yes	side view: a young man with slicked black hair in a dark tailcoat bowing very deeply from the waist, back almost level, one hand on his chest	near: Knicks
+Treppenstufe	noun	no		a single step reads as stairs; near Kellertreppe, Freitreppe
+Regentropfen	noun	no		duplicates Wassertropfen
+Lebensglück	noun	no		abstract
+Kartenspiel	noun	scene	an older man with a grey moustache and a young red-haired woman playing cards at a wooden table, cards fanned in their hands, no numbers or letters	near: Ballspiel
+Nachmittagsstunde	noun	no		time
+Lungenentzündung	noun	no		an illness; not shown plainly
+Rüssel	noun	no		a part drawn as the whole animal
+Musterung	noun	no		abstract
+Zutrauen	noun	no		abstract
+Eichbaum	noun	yes	a broad old oak tree with a thick gnarled trunk and a wide crown of lobed leaves with acorns	near: Eichenlaub, Kastanienbaum, Waldbaum
+Feige	noun	yes	two ripe purple figs, one whole and one cut in half showing pink flesh and tiny seeds	
+Anschuldigung	noun	no		abstract: speech
+Fuhrmann	noun	scene	a middle-aged man with a brown beard and flat cap, a carter, sitting on a wooden cart pulled by a brown horse, holding the reins	near: Leiterwagen, Postkutsche
+Klavierspiel	noun	scene	a young woman with a dark brown bun playing an upright piano, hands on the keys, seen from the side	near: Musikstunde
+Nähtisch	noun	yes	a small wooden sewing table on slender legs, its drawer open showing spools of coloured thread, scissors and a pincushion	near: Nähzeug, Näharbeit
+Herbstwind	noun	no		wind; season not plain; near Nordwind, Westwind
+Barsch	noun	yes	a freshwater fish with a green-gold body, dark vertical stripes, a spiny back fin and red lower fins, side view	near: Aal
+Durchmesser	noun	no		a measure
+Springbrunnen	noun	yes	a stone fountain in a round basin, jets of water shooting up and splashing down	near: Pumpe
+Gefecht	noun	no		sensitive
+Himmelreich	noun	no		sensitive
+Rocktasche	noun	no		a pocket is drawn as the whole coat
+Entgegnung	noun	no		abstract: speech
+Eintracht	noun	no		abstract
+Viereck	noun	no		a geometric shape; abstract
+Tunnel	noun	yes	the arched stone mouth of a railway tunnel cut into a green hillside, rails leading into the darkness	
+Willkommen	noun	no		abstract
+Lebensunterhalt	noun	no		abstract
+Kirchenglocke	noun	yes	a large bronze church bell hanging from a wooden beam in an open stone belfry	near: Schulglocke, Hausglocke, Schelle, Geläute
+Umwandlung	noun	no		abstract
+Franse	noun	no		a fringe is drawn as the whole shawl (Halstuch)
+Fensterflügel	noun	no		a casement reads as the window; near Kammerfenster
+Tierarzt	noun	scene	a young man with short black hair in a green coat, a vet, listening to a dog's chest with a stethoscope on an examination table	near: Hausarzt
+Spätsommer	noun	no		a season (time)
+Tortur	noun	no		sensitive
+Regentag	noun	no		time; near Regenwetter
+Zierlichkeit	noun	no		abstract
+Einförmigkeit	noun	no		abstract
+Urenkel	noun	no		relational
+Herzensgüte	noun	no		abstract
+Ziererei	noun	no		abstract
+Abfahrt	noun	no		an event; reads as a train or a station
+Bauernhaus	noun	scene	a large farmhouse with a red tiled roof, green shutters and a wooden balcony, a barn beside it, in green fields	near: Gutshof, Waldhaus, Strohdach
+Schneeflocke	noun	yes	a single six-pointed snowflake with delicate branches, pale blue	
+Arznei	noun	yes	a small brown glass medicine bottle with a cork, beside a spoon of red syrup	near: Pille
+Fußgänger	noun	scene	an older man with grey hair in a brown coat walking across a striped pedestrian crossing on a street	near: Vorübergehende, Wandersmann, Bürgersteig
+Niederung	noun	no		a low plain reads as a meadow or field
+Tanzstunde	noun	no		a lesson; reads as Ballsaal or dancing
+Nebensache	noun	no		abstract
+Hemdsärmel	noun	no		a part; a sleeve is drawn as the whole garment
+Backwerk	noun	no		collective; reads as Brezel, Brötchen or Waffel
+Trübsinn	noun	no		emotion
+Hausordnung	noun	no		abstract: rules
+Plüsch	noun	no		a fabric; reads as the thing made of it
+Machwerk	noun	no		abstract
+Tonleiter	noun	no		notation; reads as notes
+Anschein	noun	no		abstract
+Färbung	noun	no		abstract
+Krümmung	noun	no		abstract: a curve
+Schalk	noun	no		character
+Wahrscheinlichkeit	noun	no		abstract
+Morgendämmerung	noun	no		time of day
+Handtuch	noun	yes	a folded blue-and-yellow striped towel hanging over a wooden rail	near: Schnupftuch, Leintuch
+Kreisel	noun	yes	a red and yellow wooden spinning top toy whirling on its point	
+Zimmertür	noun	yes	a plain closed wooden interior door with panels and a brass handle, set in a room wall	near: Küchentür, Flurtür, Türklinke
+Latte	noun	no		a thin board reads as Stecken or Zaunpfahl
+Siegerin	noun	yes	a young woman with short blond hair on the top step of a plain winners' podium, holding up a gold trophy cup	near: Wettlauf
+Albernheit	noun	no		abstract
+Günstling	noun	no		relational
+Verdauung	noun	no		abstract
+Grabrede	noun	no		sensitive
+Hühnerstall	noun	yes	a small wooden henhouse with a sloping roof and a ramp, two brown hens walking up into it	near: Kuhstall, Schweinestall, Pferdestall
+Pflichttreue	noun	no		abstract
+Kirchendiener	noun	no		role not visible by dress
+Gefälligkeit	noun	no		abstract
+Zutritt	noun	no		abstract
+Masche	noun	no		a stitch reads as knitting (Strickzeug)
+Freitreppe	noun	scene	a broad flight of stone steps with balustrades leading up to the front door of a grand house	near: Kellertreppe, Hintertreppe
+Glockenblume	noun	yes	a slender green stem with several violet-blue bell-shaped blossoms hanging down	near: Schneeglöckchen, Wiesenblume
+Anziehungskraft	noun	no		abstract
+Hoftor	noun	scene	a wide wooden double gate set in a yellow plastered courtyard wall, one wing open onto a cobbled farmyard	near: Scheunentor, Gittertor, Gartentür
+Etage	noun	no		a floor of a building reads as the house
+Federbett	noun	yes	a thick, puffy red-checked feather duvet spread on a wooden bed	near: Wolldecke, Matratze, Kopfkissen
+Naht	noun	no		a seam reads as the cloth (Näharbeit)
+Abenddämmerung	noun	no		time of day
+Schornsteinfeger	noun	yes	a young man with a red beard, a chimney sweep in a black suit and top hat, holding a round wire brush, standing on a roof by a chimney	
+Wildbret	noun	no		meat; cannot be told from other meat
+Verzögerung	noun	no		abstract
+Mädchenkopf	noun	no		reads as a girl; near Lockenkopf, Mädchengestalt
+Unterlage	noun	no		abstract
+Rockärmel	noun	no		a part; a sleeve is drawn as the whole garment
+Wachtposten	noun	yes	a young man with short dark hair, a sentry in a blue coat and helmet, standing guard with a rifle beside a red-and-white striped sentry box	near: Schildwache, Polizeidiener
+Förmlichkeit	noun	no		abstract
+Nähzeug	noun	yes	an open sewing box with spools of coloured thread, needles in a pincushion, small scissors and a thimble	near: Nähtisch, Strickzeug, Fingerhut
+Einklang	noun	no		abstract
+Bereitschaft	noun	no		abstract
+Zeitvertreib	noun	no		abstract
+Ergebung	noun	no		abstract
+Heimfahrt	noun	no		a journey; near Heimreise
+Mittagstisch	noun	no		time of the meal not visible; near Küchentisch
+Kreuzweg	noun	scene	two country dirt roads crossing at right angles among green fields, seen from above	near: Wegweiser, Fußweg
+Braune	noun	no		a brown horse reads as Pferd
+Feuersbrunst	noun	scene	a large house engulfed in roaring orange flames and billowing black smoke at night	near: Brandstätte, Feuerwehr
+Klaps	noun	no		hitting a child
+Elle	noun	no		a measure
+Wiesel	noun	no		duplicates Marder
+Zentimeter	noun	no		a measure
+Mondenschein	noun	no		duplicates Mondscheibe
+Obstgarten	noun	scene	an orchard with rows of fruit trees full of red apples and yellow pears in green grass	near: Pflaumenbaum, Gartenanlage
+Schelmerei	noun	no		abstract
+Strohdach	noun	yes	a thick golden thatched straw roof on a small cottage with pale yellow walls, close up on the roof	near: Bauernhaus
+Balsam	noun	no		figurative; an ointment jar reads as Arznei
+Distel	noun	yes	a purple thistle flower head on a spiky stem with prickly green leaves	near: Nessel
+Schlossherr	noun	no		rank not visible
+Scheltwort	noun	no		abstract: speech
+Errettung	noun	no		abstract
+Grundbesitz	noun	no		abstract
+Nachtgewand	noun	yes	a long pale blue cotton nightgown with a ruffled collar and long sleeves, on its own	near: Morgenrock
+Handreichung	noun	no		abstract
+Habe	noun	no		abstract
+Schützling	noun	no		relational
+Becken	noun	yes	a wide, shallow round blue enamel basin with a dark rim, on its own	near: Napf, Trog, Waschtisch
+Sperling	noun	yes	a small brown house sparrow with a streaked back, grey crown and black bib, perched on a twig	near: Star
+Hurra	noun	no		a shout
+Hafer	noun	yes	a few stalks of oats with loose drooping clusters of pale golden grains	near: Gerste, Weizen, Getreide
+Mittagsstunde	noun	no		time
+Brut	noun	no		a nest of chicks reads as Vogelnest
+Mündung	noun	no		a river meeting the sea reads as a river; the example means a cave mouth
+Augenpaar	noun	no		reads as eyes (Auge)
+Waldweg	noun	scene	a narrow dirt path winding through a forest between tall trees	near: Fußweg, Schulweg
+Donnerschlag	noun	no		a sound; reads as Blitzstrahl
+Anstellung	noun	no		abstract
+Erlös	noun	no		abstract
+Bürgersteig	noun	scene	an empty paved sidewalk with a raised curb running along a street in front of house fronts	near: Steinpflaster, Fußgänger
+Tageszeit	noun	no		time
+ausreißen	verb	no		duplicates davonlaufen
+hinfliegen	verb	no		direction is not shown: a flying bee reads as fliegen
+aufmachen	verb	scene	a young woman with a long brown braid pulling a heavy wooden cabin door wide open by its iron handle	near: zumachen, aufschließen, aufsperren
+hinaufklettern	verb	scene	a little girl with dark brown pigtails climbing up a wooden ladder toward an open hayloft, one hand reaching for the next rung	near: erklettern, ersteigen, hinaufschwingen
+daherkommen	verb	no		direction toward the speaker cannot be shown; a walking figure reads as heimgehen
+probieren	verb	no		abstract (try out)
+melken	verb	scene	an old man with grey hair and a grey beard on a three-legged stool, milking a brown goat into a wooden pail	
+niedersetzen	verb	no		duplicates hinsetzen
+umschauen	verb	yes	a middle-aged woman with short grey hair standing in an open meadow, turning her head to look around, one hand shading her eyes	near: umherspähen, ausschauen, anschauen
+niesen	verb	yes	a young man with ginger hair and a ginger beard sneezing hard into a blue handkerchief, eyes squeezed shut, head jerked forward	
+stricken	verb	scene	an elderly woman with grey hair in a bun knitting a red scarf with two long needles, a ball of red yarn in her lap	near: nähen, flechten
+herbeiholen	verb	scene	a shaggy brown dog bounding back across a lawn, fetching a thrown stick in its mouth	near: herbeibringen, zurückbringen, herbeischaffen
+davonfliegen	verb	no		direction not shown
+weiterfliegen	verb	no		direction not shown
+herunterkommen	verb	no		direction toward the speaker cannot be shown; reads as hinunterlaufen
+schmausen	verb	scene	a plump middle-aged man with red hair and a red beard feasting at a table piled with roast chicken, bread and grapes, a drumstick in his hand	near: verspeisen, mitessen, aufessen
+aufragen	verb	no		a thing standing tall, no action; the picture would show a tower
+hinlaufen	verb	no		direction is not shown: running toward someone reads as laufen, zulaufen
+miauen	verb	yes	a grey tabby cat sitting upright with its head raised and mouth wide open, meowing	near: anzischen, schnurren
+herausnehmen	verb	no		a still picture of taking out looks like putting in
+entwischen	verb	no		duplicates davonlaufen
+weiden	verb	yes	a brown cow grazing on a green meadow, head lowered, tearing at the grass	
+hineinstecken	verb	no		only a pose or result; putting in looks like taking out
+auspacken	verb	scene	a little boy with curly black hair tearing colourful wrapping paper off a present, scraps of paper flying	near: einwickeln, verpacken, zusammenpacken
+schnitzen	verb	scene	an old man with white hair and a bushy white beard carving a wooden spoon with a pocket knife, curly wood shavings falling	near: verfertigen, fertigen
+einsperren	verb	no		shows only the result (someone behind a locked door); turning a key reads as aufschließen
+hineinlaufen	verb	no		direction is not shown: running through a door reads as laufen
+hinunterfliegen	verb	yes	a brown owl swooping steeply down from a high branch toward the grass, wings spread wide, head pointing downward	near: auffliegen, hinfliegen
+hinausspringen	verb	no		duplicates hineinspringen
+davonlaufen	verb	yes	a young boy with black hair running away fast, seen from behind at an angle, glancing back over his shoulder	near: ausreißen, entwischen, fortmachen, entschlüpfen, forteilen
+herbeikommen	verb	no		direction toward the speaker cannot be shown
+zurücklaufen	verb	no		direction not shown
+erschallen	verb	no		sound; abstract
+hineinkommen	verb	no		direction toward the speaker cannot be shown; reads as hineinlaufen
+anlangen	verb	no		arriving looks like walking; abstract
+zanken	verb	scene	two small children, a girl with blond braids and a boy with brown hair, angrily tugging at the same rag doll from both sides	near: necken
+nähen	verb	scene	a young woman with long black hair sewing a button onto a green shirt with a needle and thread	near: ausbessern, stricken
+hineinschlüpfen	verb	no		direction not shown
+hervorgucken	verb	scene	a little girl with tousled blond hair peeping out from under a thick patchwork quilt, only her eyes and forehead showing	near: hineinsehen, hinausschauen, herausstecken
+verfertigen	verb	no		abstract (making); a craftsman reads as schnitzen
+purzeln	verb	yes	a little boy with sandy hair tumbling head over heels down a grassy slope, legs in the air	near: hinfallen, umfallen
+scharren	verb	yes	a brown hen scratching the bare ground with one foot, kicking up bits of soil	near: kratzen, vergraben, herumwühlen
+zurückfliegen	verb	no		direction not shown
+zunehmen	verb	no		abstract
+krabbeln	verb	yes	a small black beetle crawling along a green leaf, its six legs mid-step	near: hineinkriechen
+zusammenfahren	verb	no		emotion (a sudden start); a face shows fright, not the word
+herumspringen	verb	no		duplicates hüpfen
+zutragen	verb	no		abstract
+zuwandern	verb	no		direction not shown
+anmachen	verb	scene	a middle-aged woman with brown hair in a bun kneeling at an iron stove, striking a match to light the kindling inside	
+hinaufkommen	verb	no		direction toward the speaker cannot be shown; reads as hinaufklettern
+nachfolgen	verb	no		duplicates nachlaufen
+ermahnen	verb	scene	a stern elderly woman with grey curls wagging a raised index finger at a small boy with red hair	near: tadeln, rügen, bestrafen
+hinausfliegen	verb	no		duplicates hineinfliegen
+umfallen	verb	no		duplicates hinfallen
+pflücken	verb	scene	a teenage girl with a long auburn ponytail reaching up to pick a red apple from a tree branch	near: auswählen
+herausholen	verb	no		a still picture of taking out looks like putting in
+erzeigen	verb	no		abstract
+anschauen	verb	yes	a little girl with dark curly hair looking closely at a ladybug sitting on her fingertip	near: zuschauen, hinschauen, anstaunen
+hinausschauen	verb	scene	a young boy with blond hair leaning on a windowsill, looking out of an open window at a starry night sky, seen from inside the room	near: hervorgucken, hineinsehen
+hinkommen	verb	no		direction cannot be shown; abstract
+zuschauen	verb	no		duplicates anschauen
+herausdringen	verb	no		sound or light coming out; no figure acting
+hineinfliegen	verb	scene	a small blue-and-yellow bird flying into the round hole of a wooden birdhouse, its tail and wings still outside	near: hinausfliegen, hinfliegen
+heimtragen	verb	no		direction is not shown: carrying reads as tragen
+beistehen	verb	no		abstract (helping)
+zumachen	verb	no		a still picture of shutting looks like aufmachen
+erklettern	verb	no		duplicates hinaufklettern
+fortschleichen	verb	yes	a teenage boy with red hair sneaking away on tiptoe, hunched forward, one finger pressed to his lips	near: davonlaufen, entwischen, vorbeihuschen, heranwagen
+hineinrutschen	verb	scene	a little girl with black pigtails sliding down a water slide feet first into a swimming pool, a big splash below	near: hineinspringen
+umhertanzen	verb	yes	a young man with messy brown hair in a striped nightshirt dancing about for joy, arms flung up, one leg kicked high	near: herumhüpfen, herumspringen
+umhauen	verb	scene	a burly middle-aged man with a black beard and black hair swinging an axe into the trunk of a tall fir tree, wood chips flying	near: aufschneiden
+versorgen	verb	no		abstract
+zähmen	verb	no		abstract (taming takes time)
+anstimmen	verb	no		starting a song shows only singing
+aufessen	verb	no		duplicates schmausen; finishing shows only as an empty plate
+fortdauern	verb	no		abstract
+verleben	verb	no		abstract (time)
+stibitzen	verb	scene	a small brown monkey sneaking a banana out of the basket of an old man with grey hair who is looking the other way	near: naschen
+dableiben	verb	no		abstract
+hüpfen	verb	yes	a little girl with ginger pigtails hopping on one leg, the other foot tucked up behind her	near: herumhüpfen, herumspringen
+hinsetzen	verb	yes	an elderly woman with silver hair in a bun lowering herself onto a wooden bench, knees half bent, one hand reaching back to the seat	near: niedersetzen, beisammensitzen, niederkauern
+lecken	verb	scene	a small ginger kitten lapping milk from a blue saucer with its pink tongue	near: naschen
+schnarchen	verb	yes	a heavy middle-aged man with black hair and a bushy black moustache asleep on his back in bed, mouth wide open, snoring	near: verschlafen
+hinunterspringen	verb	yes	a teenage girl with a short black bob jumping down from a high stone wall, mid-air, knees bent, arms out	near: hineinspringen, hüpfen, hinunterlaufen
+losstürzen	verb	no		direction not shown
+nachlaufen	verb	scene	a young woman with curly red hair running after her straw hat as the wind blows it away ahead of her	near: nachsetzen, nacheilen, nachfolgen
+hinausschlüpfen	verb	no		direction not shown
+zappeln	verb	scene	a small silver fish wriggling on the end of a fishing line, body curved, water drops flying	
+herumfliegen	verb	no		direction not shown
+striegeln	verb	scene	a teenage girl with a blond ponytail grooming a brown horse with a curry comb, brushing along its side	near: bürsten, kämmen
+anbrechen	verb	no		abstract (time of day)
+auswählen	verb	no		abstract (choosing looks like taking or pointing)
+grämen	verb	no		emotion
+meckern	verb	yes	a brown goat with its head raised and mouth wide open, bleating	near: miauen, bellen
+fortmachen	verb	no		duplicates davonlaufen
+entschlüpfen	verb	no		duplicates davonlaufen
+fortziehen	verb	scene	a little girl with brown braids tugging an elderly woman with white hair along by the hand, leaning forward as she pulls	near: herbeiziehen, hinaufziehen
+eingewöhnen	verb	no		abstract
+kreischen	verb	no		sound; an open mouth or beak reads as hinunterrufen
+backen	verb	scene	a middle-aged man with short blond hair and a moustache sliding loaves of bread into a hot brick oven on a long wooden peel	near: verzieren
+hinaufziehen	verb	scene	a young boy with brown hair under a red woolly hat pulling a wooden sled up a snowy hill by its rope, leaning forward	near: fortziehen, herbeiziehen
+hinunterrufen	verb	scene	a little girl with black braids leaning out of a hayloft opening, hands cupped around her mouth, calling down to a grey-haired old man below	near: nachrufen, entgegenrufen, hineinrufen, herbeirufen, kreischen
+herumsuchen	verb	scene	a middle-aged man with short grey hair rummaging through a big cloth bag, one arm deep inside, searching	near: durchsuchen, herumwühlen
+herauslassen	verb	no		letting out reads as aufmachen; the animal leaving reads as a fly or run verb
+vorbeifahren	verb	no		direction is not shown: a car on a road reads as fahren
+tadeln	verb	no		duplicates ermahnen
+hersagen	verb	no		speech
+schwänzen	verb	no		abstract (skipping school)
+nachrufen	verb	no		duplicates hinunterrufen
+darbieten	verb	no		abstract
+nachhelfen	verb	no		abstract
+hinüberfliegen	verb	no		direction not shown
+hinunterlaufen	verb	yes	a girl of about ten with long blond hair running down a steep grassy hillside, arms out for balance	near: hinuntereilen, hinunterspringen
+hineinspringen	verb	scene	a young boy with wet blond hair jumping feet first into a lake, mid-air just above the water, arms raised	near: hinausspringen, hinunterspringen, hineinrutschen
+verzieren	verb	scene	a young woman with a dark brown ponytail piping swirls of pink icing onto a round cake	near: backen
+auftragen	verb	no		speech
+ausstehen	verb	no		abstract
+hinaufschwingen	verb	no		duplicates auffliegen
+munden	verb	no		a taste; a happy eater reads as schmausen
+umherspähen	verb	no		duplicates umschauen
+hinauffliegen	verb	no		duplicates auffliegen
+forthelfen	verb	no		abstract (helping someone escape)
+ergötzen	verb	no		emotion
+heimgehen	verb	no		direction is not shown: walking reads as gehen
+pflanzen	verb	scene	an elderly woman with short white hair kneeling in a garden, pressing a small green seedling into the soil with her hands	near: vergraben
+ersteigen	verb	no		duplicates hinaufklettern
+vorüberfliegen	verb	no		direction not shown
+bewirten	verb	no		relational (host and guests); a meal reads as schmausen
+verkündigen	verb	no		speech
+schnappen	verb	yes	a black-and-white terrier leaping up and snapping its jaws at a sausage tossed in the air	near: beißen, auffressen
+hereintreten	verb	no		direction not shown
+heranwachsen	verb	no		growing up takes years; no single picture
+auffliegen	verb	yes	a grey pigeon taking off from the ground, wings raised high, feet just leaving the cobblestones	near: hinauffliegen, hinaufschwingen, ausfliegen
+wedeln	verb	yes	a happy golden dog wagging its tail hard, curved motion lines around the tail	
+aufbleiben	verb	no		abstract (staying awake)
+widerfahren	verb	no		abstract
+entgegenrufen	verb	no		duplicates hinunterrufen
+einfahren	verb	no		a train at a platform reads as arriving or leaving alike
+niederkauern	verb	yes	a small boy with light brown hair crouching down low on his heels, knees fully bent, arms wrapped around his knees	near: hinsetzen, niedersetzen
+ausfliegen	verb	no		duplicates auffliegen
+ausdenken	verb	no		thinking
+traben	verb	yes	a chestnut horse trotting across a meadow, one front leg and the opposite hind leg lifted	
+übernachten	verb	no		abstract
+auffressen	verb	scene	a striped cat greedily eating a whole fish from a plate, half of the fish already gone	near: schmausen, verspeisen
+beisammensitzen	verb	scene	an elderly couple, a bald man with a white moustache and a woman with a grey bun, sitting close together side by side on a garden bench	near: hinsetzen
+einstimmen	verb	no		joining in shows only singing
+herumtreiben	verb	no		abstract
+anstreichen	verb	scene	a teenage boy with straw-blond hair painting a wooden fence bright green with a wide brush, a paint bucket at his feet	near: verzieren
+herumhüpfen	verb	no		duplicates hüpfen
+hinauskönnen	verb	no		abstract (modal)
+nachsetzen	verb	no		duplicates nachlaufen
+herunterholen	verb	no		taking down looks like putting up in a still picture
+verpflegen	verb	no		abstract (providing food)
+zurückbringen	verb	no		duplicates herbeiholen
+hineinfahren	verb	no		direction not shown
+anzischen	verb	scene	a grey goose stretching its neck forward and hissing at a little boy with black hair, beak wide open	near: miauen, meckern
+hinzeigen	verb	yes	a young woman with shoulder-length chestnut hair pointing with her outstretched arm and index finger at something far away	near: ermahnen
+hineinsehen	verb	scene	a girl of about eight with a brown ponytail peering into a hole in a hollow tree trunk, face close to the opening	near: hineingucken, hineinstarren, hervorgucken
+zueilen	verb	no		direction not shown
+umkommen	verb	no		sensitive (death)
+hinunterschauen	verb	scene	a young man with red hair lying on his stomach at the edge of a high cliff, looking down into the deep valley below	near: herabsehen, aufschauen
+necken	verb	no		teasing has no plain still picture; a tug reads as zanken
+zusammentreffen	verb	no		abstract
+zustürzen	verb	no		direction not shown
+hineinrufen	verb	no		duplicates hinunterrufen
+fertigen	verb	no		abstract (making); a craftsman reads as schnitzen
+baumeln	verb	no		only a pose (hanging loosely)
+herbeiziehen	verb	no		duplicates fortziehen
+herumschwingen	verb	no		circling cannot be shown in a still picture; reads as umhertanzen
+zusammendrehen	verb	no		shows only a twisted cloth; a pose
+kratzen	verb	yes	a scruffy brown dog sitting and scratching behind its ear with a hind paw	near: scharren
+ausschicken	verb	no		abstract (sending)
+aufheitern	verb	no		emotion
+schallen	verb	no		sound; abstract
+schnurren	verb	no		purring makes no visible movement; a content cat reads as miauen or sleeping
+aufschießen	verb	no		a sudden jump up shows only a pose
+betrüben	verb	no		emotion
+herbeibringen	verb	no		duplicates herbeiholen
+zurechtzupfen	verb	no		small tugs show only a pose
+mitdürfen	verb	no		abstract (modal)
+zulaufen	verb	no		direction not shown
+ermuntern	verb	no		speech
+beifügen	verb	no		abstract (adding words)
+anbinden	verb	scene	a young woman with a long black braid tying a goat's rope to a wooden fence post, pulling the knot tight	near: einsperren
+erquicken	verb	no		abstract
+widerstehen	verb	no		abstract
+heimbringen	verb	no		direction not shown
+aufjauchzen	verb	no		emotion and sound; a cheering child reads as a sledge ride
+vermehren	verb	no		abstract
+ausbessern	verb	no		duplicates nähen
+spuken	verb	scene	a pale blue ghost with a sheet-like body floating through a dark attic, arms raised	
+verpacken	verb	no		a still picture of wrapping looks like auspacken
+naschen	verb	scene	a little boy with black curls sneaking sugar cubes from a sugar bowl in a cupboard and popping one into his mouth	near: stibitzen, lecken
+hinuntereilen	verb	no		duplicates hinunterlaufen
+hintragen	verb	no		direction not shown
+schielen	verb	yes	a cheeky boy of about nine with freckles and brown hair crossing both eyes to look at the tip of his nose	near: herausstecken
+aufsperren	verb	yes	a hungry baby bird in a nest opening its yellow beak very wide, begging for food	near: aufmachen
+vorbeihuschen	verb	yes	a small grey mouse scurrying fast across a wooden floor, body low, motion lines behind it	near: flitzen, krabbeln
+herbeiströmen	verb	no		a crowd; reads as hinlaufen
+bürsten	verb	scene	a middle-aged man with slicked-back black hair brushing dust off a dark blue coat with a wooden clothes brush	near: striegeln, kämmen
+zusammenpacken	verb	no		a still picture of packing looks like unpacking
+bezeigen	verb	no		abstract
+weiterkönnen	verb	no		abstract (modal)
+wegschlagen	verb	no		duplicates wegstoßen
+erlernen	verb	no		abstract (learning)
+kämmen	verb	yes	a young woman with very long wavy red hair combing it with a green comb, head tilted to one side	near: flechten, bürsten
+köpfen	verb	no		sensitive (execution)
+aufschauen	verb	yes	a little boy with dark brown hair tipping his head far back to look straight up at a very tall tower	near: hinunterschauen, anschauen
+vergraben	verb	scene	a brown dog burying a light-brown bone in a garden hole, pushing earth over it with its nose	near: scharren, pflanzen
+bestrafen	verb	no		abstract; a scolding gesture reads as ermahnen
+hinschauen	verb	no		duplicates anschauen
+heranwagen	verb	no		caution shows only a pose; reads as fortschleichen
+wegstoßen	verb	scene	an angry girl of about ten with short black hair pushing a red-haired boy her age away with both hands, the boy stumbling back	near: wegschlagen
+durchstreifen	verb	no		reads as wandern
+flitzen	verb	no		duplicates vorbeihuschen
+beistimmen	verb	no		speech
+aussöhnen	verb	no		relational; a handshake reads as bewillkommnen
+zurücktönen	verb	no		sound (an echo)
+hinfallen	verb	yes	a small boy with blond curls stumbling over a tree root and falling flat forward, hands out to catch himself	near: umfallen, fehltreten, purzeln
+abbilden	verb	no		abstract; a painter reads as painting
+vortreten	verb	no		a step forward looks like walking
+bellen	verb	yes	a black-and-tan dog standing with front legs planted, barking with its mouth wide open	near: meckern, anzischen
+heranfliegen	verb	no		direction not shown
+bahnen	verb	no		clearing a way reads as digging or chopping
+weglegen	verb	no		only a pose or result (putting down)
+auflauern	verb	no		only a pose (waiting in hiding)
+fehltreten	verb	no		duplicates hinfallen
+mitessen	verb	no		duplicates schmausen
+kauen	verb	scene	a young boy with spiky dark hair chewing with both cheeks bulging, a half-eaten pear in his hand	near: beißen, schmausen
+aufladen	verb	scene	a strong young man with a brown crew cut heaving a heavy grain sack up onto a horse cart	near: heimtragen
+herauftönen	verb	no		sound
+anschicken	verb	no		abstract
+geigen	verb	scene	an elderly man with wild grey hair playing the violin, bow drawn across the strings, eyes closed	
+hineinkriechen	verb	scene	a little girl with a short brown bob crawling on hands and knees into a small orange tent	near: krabbeln, hineinschlüpfen
+herumwühlen	verb	yes	a pink pig rooting around in brown mud with its snout, mud splashing	near: herumsuchen, scharren
+beißen	verb	scene	a young woman with dark curly hair biting into a big red apple, her teeth sunk into it	near: kauen, schnappen
+herausstecken	verb	yes	a cheeky little girl with red pigtails sticking her tongue far out	near: schielen, hervorgucken
+spitzen	verb	no		only a pose (ears raised)
+mahlen	verb	scene	an elderly woman with white hair in a bun turning the crank of a wooden coffee grinder held on her lap	
+hineinmüssen	verb	no		abstract (modal)
+anstaunen	verb	no		duplicates anschauen
+mitspielen	verb	no		relational (joining in a game)
+einwickeln	verb	no		a still picture of wrapping looks like auspacken
+abmühen	verb	no		abstract (effort)
+weiterfragen	verb	no		speech
+erstrecken	verb	no		abstract
+herabsehen	verb	no		duplicates hinunterschauen
+verirren	verb	no		being lost is a state; reads as umschauen
+zurückeilen	verb	no		direction not shown
+rügen	verb	no		duplicates ermahnen
+ausrenken	verb	no		sensitive (injury)
+verspeisen	verb	no		duplicates schmausen
+verweilen	verb	no		abstract
+ausschauen	verb	no		duplicates umschauen
+ausbrüten	verb	scene	a brown hen sitting on a straw nest of eggs, a fluffy yellow chick breaking out of one shell beside her	
+herunterbringen	verb	no		taking down looks like putting up in a still picture
+durchsuchen	verb	no		duplicates herumsuchen
+vorsagen	verb	no		speech
+hinausmüssen	verb	no		abstract (modal)
+durcheinanderrufen	verb	no		duplicates hinunterrufen
+fortmüssen	verb	no		abstract (modal)
+hineinstarren	verb	no		duplicates hineinsehen
+bescheren	verb	no		giving presents reads as handing over a gift; relational
+umherwandern	verb	no		reads as wandern
+turnen	verb	yes	a girl of about twelve with a high black ponytail doing a handstand on a blue gym mat, legs straight up	
+hinausrennen	verb	no		direction not shown
+aufschneiden	verb	scene	a middle-aged woman with short curly brown hair slicing a big watermelon open with a long knife, red flesh showing	near: umhauen, schnitzen
+herbeirufen	verb	no		duplicates hinunterrufen
+hinabsenken	verb	no		a cloud sinking; no figure acting
+kapern	verb	no		needs a sea battle; no plain picture
+bedanken	verb	no		speech
+verschlafen	verb	no		oversleeping looks like sleeping; reads as schnarchen
+belohnen	verb	no		a reward reads as handing something over; abstract
+durchkommen	verb	no		abstract
+verunglücken	verb	no		abstract; an accident needs a crash or injury
+herbeischaffen	verb	no		duplicates herbeiholen
+forteilen	verb	no		duplicates davonlaufen
+hinablassen	verb	no		lowering looks like pulling up in a still picture
+beratschlagen	verb	no		speech
+zujagen	verb	no		direction not shown
+sputen	verb	no		reads as laufen
+ziemen	verb	no		abstract
+hineintun	verb	no		only a pose or result; putting in looks like taking out
+pflügen	verb	scene	a middle-aged man with grey hair under a flat cap guiding a plough pulled by a brown horse across a field, dark furrows behind	
+heraufdringen	verb	no		sound
+herausdrücken	verb	scene	a young man with short dark hair and a dark beard squeezing a tube so a blue stripe of toothpaste comes out onto a toothbrush	
+hereinlachen	verb	no		the sun shining in; no figure acting
+mitlachen	verb	no		relational (laughing along); a laughing face does not show it
+aufschließen	verb	scene	an elderly woman with curly grey hair turning a large iron key in the keyhole of a wooden front door	near: aufmachen, einsperren
+nacheilen	verb	no		duplicates nachlaufen
+flechten	verb	scene	a young woman with dark hair braiding the long blond hair of a little girl into a thick plait	near: kämmen
+bestürmen	verb	no		speech (pressing with questions)
+entgegenspringen	verb	no		direction not shown
+einjagen	verb	no		abstract (striking fear)
+hineingucken	verb	no		duplicates hineinsehen
+abhelfen	verb	no		abstract
+bewillkommnen	verb	scene	a middle-aged man with a brown beard standing at his cottage door, holding out his hand to welcome a young traveller with blond hair and a rucksack	near: aussöhnen
+bequemen	verb	no		abstract
+schlachten	verb	no		sensitive (killing)

@@ -1,0 +1,1277 @@
+lemma	kind	picturable	prompt	note
+Einbildungskraft	noun	no		abstract
+Oheim	noun	no		relational
+Baronesse	noun	no		duplicates Fürstin
+Bediente	noun	yes	a young man with neat black hair in a dark blue servant's livery with gold buttons and knee breeches, carrying a silver tray with a teapot	near: Haushofmeister, Page
+Epoche	noun	no		abstract (time word)
+Eigenheit	noun	no		abstract
+Ansehen	noun	no		abstract
+Monument	noun	yes	a large stone monument in a town square: a bronze statue of a man on a tall stone pedestal with steps around its base	near: Obelisk, Sockel, Piedestal
+Figur	noun	no		abstract (figure: a shape, a puppet or a statue; no single picture)
+Harfenspieler	noun	yes	an old man with long grey hair and a grey beard, seated and plucking the strings of a tall wooden harp	near: Harfner, Musikus
+Obelisk	noun	yes	a tall narrow four-sided grey stone pillar tapering upward to a small pyramid point, standing on a low square base	near: Monument, Pyramide
+Nachbildung	noun	no		abstract (a replica looks like the original)
+Mannigfaltigkeit	noun	no		abstract
+Baukunst	noun	no		abstract
+Pedant	noun	no		a character trait; a fussy man is not plain
+Altertum	noun	no		abstract (time word)
+Gerätschaft	noun	no		abstract (equipment in general)
+Anlass	noun	no		abstract
+Gerüst	noun	scene	wooden scaffolding of upright poles, plank platforms and ladders standing against the front of a half-built red brick house	near: Gestell, Zimmerwerk
+Endzweck	noun	no		abstract
+Stallmeister	noun	no		duplicates Reitknecht
+Kalkfels	noun	no		duplicates Felsenwand
+Zutrauen	noun	no		abstract
+Unbequemlichkeit	noun	no		abstract
+Wundarzt	noun	no		duplicates Chirurg
+Nachahmung	noun	no		abstract
+Liebhaberei	noun	no		abstract
+Maxime	noun	no		abstract
+Gefälligkeit	noun	no		abstract
+Lebensart	noun	no		abstract
+Phänomen	noun	no		abstract
+Korrespondenz	noun	no		abstract (letters in general; a pile of letters is not told from Briefwechsel)
+Amphitheater	noun	scene	an ancient Greek theatre, only a half circle: tiers of pale stone seats climbing a green hillside around a small flat stage with a row of broken columns behind it, seen from the front	near: Arena, Schauspielhaus
+Gemahl	noun	no		relational
+Harfner	noun	no		duplicates Harfenspieler
+Komposition	noun	no		abstract
+Effekt	noun	no		abstract
+Region	noun	no		abstract
+Kalk	noun	no		a white powder not told apart from Gips or Puder
+Fußgänger	noun	scene	an older man with a grey beard and a flat cap walking across a striped pedestrian crossing on a town street, mid-stride, cars waiting	near: Reisende, Fußwanderung
+Beihilfe	noun	no		abstract
+Genius	noun	no		abstract
+Handelsmann	noun	no		duplicates Krämer
+Denkweise	noun	no		abstract
+Dekoration	noun	no		stage set; an empty stage reads as Schauspielhaus, and today's sense is decoration
+Mantelsack	noun	yes	an old brown leather travelling bag shaped like a long round roll, closed with two buckled straps and a carrying handle	near: Behältnis
+Willkür	noun	no		abstract
+Feldbau	noun	no		abstract (farming as an activity)
+Kustode	noun	no		a role not shown by dress or tools
+Grille	noun	no		abstract (whim, not the insect)
+Reinlichkeit	noun	no		abstract
+Übereinstimmung	noun	no		abstract
+Zierlichkeit	noun	no		abstract
+Zirkel	noun	yes	a metal drawing compass with two hinged legs spread apart, one leg ending in a needle point, the other holding a pencil	near: Reißfeder
+Karneval	noun	scene	a street carnival parade: a woman with black curls in a harlequin costume and a grey-bearded man in a painted mask, confetti flying, a decorated float behind	near: Maskerade, Festlichkeit, Jahrmarkt
+Beschwerlichkeit	noun	no		abstract
+Bedenklichkeit	noun	no		abstract
+Gips	noun	no		a white mineral powder not told apart from Kalk or Puder
+Vegetation	noun	no		abstract (plants in general)
+Kupferstich	noun	yes	a framed black-and-white print of a hilly landscape, drawn entirely in fine engraved lines and cross-hatching	near: Titelkupfer, Abbildung, Schattenriss
+Enthusiasmus	noun	no		abstract (emotion)
+Besitztum	noun	no		abstract
+Fertigkeit	noun	no		abstract
+Lebensgang	noun	no		abstract
+Wasserfahrt	noun	scene	two young women, one blond and one dark-haired, and a grey-haired man in a straw hat, out on a calm lake in a small boat with a striped awning	near: Überfahrt, Lustpartie, Fährmann
+Absonderung	noun	no		abstract
+Deklamation	noun	no		speech
+Gönner	noun	no		relational
+Einstimmung	noun	no		abstract
+Saumross	noun	yes	a brown horse with bulging packs and bundles strapped on both sides of its back, no rider, on a stony mountain path	near: Treiber
+Lokalität	noun	no		abstract
+Landschaftsmaler	noun	scene	a man with a short brown beard and a straw hat, a landscape painter, painting at an easel outdoors, the canvas showing green hills and a blue sky	near: Zeichner, Kunstgenosse
+Unart	noun	no		abstract
+Fußpfad	noun	scene	a narrow footpath of trodden earth winding through a green meadow full of wild flowers	near: Stieg, Seitenweg, Chaussee
+Vorsorge	noun	no		abstract
+Kalkstein	noun	no		a kind of stone not plain at a glance (a pale rock reads as any stone)
+Reitknecht	noun	yes	a young man with curly ginger hair in a blue livery jacket, a groom, standing on the ground beside a saddled brown horse and holding its bridle, nobody on the horse	near: Stallmeister, Postillon
+Haushaltung	noun	no		abstract
+Chirurg	noun	yes	a man with short dark hair in green surgical scrubs, cap and face mask, holding up a scalpel in a gloved hand	near: Wundarzt
+Vorsaal	noun	no		a room not told apart from Seitenzimmer or Gartensaal
+Spazierfahrt	noun	no		duplicates Chaise
+Hausfreund	noun	no		relational
+Widerrede	noun	no		speech
+Polterer	noun	no		a character trait; a loud man is not plain
+Unschicklichkeit	noun	no		abstract
+Amazone	noun	yes	a woman with auburn hair pinned up, in a dark green riding habit and a small hat, riding a brown horse side-saddle	
+Hauptquartier	noun	no		abstract (a building is not plain as headquarters)
+Postillon	noun	yes	a man with a black moustache in a yellow coat, top hat and tall boots, riding the front horse of a coach, a small brass horn at his side	near: Postwagen, Posthorn, Reitknecht
+Dichtkunst	noun	no		abstract
+Hauptpunkt	noun	no		abstract
+Abschrift	noun	no		a handwritten copy is not told apart from any letter or page
+Bearbeitung	noun	no		abstract
+Sozietät	noun	no		abstract
+Naturell	noun	no		abstract
+Verwegenheit	noun	no		abstract
+Landgeistliche	noun	scene	an older man with thin white hair in a long black clergyman's coat with white collar bands, standing before a small village church	near: Pfaffe, Beichtvater, Geistlichkeit
+Relation	noun	no		abstract (a report)
+Lustpartie	noun	no		abstract (an outing; a boat or carriage trip is Wasserfahrt or Chaise)
+Waage	noun	yes	an old brass balance scale: a central post with a crossbeam and two hanging pans, perfectly level	near: Waagschale, Gegengewicht
+Kommunikation	noun	no		abstract
+Puppenspiel	noun	scene	a small wooden puppet theatre booth with a red curtain, two colourful glove puppets playing on its little stage	near: Figur
+Dienstag	noun	no		abstract (time word)
+Rückkunft	noun	no		abstract
+Zufälligkeit	noun	no		abstract
+Weizen	noun	yes	a bundle of golden wheat stalks with plump, dense, upright ears	near: Hafer
+Eigentümlichkeit	noun	no		abstract
+Erquickung	noun	no		abstract
+Belieben	noun	no		abstract
+Sonderbarkeit	noun	no		abstract
+Reisende	noun	yes	a tall man with sleek black hair and a moustache in a long travelling coat and hat, carrying a leather suitcase and a walking stick	near: Fußgänger, Reisegefährte, Mantelsack
+Selbstgefälligkeit	noun	no		abstract
+Vollkommenheit	noun	no		abstract
+Schreibtafel	noun	yes	a small blank dark grey slate writing tablet in a wooden frame, with a slate pencil lying beside it	near: Kreide, Pergament
+Freimütigkeit	noun	no		abstract
+Ausübung	noun	no		abstract
+Rezitation	noun	no		speech
+Schuldner	noun	no		relational
+Anleitung	noun	no		abstract
+Zirkulation	noun	no		abstract
+Oberforstmeister	noun	yes	a middle-aged man with a bushy brown beard in a green forester's uniform and a hat with a feather, standing among pine trees with a hunting dog	near: Hirschfänger, Jagdhaus
+Gegenwind	noun	scene	a woman with long brown hair leaning forward as she walks against a strong wind, her coat and hair blown straight back, leaves flying past	near: Abendwind
+Gewandtheit	noun	no		abstract
+Sinnesart	noun	no		abstract
+Chaise	noun	yes	a light open two-wheeled carriage with a folding black leather hood, drawn by one brown horse	near: Reisewagen, Postwagen, Spazierfahrt
+Hausgenosse	noun	no		relational
+Merkwürdigkeit	noun	no		abstract
+Stillschweigen	noun	no		abstract
+Stillstand	noun	no		abstract
+Hypothese	noun	no		abstract
+Neugierde	noun	no		abstract (emotion)
+Mäßigung	noun	no		abstract
+Prätention	noun	no		abstract
+Anhänglichkeit	noun	no		abstract
+Beschränkung	noun	no		abstract
+Halstuch	noun	yes	head and shoulders of a young man with curly brown hair wearing a bright red patterned neckerchief knotted at his throat	near: Schnupftuch, Schärpe
+Hilfsmittel	noun	no		abstract
+Wohltäter	noun	no		relational
+Autor	noun	scene	a middle-aged man with dark curly hair and round glasses writing with a quill at a desk piled with manuscript pages and books	near: Literator, Poet
+Zwischenzeit	noun	no		abstract (time word)
+Gastmahl	noun	scene	a long festive banquet table laden with roast meat, fruit, candles and wine, guests on both sides: a grey-haired man, a red-haired woman, a young blond man	near: Kollation, Mittagstafel, Mittagsmahl
+Schlosshof	noun	scene	an inner castle courtyard enclosed by high stone walls and towers, cobblestones and a round well in the middle	near: Vorhof, Kastell
+Dünkel	noun	no		abstract
+Terminologie	noun	no		abstract
+Munterkeit	noun	no		abstract
+Kupfer	noun	yes	a coil of bare, shiny reddish-orange copper wire next to a small copper sheet	the metal (gloss); near: Kupferstich
+Zeremonie	noun	no		abstract (rites are sensitive)
+Steinart	noun	no		abstract (a kind of stone)
+Fürstin	noun	yes	a young woman with long dark hair in a long pink silk gown, wearing a small golden tiara and a pearl necklace	near: Baronesse, Gebieterin
+Spekulation	noun	no		abstract
+Seiltänzer	noun	yes	a slim young man with a blond crew cut in a striped circus costume walking on a tightrope high up, holding a long balancing pole	
+Aufopferung	noun	no		abstract
+Anwendung	noun	no		abstract
+Anzahl	noun	no		abstract (measure)
+Missbrauch	noun	no		abstract
+Verknüpfung	noun	no		abstract
+Kastell	noun	yes	a small stone fort with thick walls, round corner towers and an arched gate on a rocky hill	near: Schlosshof, Vorposten
+Verdeck	noun	scene	the empty wooden deck of an old sailing ship: planks, the foot of a mast, coiled ropes and a railing, sea beyond	near: Planke
+Regenguss	noun	scene	heavy rain pouring down in thick grey streaks from a dark cloud onto a cobbled street, puddles splashing	near: Regenwetter
+Bauart	noun	no		abstract
+Kunstsammlung	noun	scene	a gallery hall hung with many gilt-framed paintings, bronze busts on stands along the walls, a polished wooden floor	near: Kunstschatz, Naturalienkabinett
+Perückenmacher	noun	scene	a bald man in a leather apron combing a curly light-brown wig set on a wooden head stand, more wigs on stands beside him	near: Puder
+Selbsttätigkeit	noun	no		abstract
+Naturalienkabinett	noun	scene	a room with tall glass-fronted cabinets full of seashells, minerals, a stuffed owl and specimen jars	near: Kunstsammlung, Präparat, Mineral
+Supplement	noun	no		abstract
+Naturwerk	noun	no		abstract
+Flussregion	noun	no		abstract (a region)
+Posthaus	noun	no		a coaching inn is not told apart from Postwagen or any house
+Zimmerwerk	noun	no		a timber frame reads as Gerüst
+Einsiedelei	noun	scene	a tiny stone hermit's hut with a bell on its roof against a mountain cliff, a white-bearded old man in a brown robe at its door	near: Benediktinerkloster, Hauskapelle
+Schalkheit	noun	no		abstract
+Gegenseite	noun	no		relational
+Beichtvater	noun	no		sensitive
+Akteur	noun	scene	a man with long blond hair in a velvet stage costume with a ruff and cape, on a stage before a red curtain, one arm raised dramatically	near: Hanswurst, Hauptperson
+Mitleiden	noun	no		abstract (emotion)
+Lusthaus	noun	no		duplicates Gartenhaus
+Piedestal	noun	no		duplicates Sockel
+Musikus	noun	yes	a man with a black ponytail in an old-fashioned coat, seated and playing a cello with a bow	near: Harfenspieler, Trompeter, Kapellmeister
+Wagestück	noun	no		abstract
+Zudringlichkeit	noun	no		abstract
+Empfehlungsschreiben	noun	no		a letter; its content is not shown
+Zwischenraum	noun	no		relational
+Kopie	noun	no		abstract (a copy looks like the original)
+Gesims	noun	no		a part of a building; drawn alone it reads as a beam or a shelf
+Ebbe	noun	scene	a wide wet sandy shore at low tide, small boats lying tilted on the sand, the sea far off at the horizon	
+Posse	noun	no		abstract (a kind of play)
+Zeichner	noun	yes	a young man with short blond hair and glasses at a slanted drawing board, drawing a building with a pencil and a ruler	near: Landschaftsmaler, Grundriss
+Vorhof	noun	no		duplicates Schlosshof
+Verworrenheit	noun	no		abstract
+Musterbild	noun	no		abstract
+Erleuchtung	noun	no		abstract
+Zierde	noun	no		abstract
+Mutwille	noun	no		abstract
+Nordländer	noun	no		sensitive
+Heerführer	noun	yes	a man with a grey moustache in a general's uniform with gold epaulettes and a plumed hat, on a brown horse, pointing ahead with an outstretched arm	near: Armee, Oberhaupt, Statthalter
+Nachspiel	noun	no		abstract (a short play after the main one)
+Kunstfreund	noun	no		relational (an art lover looks like any viewer)
+Beschauung	noun	no		abstract
+Verirrung	noun	no		abstract
+Wohltätigkeit	noun	no		abstract
+Überlieferung	noun	no		abstract
+Analogie	noun	no		abstract
+Mäßigkeit	noun	no		abstract
+Liebende	noun	no		relational
+Weben	noun	scene	an older woman with grey hair in a bun weaving cloth at a large wooden loom, colourful threads stretched across it	near: Gewerk
+Feige	noun	yes	a ripe purple fig beside another cut in half, showing its pink, seed-filled inside	
+Einwirkung	noun	no		abstract
+Vertiefung	noun	no		a dip in the ground does not show plainly
+Karton	noun	no		cartoon (a preparatory drawing) is not plain and reads as a cardboard box
+Erbauung	noun	no		abstract
+Himmelsgegend	noun	no		abstract (a compass rose needs letters)
+Auszug	noun	no		abstract
+Entschließung	noun	no		abstract
+Weltteil	noun	no		abstract (a map shape)
+Amtshaus	noun	no		a building is not plain as an office
+Hauptfigur	noun	no		abstract
+Karwoche	noun	no		abstract (time word; religious)
+Portefeuille	noun	yes	a large flat dark-green cardboard artist's portfolio lying open, its two covers spread flat, loose pencil drawings of trees and faces inside, no bow	near: Pappe
+Einschränkung	noun	no		abstract
+Abrede	noun	no		abstract
+Diskurs	noun	no		speech
+Lebensgröße	noun	no		abstract (measure)
+Rechtsgelehrte	noun	no		a jurist is not plain by dress
+Kolonne	noun	no		a marching column reads as Armee
+Albernheit	noun	no		abstract
+Ehrentitel	noun	no		abstract
+Mobilien	noun	no		furniture in general; an armchair is Lehnsessel
+Kollation	noun	no		duplicates Gastmahl
+Waagschale	noun	no		duplicates Waage
+Hauptzug	noun	no		abstract
+Titelkupfer	noun	no		duplicates Kupferstich
+Seitenzimmer	noun	no		a room; side is relational
+Selbstigkeit	noun	no		abstract
+Haupttür	noun	scene	the front of a grand stone house: one large single wooden front door at the top of wide stone steps, a lantern on each side	near: Hintertür, Flügeltür, Tapetentür
+Parkanlage	noun	scene	a landscaped park with wide lawns, a winding gravel path, a pond and clumps of tall trees	near: Hausgarten, Baumgruppe, Promenade
+Kriegsglück	noun	no		abstract
+Reißfeder	noun	no		a ruling pen is drawn as an ordinary pen; not plain
+Gebirgshöhe	noun	no		abstract (measure)
+Steinhauer	noun	scene	a muscular man with short black hair and a dusty leather apron cutting a large stone block with a hammer and chisel, chips flying	near: Maurer, Zimmermann
+Benediktinerkloster	noun	scene	a large stone monastery with a church tower and cloister walls on a hill, a monk with a shaved head in a black habit at its gate	near: Einsiedelei, Hauskapelle
+Literator	noun	no		duplicates Autor
+Bestreben	noun	no		abstract
+Zwischenrede	noun	no		speech
+Gesichtszug	noun	no		a face; one feature is not plain
+Artigkeit	noun	no		abstract
+Narzisse	noun	yes	a yellow daffodil with a trumpet-shaped centre and long narrow leaves on a green stem	
+Sonnenblick	noun	scene	bright sunbeams breaking through a gap in thick grey clouds onto green hills below	near: Himmelslicht, Regenguss
+Müßiggang	noun	no		abstract
+Schuldigkeit	noun	no		abstract
+Überblick	noun	no		abstract
+Gemütsart	noun	no		abstract
+Venezianer	noun	no		sensitive
+Seitengebäude	noun	no		relational (side building vs main building)
+Augenwimper	noun	yes	a close-up of one closed eye with long, thick, dark curved eyelashes, nothing else of the face	near: Gesichtszug
+Freigebigkeit	noun	no		abstract
+Rubrik	noun	no		abstract
+Gesellschafter	noun	no		relational
+Mannsperson	noun	no		a man figure; person words get no
+Hausgarten	noun	scene	a small fenced garden behind a cottage with vegetable beds, a fruit tree and a green watering can	near: Parkanlage, Gartenhaus
+Proportion	noun	no		abstract
+Erwerb	noun	no		abstract
+Getümmel	noun	no		abstract (a crowd scene)
+Vordergrund	noun	no		abstract
+Kunstgriff	noun	no		abstract
+Kunstsinn	noun	no		abstract
+Weltgegend	noun	no		abstract
+Beschauer	noun	no		relational (a viewer is just a person looking)
+Nachgiebigkeit	noun	no		abstract
+Stieg	noun	scene	a steep narrow path with rough rock steps climbing up a rocky mountainside	near: Fußpfad, Aufgang
+Vergünstigung	noun	no		abstract
+Himmelslicht	noun	no		abstract (light, not a thing)
+Überfahrt	noun	no		duplicates Fährmann
+Ehestand	noun	no		abstract
+Pfarrerin	noun	no		relational (pastor's wife)
+Fragment	noun	no		abstract (a broken piece of anything)
+Sockel	noun	yes	an empty square grey stone plinth with a moulded top and base, nothing standing on it	near: Piedestal, Monument
+Zierat	noun	no		abstract (ornament in general)
+Symmetrie	noun	no		abstract
+Pomeranze	noun	yes	two bumpy-skinned deep orange bitter oranges on a leafy green branch	near: Zitrone
+Seelenleid	noun	no		abstract (emotion)
+Viktualien	noun	no		food in general, not one thing
+Wirksamkeit	noun	no		abstract
+Auslegung	noun	no		abstract
+Ungleichheit	noun	no		abstract
+Putz	noun	no		finery in general; reads as clothes or jewellery
+Billigkeit	noun	no		abstract
+Essware	noun	no		food in general, not one thing
+Aufmunterung	noun	no		abstract
+Produktion	noun	no		abstract
+Abdruck	noun	no		abstract (printing)
+Funktion	noun	no		abstract
+Stockung	noun	no		abstract
+Mathematiker	noun	no		shown only by formulas, which are writing
+Emsigkeit	noun	no		abstract
+Reisebeschreibung	noun	no		a book; its content is not shown
+Gartensaal	noun	no		a hall not told apart from Orangerie or other rooms
+Erfordernis	noun	no		abstract
+Gipsabguss	noun	no		a cast reads as any sculpture
+Teilnehmer	noun	no		relational
+Mitwirkung	noun	no		abstract
+Beharrlichkeit	noun	no		abstract
+Nachschrift	noun	no		writing
+Beschränktheit	noun	no		abstract
+Zuckerwerk	noun	yes	a glass bowl of colourful sugared sweets and twist-wrapped candies	near: Nachtisch
+Mythologie	noun	no		abstract
+Anatomie	noun	no		abstract
+Wissbegierde	noun	no		abstract
+Altvater	noun	no		relational
+Wohltäterin	noun	no		relational
+Nachtisch	noun	yes	a glass dish of caramel pudding with a swirl of cream and a spoon beside it	near: Zuckerwerk
+Linse	noun	yes	a small heap of tiny flat round lentils, each a thin orange-brown disc, close up, no spoon and no beans	
+Übereinkunft	noun	no		abstract
+Vorposten	noun	no		a position; a sentry reads as any soldier
+Eigenliebe	noun	no		abstract
+Unterkommen	noun	no		abstract
+Schnelle	noun	no		abstract
+Dialog	noun	no		speech
+Hauptgebäude	noun	no		relational (main building vs side building)
+Missgriff	noun	no		abstract
+Benutzung	noun	no		abstract
+Kreide	noun	yes	three sticks of coloured chalk, pink, yellow and light blue, lying side by side	near: Schreibtafel
+Wallfahrt	noun	no		sensitive
+Freudengeschrei	noun	no		a sound (emotion)
+Kunstschatz	noun	no		abstract (a treasure of art; a gallery is Kunstsammlung)
+Entwurf	noun	no		abstract
+Kontrast	noun	no		abstract
+Originalität	noun	no		abstract
+Felsschlucht	noun	scene	a narrow gorge between steep grey rock walls, a stream rushing along its bottom	near: Felsenwand, Bergtal, Gießbach
+Maskerade	noun	no		duplicates Karneval
+Betrübnis	noun	no		abstract (emotion)
+Anmaßung	noun	no		abstract
+Flor	noun	no		a sheer fabric does not show plainly
+Umstehende	noun	no		relational
+Prosa	noun	no		abstract
+Genauigkeit	noun	no		abstract
+Schutzgeist	noun	no		abstract (a winged spirit reads as an angel)
+Gemütsruhe	noun	no		abstract
+Reisewagen	noun	yes	a large closed four-wheeled travelling coach with trunks strapped on its roof, drawn by two brown horses	near: Chaise, Postwagen
+Vergoldung	noun	no		a gold surface reads as a gold frame
+Einteilung	noun	no		abstract
+Gewissenhaftigkeit	noun	no		abstract
+Pappe	noun	yes	a pair of scissors cutting a star shape out of a flat sheet of brown cardboard	
+Verwicklung	noun	no		abstract
+Schnupftuch	noun	yes	an old bald man with white sideburns blowing his nose into a large red-and-white checked handkerchief	near: Halstuch
+Nebenbuhlerin	noun	no		relational
+Sternhimmel	noun	scene	a dark blue night sky crowded with many small bright stars above the black outline of low hills	near: Gestirn, Leitstern, Himmelslicht
+Geburtsfest	noun	scene	a girl of about eight with red pigtails about to blow out the lit candles on a round birthday cake, wrapped presents with ribbons beside it	near: Festlichkeit, Lustbarkeit, Gastmahl
+Mutmaßung	noun	no		abstract
+Schwachheit	noun	no		abstract
+Übereilung	noun	no		abstract
+Gestirn	noun	no		category word (sun, moon or star); a starry sky is Sternhimmel
+Anbruch	noun	no		abstract (time word)
+Zitrone	noun	yes	a bright yellow lemon with one green leaf, beside a lemon cut in half showing its juicy segments	near: Pomeranze, Obst
+Liebhaberin	noun	no		relational
+Niederkunft	noun	no		duplicates Wöchnerin
+Verstellung	noun	no		abstract
+Labsal	noun	no		abstract
+Physik	noun	no		abstract (field of study)
+Außenseite	noun	no		relational (a side of something)
+Antiquität	noun	no		category word (any old object)
+Detail	noun	no		abstract
+Pyramide	noun	yes	a huge sandstone pyramid with four smooth triangular sides standing alone in a sandy desert	near: Obelisk, Grabmal
+Kontrakt	noun	no		a document reads as any paper (Abschrift, Beilage)
+Gespiele	noun	no		relational
+Selbstbetrug	noun	no		abstract
+Gegenbild	noun	no		abstract
+Austeilung	noun	no		abstract
+Gegenwirkung	noun	no		abstract
+Liberalität	noun	no		abstract
+Armee	noun	scene	a large army of young soldiers in blue 18th-century uniforms and tricorn hats marching in long rows with muskets and flags	near: Kolonne, Heerführer, Soldatenstand
+Schauplatz	noun	no		abstract
+Sarkophag	noun	yes	an ancient rectangular stone sarcophagus with carved figures along its side and a heavy gabled stone lid	near: Grabstein, Grabmal
+Nötigung	noun	no		abstract
+Hirschfänger	noun	yes	a short straight hunting knife with a stag-antler grip and a small brass crossguard, lying beside its brown leather sheath	
+Mühseligkeit	noun	no		abstract
+Benennung	noun	no		abstract
+Einwilligung	noun	no		abstract
+Schattierung	noun	no		abstract (a nuance)
+Vulkan	noun	yes	a cone-shaped volcano with orange lava running down its sides and a plume of grey smoke rising from its crater	near: Naturerscheinung
+Bürde	noun	no		abstract (figurative load)
+Beobachter	noun	no		relational (a viewer is just a person looking)
+Gutmütigkeit	noun	no		abstract
+Untätigkeit	noun	no		abstract
+Granit	noun	yes	a polished slab of speckled granite with pink, grey and black grains, one edge rough and broken	near: Kalkstein, Steinart, Mineral
+Spielwerk	noun	yes	a heap of old wooden toys: a spinning top, a little horse on wheels and painted building blocks	
+Schicklichkeit	noun	no		abstract
+Gemeingut	noun	no		abstract
+Genügsamkeit	noun	no		abstract
+Reiseplan	noun	no		abstract
+Gerichtsstube	noun	scene	an old wood-panelled courtroom: an older man with grey hair, a judge in a black robe, sitting at a raised bench, an empty wooden dock in front	near: Richterstuhl, Amtshaus
+Inkonsequenz	noun	no		abstract
+Tapetentür	noun	scene	a wall covered in green striped wallpaper with a hidden door in it, the same wallpaper running over the door, which stands slightly ajar showing a dark gap	near: Haupttür, Hintertür, Flügeltür
+Schlussstein	noun	scene	a round stone arch of grey blocks whose single wedge-shaped keystone at the very top is red and slightly larger than the rest	near: Gesims, Fundament
+Naturerscheinung	noun	no		abstract (category word)
+Vollständigkeit	noun	no		abstract
+Verschiedenheit	noun	no		abstract
+Schlendrian	noun	no		abstract
+Gemütsbewegung	noun	no		abstract (emotion)
+Zimmermann	noun	yes	a middle-aged man with a short red beard, a carpenter, sawing a wooden beam laid across two trestles, wood shavings on the ground	near: Maurer, Steinhauer, Zimmerwerk
+Tageszeit	noun	no		abstract (time word)
+Unterhandlung	noun	no		abstract
+Kennzeichen	noun	no		abstract
+Schnitzwerk	noun	yes	a brown wooden panel deeply carved with curling vines, leaves and a bird, a small carving knife lying beside it	near: Verzierung, Zierat
+Diät	noun	no		abstract
+Affektation	noun	no		abstract
+Gefangene	noun	scene	a young man with a scruffy black beard in ragged clothes, a prisoner, gripping the iron bars of a small cell window and looking out	near: Täter, Bösewicht
+Bildhauerkunst	noun	no		abstract (art form)
+Obst	noun	yes	a wooden bowl heaped with mixed fruit: red apples, yellow pears, purple plums and a bunch of green grapes	near: Zitrone, Feige, Pomeranze
+Labyrinth	noun	scene	a garden maze of tall green hedges seen from above at an angle, its winding paths leading to a small fountain at the centre	near: Irrgang
+Wohnort	noun	no		abstract
+Gemme	noun	yes	a small oval carved gemstone, a cameo: a raised cream-coloured woman's head in profile on a dark red stone	near: Juwel, Schattenriss
+Almosen	noun	scene	a passer-by's hand dropping a coin into the cupped hands of a ragged old beggar with a grey beard sitting on church steps	near: Wohltätigkeit, Barschaft
+Widersacher	noun	no		relational
+Erkundigung	noun	no		abstract
+Geschäftigkeit	noun	no		abstract
+Fabel	noun	no		abstract (a story)
+Händeklatschen	noun	yes	two hands clapping together, seen close up with small curved motion lines around them, no face	near: Freudengeschrei
+Terzerol	noun	yes	a small old-fashioned flintlock pocket pistol with a short brass barrel and a curved wooden grip, side view	
+Bedeutsamkeit	noun	no		abstract
+Hausleute	noun	no		relational
+Geschäftsträger	noun	no		relational
+Besonnenheit	noun	no		abstract
+Zeitraum	noun	no		abstract (time word)
+Aufrichtigkeit	noun	no		abstract
+Kopfweh	noun	no		bodily state, not plainly shown
+Pfand	noun	no		abstract (figurative here)
+Versorgung	noun	no		abstract
+Bösewicht	noun	no		needs a stereotype to be recognized
+Abstufung	noun	no		abstract
+Aufschluss	noun	no		abstract
+Vorderteil	noun	no		relational (a part, drawn as the whole)
+Juwel	noun	yes	a single large cut sapphire-blue jewel with many sparkling facets	near: Gemme, Perlenschnur
+Vermischung	noun	no		abstract
+Überspannung	noun	no		abstract
+Soldatenstand	noun	no		abstract (a profession; soldiers read as Armee)
+Grundbegriff	noun	no		abstract
+Blasinstrument	noun	no		category word; any one drawn reads as Posthorn
+Bückling	noun	yes	side view: a man in a grey wig and blue 18th-century coat bowing very deeply from the waist, back almost level, sweeping a tricorn hat aside	near: Beugung, Positur
+Litanei	noun	no		abstract (speech)
+Wöchnerin	noun	scene	a tired young woman with long black hair sitting up in bed, holding her newborn baby wrapped in a yellow blanket	near: Niederkunft, Schwangerschaft, Krankenlager
+Komplex	noun	no		abstract
+Redlichkeit	noun	no		abstract
+Durchschnitt	noun	no		abstract (a cut view of anything)
+Sibylle	noun	no		no plain picture; a robed woman is not recognizable as a sibyl
+Geburtsort	noun	no		abstract
+Leerheit	noun	no		abstract
+Familienkreis	noun	no		relational (a group of people)
+Illumination	noun	scene	a palace front at night lit up by hundreds of small oil lamps along every window, ledge and roofline	near: Fackelschein, Himmelslicht
+Abweichung	noun	no		abstract
+Intention	noun	no		abstract
+Felsenwand	noun	scene	a long sheer grey cliff wall stretching from edge to edge, rising straight up from a green meadow, one tiny pine tree at its foot	near: Kalkfels, Felsschlucht
+Irrung	noun	no		abstract
+Quecksilber	noun	yes	several shiny silver drops of liquid mercury beading on a dark wooden tabletop	near: Thermometer
+Halbgott	noun	no		sensitive (mythic god)
+Ballett	noun	scene	three young ballerinas with dark hair in buns, in pink tutus, dancing in a row on a stage on the tips of their toes, arms raised	near: Menuett
+Unpässlichkeit	noun	no		bodily state, not plainly shown
+Beugung	noun	no		duplicates Bückling
+Nachhilfe	noun	no		abstract
+Blattern	noun	no		sensitive (disease)
+Behältnis	noun	no		category word
+Pilaster	noun	scene	a flat rectangular column with a fluted shaft and a carved capital, built into a plain pink plaster wall and standing out only slightly	near: Gesims, Sockel, Piedestal
+Kunstgenosse	noun	no		relational
+Kredit	noun	no		abstract
+Monolog	noun	no		abstract (speech)
+Reflexion	noun	no		abstract (thought)
+Königssohn	noun	yes	a slim young man of about eighteen with curly brown hair, a prince with a small gold circlet crown, a green tunic and a red cape	near: Fürstin, Oberhaupt
+Indiskretion	noun	no		abstract
+Attribut	noun	no		abstract
+Widerstreit	noun	no		abstract
+Lustbarkeit	noun	no		abstract (any party scene)
+Wettstreit	noun	no		abstract
+Gewerk	noun	no		abstract
+Regenwetter	noun	no		duplicates Regenguss
+Scheideweg	noun	scene	a country road in open meadows that splits into two paths at a fork, both paths leading away into the distance	near: Seitenweg, Fußpfad
+Vorarbeit	noun	no		abstract
+Schalk	noun	no		a prankster is not shown by dress
+Weltmensch	noun	no		abstract
+Tagereise	noun	no		abstract (a measure)
+Abendunterhaltung	noun	no		abstract
+Transport	noun	no		abstract
+Matratze	noun	yes	a thick blue-and-white striped mattress lying flat on the floor, no bed frame	near: Krankenlager
+Vorspiel	noun	no		abstract
+Missmut	noun	no		abstract (emotion)
+Rennbahn	noun	scene	a long oval horse-racing track with a white rail fence, two jockeys in bright silks galloping past a small roofed grandstand, side view	near: Arena, Amphitheater
+Grundriss	noun	yes	a blueprint floor plan of a house: thin white lines on a deep blue sheet showing walls, doors and rooms from above, no labels	near: Entwurf, Abbildung
+Baulichkeit	noun	no		category word (any building)
+Völkerschaft	noun	no		sensitive
+Umständlichkeit	noun	no		abstract
+Duldung	noun	no		abstract
+Abbildung	noun	no		category word (any picture)
+Grabmal	noun	no		duplicates Grabstein
+Menschengeschlecht	noun	no		abstract
+Entstehung	noun	no		abstract
+Oberhaupt	noun	no		relational
+Zither	noun	yes	a flat wooden zither with many strings stretched over a box-shaped body with a round sound hole, lying on a table	near: Violine, Harfner
+Misshelligkeit	noun	no		abstract
+Zweckmäßigkeit	noun	no		abstract
+Gießbach	noun	scene	a foaming mountain torrent rushing steeply down between grey boulders into a blue lake	near: Wasserspiegel
+Bergbewohner	noun	no		needs a stereotype (regional dress) to be recognized
+Weltkenntnis	noun	no		abstract
+Naturgeschichte	noun	no		abstract
+Orangerie	noun	scene	a long garden building with tall arched glass windows, small orange trees bearing fruit in wooden tubs lined up in front of it	near: Gartenhaus, Gartensaal, Pomeranze
+Reliquie	noun	no		no plain picture (any keepsake)
+Lektion	noun	no		abstract
+Verwechslung	noun	no		abstract
+Wasserleitung	noun	yes	a long Roman stone aqueduct with a row of tall arches crossing a green valley	
+Plünderung	noun	no		sensitive (violence)
+Zeche	noun	no		abstract (a bill)
+Römer	noun	no		sensitive
+Anklang	noun	no		abstract
+Übersicht	noun	no		abstract
+Nachbarskind	noun	no		relational
+Unentschlossenheit	noun	no		abstract
+Hauskapelle	noun	scene	the inside of a small private chapel in a palace: an altar with two candles and a painting above it, two short rows of upholstered chairs	near: Benediktinerkloster, Einsiedelei
+Duett	noun	scene	a middle-aged man with a black moustache and a young woman with auburn hair in a long green dress singing together side by side, a few music notes above them	near: Dialog, Musikus
+Arznei	noun	yes	an old-fashioned brown glass medicine bottle with a cork, beside a silver spoon holding dark syrup	near: Heilmittel, Balsam
+Nachteil	noun	no		abstract
+Archiv	noun	no		abstract (figurative here)
+Verwahrung	noun	no		abstract
+Neckerei	noun	no		abstract
+Geistlichkeit	noun	no		duplicates Landgeistliche
+Naturnotwendigkeit	noun	no		abstract
+Linderung	noun	no		abstract
+Neuheit	noun	no		abstract
+Ankauf	noun	no		abstract
+Vorbedeutung	noun	no		abstract
+Metier	noun	no		abstract
+Symptom	noun	no		abstract
+Posthorn	noun	yes	a simple brass post horn with no valves: one plain round coil of tube ending in a flared bell, a red tasselled cord	near: Blasinstrument, Postillon, Trompeter
+Vermittlung	noun	no		abstract
+Mauerwerk	noun	yes	a freestanding section of red brick wall with neat grey mortar joints, standing on grass	near: Gemäuer, Ziegelstein, Maurer
+Günstling	noun	no		relational
+Meisterstück	noun	no		abstract
+Einkünfte	noun	no		abstract
+Tollheit	noun	no		abstract
+Maurer	noun	yes	an older man with grey stubble, a bricklayer in dusty overalls, spreading mortar with a trowel on a half-built brick wall	near: Mauerwerk, Zimmermann, Steinhauer
+Hanswurst	noun	yes	a plump middle-aged man with rosy cheeks and brown hair, a buffoon in a red jacket, yellow trousers and a pointed green felt hat, pulling a silly face	near: Närrin, Schalk
+Pensum	noun	no		abstract
+Schauspielhaus	noun	scene	the inside of an old theatre seen from the back: a stage closed by a red velvet curtain, rows of seats and two tiers of balcony boxes	near: Parterre, Amphitheater, Dekoration
+Reisegesellschaft	noun	no		relational (a group of people)
+Zugabe	noun	no		abstract
+Irrgang	noun	no		duplicates Labyrinth
+Mystifikation	noun	no		abstract
+Bergtal	noun	scene	a wide green valley between high snow-capped mountains, a river winding along its floor past a small village	near: Felsschlucht, Gebirgshöhe
+Gemäuer	noun	scene	the crumbling ivy-covered stone walls of an old roofless castle, empty window arches, grass growing on top	near: Mauerwerk, Verfall, Überrest
+Expedition	noun	no		abstract
+Empfindlichkeit	noun	no		abstract
+Verkleidung	noun	yes	a young woman with long black hair holding a fake bushy grey beard up to her chin by its string, a false nose and glasses on her face	near: Maskerade, Karneval
+Nachlässigkeit	noun	no		abstract
+Widerwärtigkeit	noun	no		abstract
+Verzierung	noun	no		abstract (general word for any ornament)
+Gewalttätigkeit	noun	no		sensitive (violence)
+Format	noun	no		abstract
+Augenmerk	noun	no		abstract
+Pädagogik	noun	no		abstract
+Eckhaus	noun	scene	a tall old town house with a corner turret standing on a street corner, two cobbled streets running off past its two fronts	near: Hauptgebäude, Eckzimmer
+Landmädchen	noun	yes	a girl of about fifteen with dark brown braids and a red headscarf, a country girl in a peasant dress and apron, carrying a basket of eggs	near: Blondine, Gespielin
+Menschenart	noun	no		abstract
+Fiktion	noun	no		abstract
+Pfuscher	noun	no		no plain picture
+Leitstern	noun	no		figurative; a star reads as Sternhimmel
+Gelingen	noun	no		abstract
+Abstraktion	noun	no		abstract
+Krümmung	noun	no		abstract (a shape)
+Skrupel	noun	no		abstract
+Existenz	noun	no		abstract
+Jagdhaus	noun	scene	a small wooden hunting lodge in a pine forest with a pair of deer antlers mounted above the door	near: Landgut, Lusthaus, Gartenhaus
+Anfänger	noun	no		relational
+Sammler	noun	no		no plain role; a man with objects reads as Kunstfreund or Naturforscher
+Wasserspiegel	noun	scene	the still, mirror-smooth surface of a mountain lake reflecting the hills and trees on its shore	near: Gießbach, Ebbe
+Danksagung	noun	no		abstract
+Kurier	noun	no		no plain dress; a rider reads as Postillon
+Missbilligung	noun	no		abstract
+Richterstuhl	noun	no		duplicates Gerichtsstube
+Wortwechsel	noun	no		abstract (speech)
+Rückreise	noun	no		abstract
+Menschengeist	noun	no		abstract
+Bekleidung	noun	scene	a set of old-fashioned clothes laid out flat: a blue shirt, a brown waistcoat, knee breeches, grey stockings and buckled shoes	near: Putz, Halstuch
+Promenade	noun	no		an act (a stroll); a walker reads as Fußgänger
+Baumgruppe	noun	scene	a small group of five leafy trees standing close together in an open green meadow, no other trees around	near: Waldung, Gesträuch
+Profit	noun	no		abstract
+Poet	noun	no		duplicates Autor
+Pfaffe	noun	no		duplicates Landgeistliche
+Beschaffenheit	noun	no		abstract
+Bereitung	noun	no		abstract
+Ode	noun	no		abstract
+Kleinheit	noun	no		abstract
+Statur	noun	no		abstract
+Familienverhältnis	noun	no		abstract
+Vaterschaft	noun	no		relational
+Ausfall	noun	no		abstract (speech)
+Ebenbild	noun	no		abstract
+Unvorsichtigkeit	noun	no		abstract
+Nächste	noun	no		relational
+Nachrede	noun	no		abstract (speech)
+Gesandte	noun	no		relational (no plain dress)
+Suite	noun	no		abstract (a series)
+Schimpfrede	noun	no		abstract (speech)
+Mittelding	noun	no		abstract
+Gemütsstimmung	noun	no		abstract (emotion)
+Fußwanderung	noun	no		an act; a hiker reads as Fußgänger or Reisende
+Wiederkehr	noun	no		abstract
+Parterre	noun	no		duplicates Schauspielhaus
+Komponist	noun	scene	an older man with wild grey hair, a composer, sitting at a piano and writing music notes on a sheet with a quill pen	near: Musikus, Kapellmeister
+Individualität	noun	no		abstract
+Physiognomie	noun	no		abstract (a face reads as Gesichtszug)
+Krämer	noun	scene	a middle-aged man with a brown moustache, a grocer in a long apron behind the counter of a small village shop, jars and sacks of goods on shelves behind	near: Handelsmann, Kaufmannsladen
+Wendeltreppe	noun	yes	a wooden spiral staircase winding upward around a central post, with a curving banister	near: Aufgang
+Ungeschicklichkeit	noun	no		abstract
+Behändigkeit	noun	no		abstract
+Weinstock	noun	yes	a single gnarled grapevine tied to a wooden stake, with green leaves and bunches of purple grapes	near: Spalier, Gewächs
+Hauswesen	noun	no		abstract
+Parteilichkeit	noun	no		abstract
+Eingeweide	noun	no		sensitive (gory)
+Mineral	noun	yes	a cluster of pointed violet amethyst crystals growing out of a lump of grey rock	near: Granit, Steinart
+Stetigkeit	noun	no		abstract
+Zusage	noun	no		abstract
+Notfall	noun	no		abstract
+Schwangerschaft	noun	yes	a pregnant young woman with short curly red hair in a green dress, seen from the side, both hands resting on her round belly	near: Wöchnerin, Niederkunft
+Verbindlichkeit	noun	no		abstract
+Närrin	noun	yes	a young woman with chestnut curls, a jester in a red and yellow costume and a three-pointed cap with bells, juggling three balls	near: Hanswurst, Schalk
+Ehrbarkeit	noun	no		abstract
+Beilage	noun	no		a paper reads as any document
+Vorrichtung	noun	no		category word
+Erhöhung	noun	no		abstract (figurative here)
+Verweis	noun	no		abstract (speech)
+Unwert	noun	no		abstract
+Kammerjungfer	noun	yes	a young woman with light brown hair in a bun, a maid in a black dress, a light blue apron and a small frilled cap, holding a feather duster	near: Kammerfrau, Beschließerin, Bediente
+Bewohnerin	noun	no		relational
+Schattenriss	noun	yes	a black cut-paper silhouette of a man's head in profile with a pigtail, pasted on a pale blue card	near: Schattenbild, Gemme
+Erhaltung	noun	no		abstract
+Eigentümer	noun	no		relational
+Teig	noun	yes	a round ball of pale yellow bread dough on a floured wooden board, a rolling pin beside it	
+Ängstlichkeit	noun	no		abstract (emotion)
+Würze	noun	no		duplicates Gewürz
+Zurüstung	noun	no		abstract
+Lachen	noun	yes	a young man with short ginger hair and freckles laughing out loud, head thrown back, mouth wide open, eyes squeezed shut	near: Freudengeschrei, Freudigkeit
+Bedienung	noun	no		abstract (service)
+Aufschub	noun	no		abstract
+Subjekt	noun	no		abstract
+Naturforscher	noun	scene	a middle-aged man with round spectacles and a brown beard, a naturalist, catching a butterfly with a net in a meadow, a collecting box on a strap	near: Sammler, Kustode
+Gesträuch	noun	yes	a dense thicket of low leafy green bushes growing close together, no trunks, wider than it is tall	near: Baumgruppe, Reisig, Gewächs
+Selbst	noun	no		abstract
+Barschaft	noun	yes	a heap of gold and silver coins spilling out of an open brown leather purse onto a wooden table	near: Almosen, Einkünfte, Profit
+Haushofmeister	noun	no		duplicates Bediente
+Aufgang	noun	no		abstract (a way up)
+Produkt	noun	no		abstract
+Vergänglichkeit	noun	no		abstract
+Nachwelt	noun	no		abstract
+Wirtsleute	noun	no		relational
+Versäumnis	noun	no		abstract
+Lehnsessel	noun	yes	a high-backed upholstered armchair with carved wooden armrests, covered in dark red fabric	near: Mobilien
+Schätzung	noun	no		abstract
+Gegengewicht	noun	no		abstract (figurative here)
+Unterlage	noun	no		abstract (figurative here)
+Vergebung	noun	no		abstract
+Nichte	noun	no		relational
+Trauerspiel	noun	no		abstract (a kind of play)
+Verschwiegenheit	noun	no		abstract
+Tribut	noun	no		abstract
+Zwischenspiel	noun	no		abstract
+Billigung	noun	no		abstract
+Unbehaglichkeit	noun	no		abstract
+Briefwechsel	noun	no		abstract
+Landungsplatz	noun	scene	a wooden landing stage jutting out into a calm lake, a rowing boat tied to one of its posts, no people	near: Überfahrt, Fährmann
+Zwist	noun	no		abstract
+Enthaltsamkeit	noun	no		abstract
+Gärung	noun	no		abstract (a process)
+Reformation	noun	no		abstract (historical event)
+Einwendung	noun	no		abstract
+Engagement	noun	no		abstract
+Zeitvertreib	noun	no		abstract
+Grabstein	noun	yes	a single upright grey headstone with a rounded top, blank, standing on a grassy mound	near: Grabmal, Sarkophag, Ruhestätte
+Blondine	noun	no		a blond woman reads as a woman (Frau); every person's hair colour varies
+Tausch	noun	no		an act; a swap of goods is not plain
+Trockenheit	noun	no		abstract (figurative here)
+Konstitution	noun	no		abstract
+Gespielin	noun	no		relational
+Besteck	noun	yes	an open small leather case lined with red velvet, holding scissors, tweezers and small silver instruments in fitted slots	near: Gerätschaft, Dose
+Präparat	noun	no		category word (any specimen)
+Beschließerin	noun	yes	an older woman with grey hair in a bun, a housekeeper in a dark green dress, a large ring of iron keys hanging from her belt	near: Kammerjungfer, Kammerfrau
+Verlöbnis	noun	no		abstract
+Personal	noun	no		collective: a group of people, not the word
+Freudigkeit	noun	no		abstract
+Chaussee	noun	scene	a straight paved country road lined on both sides by tall poplar trees, running through flat green fields	near: Hauptstraße, Fußpfad, Seitenweg
+Abgang	noun	no		abstract
+Einigkeit	noun	no		abstract
+Achse	noun	no		abstract (figurative sense in the example)
+Fügung	noun	no		abstract
+Hauptperson	noun	no		relational
+Positur	noun	no		abstract: a pose shows a person, not the word
+Schattenbild	noun	no		duplicates Schattenriss
+Ruhestätte	noun	no		sensitive
+Gamasche	noun	yes	only a man's lower leg and black shoe, wearing a grey cloth gaiter buttoned up the outer side from ankle to shin	
+Harnisch	noun	yes	an empty knight's suit of shining steel plate armour with breastplate and helmet, standing upright on its own	
+Treuherzigkeit	noun	no		abstract
+Zweideutigkeit	noun	no		abstract
+Standhaftigkeit	noun	no		abstract
+Fackelschein	noun	scene	a burning wooden torch fixed to a dark stone wall at night, casting a wide circle of warm orange light	near: Kaminfeuer, Wachskerze
+Erfrischung	noun	no		abstract
+Reisegefährte	noun	no		relational
+Unfähigkeit	noun	no		abstract
+Vortrefflichkeit	noun	no		abstract
+Bewirtung	noun	no		abstract
+Verschwendung	noun	no		abstract
+Fundament	noun	no		abstract (figurative sense in the example)
+Fluchen	noun	no		abstract: speech, a face shows only anger
+Kaminfeuer	noun	scene	a bright wood fire with orange flames burning on logs inside a red brick fireplace	near: Brennholz, Fackelschein
+Gewächs	noun	yes	a single small leafy green plant growing out of a mound of brown soil, no pot	near: Gesträuch, Vegetation
+Mittagstafel	noun	no		duplicates Gastmahl
+Hausrat	noun	no		collective: a heap of things reads as its parts
+Kreislauf	noun	no		abstract
+Waldung	noun	scene	a wide dense forest of many tall green trees seen from outside, across an open meadow	near: Baumgruppe, Wildnis
+Zensur	noun	no		abstract
+Entzückung	noun	no		abstract (emotion)
+Überrest	noun	no		abstract
+Nebenbuhler	noun	no		relational
+Vorgefühl	noun	no		abstract
+Anziehungskraft	noun	no		abstract
+Symphonie	noun	no		music: an orchestra shows players, not the piece
+Spalier	noun	yes	a green wooden lattice trellis fixed against a garden wall, with leafy vine branches climbing up it	near: Latte
+Dilettant	noun	no		role not shown by dress
+Selbstgespräch	noun	no		abstract (speech)
+Mechanismus	noun	no		abstract (figurative sense in the example)
+Wahlspruch	noun	no		abstract (speech)
+Omen	noun	no		abstract
+Prunk	noun	no		abstract
+Bombe	noun	yes	an old-fashioned round black cannonball bomb with a short lit fuse sparking on top	
+Violine	noun	yes	a brown wooden violin with four strings, its bow lying beside it	near: Zither
+Alte	noun	yes	an old man with thin grey hair and a long grey beard, slightly stooped, leaning on a wooden walking stick, in a brown coat	near: Altvater
+Gefecht	noun	no		sensitive
+Maßregel	noun	no		abstract
+Kapellmeister	noun	yes	a middle-aged man with slicked-back black hair in a black tailcoat, conducting with a raised baton, a music stand in front of him	near: Musikus, Komponist
+Thermometer	noun	yes	an old glass thermometer on a narrow wooden board, a thin red liquid column and short grey scale marks without numbers	
+Abgabe	noun	no		abstract
+Treiber	noun	scene	a young man with sandy hair, a wide brown hat and a long stick, walking behind a few brown cows and driving them along a dirt road	near: Saumross
+Perlenschnur	noun	yes	a single long string of glossy cream-coloured pearls lying in a loose curve on a small dark blue cloth	near: Juwel, Gemme
+Förmlichkeit	noun	no		abstract
+Repräsentation	noun	no		abstract
+Scheidewand	noun	no		abstract (figurative sense in the example)
+Menschengestalt	noun	no		a body reads as a man or a woman, not the word
+Unterhalt	noun	no		abstract
+Verordnung	noun	no		abstract
+Schlacke	noun	no		looks like any dark stone; figurative in the example
+Unzahl	noun	no		abstract
+Pedanterie	noun	no		abstract
+Missverhältnis	noun	no		abstract
+Behutsamkeit	noun	no		abstract
+Ritze	noun	no		a narrow crack reads as the wall it is in
+Termin	noun	no		time word
+Mittagsmahl	noun	no		duplicates Gastmahl
+Narrheit	noun	no		abstract
+Bedenkzeit	noun	no		time word
+Schnalle	noun	yes	one square brass buckle with its pin, on its own, no belt and no person	
+Fährmann	noun	scene	a bald man with a dark beard pushing a flat wooden ferry boat across a river with a long pole	near: Überfahrt, Wasserfahrt
+Umsicht	noun	no		abstract
+Zuschuss	noun	no		abstract
+Unregelmäßigkeit	noun	no		abstract
+Unterhändler	noun	no		role not shown by dress
+Eckzimmer	noun	no		a room; being in the corner is not plain
+Wildnis	noun	no		duplicates Waldung
+Mundart	noun	no		abstract
+Verbesserung	noun	no		abstract
+Repräsentant	noun	no		role not shown by dress
+Verfall	noun	no		abstract
+Zweikampf	noun	scene	two men duelling with thin swords crossed, one with blond hair in a blue shirt, one with black hair in a green shirt	near: Gefecht, Wettstreit
+Unternehmer	noun	no		role not shown by dress
+Phantom	noun	yes	a floating pale blue-grey ghost in a flowing hooded sheet with dark hollow eyes, its lower edge fading away	near: Schutzgeist
+Unabhängigkeit	noun	no		abstract
+Streitigkeit	noun	no		abstract
+Weigerung	noun	no		abstract
+Sorglosigkeit	noun	no		abstract
+Seitenweg	noun	no		duplicates Fußpfad
+Wiederherstellung	noun	no		abstract
+Wollen	noun	no		abstract
+Gestell	noun	no		vague: a rack, stand or frame has no single look
+Übermaß	noun	no		abstract
+Quaste	noun	yes	a single thick red silk tassel hanging from a gold cord loop, on its own, no curtain	
+Disposition	noun	no		abstract
+Anverwandte	noun	no		relational
+Himmelfahrt	noun	no		sensitive
+Eroberung	noun	no		abstract
+Gebieterin	noun	no		relational
+Talisman	noun	no		a charm looks like any pendant
+Trübsinn	noun	no		abstract (emotion)
+Monstranz	noun	yes	a golden church monstrance on a tall stand, a round glass window in the middle surrounded by golden sun-like rays	
+Ziegelstein	noun	yes	one single rectangular red clay brick with rough edges, on its own, no wall	near: Ziegel, Mauerwerk
+Terrain	noun	no		abstract
+Selbstgefühl	noun	no		abstract
+Gesandtschaft	noun	no		abstract
+Heilmittel	noun	no		duplicates Arznei
+Abenddämmerung	noun	no		time word
+Schattenseite	noun	no		abstract
+Idylle	noun	no		abstract
+Geber	noun	no		relational
+Vorkehrung	noun	no		abstract
+Konzept	noun	no		a draft looks like any written page
+Kreatur	noun	no		generic: any animal or person
+Vorhalle	noun	scene	the front porch of a classical stone building, a row of six tall sand-coloured columns under a triangular roof, wide steps leading up	near: Vorhof, Vorsaal
+Annehmlichkeit	noun	no		abstract
+Steinkohle	noun	yes	a small heap of shiny black lumps of coal	near: Schlacke
+Gage	noun	no		abstract
+Anstellung	noun	no		abstract
+Beurteilung	noun	no		abstract
+Urzeit	noun	no		time word
+Eigennutz	noun	no		abstract
+Gesamtheit	noun	no		abstract
+Hauptstraße	noun	scene	a wide main street through the middle of a small old town, shops and houses on both sides, a few people walking	near: Chaussee
+Natürlichkeit	noun	no		abstract
+Koch	noun	yes	a man with a ginger moustache in a tall chef's hat and a blue-striped apron, stirring a big pot with a wooden spoon	
+Heldin	noun	no		relational
+Rückhalt	noun	no		abstract
+Undankbarkeit	noun	no		abstract
+Lüsternheit	noun	no		abstract
+Kommentar	noun	no		abstract
+Blöße	noun	no		sensitive
+Resignation	noun	no		abstract
+Zypresse	noun	yes	a tall narrow dark green cypress tree shaped like a column with a pointed top, standing alone	near: Erle
+Katheder	noun	yes	an empty tall wooden lectern with a slanted top, standing on a raised wooden platform with one step	near: Richterstuhl
+Menschenstimme	noun	no		abstract (sound)
+Postwagen	noun	no		duplicates Reisewagen
+Page	noun	yes	a boy of about twelve with short blond hair in a colourful medieval page costume, puffed sleeves, two-coloured tights and a feathered cap, carrying a small silver tray	near: Königssohn, Bediente
+Urbild	noun	no		abstract
+Gebein	noun	no		sensitive
+Schärpe	noun	yes	an older woman with grey hair in a bun wearing a wide blue silk sash from one shoulder to the opposite hip over a white dress	near: Band
+Furie	noun	no		abstract (used as an insult)
+Gehäuse	noun	no		vague: any case or housing
+Kombination	noun	no		abstract
+Anerbieten	noun	no		abstract
+Erzieher	noun	no		role not shown by dress
+Arena	noun	scene	a big round open-air arena seen from a low angle: a sandy ring in the middle, curved tiers of wooden benches full of tiny spectators, flags on poles	near: Amphitheater, Rennbahn
+Entschädigung	noun	no		abstract
+Lehrmeister	noun	no		relational
+Unglaube	noun	no		abstract
+Wirkungskreis	noun	no		abstract
+Kammerfrau	noun	no		duplicates Kammerjungfer
+Halbkreis	noun	yes	a thick dark blue outline of a half circle, flat side down	near: Viereck
+Gesichtspunkt	noun	no		abstract
+Gleichheit	noun	no		abstract
+Karawane	noun	scene	a long line of camels with riders and packs walking across desert sand dunes	near: Reisegesellschaft
+Verschlag	noun	no		a board partition reads as a plain wall
+Vorschuss	noun	no		abstract
+Gartenhaus	noun	scene	a small wooden summerhouse with a pointed roof and a little porch, standing in a garden among flowers and shrubs	near: Lusthaus, Jagdhaus
+Abendmahl	noun	no		sensitive
+Flügeltür	noun	yes	a pair of tall closed wooden double doors with two equal wings, carved panels and brass handles in the middle	near: Haupttür, Hintertür, Tapetentür
+Erbauer	noun	no		relational
+Halbheit	noun	no		abstract
+Vermehrung	noun	no		abstract
+Vermächtnis	noun	no		abstract
+Gesellschafterin	noun	no		relational
+Unwissenheit	noun	no		abstract
+Wanderschaft	noun	no		abstract
+Gesichtsfarbe	noun	no		abstract
+Scharfsinn	noun	no		abstract
+Erzeugnis	noun	no		abstract: farm produce reads as Obst
+Magazin	noun	scene	the inside of a big old warehouse: a long dim hall under a high timber roof, stacks of wooden crates, barrels and grain sacks along the walls	
+Pate	noun	no		relational
+Folgerung	noun	no		abstract
+Abkunft	noun	no		abstract
+Täter	noun	no		relational: the deed is not shown
+Schwärmer	noun	no		abstract
+Oberhand	noun	no		abstract
+Zuckung	noun	no		abstract: a twitch cannot be shown still
+Fegefeuer	noun	no		sensitive
+Karikatur	noun	no		abstract (exaggeration in acting, in the example)
+Leiden	noun	no		abstract
+Landgut	noun	scene	a large country manor house with a red roof, barns and a farmyard, surrounded by fields and a row of trees	near: Jagdhaus, Gartenhaus
+Menuett	noun	no		a dancing couple shows a dance, not which one
+Balsam	noun	no		duplicates Arznei
+Zusammentreffen	noun	no		abstract
+Eheleute	noun	no		relational
+Ziegel	noun	yes	one single curved red clay roof tile on its own, no roof	near: Ziegelstein
+Variation	noun	no		abstract
+Ablösung	noun	no		abstract
+Bedeckung	noun	no		generic: any covering
+Leichnam	noun	no		sensitive
+Dose	noun	yes	a small round gold snuffbox with an engraved lid, the hinged lid slightly open	near: Behältnis, Gehäuse
+Staatsmann	noun	no		role not shown by dress
+Viereck	noun	yes	a thick orange outline of a long rectangle with four sharp right-angled corners and four straight sides	near: Halbkreis
+Latte	noun	yes	one single long thin narrow wooden slat on its own, light brown, straight and flat	near: Planke, Spalier
+Brennholz	noun	yes	a neat stack of split firewood logs with pale cut ends	near: Reisig, Span, Kaminfeuer
+Dolmetscher	noun	no		role not shown by dress
+Wohnsitz	noun	no		abstract
+Anschein	noun	no		abstract
+Projekt	noun	no		abstract
+Abzug	noun	no		a drain outlet is not plain on its own
+Direktion	noun	no		abstract
+Vorrecht	noun	no		abstract
+Außenwelt	noun	no		abstract
+Wegweiser	noun	no		role not shown by dress (a guide, not a signpost)
+Puder	noun	yes	an open round cosmetic powder box with pale pink powder and a fluffy pink powder puff resting on it	near: Kreide, Gips
+Hofmeister	noun	no		role not shown by dress
+Klient	noun	no		relational
+Verblendung	noun	no		abstract
+Vermittler	noun	no		relational
+Band	noun	yes	a pink satin ribbon tied in a bow with two long trailing ends, on its own	near: Schärpe, Quaste
+Kanon	noun	no		music: singers show singing, not the piece
+Lieblichkeit	noun	no		abstract
+Pergament	noun	yes	a sheet of old yellowish-brown parchment, partly rolled up at both ends, covered in faint grey lines, no letters	near: Schreibtafel, Abschrift
+Geröll	noun	scene	a steep mountain slope covered in loose grey broken stones and rubble, a few rocks rolling down	near: Felsenwand, Kalkstein
+Liebchen	noun	no		relational
+Stärkung	noun	no		abstract
+Aufwartung	noun	no		abstract
+Krankenlager	noun	scene	a pale woman with long brown hair lying ill in bed under a patterned blue quilt, a damp cloth on her forehead, a glass of water beside the bed	near: Lazarett, Wöchnerin
+Naturwissenschaft	noun	no		abstract
+Gewürz	noun	yes	small heaps of colourful ground spices in red, yellow and brown, with cinnamon sticks, star anise and peppercorns beside them	near: Würze
+Abendwind	noun	no		abstract: wind and time of day are not plain
+Filz	noun	no		material: a piece of felt looks like any cloth
+Anbetung	noun	no		abstract
+Hintertür	noun	no		duplicates Haupttür
+Besitzerin	noun	no		relational
+Seltenheit	noun	no		abstract
+Nachtzeit	noun	no		time word
+Geläute	noun	no		a sound; bells would read as Schelle
+Geographie	noun	no		abstract
+Heuchler	noun	no		abstract
+Tücke	noun	no		abstract
+Wuchs	noun	no		abstract
+Lazarett	noun	scene	a long hospital hall with two rows of iron beds with grey blankets, men resting in them, a nurse with red hair in a blue dress walking between	near: Krankenlager
+Hafer	noun	yes	a few stalks of ripe golden oats, loose open sprays of small drooping grain husks hanging from thin branching stems, no dense ear	near: Weizen
+Verklärung	noun	no		sensitive
+Gerippe	noun	yes	a complete human skeleton on a metal stand like an anatomy class model, yellowish ivory bones with grey outlines	near: Gebein, Anatomie
+Hinterhalt	noun	no		abstract: a hidden person shows hiding, not the word
+Schelle	noun	yes	a small brass bell hanging from a curled iron bracket on a wall, with a red bell-pull cord hanging below it	near: Geläute
+Gebrechen	noun	no		abstract
+Fehltritt	noun	no		abstract (figurative sense in the example)
+Vorzeit	noun	no		time word
+Fernrohr	noun	yes	an extended brass spyglass telescope with three sections, on its own	
+Ergebung	noun	no		abstract
+Erle	noun	no		looks like any tree; the kind is not plain at a glance
+Totschlag	noun	no		sensitive
+Ausdehnung	noun	no		abstract
+Liebeserklärung	noun	no		abstract (speech)
+Erneuerung	noun	no		abstract
+Willkommen	noun	no		abstract (greeting)
+Hartnäckigkeit	noun	no		abstract
+Abzeichen	noun	yes	a small round enamel pin badge with a red and blue pattern, on its own	near: Kennzeichen
+Trichter	noun	yes	a grey metal funnel with a wide cone top and a narrow spout, on its own	
+Todfeind	noun	no		relational
+Trompeter	noun	yes	a man with curly red hair blowing a shiny brass trumpet, cheeks puffed, in a green jacket	near: Musikus, Postillon, Posthorn
+Einöde	noun	scene	a bleak empty landscape of bare stony ground and dry yellow grass under a grey sky, no trees, no houses, no people	near: Wildnis, Waldung
+Planke	noun	no		duplicates Latte
+Gattung	noun	no		abstract
+Feinheit	noun	no		abstract
+Geschoss	noun	no		relational: one floor of a building
+Schnecke	noun	yes	a brown garden snail with a spiral shell, crawling with its feelers out	
+Fortgang	noun	no		abstract
+Sittlichkeit	noun	no		abstract
+Abglanz	noun	no		abstract
+Wahrscheinlichkeit	noun	no		abstract
+Sünderin	noun	no		abstract
+Kühlung	noun	no		abstract
+Jahrmarkt	noun	scene	a busy fairground with a merry-go-round, market stalls with red and yellow striped awnings, bunting and a few visitors	near: Karneval, Festlichkeit
+Neuling	noun	no		relational
+Wagnis	noun	no		abstract
+Span	noun	yes	a few thin curled wood shavings and small flat chips of pale wood, on their own	near: Brennholz, Reisig
+Moment	noun	no		time word
+Anmerkung	noun	no		abstract
+Anweisung	noun	no		abstract
+Färbung	noun	no		abstract
+Einklang	noun	no		abstract
+Reisig	noun	yes	a bundle of thin dry brown twigs and small branches tied together with a cord, no logs	near: Brennholz, Gesträuch
+Festlichkeit	noun	no		abstract: a celebration reads as Jahrmarkt or Gastmahl
+Naivität	noun	no		abstract
+Zutritt	noun	no		abstract
+Bahre	noun	no		sensitive
+Getier	noun	no		collective: any animals
+Menschenkenntnis	noun	no		abstract
+Allgemeinheit	noun	no		abstract
+Statthalter	noun	no		role not shown by dress
+Ausschweifung	noun	no		abstract
+Ärgernis	noun	no		abstract
+Unglücksfall	noun	no		abstract
+Unlust	noun	no		abstract
+Wachskerze	noun	yes	a single lit honey-yellow beeswax candle in a brass candlestick	near: Fackelschein
+Klaue	noun	yes	one single large scaly bird-of-prey foot with long curved black claws, on its own, no bird and no body	
+Aufruf	noun	no		abstract
+vermehren	verb	no		abstract
+zubringen	verb	no		time
+begünstigen	verb	no		abstract
+verweilen	verb	no		abstract; a lingering figure shows only a pose
+ergötzen	verb	no		emotion
+hereintreten	verb	no		duplicates hereinstürzen (a still of stepping in reads as standing in a doorway)
+erzeigen	verb	no		abstract
+antreffen	verb	no		the moment of finding someone at home does not show
+nutzen	verb	no		abstract
+ausbilden	verb	no		abstract
+hervortun	verb	no		abstract
+betragen	verb	no		abstract
+tadeln	verb	no		speech; criticizing looks like schelten
+entspringen	verb	no		abstract (arise from)
+überliefern	verb	no		abstract
+vergegenwärtigen	verb	no		thinking
+zaudern	verb	no		a hesitating figure shows only a pose
+wiederherstellen	verb	no		abstract; shows only a result
+vorzeigen	verb	no		holding a thing out to show it looks like hinreichen
+gesellen	verb	no		relational
+fördern	verb	no		abstract
+beurteilen	verb	no		thinking
+erheitern	verb	no		emotion
+erquicken	verb	no		a feeling; a refreshed person shows only a state
+verzieren	verb	scene	a young woman with a blond ponytail piping pink icing rosettes along the edge of a round chocolate cake with a piping bag	near: zieren, herausputzen, zubereiten
+bezeigen	verb	no		abstract
+aufopfern	verb	no		abstract
+billigen	verb	no		abstract
+verkündigen	verb	no		speech
+befördern	verb	no		the example means help along; a transport cart reads as wegfahren
+ermangeln	verb	no		abstract
+kennenlernen	verb	no		a handshake fits zusammentreffen or übereinkommen alike
+beschauen	verb	no		looking at a thing is a pose; reads as überschauen or beurteilen
+irremachen	verb	no		abstract
+aufschließen	verb	scene	an older woman with curly grey hair turning a large iron key in the lock of a wooden front door, the door just opening a crack	near: zuschließen
+einleiten	verb	no		abstract
+verfahren	verb	no		abstract
+nachahmen	verb	scene	a small red-haired boy walking behind an old bald man with a white beard and a cane, copying his stooped walk with a stick of his own	near: nachbilden, abbilden
+beschädigen	verb	no		shows only a result
+bewirken	verb	no		abstract
+beschleunigen	verb	no		speeding up does not show in a still picture
+übereilen	verb	no		abstract
+entsagen	verb	no		abstract
+obwalten	verb	no		abstract
+schelten	verb	no		speech; a wagging finger reads as bedrohen or tadeln
+erweitern	verb	no		shows only a result
+auslegen	verb	no		thinking
+rezitieren	verb	no		speech
+ankündigen	verb	no		speech
+verwahren	verb	no		putting a thing away shows only a result; reads as einpacken
+hinreichen	verb	scene	a young man with black curly hair handing a small brown parcel across a table to an older woman with grey hair who reaches out to take it	near: vorzeigen, darbieten, ausspenden
+ausfüllen	verb	no		the example means fill a role; abstract
+aufwarten	verb	no		duplicates auftragen
+abgewinnen	verb	no		abstract
+überschauen	verb	scene	a middle-aged woman with short brown hair standing on a hilltop, one hand shading her eyes, gazing out over a wide green valley with a river	near: beschauen
+bepflanzen	verb	no		duplicates pflanzen
+erneuern	verb	no		abstract
+erleuchten	verb	no		a moonlit garden shows a state, not an action
+verfertigen	verb	no		making in general; reads as fertigen or erschaffen
+ausspenden	verb	no		handing things out reads as hinreichen
+modifizieren	verb	no		abstract
+aufzehren	verb	no		abstract (use up)
+verharren	verb	no		abstract; a still figure shows only a pose
+hineintreten	verb	no		direction not shown
+loswerden	verb	no		abstract
+ersuchen	verb	no		speech
+auffinden	verb	no		the moment of finding does not show
+verherrlichen	verb	no		abstract
+widerstehen	verb	no		abstract
+säumen	verb	no		abstract
+durchgehen	verb	no		abstract in the example; a walking figure shows no through
+anführen	verb	no		speech
+pflanzen	verb	scene	an older man with grey hair and a flat cap kneeling in a garden bed, pressing a small green seedling into a hole in dark soil	near: bepflanzen, anbauen, bebauen, einwurzeln
+gereichen	verb	no		abstract
+absondern	verb	no		abstract
+nachbilden	verb	no		duplicates abbilden
+verfehlen	verb	no		a missed target shows only a result
+berechtigen	verb	no		abstract
+erdulden	verb	no		abstract
+herbeikommen	verb	no		coming toward the viewer cannot be shown
+einschränken	verb	no		abstract
+zurücklassen	verb	no		abstract
+belohnen	verb	scene	a grey-haired older woman hanging a gold medal on a red ribbon around the neck of a proud smiling boy with brown hair	near: hinreichen, verherrlichen
+schmeicheln	verb	no		speech
+einflößen	verb	no		abstract
+lindern	verb	no		abstract
+trachten	verb	no		abstract
+hervorsteigen	verb	no		abstract in the example (stars emerging); climbing out reads as ersteigen
+lossprechen	verb	no		abstract
+abtun	verb	no		abstract
+zuschreiben	verb	no		abstract
+verkennen	verb	no		thinking
+berechnen	verb	scene	a young man with short blond hair and glasses at a desk, calculating by sliding the red and blue beads of a wooden abacus with one finger	abacus, so no digits
+zerrütten	verb	no		abstract
+darbieten	verb	no		abstract in the example; offering reads as hinreichen
+heranwachsen	verb	no		time; a still picture shows only a child
+sondern	verb	no		abstract
+produzieren	verb	no		abstract
+ableiten	verb	no		abstract
+niedersetzen	verb	no		setting a thing down shows only a pose
+zudenken	verb	no		abstract
+wegbegeben	verb	no		a figure walking off reads as wegschleichen
+vorwalten	verb	no		abstract
+zusammensetzen	verb	scene	a girl of about ten with long brown braids fitting the last piece into a colorful jigsaw puzzle of a sailing ship on a table	near: zusammenbringen, erbauen
+anschaffen	verb	no		abstract (acquire); buying reads as hinreichen
+entschließen	verb	no		thinking
+veredeln	verb	no		abstract
+bequemen	verb	no		abstract
+beistehen	verb	no		abstract in the example; a helping picture fits wohltun too
+bewirten	verb	no		duplicates auftragen
+ausstatten	verb	no		abstract
+schärfen	verb	scene	an elderly bald man with a grey beard pressing an axe blade against a round grey grindstone wheel that he turns with a crank, sparks flying	near: abstumpfen
+wegreiten	verb	scene	a young man with long dark hair on a brown horse seen from behind, galloping away down a country road toward distant hills	near: hereinreiten
+durchdenken	verb	no		thinking
+verdrießen	verb	no		emotion
+zusagen	verb	no		abstract
+abhängen	verb	no		abstract
+erbauen	verb	scene	a bearded young man with sandy hair laying a red brick onto the half-built brick wall of a house, a trowel in his other hand	near: zusammensetzen, bebauen, anbauen
+aufzeichnen	verb	scene	an older man with grey hair and glasses writing down in a brown notebook the song a small blond girl beside him sings, musical notes in the air	near: übersetzen, zuschreiben
+herbeischaffen	verb	no		bringing toward the speaker cannot be shown
+ereignen	verb	no		abstract
+aufmuntern	verb	no		speech
+voraussehen	verb	no		thinking
+zugestehen	verb	no		abstract
+genugtun	verb	no		abstract
+durchreisen	verb	no		a traveller reads as wegfahren or herumziehen
+übersetzen	verb	no		translating looks like writing (aufzeichnen)
+erforschen	verb	no		the example means find out; abstract
+wohltun	verb	no		abstract
+herbeitreten	verb	no		stepping toward someone reads as hereintreten
+ausweiten	verb	no		shows only a result
+abbilden	verb	scene	a young woman with a black bob haircut at an easel, painting a picture of a vase of yellow sunflowers standing on a table in front of her	near: nachbilden, umreißen, illuminieren
+ausdauern	verb	no		abstract
+erlustigen	verb	no		emotion
+zusammenhalten	verb	no		abstract
+weglassen	verb	no		abstract
+verrichten	verb	no		abstract
+vorschweben	verb	no		thinking
+abtragen	verb	no		a worn coat shows only a result
+herausputzen	verb	no		duplicates verzieren
+hindeuten	verb	scene	a woman in her thirties with long auburn hair pointing with an outstretched arm and index finger at a small curly-haired boy playing nearby	near: anzeigen, vorzeigen
+bedrohen	verb	no		a raised fist reads as schelten
+gleichstellen	verb	no		abstract
+bebauen	verb	no		duplicates pflanzen
+nachbringen	verb	no		abstract
+mäßigen	verb	no		abstract
+verzweifeln	verb	no		emotion
+einschalten	verb	no		abstract (insert)
+vermannigfaltigen	verb	no		abstract
+herumschweben	verb	no		floating shows only a state
+hereinreiten	verb	no		duplicates wegreiten
+wegschleichen	verb	yes	a teenage boy with messy brown hair tiptoeing away on the tips of his toes, hunched, glancing back over his shoulder	near: wegbegeben, entwenden
+supplieren	verb	no		abstract
+zustutzen	verb	scene	an older man with thinning grey hair and a moustache trimming a green hedge into a neat square shape with long garden shears	near: verkürzen
+anbringen	verb	no		abstract in the example; attaching looks like any handiwork
+erstrecken	verb	no		abstract
+ziemen	verb	no		abstract
+auftragen	verb	scene	a young man with slicked black hair, a waiter in a dark apron, carrying a steaming roast on a platter to a set dinner table	near: aufwarten, bewirten, vorsetzen, speisen
+beitragen	verb	no		abstract
+entgegenrufen	verb	no		speech; a calling figure fits zurückrufen too
+befürchten	verb	no		emotion
+bessern	verb	no		abstract
+zurückrufen	verb	no		thinking (recall to mind)
+zieren	verb	no		duplicates verzieren
+durchziehen	verb	no		a traveller reads as wegfahren or herumziehen
+knüpfen	verb	yes	a young woman with braided red hair tying a thick knot in a brown rope, pulling both ends tight with her hands	near: anknüpfen, verwickeln
+vollbringen	verb	no		abstract
+zusammenstürzen	verb	yes	an old stone tower collapsing mid-fall, its walls breaking apart and blocks tumbling down in a cloud of brown dust	no figure; near: niederstürzen
+erzeugen	verb	no		abstract
+vermindern	verb	no		abstract
+betrüben	verb	no		emotion
+verbannen	verb	no		abstract
+aufpacken	verb	no		loading reads as carrying; onto or off does not show
+anzeigen	verb	no		duplicates hindeuten
+überdecken	verb	no		covering shows only a result
+ersteigen	verb	yes	a woman in her twenties with a short blond pixie cut climbing a steep rock face on a rope, reaching up for the next hold	near: heraufsteigen, hervorsteigen
+umreißen	verb	no		duplicates abbilden
+stiften	verb	no		abstract
+hervorblicken	verb	scene	a small girl with black pigtails peeking out from behind a red curtain, only her face and one hand showing	near: hervorschauen
+herumführen	verb	no		a guide pointing reads as hindeuten
+abreden	verb	no		abstract
+glücken	verb	no		abstract
+umbilden	verb	no		shaping clay reads as verfertigen or erschaffen
+herbeidrängen	verb	no		pushing toward the speaker cannot be shown
+abwechseln	verb	no		abstract
+verführen	verb	no		abstract
+entgegenstehen	verb	no		abstract
+übereinkommen	verb	no		abstract
+ausstehen	verb	no		abstract
+verwickeln	verb	no		an entangled thing shows only a result
+vergönnen	verb	no		abstract
+einwirken	verb	no		abstract
+zusammentreffen	verb	no		abstract
+festsetzen	verb	no		abstract
+entgegenstellen	verb	no		abstract; blocking someone's way is a pose
+hervorheben	verb	no		abstract
+präludieren	verb	no		a prelude looks like any playing and fits hervorlocken too
+memorieren	verb	no		thinking
+hinaufführen	verb	no		leading someone up stairs reads as heraufsteigen
+fertigen	verb	no		making in general; reads as verfertigen or erschaffen
+eindrücken	verb	no		the example means shut one's eyes; pushing in shows a result
+unterschieben	verb	no		abstract
+durcharbeiten	verb	no		abstract
+hervorschauen	verb	no		duplicates hervorblicken
+zusammenkommen	verb	no		abstract (gathering)
+unterlassen	verb	no		abstract
+vorerzählen	verb	no		speech
+umschaffen	verb	no		abstract
+anreizen	verb	no		abstract
+verdeutlichen	verb	no		abstract
+abtreten	verb	no		the example means put up at an inn; abstract
+verdenken	verb	no		abstract
+hinwegnehmen	verb	no		abstract in the example; carrying off reads as entwenden
+voraussetzen	verb	no		abstract
+überdenken	verb	no		thinking
+anmelden	verb	no		abstract
+vervielfältigen	verb	no		abstract
+ängstigen	verb	no		emotion
+verlängern	verb	no		shows only a result
+mildern	verb	no		abstract
+zirkulieren	verb	no		abstract
+beiseitelegen	verb	no		putting a thing aside shows only a pose
+wegtreiben	verb	scene	a middle-aged woman with brown hair under a red headscarf waving a broom, chasing a flock of black crows away from a cornfield	near: verbannen, erwehren
+einpacken	verb	scene	a young man with curly red hair putting folded blue shirts into an open brown suitcase lying on a bed	near: aufpacken, verwahren
+erstaunen	verb	no		emotion
+verstellen	verb	no		abstract
+beordern	verb	no		speech
+wegfahren	verb	scene	a small red car seen from behind driving away along a long country road toward distant hills, a grey-haired older man at the wheel	near: durchreisen, befördern
+vernachlässigen	verb	no		abstract
+weissagen	verb	no		abstract; a fortune teller would need a stereotype
+reinigen	verb	scene	a woman in her fifties with short curly grey hair scrubbing a dirty cooking pot with a brush in a sink full of soapy water	near: herausputzen
+illuminieren	verb	no		duplicates abbilden
+bespiegeln	verb	yes	a vain young man with slicked-back chestnut hair gazing admiringly at his own reflection in a hand mirror, smiling at himself	near: herausputzen, beschauen
+verleugnen	verb	no		abstract
+verkürzen	verb	no		shows only a result
+zunehmen	verb	no		abstract
+bestärken	verb	no		abstract
+wegwenden	verb	no		turning away shows only a pose
+einwurzeln	verb	no		the example means stand rooted; rooting does not show
+kontrastieren	verb	no		abstract
+einweihen	verb	scene	a middle-aged woman with a dark brown bob haircut cutting a wide red ribbon with large scissors in front of the door of a new building	the gloss's inaugurate; the example's initiate is abstract
+erwehren	verb	no		abstract in the example; waving off reads as wegtreiben
+zusammenhängen	verb	no		abstract
+zusammenbringen	verb	no		abstract
+beruhen	verb	no		abstract
+speisen	verb	scene	an elderly bald man and a grey-haired older woman dining at a candlelit table with a blue tablecloth, eating roast and vegetables with knife and fork	near: aufzehren, bewirten, auftragen
+zusammenfinden	verb	no		abstract
+hinbringen	verb	no		time
+unterkommen	verb	no		abstract
+hereinstürzen	verb	scene	a young woman with wild black curls bursting into a room, flinging the door wide open with one arm, running in breathless	near: hereintreten
+vorsetzen	verb	no		duplicates auftragen
+verheimlichen	verb	no		abstract
+erschaffen	verb	no		abstract
+entgegeneilen	verb	scene	a young woman with long blond hair running with open arms toward an older woman with grey hair who waits at a garden gate	near: voreilen, herbeikommen
+ermannen	verb	no		emotion
+verunstalten	verb	no		shows only a result
+zusammenwirken	verb	no		abstract
+hinaussetzen	verb	no		the example means rise above; putting out is a pose
+fortwirken	verb	no		abstract
+logieren	verb	no		abstract
+herumziehen	verb	no		abstract in the example; a wanderer reads as durchreisen
+beunruhigen	verb	no		emotion
+abstumpfen	verb	no		shows only a result
+versiegeln	verb	scene	a middle-aged man with dark hair and grey sideburns pressing a brass signet stamp into a blob of red sealing wax on a folded brown letter	no lettering on the letter
+verrücken	verb	no		figurative in the example; moving furniture reads as pushing
+abbüßen	verb	no		abstract
+beschämen	verb	no		emotion
+anliegen	verb	no		speech; pestering looks like überreden or ausbitten
+aneignen	verb	no		abstract
+hervorragen	verb	no		a state, not an action
+verwunden	verb	no		sensitive
+ratschlagen	verb	no		speech
+losreißen	verb	no		figurative in the example
+übertreten	verb	no		abstract
+ausladen	verb	no		unloading reads as carrying; off or onto does not show
+ausschlagen	verb	no		abstract; a refusing hand is a pose
+anknüpfen	verb	no		speech (strike up a talk)
+hervorlocken	verb	no		abstract in the example; a coaxed animal peeking out reads as hervorblicken
+fortdauern	verb	no		abstract
+zubereiten	verb	scene	a young man with a shaved head in an apron chopping carrots on a wooden board beside a steaming pot on the stove	near: auftragen, speisen, verzieren
+vorspiegeln	verb	no		abstract
+auseinanderhalten	verb	no		thinking
+mitfühlen	verb	no		emotion
+behorchen	verb	scene	a teenage girl with a long brown ponytail pressing her ear to a closed wooden door, eavesdropping, eyes wide	the only listening verb in the list
+entwenden	verb	scene	a young man in a flat cap secretly slipping an apple from a market stall into his coat pocket while the stallholder looks away	near: hinwegnehmen, wegschleichen, aneignen
+heraufsteigen	verb	no		duplicates ersteigen
+überreden	verb	no		speech
+missfallen	verb	no		emotion
+anbauen	verb	no		duplicates pflanzen
+zuschließen	verb	no		duplicates aufschließen
+fortleben	verb	no		abstract
+ansiedeln	verb	no		abstract
+statthaben	verb	no		abstract
+voreilen	verb	no		duplicates entgegeneilen
+verbessern	verb	no		abstract in the example; correcting looks like writing
+durchführen	verb	no		abstract
+niederstürzen	verb	yes	side view: a middle-aged woman with a brown ponytail who tripped on a tree root, falling forward headlong toward the ground, arms thrown out	near: zusammenstürzen
+ausbitten	verb	no		speech
+übereinstimmen	verb	no		abstract
+absprechen	verb	no		speech

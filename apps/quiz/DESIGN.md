@@ -68,7 +68,9 @@ is dropped, as the original import did.
   the next launch, even after Android has closed the app.
 - **Cards per session.** Since a session cannot be left, starting a long quiz
   by accident must not mean 300 cards. Without a range, a session asks at most
-  *cards per session* due cards (default 20, set per quiz, or "all"), taking
+  *cards per session* due cards (default 20, set per quiz in steps from 5 to
+  100, then 250 doubling, 500, 1000, 2000 and on, up to the quiz's size, then
+  "all"; a size at or above the quiz's reads "all"), taking
   the first ones in list order; learned cards drop out, so successive sessions
   work down the list. An explicit range still asks every due card in it.
 - **Testing escape hatch.** In debug builds, long-pressing the round counter

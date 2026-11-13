@@ -47,8 +47,8 @@ class SpeedTest {
         assertFalse(session.finished)
         assertEquals(2, session.speed!!.level)
         assertEquals(listOf(1L, 2L, 3L, 4L, 5L), session.queue)
-        val result = session.speed!!.shown!!
-        assertEquals(listOf(300L, 300L), listOf(session.speed!!.previousAverageMillis, session.speed!!.previousMedianMillis))
+        val result = session.speed.shown!!
+        assertEquals(listOf(300L, 300L), listOf(session.speed.previousAverageMillis, session.speed.previousMedianMillis))
         assertEquals(1, result.level)
         assertEquals(listOf(5, 5, 5, 0), listOf(result.cards, result.answered, result.firstTry, result.misses))
         assertEquals(listOf(300L, 300L, 100L, 500L), listOf(result.averageMillis, result.medianMillis, result.fastestMillis, result.slowestMillis))

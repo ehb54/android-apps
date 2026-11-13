@@ -171,6 +171,43 @@ app's own code, so the Android app is never edited for it and screens exist once
 - **Tests:** `src/test/` with Compose's desktop test rule (`createComposeRule`),
   which renders off screen, so they run headless in CI and Docker.
 
+## iPhone (not started)
+
+eb asked in 2026-11 what an iPhone version of Quiz would take, and set it aside.
+What we found, for whoever picks it up:
+
+- **Screens carry over.** Compose Multiplatform also targets iOS, so the Android
+  screens could be compiled for the iPhone the way the desktop does it
+  (`copyAndroidSources` with stand-ins). Pictures can keep Skia, which runs on iOS.
+- **Shared code first.** iOS runs Kotlin/Native, which has no Java library, so
+  `shared/quiz` would become a Kotlin Multiplatform module with cross-platform
+  replacements for its Java calls: files (`java.io`, `java.nio.file` in
+  `QuizStore.kt`), zip (`QuizFiles.kt`), xlsx XML (`Spreadsheet.kt`), sample
+  downloads (`HttpURLConnection` in `SampleLibrary.kt`), umlaut normalization
+  (`Normalizer` in `Answers.kt`), sample fingerprints (`MessageDigest`) and
+  `String.format` (both in `Samples.kt`), and UUIDs. The Android app's own code
+  uses `java.io.File`, `UUID` and `Executors`, which would need stand-ins. This
+  step changes the Android and desktop builds too, so both get re-tested; it is
+  the riskiest part.
+- **`core/ios`**, the counterpart of `core/desktop`: the Android stand-ins,
+  resources (text formatting without `String.format`), sound through AVFoundation,
+  Open and Save through the document picker, "away" as the app going to the
+  background, and the app's data folder.
+- **Build.** A small Xcode project wrapping the Compose view, built on a Mac with
+  Xcode. GitHub's macOS runners have it, and the iOS Simulator can run tests there.
+- **Installing.** An iPhone installs only apps Apple has signed for it, so the
+  download page cannot serve one. Either a free Apple ID (Xcode on a Mac installs
+  the app over a cable onto one's own phone; it stops opening after 7 days and
+  has to be reinstalled; the Mac needs an Xcode recent enough for the phone's iOS),
+  or the Apple Developer Program ($99 a year: CI signs the app and uploads it to
+  TestFlight, where testers install it and each build lasts 90 days; the App
+  Store follows from there). Certificates and keys would be CI secrets, never in
+  the repo. The route is eb's decision, like the other signing.
+- **Web instead.** A Compose for Web (Wasm) build, after the same shared-code
+  step, would reach iPhones through Safari from the download site with no Apple
+  account. But Safari may clear a site's stored data after about a week unused,
+  unless the page is added to the home screen, so progress could be lost.
+
 ## Getting an app onto the phone
 
 **Download page.** On the phone, open `https://ehb54.github.io/android-apps/` and
