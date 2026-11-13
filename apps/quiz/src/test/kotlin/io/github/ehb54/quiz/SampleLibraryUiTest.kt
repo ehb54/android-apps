@@ -38,12 +38,10 @@ class SampleLibraryUiTest : QuizUiTest() {
             scrollListTo("History nouns")
             compose.onNode(hasText("History nouns") and hasText("$nouns cards · added")).assertExists()
             compose.onNodeWithContentDescription("Add History nouns").assertDoesNotExist()
-            // History pictures.zip: one quiz of picture cards.
+            // History pictures.zip: one quiz of picture cards, each word spoken after the answer.
             addSample("History pictures")
-            compose.onNode(
-                hasText("History pictures") and
-                    hasText("${pictures.cards} cards · ${pictures.pictures} pictures · added"),
-            ).assertExists()
+            val counts = "${pictures.cards} cards · ${pictures.pictures} pictures · ${pictures.sounds} sounds"
+            compose.onNode(hasText("History pictures") and hasText("$counts · added")).assertExists()
             // German starter.xlsx (built in): the tabs Numbers and Colors.
             addSample("Colors")
             addSample("Numbers")

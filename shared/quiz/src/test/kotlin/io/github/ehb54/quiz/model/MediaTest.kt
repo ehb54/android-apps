@@ -44,6 +44,34 @@ class MediaTest {
     }
 
     @Test
+    fun aCardCanShowMoreOnceAnswered() {
+        val quiz = Quiz("q", "Listening")
+            .addCard("die Hand", "", mediaA = "hand.mp3", mediaB = "hand.webp")
+            .addCard("", "die Hand", mediaA = "hand.webp", soundB = "say.mp3")
+            .addCard("Hund", "dog")
+        val (listening, picture, plain) = quiz.cards
+
+        // Hear the word, pick the picture: its text waits for after the answer, and its sound plays again.
+        assertTrue(listening.hasAfter())
+        assertEquals("hand.mp3", listening.afterSound(Direction.AToB))
+        assertEquals("hand.mp3", listening.afterSound(Direction.BToA))
+        // The word's file text does not make the picture side typeable.
+        assertFalse(listening.canAsk(QuizMode.Typed, Direction.BToA))
+
+        // See the picture, type the word, hear it said.
+        assertTrue(picture.hasAfter())
+        assertTrue(picture.canAsk(QuizMode.Typed, Direction.AToB))
+        assertEquals("say.mp3", picture.afterSound(Direction.AToB))
+        assertEquals("say.mp3", picture.sound(sideA = false))
+        assertNull(picture.sound(sideA = true))
+
+        assertFalse(plain.hasAfter())
+        assertNull(plain.afterSound(Direction.AToB))
+        // Sounds for after the answer are the quiz's files too, so they are kept and exported.
+        assertEquals(setOf("hand.mp3", "hand.webp", "say.mp3"), quiz.mediaFiles())
+    }
+
+    @Test
     fun quizzesSavedBeforeSoundsStillLoadTheirPictures() {
         val saved = """{"id":3,"a":"","b":"circle","imageA":"c1.png"}"""
         val card = Json.decodeFromString(Card.serializer(), saved)

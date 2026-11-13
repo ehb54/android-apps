@@ -83,9 +83,12 @@ The review files and `list.json` are the source of truth; `nouns.tsv` and
    `<Title> pictures <model>.zip` and `<Title> verb pictures <model>.zip`
    (`Core pictures ERNIE.zip`). Each zip has a credits file, and the same
    pictures always give the same zip. These are
-   online-only samples: the app downloads them from the site when added. Then
-   regenerate `apps/quiz/samples/catalog.json` (see `apps/quiz/DESIGN.md`), or
-   `SampleCatalogTest` fails.
+   online-only samples: the app downloads them from the site when added. The
+   picture zips come out without sounds: on the machine with the sounds, run
+   `tools/sounds/run.sh samples de ../../apps/quiz/samples` (see
+   `../sounds/README.md`) to put them back and remake the listening and
+   dictation quizzes. Then regenerate `apps/quiz/samples/catalog.json` (see
+   `apps/quiz/DESIGN.md`), or `SampleCatalogTest` fails.
 
 ### Growing a list
 

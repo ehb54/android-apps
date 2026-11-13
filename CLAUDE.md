@@ -23,6 +23,7 @@ build, with desktop versions (macOS, Windows, Linux) built from the same code:
 | `docker/Dockerfile`, `tools/` | The build pipeline (below). |
 | `tools/wordlists/` | Noun frequency lists from public-domain texts (Gutenberg + spaCy + Wikidata + emoji), reviewed by hand, built into Quiz samples (online-only, in `apps/quiz/samples/`). Read its README before adding a list. |
 | `tools/pictures/` | Original pictures for the word lists' picture cards, generated locally on Apple Silicon (MLX/mflux, ERNIE-Image-Turbo). The plan and the pick per word are committed, the images are not. Read its README and `PLAN.md`. |
+| `tools/sounds/` | German speech for every text on the sample quizzes, generated locally on Apple Silicon (Qwen3-TTS, OmniVoice, Chatterbox, Piper), picked by Whisper and by ear; its `samples` step adds them to the sample zips (picture quizzes speak the word after the answer; listening and dictation quizzes). The picks are committed, the sounds are not. Read its README. |
 | `.github/workflows/build.yml` | CI and the GitHub Pages download site. |
 | `keystore/debug.keystore` | Shared debug signing key (see Signing). |
 

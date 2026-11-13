@@ -98,8 +98,9 @@ is dropped, as the original import did.
   app.
 - **Zip files carry pictures and sounds:** a `.zip` holds one `.qzx` file plus
   the files, and a side written `!name.png` is the picture of that name,
-  `!name.mp3` the sound (by the extension). Export writes `.qzx` when a quiz
-  has neither and `.zip` when it has either.
+  `!name.mp3` the sound (by the extension). What a side shows after the
+  answer follows it (see Sounds: After the answer). Export writes `.qzx` when
+  a quiz has neither and `.zip` when it has either.
 - **Excel workbooks** (`.xlsx`, for example a Google Sheet downloaded on the
   phone): each tab becomes its own quiz, named after the tab, with side A from
   the first column and side B from the second. Rows missing either side are
@@ -250,14 +251,53 @@ screens. In stored quizzes the fields are still named `imageA`/`imageB`.
   media volume.
 - **On the desktop** (its own `ui/SoundPlayer.kt`) sounds play through Java
   Sound, which comes with the Java runtime but reads only uncompressed sound:
-  WAV plays (the Morse sample included); MP3, AAC, Ogg Vorbis and FLAC are
-  stored and exported as on the phone, but report that only WAV plays. Playing
-  them there would take a decoder library per format, or JavaFX.
+  WAV plays (the Morse sample included). MP3 plays through JLayer (javazoom
+  1.0.1, LGPL 2.1, shipped unchanged as its own jar), a pure-Java decoder of
+  every MP3 rate, which matches ffmpeg within 48 dB on all 1,050 sample
+  sounds. javamp3 (MIT) was tried first and dropped: its `decodeFullyInto`
+  stops after one frame, and read in full it put stretches of noise into 718
+  of the 1,050. AAC, Ogg Vorbis and FLAC are stored and exported as on the
+  phone, but report that they can't play there. Playing them would take a
+  decoder library per format, or JavaFX.
 - **A card can be two files** (a sound and a picture): typing can't ask it,
   Pick and Match can. The editor no longer limits a card to one picture.
 - **Sample:** *Morse code*, 26 letters as tones made by `tools/samples/morse.py`
   (no outside source to credit; 13 KB). Hear the letter and type it; see the
   letter and pick its sound; pair sounds with letters.
+
+### After the answer
+
+Added 2026-11-13 (eb: sound to picture "would be nice, but would also like to
+be able to see the spelling ... perhaps after the choice"; of the options
+offered, eb took listening quizzes as they are plus this). A side can carry
+what shows only once the card is answered, so it never gives the answer away:
+
+- **A file's text:** a picture or a sound side may also have text, the word
+  it says or shows (`Card.a`/`b` beside `mediaA`/`mediaB`). The prompt and the
+  choices show the file alone; typing still never asks for a file side.
+- **A sound for after the answer:** a side shown as text or a picture may
+  have a sound (`Card.soundA`/`soundB`), the word spoken.
+- **The whole card after a right answer** (`ui/AfterAnswer.kt`): in Type and
+  Pick, a card with either shows both sides whole (picture, sound, text)
+  before the next card, and its sound plays once: the answer side's, else
+  the prompt side's. Next, Back or Enter goes on, and the next card's clock
+  starts then. A card with neither goes straight on, as before. Speed mode
+  never stops for it (it is about recognizing fast). In Match, a pair made
+  shows its words in the hint line and plays its sound.
+- **In a zip:** text after a file's name is its text, and a sound's name
+  last on a side is the sound for after the answer: `!hand.mp3 die Hand`
+  (hear it, its word after), `die Hand !hand.mp3` (the word, spoken after),
+  `!hand.webp die Hand !hand.mp3` (all three). Names are matched against the
+  zip's files, so they may hold spaces (`engine/QuizFiles.kt`, `parseSide`).
+  Versions before this one read such a side as text.
+- **Editing:** a picture or sound side has a text field for its text, and a
+  text or picture side a button for a sound after the answer.
+- **Samples** (`tools/sounds`, `samples` step, on the zips `tools/wordlists`
+  builds): every picture quiz speaks the word after the answer, and Core's
+  own pictures also give *Core listening ERNIE* (hear the word, pick its
+  picture, then see it written) and *Core dictation* (hear it, type it), each
+  also for verbs. The sounds are MP3, 32 kHz mono at 40 kbit/s, about 4 KB
+  a word.
 
 ## Due counts
 
@@ -296,7 +336,7 @@ it rather than replacing it.
 - Escape is Back, with the same rule: a running session cannot be left, and
   closing the window keeps it for next time, as on the phone.
 - Wording that speaks of tapping has desktop text in `desktop/quiz/src/main/res`.
-- Only WAV sounds play on the desktop (see Sounds).
+- Only WAV and MP3 sounds play on the desktop (see Sounds).
 - A timed session pauses when the window loses focus, as the phone's does when
   the app leaves the screen (see Speed mode, Pausing).
 
@@ -356,7 +396,8 @@ them unchanged (see CLAUDE.md, Desktop apps).
 | `shared/quiz`: `data/Sounds.kt` | Recognizing and storing sounds |
 | `shared/quiz`: `data/SampleLibrary.kt` | Fetching the catalog and sample files from the download site, with an offline cache |
 | `apps/quiz`: `data/Images.kt` | Storing and loading pictures (Android's BitmapFactory; `desktop/quiz` has its own, with Skia) |
-| `apps/quiz`: `ui/SoundPlayer.kt` | Playing sounds (Android's media classes live here only; `desktop/quiz` has its own, with Java Sound) |
+| `apps/quiz`: `ui/SoundPlayer.kt` | Playing sounds (Android's media classes live here only; `desktop/quiz` has its own, with Java Sound and JLayer for MP3) |
+| `apps/quiz`: `ui/AfterAnswer.kt` | The whole card after a right answer, when it holds more than the question showed |
 | `apps/quiz`: `ui/Paused.kt`, `ui/Away.kt` | Pausing a timed session; noticing the app has left the screen (`desktop/quiz` has its own `ui/Away.kt`: the window losing focus) |
 | `apps/quiz`: `ui/QuizViewModel.kt` | Screen state; every change is saved on one disk thread, in order |
 | `apps/quiz`: `ui/*Screen.kt`, `ui/CardEditor.kt` | Compose screens (`ui/SpeedScreen.kt`: Speed mode's results between levels) |

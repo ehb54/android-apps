@@ -48,6 +48,16 @@ class SampleCatalogTest {
     }
 
     @Test
+    fun soundQuizzesCountTheirSounds() {
+        // Picture quizzes speak each word after the answer; listening and dictation quizzes ask with the sound.
+        fun counts(file: String) = sampleEntries(file, File(online, file).readBytes()).single()
+            .let { listOf(it.cards, it.pictures, it.sounds) }
+        assertEquals(listOf(144, 144, 144), counts("Core verb pictures ERNIE.zip"))
+        assertEquals(listOf(144, 144, 144), counts("Core verb listening ERNIE.zip"))
+        assertEquals(listOf(144, 0, 144), counts("Core verb dictation.zip"))
+    }
+
+    @Test
     fun statusComparesTheFingerprint() {
         val entry = SampleEntry("Shapes", "Shapes.zip", "v2", 6, 6)
         val added = Quiz("q", "Shapes", source = "Shapes.zip", sourceVersion = "v2")

@@ -10,6 +10,11 @@ compared the voices on 52 words of a word list.
   texts <lang>                              <lang>/texts.tsv: the texts and their keys
   make <lang> <words> [takes]               generate, hear, retake and pick, in turn
   collect <lang> <words>                    raw/sounds/: the picked sound per text
+  cards <lang> <words>                      raw/cards/: those sounds as the quizzes carry
+                                            them (MP3)
+  samples <lang> <dir>                      adds the sounds to the sample quizzes in <dir>
+                                            (picture quizzes speak the word after the answer)
+                                            and makes the listening and dictation quizzes
 
   generate <list> <engine> <words> [seed]   raw/<engine>/<kind>-<lemma>.wav, log.tsv
   wikimedia <list> <words>                  raw/wikimedia/: recordings via Wikidata
@@ -159,6 +164,8 @@ QUIZ_SIDES = [
     (r" nouns$", ("de", "en")),
     (r" verbs$", ("de", "en")),
     (r" pictures( ERNIE)?$", ("", "de")),  # also "Core verb pictures ERNIE"
+    (r" listening ERNIE$", ("", "")),  # a sound (with its text, read from the pictures quiz) -> a picture
+    (r" dictation$", ("", "de")),  # a sound -> its text
     (r"^(Numbers|Colors)$", ("de", "en")),  # German starter
     (r"^French words$", ("en", "fr")),
     (r"^(Amino acids|Chemical symbols)$", ("en", "")),
@@ -255,7 +262,8 @@ def texts(args):
             if lang != args.lang:
                 continue
             for card in cards:
-                text = unicodedata.normalize("NFC", " ".join(card[side].split()))
+                # A sound for after the answer (`samples`) is no part of the text.
+                text = unicodedata.normalize("NFC", " ".join(SOUND_MARK.sub("", card[side]).split()))
                 if text and not text.startswith("!"):  # "!name.png" is a file
                     found.setdefault(text, []).append(name)
     folder = HERE / args.lang
@@ -1143,6 +1151,148 @@ def collect(args):
         print(f"chosen, but that voice's sound is another take now (check by ear): {some(retaken)}")
 
 
+CARD_RATE = 32000  # Hz: an MPEG-1 MP3, which every player reads
+CARD_KBPS = 40  # about 4 KB a word; 32 dulls German s, sch and z
+
+
+def card_format():
+    version = subprocess.run(["ffmpeg", "-version"], capture_output=True, text=True, check=True).stdout.split("\n")[0]
+    return (f"MP3 (MPEG-1 Layer III), {CARD_RATE} Hz mono, {CARD_KBPS} kbit/s CBR, no tags, "
+            f"from raw/sounds/ by {version}")
+
+
+def cards(args):
+    """raw/cards/<stem>.mp3: each text's picked sound (raw/sounds/, evened) as
+    the quizzes carry it, an MP3 of about 4 KB a word, the same bytes every
+    time. raw/cards/made.tsv notes the sound each was made from (its SHA-1:
+    `collect` keeps a sound's date when it copies it), so a sound picked anew
+    is made again, as is everything when the settings change."""
+    raw = HERE / args.list / "raw"
+    words = read_words(args.list, args.words)
+    out = raw / "cards"
+    out.mkdir(parents=True, exist_ok=True)
+    how, stamp, log = card_format(), out / "made.txt", out / "made.tsv"
+    if not stamp.exists() or stamp.read_text(encoding="utf-8").strip() != how:
+        for old in out.glob("*.mp3"):
+            old.unlink()
+        log.unlink(missing_ok=True)
+    made_from = {r["file"]: r["sound sha1"] for r in read_tsv(log)} if log.exists() else {}
+    made, missing = 0, []
+    for kind, lemma, text, _ in words:
+        stem = f"{kind}-{lemma}"
+        src, dst = raw / "sounds" / f"{stem}.wav", out / f"{stem}.mp3"
+        if not src.exists():
+            missing.append(text.rstrip("."))
+            continue
+        sha1 = hashlib.sha1(src.read_bytes()).hexdigest()
+        if dst.exists() and made_from.get(dst.name) == sha1:
+            continue
+        subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", str(src), "-ac", "1", "-ar", str(CARD_RATE),
+                        "-c:a", "libmp3lame", "-b:a", f"{CARD_KBPS}k", "-write_xing", "0", "-id3v2_version", "0",
+                        "-map_metadata", "-1", "-fflags", "+bitexact", "-flags:a", "+bitexact", str(dst)],
+                       check=True)
+        made_from[dst.name] = sha1
+        made += 1
+    rewrite_tsv(log, [{"file": f, "sound sha1": h} for f, h in sorted(made_from.items())])
+    stamp.write_text(how + "\n", encoding="utf-8")
+    print(f"{made} made now, {len(made_from)} in {out}; {len(missing)} texts without a sound: {some(missing)}")
+
+
+def card_files(lang, texts):
+    """For tools/wordlists' build: ({text: (file name, MP3 bytes)} for those of
+    `texts` (as the cards show them) that have a card sound (`cards`), and the
+    credits for them: which voices said how many, with their licenses."""
+    keys = {r["text"]: r["key"] for r in read_tsv(HERE / lang / "texts.tsv")}
+    raw = HERE / lang / "raw"
+    picked = {r["file"].rsplit(".", 1)[0]: r for r in read_tsv(raw / "sounds.tsv")}
+    files, voices = {}, {}
+    for text in texts:
+        stem = f"{lang}-{keys[text]}" if text in keys else None
+        path = raw / "cards" / f"{stem}.mp3"
+        if stem and path.exists() and stem in picked:
+            files[text] = (path.name, path.read_bytes())
+            voices[picked[stem]["voice"]] = voices.get(picked[stem]["voice"], 0) + 1
+    credits = ("Sounds: German speech made with these voices, one per word, the one speech recognition "
+               "(Whisper large-v3-turbo) was surest of, or one picked by ear "
+               "(https://github.com/ehb54/android-apps, tools/sounds):\n"
+               + "".join(f"- {ENGINES[v]['license']}: {n}\n" for v, n in sorted(voices.items(), key=lambda x: -x[1]))
+               + f"Encoded as MP3, {CARD_RATE} Hz mono, {CARD_KBPS} kbit/s.\n")
+    return files, credits
+
+
+# Picture quizzes whose sounds also make quizzes of their own (eb, 2026-11-13:
+# sound quizzes, starting with the picture lists): listening (hear the word,
+# pick its picture; the word shows after the answer) and dictation (hear it,
+# type it). Every picture quiz in a language also speaks the word after the answer.
+HEARD = {
+    "Core pictures ERNIE": ("Core listening ERNIE", "Core dictation"),
+    "Core verb pictures ERNIE": ("Core verb listening ERNIE", "Core verb dictation"),
+}
+# A sound for after the answer at the end of a side ("die Hand !de-die_Hand-1a2b3c4d.mp3"), as Quiz reads it.
+SOUND_MARK = re.compile(r" !(\S+\.(?:mp3|m4a|aac|ogg|wav|flac))$")
+ZIP_DATE = (1980, 1, 1, 0, 0, 0)  # as tools/wordlists writes them: the same content gives the same zip
+PICTURE_EXTENSIONS = {"png", "jpg", "jpeg", "webp", "gif", "bmp"}  # as Quiz reads them (model/Media.kt)
+
+
+def write_zip(path, entries):
+    with zipfile.ZipFile(path, "w", zipfile.ZIP_DEFLATED) as z:
+        for name, data in entries:
+            info = zipfile.ZipInfo(name, date_time=ZIP_DATE)
+            info.compress_type = zipfile.ZIP_DEFLATED
+            z.writestr(info, data)
+
+
+def samples(args):
+    """Adds sounds to the sample quizzes in args.dir, as tools/wordlists built
+    them: in every picture quiz whose answers are in the language (QUIZ_SIDES),
+    each answer gets its sound for after the answer, and the quizzes in HEARD
+    give a listening and a dictation quiz besides. Makes the card sounds it
+    needs (`cards`). The pictures are kept as they are and sounds added before
+    are replaced, so it can run again, after every build of the word lists."""
+    lang, folder = args.list, Path(args.dir)
+    texts_tsv = {r["text"]: r["key"] for r in read_tsv(HERE / lang / "texts.tsv")}
+    every = {f"{k}-{l}": (k, l, t, q) for k, l, t, q in read_words(lang, "all")}
+    for path in sorted(folder.glob("*.zip")):
+        z = zipfile.ZipFile(path)
+        names = z.namelist()
+        inner = next((n for n in names if n.endswith(".qzx")), None)
+        sides = next((langs for pattern, langs in QUIZ_SIDES if re.search(pattern, path.stem)), None)
+        if inner is None or sides != ("", lang):
+            continue
+        cards_ = [(a, SOUND_MARK.sub("", b)) for a, b in qzx_cards(z.read(inner).decode("utf-8"))]
+        if not all(a.startswith("!") and a[1:] in names and a[1:].rsplit(".", 1)[-1] in PICTURE_EXTENSIONS
+                   for a, _ in cards_):
+            continue  # not picture -> word (a dictation quiz made here before)
+        answers = [unicodedata.normalize("NFC", " ".join(b.split())) for _, b in cards_]
+        wanted = [every[f"{lang}-{texts_tsv[t]}"] for t in answers if t in texts_tsv]
+        cards(argparse.Namespace(list=lang, words=wanted))
+        files, sound_credits = card_files(lang, answers)
+        old_sounds = {m.group(1) for _, b in qzx_cards(z.read(inner).decode("utf-8")) if (m := SOUND_MARK.search(b))}
+        credits = z.read("CREDITS.txt").decode("utf-8").split("Sounds: ")[0] if "CREDITS.txt" in names else ""
+        pictures = [(n, z.read(n)) for n in names if n not in old_sounds and n not in (inner, "CREDITS.txt")
+                    and n.rsplit(".", 1)[-1] in PICTURE_EXTENSIONS]
+        rest = [(n, z.read(n)) for n in names if n not in old_sounds and n not in (inner, "CREDITS.txt")
+                and n.rsplit(".", 1)[-1] not in PICTURE_EXTENSIONS]
+        sounds = list(dict.fromkeys(files[t] for t in answers if t in files))
+        qzx = "".join(f"{a}\n{b}{' !' + files[t][0] if t in files else ''}\n"
+                      for (a, b), t in zip(cards_, answers))
+        write_zip(path, pictures + sounds + [(inner, qzx), ("CREDITS.txt", credits + sound_credits)] + rest)
+        print(f"{path.name}: {len(files)} of {len(answers)} answers spoken after the answer")
+        if path.stem not in HEARD:
+            continue
+        listening, dictation = HEARD[path.stem]
+        heard = [(a, t, files[t][0]) for (a, _), t in zip(cards_, answers) if t in files]
+        used = {a[1:] for a, _, _ in heard}
+        write_zip(folder / f"{listening}.zip",
+                  [(n, d) for n, d in pictures if n in used] + sounds
+                  + [(f"{listening}.qzx", "".join(f"!{s} {t}\n{a}\n" for a, t, s in heard)),
+                     ("CREDITS.txt", credits + sound_credits)])
+        write_zip(folder / f"{dictation}.zip",
+                  sounds + [(f"{dictation}.qzx", "".join(f"!{s}\n{t}\n" for _, t, s in heard)),
+                            ("CREDITS.txt", sound_credits)])
+        print(f"  {listening}.zip, {dictation}.zip: {len(heard)} cards")
+
+
 def page(args):
     words, raw, sounds = evened(args)
     listen = raw / "listen"
@@ -1348,6 +1498,12 @@ def main():
     c = sub.add_parser("collect")
     c.add_argument("list")
     c.add_argument("words", nargs="?", default="all")
+    cs = sub.add_parser("cards")
+    cs.add_argument("list")
+    cs.add_argument("words", nargs="?", default="all")
+    sa = sub.add_parser("samples")
+    sa.add_argument("list", help="a language with texts.tsv, e.g. de")
+    sa.add_argument("dir", help="the sample quizzes, e.g. ../../apps/quiz/samples")
     r = sub.add_parser("retake")
     r.add_argument("list")
     r.add_argument("words")
@@ -1361,7 +1517,7 @@ def main():
     ch.add_argument("picks", help="TSV with kind, lemma, best (and by, why): a page's Copy picks")
     args = ap.parse_args()
     {"generate": generate, "texts": texts, "wikimedia": wikimedia, "hear": hear, "pick": pick, "retake": retake, "make": make, "collect": collect,
-     "choose": choose, "page": page}[args.cmd](args)
+     "choose": choose, "cards": cards, "samples": samples, "page": page}[args.cmd](args)
 
 
 if __name__ == "__main__":

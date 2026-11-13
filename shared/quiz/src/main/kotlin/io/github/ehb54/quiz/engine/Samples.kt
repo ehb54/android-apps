@@ -67,12 +67,10 @@ fun sampleEntries(file: String, bytes: ByteArray): List<SampleEntry> {
     }
     val bundle = quizBundle(entries)
     val cards = parseQzx(bundle.qzx)
-    // Cards with a picture, and cards with a sound, on either side.
-    fun count(kind: MediaKind) = cards.count { card ->
-        listOf(card.a, card.b).any { side ->
-            val file = side.removePrefix(MEDIA_MARK)
-            side.startsWith(MEDIA_MARK) && file in bundle.files && mediaKind(file) == kind
-        }
+    // Cards with a picture, and cards with a sound (a side's, or one for after the answer), on either side.
+    val sides = cards.map { card -> listOf(card.a, card.b).map { parseSide(it, bundle.files.keys) } }
+    fun count(kind: MediaKind) = sides.count { both ->
+        both.any { side -> listOfNotNull(side.file, side.sound).any { mediaKind(it) == kind } }
     }
     return listOf(SampleEntry(name, file, sha256(bytes), cards.size, count(MediaKind.Picture), count(MediaKind.Sound)))
 }
