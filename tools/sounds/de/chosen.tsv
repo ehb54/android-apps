@@ -1,14 +1,33 @@
 kind	lemma	text	voice	seed	by	why
-de	Waise-3e1ab3a5	Waise.	chatterbox	2	transcript	heard as 'Weise.' (said the same); qwen3-design's as 'Wise.'
-de	Ohr-adda27da	Ohr.	chatterbox	12	transcript	heard as 'Or' (said the same); qwen3-design's as 'oder'
-de	die_Reede-b505baa4	die Reede.	qwen3-design	6	transcript	heard as 'die rede.' (said the same); omnivoice's as 'die Riede.'
-de	Närrin-3f3c8538	Närrin.	piper-thorsten		transcript	heard as 'Nerin' (said the same); qwen3-design's as 'NERREN'
-de	Plebejer-3cbfcf05	Plebejer.	chatterbox	9	transcript	heard as 'Plebeier' (said the same); qwen3-design's as 'Lebe ihr.', without the Pl
-de	forteilen-6fca4b61	forteilen.	qwen3-design	1	transcript	heard as 'Fortheilen' (an h where the word breaks); chatterbox's as 'Für Teilen.', and omnivoice's 'Fortteilen' has a second t and peaks limited 8.9 dB
+de	Gottseibeiuns-28646c26	Gottseibeiuns.	qwen3-design	16	ear	
+de	der_Gottseibeiuns-0b801f0f	der Gottseibeiuns.	qwen3-design	20	ear	
+de	das_Werg-b97174b3	das Werg.	omnivoice	18	ear	
+de	die_Waise-9598d181	die Waise.	qwen3-design	7	ear	
+de	Beet-860e263f	Beet.	qwen3-design	6	ear	
+de	Waise-3e1ab3a5	Waise.	qwen3-design	4	ear	
+de	Ohr-adda27da	Ohr.	qwen3-design	12	ear	
+de	die_Reede-b505baa4	die Reede.	omnivoice	10	ear	
+de	Muhme-a5a83b28	Muhme.	omnivoice	2	ear	
+de	Zar-7e6764d0	Zar.	chatterbox	1	ear	
+de	Zeh-f6d97cb3	Zeh.	qwen3-design	18	ear	
+de	Meerenge-db86ff14	Meerenge.	qwen3-design	4	ear	
+de	Närrin-3f3c8538	Närrin.	qwen3-design	2	ear	
+de	die_Reeden-868734c8	die Reeden.	chatterbox	16	ear	
+de	die_Fehden-8e4286f7	die Fehden.	chatterbox	1	ear	
+de	Reede-1d990b5d	Reede.	piper-thorsten	11	ear	
+de	Plebejer-3cbfcf05	Plebejer.	qwen3-design	1	ear	
+de	die_Cents-219dda4d	die Cents.	chatterbox	18	ear	
+de	Chaise-4ad0da03	Chaise.	qwen3-design	5	ear	
+de	forteilen-6fca4b61	forteilen.	chatterbox	12	ear	
+de	die_Wälle-9ef29d36	die Wälle.	omnivoice	4	ear	
+de	Moor-2c82c223	Moor.	qwen3-design	18	ear	
+de	die_Marställe-baec4d02	die Marställe.	piper-thorsten	8	ear	
 de	Ei-bf1f1314	Ei.	chatterbox	20	transcript	heard as 'Ei .'; omnivoice's as 'Hi.'
 de	Saite-7ef62d46	Saite.	piper-thorsten	10	transcript	heard as 'Seite' (said the same); qwen3-design's as 'Sighter'
 de	die_Kanapees-075a0523	die Kanapees.	chatterbox	7	transcript	heard as 'Die Kanapés.' (said the same); qwen3-design's as 'Die Kana Pays.'
 de	Branntwein-0d1bad2a	Branntwein.	chatterbox	18	transcript	heard as 'Branntwein'; piper-thorsten's as 'Brennt Wein.'
+de	die_Muhmen-79d863d1	die Muhmen.	qwen3-design	20	transcript	heard as 'Die Mumen.' (said the same); omnivoice's as 'Die Mummen.'
+de	Wesir-6c49882f	Wesir.	omnivoice	7	transcript	heard as 'Wesier.' (said the same); piper-thorsten's as 'Vesir.'
 de	Gau-f993f755	Gau.	piper-thorsten	10	transcript	heard as 'Kau' (the au of Gau); omnivoice's as 'Go.', its peaks limited 7.6 dB
 de	der_Branntwein-167fbff5	der Branntwein.	piper-thorsten	3	transcript	heard as 'Der Brandwein' (said the same); chatterbox's as 'Er brannt Wein.'
 de	Wal-d5bdec6d	Wal.	piper-thorsten	8	transcript	heard as 'Wahl.' (said the same); qwen3-design's as 'Val'
@@ -28,6 +47,7 @@ de	weiht_ein_weihte_ein_hat_eingeweiht-05663b7c	weiht ein, weihte ein, hat einge
 de	Blässe-4a6419d5	Blässe.	qwen3-design	1	transcript	heard as 'Blesse.' (said the same); omnivoice's as 'Blesser.'
 de	Bau-46f6a71a	Bau.	qwen3-design	9	transcript	heard as 'Bau'; omnivoice's as 'Bauch.'
 de	Veilchen-c54b919c	Veilchen.	chatterbox	10	transcript	heard as 'Feilchen.' (said the same); qwen3-design's as 'Feichen'
+de	Heer-443da0f1	Heer.	qwen3-design	18	transcript	heard as 'her.' (said the same); omnivoice's as 'Herr.'
 de	Trog-95a4bf56	Trog.	qwen3-design	10	transcript	heard as 'Troc.' (said the same); piper-thorsten's as 'Druck.'
 de	die_Menuette-abd7ccaf	die Menuette.	qwen3-design	4	transcript	heard as 'Die Menuette'; omnivoice's as 'Die Menüette'
 de	Mahl-dda6dc7a	Mahl.	qwen3-design	1	transcript	heard as 'Mal.' (said the same); piper-thorsten's as 'Mahn.'
@@ -37,13 +57,10 @@ de	Pfuscher-2eb5cec8	Pfuscher.	qwen3-design	14	transcript	heard as 'Pfuscha' (sa
 de	die_Baronesse-c1bb42e4	die Baronesse.	piper-thorsten	18	transcript	heard as 'Die Baronesse'; chatterbox's as 'Die Baroness.'
 de	Hieb-0d27b1d2	Hieb.	omnivoice	10	transcript	heard as 'Heap', the English spelling of the sound; piper-thorsten's as 'Piep', with a p
 de	Allee-a9542c97	Allee.	piper-thorsten	10	transcript	heard as 'Allee.'; omnivoice's as 'Ali.'
+de	Aal-f97db9bd	Aal.	omnivoice	20	transcript	heard as 'Aal.'; qwen3-design's as 'All.'
 de	das_Diner-06029387	das Diner.	chatterbox	4	transcript	heard as 'Das Diner.'; qwen3-design's as 'Das Dino.'
 de	Base-077fe9c5	Base.	omnivoice	1	transcript	heard as 'Base.'; qwen3-design's as 'Bass'
 de	schilt_schalt_hat_gescholten-ba76465c	schilt, schalt, hat gescholten.	omnivoice	11	transcript	heard as 'Schild schalt, hat gescholten.' (said the same); qwen3-design's as 'Schilt, schalt, hat geschalten.'
 de	Trab-17e8c2b0	Trab.	chatterbox	11	transcript	heard as 'Trab.'; qwen3-design's as 'Trabe'
 de	Kelte-e5dab6f1	Kelte.	piper-thorsten		transcript	heard as 'Kälte' (said the same); qwen3-design's as 'Kelter'
 de	die_Windsbraut-be852d0c	die Windsbraut.	omnivoice	13	transcript	heard as 'Die Winzbraut' (said the same); qwen3-design's as 'Die Winsbraut'
-de	die_Muhmen-79d863d1	die Muhmen.	qwen3-design	20	transcript	heard as 'Die Mumen.' (said the same); omnivoice's as 'Die Mummen.'
-de	Wesir-6c49882f	Wesir.	omnivoice	7	transcript	heard as 'Wesier.' (said the same); piper-thorsten's as 'Vesir.'
-de	Heer-443da0f1	Heer.	qwen3-design	18	transcript	heard as 'her.' (said the same); omnivoice's as 'Herr.'
-de	Aal-f97db9bd	Aal.	omnivoice	20	transcript	heard as 'Aal.'; qwen3-design's as 'All.'
