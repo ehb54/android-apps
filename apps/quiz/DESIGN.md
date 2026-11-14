@@ -130,8 +130,16 @@ Decisions made with eb:
   selected mode, and Reset statistics clears all three.
 - **Fillers.** A block short of cards (the end of a round, or a small retry
   round) is topped up with other cards of the quiz that are not still to be
-  asked, so the last pair is never a giveaway. Fillers are not scored, but a
-  wrong pair with one still counts as a miss for the scored card.
+  asked, so a few cards still make a full block to choose from. Fillers are
+  not scored, but a wrong pair with one still counts as a miss for the scored
+  card.
+- **The last pair of a block is no choice**, with one tile left on each side,
+  so it is not scored (eb, 2026-11-14: it "isn't really a good user choice, as
+  it is default"). It still has to be made, for the practice, and its card, if
+  it was never in a wrong pair, comes first in the next block (a missed one
+  comes back next round anyway). The exception, so a card cannot come back
+  forever: a block that scores nothing but its last pair counts it, as when
+  such a card comes back alone at the end of a round, among fillers.
 - **Same content, either way.** Two cards showing the same thing (two side Bs
   reading "time") may be paired either way round.
 - **Pictures and sounds** are tiles like text, on either side, since nothing

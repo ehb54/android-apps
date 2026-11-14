@@ -18,10 +18,10 @@ class MatchTest {
             Quiz("q", "test", settings = QuizSettings(mode = QuizMode.Match, shuffle = false, blockSize = blockSize, sessionSize = sessionSize)),
         ) { q, n -> q.addCard("a$n", "b$n") }
 
-    /** Pairs every scored card of the block on screen; fillers too, so the block clears. */
+    /** Pairs every tile of the block on screen, fillers too, in card order: the block's last pair is its highest card. */
     private fun MatchStep.clearBlock(): MatchStep {
         var step = this
-        for (id in session.left) step = pairTiles(step.quiz, step.session, id, id, random)
+        for (id in session.left.sorted()) step = pairTiles(step.quiz, step.session, id, id, random)
         return step
     }
 
@@ -33,10 +33,16 @@ class MatchTest {
         val blocks = mutableListOf<List<Long>>()
         while (!step.session.finished) {
             blocks += step.session.scored
-            assertEquals(step.session.scored.toSet(), step.session.right.toSet())
+            assertEquals(step.session.left.toSet(), step.session.right.toSet())
+            assertTrue(step.session.right.containsAll(step.session.scored))
             step = step.clearBlock()
         }
-        assertEquals(listOf((1L..6L).toList(), (7L..12L).toList(), (13L..18L).toList(), (19L..24L).toList()), blocks)
+        // Each block's last pair (its highest card) comes first in the next; card 24
+        // is last in a block of fillers too, the only card it scores, and counts.
+        assertEquals(
+            listOf((1L..6L).toList(), (6L..11L).toList(), (11L..16L).toList(), (16L..21L).toList(), (21L..24L).toList(), listOf(24L)),
+            blocks,
+        )
         assertEquals(24, step.session.firstTry)
         assertEquals(1, step.session.round)
         step.quiz.cards.forEach {
@@ -46,11 +52,49 @@ class MatchTest {
     }
 
     @Test
+    fun aBlocksLastPairIsNotScoredAndComesFirstInTheNextBlock() {
+        var step = start(quiz(12))
+        step = step.clearBlock()
+        assertEquals(PairOutcome.BlockCleared, step.outcome)
+        assertEquals(listOf(6L, 7L, 8L, 9L, 10L, 11L), step.session.scored)
+        assertEquals(Stats(), step.quiz.card(6)!!.statsMatch)
+        assertEquals(Stats(asked = 1, rightFirst = 1), step.quiz.card(5)!!.statsMatch)
+        assertEquals(5, step.session.firstTry)
+        assertEquals(7, step.session.remaining)
+
+        // Paired while other tiles were open, it counts, right the first time.
+        step = pairTiles(step.quiz, step.session, 6, 6, random)
+        step = step.clearBlock()
+        assertEquals(Stats(asked = 1, rightFirst = 1), step.quiz.card(6)!!.statsMatch)
+        assertEquals(listOf(11L, 12L), step.session.scored)
+    }
+
+    @Test
+    fun aLastPairThatIsAllTheBlockScoresCounts() {
+        // Three cards and no fillers: card 3, paired last, comes back among
+        // cards 1 and 2 as fillers, and paired last again it counts.
+        var step = start(quiz(3)).clearBlock()
+        assertEquals(PairOutcome.BlockCleared, step.outcome)
+        assertEquals(listOf(3L), step.session.scored)
+        assertEquals(listOf(1L, 2L, 3L), step.session.left.sorted())
+        assertEquals(1, step.session.remaining)
+
+        step = step.clearBlock()
+        assertEquals(PairOutcome.Finished, step.outcome)
+        assertEquals(3, step.session.firstTry)
+        assertEquals(Stats(asked = 1, rightFirst = 1), step.quiz.card(3)!!.statsMatch)
+    }
+
+    @Test
     fun aWrongPairIsAMissForBothCardsAndTheyComeBack() {
         var step = start(quiz(6))
         step = pairTiles(step.quiz, step.session, 1, 2, random)
         assertEquals(PairOutcome.Wrong, step.outcome)
         assertEquals(setOf(1L, 2L), step.session.missed)
+        step = step.clearBlock()
+        // Card 6 was the last pair: it comes back first, before round 2.
+        assertEquals(1, step.session.round)
+        assertEquals(listOf(6L), step.session.scored)
         step = step.clearBlock()
         assertEquals(2, step.session.round)
         assertEquals(listOf(1L, 2L), step.session.scored)
@@ -70,13 +114,12 @@ class MatchTest {
         var step = start(quiz(8))
         step = step.clearBlock()
         val block = step.session
-        assertEquals(listOf(7L, 8L), block.scored)
+        assertEquals(listOf(6L, 7L, 8L), block.scored)
         assertEquals(6, block.left.size)
         val fillers = block.left - block.scored.toSet()
-        assertTrue(fillers.all { it in 1L..6L })
+        assertTrue(fillers.all { it in 1L..5L })
 
-        step = step.clearBlock()
-        assertTrue(step.session.finished)
+        while (!step.session.finished) step = step.clearBlock()
         // Fillers were cleared in block 1 and not scored again.
         fillers.forEach { assertEquals(1, step.quiz.card(it)!!.statsMatch.asked) }
     }

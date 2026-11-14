@@ -2,6 +2,7 @@ package io.github.ehb54.quiz
 
 import androidx.compose.ui.test.assertIsSelected
 import androidx.compose.ui.test.onAllNodesWithTag
+import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
@@ -16,7 +17,8 @@ import org.robolectric.shadows.ShadowMediaPlayer
 /**
  * Pair sounds with their meanings: a tap on a sound tile plays it and picks it,
  * and a pair made shows the word its sound says on the tile for a moment
- * before both tiles go; the hint line stays as it was.
+ * before both tiles go; the hint line stays as it was. The block's last pair
+ * was no choice, so its card comes back, with the other two as fillers.
  */
 class MatchShowsPairUiTest : QuizUiTest() {
     init {
@@ -47,6 +49,18 @@ class MatchShowsPairUiTest : QuizUiTest() {
                     compose.onNodeWithText(german).assertDoesNotExist()
                     compose.onNodeWithText(english).assertDoesNotExist()
                 }
+            }
+
+            // "das Auge" was the last pair, so it comes back in a block of all three.
+            compose.waitUntil(10_000) { compose.onAllNodesWithText(listeningWords.last().first).fetchSemanticsNodes().isEmpty() }
+            compose.onNodeWithText("Round 1 · 1 left").assertExists()
+            listeningWords.forEach { (_, english) -> compose.onNodeWithText(english).assertExists() }
+            // Paired first this time, it counts; the other two are fillers.
+            for (index in listOf(2, 0, 1)) {
+                val english = listeningWords[index].second
+                compose.onNodeWithTag(tileTag(index + 1L, sideA = true)).performClick()
+                compose.onNodeWithText(english).performClick()
+                compose.waitUntil(10_000) { compose.onAllNodesWithText(english).fetchSemanticsNodes().isEmpty() }
             }
             compose.waitForText("Done")
             compose.onNodeWithText("Right first time: 3 of 3").assertExists()

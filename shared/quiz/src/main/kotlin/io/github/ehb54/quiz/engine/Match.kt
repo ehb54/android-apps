@@ -15,6 +15,8 @@ import kotlin.random.Random
  * (which covers the confusion penalty). Missed cards come back in the next
  * round, a block at a time, until a round has no misses. A block short of cards
  * is topped up with fillers: cards not still to be asked, which are not scored.
+ * A block's last pair is no choice (one tile is left on each side), so it is
+ * not scored: its card comes first in the next block (see [pairTiles]).
  * Matching keeps its own level per card ([Card.statsMatch]).
  * Saved after every pair, so it survives the app being closed.
  */
@@ -80,17 +82,28 @@ fun pairTiles(quiz: Quiz, session: MatchSession, left: Long, right: Long, random
     val paired = session.copy(matchedLeft = session.matchedLeft + left, matchedRight = session.matchedRight + right)
     if (paired.matchedLeft.size < paired.left.size) return MatchStep(quiz, paired, PairOutcome.Paired)
 
-    // Block cleared: record each scored card's result, then show the next block.
+    // Block cleared. Its last pair was no choice, so a scored card in it that was
+    // never in a wrong pair is not scored yet: it comes first in the next block.
+    // Unless it is all the block scores (alone among fillers, say), which could
+    // bring it back forever: then it counts.
+    val giveaway = listOf(left, right).distinct().filter { it in paired.scored && it !in paired.missed }
+    val again = if (paired.scored.all { it in giveaway }) emptyList() else giveaway
+
+    // Record each other scored card's result, then show the next block.
     var scoredQuiz = quiz
     var firstTry = paired.firstTry
-    for (id in paired.scored) {
+    for (id in paired.scored - again.toSet()) {
         val card = scoredQuiz.card(id) ?: continue
         val missed = id in paired.missed
         val stats = if (missed) card.statsMatch.answeredAfterMiss() else card.statsMatch.answeredFirstTry()
         scoredQuiz = scoredQuiz.replaceCard(card.copy(statsMatch = stats))
         if (!missed && paired.round == 1) firstTry++
     }
-    val cleared = paired.copy(retry = paired.retry + paired.scored.filter { it in paired.missed }, firstTry = firstTry)
+    val cleared = paired.copy(
+        pending = again + paired.pending,
+        retry = paired.retry + paired.scored.filter { it in paired.missed },
+        firstTry = firstTry,
+    )
     val next = nextBlock(scoredQuiz, cleared, random)
     return MatchStep(scoredQuiz, next, if (next.finished) PairOutcome.Finished else PairOutcome.BlockCleared)
 }
