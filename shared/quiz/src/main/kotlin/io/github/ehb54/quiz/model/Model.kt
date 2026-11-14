@@ -176,6 +176,12 @@ data class QuizSettings(
     val choices: Int = DEFAULT_CHOICES,
     /** Speed mode: each level's time limit follows the level before (see engine/Speed.kt). */
     val tighten: Boolean = false,
+    /**
+     * Type, Pick and Match: a card's sound plays by itself once the card is
+     * answered (the whole card after the answer, a pair made). Off, its
+     * buttons still play it.
+     */
+    val soundAfter: Boolean = false,
 ) {
     val hasRange: Boolean get() = rangeFrom != null || rangeTo != null
 
@@ -253,6 +259,9 @@ data class Quiz(
     fun replaceCard(card: Card) = copy(cards = cards.map { if (it.id == card.id) card else it })
 
     fun removeCard(id: Long) = copy(cards = cards.filterNot { it.id == id })
+
+    /** Whether some card has a sound that [QuizSettings.soundAfter] would play once it is answered. */
+    fun hasSoundAfter() = cards.any { it.hasAfter() && it.afterSound(settings.direction) != null }
 
     fun resetStats() = copy(cards = cards.map { it.withoutStats() }, speedAToB = null, speedBToA = null)
 

@@ -269,6 +269,11 @@ private fun SessionSettings(quiz: Quiz, onChange: (QuizSettings) -> Unit, onStar
         }
         if (settings.mode == QuizMode.Speed) {
             Toggle(stringResource(R.string.tighten), settings.tighten) { onChange(settings.copy(tighten = it)) }
+        } else if (quiz.hasSoundAfter()) {
+            // Speed never stops to show a card once answered.
+            Toggle(stringResource(R.string.sound_after), settings.soundAfter) {
+                onChange(settings.copy(soundAfter = it))
+            }
         }
         Toggle(stringResource(R.string.shuffle), settings.shuffle) { onChange(settings.copy(shuffle = it)) }
         // Cards per session when no range is set. Steps go up to the quiz's size;

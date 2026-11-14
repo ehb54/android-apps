@@ -282,17 +282,26 @@ what shows only once the card is answered, so it never gives the answer away:
   have a sound (`Card.soundA`/`soundB`), the word spoken.
 - **The whole card after a right answer** (`ui/AfterAnswer.kt`): in Type and
   Pick, a card with either shows both sides whole (picture, sound, text)
-  before the next card, and its sound plays once: the answer side's, else
-  the prompt side's. Next, Back or Enter goes on, and the next card's clock
-  starts then. A card with neither goes straight on, as before. Speed mode
-  never stops for it (it is about recognizing fast). In Match, a right pair
-  shows it on its two tiles (a sound's word, a picture's text) and plays its
-  sound, for half a second before the tiles go (`PAIR_SHOWN_MS`); another
-  pair made meanwhile ends that early. (At first the words went in the
-  hint line, where eb found they stayed on into the next block.)
-- **Once only:** a sound that plays by itself (a prompt's, the whole card's,
-  a pair's) plays once per card. Turning the phone rebuilds the screen, and
-  used to play it again each time (`PlayOnce` remembers it across that).
+  before the next card, with a button for each sound. Next, Back or Enter
+  goes on, and the next card's clock starts then. A card with neither goes
+  straight on, as before. Speed mode never stops for it (it is about
+  recognizing fast). In Match, a right pair shows it on its two tiles (a
+  sound's word, a picture's text) for half a second before the tiles go
+  (`PAIR_SHOWN_MS`); another pair made meanwhile ends that early. (At first
+  the words went in the hint line, where eb found they stayed on into the
+  next block.)
+- **Play the sound after the answer** (`QuizSettings.soundAfter`, per quiz,
+  off by default): when on, that card's sound plays by itself, the answer
+  side's, else the prompt side's, and in Match a pair's. The switch shows in
+  Type, Pick and Match settings of a quiz that has such sounds
+  (`Quiz.hasSoundAfter`). Added 2026-11-14: at first the sound always played,
+  and eb, picking either way in *Children's books verb pictures ERNIE*, wanted it
+  optional, default off, with playing by hand still there. A sound that is
+  the prompt (a listening quiz, Morse) still plays by itself: it is the question.
+- **Once only:** a sound that plays by itself (a prompt's, and with the switch
+  on the whole card's or a pair's) plays once per card. Turning the phone
+  rebuilds the screen, and used to play it again each time (`PlayOnce`
+  remembers it across that).
 - **In a zip:** text after a file's name is its text, and a sound's name
   last on a side is the sound for after the answer: `!hand.mp3 die Hand`
   (hear it, its word after), `die Hand !hand.mp3` (the word, spoken after),

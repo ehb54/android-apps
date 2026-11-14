@@ -69,6 +69,15 @@ class MediaTest {
         assertNull(plain.afterSound(Direction.AToB))
         // Sounds for after the answer are the quiz's files too, so they are kept and exported.
         assertEquals(setOf("hand.mp3", "hand.webp", "say.mp3"), quiz.mediaFiles())
+
+        // Such sounds play by themselves only when the quiz says so, and it says so only
+        // when it has them: a sound with nothing to show after it (Morse) is no such sound.
+        assertFalse(quiz.settings.soundAfter)
+        assertTrue(quiz.hasSoundAfter())
+        val pictures = Quiz("p", "Pictures").addCard("", "die Hand", mediaA = "hand.webp", soundB = "say.mp3")
+        assertTrue(pictures.hasSoundAfter())
+        assertFalse(Quiz("m", "Morse").addCard("", "A", mediaA = "a.wav").addCard("Hund", "dog").hasSoundAfter())
+        assertFalse(Quiz("c", "Captions").addCard("die Hand", "hand", mediaA = "hand.webp").hasSoundAfter())
     }
 
     @Test

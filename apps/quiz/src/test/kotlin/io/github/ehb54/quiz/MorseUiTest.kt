@@ -33,6 +33,8 @@ abstract class MorseUiTest : QuizUiTest() {
         compose.waitForText("26 cards · Type →26 · Pick →26 ←26 · Match 26")
         compose.onNodeWithText("Morse code").performClick()
         compose.waitForText("Start (20 cards due)")
+        // Its sounds are the cards themselves: nothing plays after the answer.
+        compose.onNodeWithText("Play the sound after the answer").assertDoesNotExist()
         if (chip != null) tapChip(chip)
         if (setting != null) compose.waitForText(setting)
         compose.onNodeWithText("Shuffle").performClick()

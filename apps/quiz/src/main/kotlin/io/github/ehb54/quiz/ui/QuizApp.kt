@@ -30,7 +30,14 @@ private fun CurrentScreen(state: UiState, vm: QuizViewModel, snackbar: SnackbarH
     val afterQuiz = state.quiz(after?.quizId)
     val afterCard = after?.let { afterQuiz?.card(it.cardId) }
     if (after != null && afterQuiz != null && afterCard != null) {
-        AfterAnswerScreen(afterQuiz.name, afterCard, after.direction, vm.mediaDir, vm::next)
+        AfterAnswerScreen(
+            afterQuiz.name,
+            afterCard,
+            after.direction,
+            afterQuiz.settings.soundAfter,
+            vm.mediaDir,
+            vm::next,
+        )
         return
     }
     when (val screen = state.screen) {

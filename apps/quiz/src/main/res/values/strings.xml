@@ -100,6 +100,7 @@
     <string name="seconds">%1$d s</string>
     <string name="shuffle">Shuffle</string>
     <string name="tighten">Tighten the time limit</string>
+    <string name="sound_after">Play the sound after the answer</string>
     <string name="range">Cards</string>
     <string name="range_from">from</string>
     <string name="range_to">to</string>

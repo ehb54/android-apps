@@ -1,5 +1,6 @@
 package io.github.ehb54.quiz
 
+import android.content.Context
 import androidx.compose.ui.semantics.SemanticsActions
 import androidx.compose.ui.test.ComposeTimeoutException
 import androidx.compose.ui.test.hasContentDescription
@@ -16,7 +17,11 @@ import androidx.compose.ui.test.performScrollToNode
 import androidx.compose.ui.test.performSemanticsAction
 import androidx.compose.ui.test.performTextInput
 import androidx.compose.ui.test.printToString
+import androidx.test.core.app.ApplicationProvider
+import io.github.ehb54.quiz.data.QuizStore
 import io.github.ehb54.quiz.data.SampleLibrary
+import io.github.ehb54.quiz.model.Quiz
+import io.github.ehb54.quiz.model.QuizSettings
 import org.junit.Rule
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
@@ -44,6 +49,34 @@ abstract class QuizUiTest {
     init {
         // The sample library reads the repository's samples/ folder instead of the download site.
         SampleLibrary.baseUrl = File("samples").absoluteFile.toURI().toString()
+    }
+
+    /** German words and their meanings, for [saveListeningQuiz]. */
+    protected val listeningWords = listOf("die Hand" to "hand", "der Fuß" to "foot", "das Auge" to "eye")
+
+    /**
+     * Before the app starts, saves the quiz "Listening" in its store, as a zip's
+     * "!hand.wav die Hand" sides give it: each card a word's sound with the word
+     * for after the answer, then its meaning; card ids 1, 2, 3.
+     */
+    protected fun saveListeningQuiz(settings: QuizSettings) {
+        val store = QuizStore(ApplicationProvider.getApplicationContext<Context>().filesDir)
+        store.mediaDir.mkdirs()
+        var quiz = Quiz("listening", "Listening", settings = settings)
+        for ((german, english) in listeningWords) {
+            File(store.mediaDir, "$english.wav").writeBytes("RIFF....WAVE".toByteArray())
+            quiz = quiz.addCard(german, english, mediaA = "$english.wav")
+        }
+        store.saveQuiz(quiz)
+    }
+
+    /** Opens the quiz [name] from the quiz list and starts a session of its [cards] due cards. */
+    protected fun startQuiz(name: String, cards: Int) {
+        compose.waitForText(name)
+        compose.onNodeWithText(name).performClick()
+        compose.waitForText("Start ($cards cards due)")
+        compose.onNodeWithText("Start ($cards cards due)").performClick()
+        compose.waitForText("Round 1 · $cards left")
     }
 
     /** Opens the sample library from the quiz list and waits for its catalog. */

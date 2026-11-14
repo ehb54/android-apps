@@ -58,8 +58,9 @@ private const val PAIR_SHOWN_MS = 500L
  * so the others stay put; a wrong pair is marked until the next tap. When the
  * block is cleared the next one appears. A sound tile plays when tapped, and is
  * picked; tapped again once picked, it only plays again. A right pair whose
- * card shows more once paired (a file's text, a sound) shows it on its tiles,
- * and plays the sound, for a moment before they go. Back does not leave.
+ * card shows more once paired (a file's text, a sound) shows it on its tiles
+ * for a moment before they go, and plays the sound when the quiz's "Play the
+ * sound after the answer" is on. Back does not leave.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -78,7 +79,7 @@ fun MatchScreen(
         val (left, right) = paired
         val card = quiz.card(left)
         val sound = card?.sound(sideA = true) ?: card?.sound(sideA = false)
-        if (sound != null) PlayOnce("$left:$right", File(mediaDir, sound))
+        if (sound != null && quiz.settings.soundAfter) PlayOnce("$left:$right", File(mediaDir, sound))
         LaunchedEffect(paired) {
             delay(PAIR_SHOWN_MS)
             vm.showedPair()

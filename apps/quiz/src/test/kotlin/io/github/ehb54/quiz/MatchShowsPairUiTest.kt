@@ -1,6 +1,5 @@
 package io.github.ehb54.quiz
 
-import android.content.Context
 import androidx.compose.ui.test.assertIsSelected
 import androidx.compose.ui.test.onAllNodesWithTag
 import androidx.compose.ui.test.onNodeWithContentDescription
@@ -8,15 +7,11 @@ import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.test.core.app.ActivityScenario
-import androidx.test.core.app.ApplicationProvider
-import io.github.ehb54.quiz.data.QuizStore
-import io.github.ehb54.quiz.model.Quiz
 import io.github.ehb54.quiz.model.QuizMode
 import io.github.ehb54.quiz.model.QuizSettings
 import io.github.ehb54.quiz.ui.tileTag
 import org.junit.Test
 import org.robolectric.shadows.ShadowMediaPlayer
-import java.io.File
 
 /**
  * Pair sounds with their meanings: a tap on a sound tile plays it and picks it,
@@ -30,26 +25,13 @@ class MatchShowsPairUiTest : QuizUiTest() {
 
     @Test
     fun aPairShowsItsWordBeforeItGoes() {
-        // A quiz as a zip's "!hand.wav die Hand" sides give it, already in the app's store.
-        val store = QuizStore(ApplicationProvider.getApplicationContext<Context>().filesDir)
-        store.mediaDir.mkdirs()
-        val words = listOf("die Hand" to "hand", "der Fuß" to "foot", "das Auge" to "eye")
-        var quiz = Quiz("listening", "Listening", settings = QuizSettings(mode = QuizMode.Match, shuffle = false))
-        for ((german, english) in words) {
-            File(store.mediaDir, "$english.wav").writeBytes("RIFF....WAVE".toByteArray())
-            quiz = quiz.addCard(german, english, mediaA = "$english.wav")
-        }
-        store.saveQuiz(quiz)
+        saveListeningQuiz(QuizSettings(mode = QuizMode.Match, shuffle = false))
         val hint = "Tap a tile on each side that belong together."
 
         ActivityScenario.launch(MainActivity::class.java).use {
-            compose.waitForText("Listening")
-            compose.onNodeWithText("Listening").performClick()
-            compose.waitForText("Start (3 cards due)")
-            compose.onNodeWithText("Start (3 cards due)").performClick()
-            compose.waitForText("Round 1 · 3 left")
+            startQuiz("Listening", 3)
 
-            for ((index, word) in words.withIndex()) {
+            for ((index, word) in listeningWords.withIndex()) {
                 val (german, english) = word
                 val sound = tileTag(index + 1L, sideA = true)
                 compose.onNodeWithTag(sound).performClick()
@@ -60,7 +42,7 @@ class MatchShowsPairUiTest : QuizUiTest() {
                 compose.onNodeWithText(english).performClick()
                 compose.onNodeWithText(german).assertExists()
                 compose.onNodeWithText(hint).assertExists()
-                if (index < words.lastIndex) {
+                if (index < listeningWords.lastIndex) {
                     compose.waitUntil(10_000) { compose.onAllNodesWithTag(sound).fetchSemanticsNodes().isEmpty() }
                     compose.onNodeWithText(german).assertDoesNotExist()
                     compose.onNodeWithText(english).assertDoesNotExist()
