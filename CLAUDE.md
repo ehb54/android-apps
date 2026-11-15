@@ -284,7 +284,8 @@ Keep these so publishing an app is a Console task, not a code rewrite:
 - Lint has to pass with no findings. Fix new warnings rather than adding a baseline;
   the few deliberate exceptions live in `lint.xml` with their reasons.
 - Ask only for the permissions an app needs; each one becomes a Data safety answer
-  in the Play Console, and every app needs a privacy policy URL there. Pick files
+  in the Play Console, and every app needs a privacy policy URL there. Data an
+  app sends is a Data safety answer too (Quiz's issue reports, see its DESIGN.md). Pick files
   and photos through the system pickers (`OpenDocument`, `CreateDocument`,
   `PickVisualMedia`), which need no storage permission.
 - No native code at present. Adding any brings Play's 16 KB page-size requirement.

@@ -13,7 +13,8 @@ import org.robolectric.shadows.ShadowMediaPlayer
 
 /**
  * "Play the sound after the answer" starts off: the whole card shows after the
- * answer without a sound, and its button still plays it.
+ * answer without a sound, and its button still plays it. Peek shows the card's
+ * hint there, which costs nothing once the card is answered.
  */
 class AfterAnswerQuietUiTest : QuizUiTest() {
     init {
@@ -22,7 +23,7 @@ class AfterAnswerQuietUiTest : QuizUiTest() {
 
     @Test
     fun theSoundWaitsForItsButton() {
-        saveListeningQuiz(QuizSettings(mode = QuizMode.Pick, shuffle = false, choices = 3))
+        saveListeningQuiz(QuizSettings(mode = QuizMode.Pick, shuffle = false, choices = 3), hints = true)
 
         ActivityScenario.launch(MainActivity::class.java).use {
             startQuiz("Listening", 3)
@@ -34,6 +35,20 @@ class AfterAnswerQuietUiTest : QuizUiTest() {
             compose.onNodeWithContentDescription("Stop sound").assertDoesNotExist()
             compose.onNodeWithContentDescription("Play sound").performClick()
             compose.onNodeWithContentDescription("Stop sound").assertExists()
+
+            compose.onNodeWithText("the hand").assertDoesNotExist()
+            compose.onNodeWithText("Peek").performClick()
+            compose.onNodeWithText("the hand").assertExists()
+            compose.onNodeWithText("Next").performClick()
+            // Card 1 was right the first time: no miss for peeking after the answer.
+            for (id in 2L..3L) {
+                compose.waitForText("Round 1 · ${4 - id} left")
+                compose.onNodeWithContentDescription("Stop sound").performClick()
+                compose.onNodeWithTag(choiceTag(id)).performClick()
+                compose.onNodeWithText("Next").performClick()
+            }
+            compose.waitForText("Done")
+            compose.onNodeWithText("Right first time: 3 of 3").assertExists()
         }
     }
 }

@@ -3,6 +3,7 @@ package io.github.ehb54.quiz.data
 import io.github.ehb54.quiz.engine.MatchSession
 import io.github.ehb54.quiz.engine.Session
 import io.github.ehb54.quiz.model.Quiz
+import kotlinx.serialization.builtins.ListSerializer
 import kotlinx.serialization.json.Json
 import java.io.File
 import java.nio.file.Files
@@ -18,6 +19,8 @@ class QuizStore(root: File) {
     private val quizDir = File(root, "quizzes")
     private val sessionFile = File(root, "session.json")
     private val matchFile = File(root, "match.json")
+    /** Issue reports not sent yet (see Reports.kt). */
+    private val reportsFile = File(root, "reports.json")
     /** Card pictures and sounds. The folder is named for pictures, which came first. */
     val mediaDir = File(root, "images")
 
@@ -67,6 +70,21 @@ class QuizStore(root: File) {
             matchFile.delete()
         } else {
             writeAtomically(matchFile, json.encodeToString(MatchSession.serializer(), match))
+        }
+    }
+
+    /** Reports waiting to be sent, oldest first. */
+    fun loadReports(): List<Report> {
+        if (!reportsFile.exists()) return emptyList()
+        return runCatching { json.decodeFromString(ListSerializer(Report.serializer()), reportsFile.readText()) }
+            .getOrDefault(emptyList())
+    }
+
+    fun saveReports(reports: List<Report>) {
+        if (reports.isEmpty()) {
+            reportsFile.delete()
+        } else {
+            writeAtomically(reportsFile, json.encodeToString(ListSerializer(Report.serializer()), reports))
         }
     }
 

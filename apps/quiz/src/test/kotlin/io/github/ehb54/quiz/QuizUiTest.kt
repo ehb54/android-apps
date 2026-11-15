@@ -57,15 +57,16 @@ abstract class QuizUiTest {
     /**
      * Before the app starts, saves the quiz "Listening" in its store, as a zip's
      * "!hand.wav die Hand" sides give it: each card a word's sound with the word
-     * for after the answer, then its meaning; card ids 1, 2, 3.
+     * for after the answer, then its meaning; card ids 1, 2, 3. With [hints],
+     * each card's hint is "the hand" and so on.
      */
-    protected fun saveListeningQuiz(settings: QuizSettings) {
+    protected fun saveListeningQuiz(settings: QuizSettings, hints: Boolean = false) {
         val store = QuizStore(ApplicationProvider.getApplicationContext<Context>().filesDir)
         store.mediaDir.mkdirs()
         var quiz = Quiz("listening", "Listening", settings = settings)
         for ((german, english) in listeningWords) {
             File(store.mediaDir, "$english.wav").writeBytes("RIFF....WAVE".toByteArray())
-            quiz = quiz.addCard(german, english, mediaA = "$english.wav")
+            quiz = quiz.addCard(german, english, mediaA = "$english.wav", hint = if (hints) "the $english" else "")
         }
         store.saveQuiz(quiz)
     }

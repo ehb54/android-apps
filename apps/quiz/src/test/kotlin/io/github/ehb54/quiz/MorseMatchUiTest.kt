@@ -1,5 +1,6 @@
 package io.github.ehb54.quiz
 
+import androidx.compose.ui.test.assertIsNotSelected
 import androidx.compose.ui.test.assertIsSelected
 import androidx.compose.ui.test.onAllNodesWithTag
 import androidx.compose.ui.test.onAllNodesWithText
@@ -11,7 +12,7 @@ import androidx.test.core.app.ActivityScenario
 import io.github.ehb54.quiz.ui.tileTag
 import org.junit.Test
 
-/** Pair sounds with letters: a tap anywhere on a sound tile plays it and picks it. */
+/** Pair sounds with letters: a tap on a sound tile plays it and picks it, a second plays it again, a third lets it go. */
 class MorseMatchUiTest : MorseUiTest() {
     @Test
     fun pairSoundsWithLetters() {
@@ -20,13 +21,19 @@ class MorseMatchUiTest : MorseUiTest() {
             start()
 
             // Sounds on the left, letters on the right (block 1: A to F). A tap on A's
-            // sound plays it and picks it; tapped again it only plays again, still picked.
+            // sound plays it and picks it; tapped again it plays again, still picked;
+            // a third tap lets it go, and a fourth picks it again.
             compose.onNodeWithText("Sound 6").assertExists()
             compose.onNodeWithText("Z").assertDoesNotExist()
             val soundOfA = tileTag(1, sideA = true)
             compose.onNodeWithTag(soundOfA).performClick()
             compose.onNodeWithContentDescription("Stop sound").assertExists()
             compose.onNodeWithTag(soundOfA).assertIsSelected()
+            compose.onNodeWithTag(soundOfA).performClick()
+            compose.onNodeWithTag(soundOfA).assertIsSelected()
+            compose.onNodeWithTag(soundOfA).performClick()
+            compose.onNodeWithTag(soundOfA).assertIsNotSelected()
+            compose.onNodeWithContentDescription("Stop sound").assertDoesNotExist()
             compose.onNodeWithTag(soundOfA).performClick()
             compose.onNodeWithTag(soundOfA).assertIsSelected()
             compose.onNodeWithText("A").performClick()

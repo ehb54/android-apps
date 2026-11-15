@@ -58,12 +58,14 @@ private const val PAIR_SHOWN_MS = 500L
  * each shuffled: tap one on each side to pair them. Paired tiles leave a gap,
  * so the others stay put; a wrong pair is marked until the next tap. When the
  * block is cleared the next one appears. A sound tile plays when tapped, and is
- * picked; tapped again once picked, it only plays again. A right pair whose
+ * picked; tapped again once picked, it plays again, and a third tap lets it go
+ * (any other picked tile is let go by a second tap). A right pair whose
  * card shows more once paired (a file's text, a sound) shows it on its tiles
  * for a moment before they go, and plays the sound when the quiz's "Play the
  * sound after the answer" is on. In a quiz with hints, Peek beside the line
  * at the top shows the picked tile's hint on it, and its card counts as
- * missed. Back does not leave.
+ * missed. The flag in the top bar reports an issue with the tiles on screen,
+ * a picked one first. Back does not leave.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -104,17 +106,35 @@ fun MatchScreen(
             pickedRight = r
         }
     }
+    var reporting by rememberSaveable { mutableStateOf(false) }
+    if (reporting) {
+        ReportDialog(R.string.report_about_tiles, quiz.cards.any { it.hint.isNotBlank() }, { reporting = false }) { problem, note ->
+            reporting = false
+            vm.report(problem, note, pickedLeft = pickedLeft, pickedRight = pickedRight)
+        }
+    }
+    // The picked sound tile has been played again, so the next tap lets it go.
+    var replayed by rememberSaveable(session.round, session.left) { mutableStateOf(false) }
     fun tap(id: Long, sideA: Boolean) {
         val card = quiz.card(id) ?: return
-        val sound = (if (sideA) card.mediaA else card.mediaB)?.takeIf(::isSound)
-        if (sound != null) player.play(File(mediaDir, sound))
+        val sound = (if (sideA) card.mediaA else card.mediaB)?.takeIf(::isSound)?.let { File(mediaDir, it) }
         val picked = if (sideA) pickedLeft else pickedRight
         when {
-            id != picked -> if (sideA) pick(id, null) else pick(null, id)
-            // A picked sound tile only plays again; any other picked tile is let go.
-            sound != null -> Unit
-            sideA -> pickedLeft = null
-            else -> pickedRight = null
+            id != picked -> {
+                replayed = false
+                if (sound != null) player.play(sound)
+                if (sideA) pick(id, null) else pick(null, id)
+            }
+            // A picked sound tile plays again once, then is let go; any other picked tile is let go at once.
+            sound != null && !replayed -> {
+                replayed = true
+                player.play(sound)
+            }
+            else -> {
+                replayed = false
+                if (sound != null && player.playing == sound) player.stop()
+                if (sideA) pickedLeft = null else pickedRight = null
+            }
         }
     }
 
@@ -122,7 +142,10 @@ fun MatchScreen(
         topBar = {
             TopAppBar(
                 title = { Text(quiz.name, maxLines = 1, overflow = TextOverflow.Ellipsis) },
-                actions = { RoundCounter(session.round, session.remaining, vm::abandonSession) },
+                actions = {
+                    ReportButton { reporting = true }
+                    RoundCounter(session.round, session.remaining, vm::abandonSession)
+                },
             )
         },
         snackbarHost = { SnackbarHost(snackbar) },

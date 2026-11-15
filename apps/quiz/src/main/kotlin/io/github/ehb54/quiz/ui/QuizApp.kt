@@ -36,7 +36,9 @@ private fun CurrentScreen(state: UiState, vm: QuizViewModel, snackbar: SnackbarH
             after.direction,
             afterQuiz.settings.soundAfter,
             vm.mediaDir,
-            vm::next,
+            hints = afterQuiz.cards.any { it.hint.isNotBlank() },
+            onReport = { problem, note -> vm.report(problem, note) },
+            onNext = vm::next,
         )
         return
     }

@@ -173,6 +173,21 @@
     <string name="peek">Peek</string>
     <string name="hint">Hint</string>
     <string name="hint_help">Shown only on Peek, which counts as a miss</string>
+    <!-- Report an issue (with a card): sent in the background, nothing shown but a message. -->
+    <string name="report_issue">Report an issue</string>
+    <string name="report_about_card">Sent along: this card, the quiz, and the app and system versions.</string>
+    <string name="report_about_choices">Sent along: this card and its choices, the quiz, and the app and system versions.</string>
+    <string name="report_about_tiles">Sent along: the tiles on screen (a picked one first), the quiz, and the app and system versions.</string>
+    <string name="report_picture">Picture wrong</string>
+    <string name="report_sound">Sound or voice wrong</string>
+    <string name="report_text">Word or spelling wrong</string>
+    <string name="report_hint">English (hint) wrong</string>
+    <string name="report_pair">These don\'t belong together</string>
+    <string name="report_other">Something else</string>
+    <string name="report_note">What\'s wrong (optional)</string>
+    <string name="report_send">Send</string>
+    <string name="report_sent">Report sent. Thank you.</string>
+    <string name="report_saved">Report saved. It goes out once the app can reach the internet.</string>
     <string name="answer_is">The answer is</string>
     <string name="hide_answer">Hide it and answer</string>
     <string name="wrong">Not quite. Try again.</string>

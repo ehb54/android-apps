@@ -3,7 +3,6 @@ package io.github.ehb54.quiz.ui
 import android.os.SystemClock
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.BorderStroke
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -14,6 +13,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -54,11 +54,13 @@ private const val TILE_ABOVE = 4
 /**
  * Pick mode: one card's prompt (text, picture or sound) and a few choices from
  * the other side. A wrong choice is marked and can't be picked again; the card
- * stays until the right one is picked. A sound choice has a button to play it;
- * a tap elsewhere on it picks it. A card with a hint has Peek beside the
+ * stays until the right one is picked. A sound choice takes two taps: the
+ * first plays it and marks it, a second on the marked one picks it, so each
+ * can be heard first. A card with a hint has Peek beside the
  * line above the choices, which shows it and counts as a miss (not in speed
- * mode). Back does not leave, except in speed mode, which goes on until
- * stopped: there Back asks whether to stop.
+ * mode). The flag in the top bar reports an issue with the card or its
+ * choices; the clock stops meanwhile. Back does not leave, except in speed
+ * mode, which goes on until stopped: there Back asks whether to stop.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -88,11 +90,12 @@ fun PickScreen(
             dismissButton = { TextButton(onClick = { confirmStop = false }) { Text(stringResource(R.string.keep_going)) } },
         )
     }
+    var reporting by rememberSaveable { mutableStateOf(false) }
     val card = session.current?.let(quiz::card) ?: return
     val direction = session.direction
     // The clock starts when the card shows, or when its sound has played, and
-    // stops while paused (or while asked whether to stop).
-    val clockStopped = paused || confirmStop
+    // stops while paused (or while asked whether to stop, or reporting).
+    val clockStopped = paused || confirmStop || reporting
     val clock = remember(session.round, card.id, session.missesOnCurrent) {
         Stopwatch(SystemClock::elapsedRealtime, running = !clockStopped)
     }
@@ -101,12 +104,21 @@ fun PickScreen(
     val player = LocalSoundPlayer.current
     LaunchedEffect(paused) { if (paused) player.stop() }
     val colors = MaterialTheme.colorScheme
+    // The sound choice last played, which a second tap picks; none after a wrong pick.
+    var heard by rememberSaveable(session.round, card.id, session.missesOnCurrent) { mutableStateOf<Long?>(null) }
+    if (reporting) {
+        ReportDialog(R.string.report_about_choices, quiz.cards.any { it.hint.isNotBlank() }, { reporting = false }) { problem, note ->
+            reporting = false
+            vm.report(problem, note, marked = heard)
+        }
+    }
 
     Scaffold(
         topBar = {
             TopAppBar(
                 title = { Text(quiz.name, maxLines = 1, overflow = TextOverflow.Ellipsis) },
                 actions = {
+                    if (!paused) ReportButton { reporting = true }
                     RoundCounter(session.round, session.remaining, vm::abandonSession, level = speed?.level)
                     if (session.timed && !paused) PauseButton(vm::pause)
                     if (speed != null) TextButton(onClick = vm::stopSpeed) { Text(stringResource(R.string.stop)) }
@@ -150,14 +162,23 @@ fun PickScreen(
                 choices.chunked(columns).forEachIndexed { row, cells ->
                     Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
                         cells.forEachIndexed { column, choice ->
+                            val media = choice.answerMedia(direction)
                             Choice(
                                 text = choice.answer(direction),
-                                media = choice.answerMedia(direction),
+                                media = media,
                                 mediaDir = mediaDir,
                                 number = row * columns + column + 1,
                                 ruledOut = choice.id in session.ruledOut,
+                                marked = choice.id == heard,
                                 modifier = Modifier.weight(1f).testTag(choiceTag(choice.id)),
-                            ) { vm.pick(choice.id, clock.millis) }
+                            ) {
+                                if (media != null && isSound(media) && choice.id != heard) {
+                                    heard = choice.id
+                                    player.play(File(mediaDir, media))
+                                } else {
+                                    vm.pick(choice.id, clock.millis)
+                                }
+                            }
                         }
                         repeat(columns - cells.size) { Spacer(Modifier.weight(1f)) }
                     }
@@ -174,8 +195,9 @@ private fun Choice(
     mediaDir: File,
     number: Int,
     ruledOut: Boolean,
+    marked: Boolean,
     modifier: Modifier = Modifier,
-    onPick: () -> Unit,
+    onTap: () -> Unit,
 ) {
     val colors = MaterialTheme.colorScheme
     val picture = media != null && !isSound(media)
@@ -184,14 +206,26 @@ private fun Choice(
             .fillMaxWidth()
             .height(if (picture) 120.dp else 64.dp)
             .alpha(if (ruledOut) 0.6f else 1f)
-            .clickable(enabled = !ruledOut, role = Role.Button, onClick = onPick),
+            .selectable(selected = marked, enabled = !ruledOut, role = Role.Button, onClick = onTap),
         shape = MaterialTheme.shapes.medium,
-        color = if (ruledOut) colors.errorContainer else colors.surfaceVariant,
-        border = BorderStroke(1.dp, if (ruledOut) colors.error else colors.outlineVariant),
+        color = when {
+            ruledOut -> colors.errorContainer
+            marked -> colors.primaryContainer
+            else -> colors.surfaceVariant
+        },
+        border = BorderStroke(
+            if (marked) 2.dp else 1.dp,
+            when {
+                ruledOut -> colors.error
+                marked -> colors.primary
+                else -> colors.outlineVariant
+            },
+        ),
     ) {
         Box(Modifier.padding(8.dp), contentAlignment = Alignment.Center) {
             if (media != null && isSound(media)) {
-                SoundTileContent(File(mediaDir, media), number)
+                // The whole choice plays (first tap) and picks (second): no button of its own.
+                SoundTileContent(File(mediaDir, media), number, button = false)
             } else if (media != null) {
                 CardImage(File(mediaDir, media), Modifier.fillMaxSize(), maxSide = 512)
             } else {

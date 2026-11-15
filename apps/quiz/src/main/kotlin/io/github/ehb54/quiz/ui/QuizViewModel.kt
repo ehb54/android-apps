@@ -8,9 +8,18 @@ import androidx.annotation.PluralsRes
 import androidx.annotation.StringRes
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
+import io.github.ehb54.quiz.BuildConfig
 import io.github.ehb54.quiz.R
 import io.github.ehb54.quiz.data.QuizStore
+import io.github.ehb54.quiz.data.Report
+import io.github.ehb54.quiz.data.ReportForm
+import io.github.ehb54.quiz.data.ReportProblem
 import io.github.ehb54.quiz.data.SampleLibrary
+import io.github.ehb54.quiz.data.parseFormLink
+import io.github.ehb54.quiz.data.reportCards
+import io.github.ehb54.quiz.data.reportMode
+import io.github.ehb54.quiz.data.reportQuiz
+import io.github.ehb54.quiz.data.sendReport
 import io.github.ehb54.quiz.data.storeImage
 import io.github.ehb54.quiz.data.storeSound
 import io.github.ehb54.quiz.engine.AnswerTimes
@@ -34,10 +43,10 @@ import io.github.ehb54.quiz.engine.goOn
 import io.github.ehb54.quiz.engine.isXlsx
 import io.github.ehb54.quiz.engine.isZip
 import io.github.ehb54.quiz.engine.pairTiles
-import io.github.ehb54.quiz.engine.peek as peekCard
-import io.github.ehb54.quiz.engine.peekTile as peekAtTile
 import io.github.ehb54.quiz.engine.parseQzx
 import io.github.ehb54.quiz.engine.parseSide
+import io.github.ehb54.quiz.engine.peek as peekCard
+import io.github.ehb54.quiz.engine.peekTile as peekAtTile
 import io.github.ehb54.quiz.engine.pickAnswer
 import io.github.ehb54.quiz.engine.quizBundle
 import io.github.ehb54.quiz.engine.readLimited
@@ -181,6 +190,10 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
             }
             Triple(loaded, store.loadSession(), store.loadMatch())
         }
+        // Reports that could not be sent before wait in the store.
+        val waiting = withContext(diskDispatcher) { store.loadReports() }
+        outbox = waiting + outbox
+        sendReports()
         val active = session?.takeIf { s -> !s.finished && loaded.quizzes.any { it.id == s.quizId } }
         val activeMatch = match?.takeIf { m -> !m.finished && loaded.quizzes.any { it.id == m.quizId } }
         _state.value = UiState(
@@ -424,8 +437,12 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
     /** The step a pair on show (UiState.paired) takes once it has been shown. */
     private var shownStep: MatchStep? = null
 
+    /** The last right pair made, for an issue report. */
+    private var lastPair: Pair<Long, Long>? = null
+
     private fun startMatching(quiz: Quiz) {
         shownStep = null
+        lastPair = null
         val match = startMatch(quiz)
         if (match == null) {
             message(text(R.string.nothing_due))
@@ -447,6 +464,7 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
         val quiz = state.quiz(match.quizId) ?: return
         val step = pairTiles(quiz, match, left, right)
         if (step.outcome == PairOutcome.Ignored) return
+        if (step.outcome != PairOutcome.Wrong) lastPair = left to right
         if (step.outcome != PairOutcome.Wrong && quiz.card(left)?.hasAfter() == true) {
             shownStep = step
             _state.value = state.copy(mismatch = null, paired = left to right)
@@ -782,6 +800,89 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
             out.write(qzx.toByteArray(Charsets.UTF_8))
         } else {
             writeZip(out, quiz.name.replace(Regex("[/\\\\]"), "_"), qzx, files.associateWith { store.mediaFile(it) })
+        }
+    }
+
+    // Issue reports
+
+    /** Reports not sent yet, oldest first; also on disk until sent. Only touched on the main thread. */
+    private var outbox: List<Report> = emptyList()
+    private var sending = false
+    /** Say how the report just made went, once its sending is over. */
+    private var announce = false
+
+    /**
+     * Reports [problem] (and [note]) with what is on screen: the card shown
+     * after an answer; in Match the tiles, [pickedLeft] and [pickedRight] first,
+     * and the last pair made; otherwise the card asked and its choices,
+     * [marked] (the sound choice played last) noted. It goes in the background
+     * and waits on the phone until it can.
+     */
+    fun report(
+        problem: ReportProblem,
+        note: String,
+        marked: Long? = null,
+        pickedLeft: Long? = null,
+        pickedRight: Long? = null,
+    ) {
+        val state = _state.value
+        val after = state.after
+        val session = state.session
+        val match = state.match
+        val about: Triple<Quiz, String, String> = when {
+            after != null -> {
+                val quiz = state.quiz(after.quizId) ?: return
+                val card = quiz.card(after.cardId) ?: return
+                Triple(quiz, reportMode(quiz.settings.mode, after.direction), reportCards(card))
+            }
+            state.screen == Screen.Matching && match != null -> {
+                val quiz = state.quiz(match.quizId) ?: return
+                Triple(quiz, reportMode(match), reportCards(quiz, match, pickedLeft, pickedRight, lastPair))
+            }
+            session != null -> {
+                val quiz = state.quiz(session.quizId) ?: return
+                Triple(quiz, reportMode(session), reportCards(quiz, session, marked))
+            }
+            else -> return
+        }
+        val (quiz, mode, cards) = about
+        val report = Report(
+            problem = problem.form,
+            note = note.trim(),
+            quiz = reportQuiz(quiz),
+            mode = mode,
+            cards = cards,
+            app = "Quiz ${BuildConfig.VERSION_NAME} (${BuildConfig.VERSION_CODE})",
+            device = deviceDescription(),
+        )
+        outbox = outbox + report
+        val waiting = outbox
+        persist { store.saveReports(waiting) }
+        announce = true
+        sendReports()
+    }
+
+    /** Sends the outbox, oldest first, stopping at the first that fails; what is left waits for the next try. */
+    private fun sendReports() {
+        if (sending || outbox.isEmpty()) return
+        sending = true
+        val batch = outbox
+        viewModelScope.launch {
+            val sent = withContext(Dispatchers.IO) {
+                val target = parseFormLink(ReportForm.link) ?: return@withContext 0
+                batch.takeWhile { sendReport(target, it) }.size
+            }
+            sending = false
+            // Reports made meanwhile were added after the batch.
+            outbox = outbox.drop(sent)
+            val waiting = outbox
+            persist { store.saveReports(waiting) }
+            if (sent == batch.size && waiting.isNotEmpty()) {
+                sendReports()
+            } else if (announce) {
+                announce = false
+                message(text(if (waiting.isEmpty()) R.string.report_sent else R.string.report_saved))
+            }
         }
     }
 

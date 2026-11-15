@@ -88,8 +88,9 @@ is dropped, as the original import did.
   has a different version it shows "update available": Update replaces the
   cards and keeps the quiz's name, settings and progress on unchanged cards.
   Removing a sample deletes the quiz (after asking); it can be added again.
-  This is the app's only network use (the INTERNET permission): it fetches
-  public files and sends nothing about the user (for Play's Data safety form).
+  With issue reports (see Report an issue), this is the app's only network
+  use (the INTERNET permission): it fetches public files, and sends only the
+  reports the user makes (for Play's Data safety form).
 - **Pictures and sounds instead of commands.** A side starting with `!` ran a
   program in the original (for example a molecule viewer). Here a side can be
   a picture or a sound from the phone (see Sounds below). Neither can be
@@ -148,6 +149,8 @@ Decisions made with eb:
   (eb: pressing play "should select" the tile); it used to have a button that
   only played, so listening never made a pair. Now a sound tapped while a tile
   on the other side is picked makes a pair: listen first, then pick its match.
+  A third tap on a picked sound tile lets it go (and stops it), as a second
+  tap does any other picked tile (eb, 2026-11-14: "some way to unselect").
 - **No leaving**, as in typed sessions: Back only says how many cards are left,
   and the session (block, pairs made, misses) is saved after every pair and
   resumes on the next launch. The debug-only long press on the round counter
@@ -173,8 +176,13 @@ both, and `ui/PickScreen.kt`). Decisions made with eb:
   picking from a few choices is easier than typing, so it never makes a card
   learned for typing or for Match.
 - **Pictures and sounds** can be prompts and choices; a card whose answer is a
-  picture or a sound is asked in Pick mode but not in typed mode. A sound
-  choice plays from its button and is picked by a tap elsewhere on it.
+  picture or a sound is asked in Pick mode but not in typed mode.
+- **Sound choices take two taps** (eb, 2026-11-14: picking a sound meant
+  pressing each to hear it): the first tap on one plays it and marks it, a
+  second on the marked one picks it. Another tap plays and marks another, so
+  each can be heard, as often as wanted, before one is picked. A wrong pick
+  clears the mark. Before, each had a small play button and a tap elsewhere
+  on it picked it, so a tap meant to listen could pick.
 - **Tiles for many pictures** (eb, 2026-11-05): more than four choices that
   are all pictures or sounds sit two to a row, at the same picture size, so
   eight take four rows. Text choices keep the whole width, since long answers
@@ -352,8 +360,10 @@ itself, and nothing breaking the flow of a quiz.
   `peekTile`). One miss per card, however often it is peeked at; peeking at a
   Match filler costs nothing, since fillers are not scored. Peeks count in the
   summary's misses. The hint is gone when the card comes back.
-- **Not after the answer:** the whole card after a right answer, and a pair
-  just made, show no hint.
+- **After the answer:** the whole card after a right answer (Type and Pick)
+  has Peek too, at no cost, since the card is already answered (eb,
+  2026-11-14: "also want peek on the pick right page"); nothing shows the hint
+  by itself there either. A pair just made in Match shows none.
 - **In a zip:** a side may end with the hint, " ?" and then the hint, which
   starts with a non-space: `!noun-Hand.webp ?hand`, `!hand.mp3 die Hand ?hand`.
   A "?" ending a word ("Wer ist das?") or standing alone stays text. Export
@@ -364,6 +374,50 @@ itself, and nothing breaking the flow of a quiz.
 - **Editing:** the card editor has a Hint field.
 - **Updating a sample** keeps the progress of its cards, since a card's hint,
   like a file's text, is not part of what identifies it.
+
+## Report an issue
+
+Added 2026-11-14 (eb: a way to say when a pair's voice or picture is wrong,
+"invisible to the user", no GitHub issues, nothing of our own on the
+internet). Reports go to a Google Form in the background; the user never
+sees the form (`data/Reports.kt`).
+
+- **Where:** the flag in the top bar of Type, Pick, Speed and Match sessions
+  and of the whole card after an answer opens *Report an issue*: a short list
+  of what is wrong (picture, sound or voice, word or spelling, English hint,
+  these don't belong together, something else; the hint only in a quiz with
+  hints) and, for now, a note. Send closes it with a message; the quiz carries
+  on as it was, and a timed card's clock stops while the dialog is open.
+- **What goes with it** (questions of the form, `REPORT_FIELDS`): Problem,
+  Note, Quiz (name, and a sample's file and version), Mode ("Pick A → B, round
+  1"), Cards, App (version name and code) and Device (Android version and
+  API level, maker and model; on the desktop the OS, its version and the
+  processor, and Java). Cards lists what was on screen, each card by its number
+  in the quiz (a sample's cards are numbered in the file's order) and both
+  sides, files as [picture] and [sound]: in Type the card asked, in Pick also
+  its choices in screen order (the sound choice played last marked, the
+  ruled-out and the right one noted), in Match a picked tile first, the last
+  pair made, then the tiles still on screen by column and place, after an
+  answer the card shown. That is enough to find a sample's picture or sound in
+  `tools/pictures` and `tools/sounds`, by the word it goes with.
+- **Notes for now:** the note is there to learn what the list should hold;
+  before the app goes public `REPORT_NOTES` turns it off, so the form takes
+  only the list's answers and the app's own text.
+- **The form:** Google Forms, made by eb, with short-answer questions named
+  as in `REPORT_FIELDS` (Cards and Note paragraphs), not collecting email
+  addresses or needing a sign-in. Its pre-filled link, each question answered
+  with its own name, goes in `REPORT_FORM_LINK`; the app finds the questions'
+  entries from it and posts to the form's formResponse address. The link is in
+  every build anyway (anyone could find it in the app), so it is in the repo:
+  the form takes only text into eb's sheet, and can be closed or replaced.
+  An empty link makes reports wait.
+- **Offline:** a report that can't be sent waits on the phone
+  (`reports.json`, `QuizStore.loadReports`) and goes with the next report, or
+  when the app next starts; the message says it was saved rather than sent.
+- **Play:** reports are data the app sends, so Data safety lists them as
+  user-initiated (app activity: other user-generated content; app info and
+  performance: other), sent only when the user taps Send, and the privacy
+  policy says so.
 
 ## Due counts
 
