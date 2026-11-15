@@ -325,6 +325,46 @@ what shows only once the card is answered, so it never gives the answer away:
   also for verbs. The sounds are MP3, 32 kHz mono at 40 kbit/s, about 4 KB
   a word.
 
+### Peek
+
+Added 2026-11-14 (eb: quizzes of pictures and German, or German sounds and
+pictures, have no English, and it "would be nice to have the option to show"
+it). Of the options offered (English after the answer, a translation field,
+a peek before answering), eb took the peek only, one that "rejects the
+answer (marks as a fail)", with two conditions: no English showing up by
+itself, and nothing breaking the flow of a quiz.
+
+- **A card's hint** (`Card.hint`) shows only on request. The picture, listening
+  and dictation samples carry the English of their German word there, from
+  the reviewed word lists (`tools/wordlists`, `nouns.tsv`/`verbs.tsv`).
+- **Type and Pick:** a card with a hint has **Peek**, under the prompt in
+  Type and beside the line above the choices in Pick. A tap shows the hint in
+  the button's place, the same height, so nothing moves; what is typed stays,
+  the field keeps the keyboard, and the clock runs on. Nothing else happens:
+  no dialog, no extra screen. Speed mode has no Peek.
+- **Match:** in a quiz with hints, Peek sits beside the line at the top and
+  acts on the picked tile: the hint shows under that tile (only that one, so
+  its partner is not marked), and the tile stays picked. With nothing picked,
+  or the picked tile's hint already showing, Peek is greyed out.
+- **The cost:** the card counts as missed, as after a wrong answer or pair,
+  however it is then answered: it comes back next round, is not right the
+  first time, and its level drops (`engine/Session.kt` `peek`, `engine/Match.kt`
+  `peekTile`). One miss per card, however often it is peeked at; peeking at a
+  Match filler costs nothing, since fillers are not scored. Peeks count in the
+  summary's misses. The hint is gone when the card comes back.
+- **Not after the answer:** the whole card after a right answer, and a pair
+  just made, show no hint.
+- **In a zip:** a side may end with the hint, " ?" and then the hint, which
+  starts with a non-space: `!noun-Hand.webp ?hand`, `!hand.mp3 die Hand ?hand`.
+  A "?" ending a word ("Wer ist das?") or standing alone stays text. Export
+  writes it at the end of side A, and a quiz with hints but no pictures or
+  sounds is exported as a zip so the hints survive (plain .qzx has no room for
+  them). Versions before this one read "?hand" as part of the side's text,
+  shown after the answer, so the app is updated before its samples.
+- **Editing:** the card editor has a Hint field.
+- **Updating a sample** keeps the progress of its cards, since a card's hint,
+  like a file's text, is not part of what identifies it.
+
 ## Due counts
 
 The quiz list shows what is due in each mode, Type and Pick both ways (→ is

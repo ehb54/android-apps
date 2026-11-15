@@ -70,6 +70,22 @@ abstract class QuizUiTest {
         store.saveQuiz(quiz)
     }
 
+    /**
+     * Before the app starts, saves the quiz "Dictation" as the samples' dictation
+     * zips give it ("!hand.wav ?hand" / "die Hand"): each card a word's sound,
+     * then the word, with its English as the card's hint; card ids 1, 2, 3.
+     */
+    protected fun saveDictationQuiz(settings: QuizSettings) {
+        val store = QuizStore(ApplicationProvider.getApplicationContext<Context>().filesDir)
+        store.mediaDir.mkdirs()
+        var quiz = Quiz("dictation", "Dictation", settings = settings)
+        for ((german, english) in listeningWords) {
+            File(store.mediaDir, "$english.wav").writeBytes("RIFF....WAVE".toByteArray())
+            quiz = quiz.addCard("", german, mediaA = "$english.wav", hint = english)
+        }
+        store.saveQuiz(quiz)
+    }
+
     /** Opens the quiz [name] from the quiz list and starts a session of its [cards] due cards. */
     protected fun startQuiz(name: String, cards: Int) {
         compose.waitForText(name)

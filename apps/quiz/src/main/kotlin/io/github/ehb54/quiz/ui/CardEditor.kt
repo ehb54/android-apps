@@ -36,7 +36,7 @@ import java.io.File
  * a sound can't be typed, so a card with both sides as files is only asked in
  * Pick and Match. A picture or a sound may have its text (the word it says),
  * and a side shown as text or a picture a sound; both show only after the
- * answer. Editing keeps the card's stats.
+ * answer. The card's hint shows only on request (Peek). Editing keeps the card's stats.
  */
 @Composable
 fun CardEditor(
@@ -54,6 +54,7 @@ fun CardEditor(
     var mediaB by rememberSaveable { mutableStateOf(card?.mediaB) }
     var soundA by rememberSaveable { mutableStateOf(card?.soundA) }
     var soundB by rememberSaveable { mutableStateOf(card?.soundB) }
+    var hint by rememberSaveable { mutableStateOf(card?.hint.orEmpty()) }
     var pickingA by rememberSaveable { mutableStateOf(true) }
     // Picking a sound for after the answer rather than the side's own file.
     var pickingAfter by rememberSaveable { mutableStateOf(false) }
@@ -115,6 +116,14 @@ fun CardEditor(
                     onPickAfterSound = { pickSound(false, after = true) },
                     onRemoveAfterSound = { soundB = null },
                 ) { mediaB = null }
+                OutlinedTextField(
+                    value = hint,
+                    onValueChange = { hint = it },
+                    label = { Text(stringResource(R.string.hint)) },
+                    supportingText = { Text(stringResource(R.string.hint_help)) },
+                    singleLine = true,
+                    modifier = Modifier.fillMaxWidth(),
+                )
             }
         },
         confirmButton = {
@@ -128,6 +137,7 @@ fun CardEditor(
                         mediaB = mediaB,
                         soundA = soundA.takeIf { !isSound(mediaA) },
                         soundB = soundB.takeIf { !isSound(mediaB) },
+                        hint = hint.trim(),
                     )
                     onSave(edited)
                 },

@@ -81,7 +81,9 @@ The review files and `list.json` are the source of truth; `nouns.tsv` and
    inside the zip), and `<Title> verbs.xlsx`. A list with its own pictures
    (`../pictures/<list>/picks.tsv`, see `../pictures/README.md`) also gets
    `<Title> pictures <model>.zip` and `<Title> verb pictures <model>.zip`
-   (`Core pictures ERNIE.zip`). Each zip has a credits file, and the same
+   (`Core pictures ERNIE.zip`). Each picture side ends with the word's
+   English as the card's hint, which the app shows only on Peek
+   (`!noun-Hand.webp ?hand`). Each zip has a credits file, and the same
    pictures always give the same zip. These are
    online-only samples: the app downloads them from the site when added. The
    picture zips come out without sounds: on the machine with the sounds, run

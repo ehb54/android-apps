@@ -171,6 +171,27 @@ class MatchTest {
     }
 
     @Test
+    fun aPeekAtATileIsAMissForAScoredCardOnly() {
+        var step = start(quiz(8)).clearBlock()
+        val filler = (step.session.left - step.session.scored.toSet()).first()
+        var session = peekTile(step.session, 7, sideA = false)
+        assertEquals(setOf(7L), session.peekedRight)
+        assertEquals(setOf(7L), session.missed)
+        assertEquals(1, session.misses)
+        // Again, or on its other tile, costs nothing more; nor does a filler.
+        session = peekTile(peekTile(session, 7, sideA = false), 7, sideA = true)
+        session = peekTile(session, filler, sideA = true)
+        assertEquals(setOf(7L, filler), session.peekedLeft)
+        assertEquals(setOf(7L), session.missed)
+        assertEquals(1, session.misses)
+
+        // Card 7 is a miss at the block's end, and the next block shows no hints.
+        step = MatchStep(step.quiz, session, PairOutcome.Paired).clearBlock()
+        assertEquals(Stats(asked = 1, rightFirst = 0, wrong = 1), step.quiz.card(7)!!.statsMatch)
+        assertEquals(emptySet<Long>(), step.session.peekedLeft + step.session.peekedRight)
+    }
+
+    @Test
     fun pairingAClearedTileIsIgnored() {
         var step = start(quiz(6))
         step = pairTiles(step.quiz, step.session, 1, 1, random)

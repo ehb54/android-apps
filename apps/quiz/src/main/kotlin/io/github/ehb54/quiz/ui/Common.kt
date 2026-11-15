@@ -35,6 +35,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import io.github.ehb54.quiz.R
@@ -238,6 +239,41 @@ fun Prompt(card: Card, direction: Direction, mediaDir: File, pictureHeight: Dp, 
     }
     val prompt = card.prompt(direction)
     if (media == null && prompt.isNotBlank()) Text(prompt, style = MaterialTheme.typography.headlineMedium)
+}
+
+/** Peek and the hint it shows take the same height, so nothing moves when it is tapped. */
+private val PEEK_HEIGHT = 40.dp
+
+/**
+ * A card's [hint] behind a Peek button (Type and Pick): a tap shows the hint
+ * in the button's place, and the card counts as missed. Nothing else on
+ * screen changes. Shows nothing for a card without a hint.
+ */
+@Composable
+fun Peek(hint: String, peeked: Boolean, onPeek: () -> Unit, modifier: Modifier = Modifier) {
+    if (hint.isBlank()) return
+    Box(modifier.heightIn(min = PEEK_HEIGHT), contentAlignment = Alignment.CenterStart) {
+        if (peeked) PeekedHint(hint) else PeekButton(enabled = true, onPeek)
+    }
+}
+
+@Composable
+fun PeekButton(enabled: Boolean, onPeek: () -> Unit) {
+    TextButton(onClick = onPeek, enabled = enabled) { Text(stringResource(R.string.peek)) }
+}
+
+/** A hint on show, after Peek; [small] on a Match tile. */
+@Composable
+fun PeekedHint(hint: String, modifier: Modifier = Modifier, small: Boolean = false) {
+    Text(
+        hint,
+        modifier = modifier,
+        color = MaterialTheme.colorScheme.tertiary,
+        style = if (small) MaterialTheme.typography.labelLarge else MaterialTheme.typography.titleMedium,
+        textAlign = if (small) TextAlign.Center else TextAlign.Start,
+        maxLines = if (small) 1 else 2,
+        overflow = TextOverflow.Ellipsis,
+    )
 }
 
 /** Tags a Pick choice with its card, so tests can find sounds, which look alike. */

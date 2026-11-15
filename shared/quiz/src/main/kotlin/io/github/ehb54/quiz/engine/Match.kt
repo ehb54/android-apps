@@ -38,11 +38,15 @@ data class MatchSession(
     val right: List<Long> = emptyList(),
     val matchedLeft: Set<Long> = emptySet(),
     val matchedRight: Set<Long> = emptySet(),
-    /** Scored cards of this block that have been in a wrong pair. */
+    /** Scored cards of this block that have been in a wrong pair, or peeked at. */
     val missed: Set<Long> = emptySet(),
+    /** Side A tiles of this block showing their card's hint (see [peekTile]). */
+    val peekedLeft: Set<Long> = emptySet(),
+    /** The same for side B tiles. */
+    val peekedRight: Set<Long> = emptySet(),
     /** Cards cleared at the first try in round 1. */
     val firstTry: Int = 0,
-    /** Wrong pairs. */
+    /** Wrong pairs, and peeks at scored cards. */
     val misses: Int = 0,
 ) {
     val finished: Boolean get() = left.isEmpty()
@@ -67,6 +71,20 @@ fun startMatch(quiz: Quiz, random: Random = Random.Default): MatchSession? {
         pending = order,
     )
     return nextBlock(quiz, session, random)
+}
+
+/**
+ * Shows the hint of card [id] on its tile on side A ([sideA]) or side B (Peek).
+ * A scored card counts as missed, as in a wrong pair, once; a filler costs nothing.
+ */
+fun peekTile(session: MatchSession, id: Long, sideA: Boolean): MatchSession {
+    val tiles = if (sideA) session.left else session.right
+    val peeked = if (sideA) session.peekedLeft else session.peekedRight
+    val matched = if (sideA) session.matchedLeft else session.matchedRight
+    if (id !in tiles || id in matched || id in peeked) return session
+    val shown = if (sideA) session.copy(peekedLeft = peeked + id) else session.copy(peekedRight = peeked + id)
+    if (id !in session.scored || id in session.missed) return shown
+    return shown.copy(missed = shown.missed + id, misses = shown.misses + 1)
 }
 
 /** Pairs the side A tile of card [left] with the side B tile of card [right]. */
@@ -131,6 +149,8 @@ private fun nextBlock(quiz: Quiz, session: MatchSession, random: Random): MatchS
         matchedLeft = emptySet(),
         matchedRight = emptySet(),
         missed = emptySet(),
+        peekedLeft = emptySet(),
+        peekedRight = emptySet(),
     )
 }
 

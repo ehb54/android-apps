@@ -70,6 +70,26 @@ class SessionTest {
     }
 
     @Test
+    fun aPeekIsAMissOnceAndLeavesTheAttemptAlone() {
+        val start = start(quiz("cat" to "chat", "dog" to "chien"))
+        val peeked = peek(peek(start.session))
+        assertTrue(peeked.peeked)
+        assertEquals(1, peeked.misses)
+        // The answer being typed and the clock are keyed on misses on the card, which stay.
+        assertEquals(0, peeked.missesOnCurrent)
+
+        var step = submitAnswer(start.quiz, peeked, "chat", 1000)
+        assertEquals(Outcome.Right, step.outcome)
+        assertFalse(step.session.peeked)
+        assertEquals(Stats(asked = 1, rightFirst = 0, wrong = 1), step.quiz.card(1)!!.statsAToB)
+        step = step.answer("chien")
+        // Card 1 comes back next round; card 2 was right the first time.
+        assertEquals(2, step.session.round)
+        assertEquals(listOf(1L), step.session.queue)
+        assertEquals(1, step.session.firstTry)
+    }
+
+    @Test
     fun slowAnswerIsAMissEvenWhenRight() {
         val start = start(quiz("cat" to "chat", settings = QuizSettings(timerSeconds = 5)))
         val step = start.answer("chat", millis = 5001)

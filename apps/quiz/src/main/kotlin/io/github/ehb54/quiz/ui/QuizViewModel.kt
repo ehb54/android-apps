@@ -34,6 +34,8 @@ import io.github.ehb54.quiz.engine.goOn
 import io.github.ehb54.quiz.engine.isXlsx
 import io.github.ehb54.quiz.engine.isZip
 import io.github.ehb54.quiz.engine.pairTiles
+import io.github.ehb54.quiz.engine.peek as peekCard
+import io.github.ehb54.quiz.engine.peekTile as peekAtTile
 import io.github.ehb54.quiz.engine.parseQzx
 import io.github.ehb54.quiz.engine.parseSide
 import io.github.ehb54.quiz.engine.pickAnswer
@@ -367,6 +369,15 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
 
     fun hideAnswer() = _state.update { it.copy(revealed = false) }
 
+    /** Shows the hint of the card on screen, which counts as a miss (engine/Session.kt's peek). */
+    fun peek() {
+        val session = _state.value.session ?: return
+        val next = peekCard(session)
+        if (next == session) return
+        _state.update { it.copy(session = next) }
+        persist { store.saveSession(next) }
+    }
+
     /** From the card shown whole after an answer to the next card (or the summary). */
     fun next() = _state.update { it.copy(after = null) }
 
@@ -442,6 +453,15 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
             return
         }
         takeStep(state, quiz, step, left, right)
+    }
+
+    /** Shows the hint of card [id] on its tile on side A ([sideA]) or B; a scored card counts as missed. */
+    fun peekTile(id: Long, sideA: Boolean) {
+        val match = _state.value.match ?: return
+        val next = peekAtTile(match, id, sideA)
+        if (next == match) return
+        _state.update { it.copy(match = next) }
+        persist { store.saveMatch(next) }
     }
 
     /** Ends the show of the pair just made (MatchScreen, after a moment): its tiles go, and the next block may come. */
@@ -738,7 +758,8 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
         for (card in parseQzx(bundle.qzx)) {
             val a = parseSide(card.a, bundle.files.keys)
             val b = parseSide(card.b, bundle.files.keys)
-            quiz = quiz.addCard(a.text, b.text, media(a.file), media(b.file), media(a.sound), media(b.sound))
+            val hint = a.hint ?: b.hint ?: ""
+            quiz = quiz.addCard(a.text, b.text, media(a.file), media(b.file), media(a.sound), media(b.sound), hint)
         }
         return listOf(quiz)
     }
@@ -746,14 +767,18 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
     private fun newQuiz(name: String, cards: List<QzxCard>) =
         cards.fold(Quiz(UUID.randomUUID().toString(), name)) { quiz, card -> quiz.addCard(card.a, card.b) }
 
-    /** Plain .qzx when the quiz has no pictures or sounds; otherwise a zip with them. */
+    /**
+     * Plain .qzx when the quiz has no pictures, sounds or hints; otherwise a zip
+     * with them, each card's hint ending its side A.
+     */
     private fun writeQuiz(quiz: Quiz, out: OutputStream) {
-        fun side(text: String, media: String?, sound: String?) = formatSide(QzxSide(text, media, sound))
+        fun side(text: String, media: String?, sound: String?, hint: String? = null) =
+            formatSide(QzxSide(text, media, sound, hint))
         val qzx = formatQzx(
-            quiz.cards.map { QzxCard(side(it.a, it.mediaA, it.soundA), side(it.b, it.mediaB, it.soundB)) },
+            quiz.cards.map { QzxCard(side(it.a, it.mediaA, it.soundA, it.hint), side(it.b, it.mediaB, it.soundB)) },
         )
         val files = quiz.mediaFiles()
-        if (files.isEmpty()) {
+        if (files.isEmpty() && quiz.cards.all { it.hint.isBlank() }) {
             out.write(qzx.toByteArray(Charsets.UTF_8))
         } else {
             writeZip(out, quiz.name.replace(Regex("[/\\\\]"), "_"), qzx, files.associateWith { store.mediaFile(it) })

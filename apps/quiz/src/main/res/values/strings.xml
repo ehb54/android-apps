@@ -169,6 +169,10 @@
     <string name="answer">Answer</string>
     <string name="check">Check</string>
     <string name="show_answer">Show answer</string>
+    <!-- Shows the card's hint (in the samples, the English of a German word); it counts as a miss. -->
+    <string name="peek">Peek</string>
+    <string name="hint">Hint</string>
+    <string name="hint_help">Shown only on Peek, which counts as a miss</string>
     <string name="answer_is">The answer is</string>
     <string name="hide_answer">Hide it and answer</string>
     <string name="wrong">Not quite. Try again.</string>

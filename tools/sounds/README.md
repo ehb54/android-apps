@@ -299,6 +299,10 @@ ones, so it does not need the pictures' sources.
   word shows after the answer), and a dictation quiz, `!<sound>` → `die Hand`
   (hear it, type it): *Core listening ERNIE* and *Core dictation*, 734 nouns;
   *Core verb listening ERNIE* and *Core verb dictation*, 144 verbs.
+- **Hints:** a picture side's hint (its English, written by
+  `tools/wordlists`: `!noun-Hand.webp ?hand`) stays on the picture quizzes,
+  and goes on the sound's side of the listening and dictation cards
+  (`!<sound> die Hand ?hand`, `!<sound> ?hand`). The app shows it only on Peek.
 - **The sounds** are made by `cards` (which `samples` runs for what it needs):
   `raw/cards/<stem>.mp3`, the picked sound resampled to 32 kHz mono and
   encoded at 40 kbit/s, about 4 KB a word (32 kbit/s dulled German s, sch

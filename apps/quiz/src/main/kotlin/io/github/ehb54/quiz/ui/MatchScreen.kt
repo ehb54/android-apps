@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.verticalScroll
@@ -60,7 +61,9 @@ private const val PAIR_SHOWN_MS = 500L
  * picked; tapped again once picked, it only plays again. A right pair whose
  * card shows more once paired (a file's text, a sound) shows it on its tiles
  * for a moment before they go, and plays the sound when the quiz's "Play the
- * sound after the answer" is on. Back does not leave.
+ * sound after the answer" is on. In a quiz with hints, Peek beside the line
+ * at the top shows the picked tile's hint on it, and its card counts as
+ * missed. Back does not leave.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -132,15 +135,27 @@ fun MatchScreen(
                 .verticalScroll(rememberScrollState()),
             verticalArrangement = Arrangement.spacedBy(12.dp),
         ) {
-            Text(
-                stringResource(if (mismatch != null) R.string.not_a_pair else R.string.match_hint),
-                color = if (mismatch != null) MaterialTheme.colorScheme.error else Color.Unspecified,
-                style = MaterialTheme.typography.bodyMedium,
-            )
+            Row(Modifier.heightIn(min = 40.dp), verticalAlignment = Alignment.CenterVertically) {
+                Text(
+                    stringResource(if (mismatch != null) R.string.not_a_pair else R.string.match_hint),
+                    modifier = Modifier.weight(1f),
+                    color = if (mismatch != null) MaterialTheme.colorScheme.error else Color.Unspecified,
+                    style = MaterialTheme.typography.bodyMedium,
+                )
+                if (quiz.cards.any { it.hint.isNotBlank() }) {
+                    // The picked tile, if its card has a hint not yet on show.
+                    val left = pickedLeft?.takeIf { it !in session.peekedLeft }
+                    val right = pickedRight?.takeIf { it !in session.peekedRight }
+                    val target = (left?.let { it to true } ?: right?.let { it to false })
+                        ?.takeIf { (id, _) -> quiz.card(id)?.hint?.isNotBlank() == true }
+                    PeekButton(enabled = target != null) { target?.let { (id, sideA) -> vm.peekTile(id, sideA) } }
+                }
+            }
             Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
                 TileColumn(
                     tiles = session.left,
                     matched = session.matchedLeft,
+                    peeked = session.peekedLeft,
                     picked = pickedLeft,
                     wrong = mismatch?.first,
                     shown = paired?.first,
@@ -153,6 +168,7 @@ fun MatchScreen(
                 TileColumn(
                     tiles = session.right,
                     matched = session.matchedRight,
+                    peeked = session.peekedRight,
                     picked = pickedRight,
                     wrong = mismatch?.second,
                     shown = paired?.second,
@@ -171,6 +187,7 @@ fun MatchScreen(
 private fun TileColumn(
     tiles: List<Long>,
     matched: Set<Long>,
+    peeked: Set<Long>,
     picked: Long?,
     wrong: Long?,
     shown: Long?,
@@ -201,6 +218,7 @@ private fun TileColumn(
                     selected = id == picked,
                     wrong = id == wrong,
                     shown = id == shown,
+                    peeked = id in peeked,
                     height = height,
                     modifier = Modifier.testTag(tileTag(id, sideA)),
                 ) { onTap(id) }
@@ -209,7 +227,10 @@ private fun TileColumn(
     }
 }
 
-/** One side of [card] as a tile; [shown], with what it shows once paired (a file's text, a sound's sign). */
+/**
+ * One side of [card] as a tile; [shown], with what it shows once paired (a
+ * file's text, a sound's sign); [peeked], with the card's hint under it.
+ */
 @Composable
 private fun Tile(
     card: Card,
@@ -219,6 +240,7 @@ private fun Tile(
     selected: Boolean,
     wrong: Boolean,
     shown: Boolean,
+    peeked: Boolean,
     height: Dp,
     modifier: Modifier = Modifier,
     onClick: () -> Unit,
@@ -247,13 +269,21 @@ private fun Tile(
             },
         ),
     ) {
-        Box(Modifier.padding(8.dp), contentAlignment = Alignment.Center) {
-            when {
-                shown -> ShownSide(card, sideA, mediaDir, number)
-                media != null && isSound(media) -> SoundTileContent(File(mediaDir, media), number, button = false)
-                media != null -> CardImage(File(mediaDir, media), Modifier.fillMaxSize(), maxSide = 512)
-                else -> TileText(text)
+        Column(Modifier.padding(8.dp), horizontalAlignment = Alignment.CenterHorizontally) {
+            Box(
+                Modifier
+                    .fillMaxWidth()
+                    .weight(1f),
+                contentAlignment = Alignment.Center,
+            ) {
+                when {
+                    shown -> ShownSide(card, sideA, mediaDir, number)
+                    media != null && isSound(media) -> SoundTileContent(File(mediaDir, media), number, button = false)
+                    media != null -> CardImage(File(mediaDir, media), Modifier.fillMaxSize(), maxSide = 512)
+                    else -> TileText(text)
+                }
             }
+            if (peeked && card.hint.isNotBlank()) PeekedHint(card.hint, small = true)
         }
     }
 }

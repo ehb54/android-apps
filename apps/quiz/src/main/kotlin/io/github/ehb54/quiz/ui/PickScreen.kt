@@ -55,8 +55,10 @@ private const val TILE_ABOVE = 4
  * Pick mode: one card's prompt (text, picture or sound) and a few choices from
  * the other side. A wrong choice is marked and can't be picked again; the card
  * stays until the right one is picked. A sound choice has a button to play it;
- * a tap elsewhere on it picks it. Back does not leave, except in speed mode,
- * which goes on until stopped: there Back asks whether to stop.
+ * a tap elsewhere on it picks it. A card with a hint has Peek beside the
+ * line above the choices, which shows it and counts as a miss (not in speed
+ * mode). Back does not leave, except in speed mode, which goes on until
+ * stopped: there Back asks whether to stop.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -127,17 +129,21 @@ fun PickScreen(
                 Prompt(card, direction, mediaDir, pictureHeight = 280.dp, playKey = listOf(session.round, card.id)) {
                     clock.restart()
                 }
-                Text(
-                    stringResource(
-                        when (feedback) {
-                            Feedback.Wrong -> R.string.not_that_one
-                            Feedback.TooSlow -> R.string.too_slow
-                            null -> R.string.pick_hint
-                        },
-                    ),
-                    color = if (feedback != null) colors.error else colors.onSurfaceVariant,
-                    style = MaterialTheme.typography.bodyMedium,
-                )
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Text(
+                        stringResource(
+                            when (feedback) {
+                                Feedback.Wrong -> R.string.not_that_one
+                                Feedback.TooSlow -> R.string.too_slow
+                                null -> R.string.pick_hint
+                            },
+                        ),
+                        modifier = Modifier.weight(1f),
+                        color = if (feedback != null) colors.error else colors.onSurfaceVariant,
+                        style = MaterialTheme.typography.bodyMedium,
+                    )
+                    if (speed == null) Peek(card.hint, session.peeked, vm::peek, Modifier.padding(start = 8.dp))
+                }
                 val choices = session.choices.mapNotNull(quiz::card)
                 // Many pictures or sounds sit two to a row; text keeps the whole width.
                 val columns = if (choices.size > TILE_ABOVE && choices.all { it.answerMedia(direction) != null }) 2 else 1

@@ -18,14 +18,20 @@ import java.util.zip.ZipOutputStream
  * those files. A side written "!name.png" is the picture of that name and
  * "!name.mp3" the sound, by the file's extension (the original used a leading
  * "!" for sides that ran a program to show a molecule). What a side shows only
- * after the answer follows (see [parseSide]).
+ * after the answer follows, and a card's hint ends a line (see [parseSide]).
  */
 data class QzxCard(val a: String, val b: String)
 
 const val MEDIA_MARK = "!"
 
-/** One side of a card in a zip: its text, its picture or sound ([file]), and a [sound] for after the answer. */
-data class QzxSide(val text: String, val file: String? = null, val sound: String? = null)
+/** Starts a card's hint at the end of a side in a zip: "!hand.webp ?hand". */
+const val HINT_MARK = "?"
+
+/**
+ * One side of a card in a zip: its text, its picture or sound ([file]), a
+ * [sound] for after the answer, and the card's [hint] when it ends this side.
+ */
+data class QzxSide(val text: String, val file: String? = null, val sound: String? = null, val hint: String? = null)
 
 /**
  * Reads one side of a card in a zip whose files are [files]. "!name" is the
@@ -33,9 +39,20 @@ data class QzxSide(val text: String, val file: String? = null, val sound: String
  * ("!hand.webp die Hand"). A side shown as text or a picture may end with a
  * sound for after the answer ("die Hand !hand.mp3", "!hand.webp die Hand
  * !hand.mp3"). Names are matched against the zip's files, so they may hold
- * spaces; a "!name" the zip lacks stays text.
+ * spaces; a "!name" the zip lacks stays text. Last of all, a side may end
+ * with the card's hint, shown only on request: " ?" and the hint, which starts
+ * with a non-space ("!hand.webp ?hand", "!hand.mp3 die Hand ?hand").
  */
 fun parseSide(side: String, files: Set<String>): QzxSide {
+    // The first " ?x", or a "?x" starting the side, begins the hint.
+    val spacedSide = " $side"
+    val hintAt = (0 until spacedSide.length - 2).firstOrNull {
+        spacedSide.startsWith(" $HINT_MARK", it) && !spacedSide[it + 2].isWhitespace()
+    }
+    if (hintAt != null) {
+        val hint = spacedSide.substring(hintAt + 2).trim()
+        return parseSide(spacedSide.substring(0, hintAt).trim(), files).copy(hint = hint)
+    }
     var text = side
     var file: String? = null
     if (side.startsWith(MEDIA_MARK)) {
@@ -58,6 +75,7 @@ fun formatSide(side: QzxSide): String = listOfNotNull(
     side.file?.let { MEDIA_MARK + it },
     side.text.takeIf { it.isNotBlank() || side.file == null }?.let(::oneLine),
     side.sound?.takeIf { !isSound(side.file) }?.let { MEDIA_MARK + it },
+    side.hint?.takeIf { it.isNotBlank() }?.let { HINT_MARK + oneLine(it).trim() },
 ).filter { it.isNotEmpty() }.joinToString(" ")
 
 /** Upper bound on what a zip import may unpack, against zip bombs. */

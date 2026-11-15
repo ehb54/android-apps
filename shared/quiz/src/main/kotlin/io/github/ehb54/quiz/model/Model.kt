@@ -51,6 +51,9 @@ data class Stats(
  * never gives the answer away: a side that is a file its text ([a], [b]: the
  * word a sound says or a picture shows), and a side shown as text or a picture
  * a sound ([soundA], [soundB]: the word spoken).
+ *
+ * A card's [hint] shows only when asked for (Peek), which counts as a miss:
+ * in the picture and sound samples, the English of the German word.
  */
 @Serializable
 data class Card(
@@ -77,6 +80,8 @@ data class Card(
     /** Speed mode: the card's latest time to a right first pick, per direction; 0 before the first. */
     val speedMillisAToB: Long = 0,
     val speedMillisBToA: Long = 0,
+    /** Shown only on request, at the cost of a miss; blank for none. */
+    val hint: String = "",
 ) {
     fun prompt(direction: Direction) = if (direction == Direction.AToB) a else b
 
@@ -251,8 +256,9 @@ data class Quiz(
         mediaB: String? = null,
         soundA: String? = null,
         soundB: String? = null,
+        hint: String = "",
     ) = copy(
-        cards = cards + Card(nextCardId, a, b, mediaA, mediaB, soundA, soundB),
+        cards = cards + Card(nextCardId, a, b, mediaA, mediaB, soundA, soundB, hint = hint),
         nextCardId = nextCardId + 1,
     )
 

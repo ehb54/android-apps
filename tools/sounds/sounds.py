@@ -1230,6 +1230,18 @@ HEARD = {
 }
 # A sound for after the answer at the end of a side ("die Hand !de-die_Hand-1a2b3c4d.mp3"), as Quiz reads it.
 SOUND_MARK = re.compile(r" !(\S+\.(?:mp3|m4a|aac|ogg|wav|flac))$")
+# A card's hint, shown only on Peek, ending a side ("!noun-Hand.webp ?hand"): the first " ?" before a non-space.
+HINT_MARK = re.compile(r"(?:^| )\?(\S.*)$")
+
+
+def hint_split(side):
+    """(the side without its hint, the hint or "")."""
+    m = HINT_MARK.search(side)
+    return (side[:m.start()], m.group(1)) if m else (side, "")
+
+
+def with_hint(side, hint):
+    return f"{side} ?{hint}" if hint else side
 ZIP_DATE = (1980, 1, 1, 0, 0, 0)  # as tools/wordlists writes them: the same content gives the same zip
 PICTURE_EXTENSIONS = {"png", "jpg", "jpeg", "webp", "gif", "bmp"}  # as Quiz reads them (model/Media.kt)
 
@@ -1248,7 +1260,9 @@ def samples(args):
     each answer gets its sound for after the answer, and the quizzes in HEARD
     give a listening and a dictation quiz besides. Makes the card sounds it
     needs (`cards`). The pictures are kept as they are and sounds added before
-    are replaced, so it can run again, after every build of the word lists."""
+    are replaced, so it can run again, after every build of the word lists.
+    A picture's hint (its English, from tools/wordlists) stays on it, and goes
+    on the sound's side of the listening and dictation cards."""
     lang, folder = args.list, Path(args.dir)
     texts_tsv = {r["text"]: r["key"] for r in read_tsv(HERE / lang / "texts.tsv")}
     every = {f"{k}-{l}": (k, l, t, q) for k, l, t, q in read_words(lang, "all")}
@@ -1260,8 +1274,9 @@ def samples(args):
         if inner is None or sides != ("", lang):
             continue
         cards_ = [(a, SOUND_MARK.sub("", b)) for a, b in qzx_cards(z.read(inner).decode("utf-8"))]
-        if not all(a.startswith("!") and a[1:] in names and a[1:].rsplit(".", 1)[-1] in PICTURE_EXTENSIONS
-                   for a, _ in cards_):
+        pictured = [hint_split(a) for a, _ in cards_]  # (the picture's side, its hint)
+        if not all(p.startswith("!") and p[1:] in names and p[1:].rsplit(".", 1)[-1] in PICTURE_EXTENSIONS
+                   for p, _ in pictured):
             continue  # not picture -> word (a dictation quiz made here before)
         answers = [unicodedata.normalize("NFC", " ".join(b.split())) for _, b in cards_]
         wanted = [every[f"{lang}-{texts_tsv[t]}"] for t in answers if t in texts_tsv]
@@ -1281,14 +1296,14 @@ def samples(args):
         if path.stem not in HEARD:
             continue
         listening, dictation = HEARD[path.stem]
-        heard = [(a, t, files[t][0]) for (a, _), t in zip(cards_, answers) if t in files]
-        used = {a[1:] for a, _, _ in heard}
+        heard = [(p, h, t, files[t][0]) for (p, h), t in zip(pictured, answers) if t in files]
+        used = {p[1:] for p, _, _, _ in heard}
         write_zip(folder / f"{listening}.zip",
                   [(n, d) for n, d in pictures if n in used] + sounds
-                  + [(f"{listening}.qzx", "".join(f"!{s} {t}\n{a}\n" for a, t, s in heard)),
+                  + [(f"{listening}.qzx", "".join(f"{with_hint(f'!{s} {t}', h)}\n{p}\n" for p, h, t, s in heard)),
                      ("CREDITS.txt", credits + sound_credits)])
         write_zip(folder / f"{dictation}.zip",
-                  sounds + [(f"{dictation}.qzx", "".join(f"!{s}\n{t}\n" for _, t, s in heard)),
+                  sounds + [(f"{dictation}.qzx", "".join(f"{with_hint(f'!{s}', h)}\n{t}\n" for _, h, t, s in heard)),
                             ("CREDITS.txt", sound_credits)])
         print(f"  {listening}.zip, {dictation}.zip: {len(heard)} cards")
 

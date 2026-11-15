@@ -6,6 +6,7 @@ import io.github.ehb54.quiz.model.QuizMode
 import io.github.ehb54.quiz.model.QuizSettings
 import io.github.ehb54.quiz.model.Stats
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Test
@@ -27,6 +28,16 @@ class PickTest {
 
     /** A choice on screen that is not the current card's. */
     private fun Step.wrongChoice() = session.choices.first { it != session.current }
+
+    @Test
+    fun aPeekMakesARightPickAMiss() {
+        val start = start(elements)
+        val step = Step(start.quiz, peek(start.session), Outcome.Right).pick(1)
+        assertEquals(Outcome.Right, step.outcome)
+        assertEquals(Stats(asked = 1, rightFirst = 0, wrong = 1), step.quiz.card(1)!!.statsPickAToB)
+        assertEquals(listOf(1L), step.session.retry)
+        assertFalse(step.session.peeked)
+    }
 
     @Test
     fun eachCardOffersItsAnswerAmongDistinctChoices() {

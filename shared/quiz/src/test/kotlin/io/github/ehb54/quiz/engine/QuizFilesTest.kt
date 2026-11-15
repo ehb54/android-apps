@@ -69,6 +69,26 @@ class QuizFilesTest {
         assertEquals("!hand.mp3", formatSide(QzxSide("", "hand.mp3", "dog.mp3")))
     }
 
+    @Test
+    fun aSideMayEndWithTheCardsHint() {
+        val files = setOf("hand.webp", "hand.mp3")
+        assertEquals(QzxSide("", "hand.webp", hint = "hand"), parseSide("!hand.webp ?hand", files))
+        assertEquals(QzxSide("die Hand", "hand.mp3", hint = "hand"), parseSide("!hand.mp3 die Hand ?hand", files))
+        assertEquals(QzxSide("", "hand.mp3", hint = "to hold"), parseSide("!hand.mp3 ?to hold", files))
+        assertEquals(
+            QzxSide("die Hand", "hand.webp", "hand.mp3", "hand"),
+            parseSide("!hand.webp die Hand !hand.mp3 ?hand", files),
+        )
+        assertEquals(QzxSide("Hund", hint = "dog"), parseSide("Hund ?dog", files))
+        // A question mark that ends a word, or stands alone, is text.
+        assertEquals(QzxSide("Wer ist das?"), parseSide("Wer ist das?", files))
+        assertEquals(QzxSide("Wer ? Du"), parseSide("Wer ? Du", files))
+
+        val sides = listOf("!hand.webp ?hand", "!hand.mp3 die Hand ?hand", "!hand.webp die Hand !hand.mp3 ?hand")
+        for (side in sides) assertEquals(side, formatSide(parseSide(side, files)))
+        assertEquals("!hand.webp", formatSide(QzxSide("", "hand.webp", hint = " ")))
+    }
+
     @Test(expected = java.io.IOException::class)
     fun zipLargerThanTheLimitIsRefused() {
         val picture = folder.newFile("big.png").apply { writeBytes(ByteArray(10_000)) }

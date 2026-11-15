@@ -48,7 +48,9 @@ import java.io.File
 /**
  * One card at a time: the prompt (text, picture or sound) and a field for the answer.
  * Wrong answers clear the field and the card stays; "Show answer" counts as a
- * miss and hides the answer again before you type it. Back does not leave.
+ * miss and hides the answer again before you type it. A card with a hint has
+ * Peek under the prompt, which shows it and counts as a miss, leaving what is
+ * typed as it is. Back does not leave.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -77,7 +79,7 @@ fun AskingScreen(
     fun submit() {
         if (typed.isNotBlank()) vm.submit(typed, clock.millis)
     }
-    LaunchedEffect(attempt, revealed, paused) {
+    LaunchedEffect(attempt, revealed, paused, session.peeked) {
         if (!revealed && !paused) focus.requestFocus()
     }
 
@@ -107,6 +109,7 @@ fun AskingScreen(
                 Prompt(card, direction, mediaDir, pictureHeight = 360.dp, playKey = listOf(session.round, card.id)) {
                     clock.restart()
                 }
+                Peek(card.hint, session.peeked, vm::peek)
 
                 if (revealed) {
                     Text(stringResource(R.string.answer_is), style = MaterialTheme.typography.labelLarge)

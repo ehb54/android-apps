@@ -68,6 +68,8 @@ data class Session(
     val wrongPicks: Set<Long> = emptySet(),
     /** Speed mode: the run this session is a level of; null in other modes. */
     val speed: SpeedLevel? = null,
+    /** The current card's hint is on show (see [peek]): the card counts as missed. */
+    val peeked: Boolean = false,
 ) {
     val current: Long? get() = queue.firstOrNull()
     val finished: Boolean get() = queue.isEmpty()
@@ -111,6 +113,14 @@ fun revealAnswer(session: Session) =
     session.copy(missesOnCurrent = session.missesOnCurrent + 1, misses = session.misses + 1)
 
 /**
+ * Shows the current card's hint (Peek), which counts as a miss once: the card
+ * comes back next round however it is then answered. The answer typed so far
+ * and the clock are left alone ([Session.missesOnCurrent] does not change).
+ */
+fun peek(session: Session) =
+    if (session.peeked || session.current == null) session else session.copy(peeked = true, misses = session.misses + 1)
+
+/**
  * Checks [typed] against the current card. A slow answer (over the timer) is a
  * miss even when right. A right answer records the card's result and moves on.
  */
@@ -129,7 +139,7 @@ fun submitAnswer(quiz: Quiz, session: Session, typed: String, elapsedMillis: Lon
         return Step(quiz, timed.missedOnce().copy(wrongAnswers = wrongAnswers), Outcome.Wrong)
     }
 
-    val missed = session.missesOnCurrent > 0
+    val missed = session.missesOnCurrent > 0 || session.peeked
     val stats = card.stats(direction).let { if (missed) it.answeredAfterMiss() else it.answeredFirstTry() }
     val updated = quiz.replaceCard(card.withStats(direction, stats))
     val counted = if (!missed && session.round == 1) timed.copy(firstTry = timed.firstTry + 1) else timed
@@ -161,7 +171,7 @@ fun pickAnswer(quiz: Quiz, session: Session, picked: Long, elapsedMillis: Long, 
         return Step(quiz, wrong, Outcome.Wrong)
     }
 
-    val missed = session.missesOnCurrent > 0
+    val missed = session.missesOnCurrent > 0 || session.peeked
     val stats = card.picked(session).let { if (missed) it.answeredAfterMiss() else it.answeredFirstTry() }
     var answered = card.withPicked(session, stats)
     var counted = if (!missed && session.round == 1) timed.copy(firstTry = timed.firstTry + 1) else timed
@@ -218,6 +228,7 @@ private fun advance(quiz: Quiz, session: Session, id: Long, missed: Boolean, ran
     var next = session.copy(
         queue = session.queue.drop(1),
         retry = if (missed) session.retry + id else session.retry,
+        peeked = false,
     )
     if (next.queue.isEmpty() && next.retry.isNotEmpty()) {
         next = next.copy(queue = next.retry, retry = emptyList(), round = next.round + 1)

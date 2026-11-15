@@ -58,6 +58,21 @@ class SampleCatalogTest {
     }
 
     @Test
+    fun pictureAndSoundSamplesHaveTheEnglishAsHints() {
+        // Every card's hint (shown on Peek) is the English of its German word.
+        fun hints(file: String): List<String?> {
+            val bundle = readZip(File(online, file).inputStream())
+            return parseQzx(bundle.qzx).map { parseSide(it.a, bundle.files.keys).hint }
+        }
+        for (file in listOf("Core pictures ERNIE.zip", "Core listening ERNIE.zip", "Core dictation.zip")) {
+            val found = hints(file)
+            assertEquals(file, "hand", found.first())
+            assertEquals(file, emptyList<String?>(), found.filter { it.isNullOrBlank() })
+        }
+        assertEquals("see", hints("Core verb dictation.zip").first())
+    }
+
+    @Test
     fun statusComparesTheFingerprint() {
         val entry = SampleEntry("Shapes", "Shapes.zip", "v2", 6, 6)
         val added = Quiz("q", "Shapes", source = "Shapes.zip", sourceVersion = "v2")

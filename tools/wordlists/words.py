@@ -610,7 +610,7 @@ def build_nouns(name, title, outdir):
     workbook(Path(outdir) / f"{title} nouns.xlsx", tabs)
 
     summary = f"{len(nouns)} nouns, {sum(len(rows) for _, rows in tabs)} cards in 3 tabs"
-    emoji = [(n["word"], noto_picture(n["emoji"])) for n in nouns if n["emoji"]]
+    emoji = [(n["word"], n["english"], noto_picture(n["emoji"])) for n in nouns if n["emoji"]]
     if emoji:
         license = fetch(f"https://raw.githubusercontent.com/googlefonts/noto-emoji/{NOTO_RELEASE}/LICENSE",
                         f"noto-emoji-{NOTO_RELEASE}-LICENSE")
@@ -623,18 +623,21 @@ def build_nouns(name, title, outdir):
     picked = picked_pictures(name)          # the list's own pictures: a quiz of their own
     if picked:
         cards, credits, label = picked
-        own = [(n["word"], cards["noun"][n["lemma"]]) for n in nouns if n["lemma"] in cards["noun"]]
+        own = [(n["word"], n["english"], cards["noun"][n["lemma"]]) for n in nouns if n["lemma"] in cards["noun"]]
         picture_zip(Path(outdir) / f"{title} pictures {label}.zip", f"{title} pictures {label}", own, credits)
         summary += f", {len(own)} {label} pictures"
     print(f"{summary} -> {outdir}")
 
 
 def picture_zip(path, quiz, pictured, credits, extra=None):
-    """A picture quiz: the pictures, `quiz`.qzx (picture -> answer) and the credits."""
+    """A picture quiz: the pictures, `quiz`.qzx (picture -> answer) and the
+    credits. `pictured` is (answer, English, (file, bytes)); the English ends
+    the picture's side as the card's hint, shown only on Peek in the app
+    ("!noun-Hand.webp ?hand"; see apps/quiz/DESIGN.md)."""
     with zipfile.ZipFile(path, "w", zipfile.ZIP_DEFLATED) as z:
-        for _, (file, data) in pictured:
+        for _, _, (file, data) in pictured:
             zip_add(z, file, data)
-        zip_add(z, f"{quiz}.qzx", "".join(f"!{file}\n{answer}\n" for answer, (file, _) in pictured))
+        zip_add(z, f"{quiz}.qzx", "".join(f"!{file} ?{english}\n{answer}\n" for answer, english, (file, _) in pictured))
         zip_add(z, "CREDITS.txt", credits)
         for file, data in (extra or {}).items():
             zip_add(z, file, data)
@@ -668,7 +671,7 @@ def build_verbs(name, title, outdir):
     if not picked:
         return
     cards, credits, label = picked
-    own = [(v["infinitive"], cards["verb"][v["lemma"]]) for v in verbs if v["lemma"] in cards["verb"]]
+    own = [(v["infinitive"], v["english"], cards["verb"][v["lemma"]]) for v in verbs if v["lemma"] in cards["verb"]]
     if own:
         picture_zip(Path(outdir) / f"{title} verb pictures {label}.zip", f"{title} verb pictures {label}", own,
                     credits)
