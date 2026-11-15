@@ -8,6 +8,8 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.selection.selectable
+import androidx.compose.foundation.text.KeyboardActions
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Icon
@@ -24,9 +26,13 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalFocusManager
+import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.text.input.ImeAction
+import androidx.compose.ui.text.input.KeyboardCapitalization
 import androidx.compose.ui.unit.dp
 import io.github.ehb54.quiz.R
 import io.github.ehb54.quiz.data.ReportForm
@@ -44,12 +50,20 @@ fun ReportButton(onClick: () -> Unit) {
  * Report an issue: what is wrong, from a short list, and (while [ReportForm.notes])
  * a note. [about] says what goes with it. Send hands both to [onSend], which
  * sends the report in the background; the quiz carries on as it was.
+ * The keyboard can cover Send (a dialog need not shrink for it, as on Android 9),
+ * so Done on the keyboard puts it away, and so does choosing from the list.
  */
 @Composable
 fun ReportDialog(@StringRes about: Int, hints: Boolean, onDismiss: () -> Unit, onSend: (ReportProblem, String) -> Unit) {
     var problem by rememberSaveable { mutableStateOf<ReportProblem?>(null) }
     var note by rememberSaveable { mutableStateOf("") }
     val problems = ReportProblem.entries.filter { hints || it != ReportProblem.Hint }
+    val keyboard = LocalSoftwareKeyboardController.current
+    val focus = LocalFocusManager.current
+    fun putKeyboardAway() {
+        keyboard?.hide()
+        focus.clearFocus()
+    }
     AlertDialog(
         onDismissRequest = onDismiss,
         title = { Text(stringResource(R.string.report_issue)) },
@@ -60,7 +74,10 @@ fun ReportDialog(@StringRes about: Int, hints: Boolean, onDismiss: () -> Unit, o
                     Row(
                         Modifier
                             .fillMaxWidth()
-                            .selectable(selected = each == problem, role = Role.RadioButton) { problem = each }
+                            .selectable(selected = each == problem, role = Role.RadioButton) {
+                                problem = each
+                                putKeyboardAway()
+                            }
                             .padding(vertical = 4.dp),
                         verticalAlignment = Alignment.CenterVertically,
                     ) {
@@ -74,6 +91,11 @@ fun ReportDialog(@StringRes about: Int, hints: Boolean, onDismiss: () -> Unit, o
                         onValueChange = { note = it },
                         label = { Text(stringResource(R.string.report_note)) },
                         maxLines = 4,
+                        keyboardOptions = KeyboardOptions(
+                            capitalization = KeyboardCapitalization.Sentences,
+                            imeAction = ImeAction.Done,
+                        ),
+                        keyboardActions = KeyboardActions(onDone = { putKeyboardAway() }),
                         modifier = Modifier.fillMaxWidth(),
                     )
                 }

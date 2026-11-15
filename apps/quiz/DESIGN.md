@@ -388,6 +388,9 @@ sees the form (`data/Reports.kt`).
   these don't belong together, something else; the hint only in a quiz with
   hints) and, for now, a note. Send closes it with a message; the quiz carries
   on as it was, and a timed card's clock stops while the dialog is open.
+  The keyboard can cover Send (on eb's Android 9 phone the dialog does not
+  shrink for it), so Done on the keyboard puts it away, as does choosing from
+  the list.
 - **What goes with it** (questions of the form, `REPORT_FIELDS`): Problem,
   Note, Quiz (name, and a sample's file and version), Mode ("Pick A → B, round
   1"), Cards, App (version name and code) and Device (Android version and
