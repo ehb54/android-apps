@@ -50,8 +50,9 @@ import java.io.File
  * Wrong answers clear the field and the card stays; "Show answer" counts as a
  * miss and hides the answer again before you type it. A card with a hint has
  * Peek under the prompt, which shows it and counts as a miss, leaving what is
- * typed as it is. The flag in the top bar reports an issue with the card; its
- * clock stops meanwhile. Back does not leave.
+ * typed as it is. The flag in the top bar reports an issue with the card, and
+ * Look back shows the cards gone by ([seen]); its clock stops meanwhile. Back
+ * does not leave.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -61,6 +62,7 @@ fun AskingScreen(
     feedback: Feedback?,
     revealed: Boolean,
     paused: Boolean,
+    seen: List<Seen>,
     mediaDir: File,
     snackbar: SnackbarHostState,
     vm: QuizViewModel,
@@ -71,9 +73,12 @@ fun AskingScreen(
     val attempt = listOf(session.round, card.id, session.missesOnCurrent)
     var typed by rememberSaveable(attempt) { mutableStateOf("") }
     var reporting by rememberSaveable { mutableStateOf(false) }
-    // The clock starts when the card shows, or when its sound has played, and stops while paused or reporting.
-    val clock = remember(attempt, revealed) { Stopwatch(SystemClock::elapsedRealtime, running = !paused) }
-    LaunchedEffect(clock, paused, reporting) { clock.running = !paused && !reporting }
+    var lookingBack by rememberSaveable { mutableStateOf(false) }
+    // The clock starts when the card shows, or when its sound has played, and
+    // stops while paused, reporting or looking back.
+    val clockStopped = paused || reporting || lookingBack
+    val clock = remember(attempt, revealed) { Stopwatch(SystemClock::elapsedRealtime, running = !clockStopped) }
+    LaunchedEffect(clock, clockStopped) { clock.running = !clockStopped }
     if (session.timed) WhenAway(vm::pause)
     val player = LocalSoundPlayer.current
     LaunchedEffect(paused) { if (paused) player.stop() }
@@ -81,13 +86,18 @@ fun AskingScreen(
     fun submit() {
         if (typed.isNotBlank()) vm.submit(typed, clock.millis)
     }
-    LaunchedEffect(attempt, revealed, paused, session.peeked, reporting) {
-        if (!revealed && !paused && !reporting) focus.requestFocus()
+    LaunchedEffect(attempt, revealed, session.peeked, clockStopped) {
+        if (!revealed && !clockStopped) focus.requestFocus()
     }
     if (reporting) {
         ReportDialog(R.string.report_about_card, quiz.cards.any { it.hint.isNotBlank() }, { reporting = false }) { problem, note ->
             reporting = false
             vm.report(problem, note)
+        }
+    }
+    if (lookingBack) {
+        LookBack(quiz, seen, mediaDir, { looked, problem, note -> vm.report(problem, note, looked = looked) }) {
+            lookingBack = false
         }
     }
 
@@ -96,7 +106,10 @@ fun AskingScreen(
             TopAppBar(
                 title = { Text(quiz.name, maxLines = 1, overflow = TextOverflow.Ellipsis) },
                 actions = {
-                    if (!paused) ReportButton { reporting = true }
+                    if (!paused) {
+                        LookBackButton(seen) { lookingBack = true }
+                        ReportButton { reporting = true }
+                    }
                     RoundCounter(session.round, session.remaining, vm::abandonSession)
                     if (session.timed && !paused) PauseButton(vm::pause)
                 },

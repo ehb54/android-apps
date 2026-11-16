@@ -188,6 +188,15 @@
     <string name="report_send">Send</string>
     <string name="report_sent">Report sent. Thank you.</string>
     <string name="report_saved">Report saved. It goes out once the app can reach the internet.</string>
+    <!-- Looking back at cards already passed in a session: look only, nothing counts. -->
+    <string name="look_back">Look back</string>
+    <plurals name="look_back_position">
+        <item quantity="one">%d card back</item>
+        <item quantity="other">%d cards back</item>
+    </plurals>
+    <string name="look_back_earlier">Earlier</string>
+    <string name="look_back_later">Later</string>
+    <string name="look_back_return">Back to the quiz</string>
     <string name="answer_is">The answer is</string>
     <string name="hide_answer">Hide it and answer</string>
     <string name="wrong">Not quite. Try again.</string>

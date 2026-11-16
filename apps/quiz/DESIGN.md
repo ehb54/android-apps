@@ -375,6 +375,26 @@ itself, and nothing breaking the flow of a quiz.
 - **Updating a sample** keeps the progress of its cards, since a card's hint,
   like a file's text, is not part of what identifies it.
 
+### Looking back
+
+Added 2026-11-15 (eb: "relook at a word or set of words I already
+dismissed", then: look only, "sounds and peek should be active and not count
+against"). Not an undo: nothing done is taken back, and nothing done while
+looking counts.
+
+- **Where:** the clock-and-arrow button in the top bar of Type, Pick, Speed
+  and Match sessions, once a card has gone by. It opens over the quiz, which
+  waits as it was: what is typed, a picked tile, and the clock, which stops
+  meanwhile (as for a report).
+- **What:** the last 10 cards the session moved past (`LOOK_BACK`,
+  `UiState.seen`): answered in Type and Pick, gone by in Speed, both cards of
+  a right pair in Match. The last one shows first, whole, as after an answer
+  (prompt side first); Earlier and Later step through them. Its sound buttons
+  play, and Peek shows its hint for nothing. The flag reports an issue with
+  the card shown ("…, looking back").
+- **Not kept:** the list belongs to the session and to the running app; a
+  session picked up after the app was closed starts with none.
+
 ## Report an issue
 
 Added 2026-11-14 (eb: a way to say when a pair's voice or picture is wrong,
@@ -415,12 +435,18 @@ sees the form (`data/Reports.kt`).
   the form takes only text into eb's sheet, and can be closed or replaced.
   An empty link makes reports wait.
 - **Offline:** a report that can't be sent waits on the phone
-  (`reports.json`, `QuizStore.loadReports`) and goes with the next report, or
-  when the app next starts; the message says it was saved rather than sent.
+  (`reports.json`, `QuizStore.loadReports`); the message says it was saved
+  rather than sent. It goes, oldest first, with the next report, as soon as
+  the network reaches the internet (Android says so: `MainActivity`'s network
+  callback, `QuizViewModel.online`), every minute while the app runs (a Wi-Fi
+  with no way out, or a form that can't be reached), and when the app starts.
+  Nothing tries while the app is closed (eb, 2026-11-15, after a report made
+  offline stayed put when the Wi-Fi came on).
 - **Play:** reports are data the app sends, so Data safety lists them as
   user-initiated (app activity: other user-generated content; app info and
   performance: other), sent only when the user taps Send, and the privacy
-  policy says so.
+  policy says so. Watching the network takes `ACCESS_NETWORK_STATE`, a normal
+  permission (granted at install, no prompt, nothing collected).
 
 ## Due counts
 

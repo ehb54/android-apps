@@ -59,7 +59,8 @@ private const val TILE_ABOVE = 4
  * can be heard first. A card with a hint has Peek beside the
  * line above the choices, which shows it and counts as a miss (not in speed
  * mode). The flag in the top bar reports an issue with the card or its
- * choices; the clock stops meanwhile. Back does not leave, except in speed
+ * choices, and Look back shows the cards gone by ([seen]); the clock stops
+ * meanwhile. Back does not leave, except in speed
  * mode, which goes on until stopped: there Back asks whether to stop.
  */
 @OptIn(ExperimentalMaterial3Api::class)
@@ -69,6 +70,7 @@ fun PickScreen(
     session: Session,
     feedback: Feedback?,
     paused: Boolean,
+    seen: List<Seen>,
     mediaDir: File,
     snackbar: SnackbarHostState,
     vm: QuizViewModel,
@@ -91,11 +93,12 @@ fun PickScreen(
         )
     }
     var reporting by rememberSaveable { mutableStateOf(false) }
+    var lookingBack by rememberSaveable { mutableStateOf(false) }
     val card = session.current?.let(quiz::card) ?: return
     val direction = session.direction
     // The clock starts when the card shows, or when its sound has played, and
-    // stops while paused (or while asked whether to stop, or reporting).
-    val clockStopped = paused || confirmStop || reporting
+    // stops while paused (or while asked whether to stop, reporting or looking back).
+    val clockStopped = paused || confirmStop || reporting || lookingBack
     val clock = remember(session.round, card.id, session.missesOnCurrent) {
         Stopwatch(SystemClock::elapsedRealtime, running = !clockStopped)
     }
@@ -112,13 +115,21 @@ fun PickScreen(
             vm.report(problem, note, marked = heard)
         }
     }
+    if (lookingBack) {
+        LookBack(quiz, seen, mediaDir, { looked, problem, note -> vm.report(problem, note, looked = looked) }) {
+            lookingBack = false
+        }
+    }
 
     Scaffold(
         topBar = {
             TopAppBar(
                 title = { Text(quiz.name, maxLines = 1, overflow = TextOverflow.Ellipsis) },
                 actions = {
-                    if (!paused) ReportButton { reporting = true }
+                    if (!paused) {
+                        LookBackButton(seen) { lookingBack = true }
+                        ReportButton { reporting = true }
+                    }
                     RoundCounter(session.round, session.remaining, vm::abandonSession, level = speed?.level)
                     if (session.timed && !paused) PauseButton(vm::pause)
                     if (speed != null) TextButton(onClick = vm::stopSpeed) { Text(stringResource(R.string.stop)) }

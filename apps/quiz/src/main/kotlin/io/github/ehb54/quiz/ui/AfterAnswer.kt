@@ -111,7 +111,7 @@ fun AfterAnswerScreen(
 
 /** One side with everything it holds: its picture, its sound's button and its text. */
 @Composable
-private fun WholeSide(card: Card, sideA: Boolean, mediaDir: File) {
+internal fun WholeSide(card: Card, sideA: Boolean, mediaDir: File) {
     val media = if (sideA) card.mediaA else card.mediaB
     val text = if (sideA) card.a else card.b
     val sound = card.sound(sideA)

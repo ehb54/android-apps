@@ -154,15 +154,15 @@ fun reportMode(session: Session): String {
 
 fun reportMode(match: MatchSession) = "Match, round ${match.round}"
 
-/** After a right answer: "Pick A → B, after the answer". */
-fun reportMode(mode: QuizMode, direction: Direction): String {
+/** After a right answer: "Pick A → B, after the answer"; or "Pick A → B, looking back" ([lookingBack]). */
+fun reportMode(mode: QuizMode, direction: Direction, lookingBack: Boolean = false): String {
     val kind = when (mode) {
         QuizMode.Typed -> "Type"
         QuizMode.Pick -> "Pick"
         QuizMode.Match -> "Match"
         QuizMode.Speed -> "Speed"
     }
-    return "$kind ${arrow(direction)}, after the answer"
+    return "$kind ${arrow(direction)}, " + if (lookingBack) "looking back" else "after the answer"
 }
 
 /**

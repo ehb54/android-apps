@@ -65,7 +65,7 @@ private const val PAIR_SHOWN_MS = 500L
  * sound after the answer" is on. In a quiz with hints, Peek beside the line
  * at the top shows the picked tile's hint on it, and its card counts as
  * missed. The flag in the top bar reports an issue with the tiles on screen,
- * a picked one first. Back does not leave.
+ * a picked one first; Look back shows the cards paired so far ([seen]). Back does not leave.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -74,6 +74,7 @@ fun MatchScreen(
     session: MatchSession,
     mismatch: Pair<Long, Long>?,
     paired: Pair<Long, Long>?,
+    seen: List<Seen>,
     mediaDir: File,
     snackbar: SnackbarHostState,
     vm: QuizViewModel,
@@ -113,6 +114,12 @@ fun MatchScreen(
             vm.report(problem, note, pickedLeft = pickedLeft, pickedRight = pickedRight)
         }
     }
+    var lookingBack by rememberSaveable { mutableStateOf(false) }
+    if (lookingBack) {
+        LookBack(quiz, seen, mediaDir, { looked, problem, note -> vm.report(problem, note, looked = looked) }) {
+            lookingBack = false
+        }
+    }
     // The picked sound tile has been played again, so the next tap lets it go.
     var replayed by rememberSaveable(session.round, session.left) { mutableStateOf(false) }
     fun tap(id: Long, sideA: Boolean) {
@@ -143,6 +150,7 @@ fun MatchScreen(
             TopAppBar(
                 title = { Text(quiz.name, maxLines = 1, overflow = TextOverflow.Ellipsis) },
                 actions = {
+                    LookBackButton(seen) { lookingBack = true }
                     ReportButton { reporting = true }
                     RoundCounter(session.round, session.remaining, vm::abandonSession)
                 },

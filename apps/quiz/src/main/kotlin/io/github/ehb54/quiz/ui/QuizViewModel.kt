@@ -72,8 +72,10 @@ import io.github.ehb54.quiz.model.QuizSettings
 import io.github.ehb54.quiz.model.isSound
 import io.github.ehb54.quiz.model.mediaKind
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.asCoroutineDispatcher
 import kotlinx.coroutines.channels.Channel
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -102,6 +104,15 @@ enum class Feedback { Wrong, TooSlow }
 
 /** A card just answered right whose sides carry more for after the answer (see [Card.hasAfter]). */
 data class After(val quizId: String, val cardId: Long, val direction: Direction)
+
+/** A card that was on screen in this session, as it was asked; for looking back. */
+data class Seen(val cardId: Long, val direction: Direction)
+
+/** How many cards a session keeps for looking back. */
+const val LOOK_BACK = 10
+
+/** Waiting issue reports are tried again this often while the app runs (and when the network is back). */
+private const val REPORT_RETRY_MILLIS = 60_000L
 
 /** Folder in assets with the built-in sample files. */
 private const val SAMPLES = "samples"
@@ -149,6 +160,12 @@ data class UiState(
     val paired: Pair<Long, Long>? = null,
     val summary: Summary? = null,
     val library: LibraryState = LibraryState(),
+    /**
+     * The cards this session has moved past, oldest first, at most [LOOK_BACK]:
+     * answered in Type and Pick, gone by in Speed, paired in Match. Looking back
+     * shows them, and changes nothing.
+     */
+    val seen: List<Seen> = emptyList(),
 ) {
     fun quiz(id: String?) = quizzes.find { it.id == id }
 
@@ -298,6 +315,7 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
                 revealed = false,
                 paused = false,
                 after = null,
+                seen = emptyList(),
             )
         }
         persist { store.saveSession(session) }
@@ -320,13 +338,15 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
         if (step.outcome == Outcome.Ignored) return
         val quizzes = state.quizzes.map { if (it.id == quiz.id) step.quiz else it }
         val next = step.session
+        val movedOn = next.finished || next.current != session.current || next.round != session.round
+        val seen = session.current?.takeIf { movedOn }?.let { state.seen.with(Seen(it, session.direction)) } ?: state.seen
         // Speed mode is about recognizing fast, so it goes straight on.
         val answered = session.current?.takeIf { step.outcome == Outcome.Right && session.speed == null }
         val after = answered?.takeIf { step.quiz.card(it)?.hasAfter() == true }
             ?.let { After(quiz.id, it, session.direction) }
         if (next.finished && next.speed != null) {
             // Speed mode only ends here when its cards are gone.
-            _state.value = state.copy(quizzes = quizzes)
+            _state.value = state.copy(quizzes = quizzes, seen = seen)
             persist { store.saveQuiz(step.quiz) }
             endSpeed()
         } else if (next.finished) {
@@ -354,6 +374,7 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
                 feedback = null,
                 revealed = false,
                 after = after,
+                seen = seen,
             )
             persist {
                 store.saveQuiz(step.quiz)
@@ -365,7 +386,7 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
                 Outcome.TooSlow -> Feedback.TooSlow
                 Outcome.Right, Outcome.Ignored -> null
             }
-            _state.value = state.copy(quizzes = quizzes, session = next, feedback = feedback, after = after)
+            _state.value = state.copy(quizzes = quizzes, session = next, feedback = feedback, after = after, seen = seen)
             persist {
                 if (step.quiz !== quiz) store.saveQuiz(step.quiz)
                 store.saveSession(next)
@@ -448,7 +469,7 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
             message(text(R.string.nothing_due))
             return
         }
-        _state.update { it.copy(match = match, mismatch = null, paired = null, screen = Screen.Matching) }
+        _state.update { it.copy(match = match, mismatch = null, paired = null, screen = Screen.Matching, seen = emptyList()) }
         persist { store.saveMatch(match) }
     }
 
@@ -459,11 +480,16 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
      */
     fun pair(left: Long, right: Long) {
         showedPair()
-        val state = _state.value
-        val match = state.match ?: return
-        val quiz = state.quiz(match.quizId) ?: return
+        val before = _state.value
+        val match = before.match ?: return
+        val quiz = before.quiz(match.quizId) ?: return
         val step = pairTiles(quiz, match, left, right)
         if (step.outcome == PairOutcome.Ignored) return
+        val state = if (step.outcome == PairOutcome.Wrong) {
+            before
+        } else {
+            before.copy(seen = listOf(left, right).distinct().fold(before.seen) { seen, id -> seen.with(Seen(id, Direction.AToB)) })
+        }
         if (step.outcome != PairOutcome.Wrong) lastPair = left to right
         if (step.outcome != PairOutcome.Wrong && quiz.card(left)?.hasAfter() == true) {
             shownStep = step
@@ -549,6 +575,7 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
                 mismatch = null,
                 after = null,
                 paired = null,
+                seen = emptyList(),
                 screen = Screen.QuizDetail(quizId),
             )
         }
@@ -810,13 +837,15 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
     private var sending = false
     /** Say how the report just made went, once its sending is over. */
     private var announce = false
+    /** The next try for reports that are waiting. */
+    private var retry: Job? = null
 
     /**
      * Reports [problem] (and [note]) with what is on screen: the card shown
      * after an answer; in Match the tiles, [pickedLeft] and [pickedRight] first,
      * and the last pair made; otherwise the card asked and its choices,
-     * [marked] (the sound choice played last) noted. It goes in the background
-     * and waits on the phone until it can.
+     * [marked] (the sound choice played last) noted; looking back, the card
+     * [looked] at. It goes in the background and waits on the phone until it can.
      */
     fun report(
         problem: ReportProblem,
@@ -824,12 +853,18 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
         marked: Long? = null,
         pickedLeft: Long? = null,
         pickedRight: Long? = null,
+        looked: Seen? = null,
     ) {
         val state = _state.value
         val after = state.after
         val session = state.session
         val match = state.match
         val about: Triple<Quiz, String, String> = when {
+            looked != null -> {
+                val quiz = state.quiz(session?.quizId ?: match?.quizId) ?: return
+                val card = quiz.card(looked.cardId) ?: return
+                Triple(quiz, reportMode(quiz.settings.mode, looked.direction, lookingBack = true), reportCards(card))
+            }
             after != null -> {
                 val quiz = state.quiz(after.quizId) ?: return
                 val card = quiz.card(after.cardId) ?: return
@@ -862,9 +897,18 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
         sendReports()
     }
 
-    /** Sends the outbox, oldest first, stopping at the first that fails; what is left waits for the next try. */
+    /** The network reaches the internet again (MainActivity): reports that are waiting go now. */
+    fun online() = sendReports()
+
+    /**
+     * Sends the outbox, oldest first, stopping at the first that fails; what is
+     * left goes with the next report, when the network is back ([online]), when
+     * the app starts, or in [REPORT_RETRY_MILLIS], whichever comes first.
+     */
     private fun sendReports() {
         if (sending || outbox.isEmpty()) return
+        retry?.cancel()
+        retry = null
         sending = true
         val batch = outbox
         viewModelScope.launch {
@@ -879,9 +923,17 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
             persist { store.saveReports(waiting) }
             if (sent == batch.size && waiting.isNotEmpty()) {
                 sendReports()
-            } else if (announce) {
+                return@launch
+            }
+            if (announce) {
                 announce = false
                 message(text(if (waiting.isEmpty()) R.string.report_sent else R.string.report_saved))
+            }
+            if (waiting.isNotEmpty()) {
+                retry = viewModelScope.launch {
+                    delay(REPORT_RETRY_MILLIS)
+                    sendReports()
+                }
             }
         }
     }
@@ -913,3 +965,6 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
     private fun plural(@PluralsRes id: Int, count: Int) =
         getApplication<Application>().resources.getQuantityString(id, count, count)
 }
+
+/** This list with [seen] last, keeping the last [LOOK_BACK]. */
+private fun List<Seen>.with(seen: Seen) = (this + seen).takeLast(LOOK_BACK)

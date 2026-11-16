@@ -1,6 +1,5 @@
 package io.github.ehb54.quiz
 
-import androidx.compose.ui.test.ComposeTimeoutException
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
@@ -34,24 +33,6 @@ class ReportUiTest : QuizUiTest() {
     /** What the form got, report by report, by question. */
     private val received = LinkedBlockingQueue<Map<String, String>>()
 
-    private fun report(problem: String) {
-        compose.onNodeWithContentDescription("Report an issue").performClick()
-        compose.onNodeWithText(problem).performClick()
-        compose.onNodeWithText("Send").performClick()
-    }
-
-    /**
-     * The next report the form gets, as [what]. Waits while the app runs: the
-     * test runs on the app's main thread, so blocking it would stop the app.
-     */
-    private fun nextReport(what: String): Map<String, String> {
-        try {
-            compose.waitUntil(20_000) { received.isNotEmpty() }
-        } catch (e: ComposeTimeoutException) {
-            throw AssertionError("$what never came", e)
-        }
-        return received.poll()!!
-    }
 
     @Test
     fun aReportGoesToTheFormOrWaitsUntilItCan() {
@@ -63,7 +44,7 @@ class ReportUiTest : QuizUiTest() {
         ActivityScenario.launch(MainActivity::class.java).use {
             startQuiz("Dictation", 3)
             compose.onNodeWithContentDescription("Stop sound").performClick()
-            report("Sound or voice wrong")
+            reportIssue("Sound or voice wrong")
             waitForMessage("Report saved. It goes out once the app can reach the internet.")
             compose.onNodeWithText("die Hand").performClick()
             compose.waitForText("Round 1 · 2 left")
@@ -85,7 +66,7 @@ class ReportUiTest : QuizUiTest() {
         try {
             ActivityScenario.launch(MainActivity::class.java).use {
                 // The waiting report goes by itself, with what was on screen.
-                val waited = nextReport("the waiting report")
+                val waited = compose.nextReport(received, "the waiting report")
                 assertEquals("Sound or voice wrong", waited["Problem"])
                 assertEquals("", waited["Note"])
                 assertEquals("Dictation", waited["Quiz"])
@@ -97,9 +78,9 @@ class ReportUiTest : QuizUiTest() {
                 // A new one goes at once.
                 compose.waitForText("Round 1 · 2 left")
                 compose.onNodeWithContentDescription("Stop sound").performClick()
-                report("Picture wrong")
+                reportIssue("Picture wrong")
                 waitForMessage("Report sent. Thank you.")
-                val sent = nextReport("the new report")
+                val sent = compose.nextReport(received, "the new report")
                 assertEquals("Picture wrong", sent["Problem"])
                 assertEquals("", sent["Note"])
                 assertTrue(sent["Cards"]!!, sent["Cards"]!!.startsWith("asked: #2 [sound] | der Fuß"))

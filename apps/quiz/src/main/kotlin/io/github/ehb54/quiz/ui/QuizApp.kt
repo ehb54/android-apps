@@ -68,15 +68,15 @@ private fun CurrentScreen(state: UiState, vm: QuizViewModel, snackbar: SnackbarH
             when {
                 session == null || quiz == null -> Unit
                 shown != null -> SpeedLevelScreen(quiz, session, shown, vm)
-                session.picking -> PickScreen(quiz, session, state.feedback, state.paused, vm.mediaDir, snackbar, vm)
-                else -> AskingScreen(quiz, session, state.feedback, state.revealed, state.paused, vm.mediaDir, snackbar, vm)
+                session.picking -> PickScreen(quiz, session, state.feedback, state.paused, state.seen, vm.mediaDir, snackbar, vm)
+                else -> AskingScreen(quiz, session, state.feedback, state.revealed, state.paused, state.seen, vm.mediaDir, snackbar, vm)
             }
         }
         Screen.Matching -> {
             val match = state.match
             val quiz = state.quiz(match?.quizId)
             if (match != null && quiz != null) {
-                MatchScreen(quiz, match, state.mismatch, state.paired, vm.mediaDir, snackbar, vm)
+                MatchScreen(quiz, match, state.mismatch, state.paired, state.seen, vm.mediaDir, snackbar, vm)
             }
         }
         Screen.Samples -> SamplesScreen(state, vm, snackbar)

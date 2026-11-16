@@ -28,6 +28,7 @@ import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config
 import org.robolectric.annotation.GraphicsMode
 import java.io.File
+import java.util.concurrent.BlockingQueue
 
 /**
  * Base for end-to-end tests of the app on Robolectric (the real Android
@@ -131,6 +132,13 @@ abstract class QuizUiTest {
         compose.waitUntil(10_000) { compose.onAllNodesWithText(text).fetchSemanticsNodes().isEmpty() }
     }
 
+    /** In a session: reports [problem] with the flag in the top bar, with no note (see ReportForm.notes). */
+    protected fun reportIssue(problem: String) {
+        compose.onNodeWithContentDescription("Report an issue").performClick()
+        compose.onNodeWithText(problem).performClick()
+        compose.onNodeWithText("Send").performClick()
+    }
+
     /** Scrolls the quiz list (or card list) until an item with [text] is on screen. */
     protected fun scrollListTo(text: String) {
         compose.onNode(hasScrollToIndexAction()).performScrollToNode(hasText(text))
@@ -158,6 +166,20 @@ fun ComposeTestRule.waitForText(text: String, substring: Boolean = false) {
         val screen = onAllNodes(isRoot(), useUnmergedTree = true).printToString(maxDepth = Int.MAX_VALUE)
         throw AssertionError("\"$text\" never appeared. On screen:\n$screen", e)
     }
+}
+
+/**
+ * The next report that [form] (a test's stand-in for the Google Form) gets,
+ * as [what]. Waits while the app runs: the test runs on the app's main thread,
+ * so blocking it would stop the app.
+ */
+fun ComposeTestRule.nextReport(form: BlockingQueue<Map<String, String>>, what: String): Map<String, String> {
+    try {
+        waitUntil(20_000) { form.isNotEmpty() }
+    } catch (e: ComposeTimeoutException) {
+        throw AssertionError("$what never came", e)
+    }
+    return form.poll()!!
 }
 
 fun ComposeTestRule.answer(text: String) {
